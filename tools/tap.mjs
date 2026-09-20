@@ -142,4 +142,21 @@ say('');
 say(measured < 3
   ? `  ${measured}/3 measured. Under three there is no signal, only anecdote.`
   : `  ${measured} measured — the feedback edge is live.`);
+
+// The monthly read lives here rather than in a ninth scheduled task. A reminder
+// that fires inside the tool you already have open is harder to ignore than a
+// notification, and this system does not need more surface area.
+const today = new Date();
+if (today.getDay() === 0 && today.getDate() <= 7) {
+  say('');
+  rule();
+  say('  FIRST SUNDAY — the monthly read is due (~45 min). See WEEKLY.md.');
+  say('    · open every contact-sheet.png from the month together: does this look');
+  say('      like ONE account? The gates cannot answer that one.');
+  say('    · which ANGLE and which FORMAT won, not which topic');
+  say('    · retire anything that underperformed three posts running');
+  say('    · does the Trend Radar contradict the angle matrix in gtm.json?');
+  say('    · would you follow this account? If not, say what is missing.');
+  rule();
+}
 say('');
