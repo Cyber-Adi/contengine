@@ -1,0 +1,314 @@
+{
+  "updatedAt": "2026-09-20T03:17:53.489Z",
+  "posts": {
+    "1": {
+      "post": 1,
+      "stage": "scripted"
+    },
+    "2": {
+      "post": 2,
+      "stage": "scripted"
+    },
+    "3": {
+      "post": 3,
+      "stage": "scripted"
+    },
+    "4": {
+      "post": 4,
+      "stage": "scripted"
+    },
+    "5": {
+      "post": 5,
+      "stage": "approved",
+      "title": "$2,913 — The Number",
+      "pillar": "The $2913 Problem",
+      "provenance": "reconstructed-fixture",
+      "qaVerdict": "PASS"
+    },
+    "6": {
+      "post": 6,
+      "stage": "scripted"
+    },
+    "7": {
+      "post": 7,
+      "stage": "scripted"
+    },
+    "8": {
+      "post": 8,
+      "stage": "scripted"
+    },
+    "9": {
+      "post": 9,
+      "stage": "scripted"
+    },
+    "10": {
+      "post": 10,
+      "stage": "scripted"
+    },
+    "11": {
+      "post": 11,
+      "stage": "scripted"
+    },
+    "12": {
+      "post": 12,
+      "stage": "scripted"
+    },
+    "13": {
+      "post": 13,
+      "stage": "scripted"
+    },
+    "14": {
+      "post": 14,
+      "stage": "scripted"
+    },
+    "15": {
+      "post": 15,
+      "stage": "scripted"
+    },
+    "16": {
+      "post": 16,
+      "stage": "scripted"
+    },
+    "17": {
+      "post": 17,
+      "stage": "gap"
+    },
+    "18": {
+      "post": 18,
+      "stage": "scripted"
+    },
+    "19": {
+      "post": 19,
+      "stage": "scripted"
+    },
+    "20": {
+      "post": 20,
+      "stage": "scripted"
+    },
+    "21": {
+      "post": 21,
+      "stage": "scripted"
+    },
+    "22": {
+      "post": 22,
+      "stage": "scripted"
+    },
+    "23": {
+      "post": 23,
+      "stage": "scripted"
+    },
+    "24": {
+      "post": 24,
+      "stage": "scripted"
+    },
+    "25": {
+      "post": 25,
+      "stage": "scripted"
+    },
+    "26": {
+      "post": 26,
+      "stage": "scripted"
+    },
+    "27": {
+      "post": 27,
+      "stage": "scripted"
+    },
+    "28": {
+      "post": 28,
+      "stage": "scripted"
+    },
+    "29": {
+      "post": 29,
+      "stage": "scripted"
+    },
+    "30": {
+      "post": 30,
+      "stage": "scripted"
+    },
+    "31": {
+      "post": 31,
+      "stage": "approved",
+      "title": "Shrinkflation Receipt",
+      "pillar": "Supermarket Secrets",
+      "provenance": "brief",
+      "qaVerdict": "PASS"
+    },
+    "32": {
+      "post": 32,
+      "stage": "approved",
+      "title": "What $2,913 Could Buy Instead",
+      "pillar": "The $2913 Problem",
+      "provenance": "brief",
+      "qaVerdict": "PASS"
+    },
+    "33": {
+      "post": 33,
+      "stage": "approved",
+      "title": "The FIFO Fridge",
+      "pillar": "Store It Right",
+      "provenance": "brief",
+      "qaVerdict": "PASS"
+    },
+    "34": {
+      "post": 34,
+      "stage": "approved",
+      "title": "The Sunday Fridge Audit",
+      "pillar": "Waste Hacks",
+      "provenance": "brief",
+      "qaVerdict": "PASS"
+    },
+    "35": {
+      "post": 35,
+      "stage": "approved",
+      "title": "The Bakery Smell Is Fake",
+      "pillar": "Supermarket Secrets",
+      "provenance": "brief",
+      "qaVerdict": "PASS"
+    },
+    "36": {
+      "post": 36,
+      "stage": "approved",
+      "title": "The Leftover Graveyard",
+      "pillar": "The $2913 Problem",
+      "provenance": "brief",
+      "qaVerdict": "PASS"
+    },
+    "37": {
+      "post": 37,
+      "stage": "scripted"
+    },
+    "38": {
+      "post": 38,
+      "stage": "scripted"
+    },
+    "39": {
+      "post": 39,
+      "stage": "scripted"
+    },
+    "40": {
+      "post": 40,
+      "stage": "scripted"
+    },
+    "41": {
+      "post": 41,
+      "stage": "scripted"
+    },
+    "42": {
+      "post": 42,
+      "stage": "scripted"
+    },
+    "43": {
+      "post": 43,
+      "stage": "scripted"
+    },
+    "44": {
+      "post": 44,
+      "stage": "scripted"
+    },
+    "45": {
+      "post": 45,
+      "stage": "scripted"
+    },
+    "46": {
+      "post": 46,
+      "stage": "scripted"
+    },
+    "47": {
+      "post": 47,
+      "stage": "scripted"
+    },
+    "48": {
+      "post": 48,
+      "stage": "scripted"
+    },
+    "49": {
+      "post": 49,
+      "stage": "approved",
+      "title": "Your Eggs Have 5 Weeks. Not 5 Days.",
+      "pillar": "Store It Right",
+      "provenance": "reconstructed-fixture",
+      "qaVerdict": "PASS"
+    },
+    "50": {
+      "post": 50,
+      "stage": "scripted"
+    },
+    "51": {
+      "post": 51,
+      "stage": "scripted"
+    },
+    "52": {
+      "post": 52,
+      "stage": "scripted"
+    },
+    "53": {
+      "post": 53,
+      "stage": "scripted"
+    },
+    "54": {
+      "post": 54,
+      "stage": "gap"
+    },
+    "55": {
+      "post": 55,
+      "stage": "gap"
+    },
+    "56": {
+      "post": 56,
+      "stage": "scripted"
+    },
+    "57": {
+      "post": 57,
+      "stage": "scripted"
+    },
+    "58": {
+      "post": 58,
+      "stage": "scripted"
+    },
+    "59": {
+      "post": 59,
+      "stage": "scripted"
+    },
+    "60": {
+      "post": 60,
+      "stage": "scripted"
+    },
+    "61": {
+      "post": 61,
+      "stage": "scripted"
+    },
+    "62": {
+      "post": 62,
+      "stage": "scripted"
+    },
+    "63": {
+      "post": 63,
+      "stage": "gap"
+    },
+    "64": {
+      "post": 64,
+      "stage": "gap"
+    },
+    "65": {
+      "post": 65,
+      "stage": "gap"
+    },
+    "66": {
+      "post": 66,
+      "stage": "gap"
+    },
+    "67": {
+      "post": 67,
+      "stage": "gap"
+    },
+    "68": {
+      "post": 68,
+      "stage": "gap"
+    },
+    "69": {
+      "post": 69,
+      "stage": "gap"
+    }
+  },
+  "seededFrom": "specs/COVERAGE.md"
+}

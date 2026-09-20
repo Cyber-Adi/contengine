@@ -1,0 +1,52 @@
+{
+  "post": 49,
+  "title": "Your Eggs Have 5 Weeks. Not 5 Days.",
+  "provenance": "reconstructed-fixture",
+  "verdict": "PASS",
+  "fails": 0,
+  "warns": 7,
+  "findings": [
+    {
+      "gate": "G4.5-ocr",
+      "level": "WARN",
+      "slide": 2,
+      "msg": "OCR read the right number of digits for '3' but not the same ones (saw '55'). Tesseract confuses same-skeleton digits at 200px far more readily than a reader does, so this is a limit of the instrument, not evidence the hook is illegible. Eyeball the thumbnail once to confirm."
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 1,
+      "msg": "content occupies 50% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 2,
+      "msg": "content occupies 52% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 3,
+      "msg": "content occupies 45% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 4,
+      "msg": "content occupies 40% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 5,
+      "msg": "content occupies 38% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 8,
+      "msg": "content occupies 50% of its box \u2014 type or diagram could carry more of the frame"
+    }
+  ]
+}

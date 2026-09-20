@@ -1,0 +1,6 @@
+{
+  "updatedAt": null,
+  "source": "manual",
+  "note": "One row per published post. `node tools/log-post.mjs <N> --published` on posting day, then `--reach --saves --sends --slide3` about a week later. swipeToSlide3 = slide-3 reach / slide-1 reach from Instagram's per-slide graph; Strategy v2 calls it the primary metric and it has never been logged. Three measured posts is the minimum before any claim about what works is anything but anecdote.",
+  "posts": {}
+}

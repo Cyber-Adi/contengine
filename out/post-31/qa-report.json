@@ -1,0 +1,40 @@
+{
+  "post": 31,
+  "title": "Shrinkflation Receipt",
+  "provenance": "brief",
+  "verdict": "PASS",
+  "fails": 0,
+  "warns": 5,
+  "findings": [
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 1,
+      "msg": "content occupies 54% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 2,
+      "msg": "content occupies 45% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 3,
+      "msg": "content occupies 32% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 4,
+      "msg": "content occupies 32% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 7,
+      "msg": "content occupies 46% of its box \u2014 type or diagram could carry more of the frame"
+    }
+  ]
+}

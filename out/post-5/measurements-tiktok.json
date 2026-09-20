@@ -1,0 +1,1920 @@
+[
+  {
+    "index": 1,
+    "archetype": "hook",
+    "layout": "hero-statement",
+    "declaresLoss": false,
+    "background": "dark",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [
+      {
+        "cls": "eyebrow",
+        "text": "The $2,913 problem",
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif"
+      },
+      {
+        "cls": "thread-label",
+        "text": "Week 1",
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif"
+      }
+    ],
+    "accents": [
+      "rgb(217, 164, 65)",
+      "rgb(245, 242, 236)",
+      "rgb(0, 0, 0)",
+      "rgb(107, 114, 128)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "eyebrow",
+        "svg": false,
+        "text": "The $2,913 problem",
+        "words": 3,
+        "chars": 18,
+        "color": "rgb(217, 164, 65)",
+        "size": 32,
+        "weight": 700,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 96,
+          "y": 460,
+          "w": 888,
+          "h": 42
+        },
+        "lines": null
+      },
+      {
+        "cls": "pop",
+        "svg": false,
+        "text": "subscription",
+        "words": 1,
+        "chars": 12,
+        "color": "rgb(217, 164, 65)",
+        "size": 96,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 165,
+          "y": 716,
+          "w": 543,
+          "h": 128
+        },
+        "lines": null
+      },
+      {
+        "cls": "body",
+        "svg": false,
+        "text": "Nobody budgets for it. It leaves anyway, every single week.",
+        "words": 10,
+        "chars": 59,
+        "color": "rgb(245, 242, 236)",
+        "size": 40,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 96,
+          "y": 1060,
+          "w": 602,
+          "h": 110
+        },
+        "lines": [
+          "Nobody budgets for it. It",
+          "leaves anyway, every single week."
+        ]
+      },
+      {
+        "cls": "swipe-l",
+        "svg": false,
+        "text": "Swipe",
+        "words": 1,
+        "chars": 5,
+        "color": "rgb(245, 242, 236)",
+        "size": 29,
+        "weight": 400,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 190,
+          "y": 1211,
+          "w": 73,
+          "h": 38
+        },
+        "lines": null
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "Week 1",
+        "words": 2,
+        "chars": 6,
+        "color": "rgb(107, 114, 128)",
+        "size": 22,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 96,
+          "y": 1726,
+          "w": 888,
+          "h": 29
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 24,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 96,
+          "y": 1841,
+          "w": 118,
+          "h": 31
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "1/8",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 24,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 950,
+          "y": 1841,
+          "w": 34,
+          "h": 31
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 1611,
+      "height": 1611
+    },
+    "threadBox": {
+      "top": 1611,
+      "bottom": 1841
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/out/post-5/slides-tiktok/slide-01.png"
+  },
+  {
+    "index": 2,
+    "archetype": "backupHook",
+    "layout": "hero-number",
+    "declaresLoss": true,
+    "background": "dark",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [
+      {
+        "cls": "thread-label",
+        "text": "Week 2",
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif"
+      }
+    ],
+    "accents": [
+      "rgb(214, 69, 65)",
+      "rgb(245, 242, 236)",
+      "rgb(107, 114, 128)",
+      "rgb(0, 0, 0)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "eyebrow",
+        "svg": false,
+        "text": "Per household, per year",
+        "words": 4,
+        "chars": 23,
+        "color": "rgb(214, 69, 65)",
+        "size": 32,
+        "weight": 700,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 96,
+          "y": 610,
+          "w": 888,
+          "h": 42
+        },
+        "lines": null
+      },
+      {
+        "cls": "unit",
+        "svg": false,
+        "text": "/yr",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(214, 69, 65)",
+        "size": 86.8,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 544,
+          "y": 711,
+          "w": 109,
+          "h": 110
+        },
+        "lines": null
+      },
+      {
+        "cls": "hero-cap",
+        "svg": false,
+        "text": "of food bought, paid for, and thrown away.",
+        "words": 8,
+        "chars": 42,
+        "color": "rgb(245, 242, 236)",
+        "size": 44,
+        "weight": 500,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 96,
+          "y": 845,
+          "w": 577,
+          "h": 111
+        },
+        "lines": [
+          "of food bought, paid",
+          "for, and thrown away."
+        ]
+      },
+      {
+        "cls": "cite",
+        "svg": false,
+        "text": "EPA, April 2025",
+        "words": 3,
+        "chars": 15,
+        "color": "rgb(107, 114, 128)",
+        "size": 24,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 96,
+          "y": 988,
+          "w": 888,
+          "h": 32
+        },
+        "lines": null
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "Week 2",
+        "words": 2,
+        "chars": 6,
+        "color": "rgb(107, 114, 128)",
+        "size": 22,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 96,
+          "y": 1726,
+          "w": 888,
+          "h": 29
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 24,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 96,
+          "y": 1841,
+          "w": 118,
+          "h": 31
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "2/8",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 24,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 944,
+          "y": 1841,
+          "w": 40,
+          "h": 31
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 1611,
+      "height": 1611
+    },
+    "threadBox": {
+      "top": 1611,
+      "bottom": 1841
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/out/post-5/slides-tiktok/slide-02.png"
+  },
+  {
+    "index": 3,
+    "archetype": "value",
+    "layout": "diagram",
+    "declaresLoss": true,
+    "background": "light",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [
+      {
+        "cls": "thread-label",
+        "text": "Week 3",
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif"
+      }
+    ],
+    "accents": [
+      "rgb(20, 22, 26)",
+      "rgb(0, 0, 0)",
+      "rgb(214, 69, 65)",
+      "rgb(74, 123, 166)",
+      "rgb(107, 114, 128)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "h-mid",
+        "svg": false,
+        "text": "Where it actually goes",
+        "words": 4,
+        "chars": 22,
+        "color": "rgb(20, 22, 26)",
+        "size": 64,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 96,
+          "y": 481,
+          "w": 660,
+          "h": 68
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-bar-label",
+        "svg": false,
+        "text": "Produce",
+        "words": 1,
+        "chars": 7,
+        "color": "rgb(20, 22, 26)",
+        "size": 33,
+        "weight": 500,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 96,
+          "y": 590,
+          "w": 260,
+          "h": 40
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-bar-val",
+        "svg": false,
+        "text": "44%",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(214, 69, 65)",
+        "size": 46,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 892,
+          "y": 581,
+          "w": 92,
+          "h": 58
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-bar-label",
+        "svg": false,
+        "text": "Dairy",
+        "words": 1,
+        "chars": 5,
+        "color": "rgb(20, 22, 26)",
+        "size": 33,
+        "weight": 500,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 96,
+          "y": 676,
+          "w": 260,
+          "h": 40
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-bar-val",
+        "svg": false,
+        "text": "22%",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(74, 123, 166)",
+        "size": 46,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 892,
+          "y": 667,
+          "w": 92,
+          "h": 58
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-bar-label",
+        "svg": false,
+        "text": "Meat & fish",
+        "words": 3,
+        "chars": 11,
+        "color": "rgb(20, 22, 26)",
+        "size": 33,
+        "weight": 500,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 96,
+          "y": 762,
+          "w": 260,
+          "h": 40
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-bar-val",
+        "svg": false,
+        "text": "19%",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(74, 123, 166)",
+        "size": 46,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 892,
+          "y": 753,
+          "w": 92,
+          "h": 58
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-bar-label",
+        "svg": false,
+        "text": "Everything else",
+        "words": 2,
+        "chars": 15,
+        "color": "rgb(20, 22, 26)",
+        "size": 33,
+        "weight": 500,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 96,
+          "y": 848,
+          "w": 260,
+          "h": 40
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-bar-val",
+        "svg": false,
+        "text": "15%",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 46,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 892,
+          "y": 839,
+          "w": 92,
+          "h": 58
+        },
+        "lines": null
+      },
+      {
+        "cls": "body",
+        "svg": false,
+        "text": "Leafy greens and berries lead every waste study. They spoil first and they are b",
+        "words": 17,
+        "chars": 101,
+        "color": "rgb(20, 22, 26)",
+        "size": 40,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 96,
+          "y": 929,
+          "w": 602,
+          "h": 221
+        },
+        "lines": [
+          "Leafy greens and berries lead",
+          "every waste study. They spoil",
+          "first and they are bought",
+          "most hopefully."
+        ]
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "Week 3",
+        "words": 2,
+        "chars": 6,
+        "color": "rgb(107, 114, 128)",
+        "size": 22,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 96,
+          "y": 1726,
+          "w": 888,
+          "h": 29
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 24,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 96,
+          "y": 1841,
+          "w": 118,
+          "h": 31
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "3/8",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 24,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 945,
+          "y": 1841,
+          "w": 39,
+          "h": 31
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 1611,
+      "height": 1611
+    },
+    "threadBox": {
+      "top": 1611,
+      "bottom": 1841
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/out/post-5/slides-tiktok/slide-03.png"
+  },
+  {
+    "index": 4,
+    "archetype": "value",
+    "layout": "diagram",
+    "declaresLoss": true,
+    "background": "dark",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [
+      {
+        "cls": "thread-label",
+        "text": "Week 4",
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif"
+      }
+    ],
+    "accents": [
+      "rgb(245, 242, 236)",
+      "rgb(0, 0, 0)",
+      "rgb(20, 22, 26)",
+      "rgb(214, 69, 65)",
+      "rgb(217, 164, 65)",
+      "rgb(107, 114, 128)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "h-mid",
+        "svg": false,
+        "text": "The bill nobody prints",
+        "words": 4,
+        "chars": 22,
+        "color": "rgb(245, 242, 236)",
+        "size": 64,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 96,
+          "y": 520,
+          "w": 660,
+          "h": 68
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-rcpt-title",
+        "svg": false,
+        "text": "THIS WEEK, UNBUDGETED",
+        "words": 3,
+        "chars": 21,
+        "color": "rgb(20, 22, 26)",
+        "size": 25,
+        "weight": 700,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": "offWhite",
+        "box": {
+          "x": 205,
+          "y": 653,
+          "w": 670,
+          "h": 30
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-rcpt-lbl",
+        "svg": false,
+        "text": "Spinach, half a bag",
+        "words": 4,
+        "chars": 19,
+        "color": "rgb(20, 22, 26)",
+        "size": 29,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": "offWhite",
+        "box": {
+          "x": 205,
+          "y": 723,
+          "w": 251,
+          "h": 36
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-rcpt-amt",
+        "svg": false,
+        "text": "$2.40",
+        "words": 1,
+        "chars": 5,
+        "color": "rgb(214, 69, 65)",
+        "size": 33,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": "offWhite",
+        "box": {
+          "x": 784,
+          "y": 719,
+          "w": 91,
+          "h": 42
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-rcpt-lbl",
+        "svg": false,
+        "text": "Berries, gone soft",
+        "words": 3,
+        "chars": 18,
+        "color": "rgb(20, 22, 26)",
+        "size": 29,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": "offWhite",
+        "box": {
+          "x": 205,
+          "y": 789,
+          "w": 233,
+          "h": 36
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-rcpt-amt",
+        "svg": false,
+        "text": "$4.99",
+        "words": 1,
+        "chars": 5,
+        "color": "rgb(214, 69, 65)",
+        "size": 33,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": "offWhite",
+        "box": {
+          "x": 784,
+          "y": 785,
+          "w": 91,
+          "h": 42
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-rcpt-lbl",
+        "svg": false,
+        "text": "Milk, two days past",
+        "words": 4,
+        "chars": 19,
+        "color": "rgb(20, 22, 26)",
+        "size": 29,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": "offWhite",
+        "box": {
+          "x": 205,
+          "y": 855,
+          "w": 254,
+          "h": 36
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-rcpt-amt",
+        "svg": false,
+        "text": "$3.79",
+        "words": 1,
+        "chars": 5,
+        "color": "rgb(214, 69, 65)",
+        "size": 33,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": "offWhite",
+        "box": {
+          "x": 784,
+          "y": 851,
+          "w": 91,
+          "h": 42
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-rcpt-lbl",
+        "svg": false,
+        "text": "Leftovers, forgotten",
+        "words": 2,
+        "chars": 20,
+        "color": "rgb(20, 22, 26)",
+        "size": 29,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": "offWhite",
+        "box": {
+          "x": 205,
+          "y": 921,
+          "w": 262,
+          "h": 36
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-rcpt-amt",
+        "svg": false,
+        "text": "$6.00",
+        "words": 1,
+        "chars": 5,
+        "color": "rgb(214, 69, 65)",
+        "size": 33,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": "offWhite",
+        "box": {
+          "x": 784,
+          "y": 917,
+          "w": 91,
+          "h": 42
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-rcpt-tl",
+        "svg": false,
+        "text": "One ordinary week",
+        "words": 3,
+        "chars": 17,
+        "color": "rgb(20, 22, 26)",
+        "size": 28,
+        "weight": 700,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": "offWhite",
+        "box": {
+          "x": 205,
+          "y": 1024,
+          "w": 258,
+          "h": 35
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-rcpt-tv",
+        "svg": false,
+        "text": "$56",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(214, 69, 65)",
+        "size": 52,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": "offWhite",
+        "box": {
+          "x": 779,
+          "y": 1000,
+          "w": 96,
+          "h": 66
+        },
+        "lines": null
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "Week 4",
+        "words": 2,
+        "chars": 6,
+        "color": "rgb(107, 114, 128)",
+        "size": 22,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 96,
+          "y": 1726,
+          "w": 888,
+          "h": 29
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 24,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 96,
+          "y": 1841,
+          "w": 118,
+          "h": 31
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "4/8",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 24,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 943,
+          "y": 1841,
+          "w": 41,
+          "h": 31
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 1611,
+      "height": 1611
+    },
+    "threadBox": {
+      "top": 1611,
+      "bottom": 1841
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/out/post-5/slides-tiktok/slide-04.png"
+  },
+  {
+    "index": 5,
+    "archetype": "value",
+    "layout": "diagram",
+    "declaresLoss": false,
+    "background": "light",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [
+      {
+        "cls": "thread-label",
+        "text": "Week 5",
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif"
+      }
+    ],
+    "accents": [
+      "rgb(20, 22, 26)",
+      "rgb(74, 123, 166)",
+      "rgb(0, 0, 0)",
+      "rgb(107, 114, 128)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "pop",
+        "svg": false,
+        "text": "placement",
+        "words": 1,
+        "chars": 9,
+        "color": "rgb(74, 123, 166)",
+        "size": 64,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 96,
+          "y": 422,
+          "w": 299,
+          "h": 85
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-zone-l",
+        "svg": false,
+        "text": "Top shelf & door",
+        "words": 4,
+        "chars": 16,
+        "color": "rgb(20, 22, 26)",
+        "size": 33,
+        "weight": 700,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 150,
+          "y": 564,
+          "w": 794,
+          "h": 40
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-zone-n",
+        "svg": false,
+        "text": "Warmest. Condiments, butter, drinks.",
+        "words": 4,
+        "chars": 36,
+        "color": "rgb(20, 22, 26)",
+        "size": 29,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 150,
+          "y": 610,
+          "w": 794,
+          "h": 36
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-zone-l",
+        "svg": false,
+        "text": "Middle shelves",
+        "words": 2,
+        "chars": 14,
+        "color": "rgb(20, 22, 26)",
+        "size": 33,
+        "weight": 700,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 150,
+          "y": 694,
+          "w": 794,
+          "h": 40
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-zone-n",
+        "svg": false,
+        "text": "Steady. Dairy, leftovers, eggs.",
+        "words": 4,
+        "chars": 31,
+        "color": "rgb(20, 22, 26)",
+        "size": 29,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 150,
+          "y": 740,
+          "w": 794,
+          "h": 36
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-zone-l",
+        "svg": false,
+        "text": "Bottom shelf",
+        "words": 2,
+        "chars": 12,
+        "color": "rgb(20, 22, 26)",
+        "size": 33,
+        "weight": 700,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 150,
+          "y": 824,
+          "w": 794,
+          "h": 40
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-zone-n",
+        "svg": false,
+        "text": "Coldest. Raw meat and fish belong here.",
+        "words": 7,
+        "chars": 39,
+        "color": "rgb(20, 22, 26)",
+        "size": 29,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 150,
+          "y": 870,
+          "w": 794,
+          "h": 36
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-zone-l",
+        "svg": false,
+        "text": "Crisper drawers",
+        "words": 2,
+        "chars": 15,
+        "color": "rgb(20, 22, 26)",
+        "size": 33,
+        "weight": 700,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 150,
+          "y": 954,
+          "w": 794,
+          "h": 40
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-zone-n",
+        "svg": false,
+        "text": "High humidity for greens, low for fruit.",
+        "words": 7,
+        "chars": 40,
+        "color": "rgb(20, 22, 26)",
+        "size": 29,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 150,
+          "y": 999,
+          "w": 794,
+          "h": 36
+        },
+        "lines": null
+      },
+      {
+        "cls": "body",
+        "svg": false,
+        "text": "A fridge is four different climates. Most people treat it as one.",
+        "words": 12,
+        "chars": 65,
+        "color": "rgb(20, 22, 26)",
+        "size": 40,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 96,
+          "y": 1102,
+          "w": 602,
+          "h": 166
+        },
+        "lines": [
+          "A fridge is four",
+          "different climates. Most people",
+          "treat it as one."
+        ]
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "Week 5",
+        "words": 2,
+        "chars": 6,
+        "color": "rgb(107, 114, 128)",
+        "size": 22,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 96,
+          "y": 1726,
+          "w": 888,
+          "h": 29
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 24,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 96,
+          "y": 1841,
+          "w": 118,
+          "h": 31
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "5/8",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 24,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 944,
+          "y": 1841,
+          "w": 40,
+          "h": 31
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 1611,
+      "height": 1611
+    },
+    "threadBox": {
+      "top": 1611,
+      "bottom": 1841
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/out/post-5/slides-tiktok/slide-05.png"
+  },
+  {
+    "index": 6,
+    "archetype": "value",
+    "layout": "diagram",
+    "declaresLoss": false,
+    "background": "dark",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [
+      {
+        "cls": "thread-label",
+        "text": "Week 6",
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif"
+      }
+    ],
+    "accents": [
+      "rgb(245, 242, 236)",
+      "rgb(0, 0, 0)",
+      "rgb(217, 164, 65)",
+      "rgb(107, 114, 128)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "it",
+        "svg": false,
+        "text": "ingredient",
+        "words": 1,
+        "chars": 10,
+        "color": "rgb(245, 242, 236)",
+        "size": 64,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 96,
+          "y": 522,
+          "w": 290,
+          "h": 85
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-step-t",
+        "svg": false,
+        "text": "Trimmings to the freezer bag",
+        "words": 5,
+        "chars": 28,
+        "color": "rgb(245, 242, 236)",
+        "size": 29,
+        "weight": 500,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 99,
+          "y": 710,
+          "w": 182,
+          "h": 192
+        },
+        "lines": [
+          "Trimmings to",
+          "the freezer",
+          "bag",
+          ""
+        ]
+      },
+      {
+        "cls": "d-step-t",
+        "svg": false,
+        "text": "Bag fills over two weeks",
+        "words": 5,
+        "chars": 24,
+        "color": "rgb(245, 242, 236)",
+        "size": 29,
+        "weight": 500,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 333,
+          "y": 710,
+          "w": 182,
+          "h": 192
+        },
+        "lines": [
+          "Bag fills",
+          "over two",
+          "weeks"
+        ]
+      },
+      {
+        "cls": "d-step-t",
+        "svg": false,
+        "text": "Simmer into stock",
+        "words": 3,
+        "chars": 17,
+        "color": "rgb(245, 242, 236)",
+        "size": 29,
+        "weight": 500,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 566,
+          "y": 710,
+          "w": 182,
+          "h": 192
+        },
+        "lines": [
+          "Simmer into",
+          "stock"
+        ]
+      },
+      {
+        "cls": "d-step-t",
+        "svg": false,
+        "text": "Stock becomes dinner",
+        "words": 3,
+        "chars": 20,
+        "color": "rgb(245, 242, 236)",
+        "size": 29,
+        "weight": 500,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 800,
+          "y": 710,
+          "w": 182,
+          "h": 192
+        },
+        "lines": [
+          "Stock",
+          "becomes",
+          "dinner"
+        ]
+      },
+      {
+        "cls": "d-ret-l",
+        "svg": false,
+        "text": "AND AGAIN",
+        "words": 2,
+        "chars": 9,
+        "color": "rgb(245, 242, 236)",
+        "size": 24,
+        "weight": 700,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 442,
+          "y": 909,
+          "w": 195,
+          "h": 31
+        },
+        "lines": null
+      },
+      {
+        "cls": "body",
+        "svg": false,
+        "text": "Onion ends, carrot tops, herb stems, parmesan rinds. One bag, one pot, no new sp",
+        "words": 15,
+        "chars": 84,
+        "color": "rgb(245, 242, 236)",
+        "size": 40,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 96,
+          "y": 1001,
+          "w": 602,
+          "h": 166
+        },
+        "lines": [
+          "Onion ends, carrot tops, herb",
+          "stems, parmesan rinds. One bag,",
+          "one pot, no new spend."
+        ]
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "Week 6",
+        "words": 2,
+        "chars": 6,
+        "color": "rgb(107, 114, 128)",
+        "size": 22,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 96,
+          "y": 1726,
+          "w": 888,
+          "h": 29
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 24,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 96,
+          "y": 1841,
+          "w": 118,
+          "h": 31
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "6/8",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 24,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 944,
+          "y": 1841,
+          "w": 40,
+          "h": 31
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 1611,
+      "height": 1611
+    },
+    "threadBox": {
+      "top": 1611,
+      "bottom": 1841
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/out/post-5/slides-tiktok/slide-06.png"
+  },
+  {
+    "index": 7,
+    "archetype": "reframe",
+    "layout": "diagram",
+    "declaresLoss": true,
+    "background": "light",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [
+      {
+        "cls": "thread-label",
+        "text": "Week 7",
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif"
+      }
+    ],
+    "accents": [
+      "rgb(20, 22, 26)",
+      "rgb(0, 0, 0)",
+      "rgb(214, 69, 65)",
+      "rgb(46, 94, 78)",
+      "rgb(107, 114, 128)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "d-ba-label",
+        "svg": false,
+        "text": "SHOPPING ON HOPE",
+        "words": 3,
+        "chars": 16,
+        "color": "rgb(20, 22, 26)",
+        "size": 26,
+        "weight": 700,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 133,
+          "y": 728,
+          "w": 336,
+          "h": 33
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-ba-val",
+        "svg": false,
+        "text": "$56",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(214, 69, 65)",
+        "size": 74,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 133,
+          "y": 775,
+          "w": 336,
+          "h": 80
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-ba-note",
+        "svg": false,
+        "text": "thrown out each week",
+        "words": 4,
+        "chars": 20,
+        "color": "rgb(20, 22, 26)",
+        "size": 30,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 133,
+          "y": 869,
+          "w": 336,
+          "h": 38
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-ba-label",
+        "svg": false,
+        "text": "SHOPPING ON WHAT YOU HAVE",
+        "words": 5,
+        "chars": 25,
+        "color": "rgb(20, 22, 26)",
+        "size": 26,
+        "weight": 700,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 618,
+          "y": 728,
+          "w": 336,
+          "h": 65
+        },
+        "lines": [
+          "SHOPPING ON WHAT",
+          "YOU HAVE"
+        ]
+      },
+      {
+        "cls": "d-ba-val",
+        "svg": false,
+        "text": "$1,500",
+        "words": 1,
+        "chars": 6,
+        "color": "rgb(46, 94, 78)",
+        "size": 74,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 618,
+          "y": 807,
+          "w": 336,
+          "h": 80
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-ba-note",
+        "svg": false,
+        "text": "kept per year",
+        "words": 3,
+        "chars": 13,
+        "color": "rgb(20, 22, 26)",
+        "size": 30,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 618,
+          "y": 901,
+          "w": 336,
+          "h": 38
+        },
+        "lines": null
+      },
+      {
+        "cls": "body",
+        "svg": false,
+        "text": "A 20% cut is the realistic target, and it is worth about $1,500 a year.",
+        "words": 15,
+        "chars": 71,
+        "color": "rgb(20, 22, 26)",
+        "size": 40,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 96,
+          "y": 1006,
+          "w": 602,
+          "h": 166
+        },
+        "lines": [
+          "A 20% cut is the",
+          "realistic target, and it is",
+          "worth about $1,500 a year."
+        ]
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "Week 7",
+        "words": 2,
+        "chars": 6,
+        "color": "rgb(107, 114, 128)",
+        "size": 22,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 96,
+          "y": 1726,
+          "w": 888,
+          "h": 29
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 24,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 96,
+          "y": 1841,
+          "w": 118,
+          "h": 31
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "7/8",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 24,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 947,
+          "y": 1841,
+          "w": 37,
+          "h": 31
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 1611,
+      "height": 1611
+    },
+    "threadBox": {
+      "top": 1611,
+      "bottom": 1841
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/out/post-5/slides-tiktok/slide-07.png"
+  },
+  {
+    "index": 8,
+    "archetype": "cta",
+    "layout": "cta-card",
+    "declaresLoss": false,
+    "background": "dark",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [],
+    "accents": [
+      "rgb(0, 0, 0)",
+      "rgb(245, 242, 236)",
+      "rgb(217, 164, 65)",
+      "rgba(245, 242, 236, 0.7)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "wordmark",
+        "svg": false,
+        "text": "fond",
+        "words": 1,
+        "chars": 4,
+        "color": "rgb(245, 242, 236)",
+        "size": 44,
+        "weight": 500,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 96,
+          "y": 654,
+          "w": 888,
+          "h": 58
+        },
+        "lines": null
+      },
+      {
+        "cls": "pop",
+        "svg": false,
+        "text": "fridge",
+        "words": 1,
+        "chars": 6,
+        "color": "rgb(217, 164, 65)",
+        "size": 56,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 418,
+          "y": 858,
+          "w": 155,
+          "h": 75
+        },
+        "lines": null
+      },
+      {
+        "cls": "cta-line",
+        "svg": false,
+        "text": "fond watches the clock on everything you buy, so nothing goes quietly.",
+        "words": 12,
+        "chars": 70,
+        "color": "rgb(245, 242, 236)",
+        "size": 40,
+        "weight": 500,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 96,
+          "y": 951,
+          "w": 662,
+          "h": 161
+        },
+        "lines": [
+          "fond watches the clock",
+          "on everything you buy,",
+          "so nothing goes quietly."
+        ]
+      },
+      {
+        "cls": "send",
+        "svg": false,
+        "text": "Send this to whoever does the groceries.",
+        "words": 7,
+        "chars": 40,
+        "color": "rgba(245, 242, 236, 0.7)",
+        "size": 30,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 96,
+          "y": 1133,
+          "w": 492,
+          "h": 80
+        },
+        "lines": [
+          "Send this to whoever",
+          "does the groceries."
+        ]
+      },
+      {
+        "cls": "arrow",
+        "svg": false,
+        "text": "↓",
+        "words": 1,
+        "chars": 1,
+        "color": "rgba(245, 242, 236, 0.7)",
+        "size": 44,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 96,
+          "y": 1236,
+          "w": 888,
+          "h": 53
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(245, 242, 236)",
+        "size": 24,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 96,
+          "y": 1841,
+          "w": 118,
+          "h": 31
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "8/8",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(245, 242, 236)",
+        "size": 24,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 944,
+          "y": 1841,
+          "w": 40,
+          "h": 31
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 1841,
+      "height": 1841
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/out/post-5/slides-tiktok/slide-08.png"
+  }
+]

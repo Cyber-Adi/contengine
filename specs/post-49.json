@@ -1,0 +1,156 @@
+{
+  "postNumber": 49,
+  "title": "Your Eggs Have 5 Weeks. Not 5 Days.",
+  "pillar": "Store It Right",
+  "ctaTier": "Tier 2",
+  "valueEncapsulated": "Awareness = Prerequisite for Change",
+  "sendTrigger": "Send this to whoever cleans out the fridge.",
+  "briefSource": "fond_Content_Brief_Posts_47-48-49_and_Kinetic_Reel_GraveyardFade.md",
+  "provenance": "reconstructed-fixture",
+  "editorialNotes": [
+    "The '73% of consumers' figure traces to survey aggregation, not a single citable study. Downgraded to 'roughly 3 in 4' and deliberately NOT set as hero type. Do not restore the percentage.",
+    "This carousel's thread must never use Signal Red: the thesis is that the eggs are fine, so a red week meter would undercut the argument. W1-3 Steel Blue, W4-5 Harvest Gold.",
+    "FIXTURE. Slide copy was reconstructed from Notion metadata to exercise the pipeline. Replace with the verbatim v2 brief before this is ever published."
+  ],
+  "thread": {
+    "element": "5-segment week meter",
+    "kind": "meter",
+    "startState": "all five segments empty",
+    "endState": "all five segments lit, W1-3 Steel Blue and W4-5 Harvest Gold",
+    "zone": "bottom-rail",
+    "heightPct": 12,
+    "palette": ["steelBlue", "harvestGold"],
+    "forbidColors": ["signalRed"]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "eyebrow": "Store it right",
+        "headline": "Your eggs have 5 weeks. Not 5 days.",
+        "body": "The number printed on the carton is not telling you what you think it is."
+      },
+      "threadState": { "progress": 0.2, "label": "Week 1", "tone": "good" }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "dark",
+      "layout": "hero-number",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "eyebrow": "What the USDA actually says",
+        "strikethrough": "3–5 days",
+        "heroNumber": "3–5 WEEKS",
+        "heroNumberCaption": "How long eggs keep in the refrigerator after you bring them home.",
+        "citation": "USDA FSIS, Shell Eggs from Farm to Table"
+      },
+      "threadState": { "progress": 0.2, "label": "Week 1", "tone": "good" }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "light",
+      "layout": "split-compare",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Two dates. Only one is about you.",
+        "items": [
+          "Sell-By or EXP. A stocking instruction written for the store, not a safety cutoff written for you.",
+          "Pack date. The day the eggs were graded and boxed. This is the one your fridge clock actually starts from."
+        ]
+      },
+      "threadState": { "progress": 0.4, "label": "Week 2", "tone": "good" }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "How to read the carton",
+        "items": [
+          "Find the three-digit code stamped near the date.",
+          "That is the pack date, counted from January 1.",
+          "Add three to five weeks. That is your real window."
+        ]
+      },
+      "threadState": { "progress": 0.6, "label": "Week 3", "tone": "good" }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "light",
+      "layout": "timeline",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "When you are unsure, ask the egg",
+        "items": [
+          "Fill a bowl with cold water.",
+          "Lower the egg in.",
+          "Sinks flat, it is fresh.",
+          "Floats, that one goes."
+        ],
+        "citation": "The float test measures the air cell, which grows as an egg ages."
+      },
+      "threadState": { "progress": 0.8, "label": "Week 4", "tone": "caution" }
+    },
+    {
+      "index": 6,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Roughly three in four people throw eggs out on the date alone.",
+        "body": "Not because the eggs went bad. Because nobody ever told them the date was a stocking guideline."
+      },
+      "threadState": { "progress": 0.8, "label": "Week 4", "tone": "caution" }
+    },
+    {
+      "index": 7,
+      "archetype": "reframe",
+      "background": "light",
+      "layout": "quadrant-card",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Keep this. Your egg week-by-week.",
+        "quadrants": [
+          { "label": "Weeks 1–2", "value": "Any use", "tone": "good" },
+          { "label": "Weeks 3–4", "value": "Cook them", "tone": "good" },
+          { "label": "Week 5", "value": "Float test", "tone": "caution" },
+          { "label": "Floats", "value": "Let it go", "tone": "neutral" }
+        ],
+        "body": "Hard-boiling gets easier as eggs age. Older eggs peel cleaner than fresh ones."
+      },
+      "threadState": { "progress": 1.0, "label": "Week 5", "tone": "caution" }
+    },
+    {
+      "index": 8,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Your fridge is full of food with more time than you think.",
+        "ctaLine": "fond tracks the real window on everything you buy, so you stop guessing at labels.",
+        "sendTrigger": "Send this to whoever cleans out the fridge.",
+        "citation": "Join the waitlist — link in bio"
+      },
+      "threadState": { "progress": 1.0, "label": "Week 5", "tone": "caution" }
+    }
+  ]
+}

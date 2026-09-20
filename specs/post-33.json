@@ -1,0 +1,110 @@
+{
+  "postNumber": 33,
+  "title": "The FIFO Fridge",
+  "pillar": "Store It Right",
+  "ctaTier": "Tier 2",
+  "sendTrigger": "Send this to whoever cleans out the fridge.",
+  "briefSource": "fond_Carousel_Design_Brief_Posts_31-33.md",
+  "provenance": "brief",
+  "editorialNotes": [
+    "20-30% FIFO waste-reduction figure and the $580-870/year applied estimate are foodservice benchmarks applied to average household spend, not a household-specific study - kept as a Steel Blue (savings, positive) hero number per the brief, never Signal Red since nothing here is a loss figure."
+  ],
+  "thread": {
+    "element": "small fridge icon reorganizing from chaos to order",
+    "kind": "builder",
+    "startState": "cluttered, disordered fridge",
+    "endState": "clean FIFO-rotated fridge with a green check",
+    "zone": "side-rail",
+    "heightPct": 12,
+    "palette": ["inkGray", "fondGreen"]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "inkGray",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "Every restaurant in the world uses this system. Almost no home kitchen does.",
+        "body": "A clean, organized walk-in cooler versus a typical home fridge - everything shoved in, things hidden behind other things."
+      },
+      "threadState": { "progress": 0.15, "label": "Chaos", "tone": "neutral" }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "light",
+      "layout": "split-compare",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "It's FIFO. First In, First Out.",
+        "body": "When you buy new groceries, new items go to the back. Older items move to the front. You always use the oldest food first."
+      },
+      "threadState": { "progress": 0.3, "label": "Aligning", "tone": "neutral" }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "30 seconds, when you unload groceries",
+        "items": [
+          "Open the fridge.",
+          "Pull old items forward.",
+          "Put new stuff behind them."
+        ],
+        "body": "That's the entire system."
+      },
+      "threadState": { "progress": 0.5, "label": "Facing forward", "tone": "neutral" }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "hero-number",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "heroNumber": "$580-870/yr",
+        "heroNumberCaption": "Restaurants use FIFO to cut food waste by 20-30%. Applied to a home kitchen, that's the annual savings - from 30 seconds of effort per grocery trip.",
+        "citation": "Foodservice FIFO waste-reduction benchmarks, applied to average household spend"
+      },
+      "threadState": { "progress": 0.7, "label": "Nearly done", "tone": "good" }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "light",
+      "layout": "split-compare",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The reason you don't do this already",
+        "body": "New groceries feel urgent. Old food is \"still fine.\" By the time \"still fine\" becomes \"not fine,\" you can't see it anymore."
+      },
+      "threadState": { "progress": 0.85, "label": "Labeling left", "tone": "caution" }
+    },
+    {
+      "index": 6,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The cheapest upgrade to your kitchen isn't an appliance. It's putting old food in front of new food.",
+        "ctaLine": "fond tracks dates for you - but FIFO costs $0. Start today.",
+        "sendTrigger": "Send this to whoever cleans out the fridge.",
+        "citation": "Join the waitlist - link in bio"
+      },
+      "threadState": { "progress": 1.0, "label": "Complete", "tone": "good" }
+    }
+  ]
+}

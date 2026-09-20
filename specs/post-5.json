@@ -1,0 +1,289 @@
+{
+  "postNumber": 5,
+  "title": "$2,913 \u2014 The Number",
+  "pillar": "The $2913 Problem",
+  "ctaTier": "Tier 2",
+  "valueEncapsulated": "Acknowledgment / Visibility",
+  "sendTrigger": "Send this to whoever does the groceries.",
+  "provenance": "reconstructed-fixture",
+  "editorialNotes": [
+    "FIXTURE. Exercises every renderer capability: accent-word pop, circle annotation, swipe affordance, ornament, micro-label, colour-split hero number, and all five diagram primitives. Copy is illustrative and must be replaced from the real brief before publishing.",
+    "$2,913 is the EPA April 2025 household figure and is the only number here allowed hero treatment."
+  ],
+  "thread": {
+    "element": "depleting dollar bar",
+    "kind": "accumulator",
+    "startState": "full bar",
+    "endState": "bar spent, CTA reached",
+    "zone": "bottom-rail",
+    "heightPct": 12,
+    "palette": [
+      "signalRed",
+      "fondGreen"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "ornament": "starburst",
+      "swipeLabel": "Swipe",
+      "copy": {
+        "eyebrow": "The $2,913 problem",
+        "headline": "Your fridge is quietly running a **subscription** you never signed up for.",
+        "body": "Nobody budgets for it. It leaves anyway, every single week."
+      },
+      "threadState": {
+        "progress": 0.12,
+        "label": "Week 1",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "dark",
+      "layout": "hero-number",
+      "accent": "signalRed",
+      "declaresLoss": true,
+      "copy": {
+        "eyebrow": "Per household, per year",
+        "heroNumber": "$2,913",
+        "heroNumberUnit": "/yr",
+        "heroNumberCaption": "of food bought, paid for, and thrown away.",
+        "citation": "EPA, April 2025"
+      },
+      "threadState": {
+        "progress": 0.25,
+        "label": "Week 2",
+        "tone": "loss"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "light",
+      "layout": "diagram",
+      "accent": "signalRed",
+      "declaresLoss": true,
+      "diagram": {
+        "kind": "bar-compare",
+        "data": {
+          "rows": [
+            {
+              "label": "Produce",
+              "value": 44,
+              "display": "44%",
+              "tone": "loss"
+            },
+            {
+              "label": "Dairy",
+              "value": 22,
+              "display": "22%",
+              "tone": "caution"
+            },
+            {
+              "label": "Meat & fish",
+              "value": 19,
+              "display": "19%",
+              "tone": "caution"
+            },
+            {
+              "label": "Everything else",
+              "value": 15,
+              "display": "15%",
+              "tone": "neutral"
+            }
+          ]
+        }
+      },
+      "copy": {
+        "headline": "Where it actually goes",
+        "body": "Leafy greens and berries lead every waste study. They spoil first and they are bought most hopefully."
+      },
+      "threadState": {
+        "progress": 0.4,
+        "label": "Week 3",
+        "tone": "loss"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "diagram",
+      "accent": "harvestGold",
+      "declaresLoss": true,
+      "diagram": {
+        "kind": "receipt",
+        "data": {
+          "title": "This week, unbudgeted",
+          "lines": [
+            {
+              "label": "Spinach, half a bag",
+              "value": "$2.40",
+              "tone": "loss"
+            },
+            {
+              "label": "Berries, gone soft",
+              "value": "$4.99",
+              "tone": "loss"
+            },
+            {
+              "label": "Milk, two days past",
+              "value": "$3.79",
+              "tone": "loss"
+            },
+            {
+              "label": "Leftovers, forgotten",
+              "value": "$6.00",
+              "tone": "loss"
+            }
+          ],
+          "total": {
+            "label": "One ordinary week",
+            "value": "$56"
+          }
+        }
+      },
+      "copy": {
+        "headline": "The bill nobody prints"
+      },
+      "threadState": {
+        "progress": 0.55,
+        "label": "Week 4",
+        "tone": "loss"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "light",
+      "layout": "diagram",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "diagram": {
+        "kind": "shelf-map",
+        "data": {
+          "zones": [
+            {
+              "label": "Top shelf & door",
+              "note": "Warmest. Condiments, butter, drinks.",
+              "tone": "caution"
+            },
+            {
+              "label": "Middle shelves",
+              "note": "Steady. Dairy, leftovers, eggs.",
+              "tone": "good"
+            },
+            {
+              "label": "Bottom shelf",
+              "note": "Coldest. Raw meat and fish belong here.",
+              "tone": "good"
+            },
+            {
+              "label": "Crisper drawers",
+              "note": "High humidity for greens, low for fruit.",
+              "tone": "good"
+            }
+          ]
+        }
+      },
+      "copy": {
+        "headline": "Most of it is a **placement** problem",
+        "body": "A fridge is four different climates. Most people treat it as one."
+      },
+      "threadState": {
+        "progress": 0.7,
+        "label": "Week 5",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 6,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "diagram",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "diagram": {
+        "kind": "flow-loop",
+        "data": {
+          "steps": [
+            "Trimmings to the freezer bag",
+            "Bag fills over two weeks",
+            "Simmer into stock",
+            "Stock becomes dinner"
+          ]
+        }
+      },
+      "copy": {
+        "headline": "Scraps are an //ingredient// you already paid for",
+        "body": "Onion ends, carrot tops, herb stems, parmesan rinds. One bag, one pot, no new spend."
+      },
+      "threadState": {
+        "progress": 0.82,
+        "label": "Week 6",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 7,
+      "archetype": "reframe",
+      "background": "light",
+      "layout": "diagram",
+      "accent": "fondGreen",
+      "declaresLoss": true,
+      "diagram": {
+        "kind": "before-after",
+        "data": {
+          "before": {
+            "label": "Shopping on hope",
+            "value": "$56",
+            "note": "thrown out each week",
+            "tone": "loss"
+          },
+          "after": {
+            "label": "Shopping on what you have",
+            "value": "$1,500",
+            "note": "kept per year",
+            "tone": "good"
+          }
+        }
+      },
+      "copy": {
+        "headline": "You do not need to shop less. You need to ((see)) more.",
+        "body": "A 20% cut is the realistic target, and it is worth about $1,500 a year."
+      },
+      "threadState": {
+        "progress": 0.94,
+        "label": "Week 7",
+        "tone": "good"
+      }
+    },
+    {
+      "index": 8,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "swipe": false,
+      "copy": {
+        "headline": "The money is not lost at the store. It is lost in the **fridge**.",
+        "ctaLine": "fond watches the clock on everything you buy, so nothing goes quietly.",
+        "sendTrigger": "Send this to whoever does the groceries.",
+        "citation": "Join the waitlist \u2014 link in bio"
+      },
+      "threadState": {
+        "progress": 1.0,
+        "label": "Week 8",
+        "tone": "good"
+      }
+    }
+  ]
+}

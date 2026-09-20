@@ -1,0 +1,142 @@
+{
+  "postNumber": 36,
+  "title": "The Leftover Graveyard",
+  "pillar": "The $2913 Problem",
+  "ctaTier": "Tier 2",
+  "sendTrigger": "Send this to whoever hates cleaning out the fridge.",
+  "briefSource": "fond_Carousel_Design_Brief_Posts_34-36.md",
+  "provenance": "brief",
+  "editorialNotes": [
+    "6-8 containers/week, $18-40/week and the resulting $936-2,080/yr range are the brief's own household leftover-waste estimate applied against the EPA annual figure, not a single citable study - kept as a range, never rounded up to a single hero figure.",
+    "The 14% freeze-rate figure is the brief's own framing of the freeze-vs-waste gap, not a separately sourced statistic."
+  ],
+  "thread": {
+    "element": "graveyard row - one container-headstone added per slide",
+    "kind": "accumulator",
+    "startState": "bare ground line, one faint headstone",
+    "endState": "full row of container-headstones under a red total, one rescued green",
+    "zone": "bottom-rail",
+    "heightPct": 15,
+    "palette": ["inkGray", "signalRed", "fondGreen"]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "inkGray",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "There are leftovers in your fridge right now that you will never eat.",
+        "body": "You already know which ones."
+      },
+      "threadState": { "progress": 0.1, "label": "1 headstone", "tone": "neutral" }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "light",
+      "layout": "timeline",
+      "accent": "signalRed",
+      "declaresLoss": true,
+      "copy": {
+        "headline": "The week a leftover disappears",
+        "items": [
+          "Day 1: \"I'll eat this tomorrow.\"",
+          "Day 2: \"I'll have it for lunch.\"",
+          "Day 3: it moves to the back.",
+          "Day 5: you forget it exists.",
+          "Day 7: it's gone."
+        ]
+      },
+      "threadState": { "progress": 0.28, "label": "2 headstones", "tone": "loss" }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "This isn't about discipline. It's about design.",
+        "body": "The old food becomes invisible by default.",
+        "items": [
+          "New groceries load in front.",
+          "Leftovers go to the back.",
+          "Old items sit hidden, out of sight."
+        ]
+      },
+      "threadState": { "progress": 0.42, "label": "3 headstones", "tone": "neutral" }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "hero-number",
+      "accent": "signalRed",
+      "declaresLoss": true,
+      "copy": {
+        "eyebrow": "Just in leftovers",
+        "heroNumber": "$936-2,080",
+        "heroNumberUnit": "/yr",
+        "heroNumberCaption": "The average household throws away 6-8 leftover containers a week. At $3-5 per serving, that's $18-40 a week.",
+        "citation": "Household leftover-waste estimate; EPA annual food-waste figure"
+      },
+      "threadState": { "progress": 0.57, "label": "4 headstones", "tone": "loss" }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "light",
+      "layout": "quadrant-card",
+      "accent": "signalRed",
+      "declaresLoss": true,
+      "copy": {
+        "headline": "The top 5 most-wasted leftovers all freeze perfectly.",
+        "quadrants": [
+          { "label": "Rice, pasta, soup, vegetables, chicken", "value": "All freeze well", "tone": "good" },
+          { "label": "Households that freeze leftovers", "value": "14%", "tone": "loss" }
+        ]
+      },
+      "threadState": { "progress": 0.7, "label": "5 headstones", "tone": "loss" }
+    },
+    {
+      "index": 6,
+      "archetype": "value",
+      "background": "light",
+      "layout": "diagram",
+      "accent": "steelBlue",
+      "declaresLoss": true,
+      "diagram": {
+        "kind": "before-after",
+        "data": {
+          "before": { "label": "How you load your fridge", "value": "New in front", "note": "old hidden behind", "tone": "loss" },
+          "after": { "label": "FIFO", "value": "Old pulled forward", "note": "new placed behind - 30 seconds when you unload groceries", "tone": "good" }
+        }
+      },
+      "copy": {
+        "headline": "The fix",
+        "body": "Restaurants use FIFO: First In, First Out. It saves hundreds a year."
+      },
+      "threadState": { "progress": 0.85, "label": "1 rescued", "tone": "good" }
+    },
+    {
+      "index": 7,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Your fridge isn't failing you. You just can't see what's in it.",
+        "ctaLine": "fond tracks every item and alerts you before anything becomes a leftover graveyard.",
+        "sendTrigger": "Send this to whoever hates cleaning out the fridge.",
+        "citation": "Join the waitlist - link in bio"
+      },
+      "threadState": { "progress": 1.0, "label": "Complete", "tone": "good" }
+    }
+  ]
+}

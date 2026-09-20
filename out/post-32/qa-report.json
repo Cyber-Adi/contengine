@@ -1,0 +1,40 @@
+{
+  "post": 32,
+  "title": "What $2,913 Could Buy Instead",
+  "provenance": "brief",
+  "verdict": "PASS",
+  "fails": 0,
+  "warns": 5,
+  "findings": [
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 1,
+      "msg": "content occupies 51% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 2,
+      "msg": "content occupies 46% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 3,
+      "msg": "content occupies 49% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 4,
+      "msg": "content occupies 52% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 7,
+      "msg": "content occupies 47% of its box \u2014 type or diagram could carry more of the frame"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+# Dependencies — reinstalled with `npm install`, never committed.
+node_modules/
+
+# Scratch and transfer artifacts.
+_incoming/
+_to_delete/
+.DS_Store
+tools/__pycache__/
+*.bak
+
+# Renders: the Instagram set IS the deliverable and travels between machines, so it
+# is tracked. The TikTok set is the same spec at a different canvas and re-renders in
+# six seconds, so it is not worth ~100MB of history.
+out/*/slides-tiktok/
+out/*/measurements.json
+
+# Test-fixture posts written by tools/test_gates.py.
+specs/post-9*.json
+out/post-9*/

@@ -1,0 +1,380 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://getfond.app/schemas/carousel.schema.json",
+  "title": "fond carousel spec",
+  "description": "One carousel. Slide copy is VERBATIM from the brief and is never rewritten by the renderer.",
+  "type": "object",
+  "required": [
+    "postNumber",
+    "title",
+    "pillar",
+    "ctaTier",
+    "thread",
+    "slides"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "postNumber": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "pillar": {
+      "type": "string",
+      "enum": [
+        "Supermarket Secrets",
+        "The $2913 Problem",
+        "Store It Right",
+        "Waste Hacks",
+        "Origin Story"
+      ]
+    },
+    "ctaTier": {
+      "type": "string",
+      "enum": [
+        "Tier 0",
+        "Tier 1",
+        "Tier 2",
+        "Tier 3"
+      ]
+    },
+    "valueEncapsulated": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Acknowledgment / Visibility",
+        "Awareness = Prerequisite for Change",
+        "Failure Is Data",
+        "Permission to Begin",
+        "Radiance Over Permanence",
+        null
+      ]
+    },
+    "sendTrigger": {
+      "type": "string",
+      "description": "The send-trigger line on the CTA slide. Sends are weighted 3-5x likes in 2026."
+    },
+    "briefSource": {
+      "type": "string",
+      "description": "Filename of the markdown brief this was parsed from. Provenance."
+    },
+    "provenance": {
+      "type": "string",
+      "enum": [
+        "brief",
+        "converted-from-notion-script",
+        "reconstructed-fixture"
+      ],
+      "description": "'brief' = parsed from a real v2 markdown brief. 'converted-from-notion-script' = carried verbatim from a Notion Carousel Script page (PantryPal->fond substitution permitted, nothing else). 'reconstructed-fixture' = assembled from Notion metadata for pipeline testing and MUST be replaced before publishing."
+    },
+    "editorialNotes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Carry-forward editorial rulings, e.g. a downgraded statistic that must not be restored as hero type."
+    },
+    "thread": {
+      "type": "object",
+      "required": [
+        "element",
+        "startState",
+        "endState",
+        "zone"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "element": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "meter",
+            "line",
+            "accumulator",
+            "builder",
+            "clearing"
+          ]
+        },
+        "startState": {
+          "type": "string"
+        },
+        "endState": {
+          "type": "string"
+        },
+        "zone": {
+          "type": "string",
+          "enum": [
+            "bottom-rail",
+            "side-rail"
+          ]
+        },
+        "heightPct": {
+          "type": "number",
+          "minimum": 8,
+          "maximum": 20
+        },
+        "palette": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "fondGreen",
+              "steelBlue",
+              "harvestGold",
+              "signalRed",
+              "inkGray",
+              "offWhite",
+              "slateBlack"
+            ]
+          }
+        },
+        "forbidColors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Tokens this carousel's thread must never use, when the argument forbids it (e.g. Post 49: no Signal Red, because the thesis is that the eggs are fine)."
+        }
+      }
+    },
+    "slides": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "required": [
+          "index",
+          "archetype",
+          "background",
+          "copy"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "index": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "archetype": {
+            "type": "string",
+            "enum": [
+              "hook",
+              "backupHook",
+              "value",
+              "reframe",
+              "cta"
+            ]
+          },
+          "background": {
+            "type": "string",
+            "enum": [
+              "dark",
+              "light"
+            ]
+          },
+          "layout": {
+            "type": "string",
+            "enum": [
+              "hero-statement",
+              "hero-number",
+              "split-compare",
+              "stack-list",
+              "quadrant-card",
+              "timeline",
+              "cta-card",
+              "diagram"
+            ],
+            "description": "Adjacent slides must not share a layout - Design System 3.8."
+          },
+          "diagram": {
+            "type": "object",
+            "required": [
+              "kind"
+            ],
+            "additionalProperties": false,
+            "description": "HTML/CSS-first diagram primitive (src/diagrams.mjs). If it contains words, it is HTML - see CLAUDE.md 3.1.",
+            "properties": {
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "bar-compare",
+                  "before-after",
+                  "shelf-map",
+                  "flow-loop",
+                  "receipt"
+                ]
+              },
+              "data": {
+                "type": "object",
+                "description": "Shape depends on kind; each primitive interprets its own data."
+              }
+            }
+          },
+          "swipe": {
+            "type": "boolean",
+            "description": "Swipe affordance, default on for every non-final slide. Set false to suppress."
+          },
+          "swipeLabel": {
+            "type": "string",
+            "description": "Label beside the swipe affordance. Defaults to 'Swipe' on slide 1."
+          },
+          "ornament": {
+            "type": "string",
+            "description": "Flat geometric ornament shape, e.g. 'starburst'."
+          },
+          "microLabel": {
+            "type": "string",
+            "description": "Bracketed micro-label, top-right. Defaults to the carousel's pillar."
+          },
+          "copy": {
+            "type": "object",
+            "anyOf": [
+              {
+                "required": [
+                  "headline"
+                ]
+              },
+              {
+                "required": [
+                  "heroNumber"
+                ]
+              }
+            ],
+            "description": "Every slide carries either a headline or a heroNumber as its primary content - the hero-number layout uses heroNumber with no literal headline.",
+            "additionalProperties": false,
+            "properties": {
+              "eyebrow": {
+                "type": "string"
+              },
+              "headline": {
+                "type": "string"
+              },
+              "heroNumber": {
+                "type": "string",
+                "description": "Set in Space Grotesk. Numbers never use the body font."
+              },
+              "heroNumberUnit": {
+                "type": "string",
+                "description": "Colour-split unit beside heroNumber, e.g. '%' or 'lbs'."
+              },
+              "heroNumberCaption": {
+                "type": "string"
+              },
+              "strikethrough": {
+                "type": "string",
+                "description": "Rendered struck-through beside a hero number, for correction slides."
+              },
+              "body": {
+                "type": "string",
+                "maxLength": 400
+              },
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "maxItems": 6
+              },
+              "quadrants": {
+                "type": "array",
+                "maxItems": 4,
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "label",
+                    "value"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "label": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "type": "string"
+                    },
+                    "tone": {
+                      "type": "string",
+                      "enum": [
+                        "good",
+                        "caution",
+                        "loss",
+                        "neutral"
+                      ]
+                    }
+                  }
+                }
+              },
+              "citation": {
+                "type": "string"
+              },
+              "ctaLine": {
+                "type": "string"
+              },
+              "sendTrigger": {
+                "type": "string"
+              }
+            }
+          },
+          "accent": {
+            "type": "string",
+            "enum": [
+              "fondGreen",
+              "steelBlue",
+              "harvestGold",
+              "signalRed",
+              "inkGray"
+            ],
+            "description": "The single accent token for this slide."
+          },
+          "declaresLoss": {
+            "type": "boolean",
+            "default": false,
+            "description": "TRUE only when this slide carries a loss/waste/cost figure. Signal Red is illegal on a slide where this is false - QA Gate 2.4."
+          },
+          "threadState": {
+            "type": "object",
+            "required": [
+              "progress"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "progress": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "label": {
+                "type": "string"
+              },
+              "tone": {
+                "type": "string",
+                "enum": [
+                  "good",
+                  "caution",
+                  "loss",
+                  "neutral"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "gtmAngle": {
+      "type": "string",
+      "enum": [
+        "money-leak",
+        "date-label-lie",
+        "takeout-guilt"
+      ],
+      "description": "Which gtm.json angle this carousel serves. Optional but strongly wanted: it is what lets the Ad Bank adapt this post later instead of originating a new angle, per its 90%-adaptation rule."
+    }
+  }
+}

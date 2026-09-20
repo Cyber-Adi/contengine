@@ -1,0 +1,125 @@
+{
+  "postNumber": 31,
+  "title": "Shrinkflation Receipt",
+  "pillar": "Supermarket Secrets",
+  "ctaTier": "Tier 2",
+  "sendTrigger": "Send this to whoever does the groceries.",
+  "briefSource": "fond_Carousel_Design_Brief_Posts_31-33.md",
+  "provenance": "brief",
+  "editorialNotes": [
+    "Shrinkflation weight-change figures (16oz->13.5oz, Oreo family-size change) are documented consumer-reporting cases from 2023-2025, not a single hero-eligible citation - kept as evidence-log items, never hero type.",
+    "8-12% figure is the carousel's own aggregate framing of the documented cases above, not sourced to a single study - rendered as the slide 4 hero because the brief explicitly stages it that way, consistent with the receipt thread's own running total."
+  ],
+  "thread": {
+    "element": "receipt tape, prints one line per slide",
+    "kind": "line",
+    "startState": "blank receipt header",
+    "endState": "full receipt, total stamped \"+8-12% - charged, not shown.\"",
+    "zone": "side-rail",
+    "heightPct": 14,
+    "palette": ["offWhite", "signalRed"]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "inkGray",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "The price didn't go up. The box got smaller.",
+        "body": "Two products, same shelf, same price. One of them is quietly lying to you."
+      },
+      "threadState": { "progress": 0.1, "label": "Line 1", "tone": "neutral" }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "light",
+      "layout": "split-compare",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "It's shrinkflation.",
+        "body": "Same price. Same shelf. Less product inside. The packaging barely changes, so you don't notice."
+      },
+      "threadState": { "progress": 0.25, "label": "Line 2", "tone": "neutral" }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "signalRed",
+      "declaresLoss": true,
+      "copy": {
+        "headline": "The evidence log",
+        "items": [
+          "Chips: 10 oz -> 9.25 oz.",
+          "Bottled drink: 32 oz -> 28 oz.",
+          "A \"family size\" package of cookies is now the size a regular package used to be."
+        ]
+      },
+      "threadState": { "progress": 0.4, "label": "Line 3", "tone": "loss" }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "hero-number",
+      "accent": "signalRed",
+      "declaresLoss": true,
+      "copy": {
+        "heroNumber": "8-12%",
+        "heroNumberCaption": "The effective price increase on a bag of chips isn't 0%. They just hid it in the packaging instead of the price tag.",
+        "citation": "Documented shrinkflation cases, 2023-2025 consumer reporting"
+      },
+      "threadState": { "progress": 0.55, "label": "Line 4", "tone": "loss" }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "light",
+      "layout": "split-compare",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "What you check versus what you don't",
+        "body": "Companies count on this: people notice price increases but not size decreases. You check the price. You don't weigh the box."
+      },
+      "threadState": { "progress": 0.7, "label": "Line 5", "tone": "neutral" }
+    },
+    {
+      "index": 6,
+      "archetype": "value",
+      "background": "light",
+      "layout": "hero-number",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "eyebrow": "The number that doesn't shrink",
+        "heroNumber": "$0.43/oz",
+        "heroNumberCaption": "Cost per ounce is the number the store doesn't want you looking at. It's printed on the shelf tag, smaller than the price.",
+        "body": "Check that number, not the sticker price."
+      },
+      "threadState": { "progress": 0.85, "label": "Line 6", "tone": "neutral" }
+    },
+    {
+      "index": 7,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The price didn't change. Your serving count did.",
+        "ctaLine": "fond tracks what you actually get per dollar, not what the box says.",
+        "sendTrigger": "Send this to whoever does the groceries.",
+        "citation": "Join the waitlist - link in bio"
+      },
+      "threadState": { "progress": 1.0, "label": "Line 7", "tone": "loss" }
+    }
+  ]
+}

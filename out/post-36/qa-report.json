@@ -1,0 +1,58 @@
+{
+  "post": 36,
+  "title": "The Leftover Graveyard",
+  "provenance": "brief",
+  "verdict": "PASS",
+  "fails": 0,
+  "warns": 8,
+  "findings": [
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 1,
+      "msg": "content occupies 53% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.4-orphan",
+      "level": "WARN",
+      "slide": 1,
+      "msg": "headline ends on an orphan: 'eat.'"
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 2,
+      "msg": "content occupies 41% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 3,
+      "msg": "content occupies 54% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.4-orphan",
+      "level": "WARN",
+      "slide": 3,
+      "msg": "headline ends on an orphan: 'design.'"
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 4,
+      "msg": "content occupies 54% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 5,
+      "msg": "content occupies 43% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 7,
+      "msg": "content occupies 50% of its box \u2014 type or diagram could carry more of the frame"
+    }
+  ]
+}

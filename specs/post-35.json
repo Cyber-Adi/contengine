@@ -1,0 +1,128 @@
+{
+  "postNumber": 35,
+  "title": "The Bakery Smell Is Fake",
+  "pillar": "Supermarket Secrets",
+  "ctaTier": "Tier 2",
+  "sendTrigger": "Send this to someone who thinks grocery shopping is neutral.",
+  "briefSource": "fond_Carousel_Design_Brief_Posts_34-36.md",
+  "provenance": "brief",
+  "editorialNotes": [
+    "16% time-in-store and 12% basket-size figures trace to a 2023 retail-psychology study cited in the brief; kept as sourced, non-hero quadrant values, not standalone hero type."
+  ],
+  "thread": {
+    "element": "warm-amber scent haze that clears",
+    "kind": "clearing",
+    "startState": "thick amber fog, ~70% opacity",
+    "endState": "fully gone, crisp clear edge",
+    "zone": "bottom-rail",
+    "heightPct": 12,
+    "palette": ["harvestGold"]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "That fresh bread smell when you walk in? It's pumped through the vents."
+      },
+      "threadState": { "progress": 0.1, "label": "70% haze", "tone": "neutral" }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "light",
+      "layout": "diagram",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "diagram": {
+        "kind": "shelf-map",
+        "data": {
+          "zones": [
+            { "label": "HVAC unit", "note": "Pipes bakery scent through the vents near the entrance.", "tone": "caution" },
+            { "label": "Scent zone, first ~20 feet", "note": "The smell triggers hunger before you've picked up a basket.", "tone": "caution" }
+          ]
+        }
+      },
+      "copy": {
+        "headline": "It's called \"scent marketing.\"",
+        "body": "Many grocery chains pipe bakery scent through HVAC systems near the entrance."
+      },
+      "threadState": { "progress": 0.25, "label": "55% haze", "tone": "neutral" }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "light",
+      "layout": "quadrant-card",
+      "accent": "signalRed",
+      "declaresLoss": true,
+      "copy": {
+        "headline": "The smell doesn't make you hungry. It makes you slow down.",
+        "quadrants": [
+          { "label": "Time in-store", "value": "+16%", "tone": "caution" },
+          { "label": "Basket size", "value": "+12%", "tone": "loss" }
+        ],
+        "citation": "2023 retail scent-marketing study"
+      },
+      "threadState": { "progress": 0.4, "label": "40% haze", "tone": "loss" }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "diagram",
+      "accent": "signalRed",
+      "declaresLoss": true,
+      "diagram": {
+        "kind": "before-after",
+        "data": {
+          "before": { "label": "Rotisserie chicken", "value": "$5.99", "note": "the store loses money on it", "tone": "good" },
+          "after": { "label": "Prepared foods", "value": "60%+", "note": "margin on sides, salads, prepared meals", "tone": "loss" }
+        }
+      },
+      "copy": {
+        "headline": "The bait and the hook",
+        "body": "The smell pulls you into the hot-food section, where margins run 60%+."
+      },
+      "threadState": { "progress": 0.6, "label": "25% haze", "tone": "loss" }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "light",
+      "layout": "quadrant-card",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Nothing in the store is accidental.",
+        "body": "Fresh flowers at the entrance. Warm lighting in produce. Cool lighting on the meat to make it look redder.",
+        "quadrants": [
+          { "label": "Flowers", "value": "Calm", "tone": "neutral" },
+          { "label": "Produce lighting", "value": "Fresh", "tone": "neutral" },
+          { "label": "Meat lighting", "value": "Red", "tone": "neutral" }
+        ]
+      },
+      "threadState": { "progress": 0.8, "label": "10% haze", "tone": "neutral" }
+    },
+    {
+      "index": 6,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "You're not shopping. You're being directed.",
+        "ctaLine": "fond shows you what you actually need before you walk in.",
+        "sendTrigger": "Send this to someone who thinks grocery shopping is neutral.",
+        "citation": "Join the waitlist - link in bio"
+      },
+      "threadState": { "progress": 1.0, "label": "Clear", "tone": "good" }
+    }
+  ]
+}

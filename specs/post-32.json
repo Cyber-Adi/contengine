@@ -1,0 +1,147 @@
+{
+  "postNumber": 32,
+  "title": "What $2,913 Could Buy Instead",
+  "pillar": "The $2913 Problem",
+  "ctaTier": "Tier 2",
+  "sendTrigger": "Send this to whoever does the groceries.",
+  "briefSource": "fond_Carousel_Design_Brief_Posts_31-33.md",
+  "provenance": "brief",
+  "gtmAngle": "money-leak",
+  "editorialNotes": [
+    "$2,913/yr is the EPA April 2025 household figure - the only number in this carousel allowed hero treatment.",
+    "The $525/month used-car payment and $35,000 ten-year projection are the brief's own illustrative comparisons, not separately cited studies - rendered as plain body/diagram content, not as competing hero numbers."
+  ],
+  "thread": {
+    "element": "forgone-purchase collection bar",
+    "kind": "accumulator",
+    "startState": "single intact $2,913 token",
+    "endState": "bar full of everything the money could have bought",
+    "zone": "bottom-rail",
+    "heightPct": 15,
+    "palette": ["signalRed", "steelBlue"]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-number",
+      "accent": "signalRed",
+      "declaresLoss": true,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "eyebrow": "Per household, per year",
+        "heroNumber": "$2,913",
+        "heroNumberUnit": "/yr",
+        "heroNumberCaption": "Wasted on food every year. Here's what it could buy instead.",
+        "citation": "EPA, April 2025"
+      },
+      "threadState": { "progress": 0.1, "label": "Intact", "tone": "loss" }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Your fridge -> Paris",
+        "body": "$2,913 covers economy round-trip tickets to London, Paris, or Rome, taxes included.",
+        "items": [
+          "Departure: your fridge.",
+          "Destination: Paris.",
+          "Fare: $2,913, previously wasted."
+        ]
+      },
+      "threadState": { "progress": 0.25, "label": "Collection 1", "tone": "neutral" }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "light",
+      "layout": "timeline",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "6 months of car payments",
+        "body": "The average used-car payment is $525/month. Your food waste covers half a year of it.",
+        "items": [
+          "Months 1-6: covered by food-waste savings",
+          "Months 7-12: still your own money"
+        ]
+      },
+      "threadState": { "progress": 0.4, "label": "Collection 2", "tone": "neutral" }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "diagram",
+      "accent": "signalRed",
+      "declaresLoss": true,
+      "diagram": {
+        "kind": "receipt",
+        "data": {
+          "title": "This week, straight to trash",
+          "lines": [
+            { "label": "Produce, gone soft", "value": "$18", "tone": "loss" },
+            { "label": "Dairy, past date", "value": "$14", "tone": "loss" },
+            { "label": "Leftovers, forgotten", "value": "$24", "tone": "loss" }
+          ],
+          "total": { "label": "Cash, into the trash", "value": "$56" }
+        }
+      },
+      "copy": {
+        "headline": "That discomfort is the point."
+      },
+      "threadState": { "progress": 0.55, "label": "Collection 3", "tone": "loss" }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "light",
+      "layout": "quadrant-card",
+      "accent": "signalRed",
+      "declaresLoss": true,
+      "copy": {
+        "headline": "Over 10 years, that's roughly $35,000.",
+        "quadrants": [
+          { "label": "A down payment", "value": "on a home", "tone": "loss" },
+          { "label": "A year of tuition", "value": "at a state school", "tone": "loss" },
+          { "label": "A small business", "value": "started from scratch", "tone": "loss" }
+        ]
+      },
+      "threadState": { "progress": 0.7, "label": "Collection 4", "tone": "loss" }
+    },
+    {
+      "index": 6,
+      "archetype": "value",
+      "background": "light",
+      "layout": "timeline",
+      "accent": "harvestGold",
+      "declaresLoss": true,
+      "copy": {
+        "headline": "It adds up because it's invisible",
+        "body": "Waste isn't one big event. It's $8 of produce on Tuesday, forgotten yogurt on Thursday, leftovers no one reheated on Saturday.",
+        "items": ["Tue: $8", "Thu: $5", "Sat: $3", "Sun total: $56"]
+      },
+      "threadState": { "progress": 0.85, "label": "Collection 5", "tone": "loss" }
+    },
+    {
+      "index": 7,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "You didn't choose to waste $2,913. You just never got to see it happening.",
+        "ctaLine": "fond makes the invisible visible.",
+        "sendTrigger": "Send this to whoever does the groceries.",
+        "citation": "Join the waitlist - link in bio"
+      },
+      "threadState": { "progress": 1.0, "label": "Full", "tone": "good" }
+    }
+  ]
+}

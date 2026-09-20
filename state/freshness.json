@@ -1,0 +1,5 @@
+{
+  "updatedAt": "2026-09-20T02:42:33.771Z",
+  "note": "Outer-world observations harvested from the GTM free research stack. Every item needs observedAt, source, and the verbatim thing observed. Items older than 14 days stop counting toward the entropy guard's citation requirement, which is what forces the harvest to actually re-run.",
+  "items": []
+}

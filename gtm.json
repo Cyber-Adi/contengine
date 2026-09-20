@@ -1,0 +1,233 @@
+{
+  "$comment": "THE MARKETING CONTRACT. Mirror of Notion > 'Brand, GTM & Ad Engine - Post-Fable Architecture (Jul 13)' and its Ad Bank child. Same status as tokens.json: if this file disagrees with that Notion page, the Notion page wins and this file is stale. Nothing in the pipeline may hardcode a positioning line, an angle, a stat, or a CTA. Sourced from the GTM page verbatim on 2026-09-12.",
+  "positioning": {
+    "line": "the 17-year-old who builds systems that make invisible things visible",
+    "throughLine": "wasted food (fond), stolen attention (Stoned), unseen people",
+    "rule": "One sentence, every bio, every platform. Never rewritten per-channel."
+  },
+  "stance": {
+    "organicReachIsNotDistribution": true,
+    "note": "Per GTM section 1. Personal brand = trust asset. Distribution = platform-native short video + communities + eventually paid. @getfond carousels are the distribution arm, not the credibility arm. Never conflate the two when scoring performance."
+  },
+  "audience": {
+    "primary": "US grocery-payers 25-45",
+    "interests": [
+      "meal planning",
+      "Too Good To Go",
+      "frugal living",
+      "zero waste"
+    ],
+    "secondary": "College students off meal plans",
+    "wateringHoles": [
+      "r/ZeroWaste",
+      "r/EatCheapAndHealthy",
+      "r/Frugal"
+    ]
+  },
+  "angles": [
+    {
+      "id": "money-leak",
+      "name": "Money leak",
+      "hookSeed": "Your household throws away $2,913/year. Your fridge knows which $2,913.",
+      "stat": {
+        "value": "$2,913/year",
+        "source": "EPA, 2025",
+        "verified": true
+      },
+      "pillar": "$2,913 Problem",
+      "valueEncapsulated": "Quantified Stakes",
+      "organicSources": [
+        "carousel-2",
+        "carousel-5",
+        "carousel-32",
+        "carousel-40",
+        "reel-the-number"
+      ]
+    },
+    {
+      "id": "date-label-lie",
+      "name": "Date-label lie",
+      "hookSeed": "43% of tossed food was still safe. The label lied to you.",
+      "stat": {
+        "value": "43%",
+        "source": "2025 consumer label-confusion survey",
+        "verified": true
+      },
+      "pillar": "$2,913 Problem",
+      "valueEncapsulated": "Awareness is the prerequisite for change",
+      "organicSources": [
+        "carousel-6",
+        "carousel-56"
+      ]
+    },
+    {
+      "id": "takeout-guilt",
+      "name": "Takeout guilt",
+      "hookSeed": "'Nothing to eat' with $40 of ingredients in the fridge. The app that ends that sentence.",
+      "stat": {
+        "value": null,
+        "source": null,
+        "verified": true,
+        "note": "Behavioural/experiential hook, not a numeric claim. The visual contradiction carries the argument. If a variant needs a number, borrow money-leak's EPA figure rather than inventing one."
+      },
+      "pillar": "$2,913 Problem",
+      "valueEncapsulated": "Acknowledgment / Visibility",
+      "organicSources": [
+        "carousel-7",
+        "carousel-19",
+        "carousel-52"
+      ]
+    }
+  ],
+  "honesty": {
+    "$comment": "GTM section 3: 'Every claim stays pre-launch-honest.' These are hard fails, not style notes. The engine already refuses invented statistics; this extends the same discipline to positioning claims.",
+    "bannedSubstrings": [
+      "our customers",
+      "customers love",
+      "users love",
+      "trusted by",
+      "join thousands",
+      "join millions",
+      "downloads",
+      "5-star",
+      "best-selling",
+      "award-winning",
+      "#1 app"
+    ],
+    "bannedPatterns": [
+      "\\b\\d[\\d,]*\\+?\\s+(users|customers|downloads|households|families|people)\\s+(use|trust|love|saved)",
+      "\\bwe(?:'ve| have)\\s+(helped|saved)\\s+\\d"
+    ],
+    "requiredFraming": {
+      "foundingMember": "Founding member, never customer",
+      "projections": "Projections, never traction"
+    },
+    "everyNumberIsSourced": true,
+    "unsourceableFiguresRenderQualitatively": true
+  },
+  "ctas": {
+    "$comment": "Tier names mirror the Notion Design System / carousel.schema.json enum. The Design System wins on naming per CLAUDE.md precedence; this file supplies the pre-launch-honest TEXT for each tier, which the Design System does not.",
+    "Tier 0": {
+      "text": null,
+      "note": "Pure value post, no ask. The majority of the feed should be this."
+    },
+    "Tier 1": {
+      "text": "More in the bio.",
+      "note": "Soft. Default for value posts."
+    },
+    "Tier 2": {
+      "text": "Waitlist is open. Link in bio.",
+      "note": "Free tier."
+    },
+    "Tier 3": {
+      "text": "Founding member pre-order is live, $19/yr, capped at 100. Link in bio.",
+      "note": "GTM section 3. Refundable anytime before launch. Do not restate the cap as sold-out or scarce unless the real count supports it."
+    }
+  },
+  "postTypes": {
+    "$comment": "GTM section 2. Applies to the personal-brand channels; carried here because the Friday robot drafts both and must not mix registers.",
+    "perform": [
+      "artifact",
+      "number",
+      "story"
+    ],
+    "avoid": [
+      "thread-bro",
+      "engagement-bait"
+    ]
+  },
+  "voice": {
+    "rules": [
+      "no em dashes",
+      "long self-correcting clauses",
+      "dry wit"
+    ],
+    "note": "Voice rules govern generated captions and ad cards. They do NOT license rewriting carousel slide copy, which stays verbatim from the brief."
+  },
+  "research": {
+    "$comment": "GTM section 2, 'Free research stack (no paid MCPs needed)'. The entropy guard draws exclusively from these. Every one is free and reachable by web search.",
+    "sources": [
+      {
+        "id": "meta-ad-library",
+        "name": "Meta Ad Library",
+        "what": "every competitor's live ads",
+        "url": "https://www.facebook.com/ads/library/"
+      },
+      {
+        "id": "tiktok-creative-center",
+        "name": "TikTok Creative Center",
+        "what": "top-performing ads by category/region",
+        "url": "https://ads.tiktok.com/business/creativecenter/"
+      },
+      {
+        "id": "google-trends",
+        "name": "Google Trends",
+        "what": "query direction",
+        "url": "https://trends.google.com/"
+      },
+      {
+        "id": "reddit",
+        "name": "Reddit search",
+        "what": "verbatim audience phrasing in the watering holes",
+        "url": "https://www.reddit.com/search/"
+      },
+      {
+        "id": "product-hunt",
+        "name": "Product Hunt archives",
+        "what": "adjacent launches and their positioning",
+        "url": "https://www.producthunt.com/"
+      },
+      {
+        "id": "youtube-autocomplete",
+        "name": "YouTube autocomplete",
+        "what": "the question shape people actually type",
+        "url": "https://www.youtube.com/"
+      }
+    ],
+    "cadence": "monthly for the angle-matrix challenge; weekly for the language bank",
+    "deliverable": "5 hooks that are working, 2 formats gaining, 1 dying format to avoid. Update the angle matrix if anything contradicts it."
+  },
+  "adBank": {
+    "$comment": "Ad Bank page header, verbatim: 'adapt existing organic carousel/Reel copy before inventing a new angle. This bank should be 90% adaptation, not origination.'",
+    "adaptationRatio": 0.9,
+    "requireOrganicSource": true,
+    "rotationRule": "Complete a full pass through every angle before starting a second pass. A second pass must change FORMAT, not just re-run the hook.",
+    "refuseOnNoMatch": "If no organic carousel matches a proposed angle, report the gap. Do NOT invent an angle to fill it."
+  },
+  "paid": {
+    "$comment": "GTM section 5. Stated as hard constraints because they are.",
+    "blocked": true,
+    "blockedReasons": [
+      "Meta ad accounts require 18+. Ads run through the 18-year-old agency partner's Business Manager, with Adi as creative director.",
+      "No paid spend until founding-member revenue exists. Ads are a post-validation amplifier, never a validation tool at this budget."
+    ],
+    "testProtocol": {
+      "angles": 3,
+      "formatsPerAngle": 2,
+      "creatives": 6,
+      "budgetPerCreativePerDay": 10,
+      "days": 3,
+      "totalBudget": 180,
+      "killBelowCtr": 0.01,
+      "iterateAboveCtr": 0.02,
+      "scaleOn": "landing-page conversion, UTM-tagged. Never on clicks.",
+      "window": "December 2026"
+    }
+  },
+  "organicMetrics": {
+    "$comment": "Per Strategy v2. These are the numbers the loop optimises. Likes are deliberately absent.",
+    "primary": "swipeThroughToSlide3",
+    "primaryNote": "The closest proxy for 'a stranger stopped'. Never once logged to date.",
+    "secondary": [
+      "savesPerReach",
+      "sendsPerReach"
+    ],
+    "sendWeight": 4,
+    "sendWeightNote": "Sends are weighted 3-5x likes. Using 4 as the midpoint.",
+    "killCriterion": {
+      "rule": "Any recurring format whose save-rate underperforms the account median for 3 consecutive posts gets redesigned or retired.",
+      "consecutiveMisses": 3,
+      "enforced": "src/decide.mjs, not a note in a doc."
+    }
+  }
+}

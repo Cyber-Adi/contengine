@@ -1,0 +1,34 @@
+{
+  "post": 5,
+  "title": "$2,913 \u2014 The Number",
+  "provenance": "reconstructed-fixture",
+  "verdict": "PASS",
+  "fails": 0,
+  "warns": 4,
+  "findings": [
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 2,
+      "msg": "content occupies 37% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 4,
+      "msg": "content occupies 49% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 7,
+      "msg": "content occupies 40% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 8,
+      "msg": "content occupies 50% of its box \u2014 type or diagram could carry more of the frame"
+    }
+  ]
+}

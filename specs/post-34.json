@@ -1,0 +1,118 @@
+{
+  "postNumber": 34,
+  "title": "The Sunday Fridge Audit",
+  "pillar": "Waste Hacks",
+  "ctaTier": "Tier 2",
+  "sendTrigger": "Send this to whoever does the fridge clean-out.",
+  "briefSource": "fond_Carousel_Design_Brief_Posts_34-36.md",
+  "provenance": "brief",
+  "editorialNotes": [
+    "40% waste reduction and $1,165/yr are the brief's own weekly-fridge-audit estimate applied to the EPA household figure, not a single citable study - kept in Steel Blue as a savings framing, never Signal Red."
+  ],
+  "thread": {
+    "element": "fridge icon that empties, then re-fills sorted",
+    "kind": "builder",
+    "startState": "cluttered, overstuffed fridge",
+    "endState": "clean fridge, three colour-coded zones, green check",
+    "zone": "bottom-rail",
+    "heightPct": 14,
+    "palette": ["inkGray", "fondGreen"]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "inkGray",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "Every Sunday, open your fridge. Pull everything out.",
+        "body": "You'll be surprised what you find."
+      },
+      "threadState": { "progress": 0.1, "label": "Cluttered", "tone": "neutral" }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "light",
+      "layout": "quadrant-card",
+      "accent": "harvestGold",
+      "declaresLoss": true,
+      "copy": {
+        "headline": "This takes 10 minutes. Group everything into three piles.",
+        "quadrants": [
+          { "label": "Use Today", "value": "Expires within 48 hours", "tone": "loss" },
+          { "label": "Use This Week", "value": "Good but aging", "tone": "caution" },
+          { "label": "Freeze Now", "value": "Save what you won't reach in time", "tone": "good" }
+        ]
+      },
+      "threadState": { "progress": 0.25, "label": "Empty", "tone": "neutral" }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The \"Use Today\" pile becomes tonight's meal",
+        "body": "Don't plan around a recipe - plan around what needs to be eaten.",
+        "items": ["Stir fry", "Sheet pan", "Soup", "Omelette", "Any technique works"]
+      },
+      "threadState": { "progress": 0.45, "label": "Re-filling", "tone": "neutral" }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "light",
+      "layout": "diagram",
+      "accent": "steelBlue",
+      "declaresLoss": true,
+      "diagram": {
+        "kind": "before-after",
+        "data": {
+          "before": { "label": "Before", "value": "2 days", "note": "time left", "tone": "loss" },
+          "after": { "label": "After", "value": "6 months", "note": "added by freezing", "tone": "good" }
+        }
+      },
+      "copy": {
+        "headline": "The \"Freeze Now\" pile takes 5 minutes.",
+        "body": "Bag it, label it, lay it flat."
+      },
+      "threadState": { "progress": 0.65, "label": "Nearly full", "tone": "neutral" }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "hero-number",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "eyebrow": "Weekly fridge audit",
+        "heroNumber": "40%",
+        "heroNumberCaption": "less food waste - $1,165 saved per year, for 10 minutes on Sunday.",
+        "citation": "Weekly fridge-audit waste-reduction estimate; EPA household food-waste figure"
+      },
+      "threadState": { "progress": 0.85, "label": "Sorted", "tone": "good" }
+    },
+    {
+      "index": 6,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The best kitchen habit isn't a recipe. It's seeing what you have before you decide what to buy.",
+        "ctaLine": "fond does the audit for you, every day.",
+        "sendTrigger": "Send this to whoever does the fridge clean-out.",
+        "citation": "Join the waitlist - link in bio"
+      },
+      "threadState": { "progress": 1.0, "label": "Complete", "tone": "good" }
+    }
+  ]
+}

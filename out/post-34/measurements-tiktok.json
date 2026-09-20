@@ -1,0 +1,1313 @@
+[
+  {
+    "index": 1,
+    "archetype": "hook",
+    "layout": "hero-statement",
+    "declaresLoss": false,
+    "background": "dark",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [],
+    "accents": [
+      "rgb(245, 242, 236)",
+      "rgb(0, 0, 0)",
+      "rgb(107, 114, 128)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "h-hook",
+        "svg": false,
+        "text": "Every Sunday, open your fridge. Pull everything out.",
+        "words": 8,
+        "chars": 52,
+        "color": "rgb(245, 242, 236)",
+        "size": 128,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 696,
+          "w": 1115,
+          "h": 527
+        },
+        "lines": [
+          "Every Sunday,",
+          "open your",
+          "fridge. Pull",
+          "everything out."
+        ]
+      },
+      {
+        "cls": "body",
+        "svg": false,
+        "text": "You'll be surprised what you find.",
+        "words": 6,
+        "chars": 34,
+        "color": "rgb(245, 242, 236)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1266,
+          "w": 803,
+          "h": 147
+        },
+        "lines": [
+          "You'll be surprised",
+          "what you find."
+        ]
+      },
+      {
+        "cls": "swipe-l",
+        "svg": false,
+        "text": "Swipe",
+        "words": 1,
+        "chars": 5,
+        "color": "rgb(245, 242, 236)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 253,
+          "y": 1467,
+          "w": 97,
+          "h": 52
+        },
+        "lines": null
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "Cluttered",
+        "words": 1,
+        "chars": 9,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2257,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "1/6",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1251,
+          "y": 2441,
+          "w": 61,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 2083,
+      "height": 2083
+    },
+    "threadBox": {
+      "top": 2083,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/out/post-34/slides-tiktok/slide-01.png"
+  },
+  {
+    "index": 2,
+    "archetype": "backupHook",
+    "layout": "quadrant-card",
+    "declaresLoss": true,
+    "background": "light",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [
+      {
+        "cls": "h-mid",
+        "text": "This takes 10 minutes. Group everything into three piles.",
+        "family": "\"Playfair Display\", Georgia, serif"
+      }
+    ],
+    "accents": [
+      "rgb(20, 22, 26)",
+      "rgb(0, 0, 0)",
+      "rgb(107, 114, 128)",
+      "rgb(214, 69, 65)",
+      "rgb(74, 123, 166)",
+      "rgb(46, 94, 78)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "h-mid",
+        "svg": false,
+        "text": "This takes 10 minutes. Group everything into three piles.",
+        "words": 9,
+        "chars": 57,
+        "color": "rgb(20, 22, 26)",
+        "size": 85.33,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 541,
+          "w": 881,
+          "h": 271
+        },
+        "lines": [
+          "This takes 10",
+          "minutes. Group everything",
+          "into three piles."
+        ]
+      },
+      {
+        "cls": "q-l",
+        "svg": false,
+        "text": "Use Today",
+        "words": 2,
+        "chars": 9,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 700,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 173,
+          "y": 890,
+          "w": 495,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "q-v",
+        "svg": false,
+        "text": "Expires within 48 hours",
+        "words": 4,
+        "chars": 23,
+        "color": "rgb(214, 69, 65)",
+        "size": 69.33,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 173,
+          "y": 961,
+          "w": 495,
+          "h": 161
+        },
+        "lines": [
+          "Expires within",
+          "48 hours"
+        ]
+      },
+      {
+        "cls": "q-l",
+        "svg": false,
+        "text": "Use This Week",
+        "words": 3,
+        "chars": 13,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 700,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 780,
+          "y": 890,
+          "w": 495,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "q-v",
+        "svg": false,
+        "text": "Good but aging",
+        "words": 3,
+        "chars": 14,
+        "color": "rgb(74, 123, 166)",
+        "size": 69.33,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 780,
+          "y": 961,
+          "w": 495,
+          "h": 161
+        },
+        "lines": [
+          "Good but",
+          "aging"
+        ]
+      },
+      {
+        "cls": "q-l",
+        "svg": false,
+        "text": "Freeze Now",
+        "words": 2,
+        "chars": 10,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 700,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 173,
+          "y": 1220,
+          "w": 495,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "q-v",
+        "svg": false,
+        "text": "Save what you won't reach in time",
+        "words": 7,
+        "chars": 33,
+        "color": "rgb(46, 94, 78)",
+        "size": 69.33,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 173,
+          "y": 1291,
+          "w": 495,
+          "h": 241
+        },
+        "lines": [
+          "Save what you",
+          "won't reach in",
+          "time"
+        ]
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "Empty",
+        "words": 1,
+        "chars": 5,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2257,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "2/6",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1240,
+          "y": 2441,
+          "w": 72,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 2083,
+      "height": 2083
+    },
+    "threadBox": {
+      "top": 2083,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/out/post-34/slides-tiktok/slide-02.png"
+  },
+  {
+    "index": 3,
+    "archetype": "value",
+    "layout": "stack-list",
+    "declaresLoss": false,
+    "background": "light",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [],
+    "accents": [
+      "rgb(20, 22, 26)",
+      "rgb(0, 0, 0)",
+      "rgb(74, 123, 166)",
+      "rgb(107, 114, 128)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "h-mid",
+        "svg": false,
+        "text": "The \"Use Today\" pile becomes tonight's meal",
+        "words": 7,
+        "chars": 43,
+        "color": "rgb(20, 22, 26)",
+        "size": 85.33,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 540,
+          "w": 881,
+          "h": 271
+        },
+        "lines": [
+          "The \"Use Today\"",
+          "pile becomes tonight's",
+          "meal"
+        ]
+      },
+      {
+        "cls": "li-n",
+        "svg": false,
+        "text": "01",
+        "words": 1,
+        "chars": 2,
+        "color": "rgb(74, 123, 166)",
+        "size": 48,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 857,
+          "w": 101,
+          "h": 61
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-t",
+        "svg": false,
+        "text": "Stir fry",
+        "words": 2,
+        "chars": 8,
+        "color": "rgb(20, 22, 26)",
+        "size": 50.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 245,
+          "y": 854,
+          "w": 1067,
+          "h": 67
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-n",
+        "svg": false,
+        "text": "02",
+        "words": 1,
+        "chars": 2,
+        "color": "rgb(74, 123, 166)",
+        "size": 48,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 953,
+          "w": 101,
+          "h": 61
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-t",
+        "svg": false,
+        "text": "Sheet pan",
+        "words": 2,
+        "chars": 9,
+        "color": "rgb(20, 22, 26)",
+        "size": 50.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 245,
+          "y": 950,
+          "w": 1067,
+          "h": 67
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-n",
+        "svg": false,
+        "text": "03",
+        "words": 1,
+        "chars": 2,
+        "color": "rgb(74, 123, 166)",
+        "size": 48,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1049,
+          "w": 101,
+          "h": 61
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-t",
+        "svg": false,
+        "text": "Soup",
+        "words": 1,
+        "chars": 4,
+        "color": "rgb(20, 22, 26)",
+        "size": 50.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 245,
+          "y": 1046,
+          "w": 1067,
+          "h": 67
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-n",
+        "svg": false,
+        "text": "04",
+        "words": 1,
+        "chars": 2,
+        "color": "rgb(74, 123, 166)",
+        "size": 48,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1145,
+          "w": 101,
+          "h": 61
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-t",
+        "svg": false,
+        "text": "Omelette",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(20, 22, 26)",
+        "size": 50.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 245,
+          "y": 1142,
+          "w": 1067,
+          "h": 67
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-n",
+        "svg": false,
+        "text": "05",
+        "words": 1,
+        "chars": 2,
+        "color": "rgb(74, 123, 166)",
+        "size": 48,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1242,
+          "w": 101,
+          "h": 61
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-t",
+        "svg": false,
+        "text": "Any technique works",
+        "words": 3,
+        "chars": 19,
+        "color": "rgb(20, 22, 26)",
+        "size": 50.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 245,
+          "y": 1239,
+          "w": 1067,
+          "h": 67
+        },
+        "lines": null
+      },
+      {
+        "cls": "body",
+        "svg": false,
+        "text": "Don't plan around a recipe - plan around what needs to be eaten.",
+        "words": 13,
+        "chars": 64,
+        "color": "rgb(20, 22, 26)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1348,
+          "w": 803,
+          "h": 221
+        },
+        "lines": [
+          "Don't plan around a recipe",
+          "- plan around what needs",
+          "to be eaten."
+        ]
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "Re-filling",
+        "words": 1,
+        "chars": 10,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2257,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "3/6",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1241,
+          "y": 2441,
+          "w": 71,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 2083,
+      "height": 2083
+    },
+    "threadBox": {
+      "top": 2083,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/out/post-34/slides-tiktok/slide-03.png"
+  },
+  {
+    "index": 4,
+    "archetype": "value",
+    "layout": "diagram",
+    "declaresLoss": true,
+    "background": "light",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [
+      {
+        "cls": "h-mid",
+        "text": "The \"Freeze Now\" pile takes 5 minutes.",
+        "family": "\"Playfair Display\", Georgia, serif"
+      }
+    ],
+    "accents": [
+      "rgb(20, 22, 26)",
+      "rgb(0, 0, 0)",
+      "rgb(214, 69, 65)",
+      "rgb(46, 94, 78)",
+      "rgb(74, 123, 166)",
+      "rgb(107, 114, 128)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "h-mid",
+        "svg": false,
+        "text": "The \"Freeze Now\" pile takes 5 minutes.",
+        "words": 7,
+        "chars": 38,
+        "color": "rgb(20, 22, 26)",
+        "size": 85.33,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 720,
+          "w": 881,
+          "h": 181
+        },
+        "lines": [
+          "The \"Freeze Now\" pile",
+          "takes 5 minutes."
+        ]
+      },
+      {
+        "cls": "d-ba-label",
+        "svg": false,
+        "text": "BEFORE",
+        "words": 1,
+        "chars": 6,
+        "color": "rgb(20, 22, 26)",
+        "size": 34.67,
+        "weight": 700,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 175,
+          "y": 989,
+          "w": 458,
+          "h": 43
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-ba-val",
+        "svg": false,
+        "text": "2 days",
+        "words": 2,
+        "chars": 6,
+        "color": "rgb(214, 69, 65)",
+        "size": 98.67,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 175,
+          "y": 1051,
+          "w": 458,
+          "h": 107
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-ba-note",
+        "svg": false,
+        "text": "time left",
+        "words": 2,
+        "chars": 9,
+        "color": "rgb(20, 22, 26)",
+        "size": 40,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 175,
+          "y": 1176,
+          "w": 458,
+          "h": 51
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-ba-label",
+        "svg": false,
+        "text": "AFTER",
+        "words": 1,
+        "chars": 5,
+        "color": "rgb(20, 22, 26)",
+        "size": 34.67,
+        "weight": 700,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 814,
+          "y": 989,
+          "w": 458,
+          "h": 43
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-ba-val",
+        "svg": false,
+        "text": "6 months",
+        "words": 2,
+        "chars": 8,
+        "color": "rgb(46, 94, 78)",
+        "size": 98.67,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 814,
+          "y": 1051,
+          "w": 458,
+          "h": 107
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-ba-note",
+        "svg": false,
+        "text": "added by freezing",
+        "words": 3,
+        "chars": 17,
+        "color": "rgb(20, 22, 26)",
+        "size": 40,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 814,
+          "y": 1176,
+          "w": 458,
+          "h": 51
+        },
+        "lines": null
+      },
+      {
+        "cls": "body",
+        "svg": false,
+        "text": "Bag it, label it, lay it flat.",
+        "words": 7,
+        "chars": 30,
+        "color": "rgb(20, 22, 26)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1315,
+          "w": 803,
+          "h": 74
+        },
+        "lines": null
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "Nearly full",
+        "words": 2,
+        "chars": 11,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2257,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "4/6",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1239,
+          "y": 2441,
+          "w": 73,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 2083,
+      "height": 2083
+    },
+    "threadBox": {
+      "top": 2083,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/out/post-34/slides-tiktok/slide-04.png"
+  },
+  {
+    "index": 5,
+    "archetype": "value",
+    "layout": "hero-number",
+    "declaresLoss": false,
+    "background": "dark",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [
+      {
+        "cls": "hero-cap",
+        "text": "less food waste - $1,165 saved per year, for 10 minutes on S",
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif"
+      }
+    ],
+    "accents": [
+      "rgb(74, 123, 166)",
+      "rgb(245, 242, 236)",
+      "rgb(107, 114, 128)",
+      "rgb(0, 0, 0)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "eyebrow",
+        "svg": false,
+        "text": "Weekly fridge audit",
+        "words": 3,
+        "chars": 19,
+        "color": "rgb(74, 123, 166)",
+        "size": 42.67,
+        "weight": 700,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 723,
+          "w": 1184,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "hero-cap",
+        "svg": false,
+        "text": "less food waste - $1,165 saved per year, for 10 minutes on Sunday.",
+        "words": 13,
+        "chars": 66,
+        "color": "rgb(245, 242, 236)",
+        "size": 58.67,
+        "weight": 500,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1035,
+          "w": 769,
+          "h": 222
+        },
+        "lines": [
+          "less food waste - $1,165",
+          "saved per year, for 10",
+          "minutes on Sunday."
+        ]
+      },
+      {
+        "cls": "cite",
+        "svg": false,
+        "text": "Weekly fridge-audit waste-reduction estimate; EPA household food-waste figure",
+        "words": 8,
+        "chars": 77,
+        "color": "rgb(107, 114, 128)",
+        "size": 32,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1299,
+          "w": 1184,
+          "h": 86
+        },
+        "lines": [
+          "Weekly fridge-audit waste-reduction estimate;",
+          "EPA household food-waste figure"
+        ]
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "Sorted",
+        "words": 1,
+        "chars": 6,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2257,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "5/6",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1240,
+          "y": 2441,
+          "w": 72,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 2083,
+      "height": 2083
+    },
+    "threadBox": {
+      "top": 2083,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/out/post-34/slides-tiktok/slide-05.png"
+  },
+  {
+    "index": 6,
+    "archetype": "cta",
+    "layout": "cta-card",
+    "declaresLoss": false,
+    "background": "dark",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [],
+    "accents": [
+      "rgb(0, 0, 0)",
+      "rgb(245, 242, 236)",
+      "rgba(245, 242, 236, 0.7)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "wordmark",
+        "svg": false,
+        "text": "fond",
+        "words": 1,
+        "chars": 4,
+        "color": "rgb(245, 242, 236)",
+        "size": 58.67,
+        "weight": 500,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 815,
+          "w": 1184,
+          "h": 76
+        },
+        "lines": null
+      },
+      {
+        "cls": "h-cta",
+        "svg": false,
+        "text": "The best kitchen habit isn't a recipe. It's seeing what you have before you deci",
+        "words": 18,
+        "chars": 95,
+        "color": "rgb(245, 242, 236)",
+        "size": 74.67,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 920,
+          "w": 722,
+          "h": 433
+        },
+        "lines": [
+          "The best kitchen habit",
+          "isn't a recipe. It's",
+          "seeing what you have",
+          "before you decide what",
+          "to buy."
+        ]
+      },
+      {
+        "cls": "cta-line",
+        "svg": false,
+        "text": "fond does the audit for you, every day.",
+        "words": 8,
+        "chars": 39,
+        "color": "rgb(245, 242, 236)",
+        "size": 53.33,
+        "weight": 500,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1382,
+          "w": 883,
+          "h": 143
+        },
+        "lines": [
+          "fond does the audit",
+          "for you, every day."
+        ]
+      },
+      {
+        "cls": "send",
+        "svg": false,
+        "text": "Send this to whoever does the fridge clean-out.",
+        "words": 8,
+        "chars": 47,
+        "color": "rgba(245, 242, 236, 0.7)",
+        "size": 40,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1555,
+          "w": 657,
+          "h": 107
+        },
+        "lines": [
+          "Send this to whoever",
+          "does the fridge clean-out."
+        ]
+      },
+      {
+        "cls": "arrow",
+        "svg": false,
+        "text": "↓",
+        "words": 1,
+        "chars": 1,
+        "color": "rgba(245, 242, 236, 0.7)",
+        "size": 58.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1691,
+          "w": 1184,
+          "h": 70
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(245, 242, 236)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "6/6",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(245, 242, 236)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1239,
+          "y": 2441,
+          "w": 73,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 2441,
+      "height": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/out/post-34/slides-tiktok/slide-06.png"
+  }
+]
