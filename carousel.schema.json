@@ -364,7 +364,121 @@
               }
             }
           }
-        }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "layout": {
+                  "const": "split-compare"
+                }
+              },
+              "required": [
+                "layout"
+              ]
+            },
+            "then": {
+              "properties": {
+                "copy": {
+                  "required": [
+                    "items"
+                  ],
+                  "properties": {
+                    "items": {
+                      "type": "array",
+                      "minItems": 2
+                    }
+                  }
+                }
+              },
+              "$comment": "layout 'split-compare' renders two panels to compare from copy.items; without it the slide renders as empty boxes and every gate still passes"
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "layout": {
+                  "const": "stack-list"
+                }
+              },
+              "required": [
+                "layout"
+              ]
+            },
+            "then": {
+              "properties": {
+                "copy": {
+                  "required": [
+                    "items"
+                  ],
+                  "properties": {
+                    "items": {
+                      "type": "array",
+                      "minItems": 2
+                    }
+                  }
+                }
+              },
+              "$comment": "layout 'stack-list' renders the list entries from copy.items; without it the slide renders as empty boxes and every gate still passes"
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "layout": {
+                  "const": "timeline"
+                }
+              },
+              "required": [
+                "layout"
+              ]
+            },
+            "then": {
+              "properties": {
+                "copy": {
+                  "required": [
+                    "items"
+                  ],
+                  "properties": {
+                    "items": {
+                      "type": "array",
+                      "minItems": 2
+                    }
+                  }
+                }
+              },
+              "$comment": "layout 'timeline' renders the timeline steps from copy.items; without it the slide renders as empty boxes and every gate still passes"
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "layout": {
+                  "const": "quadrant-card"
+                }
+              },
+              "required": [
+                "layout"
+              ]
+            },
+            "then": {
+              "properties": {
+                "copy": {
+                  "required": [
+                    "quadrants"
+                  ],
+                  "properties": {
+                    "quadrants": {
+                      "type": "array",
+                      "minItems": 2
+                    }
+                  }
+                }
+              },
+              "$comment": "layout 'quadrant-card' renders the quadrant cells from copy.quadrants; without it the slide renders as empty boxes and every gate still passes"
+            }
+          }
+        ]
       }
     },
     "gtmAngle": {
@@ -376,5 +490,6 @@
       ],
       "description": "Which gtm.json angle this carousel serves. Optional but strongly wanted: it is what lets the Ad Bank adapt this post later instead of originating a new angle, per its 90%-adaptation rule."
     }
-  }
+  },
+  "$comment": " | Layout-conditional content rules added 2026-09-20 after post-31 shipped empty split-compare panels past all six gates."
 }

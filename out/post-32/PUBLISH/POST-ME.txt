@@ -1,0 +1,11 @@
+post-32 — What $2,913 Could Buy Instead
+7 slides, in order 01..07
+pillar: The $2913 Problem   angle: money-leak   cta: Tier 2
+qa: PASS   provenance: brief
+
+1. AirDrop this folder to your phone.
+2. Instagram > new post > select 01..07 IN ORDER.
+3. Paste caption.txt.
+4. Then, same day:  node tools/log-post.mjs 32 --published
+   and about a week later, the numbers:
+   node tools/log-post.mjs 32 --reach 1200 --saves 40 --sends 18 --slide3 0.42

@@ -14,7 +14,8 @@
     "decide": "node src/decide.mjs",
     "seed": "node src/seed-ledger.mjs",
     "test:autonomy": "node src/test-autonomy.mjs",
-    "test:all": "python3 tools/test_gates.py && node src/test-autonomy.mjs"
+    "test:all": "python3 tools/test_gates.py && node src/test-autonomy.mjs",
+    "tap": "node tools/tap.mjs"
   },
   "keywords": [],
   "author": "",

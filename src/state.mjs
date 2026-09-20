@@ -107,6 +107,18 @@ export function reconcile(ledger = loadLedger()) {
     }
   }
 
+  // published/measured cannot be observed on disk, so they are set by
+  // tools/log-post.mjs. But they must still be BACKED by performance.json --
+  // otherwise a stale ledger entry claims a post is measured while the data that
+  // would prove it is gone, and the census reports momentum that does not exist.
+  // Filesystem truth beats remembered truth here exactly as it does above.
+  const perf = readJson(path.join(STATE_DIR, 'performance.json'), { posts: {} });
+  for (const [k, p] of Object.entries(posts)) {
+    const row = (perf.posts || {})[k];
+    if (p.stage === 'measured' && !(row && row.reach > 0)) p.stage = row?.publishedAt ? 'published' : 'approved';
+    if (p.stage === 'published' && !row?.publishedAt) p.stage = 'approved';
+  }
+
   return { ...ledger, posts };
 }
 

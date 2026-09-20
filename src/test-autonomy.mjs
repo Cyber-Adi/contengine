@@ -2,7 +2,9 @@
 // decision loop). Same discipline as tools/test_gates.py: every check gets a
 // deliberately broken input and must catch it. A gate that passes a known-bad
 // fixture is worse than no gate, because it manufactures confidence.
+import fs from 'node:fs';
 import { gtmCheck } from './gtm-check.mjs';
+import { validateSpec } from './validate.mjs';
 import { judge, hookShape } from './entropy.mjs';
 import { decide, performanceSignal } from './decide.mjs';
 import { saveFreshness, loadFreshness } from './state.mjs';
@@ -48,6 +50,26 @@ t('reads diagram labels, not just copy', () =>
   assert(hasCheck(gtmCheck(spec({ slides: [{ index: 1, archetype: 'value', copy: { headline: 'ok' },
       diagram: { kind: 'bar-compare', data: { labels: ['trusted by 40,000 users'] } } }] })), 'honesty', 'FAIL'),
     'a dishonest claim hiding in a diagram label must still fail'));
+
+console.log('\nSCHEMA · layout content');
+// Built by mutating a real, fully valid spec: a hand-rolled minimal spec fails on
+// unrelated required fields (thread zone, 5-slide minimum) and would prove nothing
+// about the layout rule. Caught by the fixture itself on first run.
+const base = () => JSON.parse(fs.readFileSync(new URL('../specs/post-32.json', import.meta.url), 'utf8'));
+const withSlide = (patch) => { const s = base(); s.slides[1] = { ...s.slides[1], ...patch }; return s; };
+const rejects = (spec) => { try { validateSpec(spec); return false; } catch { return true; } };
+t('empty split-compare is REJECTED', () =>
+  assert(rejects(withSlide({ layout: 'split-compare', copy: { headline: 'h' } })),
+    'split-compare with no copy.items renders two empty boxes, and passed all six gates on post-31'));
+t('split-compare with panels is accepted', () =>
+  assert(!rejects(withSlide({ layout: 'split-compare', copy: { headline: 'h', items: ['a', 'b'] } })),
+    'a properly filled split-compare must still validate'));
+t('one-item stack-list is REJECTED', () =>
+  assert(rejects(withSlide({ layout: 'stack-list', copy: { headline: 'h', items: ['only one'] } })),
+    'a list of one is not a list'));
+t('empty quadrant-card is REJECTED', () =>
+  assert(rejects(withSlide({ layout: 'quadrant-card', copy: { headline: 'h' } })),
+    'quadrant-card with no quadrants renders empty cells'));
 
 console.log('\nENTROPY GUARD');
 const saved = loadFreshness();
