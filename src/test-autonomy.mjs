@@ -145,6 +145,30 @@ t('a real-brief post IS publishable', () => {
   const d = decide({ ledger, perf: { posts: {} }, fresh: { items: [] } });
   assert(d.action === 'PUBLISH', `real copy that passed its gates must be published, got ${d.action}`);
 });
+t('machine-only never returns a human action', () => {
+  const ledger = { posts: { 5: { post: 5, stage: 'approved', provenance: 'brief' }, 7: { post: 7, stage: 'scripted' } } };
+  const d = decide({ ledger, perf: { posts: {} }, fresh: { items: [] }, machineOnly: true });
+  assert(!['PUBLISH', 'MEASURE', 'REQUEST_BRIEFS'].includes(d.action), `machine-only returned human action ${d.action}`);
+  assert(d.action === 'BUILD_SPECS', `with copy waiting, the machine should drain it, got ${d.action}`);
+});
+t('a full ready buffer holds the drain', () => {
+  const posts = Object.fromEntries(Array.from({ length: 6 }, (_, i) => [String(900 + i), { post: 900 + i, stage: 'approved', provenance: 'brief' }]));
+  posts['7'] = { post: 7, stage: 'scripted' };
+  const d = decide({ ledger: { posts }, perf: { posts: {} }, fresh: { items: [] }, machineOnly: true });
+  assert(d.action === 'HOLD', `6 unscheduled ready posts must hold the drain, got ${d.action}`);
+});
+t('a scheduled future post is not due for measurement', () => {
+  const ledger = { posts: { 5: { post: 5, stage: 'published', provenance: 'brief' }, 7: { post: 7, stage: 'scripted' } } };
+  const future = new Date(Date.now() + 5 * 864e5).toISOString().slice(0, 10);
+  const d = decide({ ledger, perf: { posts: { 5: { post: 5, publishedAt: future } } }, fresh: { items: [] } });
+  assert(d.action !== 'MEASURE', `a post going live in 5 days has no numbers yet, got ${d.action}`);
+});
+t('a post live 8 days with no numbers IS due', () => {
+  const ledger = { posts: { 5: { post: 5, stage: 'published', provenance: 'brief' } } };
+  const past = new Date(Date.now() - 8 * 864e5).toISOString().slice(0, 10);
+  const d = decide({ ledger, perf: { posts: { 5: { post: 5, publishedAt: past } } }, fresh: { items: [] } });
+  assert(d.action === 'MEASURE', `8 days live, unmeasured, should be MEASURE, got ${d.action}`);
+});
 t('generate only when the board is genuinely clear', () => {
   const d = decide({ ledger: { posts: { 1: { post: 1, stage: 'measured' } } }, perf: { posts: {} },
     fresh: { items: [{ id: 'f', observedAt: new Date().toISOString() }] } });

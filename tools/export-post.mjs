@@ -45,7 +45,15 @@ const s1 = spec.slides.find((s) => s.index === 1) || {};
 const last = spec.slides[spec.slides.length - 1] || {};
 const plain = (t) => String(t || '').replace(/\*\*(.+?)\*\*/g, '$1').replace(/\(\((.+?)\)\)/g, '$1').replace(/\/\/(.+?)\/\//g, '$1');
 
-const opener = plain(s1.copy?.headline || s1.copy?.heroNumberCaption || spec.title);
+// A hero-number slide 1 has no headline: its hook IS the number. Using only the
+// caption beneath it produced "Wasted on food every year." with the $2,913 missing,
+// which is the one thing the first sentence exists to carry. Compose the two verbatim
+// pieces rather than dropping the stronger one. No new words are introduced.
+const heroLead = s1.copy?.heroNumber ? `${plain(s1.copy.heroNumber)}${s1.copy.heroNumberUnit ? plain(s1.copy.heroNumberUnit) : ''}` : '';
+const heroCap = plain(s1.copy?.heroNumberCaption || '');
+const opener = plain(s1.copy?.headline)
+  || (heroLead && heroCap ? `${heroLead}. ${heroCap.charAt(0).toUpperCase()}${heroCap.slice(1)}` : '')
+  || heroLead || heroCap || spec.title;
 const trigger = plain(last.copy?.sendTrigger || spec.sendTrigger || '');
 const cta = (gtm.ctas[spec.ctaTier] || {}).text || '';
 const tags = {

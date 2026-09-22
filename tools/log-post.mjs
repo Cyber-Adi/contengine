@@ -19,7 +19,7 @@ import { loadPerformance, savePerformance, reconcile, loadLedger, saveLedger } f
 const argv = process.argv.slice(2);
 const n = argv[0];
 if (!n || n.startsWith('--')) {
-  console.error('usage: node tools/log-post.mjs <postNumber> [--published] [--reach N --saves N --sends N --slide3 0.42 --profile N --follows N] [--platform instagram|tiktok]');
+  console.error('usage: node tools/log-post.mjs <postNumber> [--published [--date YYYY-MM-DD]] [--reach N --saves N --sends N --slide3 0.42 --profile N --follows N] [--platform instagram|tiktok]');
   process.exit(2);
 }
 const flag = (name) => {
@@ -38,8 +38,14 @@ try {
   specMeta = { title: s.title, angle: s.gtmAngle, pillar: s.pillar, format: s.slides?.[0]?.layout };
 } catch { /* spec may not exist yet */ }
 
-if (argv.includes('--published') || !row.publishedAt) {
-  row.publishedAt ||= new Date().toISOString().slice(0, 10);
+// --date lets you record a post you SCHEDULED rather than posted. Scheduling is the
+// normal case now (see READY-TO-POST/index.html), and the go-live date is what the
+// one-week measurement lag has to count from, not the day you clicked schedule.
+if (flag('date') && !/^\d{4}-\d{2}-\d{2}$/.test(flag('date'))) {
+  console.error(`--date must be YYYY-MM-DD, got "${flag('date')}"`); process.exit(2);
+}
+if (argv.includes('--published') || flag('date') || !row.publishedAt) {
+  row.publishedAt = flag('date') || row.publishedAt || new Date().toISOString().slice(0, 10);
 }
 row.platform = flag('platform') || row.platform || 'instagram';
 for (const [k, v] of Object.entries({

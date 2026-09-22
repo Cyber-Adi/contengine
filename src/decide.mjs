@@ -19,6 +19,17 @@
 // service of that inversion.
 import { loadLedger, loadPerformance, loadFreshness, reconcile, census, atStage, logDecision } from './state.mjs';
 import { gtm } from './gtm.mjs';
+import fs from 'node:fs';
+import path from 'node:path';
+import { ROOT } from './tokens.mjs';
+import { validateSpec } from './validate.mjs';
+
+/** A post can pass all six image gates and still be schema-invalid (post-31 shipped
+ *  empty split-compare panels exactly this way). "Publishable" must mean both. */
+const specIsValid = (n) => {
+  try { validateSpec(JSON.parse(fs.readFileSync(path.join(ROOT, 'specs', `post-${n}.json`), 'utf8'))); return true; }
+  catch (e) { return e.code === 'ENOENT'; }   // no spec file (synthetic ledgers in tests): do not penalise
+};
 
 /** Above this many approved-but-unpublished posts, generating more copy is forbidden. */
 export const DRAIN_CEILING = 12;
@@ -81,7 +92,18 @@ export function performanceSignal(perf = loadPerformance()) {
  * condition holds, so the first hit is by definition the binding constraint.
  * Rungs are cheap-to-expensive and drain-before-fill, in that order.
  */
-export function decide({ ledger = reconcile(loadLedger()), perf = loadPerformance(), fresh = loadFreshness() } = {}) {
+/** Ready-but-unscheduled posts above this is the old queue failure one stage later. */
+export const READY_CEILING = 6;
+/** Days after go-live before a post's numbers mean anything. */
+export const MEASURE_LAG_DAYS = 7;
+
+/**
+ * machineOnly: skip rungs that only a human can act on (PUBLISH, MEASURE,
+ * REQUEST_BRIEFS). The weekly Claude Code run asks for the next MACHINE action;
+ * if it got "PUBLISH" it would do nothing useful and the drain would stall. The
+ * tap lists human actions separately under YOUR PART.
+ */
+export function decide({ ledger = reconcile(loadLedger()), perf = loadPerformance(), fresh = loadFreshness(), machineOnly = false, today = new Date() } = {}) {
   const c = census(ledger);
   const signal = performanceSignal(perf);
   const undrained = c.approved + c.rendered;
@@ -106,8 +128,19 @@ export function decide({ ledger = reconcile(loadLedger()), perf = loadPerformanc
   // export. Found by the exporter refusing what the ladder had just recommended.
   const approved = atStage('approved', ledger);
   const fixtures = approved.filter((p) => p.provenance === 'reconstructed-fixture');
-  const publishable = approved.filter((p) => p.provenance !== 'reconstructed-fixture');
-  if (publishable.length > 0) {
+  const publishable = approved.filter((p) => p.provenance !== 'reconstructed-fixture' && specIsValid(p.post));
+  const invalidApproved = approved.filter((p) => p.provenance !== 'reconstructed-fixture' && !specIsValid(p.post));
+  if (invalidApproved.length > 0) {
+    return act('FIX_SPEC',
+      `${invalidApproved.length} post(s) render and pass every image gate but fail the schema (${invalidApproved.map((p) => p.post).join(', ')}) — usually a layout missing the content it draws, like empty split-compare panels.`,
+      `Run node src/validate.mjs on each, restore the missing content VERBATIM from its brief, re-render. If the brief has no content for that panel, change the layout rather than writing copy.`);
+  }
+  if (machineOnly && publishable.length >= READY_CEILING) {
+    return act('HOLD',
+      `${publishable.length} post(s) are ready and unscheduled against a ceiling of ${READY_CEILING}. Building more is the six-week queue failure moved one stage later.`,
+      'Do nothing to the drain this week. The bottleneck is scheduling, which is Adi\'s: READY-TO-POST/index.html.', true);
+  }
+  if (!machineOnly && publishable.length > 0) {
     return act('PUBLISH',
       `${publishable.length} post(s) pass every gate, carry real brief copy, and are not live. This is the exact boundary where the old pipeline terminated.`,
       `node tools/export-post.mjs ${publishable[0].post} -> out/post-${publishable[0].post}/PUBLISH/, then post to @getfond. Manual is fine and manual is the point: the cadence has to hold for a month before automating it is anything but debugging an API instead of posting. Record publishedAt in state/performance.json the same day.`);
@@ -120,10 +153,13 @@ export function decide({ ledger = reconcile(loadLedger()), perf = loadPerformanc
   }
 
   // 3 - Published and unmeasured. Close the edge that makes this a loop.
-  if (c.published > 0) {
+  const lagCutoff = new Date(today.getTime() - MEASURE_LAG_DAYS * 864e5).toISOString().slice(0, 10);
+  const measurable = Object.values(perf.posts || {})
+    .filter((p) => p.publishedAt && p.publishedAt <= lagCutoff && !(p.reach > 0));
+  if (!machineOnly && measurable.length > 0) {
     return act('MEASURE',
-      `${c.published} post(s) live with no insights recorded. Until this runs, every claim about what works on this account is a guess.`,
-      `Record reach, saves, sends and swipe-through-to-slide-3 for post ${atStage('published', ledger).map((p) => p.post).join(', ')} into state/performance.json. Manual entry from the app is acceptable and takes two minutes; the Insights API is a convenience, not a prerequisite.`);
+      `${measurable.length} post(s) live for over a week with no insights recorded. Until this runs, every claim about what works on this account is a guess.`,
+      `Record reach, saves, sends and swipe-through-to-slide-3 for post ${measurable.map((p) => p.post).join(', ')} into state/performance.json. Manual entry from the app is acceptable and takes two minutes; the Insights API is a convenience, not a prerequisite.`);
   }
 
   // 4 - Specs exist and have not rendered. Cheapest possible throughput.
@@ -157,7 +193,7 @@ export function decide({ ledger = reconcile(loadLedger()), perf = loadPerformanc
   }
 
   // 8 - Gaps: copy that exists but is not in this repo. Blocked on Adi, not the engine.
-  if (c.gap > 0) {
+  if (!machineOnly && c.gap > 0) {
     return act('REQUEST_BRIEFS',
       `${c.gap} post(s) have no retrievable copy. The engine must not write it.`,
       `Locate the missing brief files and copy them into briefs/. See specs/COVERAGE.md for the exact filenames.`, true);

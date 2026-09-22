@@ -89,7 +89,11 @@ for (const p of ready) {
 
 // ---- 3. report --------------------------------------------------------------
 const c = census(ledger);
-const d = decide({ ledger });
+const d = decide({ ledger, machineOnly: true });
+
+// Build READY-TO-POST/ — the one place Adi goes to schedule.
+let readyOut = '';
+try { readyOut = sh('node', ['tools/ready.mjs']); } catch (e) { readyOut = 'READY-TO-POST/ failed to build: ' + String(e.stderr || e.message).split('\n')[0]; }
 
 rule();
 say('');
@@ -99,25 +103,29 @@ say('');
 
 say('  YOUR PART — nothing below can be done without you');
 say('');
-if (exported.length) {
-  say(`  1. POST  ${exported.length} carousel(s) ready in out/post-N/PUBLISH/`);
-  for (const n of exported) {
-    let title = '';
-    try { title = JSON.parse(fs.readFileSync(path.join(specDir, `post-${n}.json`), 'utf8')).title || ''; } catch {}
-    say(`       post-${n}  ${title}`);
-  }
-  say('       AirDrop the folder, post 01..08 in order, paste caption.txt');
-  say(`       then:  node tools/log-post.mjs ${exported[0]} --published`);
+const readyLines = readyOut.split('\n').filter((l) => /^\s+\d{4}-\d{2}-\d{2}/.test(l));
+if (readyLines.length) {
+  say(`  1. SCHEDULE  ${readyLines.length} carousel(s) — open READY-TO-POST/index.html`);
+  for (const l of readyLines) say('     ' + l.trim());
+  say('       Meta Business Suite or the Instagram app → schedule each for its date,');
+  say('       then run the "mark scheduled" command shown under it on the page.');
 } else {
-  say('  1. POST  nothing is publishable yet.');
-  if (fixtures.length) say(`       post ${fixtures.map((p) => p.post).join(', ')} pass their gates but still carry`);
-  if (fixtures.length) say('       reconstructed copy. Replace it from the brief first.');
+  say('  1. SCHEDULE  nothing ready.');
+  if (fixtures.length) {
+    const list = fixtures.map((p) => p.post).join(', ');
+    say(`       post ${list} ${fixtures.length > 1 ? 'pass their gates' : 'passes its gates'} but still ${fixtures.length > 1 ? 'carry' : 'carries'}`);
+    say('       reconstructed copy. Replace it from the brief first.');
+  }
 }
 say('');
 
 const perf = JSON.parse(fs.readFileSync(path.join(ROOT, 'state', 'performance.json'), 'utf8'));
 const live = Object.values(perf.posts || {});
-const unmeasured = live.filter((p) => p.publishedAt && !(p.reach > 0));
+// Only ask for numbers once a post has been live a week. A scheduled post dated
+// in the future, or one posted yesterday, has nothing worth recording yet.
+const lagCutoff = new Date(Date.now() - 7 * 864e5).toISOString().slice(0, 10);
+const unmeasured = live.filter((p) => p.publishedAt && p.publishedAt <= lagCutoff && !(p.reach > 0));
+const upcoming = live.filter((p) => p.publishedAt && p.publishedAt > lagCutoff && !(p.reach > 0));
 const measured = live.filter((p) => p.reach > 0).length;
 if (unmeasured.length) {
   say(`  2. LOG   ${unmeasured.length} post(s) live with no numbers. Open Instagram insights:`);
@@ -125,13 +133,19 @@ if (unmeasured.length) {
     say(`       node tools/log-post.mjs ${p.post} --reach R --saves S --sends X --slide3 0.42`);
   }
   say('       slide3 = slide-3 reach divided by slide-1 reach, off the per-slide graph');
+} else if (upcoming.length) {
+  say(`  2. LOG   nothing due. ${upcoming.length} scheduled or recent post(s) — numbers are due a week after each goes live:`);
+  for (const p of upcoming) {
+    const due = new Date(new Date(p.publishedAt).getTime() + 7 * 864e5).toISOString().slice(0, 10);
+    say(`       post-${p.post}  live ${p.publishedAt}  → log on or after ${due}`);
+  }
 } else if (measured) {
   say(`  2. LOG   nothing outstanding. ${measured} post(s) measured.`);
 } else {
   say('  2. LOG   nothing live yet, so nothing to measure.');
 }
 say('');
-say(`  3. NEXT  the loop says ${d.action}`);
+say(`  3. MACHINE  next for Claude Code: ${d.action}${d.blocked ? '  (blocked on you)' : ''}`);
 say(`       ${d.why}`);
 if (failed.length) {
   say('');
