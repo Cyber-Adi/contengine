@@ -78,6 +78,24 @@ Update any path references in `src/`, `tools/`, and the scheduled-task prompts
    and Insights ingest (P4.2). Not before — until then you'd be debugging an API instead of
    learning what posts work.
 
+   **Design it so Adi's weekly act becomes APPROVE, not POST.** That is the endgame he asked
+   for ("at most a weekly thing I look at"), and it keeps a human veto on everything public:
+   - `state/approved.json` — a list of post numbers plus go-live dates. The only thing the
+     publisher may act on. Adi (or `READY-TO-POST/index.html`, via a checkbox that writes
+     it) adds entries; nothing else does.
+   - The daily 09:00 UTC Action publishes any approved post whose date is today, then
+     writes `publishedAt` itself — so `log-post.mjs --published` stops being a human step.
+   - Refuse to publish anything not PASS, anything `reconstructed-fixture`, anything
+     schema-invalid, or anything approved more than 14 days ago (stale approvals go back
+     to Adi, never out by default).
+   - Images need public HTTPS URLs; the repo is private, so raw GitHub URLs will not work.
+     Use a public Supabase Storage bucket (he already pays for Supabase). Token lives in
+     GitHub Actions secrets, never in the repo or a task prompt.
+   - Insights ingest (P4.2) on the same Action, reading posts 7 days after go-live, so the
+     `--reach/--saves/--sends` step disappears too. `--slide3` may still need him — check
+     whether the API exposes per-carousel-card reach before promising it does.
+   After this, the human loop is: open the page Sunday, tick two posts, done.
+
 ## 6 · Report back to Adi in this shape
 
 What you built (one line each) · what you merged vs. set aside after reading this ·
