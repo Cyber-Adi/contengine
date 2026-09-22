@@ -1,0 +1,64 @@
+name: weekly tap
+
+# Runs the mechanical pass (validate -> render -> export) unattended, so by the
+# time Adi opens the repo the rendering has already happened overnight.
+# See GITHUB-SETUP.md. Never writes copy, never publishes, never touches a gate.
+
+on:
+  schedule:
+    # 09:00 UTC daily. Cheap (nothing to do -> exits fast) and means any spec
+    # landing any day is rendered before the next session, not just once a week.
+    - cron: '0 9 * * *'
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths:
+      - 'specs/**.json'
+      - 'briefs/**'
+
+# Don't let two runs race each other's git push.
+concurrency:
+  group: weekly-tap
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  tap:
+    # Skip runs the bot's own commit would otherwise re-trigger via the push filter.
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - run: npm ci
+
+      - name: install chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: install python deps (qa.py needs Pillow/numpy/pytesseract + tesseract-ocr for gate 4.5)
+        run: |
+          sudo apt-get update && sudo apt-get install -y tesseract-ocr
+          pip install --quiet pillow numpy pytesseract
+
+      - name: run the tap
+        run: npm run tap
+
+      - name: commit and push anything the tap produced
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A -- out/ specs/ state/
+          if git diff --cached --quiet; then
+            echo "nothing to commit"
+          else
+            git commit -m "chore: weekly tap render/export [skip ci]"
+            git push
+          fi
