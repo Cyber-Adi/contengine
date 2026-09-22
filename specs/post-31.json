@@ -43,7 +43,10 @@
       "declaresLoss": false,
       "copy": {
         "headline": "It's shrinkflation.",
-        "body": "Same price. Same shelf. Less product inside. The packaging barely changes, so you don't notice."
+        "items": [
+          "Same price. Same shelf.",
+          "Less product inside. The packaging barely changes, so you don't notice."
+        ]
       },
       "threadState": { "progress": 0.25, "label": "Line 2", "tone": "neutral" }
     },
@@ -87,7 +90,11 @@
       "declaresLoss": false,
       "copy": {
         "headline": "What you check versus what you don't",
-        "body": "Companies count on this: people notice price increases but not size decreases. You check the price. You don't weigh the box."
+        "items": [
+          "You check the price.",
+          "You don't weigh the box."
+        ],
+        "body": "Companies count on this: people notice price increases but not size decreases."
       },
       "threadState": { "progress": 0.7, "label": "Line 5", "tone": "neutral" }
     },

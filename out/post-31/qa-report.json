@@ -16,7 +16,7 @@
       "gate": "G5.5-fill",
       "level": "WARN",
       "slide": 2,
-      "msg": "content occupies 45% of its box \u2014 type or diagram could carry more of the frame"
+      "msg": "content occupies 36% of its box \u2014 type or diagram could carry more of the frame"
     },
     {
       "gate": "G5.5-fill",

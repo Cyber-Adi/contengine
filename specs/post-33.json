@@ -42,7 +42,11 @@
       "declaresLoss": false,
       "copy": {
         "headline": "It's FIFO. First In, First Out.",
-        "body": "When you buy new groceries, new items go to the back. Older items move to the front. You always use the oldest food first."
+        "items": [
+          "New items go to the back.",
+          "Older items move to the front."
+        ],
+        "body": "You always use the oldest food first."
       },
       "threadState": { "progress": 0.3, "label": "Aligning", "tone": "neutral" }
     },
@@ -87,7 +91,10 @@
       "declaresLoss": false,
       "copy": {
         "headline": "The reason you don't do this already",
-        "body": "New groceries feel urgent. Old food is \"still fine.\" By the time \"still fine\" becomes \"not fine,\" you can't see it anymore."
+        "items": [
+          "New groceries feel urgent.",
+          "Old food is \"still fine.\" By the time \"still fine\" becomes \"not fine,\" you can't see it anymore."
+        ]
       },
       "threadState": { "progress": 0.85, "label": "Labeling left", "tone": "caution" }
     },
