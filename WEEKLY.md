@@ -33,11 +33,23 @@ For each post:
 1. **business.facebook.com** → Create post → Instagram → drag in its slides **in order** →
    paste the caption (Copy button) → set the date shown → Schedule.
    *(Or the Instagram app: new post → Advanced settings → Schedule. Up to 75 days ahead.)*
-2. Click **Copy "mark scheduled" command** and run it in Terminal. That's what removes it
-   from the page and tells the engine it's gone out.
 
-Schedule **everything on the page**. It holds at most a few weeks, so doing it all in one
-sitting is how posts keep going out on weeks you don't sit down at all.
+Schedule **everything on the page**, then mark the whole page scheduled in **one command**
+instead of one per post:
+
+```bash
+node tools/log-post.mjs --scheduled-all
+```
+
+It reads the dates already printed on the page and marks each post scheduled on its own
+slot date — that's what removes them from the page and tells the engine they've gone out.
+(Skipped one on purpose? Use its individual "mark scheduled" command instead, still on
+the page under that post.)
+
+It holds at most a few weeks, so doing it all in one sitting is how posts keep going out
+on weeks you don't sit down at all. The page also shows how many days the oldest post has
+been waiting — that number does not reset when the page regenerates, so a stalled queue
+stays visible instead of looking fresh every time you open it.
 
 A post marked **⚠ CHECK-FIRST** has a big number the engine couldn't trace to a source.
 Open its `CHECK-FIRST.txt`. If you can't confirm the citation in a minute, skip it.
