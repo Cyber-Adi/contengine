@@ -108,7 +108,7 @@ if (readyLines.length) {
   say(`  1. SCHEDULE  ${readyLines.length} carousel(s) — open READY-TO-POST/index.html`);
   for (const l of readyLines) say('     ' + l.trim());
   say('       Meta Business Suite or the Instagram app → schedule each for its date,');
-  say('       then run the "mark scheduled" command shown under it on the page.');
+  say('       then ONE command for the whole page: node tools/log-post.mjs --scheduled-all');
 } else {
   say('  1. SCHEDULE  nothing ready.');
   if (fixtures.length) {

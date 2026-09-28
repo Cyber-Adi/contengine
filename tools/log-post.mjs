@@ -13,13 +13,38 @@
 // and it has never once been logged. It is the closest proxy for "a stranger stopped."
 import fs from 'node:fs';
 import path from 'node:path';
+import { execFileSync } from 'node:child_process';
 import { ROOT } from './../src/tokens.mjs';
 import { loadPerformance, savePerformance, reconcile, loadLedger, saveLedger } from './../src/state.mjs';
 
 const argv = process.argv.slice(2);
+
+// --scheduled-all: the whole weekly ritual's "mark it gone out" step collapsed
+// into one command. Reads the exact `node tools/log-post.mjs N --published
+// --date D` lines tools/ready.mjs already printed into SCHEDULE.txt, and runs
+// each one — instead of Adi copying six commands out of six cards by hand.
+if (argv.includes('--scheduled-all')) {
+  const scheduleFile = path.join(ROOT, 'READY-TO-POST', 'SCHEDULE.txt');
+  if (!fs.existsSync(scheduleFile)) {
+    console.error('READY-TO-POST/SCHEDULE.txt not found — run npm run tap first');
+    process.exit(2);
+  }
+  const text = fs.readFileSync(scheduleFile, 'utf8');
+  const cmds = [...text.matchAll(/node tools\/log-post\.mjs (\d+) --published --date (\d{4}-\d{2}-\d{2})/g)];
+  if (!cmds.length) {
+    console.log('nothing in SCHEDULE.txt to mark — READY-TO-POST/ is empty');
+    process.exit(0);
+  }
+  console.log(`marking ${cmds.length} post(s) scheduled, as printed in SCHEDULE.txt:`);
+  for (const [, post, date] of cmds) {
+    execFileSync(process.execPath, [path.join(ROOT, 'tools', 'log-post.mjs'), post, '--published', '--date', date], { stdio: 'inherit' });
+  }
+  process.exit(0);
+}
+
 const n = argv[0];
 if (!n || n.startsWith('--')) {
-  console.error('usage: node tools/log-post.mjs <postNumber> [--published [--date YYYY-MM-DD]] [--reach N --saves N --sends N --slide3 0.42 --profile N --follows N] [--platform instagram|tiktok]');
+  console.error('usage: node tools/log-post.mjs <postNumber> [--published [--date YYYY-MM-DD]] [--reach N --saves N --sends N --slide3 0.42 --profile N --follows N] [--platform instagram|tiktok]\n   or: node tools/log-post.mjs --scheduled-all   (marks every post in READY-TO-POST/SCHEDULE.txt as scheduled on its listed date)');
   process.exit(2);
 }
 const flag = (name) => {

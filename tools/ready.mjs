@@ -40,12 +40,31 @@ const cands = atStage('approved', ledger)
   .filter((p) => !(perf.posts?.[p.post]?.publishedAt))
   .filter((p) => fs.existsSync(path.join(ROOT, 'out', `post-${p.post}`, 'PUBLISH')))
   .filter((p) => valid(p.post))
+  // reachedApprovedAt: the FIRST time this post was seen approved, held stable
+  // across reruns via READY-TO-POST/.waiting.json below. Without this, the tap
+  // re-dates the suggested slot forward every run and a post waiting 10 days
+  // looks exactly like one that just became ready.
+
   .map((p) => {
     const spec = JSON.parse(fs.readFileSync(path.join(ROOT, 'specs', `post-${p.post}.json`), 'utf8'));
     const g = gtmCheck(spec);
     const heroWarn = g.findings.filter((f) => f.check === 'unsourced-hero').map((f) => f.detail);
     return { ...p, spec, heroWarn };
   });
+
+// Track the first day each post was seen ready, so re-running the tap never
+// hides how long a post has actually been waiting (CONTEXT-HANDOFF.md §2: "the
+// tap re-dates them forward each run, so the list looks fresh while nothing
+// happens"). This file is the one exception to "regenerated from scratch."
+const waitingFile = path.join(ROOT, 'state', 'waiting-since.json');
+let waitingSince = {};
+try { waitingSince = JSON.parse(fs.readFileSync(waitingFile, 'utf8')); } catch { /* first run */ }
+const today = iso(new Date());
+for (const c of cands) waitingSince[c.post] = waitingSince[c.post] || today;
+for (const k of Object.keys(waitingSince)) if (!cands.some((c) => c.post === Number(k))) delete waitingSince[k];
+fs.mkdirSync(path.dirname(waitingFile), { recursive: true });
+fs.writeFileSync(waitingFile, JSON.stringify(waitingSince, null, 2));
+const daysWaiting = (post) => Math.floor((Date.now() - new Date(waitingSince[post]).getTime()) / 864e5);
 
 // Posts with no hero-number question go first, then alternate pillars.
 cands.sort((a, b) => (a.heroWarn.length - b.heroWarn.length) || (a.post - b.post));
@@ -103,19 +122,22 @@ const entries = ordered.map((c, i) => {
       'Either confirm the citation is real and add it to gtm.json, or skip this post.\n\n' +
       c.heroWarn.join('\n') + '\n');
   }
-  return { ...c, slot, folder, slides, caption, markCmd };
+  return { ...c, slot, folder, slides, caption, markCmd, waitingDays: daysWaiting(c.post) };
 });
+
+const oldestWait = entries.length ? Math.max(...entries.map((e) => e.waitingDays)) : 0;
 
 // ---- SCHEDULE.txt: the plain-text version -----------------------------------
 const lines = [
   'READY TO SCHEDULE',
   `generated ${new Date().toLocaleString()} — regenerated every time you run npm run tap`,
   '',
-  entries.length ? `${entries.length} post(s), two a week, suggested ${DEFAULT_TIME} (a default — change it freely):` : 'Nothing ready. Run npm run tap, or see what it says is blocking.',
+  entries.length ? `${entries.length} post(s), two a week, suggested ${DEFAULT_TIME} (a default — change it freely). Oldest has waited ${oldestWait}d.` : 'Nothing ready. Run npm run tap, or see what it says is blocking.',
+  entries.length ? 'Mark the whole page scheduled in one command:  node tools/log-post.mjs --scheduled-all' : '',
   '',
 ];
 for (const e of entries) {
-  lines.push(`${iso(e.slot)} ${DAY[e.slot.getDay()]}   post-${e.post}  ${e.spec.title}   [${e.spec.pillar}]${e.heroWarn.length ? '   ⚠ CHECK-FIRST' : ''}`);
+  lines.push(`${iso(e.slot)} ${DAY[e.slot.getDay()]}   post-${e.post}  ${e.spec.title}   [${e.spec.pillar}]${e.heroWarn.length ? '   ⚠ CHECK-FIRST' : ''}   (waiting ${e.waitingDays}d)`);
   lines.push(`    folder:  ${e.folder}/`);
   lines.push(`    after scheduling:  ${e.markCmd}`);
   lines.push('');
@@ -177,11 +199,12 @@ code{font:12px ui-monospace,Menlo,monospace;color:var(--dim);overflow-wrap:anywh
 </style></head><body><div class="wrap">
 <h1>Ready to post</h1>
 <p class="lede">${entries.length} carousel${entries.length === 1 ? '' : 's'} that pass all six gates and carry real brief copy, slotted two a week. Regenerated every time <code>npm run tap</code> runs — anything you mark scheduled disappears from here.</p>
+${entries.length ? `<p class="lede"${oldestWait >= 10 ? ' style="color:var(--warn);font-weight:600"' : ''}>Oldest post has been waiting <b>${oldestWait} day${oldestWait === 1 ? '' : 's'}</b>. This number does not reset when the page regenerates.</p>` : ''}
 <section class="how"><h3>Schedule the lot in one sitting</h3><ol>
 <li>Open <b>business.facebook.com</b> on this Mac → Create post → Instagram → Schedule. (Or the Instagram app: new post → Advanced settings → Schedule — up to 75 days ahead.)</li>
 <li>Drag in the slides from that post's folder in <code>READY-TO-POST/</code>, <b>in order</b>. Order is the carousel.</li>
 <li>Copy caption below, paste. Set the date shown on the left.</li>
-<li>Copy the "mark scheduled" command and run it in Terminal from <code>~/Desktop/contengine</code>, so the post leaves this page and the engine knows.</li>
+<li>After scheduling everything on the page, run <b>one</b> command from <code>~/Desktop/contengine</code> instead of one per post: <code>node tools/log-post.mjs --scheduled-all</code> — it marks every post above scheduled on the date shown here. (Skipped one? Use its own "mark scheduled" command instead.)</li>
 </ol></section>
 ${entries.length ? entries.map(card).join('\n') : '<p class="empty">Nothing ready right now. Run <code>npm run tap</code>; its last lines say what is blocking.</p>'}
 </div>

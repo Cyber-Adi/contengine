@@ -36,7 +36,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
 
       - run: npm ci
 
@@ -58,7 +58,26 @@ jobs:
           git add -A -- out/ specs/ state/
           if git diff --cached --quiet; then
             echo "nothing to commit"
-          else
-            git commit -m "chore: weekly tap render/export [skip ci]"
-            git push
+            exit 0
           fi
+          # A ledger-only commit whose sole change is `updatedAt` is timestamp
+          # churn, not real state. Drop it so daily runs stop diverging from a
+          # clean HEAD when there is nothing to actually report.
+          if git diff --cached --name-only | grep -qv '^state/ledger\.json$'; then
+            : # real files changed, keep going
+          elif [ "$(git diff --cached -U0 -- state/ledger.json | grep -c '^[+-]  "')" -le 2 ]; then
+            echo "only ledger timestamp changed — nothing to commit"
+            git reset --quiet
+            exit 0
+          fi
+          git commit -m "chore: weekly tap render/export [skip ci]"
+          # Retry the push a few times: a transient GitHub 5xx (seen 2026-09-23)
+          # should not fail the whole run silently until the next tap notices.
+          for attempt in 1 2 3; do
+            if git push; then exit 0; fi
+            echo "push failed (attempt $attempt) — rebasing onto origin/main and retrying"
+            git pull --rebase origin main || { echo "rebase failed, giving up"; exit 1; }
+            sleep $((attempt * 5))
+          done
+          echo "push failed after 3 attempts"
+          exit 1
