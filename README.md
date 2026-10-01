@@ -50,7 +50,7 @@ Two fixtures render clean at **0 fails, 1 warning**, byte-identical across runs:
 `post-49` (eggs, meter thread, no Signal Red anywhere) and `post-5` (exercises all five
 diagrams and every chrome feature).
 
-**Read INITIALIZATION.md first** — it lists exactly what has to be in the folder and the
+**Read docs/INITIALIZATION.md first** — it lists exactly what has to be in the folder and the
 boot prompt to paste.
 
 ## Why it looks typeset and not generated
@@ -119,7 +119,7 @@ reports the substitution so it is visible rather than silent. `test_gates.py` as
 halves: that G2.6 catches gold-on-light in a synthetic image, and that the renderer prevents it
 from ever reaching one.
 
-See **CONTRAST-AUDIT.md** — four of the seven tokens fail AA on at least one legal background,
+See **docs/CONTRAST-AUDIT.md** — four of the seven tokens fail AA on at least one legal background,
 and the palette currently has no legible way to express "caution" on a light slide. Two cheap
 fixes are proposed there. That is a decision for Adi, not for this repo.
 
@@ -155,6 +155,6 @@ out/post-N/            slides/, qa-report.json, measurements.json, contact-sheet
    which tells you whether this is a 20-post engine or a 75-post one.
 2. Drop the 8 BOSS carousels into `baseline/` → unblocks the vision critic, which needs them
    to calibrate against something that actually earned followers.
-3. Decide the Harvest Gold question in CONTRAST-AUDIT.md.
+3. Decide the Harvest Gold question in docs/CONTRAST-AUDIT.md.
 
 Chromium path is overridable: `FOND_CHROMIUM=/path/to/chrome ./run.sh ...`

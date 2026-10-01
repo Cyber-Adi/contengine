@@ -2,7 +2,7 @@ name: weekly tap
 
 # Runs the mechanical pass (validate -> render -> export) unattended, so by the
 # time Adi opens the repo the rendering has already happened overnight.
-# See GITHUB-SETUP.md. Never writes copy, never publishes, never touches a gate.
+# See docs/GITHUB-SETUP.md. Never writes copy, never publishes, never touches a gate.
 
 on:
   schedule:

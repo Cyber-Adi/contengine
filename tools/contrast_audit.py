@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reproduce CONTRAST-AUDIT.md from tokens.json. WCAG 2.1 relative luminance."""
+"""Reproduce docs/CONTRAST-AUDIT.md from tokens.json. WCAG 2.1 relative luminance."""
 import json, os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 C = {k: v["hex"] for k, v in json.load(open(os.path.join(ROOT, "tokens.json")))["colors"].items()}

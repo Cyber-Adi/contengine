@@ -24,22 +24,21 @@ you are working on the wrong thing.
 
 ## 2 · Read these, in this order
 
-| # | File | What it is | When |
-|---|------|-----------|------|
-| -1 | **CORRECTIONS.md** | **THREE COURSE CHANGES. Supersedes parts of the docs below. Read before acting on them.** | Every session |
-| 0 | **START-HERE.md** | The two prompts — boot and work. The whole interface | Copy the boot prompt every session |
-| 0.5 | **AUTONOMOUS-ARCHITECTURE.md** | **The loop.** The decision ladder, `gtm.json`, the entropy guard, what stays manual and why | Every session, before choosing work |
-| 1 | **CLAUDE.md** (this) | Orientation, guardrails, the verify loop | Every session |
-| 2 | **ECC-PLAN-V2.md** | **The canonical build plan.** What's built, where v1 was wrong, paste-ready prompts per task | Every session |
-| 3 | **BACKLOG.md** | Prioritised work items, P0 → P4 | Before picking work |
-| 4 | **INITIALIZATION.md** | Folder contract, machine setup, session recipes | First session, or when something is missing |
-| 5 | **CONTRAST-AUDIT.md** | Measured palette contrast + one open design decision for Adi | Before touching colour |
-| 6 | **README.md** | User-facing summary | Skim once |
-| 7 | `fond_Carousel_Engine_ECC_Execution_Plan.md` | **v1, SUPERSEDED.** Historical only | Only if v2 references it |
+| File | What it is | When |
+|------|-----------|------|
+| **CLAUDE.md** (this) | Orientation, guardrails, the verify loop | Every session |
+| **WEEKLY.md** | Adi's ~15 minute ritual: schedule, log, monthly read | Every session |
+| `docs/AUTONOMOUS-ARCHITECTURE.md` | The loop: decision ladder, `gtm.json`, entropy guard, what stays manual and why | Before choosing work |
+| `docs/HANDOFF.md` | Publisher design (§5.4): Adi approves, the Action publishes. Gated on 4 weeks of logged posts | Before touching publishing |
+| `docs/BACKLOG.md` | Prioritised work items. Items marked superseded by `docs/archive/CORRECTIONS.md` | Before picking work |
+| `docs/CONTRAST-AUDIT.md` | Measured palette contrast + one open design decision for Adi | Before touching colour |
+| `docs/GITHUB-SETUP.md` | The daily Action: what it does and how it was set up | If the Action misbehaves |
+| `docs/INITIALIZATION.md`, `SETUP-STATUS.md`, `MOMENTUM.md`, `PIPELINE-AUDIT.md`, `CONTEXT-HANDOFF.md` | Setup, history and audit notes. Dated: verify before trusting | Only if referenced |
+| `docs/archive/` | Superseded plans (v1, ECC-PLAN-V2, START-HERE, CORRECTIONS). Course changes C1-C4 are already absorbed into this file | Historical only |
 
 **When two documents disagree, precedence is:** Notion Design System §3 → `tokens.json` →
 `gtm.json` →
-ECC-PLAN-V2 → BACKLOG → everything else. Say so out loud when you hit a conflict.
+docs/BACKLOG → everything else. Say so out loud when you hit a conflict.
 
 ---
 
@@ -66,7 +65,7 @@ pixels produced six false failures at `y=121`, every one the gap under the micro
 **Do not "simplify" this back to a pixel scan.**
 
 **3.4 · Canvas is a parameter.** v1 assumed Instagram only. Because layout is CSS and the
-spec is data, `--canvas=tiktok` emits 1080×1920 from the same spec with no new brief and no
+spec is data, `--canvas=tiktok` emits 1440×2560 from the same spec with no new brief and no
 new copy. Two platforms, one source.
 
 ---
@@ -101,7 +100,7 @@ From Notion Design System §3.8. Violating any of these is a build failure, not 
 ## 5 · The verify loop — run this after ANY change to `src/` or `tools/`
 
 ```bash
-npm test                                  # must be 10/10 gates catching their own failures
+npm test                                  # must be 15/15 gates catching their own failures
 ./run.sh specs/post-5.json                # all 5 diagrams + every chrome feature
 ./run.sh specs/post-49.json               # meter thread, Signal Red forbidden by its argument
 node src/render.mjs specs/post-5.json --canvas=tiktok   # 9:16 still renders
@@ -139,13 +138,17 @@ tools/qa.py          Gates 1-5 + cross-slide.
 tools/test_gates.py  10 deliberately broken slides. Every gate must catch its own.
 tools/contact_sheet.py  Contact sheet + feed-scale thumbs (Gate 4 reads these).
 tools/downsample.py  The Lanczos pass.
-tools/contrast_audit.py  Reproduces CONTRAST-AUDIT.md from tokens.json.
+tools/contrast_audit.py  Reproduces docs/CONTRAST-AUDIT.md from tokens.json.
+tools/tap.mjs        THE entry point (npm run tap): validate, render, QA, export, reconcile.
+tools/ready.mjs      Builds READY-TO-POST/ with stable 'waiting Nd' per post.
+tools/critic.mjs     Vision critic CLI. Rubric + validation in src/critic.mjs (report-only).
 
 specs/post-N.json    One carousel.
 out/post-N/          slides/, slides-tiktok/, qa-report.json, measurements.json,
                      contact-sheet.png, thumbs.png
 briefs/              ⛔ EMPTY — Adi must add. Blocks Slice 1.
-baseline/            ⛔ EMPTY — Adi must add. Blocks the vision critic.
+baseline/            approved renders from this engine, once Adi approves them (NOT Instagram exports)
+state/critic.json    vision critic scores (tools/critic.mjs). Report-only; never blocks a post.
 ```
 
 ### Three implementation details that look optional and are not
@@ -186,31 +189,32 @@ Two **cloud scheduled tasks** run outside this repo and write only to Notion:
   the queue counts instead. That gate exists because of the six-week failure in §1. If Adi
   asks you to remove it, push back first.
 
-**AMENDED — see CORRECTIONS.md C3.** This repo READS Notion to pull specs and WRITES BACK
+**AMENDED (C3, 2026-09-06).** This repo READS Notion to pull specs and WRITES BACK
 render status. It never publishes to any social platform and never writes slide copy.
 The old rule ('never reads Notion') was meant to prevent publishing; over-applying it to
 reading is what kept the pipeline manual.
 
 Publishing (Instagram, then TikTok) is **BACKLOG P4 and deliberately unbuilt.** Automating a
 posting cadence nobody has run yet means debugging an API instead of posting. TikTok has an
-additional gate: unaudited apps are limited to private viewing (ECC-PLAN-V2 §4).
+additional gate: unaudited apps are limited to private viewing (docs/archive/ECC-PLAN-V2.md §4).
 
 ---
 
 ## 9 · Start-of-session checklist
 
-**Read `SETUP-STATUS.md` first** — it records what was actually verified on this machine and
-the one known blocker (Chromium). Do not re-diagnose what is already written there.
+**Machines:** only Claude Code on the Mac and GitHub Actions have both the repo and a browser.
+The Action runs `npm run tap` daily and pushes what it produced; `git pull` before looking.
+`READY-TO-POST/` is git-ignored, so run `npm run tap` locally to see it.
 
 Confirm these out loud before proposing work:
 
 0. `npm run decide` → **what is the binding constraint?** Do this FIRST. It reads the whole
    board and names the one action worth taking. Do not propose work that contradicts it
    without saying why.
-1. `npm test` → 10/10?  ·  `npm run test:autonomy` → 18/18?
+1. `npm test` → 15/15?  ·  `npm run test:autonomy` → 36/36?
 2. `./run.sh specs/post-5.json` → PASS?
 3. How many `.md` files in `briefs/`? (0 = Slice 1 blocked)
-4. How many `.png` files in `baseline/`? (0 = vision critic blocked)
+4. `node tools/critic.mjs status` → how many approved posts have no critique yet?
 5. Which BACKLOG item is next **given what is actually present**?
 
 Then wait. Do not start work before Adi confirms.
@@ -222,4 +226,4 @@ gates, is published, is measured within a week, and is marked Designed in Notion
 zero rows created and zero copy written by you.
 
 And the loop itself is done when `npm run decide` is the only thing that chooses the
-week's work. See AUTONOMOUS-ARCHITECTURE.md §9.
+week's work. See docs/AUTONOMOUS-ARCHITECTURE.md §9.
