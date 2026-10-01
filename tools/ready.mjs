@@ -49,11 +49,12 @@ const cands = atStage('approved', ledger)
     const spec = JSON.parse(fs.readFileSync(path.join(ROOT, 'specs', `post-${p.post}.json`), 'utf8'));
     const g = gtmCheck(spec);
     const heroWarn = g.findings.filter((f) => f.check === 'unsourced-hero').map((f) => f.detail);
-    return { ...p, spec, heroWarn };
+    const heroSlides = g.findings.filter((f) => f.check === 'unsourced-hero').map((f) => f.slide);
+    return { ...p, spec, heroWarn, heroSlides };
   });
 
 // Track the first day each post was seen ready, so re-running the tap never
-// hides how long a post has actually been waiting (CONTEXT-HANDOFF.md §2: "the
+// hides how long a post has actually been waiting (docs/CONTEXT-HANDOFF.md §2: "the
 // tap re-dates them forward each run, so the list looks fresh while nothing
 // happens"). This file is the one exception to "regenerated from scratch."
 const waitingFile = path.join(ROOT, 'state', 'waiting-since.json');
@@ -117,10 +118,15 @@ const entries = ordered.map((c, i) => {
   const flagFile = path.join(dst, 'CHECK-FIRST.txt');
   if (!c.heroWarn.length && fs.existsSync(flagFile)) tryRm(flagFile);
   if (c.heroWarn.length) {
+    const where = c.heroSlides.length ? `slide ${c.heroSlides.join(', ')}` : 'a slide';
     fs.writeFileSync(flagFile,
-      'Gate 6 flagged a hero number that does not trace to a sourced figure in gtm.json.\n' +
-      'Either confirm the citation is real and add it to gtm.json, or skip this post.\n\n' +
-      c.heroWarn.join('\n') + '\n');
+      `CHECK-FIRST: post-${c.post} "${c.spec.title}"\n\n` +
+      `${where} sets a big number that does not trace to a sourced figure in gtm.json.\n` +
+      c.heroWarn.map((w) => `  - ${w}`).join('\n') + '\n\n' +
+      'Two ways out (30 seconds, no copy is ever rewritten by the engine):\n' +
+      `  CONFIRM  you can name the real source -> add it to gtm.json (angles[].stat), run npm run tap, the flag clears.\n` +
+      `  SKIP     you cannot -> do not schedule this post. Leave it; it sorts after every clean post.\n` +
+      '           A made-up or unsourced statistic is the one thing this account cannot ship.\n');
   }
   return { ...c, slot, folder, slides, caption, markCmd, waitingDays: daysWaiting(c.post) };
 });

@@ -8,6 +8,7 @@ import { validateSpec } from './validate.mjs';
 import { judge, hookShape } from './entropy.mjs';
 import { decide, performanceSignal } from './decide.mjs';
 import { saveFreshness, loadFreshness } from './state.mjs';
+import { validateCritique, parseNote } from './critic.mjs';
 
 let pass = 0, fail = 0;
 const t = (name, fn) => {
@@ -173,6 +174,32 @@ t('generate only when the board is genuinely clear', () => {
   const d = decide({ ledger: { posts: { 1: { post: 1, stage: 'measured' } } }, perf: { posts: {} },
     fresh: { items: [{ id: 'f', observedAt: new Date().toISOString() }] } });
   assert(d.action === 'GENERATE', `clear board should generate, got ${d.action}`);
+});
+
+console.log('\nVISION CRITIC');
+const good = { stop: 4, stand: 4, arrive: 5, save: 4, family: 5 };
+t('a clean critique is accepted', () => assert(validateCritique({ scores: good }).ok, 'all >= 4 needs no citations'));
+t('a missing dimension is REJECTED', () => assert(!validateCritique({ scores: { ...good, save: undefined } }).ok, 'missing save should fail'));
+t('a score of 6 or 0 or 3.5 is REJECTED', () => {
+  for (const bad of [6, 0, 3.5]) assert(!validateCritique({ scores: { ...good, stop: bad } }).ok, `stop=${bad} should fail`);
+});
+t('a score under 4 with no citation is REJECTED', () => assert(!validateCritique({ scores: { ...good, stop: 2 } }).ok, 'bare low score should fail'));
+t('a low score citing slide and element is accepted', () => {
+  const f = [{ dimension: 'stop', slide: 1, element: 'five-line serif headline' }];
+  assert(validateCritique({ scores: { ...good, stop: 2 }, findings: f }).ok, 'cited low score should pass');
+});
+t('a citation for the WRONG dimension does not excuse a low score', () => {
+  const f = [{ dimension: 'save', slide: 1, element: 'five-line serif headline' }];
+  assert(!validateCritique({ scores: { ...good, stop: 2 }, findings: f }).ok, 'citation must match the dimension');
+});
+t('a citation with no real element is REJECTED', () => {
+  const f = [{ dimension: 'stop', slide: 1, element: ' ' }];
+  assert(!validateCritique({ scores: { ...good, stop: 2 }, findings: f }).ok, 'blank element should fail');
+});
+t('note parsing keeps colons inside the element', () => {
+  const n = parseNote('stop:1:hook: five lines');
+  assert(n && n.slide === 1 && n.element === 'hook: five lines', 'element should keep its own colon');
+  assert(parseNote('garbage') === null, 'unparseable note should be null');
 });
 
 console.log(`\n  ${pass} passed, ${fail} failed\n`);

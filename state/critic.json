@@ -1,0 +1,68 @@
+{
+  "posts": {
+    "5": {
+      "post": 5,
+      "scoredAt": "2026-10-01",
+      "scores": {
+        "stop": 3,
+        "stand": 5,
+        "arrive": 5,
+        "save": 5,
+        "family": 4
+      },
+      "findings": [
+        {
+          "dimension": "stop",
+          "slide": 1,
+          "element": "five-line Playfair headline, no number; the $2,913 on slide 2 would stop a scroll harder"
+        }
+      ]
+    },
+    "31": {
+      "post": 31,
+      "scoredAt": "2026-10-01",
+      "scores": {
+        "stop": 4,
+        "stand": 3,
+        "arrive": 3,
+        "save": 4,
+        "family": 4
+      },
+      "findings": [
+        {
+          "dimension": "stand",
+          "slide": 2,
+          "element": "two small boxes with 12px-scale text; lower 40 percent of the frame is bare"
+        },
+        {
+          "dimension": "arrive",
+          "slide": 2,
+          "element": "slides 2, 3 and 5 share one cream top-heavy rhythm of small headline plus small items"
+        }
+      ]
+    },
+    "32": {
+      "post": 32,
+      "scoredAt": "2026-10-01",
+      "scores": {
+        "stop": 5,
+        "stand": 3,
+        "arrive": 3,
+        "save": 4,
+        "family": 4
+      },
+      "findings": [
+        {
+          "dimension": "stand",
+          "slide": 2,
+          "element": "headline shows a literal ASCII arrow (Your fridge -> Paris) and the list is small with a bare lower half"
+        },
+        {
+          "dimension": "arrive",
+          "slide": 3,
+          "element": "slides 2, 3, 5 and 6 are all cream with content in the top half"
+        }
+      ]
+    }
+  }
+}
