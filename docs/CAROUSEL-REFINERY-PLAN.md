@@ -31,13 +31,23 @@ copy variant B that Adi picks or rejects. Nothing publishes.
 
 | Item | Decision |
 |---|---|
-| CTA reality (Part C §C0.1) | **Setup phase. No waitlist, no pre-order, no "link in bio" claim anywhere.** The only CTA allowed in generated text (captions, tiktok.txt, bios) is the soft line: **"I'm building something to help with this."** Nothing more: no app name pitch, no link promise, no date. Tier 0 (no ask) remains valid and should be most posts. |
-| Parallelism | Allowed. Independent slices run in separate worktrees (see §4). Overrides the original "one agent, no worktrees" line. |
+| CTA reality (Part C §C0.1) | **Setup phase. No waitlist, no pre-order, no "link in bio" claim anywhere.** Generated text (captions, tiktok.txt, bios) ends with one line from the closed `ctas.setup` list in gtm.json (§1a): save it, follow for more, something's coming. Nothing more: no app pitch, no link promise, no date. Content stays save-worthy first; the CTA is a whisper. |
+| Parallelism | Allowed. Independent slices run as parallel Sonnet 5.5 subagents in one shared worktree (see §4). |
 | Invariant amendments (Part A3) | Authorized: Refinery lane may propose B; new `VAULT/` ignores the HOLD-at-6 cap; refine runs on demand only (`npm run refine`), never scheduled; renders files, never publishes. |
+
+### 1a. Setup-phase CTA lines (closed list; additions need Adi)
+
+Rotate deterministically by post number (`setup[postNumber % length]`). Product-voiced ("we"), dry, no em dashes,
+matching every other line on the account so the CTA never reads out of character.
+
+1. `Save this for your next grocery run. Follow for more, something's coming.`
+2. `Worth saving. Follow along, we're building something for exactly this.`
+3. `Save it before your fridge does the forgetting. Follow for more, something's on the way.`
+4. `Keep this one. Follow for more, we're working on something for this.`
 
 **Conflict to state out loud:** gtm.json says CTAs are product-voiced, not founder-voiced, and
 its Tier 1 text is "More in the bio." Adi's decision overrides that for the setup phase. S1 encodes
-it as `state/launch.json.phase = "setup"` plus a `setupCta` string in gtm.json, so the tiers
+it as `state/launch.json.phase = "setup"` plus a closed `ctas.setup` list in gtm.json, so the tiers
 stay intact for later and flipping `phase` restores them.
 
 ## 2. Verified state (Oct 1, checked against the repo)
@@ -82,10 +92,10 @@ Format: **goal** · files · must-pass · depends on. Subagents in brackets.
   Update `specs/COVERAGE.md`. PantryPal -> fond swap is mechanical, logged.
 - (c) CTA honesty:
   - `state/launch.json` {phase:"setup", waitlistLive:false, foundingMemberLive:false, checkedAt}.
-  - gtm.json: add `ctas.setupCta: "I'm building something to help with this."`.
+  - gtm.json: add `ctas.setup` = the four lines in §1a, verbatim.
   - Gate 6 (`src/gtm-check.mjs`): in phase setup, any Tier 2/3 text in a slide or caption FAILs,
     and banned substrings += "link in bio", "waitlist", "pre-order" for generated text.
-  - Caption builder emits `setupCta` (or nothing for Tier 0). Never more than that one line.
+  - Caption builder emits the rotated `ctas.setup` line (or nothing for Tier 0). Never more than that one line.
   - Slide copy that verbatim contains Tier 2/3 text: mark spec `hold: "HOLD-UNTIL-LAUNCH"`, do not rewrite.
   - Re-export READY-TO-POST captions 31-36.
 - Fixture: Tier 2 caption fails at waitlistLive:false, passes at true.
@@ -138,7 +148,7 @@ caption.txt, alt.txt, tiktok.txt, critic.json, diff.md. Stage `vault`.
 - Verify: kill mid-step-4 then `--resume` gives byte-identical output; simulated rate limit pauses with exit 0.
 
 ### S6 · Post package (pass@2) · after S4
-- IG caption: keyword in first sentence, 1-2 value lines, send-trigger, CTA = `setupCta` or none, 3-5 hashtags
+- IG caption: keyword in first sentence, 1-2 value lines, send-trigger, CTA = rotated `ctas.setup` line or none, 3-5 hashtags
   (1 broad, 2 niche, 1 community). No em dashes. Aim <600 chars.
 - Alt text per slide from spec (no model). tiktok.txt: search-phrase title, 3-5 keyword phrases, 3 hashtags,
   "SOUND: pick a trending sound in-app".
@@ -155,7 +165,12 @@ caption.txt, alt.txt, tiktok.txt, critic.json, diff.md. Stage `vault`.
 - If Adi picks B on <2 of 7: tighten S4. If critic and Adi disagree on >=3: rerun S3 calibration.
 - Then `npm run refine -- --batch 5 --resume` per usage window, pillar-balanced, until every renderable post is vaulted.
 
-## 4. Parallel lanes (worktrees, merge in this order)
+## 4. Parallel lanes (merge in this order)
+
+Execution model (Oct 2): Sonnet 5.5 subagents build; the orchestrator verifies and is the ONLY one that runs git.
+All lanes share the worktree `.claude/worktrees/refinery-plan` (branch `worktree-refinery-plan`); lanes touch
+disjoint files. `npm test` writes fixture posts 9000+, so lanes run it through the shared lock:
+`bash $CLAUDE_JOB_DIR/tmp/locked.sh npm test`.
 
 ```
 Lane 0 (alone, first):  S0 contract
@@ -188,10 +203,9 @@ Shared-file risk: S1 and S2 both edit the test fixture list in `tools/test_gates
 
 - **Bios use the setup line, not "waitlist" or "App coming soon".**
   - IG name: `fond | stop wasting groceries`
-  - IG bio: `The average family of 4 bins $2,913 of food a year (EPA). We show where it goes and how to keep it. I'm building something to help with this.`
-    (**141 chars, limit 150. "We show" next to "I'm building" mixes voices; Adi picks which one stays.**)
+  - IG bio: `The average family of 4 bins $2,913 of food a year (EPA). Save-worthy fixes for where it goes. Follow along, something's coming.` (128 chars, limit 150)
   - IG link: none until getfond.app is live.
-  - TikTok name: `fond | food waste, fixed` · bio: `Fridge fixes + store secrets. I'm building something to help with this.` (71 chars, limit 80)
+  - TikTok name: `fond | food waste, fixed` · bio: `Fridge fixes + store secrets. Follow along, something's coming.` (63 chars, limit 80)
 - IG reactivation: 5 warm-up days (profile, 20-30 niche follows, 5-10 real comments/day, 2-3 Stories), then 2
   carousels/week Tue/Thu; reply to every comment in the first hour; log Insights after a week (`log-post.mjs`).
 - TikTok: personal account (Business requires 18+), Photo mode with 9:16 renders, trending sound in-app, 4 warm-up
