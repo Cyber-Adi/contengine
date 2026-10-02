@@ -10,7 +10,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { ROOT } from './../src/tokens.mjs';
-import { reconcile, loadLedger, atStage } from './../src/state.mjs';
+import { reconcile, loadLedger, atStage, isPublishable } from './../src/state.mjs';
 import { DIMENSIONS, PASS_MARK, validateCritique, parseNote, packetText } from './../src/critic.mjs';
 
 const FILE = path.join(ROOT, 'state', 'critic.json');
@@ -40,7 +40,7 @@ if (cmd === 'prepare' && arg) {
   console.log(`post-${arg} recorded. weakest: ${v.weakest}=${scores[v.weakest]}${low.length ? `  under ${PASS_MARK}: ${low.join(', ')}` : '  all at or above the mark'}`);
 } else if (cmd === 'status') {
   const db = load();
-  const ready = atStage('approved', reconcile(loadLedger())).filter((p) => p.provenance !== 'reconstructed-fixture');
+  const ready = atStage('approved', reconcile(loadLedger())).filter(isPublishable);
   const todo = ready.filter((p) => !db.posts[p.post]);
   console.log(`critiqued: ${Object.keys(db.posts).length}   approved and not yet critiqued: ${todo.length}`);
   todo.forEach((p) => console.log(`  node tools/critic.mjs prepare ${p.post}`));

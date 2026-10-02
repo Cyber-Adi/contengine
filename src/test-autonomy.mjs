@@ -7,7 +7,10 @@ import { gtmCheck } from './gtm-check.mjs';
 import { validateSpec } from './validate.mjs';
 import { judge, hookShape } from './entropy.mjs';
 import { decide, performanceSignal } from './decide.mjs';
-import { saveFreshness, loadFreshness } from './state.mjs';
+import { saveFreshness, loadFreshness, isPublishable } from './state.mjs';
+import os from 'node:os';
+import path from 'node:path';
+import { saveRefinery, loadRefinery, setPostStage, STAGES as REFINERY_STAGES } from './refinery-state.mjs';
 import { validateCritique, parseNote } from './critic.mjs';
 
 let pass = 0, fail = 0;
@@ -200,6 +203,47 @@ t('note parsing keeps colons inside the element', () => {
   const n = parseNote('stop:1:hook: five lines');
   assert(n && n.slide === 1 && n.element === 'hook: five lines', 'element should keep its own colon');
   assert(parseNote('garbage') === null, 'unparseable note should be null');
+});
+
+console.log('\nREFINERY CONTRACT (S0)');
+const refined = (over = {}) => {
+  const b = base();
+  const first = b.slides[0].copy;
+  return { ...b, provenance: 'refined', variant: 'B', refinedFrom: b.postNumber, picked: false,
+    originalCopy: b.slides.map((sl) => sl.copy),
+    refinement: { round: 1, model: 'claude-sonnet-5-5', at: '2026-10-02T00:00:00.000Z',
+      changes: [{ slide: 1, field: 'headline', from: String(first.headline ?? ''), to: 'x', why: 'tighter' }] },
+    ...over };
+};
+t('variant B without originalCopy is REJECTED', () => {
+  const { originalCopy, ...noOrig } = refined();
+  assert(rejects(noOrig), 'variant B must require originalCopy');
+  try { validateSpec(noOrig); } catch (e) { assert(/originalCopy/.test(e.message), `rejected for the wrong reason: ${e.message}`); }
+});
+t('good variant B with originalCopy validates', () => { validateSpec(refined()); });
+t('refinement change with empty why is REJECTED', () => {
+  const b = refined();
+  assert(rejects({ ...b, refinement: { ...b.refinement, changes: [{ ...b.refinement.changes[0], why: '' }] } }), 'why must be non-empty');
+});
+t('variant A needs no originalCopy', () => { validateSpec({ ...base(), variant: 'A' }); });
+t('refined spec without picked:true is excluded by the ready filter', () => {
+  assert(!isPublishable({ provenance: 'refined' }), 'unpicked refined must not ship');
+  assert(!isPublishable({ provenance: 'refined', picked: false }), 'picked:false must not ship');
+  assert(isPublishable({ provenance: 'refined', picked: true }), 'picked refined may ship');
+  assert(isPublishable({ provenance: 'brief' }), 'brief ships');
+  assert(!isPublishable({ provenance: 'reconstructed-fixture' }), 'fixture never ships');
+});
+t('saveRefinery leaves valid JSON and no temp file', () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'refinery-'));
+  const file = path.join(dir, 'refinery.json');
+  saveRefinery({ posts: { 5: { stage: 'queued' } } }, file);
+  saveRefinery(setPostStage(loadRefinery(file), 5, 'designing'), file);
+  const back = JSON.parse(fs.readFileSync(file, 'utf8'));
+  assert(back.posts['5'].stage === 'designing' && back.updatedAt, 'state persisted');
+  assert(fs.readdirSync(dir).join() === 'refinery.json', `temp lingered: ${fs.readdirSync(dir)}`);
+  assert(REFINERY_STAGES.includes('vault'), 'stage enum');
+  let threw = false; try { setPostStage({ posts: {} }, 5, 'bogus'); } catch { threw = true; }
+  assert(threw, 'unknown stage rejected');
 });
 
 console.log(`\n  ${pass} passed, ${fail} failed\n`);

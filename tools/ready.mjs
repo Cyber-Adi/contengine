@@ -17,7 +17,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { ROOT } from './../src/tokens.mjs';
-import { reconcile, loadLedger, loadPerformance, atStage } from './../src/state.mjs';
+import { reconcile, loadLedger, loadPerformance, atStage, isPublishable } from './../src/state.mjs';
 import { gtmCheck } from './../src/gtm-check.mjs';
 
 const OUT = path.join(ROOT, 'READY-TO-POST');
@@ -36,7 +36,7 @@ const valid = (n) => {
   catch { return false; }
 };
 const cands = atStage('approved', ledger)
-  .filter((p) => p.provenance !== 'reconstructed-fixture')
+  .filter(isPublishable)
   .filter((p) => !(perf.posts?.[p.post]?.publishedAt))
   .filter((p) => fs.existsSync(path.join(ROOT, 'out', `post-${p.post}`, 'PUBLISH')))
   .filter((p) => valid(p.post))

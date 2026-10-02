@@ -95,6 +95,18 @@ From Notion Design System §3.8. Violating any of these is a build failure, not 
 - Any change to Notion Design System §3 itself.
 - Anything that would post publicly. **This repo renders files. It does not publish.**
 
+### Refinery amendments (Oct 1 2026)
+
+Adi authorized these on Oct 1. Each invariant stays in force for its original scope.
+
+| Repo invariant | Amendment |
+|---|---|
+| **"Copy is verbatim. The engine never writes or rewrites copy."** | **Kept for the renderer.** A new, separate **Refinery lane** may *propose* a copy variant **B** next to the verbatim **A**. B is stored with a per-slide diff and rationale, must pass a new **Gate 7 · Fidelity**, and **never ships without your pick**. Design changes (layout, diagram, background, emphasis markup, thread) are not copy and may be applied freely. |
+| **HOLD at ≥6 ready-unscheduled** | **Kept for `READY-TO-POST/`.** The Refinery writes to a new `VAULT/` that HOLD doesn't block, so the refined backlog builds up while the posting queue stays capped. |
+| **No new scheduled tasks** | **Kept.** The Refinery runs on demand (`npm run refine`), never on a schedule. |
+| **No new top-level docs** | **Kept.** This plan goes to `docs/`. |
+| **Never publishes** | **Kept.** It renders files. You schedule. |
+
 ---
 
 ## 5 · The verify loop — run this after ANY change to `src/` or `tools/`

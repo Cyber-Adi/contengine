@@ -40,6 +40,11 @@ export const STAGES = [
   'published',   // live on a platform
   'measured'     // insights ingested; feeds the next decision
 ];
+/** The ONE publishability rule. Fixtures carry reconstructed copy; a Refinery variant is a
+ *  proposal until Adi picks it. Neither may be exported or slotted into READY-TO-POST. */
+export const isPublishable = (p) =>
+  p.provenance !== 'reconstructed-fixture' && !(p.provenance === 'refined' && p.picked !== true);
+
 export const stageIndex = (s) => STAGES.indexOf(s);
 
 const readJson = (p, fallback) => {
@@ -89,7 +94,7 @@ export function reconcile(ledger = loadLedger()) {
     if (!m || isFixture(m[1])) continue;
     let spec = {};
     try { spec = JSON.parse(fs.readFileSync(path.join(specDir, f), 'utf8')); } catch { /* malformed */ }
-    bump(m[1], 'spec', { title: spec.title, pillar: spec.pillar, provenance: spec.provenance });
+    bump(m[1], 'spec', { title: spec.title, pillar: spec.pillar, provenance: spec.provenance, picked: spec.picked });
   }
 
   for (const d of fs.existsSync(outDir) ? fs.readdirSync(outDir) : []) {

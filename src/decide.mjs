@@ -17,7 +17,7 @@
 // Writing new copy is what this operation does when it has nothing better to do,
 // and for six weeks it had many better things to do. Everything below is in
 // service of that inversion.
-import { loadLedger, loadPerformance, loadFreshness, reconcile, census, atStage, logDecision } from './state.mjs';
+import { loadLedger, loadPerformance, loadFreshness, reconcile, census, atStage, logDecision, isPublishable } from './state.mjs';
 import { gtm } from './gtm.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -128,8 +128,8 @@ export function decide({ ledger = reconcile(loadLedger()), perf = loadPerformanc
   // export. Found by the exporter refusing what the ladder had just recommended.
   const approved = atStage('approved', ledger);
   const fixtures = approved.filter((p) => p.provenance === 'reconstructed-fixture');
-  const publishable = approved.filter((p) => p.provenance !== 'reconstructed-fixture' && specIsValid(p.post));
-  const invalidApproved = approved.filter((p) => p.provenance !== 'reconstructed-fixture' && !specIsValid(p.post));
+  const publishable = approved.filter((p) => isPublishable(p) && specIsValid(p.post));
+  const invalidApproved = approved.filter((p) => isPublishable(p) && !specIsValid(p.post));
   if (invalidApproved.length > 0) {
     return act('FIX_SPEC',
       `${invalidApproved.length} post(s) render and pass every image gate but fail the schema (${invalidApproved.map((p) => p.post).join(', ')}) — usually a layout missing the content it draws, like empty split-compare panels.`,

@@ -31,6 +31,11 @@ if (spec.provenance === 'reconstructed-fixture') {
   process.exit(1);
 }
 
+if (spec.provenance === 'refined' && spec.picked !== true) {
+  console.error(`refusing: post-${n} is a Refinery variant that Adi has not picked (picked !== true).`);
+  process.exit(1);
+}
+
 const src = path.join(outDir, tiktok ? 'slides-tiktok' : 'slides');
 const dst = path.join(outDir, tiktok ? 'PUBLISH-tiktok' : 'PUBLISH');
 fs.mkdirSync(dst, { recursive: true });
