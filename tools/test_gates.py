@@ -69,6 +69,22 @@ def f_thin(s):
     s["slides"][0]["layout"] = "hero-statement"
 
 
+@fixture("three-same-backgrounds", "G5.6-rhythm-bg")
+def f_bg_run(s):
+    # S2a: slides 1-3 all dark. Backgrounds only, copy untouched.
+    for i in (0, 1, 2):
+        s["slides"][i]["background"] = "dark"
+
+
+@fixture("slide2-sparse-fill", "G5.5-fill")
+def f_slide2_fill(s):
+    # S2b: slide 2 carries a two-word headline in a short statement layout, so the
+    # content occupies a sliver of its box. FAIL on slide 2 only (WARN elsewhere).
+    s["slides"][1]["layout"] = "hero-statement"
+    s["slides"][1]["copy"] = {"headline": "Three weeks"}
+    s["slides"][1].pop("diagram", None)
+
+
 def run_one(name, gate, mutate):
     spec = copy.deepcopy(GOOD)
     spec["postNumber"] = 9000
@@ -181,7 +197,7 @@ def synthetic_ocr_illegible():
     im.save(os.path.join(sd, "slide-01.png"))
     spec = {"slides": [{"index": 1, "copy": {"headline": "UNMISTAKABLE PROOF"}}]}
     findings = []
-    Q.gate4(spec, sd, findings)
+    Q.gate4(spec, sd, findings, ocr=True)   # S2d: OCR is opt-in, the fixture opts in
     hit = [f for f in findings if f["gate"] == "G4.5-ocr" and f["level"] == "FAIL"]
     shutil.rmtree(out, ignore_errors=True)
     return bool(hit), (hit[0]["msg"][:78] if hit else "GATE DID NOT FIRE")
@@ -293,6 +309,11 @@ def main():
                     ("edge jump (synthetic)", synthetic_edge_discontinuity, "G3.2-edge"),
                     ("hook unreadable (synthetic)", synthetic_ocr_illegible, "G4.5-ocr"),
                     ("ocr digit matcher", ocr_matcher_calibration, "G4.5-ocr")):
+        ok, msg = fn()
+        print(f"  {'PASS' if ok else 'MISS'}  {label:<26} {gate:<18} {msg}")
+        passed += ok; total += 1
+    import test_gates_s2 as S2   # S2 fixtures live in their own file
+    for label, fn, gate in S2.CHECKS:
         ok, msg = fn()
         print(f"  {'PASS' if ok else 'MISS'}  {label:<26} {gate:<18} {msg}")
         passed += ok; total += 1

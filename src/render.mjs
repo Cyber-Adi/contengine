@@ -6,7 +6,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { chromium } from 'playwright';
-import { wrapSlideHtml, tokens, ROOT } from './slide-html.mjs';
+import { wrapSlideHtml, effectiveSlide, tokens, ROOT } from './slide-html.mjs';
+import { normalizeSlide } from './normalize.mjs';
 import { scaleForWidth } from './tokens.mjs';
 import { validateSpec } from './validate.mjs';
 
@@ -74,12 +75,15 @@ export async function renderCarousel(spec, { outDir, debug = false, canvas = 'ig
     // Fonts must be REAL. A silent fallback to a system serif is the #1 way this
     // output looks amateur and it fails quietly. Assert before we screenshot.
     await page.evaluate(async () => {
+      if (window.__fillDone) await window.__fillDone;   // S2b: the page's own fill pass
       await Promise.all([
         document.fonts.load("700 96px 'Playfair Display'"),
         document.fonts.load("400 32px 'DM Sans'"),
         document.fonts.load("700 140px 'Space Grotesk'"),
       ]);
       await document.fonts.ready;
+      // Determinism: let layout settle for two frames before anything is measured or captured.
+      await new Promise((res) => requestAnimationFrame(() => requestAnimationFrame(res)));
     });
     const fontStatus = await page.evaluate(() => ({
       playfair: document.fonts.check("700 96px 'Playfair Display'"),
@@ -160,7 +164,10 @@ export async function renderCarousel(spec, { outDir, debug = false, canvas = 'ig
     const final = path.join(slidesDir, `slide-${String(slide.index).padStart(2, '0')}.png`);
     await page.screenshot({ path: big, clip: { x: 0, y: 0, width: CV.w, height: CV.h } });
 
-    measurements.push({ index: slide.index, archetype: slide.archetype, layout: slide.layout,
+    // S2f / S2a: every mechanical substitution and every renderer-chosen anchor is recorded.
+    const normalizations = normalizeSlide(slide).log;
+    const valign = effectiveSlide(spec, slide).valign;
+    measurements.push({ index: slide.index, archetype: slide.archetype, layout: slide.layout, valign, normalizations,
       declaresLoss: !!slide.declaresLoss, background: slide.background, fontStatus, ...m, file: final });
   }
 

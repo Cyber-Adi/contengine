@@ -269,7 +269,7 @@ def gate3(spec, meas, slides_dir, findings):
             if ca is None or cb_ is None:
                 findings.append(dict(gate="G3.2-edge", level="FAIL", slide=b["index"],
                                      msg=f"thread line does not reach the edge between slide {a['index']} and {b['index']}"))
-            elif abs(ca - cb_) > 6:
+            elif abs(ca - cb_) > RULES["thread"]["edgeTolerancePx"]:
                 findings.append(dict(gate="G3.2-edge", level="FAIL", slide=b["index"],
                                      msg=f"thread line jumps {abs(ca - cb_):.0f}px crossing slide {a['index']}->{b['index']}"))
 
@@ -345,7 +345,43 @@ def _ocr_hook_text(thumb_img):
     return pytesseract.image_to_string(ImageOps.grayscale(big))
 
 
-def gate4(spec, slides_dir, findings, ocr=True):
+def ocr_enabled():
+    """S2d: OCR is slow, so it is opt-in (QA_OCR=1 or `qa.py --ocr`), run at the end
+    of a batch. A skipped OCR is stated in the report, never silent."""
+    return os.environ.get(RULES["ocr"]["optInEnv"]) == "1"
+
+
+def grid_safe_strip(canvas_w, canvas_h):
+    """Width in px of each side strip cut when the grid shows a 3:4 centre crop."""
+    aw, ah = RULES["gridSafe"]["cropAspect"]
+    return max(0.0, (canvas_w - canvas_h * aw / ah) / 2.0)
+
+
+def gate4_gridsafe(meas, findings):
+    """S2e: Instagram's profile grid shows a 3:4 centre crop of the 4:5 slide. The
+    hook text and any hero number on slide 1 must sit inside it. Bounded by the
+    measured element boxes (CLAUDE.md 3.3), not by pixels."""
+    g = TOKENS["grid"]["canvas"]
+    strip = grid_safe_strip(g["w"], g["h"])
+    if strip <= 0:
+        return
+    m1 = next((m for m in meas or [] if m["index"] == 1), None)
+    for tb in (m1 or {}).get("textBoxes", []):
+        cls = tb.get("cls") or ""
+        box = tb.get("box")
+        if not box or not (cls.startswith("h-") or "hero-num" in cls):
+            continue
+        if box["x"] < strip or box["x"] + box["w"] > g["w"] - strip:
+            findings.append(dict(gate="G4.6-gridsafe", level="FAIL", slide=1,
+                                 msg=f"'{tb['text'][:30]}' ({cls}) spans x={box['x']}..{box['x'] + box['w']}, "
+                                     f"outside the 3:4 grid crop ({strip:.0f}px strips each side)"))
+
+
+def gate4(spec, slides_dir, findings, ocr=None, meas=None):
+    if ocr is None:
+        ocr = ocr_enabled()
+    if meas is not None:
+        gate4_gridsafe(meas, findings)
     w = RULES["thumbnail"]["width"]
     for n in (1, 2):
         f = os.path.join(slides_dir, f"slide-{n:02d}.png")
@@ -493,7 +529,8 @@ def gate5_optical(spec, meas, slides_dir, findings):
             # ---- 5.5 fill ratio: does the composition use the frame it was given?
             fill = (ebot - etop) / max(1, (cbot - ctop))
             if fill < OPT["minFillRatio"]:
-                findings.append(dict(gate="G5.5-fill", level="WARN", slide=i,
+                findings.append(dict(gate="G5.5-fill",
+                                     level="FAIL" if i in OPT.get("fillFailSlides", []) else "WARN", slide=i,
                                      msg=f"content occupies {fill:.0%} of its box — type or diagram could carry more of the frame"))
 
         # ---- 5.2 vertical balance: ink shouldn't pile into one half
@@ -532,6 +569,55 @@ def gate5_optical(spec, meas, slides_dir, findings):
                                          msg=f"headline ends on an orphan: '{last}'"))
 
 
+def ink_centroid(img_arr, content_box, frame_h):
+    """Vertical ink-mass centroid as a share of frame height. Ink is bounded to the
+    content box (CLAUDE.md 3.3): chrome pinned to the frame is the same on every
+    slide and would drag every centroid to the same place."""
+    bg = img_arr[4, 4]
+    ink = np.linalg.norm(img_arr.astype(float) - bg, axis=2) > 34
+    top = max(0, int(content_box["top"]))
+    bot = min(img_arr.shape[0], int(content_box["bottom"]))
+    rows = ink[top:bot].sum(axis=1).astype(float)
+    if rows.sum() == 0:
+        return None
+    return float((np.arange(top, bot) * rows).sum() / rows.sum()) / frame_h
+
+
+def gate5_rhythm(meas, slides_dir, findings):
+    """S2a, Gate 5 cross-slide: every swipe has to land somewhere new.
+    5.6  no run of 3 slides on one ground (cta-card is its own ground);
+    5.7  adjacent slides' ink centroids differ by >= rules.rhythm.minCentroidDeltaPct
+         of frame height. Measured from the render, not predicted."""
+    R = RULES["rhythm"]
+    g = TOKENS["grid"]["canvas"]
+    ms = sorted(meas, key=lambda m: m["index"])
+
+    def ground(m):
+        return "cta" if m.get("layout") == "cta-card" else m.get("background", "light")
+
+    n = R["maxSameBackgroundRun"] + 1
+    for k in range(len(ms) - n + 1):
+        run = ms[k:k + n]
+        if all(ground(m) == ground(run[0]) for m in run):
+            findings.append(dict(gate="G5.6-rhythm-bg", level="FAIL", slide=run[-1]["index"],
+                                 msg=f"slides {run[0]['index']}-{run[-1]['index']} all sit on the {ground(run[0])} ground"))
+
+    cents = {}
+    for m in ms:
+        f = os.path.join(slides_dir, f"slide-{m['index']:02d}.png")
+        if not os.path.exists(f) or not m.get("contentBox"):
+            continue
+        cents[m["index"]] = ink_centroid(np.asarray(Image.open(f).convert("RGB")), m["contentBox"], g["h"])
+    for a, b in zip(ms, ms[1:]):
+        ca, cb = cents.get(a["index"]), cents.get(b["index"])
+        if ca is None or cb is None:
+            continue
+        if abs(ca - cb) < R["minCentroidDeltaPct"]:
+            findings.append(dict(gate="G5.7-rhythm-centroid", level=R.get("centroidLevel", "FAIL"), slide=b["index"],
+                                 msg=f"slides {a['index']} and {b['index']} centre at {ca:.0%} and {cb:.0%} of frame height, "
+                                     f"{abs(ca - cb):.0%} apart (need {R['minCentroidDeltaPct']:.0%})"))
+
+
 def cross(spec, slides_dir, findings):
     hashes = {}
     for s in spec["slides"]:
@@ -558,26 +644,38 @@ def run(out_dir):
     slides_dir = os.path.join(out_dir, "slides")
     meas = json.load(open(os.path.join(out_dir, "measurements.json")))
     post = os.path.basename(out_dir).replace("post-", "")
-    spec = json.load(open(os.path.join(ROOT, "specs", f"post-{post}.json")))
+    spec_path = os.path.join(ROOT, "specs", f"post-{post}.json")
+    if not os.path.exists(spec_path):                       # verify-loop fixtures live apart from real posts
+        spec_path = os.path.join(ROOT, "specs", "fixtures", f"post-{post}.json")
+    spec = json.load(open(spec_path))
 
     findings = []
     gate1(meas, findings)
     gate2(spec, meas, slides_dir, findings)
     gate3(spec, meas, slides_dir, findings)
-    gate4(spec, slides_dir, findings)
+    use_ocr = ocr_enabled() or ("--ocr" in sys.argv)
+    gate4(spec, slides_dir, findings, ocr=use_ocr, meas=meas)
     gate5_optical(spec, meas, slides_dir, findings)
+    gate5_rhythm(meas, slides_dir, findings)
     cross(spec, slides_dir, findings)
 
     fails = [f for f in findings if f["level"] == "FAIL"]
     warns = [f for f in findings if f["level"] == "WARN"]
+    norms = [dict(n, slide=m["index"]) if "slide" not in n else n
+             for m in meas for n in m.get("normalizations", [])]
     report = dict(post=spec["postNumber"], title=spec["title"],
                   provenance=spec.get("provenance"),
                   verdict="PASS" if not fails else "FAIL",
-                  fails=len(fails), warns=len(warns), findings=findings)
+                  fails=len(fails), warns=len(warns),
+                  ocr="ran" if use_ocr else "skipped (opt-in: QA_OCR=1 or --ocr, run at batch end)",
+                  normalizations=norms, findings=findings)
     json.dump(report, open(os.path.join(out_dir, "qa-report.json"), "w"), indent=2)
 
     print(f"\n  QA — post {spec['postNumber']}: {spec['title']}")
-    print(f"  verdict: {report['verdict']}   fails={len(fails)}  warns={len(warns)}")
+    print(f"  verdict: {report['verdict']}   fails={len(fails)}  warns={len(warns)}   ocr: {report['ocr'].split(' (')[0]}")
+    if norms:
+        print(f"  typographic normalizer: {len(norms)} substitution(s) logged "
+              f"({', '.join(sorted({n['rule'] for n in norms}))})")
     for f in findings:
         print(f"    [{f['level']}] {f['gate']} slide {f['slide']}: {f['msg']}")
     if not findings:

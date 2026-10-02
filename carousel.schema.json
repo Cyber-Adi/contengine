@@ -194,6 +194,15 @@
             ],
             "description": "Adjacent slides must not share a layout - Design System 3.8."
           },
+          "valign": {
+            "type": "string",
+            "enum": [
+              "top",
+              "center",
+              "bottom"
+            ],
+            "description": "Design-only vertical anchor of the slide's content block. Optional: when absent the renderer picks one per slide so adjacent slides do not centre at the same height (rules.rhythm). tools/rhythm.mjs --write may set it and logs the change in refinement.changes."
+          },
           "diagram": {
             "type": "object",
             "required": [

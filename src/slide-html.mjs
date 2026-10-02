@@ -6,6 +6,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { diagramHtml, diagramCss } from './diagrams.mjs';
+import { normalizeSlide } from './normalize.mjs';
+import { resolveValign } from './rhythm-core.mjs';
 
 import { tokens, C, esc, ROOT, scaleForWidth } from './tokens.mjs';
 export { tokens, ROOT };
@@ -173,7 +175,7 @@ export function toneToken(tone, background) {
 }
 
 // ---------- layout bodies ----------
-function layoutHtml(spec, slide) {
+function layoutHtml(spec, slide, S = 1) {
   const c = slide.copy || {};
   const accent = C[legalAccent(slide.accent, slide.background)];
   const dark = slide.background === 'dark';
@@ -198,7 +200,7 @@ function layoutHtml(spec, slide) {
     case 'split-compare': {
       const [a, b] = c.items || [];
       return `${eyebrow}<h1 class="h-mid" style="color:${fg}">${rich(c.headline, accent)}</h1>
-        <div class="split">
+        <div class="split fill">
           <div class="col" style="border-color:${C.inkGray}55"><div class="col-i" style="color:${C.inkGray}">01</div><div class="col-t" style="color:${fg}">${esc(a || '')}</div></div>
           <div class="col" style="border-color:${accent}"><div class="col-i" style="color:${accent}">02</div><div class="col-t" style="color:${fg}">${esc(b || '')}</div></div>
         </div>${body}${cite}`;
@@ -208,17 +210,25 @@ function layoutHtml(spec, slide) {
         <li><span class="li-n" style="color:${accent}">${String(i + 1).padStart(2, '0')}</span>
         <span class="li-t" style="color:${fg}">${esc(it)}</span></li>`).join('');
       return `${eyebrow}<h1 class="h-mid" style="color:${fg}">${rich(c.headline, accent)}</h1>
-        <ul class="stack">${items}</ul>${body}${cite}`;
+        <ul class="stack fill">${items}</ul>${body}${cite}`;
     }
     case 'quadrant-card': {
+      // S2b: scale the value type to the width the column really has, up to the
+      // numeric ceiling (tokens.type.numeric.sizes.hero.max), never past it. Two lines
+      // are allowed, so short values grow and long ones still fit.
+      const maxChars = Math.max(1, ...(c.quadrants || []).map(x => String(x.value).length));
+      const rows = Math.ceil((c.quadrants || []).length / 2) || 1;
+      const byWidth = Math.floor((330 * 2) / (0.66 * maxChars));
+      const byHeight = Math.floor((560 / rows - 130) / 2.32);   // two lines of value + label + padding
+      const qv = Math.max(52, Math.min(tokens.type.numeric.sizes.hero.max, byWidth, byHeight));
       const q = (c.quadrants || []).map(x => {
         const col = C[toneToken(x.tone, slide.background)];
         return `<div class="quad" style="border-color:${col}">
           <div class="q-l" style="color:${C.inkGray}">${esc(x.label)}</div>
-          <div class="q-v" style="color:${col}">${esc(x.value)}</div></div>`;
+          <div class="q-v" style="color:${col};font-size:${Math.round(qv * S * 100) / 100}px">${esc(x.value)}</div></div>`;
       }).join('');
       return `${eyebrow}<h1 class="h-mid" style="color:${fg}">${rich(c.headline, accent)}</h1>
-        <div class="quads">${q}</div>${body}${cite}`;
+        <div class="quads fill">${q}</div>${body}${cite}`;
     }
     case 'timeline': {
       const steps = (c.items || []).map((it, i, arr) => `
@@ -227,7 +237,7 @@ function layoutHtml(spec, slide) {
           <div class="step-t" style="color:${fg}">${esc(it)}</div>
         </div>`).join(`<div class="rule" style="background:${C.inkGray}55"></div>`);
       return `${eyebrow}<h1 class="h-mid" style="color:${fg}">${rich(c.headline, accent)}</h1>
-        <div class="timeline">${steps}</div>${body}${cite}`;
+        <div class="timeline fill">${steps}</div>${body}${cite}`;
     }
     case 'cta-card': {
       return `<div class="cta-wrap">
@@ -256,10 +266,10 @@ export function slideInner(spec, slide, canvasW = tokens.grid.canvas.w) {
   const chrome = isCta ? C.offWhite : C.inkGray;
   return `<div class="slide" data-index="${slide.index}" data-archetype="${slide.archetype}"
      data-layout="${slide.layout || 'hero-statement'}" data-declares-loss="${!!slide.declaresLoss}"
-     style="background:${bg}">
+     data-valign="${slide.valign || 'center'}" style="background:${bg}">
     ${microLabelHtml(spec, slide, isCta ? C.offWhite + 'B3' : C.inkGray)}
     ${ornamentHtml(slide, isCta ? C.harvestGold : C[legalAccent(slide.accent, slide.background)])}
-    <div class="content">${layoutHtml(spec, slide)}${swipeHtml(spec, slide, isCta ? C.offWhite : C[legalAccent(slide.accent, slide.background)], isCta ? C.offWhite : (dark ? C.offWhite : C.slateBlack))}</div>
+    <div class="content v-${slide.valign || 'center'} lay-${slide.layout || 'hero-statement'}">${layoutHtml(spec, slide, scaleForWidth(canvasW))}${swipeHtml(spec, slide, isCta ? C.offWhite : C[legalAccent(slide.accent, slide.background)], isCta ? C.offWhite : (dark ? C.offWhite : C.slateBlack))}</div>
     ${isCta ? '' : threadHtml(spec, slide, canvasW)}
     <div class="chrome">
       <div class="handle" style="color:${chrome}">${esc(tokens.grid.handle.text)}</div>
@@ -268,7 +278,64 @@ export function slideInner(spec, slide, canvasW = tokens.grid.canvas.w) {
   </div>`;
 }
 
-export function wrapSlideHtml(spec, slide, { debug = false, canvas = 'ig' } = {}) {
+// U+2192 is absent from every vendored face (checked against each cmap), so a text
+// arrow would silently fall to a system font. The normalizer still produces it;
+// it is painted here as an inline vector mark in the surrounding text colour.
+const ARROW_MARK = `<span class="arr" role="img" aria-label="to"><svg viewBox="0 0 40 18"><path d="M2 9h32m-9-7 9 7-9 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>`;
+
+// Design-only vertical anchor. An explicit slide.valign wins; otherwise the rhythm
+// solver picks one per slide so adjacent swipes never land at the same height.
+export function effectiveSlide(spec, slide) {
+  const { slide: norm } = normalizeSlide(slide);
+  return { ...norm, valign: slide.valign || resolveValign(spec)[slide.index] || 'center' };
+}
+
+// S2b fill pass, embedded in the page so a preview and an export lay out identically.
+// A fill block (.fill: list, split, quadrants, timeline) is grown from its natural
+// height until the content elements span `aim` of the content box (the same extent
+// Gate 5.5 measures: leaf text boxes, chrome excluded). It never shrinks below its
+// natural height and never changes type size, so text can only gain room, not clip.
+// The group then sits wherever .content's valign puts it, which is what lets
+// neighbouring slides land at different heights.
+function fillScript(aim) {
+  return `<script>window.__fillDone=(async()=>{
+  await Promise.all([document.fonts.load("700 96px 'Playfair Display'"),document.fonts.load("400 32px 'DM Sans'"),document.fonts.load("700 140px 'Space Grotesk'")]);
+  await document.fonts.ready;
+  const content=document.querySelector('.content'), cr=content.getBoundingClientRect();
+  const blk=document.querySelector('.content .fill');
+  if(!blk){
+    // No stretchable block (hero-number): open the gaps between the content's own
+    // children, but never past the point where one gap exceeds ${tokens.rules.optical.maxGapShare} of the group
+    // (Gate 5.1 fails a hole wider than ${tokens.rules.optical.maxDeadBandPct}), so sparse copy stays sparse
+    // rather than being padded into a hole.
+    if(!content.classList.contains('lay-hero-number')) return;
+    // The swipe pill is a trailing flourish, not copy: it keeps its natural gap.
+    const kids=[...content.children].filter(k=>!k.classList.contains('swipe')&&k.getBoundingClientRect().height>0);
+    if(kids.length<2) return;
+    const T=kids.reduce((a,k)=>a+k.getBoundingClientRect().height,0), n=kids.length-1;
+    const g0=parseFloat(getComputedStyle(content).rowGap)||0, E0=T+g0*n;
+    const cap=T/(1-${tokens.rules.optical.maxGapShare}*n);
+    const E=Math.min(${aim}*cr.height, cap>0?cap:E0);
+    if(E>E0){const extra=(E-E0)/n; kids.slice(1).forEach(k=>{k.style.marginTop=extra+'px';});}
+    return;
+  }
+  const CH=/micro|orn|handle|counter|thread/;
+  const extent=()=>{let top=1e9,bot=-1e9;
+    for(const el of content.querySelectorAll('*')){
+      const cls=typeof el.className==='string'?el.className:(el.getAttribute('class')||'');
+      if(el.children.length||!(el.textContent||'').trim()||CH.test(cls)) continue;
+      const r=el.getBoundingClientRect(); if(!r.width||!r.height) continue;
+      top=Math.min(top,r.top); bot=Math.max(bot,r.bottom);}
+    return {top:Math.max(top,cr.top),bot:Math.min(bot,cr.bottom)};};
+  blk.style.flex='none'; blk.style.height='auto';
+  const nat=blk.getBoundingClientRect().height, e=extent();
+  const want=${aim}*cr.height-(e.bot-e.top);
+  if(want>0){blk.style.height=(nat+want)+'px';}
+})();</script>`;
+}
+
+export function wrapSlideHtml(spec, rawSlide, { debug = false, canvas = 'ig' } = {}) {
+  const slide = effectiveSlide(spec, rawSlide);
   const cv = tokens.grid.canvases?.[canvas] || tokens.grid.canvas;
   const g = { ...tokens.grid, canvas: cv }, T = tokens.type;
   // C1: g.canvas.w/h is the REAL target resolution (tokens.json > grid.canvases),
@@ -281,6 +348,13 @@ export function wrapSlideHtml(spec, slide, { debug = false, canvas = 'ig' } = {}
   const rawCss = `
 *{margin:0;padding:0;box-sizing:border-box}
 .slide{position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between}
+/* S2b: a hero-number slide has few elements, so its spacing and caption scale up
+   instead of leaving the lower half bare (the numeral is already at its 140px ceiling). */
+.content.lay-hero-number{gap:32px}
+.lay-hero-number .hero-cap{font-size:44px}
+/* top anchor: clear the micro-label (pinned at the margin, ~30px tall) with a real gap */
+.content.v-top{justify-content:flex-start;padding-top:${Math.round(g.margin*1.75)}px}
+.content.v-bottom{justify-content:flex-end}
 .content{padding:${Math.round(g.margin*1.28)}px ${g.margin}px 0 ${g.margin}px;flex:1;display:flex;
   flex-direction:column;justify-content:center;gap:32px;min-height:0;padding-bottom:2%}
 
@@ -311,14 +385,30 @@ export function wrapSlideHtml(spec, slide, { debug = false, canvas = 'ig' } = {}
 .col{border:3px solid;border-radius:2px;padding:34px 30px;display:flex;flex-direction:column;gap:18px}
 .col-i{font-family:${T.numeric.stack};font-weight:700;font-size:34px}
 .col-t{font-family:${T.body.stack};font-weight:400;font-size:34px;line-height:1.34}
+/* S2b fill mode: columns stretch to the content box, the numeral scales up to the
+   numeric ceiling and the text sits at the foot, so the frame is used, not just the top. */
+.split.fill{flex:0 1 auto;grid-template-rows:1fr}
+.split.fill .col{justify-content:space-between;padding:40px 34px}
+.split.fill .col-i{font-size:${T.numeric.sizes.hero.max}px;line-height:1}
+.split.fill .col-t{font-size:${T.body.sizes.body.max}px}
 
 .stack{list-style:none;display:flex;flex-direction:column;gap:22px}
 .stack li{display:grid;grid-template-columns:76px 1fr;align-items:baseline;gap:12px}
 .li-n{font-family:${T.numeric.stack};font-weight:700;font-size:36px;font-variant-numeric:tabular-nums}
 .li-t{font-family:${T.body.stack};font-weight:400;font-size:38px;line-height:1.32}
+/* S2b fill mode: rows share the box evenly between flat rules (the rules also keep
+   Gate 5.1 honest: no hole between rows is wider than half a row). */
+.stack.fill{flex:0 1 auto;gap:0;border-bottom:3px solid ${C.inkGray}55}
+.stack.fill li{flex:1 1 0;grid-template-columns:150px 1fr;align-items:center;gap:16px;
+  border-top:3px solid ${C.inkGray}55}
+.stack.fill .li-n{font-size:84px;line-height:1}
+.stack.fill .li-t{font-size:${T.body.sizes.body.max}px}
 
 .quads{display:grid;grid-template-columns:1fr 1fr;gap:22px}
 .quad{border-left:6px solid;padding:26px 28px;display:flex;flex-direction:column;gap:12px}
+.quads.fill{flex:0 1 auto;grid-auto-rows:1fr}
+.quads.fill .quad{justify-content:center;gap:22px;padding:34px 30px}
+.quads.fill .q-v{overflow-wrap:anywhere}
 .q-l{font-family:${T.body.stack};font-weight:700;font-size:32px;letter-spacing:.08em;text-transform:uppercase}
 .q-v{font-family:${T.numeric.stack};font-weight:700;font-size:52px;line-height:1.16;font-variant-numeric:tabular-nums}
 
@@ -327,6 +417,15 @@ export function wrapSlideHtml(spec, slide, { debug = false, canvas = 'ig' } = {}
 .dot{width:28px;height:28px;border-radius:50%;flex:none}
 .step-t{font-family:${T.body.stack};font-weight:400;font-size:33px;line-height:1.28}
 .rule{height:3px;flex:0 0 40px;margin-top:12px}
+/* S2b fill mode: the timeline runs down the frame instead of across it, so each step
+   is set at the body ceiling instead of ~25px in a five-way column. */
+.timeline.fill{position:relative;flex-direction:column;align-items:stretch;gap:0;flex:0 1 auto;
+  padding:8px 0}
+.timeline.fill::before{content:"";position:absolute;left:11px;top:46px;bottom:46px;width:6px;background:${C.inkGray}55}
+.timeline.fill .step{flex-direction:row;align-items:center;gap:0;flex:1 1 0;position:relative;padding-left:72px}
+.timeline.fill .dot{position:absolute;left:0;top:50%;margin-top:-14px}
+.timeline.fill .step-t{font-size:${T.body.sizes.body.max}px;line-height:1.28}
+.timeline.fill .rule{display:none}
 
 .cta-wrap{display:flex;flex-direction:column;gap:22px}
 .wordmark{font-family:${T.body.stack};font-weight:500;font-size:44px;letter-spacing:.02em}
@@ -365,6 +464,8 @@ ${diagramCss(T)}
 .circled{position:relative;display:inline-block;white-space:nowrap}
 .anno{position:absolute;left:-7%;top:-16%;width:114%;height:132%;overflow:visible;pointer-events:none}
 .it{font-family:${T.display.stack};font-style:italic}
+.arr{display:inline-block;width:.78em;height:.36em;vertical-align:.04em;margin:0 .06em}
+.arr svg{display:block;width:100%;height:100%;overflow:visible}
 .unit{font-size:.62em}
 .dia{width:100%;display:flex;align-items:center;justify-content:center}
 .diagram{display:block;max-width:100%}
@@ -405,5 +506,5 @@ ${scaledCss}
    scaledCss and from g.canvas directly, because these two values are the real
    target resolution and must never go through the reference-scale pass. */
 .slide{width:${g.canvas.w}px;height:${g.canvas.h}px}
-</style></head><body>${slideInner(spec, slide, g.canvas.w)}</body></html>`;
+</style></head><body>${slideInner(spec, slide, g.canvas.w).replace(/→/g, ARROW_MARK)}${fillScript(tokens.rules.optical.fillAim)}</body></html>`;
 }
