@@ -1,0 +1,154 @@
+{
+  "postNumber": 8,
+  "title": "The Inflation Multiplier",
+  "pillar": "The $2913 Problem",
+  "ctaTier": "Tier 1",
+  "gtmAngle": "money-leak",
+  "briefSource": "Notion: Carousel Scripts - Posts 1-8",
+  "provenance": "converted-from-notion-script",
+  "editorialNotes": [
+    "$2,913/yr is the EPA April 2025 household figure, the only number allowed hero treatment.",
+    "Final slide carries \"Link in bio.\" verbatim from the script; no link is live in the setup phase, so Gate 6 CTA-reality applies."
+  ],
+  "thread": {
+    "element": "stepped bar climbing from the old estimate to the new one",
+    "kind": "meter",
+    "startState": "short bar",
+    "endState": "tall bar, nearly double",
+    "zone": "bottom-rail",
+    "heightPct": 12,
+    "palette": [
+      "signalRed",
+      "inkGray"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "Grocery prices are up 19.1% since 2020.",
+        "body": "Your food waste rate hasn't changed. Do the math."
+      },
+      "threadState": {
+        "progress": 0.14,
+        "label": "Prices up",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "light",
+      "layout": "split-compare",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "When food costs more, every item you throw away costs more too.",
+        "items": [
+          "Inflation doesn't just hit your grocery bill —",
+          "it multiplies your waste bill."
+        ]
+      },
+      "threadState": {
+        "progress": 0.29,
+        "label": "Multiplier",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "signalRed",
+      "declaresLoss": true,
+      "copy": {
+        "headline": "The EPA says families waste about 11% of total food spending.",
+        "body": "If your grocery bill is $250/week, that's $27.50 in the trash. Every. Single. Week.",
+        "citation": "EPA, April 2025"
+      },
+      "threadState": {
+        "progress": 0.43,
+        "label": "11%",
+        "tone": "loss"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "light",
+      "layout": "hero-number",
+      "accent": "signalRed",
+      "declaresLoss": true,
+      "copy": {
+        "heroNumber": "$2,913",
+        "heroNumberCaption": "In 2020, the household waste figure was estimated at $1,500/year. By 2025, it nearly doubled to $2,913. Same habits. Higher prices.",
+        "citation": "EPA 2025 vs. USDA 2014 estimate using 2010 prices"
+      },
+      "threadState": {
+        "progress": 0.57,
+        "label": "Nearly double",
+        "tone": "loss"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "stack-list",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Everyone is talking about how to save on groceries.",
+        "items": [
+          "Coupons. Store brands. Meal kits.",
+          "Almost nobody is talking about the 30% that goes straight from the bag to the bin."
+        ]
+      },
+      "threadState": {
+        "progress": 0.71,
+        "label": "Real gap",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 6,
+      "archetype": "value",
+      "background": "light",
+      "layout": "hero-statement",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The cheapest grocery hack isn't a coupon. It's eating what you already bought."
+      },
+      "threadState": {
+        "progress": 0.86,
+        "label": "Cheapest hack",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 7,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "We built an app that tracks all of this automatically.",
+        "ctaLine": "Link in bio."
+      },
+      "threadState": {
+        "progress": 1,
+        "label": "Tracked",
+        "tone": "good"
+      }
+    }
+  ]
+}

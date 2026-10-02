@@ -1,0 +1,155 @@
+{
+  "postNumber": 10,
+  "title": "The Ethylene Enemies List",
+  "pillar": "Store It Right",
+  "ctaTier": "Tier 1",
+  "briefSource": "Notion: Carousel Scripts - Posts 9-16 + Origin Story",
+  "provenance": "converted-from-notion-script",
+  "editorialNotes": [
+    "Scripted row only (Ethylene Enemies List). The Origin Story variant (10B) is not used.",
+    "Slide 4 ethylene-sensitive list is split into two halves to fill the two compare panels; the separators between halves are dropped, no word changed.",
+    "Final slide carries \"Link in bio.\" verbatim from the script; no link is live in the setup phase, so Gate 6 CTA-reality applies."
+  ],
+  "thread": {
+    "element": "ethylene gas cloud spreading from the fruit bowl",
+    "kind": "accumulator",
+    "startState": "clear air around one apple",
+    "endState": "cloud reaching every neighbor",
+    "zone": "bottom-rail",
+    "heightPct": 12,
+    "palette": [
+      "harvestGold",
+      "inkGray"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "Your apples are silently killing your lettuce."
+      },
+      "threadState": {
+        "progress": 0.14,
+        "label": "Clear air",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Some fruits emit ethylene gas as they ripen.",
+        "items": [
+          "Ethylene accelerates aging in everything around it.",
+          "If you store the wrong items together, you're cutting their shelf life in half."
+        ]
+      },
+      "threadState": {
+        "progress": 0.29,
+        "label": "Gas released",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "High ethylene producers (keep isolated):",
+        "body": "Apples · Bananas · Avocados · Tomatoes · Peaches · Pears · Mangoes · Melons"
+      },
+      "threadState": {
+        "progress": 0.43,
+        "label": "Producers",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "light",
+      "layout": "split-compare",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Ethylene-sensitive (keep away from producers):",
+        "items": [
+          "Lettuce · Spinach · Kale · Broccoli",
+          "Cucumbers · Carrots · Green beans · Herbs"
+        ]
+      },
+      "threadState": {
+        "progress": 0.57,
+        "label": "Sensitive",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "One apple in the crisper drawer with your spinach can cut the spinach from 7 days to 3.",
+        "body": "Same food. Same fridge. Different neighbors."
+      },
+      "threadState": {
+        "progress": 0.71,
+        "label": "Spreading",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 6,
+      "archetype": "value",
+      "background": "light",
+      "layout": "split-compare",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The rule is simple:",
+        "items": [
+          "fruit drawer and vegetable drawer should never mix.",
+          "If your fridge only has one drawer, keep the ethylene producers in a separate bag."
+        ]
+      },
+      "threadState": {
+        "progress": 0.86,
+        "label": "Separated",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 7,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "We built an app that tracks all of this automatically.",
+        "ctaLine": "Link in bio."
+      },
+      "threadState": {
+        "progress": 1,
+        "label": "Contained",
+        "tone": "good"
+      }
+    }
+  ]
+}

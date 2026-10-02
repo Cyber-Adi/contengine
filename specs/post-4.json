@@ -1,0 +1,154 @@
+{
+  "postNumber": 4,
+  "title": "10 for $10 Doesn't Mean Buy 10",
+  "pillar": "Supermarket Secrets",
+  "ctaTier": "Tier 1",
+  "briefSource": "Notion: Carousel Scripts - Posts 1-8",
+  "provenance": "converted-from-notion-script",
+  "editorialNotes": [
+    "Final slide carries \"Link in bio.\" verbatim from the script; no link is live in the setup phase, so Gate 6 CTA-reality applies."
+  ],
+  "thread": {
+    "element": "price tag with the quantity struck through one slide at a time",
+    "kind": "accumulator",
+    "startState": "untouched 10 for $10 tag",
+    "endState": "tag reads one unit, struck clean",
+    "zone": "bottom-rail",
+    "heightPct": 12,
+    "palette": [
+      "harvestGold",
+      "inkGray"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "\"10 for $10\" does not require you to buy 10."
+      },
+      "threadState": {
+        "progress": 0.14,
+        "label": "10 for $10",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Most stores honor the per-unit price regardless of quantity.",
+        "items": [
+          "You can buy 1 for $1.",
+          "But the sign is designed to anchor you at 10.",
+          "Anchoring is one of the most studied effects in pricing psychology."
+        ]
+      },
+      "threadState": {
+        "progress": 0.29,
+        "label": "Per-unit",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "End-cap displays aren't curated deals. They're paid advertisements.",
+        "body": "Brands pay premium placement fees to sit at the end of the aisle where foot traffic is highest."
+      },
+      "threadState": {
+        "progress": 0.43,
+        "label": "End-cap",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "\"Manager's Special\" stickers appear early morning and Sunday evenings.",
+        "items": [
+          "That's when stores clear short-dated inventory.",
+          "This one actually can save you money — if you plan to eat it that day."
+        ]
+      },
+      "threadState": {
+        "progress": 0.57,
+        "label": "Specials",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Grocery store loyalty apps track your purchase history and serve you \"personalized deals.\"",
+        "body": "In many cases, the tracked price is higher than the untracked shelf price for the same item."
+      },
+      "threadState": {
+        "progress": 0.71,
+        "label": "Loyalty",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 6,
+      "archetype": "value",
+      "background": "light",
+      "layout": "split-compare",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Every pricing trick in the store is optimized around one idea:",
+        "items": [
+          "making you feel like you're saving",
+          "while you spend more."
+        ]
+      },
+      "threadState": {
+        "progress": 0.86,
+        "label": "The idea",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 7,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "We built an app that tracks all of this automatically.",
+        "ctaLine": "Link in bio."
+      },
+      "threadState": {
+        "progress": 1,
+        "label": "One unit",
+        "tone": "good"
+      }
+    }
+  ]
+}

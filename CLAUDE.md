@@ -113,9 +113,9 @@ Adi authorized these on Oct 1. Each invariant stays in force for its original sc
 
 ```bash
 npm test                                  # must be 15/15 gates catching their own failures
-./run.sh specs/post-5.json                # all 5 diagrams + every chrome feature
+./run.sh specs/fixtures/post-9005.json  # all 5 diagrams + every chrome feature
 ./run.sh specs/post-49.json               # meter thread, Signal Red forbidden by its argument
-node src/render.mjs specs/post-5.json --canvas=tiktok   # 9:16 still renders
+node src/render.mjs specs/fixtures/post-9005.json --canvas=tiktok   # 9:16 still renders
 ```
 
 Both fixtures must report **verdict: PASS**. Warnings are fine and informative; fails are not.
@@ -224,7 +224,7 @@ Confirm these out loud before proposing work:
    board and names the one action worth taking. Do not propose work that contradicts it
    without saying why.
 1. `npm test` → 15/15?  ·  `npm run test:autonomy` → 36/36?
-2. `./run.sh specs/post-5.json` → PASS?
+2. `./run.sh specs/fixtures/post-9005.json` → PASS?
 3. How many `.md` files in `briefs/`? (0 = Slice 1 blocked)
 4. `node tools/critic.mjs status` → how many approved posts have no critique yet?
 5. Which BACKLOG item is next **given what is actually present**?

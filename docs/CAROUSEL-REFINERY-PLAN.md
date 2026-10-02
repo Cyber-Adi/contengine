@@ -24,8 +24,8 @@ copy variant B that Adi picks or rejects. Nothing publishes.
    max 6 model calls per post; on rate limit, checkpoint and exit 0, never retry in a loop.
 7. No hex outside tokens.json. No em dashes in generated text. No new top-level docs.
 8. Verify loop after any change to `src/` or `tools/` (CLAUDE.md §5):
-   `npm test` (15/15+) · `npm run test:autonomy` (36/36+) · `./run.sh specs/post-5.json` ·
-   `./run.sh specs/post-49.json` · `node src/render.mjs specs/post-5.json --canvas=tiktok`.
+   `npm test` (15/15+) · `npm run test:autonomy` (36/36+) · `./run.sh specs/fixtures/post-9005.json` ·
+   `./run.sh specs/post-49.json` · `node src/render.mjs specs/fixtures/post-9005.json --canvas=tiktok`.
 
 ## 1. Adi's decisions (Oct 1)
 
