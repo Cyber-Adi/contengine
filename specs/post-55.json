@@ -1,0 +1,180 @@
+{
+  "postNumber": 55,
+  "title": "The Misting Machine",
+  "pillar": "Supermarket Secrets",
+  "ctaTier": "Tier 2",
+  "valueEncapsulated": "Awareness = Prerequisite for Change",
+  "sendTrigger": "Send this to whoever does the groceries.",
+  "briefSource": "fond_Content_Brief_Posts_54-55-63_and_Kinetic_Reel_56Friday.md",
+  "provenance": "brief",
+  "editorialNotes": [
+    "Do not add a percentage anywhere: the \"up to 25% more expensive\" misting figure traces to blogs, not a study (per the brief). The weight claim is mechanism only.",
+    "Thread progress is story progress (monotonic); the on-screen readout resetting on slide 7-8 is a visual state, not a progress reversal."
+  ],
+  "thread": {
+    "element": "produce scale readout creeping upward then resetting",
+    "kind": "meter",
+    "startState": "1.00 LB digital readout, dry",
+    "endState": "readout resets to 1.00 LB with a dry weight tag",
+    "zone": "bottom-rail",
+    "heightPct": 12,
+    "palette": [
+      "inkGray",
+      "steelBlue"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "The mist is not for the vegetables. It is for you."
+      },
+      "threadState": {
+        "progress": 0.08,
+        "label": "1.00 LB",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "dark",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Produce is sold by the pound.",
+        "items": [
+          "Mist is water.",
+          "Water has weight."
+        ]
+      },
+      "threadState": {
+        "progress": 0.2,
+        "label": "1.02 LB",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "light",
+      "layout": "timeline",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The misters run on timers, not on need.",
+        "items": [
+          "Some chains pair them with a recorded thunder cue.",
+          "Wet produce looks plumper, glossier, and fresher than dry produce, and shoppers reach for it."
+        ]
+      },
+      "threadState": {
+        "progress": 0.32,
+        "label": "1.04 LB",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "light",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "That water evaporates in your fridge within a day.",
+        "body": "You paid for it at the register. It does not come back off the receipt."
+      },
+      "threadState": {
+        "progress": 0.44,
+        "label": "1.06 LB",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Here is the part that costs you twice.",
+        "items": [
+          "Misting is not good for all types of produce.",
+          "On the wrong items the added moisture speeds up spoilage instead of slowing it."
+        ],
+        "citation": "Penn State Agricultural Sciences, on misting and produce type."
+      },
+      "threadState": {
+        "progress": 0.56,
+        "label": "1.08 LB",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 6,
+      "archetype": "value",
+      "background": "light",
+      "layout": "hero-statement",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Misting helps: leafy greens, herbs, broccoli, celery, anything with an exposed cut surface.",
+        "body": "Misting hurts: berries, mushrooms, peppers, citrus, squash, anything with a skin that holds water against itself."
+      },
+      "threadState": {
+        "progress": 0.68,
+        "label": "1.09 LB",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 7,
+      "archetype": "reframe",
+      "background": "light",
+      "layout": "timeline",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Three moves, none of them cost anything.",
+        "items": [
+          "Shake it off over the case before you weigh it.",
+          "Dry the skinned items before they go in the fridge.",
+          "Line the crisper drawer with a paper towel and change it when it is damp."
+        ]
+      },
+      "threadState": {
+        "progress": 0.8,
+        "label": "1.03 LB",
+        "tone": "good"
+      }
+    },
+    {
+      "index": 8,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "You are not buying fresher vegetables. You are buying wetter ones.",
+        "ctaLine": "Know what you brought home, and how long it actually has.",
+        "sendTrigger": "Send this to whoever does the groceries.",
+        "citation": "Join the waitlist, link in bio."
+      },
+      "threadState": {
+        "progress": 1.0,
+        "label": "Dry weight",
+        "tone": "good"
+      }
+    }
+  ]
+}

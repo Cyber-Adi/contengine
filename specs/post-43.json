@@ -1,0 +1,185 @@
+{
+  "postNumber": 43,
+  "title": "Your Fridge Is 5 Degrees Too Warm",
+  "pillar": "Store It Right",
+  "ctaTier": "Tier 2",
+  "sendTrigger": "Save this for your next fridge clean-out.",
+  "briefSource": "fond_Carousel_Design_Brief_Posts_41-43_v2.md",
+  "provenance": "brief",
+  "editorialNotes": [
+    "The brief draws a \"$300-500/yr in spoilage\" label in its slide 1 visual notes; it is not slide copy and is deliberately not carried (unsourced).",
+    "Shelf-life gains (milk 5-7 vs 7-10 days etc.) are the brief's own figures with only an FDA/USDA general citation."
+  ],
+  "thread": {
+    "element": "thermometer mercury dropping from 40F to 37F",
+    "kind": "meter",
+    "startState": "40F, Signal Red",
+    "endState": "37F, Steel Blue, tick becomes a check",
+    "zone": "side-rail",
+    "heightPct": 14,
+    "palette": [
+      "signalRed",
+      "harvestGold",
+      "steelBlue",
+      "fondGreen"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "split-compare",
+      "accent": "signalRed",
+      "declaresLoss": true,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "Your fridge is probably set to 40°F.",
+        "items": [
+          "It should be 37°F.",
+          "Those 3 degrees cost you hundreds."
+        ]
+      },
+      "threadState": {
+        "progress": 0.08,
+        "label": "40°F",
+        "tone": "loss"
+      }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Your milk isn't dying of old age. It's dying of heat."
+      },
+      "threadState": {
+        "progress": 0.2,
+        "label": "39.9°F",
+        "tone": "caution"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The FDA says \"40°F or below.\" The \"or below\" is doing all the work.",
+        "items": [
+          "At 40°, bacteria slow down.",
+          "At 37°, they slow far more.",
+          "Every degree matters."
+        ],
+        "citation": "FDA Food Code; USDA Food Safety guidelines."
+      },
+      "threadState": {
+        "progress": 0.32,
+        "label": "39.5°F",
+        "tone": "caution"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "light",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Most fridges show a 1-5 dial, not degrees.",
+        "body": "You have no idea what temperature you're at. The factory set it. You never touched it. Neither did the last owner."
+      },
+      "threadState": {
+        "progress": 0.44,
+        "label": "39°F",
+        "tone": "caution"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Milk at 40°F lasts 5-7 days. At 37°F: 7-10.",
+        "items": [
+          "Greens gain 2-3 days.",
+          "Yogurt gains 4-5."
+        ],
+        "body": "One dial adjustment, made once, extends everything."
+      },
+      "threadState": {
+        "progress": 0.56,
+        "label": "38.5°F",
+        "tone": "good"
+      }
+    },
+    {
+      "index": 6,
+      "archetype": "value",
+      "background": "light",
+      "layout": "timeline",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The fix: buy a fridge thermometer ($5-10).",
+        "items": [
+          "Middle shelf.",
+          "Wait 12 hours.",
+          "Read it.",
+          "Adjust the dial.",
+          "Check again tomorrow.",
+          "Done forever."
+        ]
+      },
+      "threadState": {
+        "progress": 0.68,
+        "label": "38°F",
+        "tone": "good"
+      }
+    },
+    {
+      "index": 7,
+      "archetype": "reframe",
+      "background": "light",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The cheapest way to extend every single item in your fridge: turn the dial down."
+      },
+      "threadState": {
+        "progress": 0.8,
+        "label": "37.5°F",
+        "tone": "good"
+      }
+    },
+    {
+      "index": 8,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Three degrees buys you days.",
+        "ctaLine": "fond tracks real shelf life - tuned to how you actually store food.",
+        "sendTrigger": "Save this for your next fridge clean-out.",
+        "citation": "Join the waitlist - link in bio"
+      },
+      "threadState": {
+        "progress": 1.0,
+        "label": "37°F",
+        "tone": "good"
+      }
+    }
+  ]
+}

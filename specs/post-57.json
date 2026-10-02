@@ -1,0 +1,157 @@
+{
+  "postNumber": 57,
+  "title": "The Wrong Drawer Is Killing Your Herbs",
+  "pillar": "Store It Right",
+  "ctaTier": "Tier 2",
+  "briefSource": "fond_Carousel_Design_Brief_Posts_57-59.md",
+  "provenance": "brief",
+  "editorialNotes": [
+    "No statistic. Shelf-life claims (2-3 weeks) are method guidance from the brief's Pillar 3 reference, not a cited study."
+  ],
+  "thread": {
+    "element": "herb sprig reviving in a glass of water",
+    "kind": "builder",
+    "startState": "wilted sprig lying flat",
+    "endState": "upright green sprig in a water jar",
+    "zone": "bottom-rail",
+    "heightPct": 12,
+    "palette": [
+      "fondGreen",
+      "steelBlue"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "inkGray",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "You bought fresh herbs Sunday. They were slime by Wednesday.",
+        "body": "It was never the herbs. It was the drawer."
+      },
+      "threadState": {
+        "progress": 0.08,
+        "label": "Wilted",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "light",
+      "layout": "split-compare",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The crisper drawer is built for vegetables - sealed, still, humid.",
+        "items": [
+          "Cut herbs are not vegetables. They're cut stems.",
+          "Sealed in a bag, they suffocate and rot in days."
+        ]
+      },
+      "threadState": {
+        "progress": 0.22,
+        "label": "Lifted",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "light",
+      "layout": "timeline",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "SOFT HERBS - treat them like flowers.",
+        "items": [
+          "Basil, cilantro, parsley, mint, dill: trim the stems, stand them in an inch of water, loose bag over the top, into the fridge.",
+          "They last 2-3 weeks."
+        ]
+      },
+      "threadState": {
+        "progress": 0.36,
+        "label": "Half revived",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "HARD HERBS - treat them like delicate laundry.",
+        "items": [
+          "Rosemary, thyme, oregano, sage: wrap loosely in a slightly damp paper towel, then into a container or loose bag in the fridge.",
+          "They last 2-3 weeks too."
+        ]
+      },
+      "threadState": {
+        "progress": 0.5,
+        "label": "Greener",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "light",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "One exception: basil hates the cold.",
+        "body": "Refrigerate basil and it blackens. Keep it on the counter in water, like a bouquet, away from direct sun."
+      },
+      "threadState": {
+        "progress": 0.64,
+        "label": "Nearly upright",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 6,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "split-compare",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Already wilting? Two rescues:",
+        "items": [
+          "1. Ice-water bath - limp greens and soft herbs perk back up in 15-30 minutes.",
+          "2. Blend the rest with olive oil, freeze in an ice-cube tray. Instant flavor bombs for months."
+        ]
+      },
+      "threadState": {
+        "progress": 0.78,
+        "label": "Revived",
+        "tone": "good"
+      }
+    },
+    {
+      "index": 7,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Your herbs weren't fragile. They were just in the wrong place.",
+        "ctaLine": "fond tells you what's about to turn - and how to store it before it does. Link in bio."
+      },
+      "threadState": {
+        "progress": 1.0,
+        "label": "Thriving",
+        "tone": "good"
+      }
+    }
+  ]
+}

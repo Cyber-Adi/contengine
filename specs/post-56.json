@@ -1,0 +1,171 @@
+{
+  "postNumber": 56,
+  "title": "\"Best By\" Is Not an Expiration Date",
+  "pillar": "The $2913 Problem",
+  "ctaTier": "Tier 2",
+  "briefSource": "fond_Carousel_Design_Brief_Post_56.md",
+  "provenance": "brief",
+  "gtmAngle": "date-label-lie",
+  "editorialNotes": [
+    "The 80% (NRDC 2013) and 20% / $580 figures are survey and estimate based (the brief says \"an estimated\"); $580 is 20% of the EPA $2,913. Rendered with citations; the 20% is hero type per the brief and may need to be demoted to qualitative by Adi.",
+    "Brief draws the sticker border in Signal Red; thread palette here is Ink Gray and Steel Blue so red only appears on the declared loss slide."
+  ],
+  "thread": {
+    "element": "BEST BY sticker peeling back until only a ghost outline remains",
+    "kind": "clearing",
+    "startState": "pristine sticker",
+    "endState": "sticker gone, faint rectangular outline",
+    "zone": "bottom-rail",
+    "heightPct": 12,
+    "palette": [
+      "inkGray",
+      "steelBlue"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "inkGray",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "80% of Americans have thrown away food based on a date the government didn't set.",
+        "citation": "NRDC \"The Dating Game\" report, 2013 (updated figures cited in 2022 ReFED Insights Engine)."
+      },
+      "threadState": {
+        "progress": 0.08,
+        "label": "Pristine",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "There are three different date labels. They mean three different things. None of them mean \"unsafe after this date.\"",
+        "items": [
+          "Best By - quality estimate. Made by the manufacturer.",
+          "Sell By - stock rotation instruction. For the store, not you.",
+          "Use By - the closest to a real deadline. Still usually conservative."
+        ]
+      },
+      "threadState": {
+        "progress": 0.22,
+        "label": "Corner lifting",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "light",
+      "layout": "timeline",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The US has no federal law requiring date labels on most foods.",
+        "items": [
+          "The FDA encouraged \"Best If Used By\" as a standard in 2017.",
+          "The food industry ignored it.",
+          "Ambiguity is profitable."
+        ],
+        "body": "When you throw food away early, you buy more sooner."
+      },
+      "threadState": {
+        "progress": 0.36,
+        "label": "Peeling",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "hero-number",
+      "accent": "signalRed",
+      "declaresLoss": true,
+      "copy": {
+        "heroNumber": "20%",
+        "heroNumberCaption": "Date label confusion causes an estimated 20% of all household food waste in the US.",
+        "body": "On a $2,913 annual waste figure, that's $580/year thrown away because of a label that has no legal definition.",
+        "citation": "ReFED Insights Engine (2022); NRDC \"The Dating Game\" (2013, figures replicated in subsequent studies)."
+      },
+      "threadState": {
+        "progress": 0.5,
+        "label": "Half lifted",
+        "tone": "loss"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The actual test for whether food is safe has nothing to do with a label.",
+        "items": [
+          "Smell it. Off means off - your nose is reliable.",
+          "Look at it. Mold, slime, or discoloration = toss.",
+          "Texture check. Mushy where it should be firm = gone."
+        ],
+        "body": "If it passes all three: it's fine."
+      },
+      "threadState": {
+        "progress": 0.64,
+        "label": "Mostly lifted",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 6,
+      "archetype": "value",
+      "background": "light",
+      "layout": "timeline",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The most over-tossed foods in American kitchens - and how long they actually last after the label date:",
+        "items": [
+          "Milk - 5-7 days past \"Sell By\"",
+          "Hard cheese - 3-4 weeks past \"Best By\"",
+          "Greek yogurt - 2-3 weeks past \"Best By\"",
+          "Bread - 5-7 days past \"Best By\" (or freeze it)",
+          "Dry pasta - 1-2 years past \"Best By\"",
+          "Eggs - 3-5 weeks after purchase"
+        ],
+        "citation": "FDA Refrigerator & Freezer Storage Chart; USDA FoodKeeper App data; food science consensus for dry pasta, cheese, eggs."
+      },
+      "threadState": {
+        "progress": 0.78,
+        "label": "Hanging by a corner",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 7,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The label tells you when the manufacturer stops being responsible for quality. It says nothing about when the food stops being safe.",
+        "ctaLine": "fond tracks real shelf life - not label dates. Link in bio."
+      },
+      "threadState": {
+        "progress": 1.0,
+        "label": "Ghost outline",
+        "tone": "good"
+      }
+    }
+  ]
+}

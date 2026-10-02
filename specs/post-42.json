@@ -1,0 +1,201 @@
+{
+  "postNumber": 42,
+  "title": "Your Grandparents Wasted Almost Nothing",
+  "pillar": "The $2913 Problem",
+  "ctaTier": "Tier 2",
+  "sendTrigger": "Send this to whoever does the groceries.",
+  "briefSource": "fond_Carousel_Design_Brief_Posts_41-43_v2.md",
+  "provenance": "brief",
+  "gtmAngle": "money-leak",
+  "editorialNotes": [
+    "$2,913/yr is the EPA April 2025 household figure (sourced in gtm.json).",
+    "Brief supplies no source for the 30%/10% income shares beyond the AHAM/DOE and USDA ERS line; rendered as a diagram, not hero type."
+  ],
+  "thread": {
+    "element": "fridge outline shrinking decade by decade",
+    "kind": "builder",
+    "startState": "oversized 22 cu ft modern fridge outline",
+    "endState": "small 1950s fridge outline, door closed, fond Green fill",
+    "zone": "bottom-rail",
+    "heightPct": 14,
+    "palette": [
+      "inkGray",
+      "fondGreen"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "signalRed",
+      "declaresLoss": true,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "Your grandparents wasted almost no food. You waste $2,913 a year. What changed?",
+        "citation": "EPA, April 2025 - household of 4."
+      },
+      "threadState": {
+        "progress": 0.08,
+        "label": "2026",
+        "tone": "loss"
+      }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "dark",
+      "layout": "stack-list",
+      "accent": "inkGray",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "They were poorer than you.",
+        "items": [
+          "They threw away less than you.",
+          "That should bother you."
+        ]
+      },
+      "threadState": {
+        "progress": 0.2,
+        "label": "2010",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "light",
+      "layout": "split-compare",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "They shopped daily.",
+        "items": [
+          "Bought what that day's meals needed.",
+          "Leftovers became tomorrow's lunch - not a virtue, a necessity."
+        ],
+        "body": "The fridge was small because it didn't need to be large."
+      },
+      "threadState": {
+        "progress": 0.32,
+        "label": "1995",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Three things changed.",
+        "items": [
+          "Fridges tripled in size (9 cu ft in the 1950s -> 22 today).",
+          "Weekly hauls replaced daily trips.",
+          "And food got cheap enough to feel disposable."
+        ],
+        "citation": "AHAM/DOE appliance data; USDA ERS Food Expenditure Series."
+      },
+      "threadState": {
+        "progress": 0.44,
+        "label": "1980",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "diagram",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "diagram": {
+        "kind": "bar-compare",
+        "data": {
+          "rows": [
+            {
+              "label": "1950s - food = 30% of income",
+              "value": 30,
+              "display": "30%",
+              "tone": "caution"
+            },
+            {
+              "label": "2026 - food = 10%",
+              "value": 10,
+              "display": "10%",
+              "tone": "good"
+            }
+          ]
+        }
+      },
+      "copy": {
+        "headline": "When food cost 30% of income, wasting it felt like burning money.",
+        "body": "At 10%, waste stops registering. A $4 bag of spinach doesn't feel like a loss. Multiply it by 52."
+      },
+      "threadState": {
+        "progress": 0.56,
+        "label": "1970",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 6,
+      "archetype": "value",
+      "background": "light",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The irony: they were poorer and wasted less. You're richer and waste more.",
+        "body": "Abundance didn't solve the food problem. It made it invisible."
+      },
+      "threadState": {
+        "progress": 0.68,
+        "label": "1960",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 7,
+      "archetype": "reframe",
+      "background": "light",
+      "layout": "split-compare",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Your grandparents didn't have a system.",
+        "items": [
+          "They had constraints.",
+          "The constraints did the work."
+        ]
+      },
+      "threadState": {
+        "progress": 0.8,
+        "label": "1955",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 8,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "You don't need her budget. You need her visibility.",
+        "ctaLine": "fond puts the constraints back - automatically.",
+        "sendTrigger": "Send this to whoever does the groceries.",
+        "citation": "Join the waitlist - link in bio"
+      },
+      "threadState": {
+        "progress": 1.0,
+        "label": "1950",
+        "tone": "good"
+      }
+    }
+  ]
+}

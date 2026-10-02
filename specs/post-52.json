@@ -1,0 +1,169 @@
+{
+  "postNumber": 52,
+  "title": "The Takeout Tax: You Have $40 of Food in Your Fridge. You Ordered Delivery Anyway.",
+  "pillar": "The $2913 Problem",
+  "ctaTier": "Tier 2",
+  "briefSource": "fond_Carousel_Design_Brief_Posts_51-53.md",
+  "provenance": "brief",
+  "gtmAngle": "takeout-guilt",
+  "editorialNotes": [
+    "Version-stale: pre-Aug-19 7-slide brief; an 8-slide re-brief exists per COVERAGE.md but is not in briefs/.",
+    "Statista/DoorDash aggregate figures (3.4 orders/week, $34 average, $6,000+/year) are survey-aggregate and implausible for an average household; rendered as list items, never hero type. Adi should verify before publishing.",
+    "\"200+ decisions by 6 PM\" has no source in the brief.",
+    "The brief's visual note prices the fridge food at $6.30 while copy says $4 in ingredients; copy kept verbatim."
+  ],
+  "thread": {
+    "element": "paper receipt growing longer one line item per slide",
+    "kind": "accumulator",
+    "startState": "short receipt stub, one line item",
+    "endState": "full receipt with TOTAL line",
+    "zone": "bottom-rail",
+    "heightPct": 14,
+    "palette": [
+      "inkGray",
+      "signalRed"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "split-compare",
+      "accent": "signalRed",
+      "declaresLoss": true,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "Your fridge had $40 of groceries in it.",
+        "items": [
+          "You spent $35 on delivery.",
+          "This happened 3 times last week."
+        ]
+      },
+      "threadState": {
+        "progress": 0.08,
+        "label": "Delivery fee",
+        "tone": "loss"
+      }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "signalRed",
+      "declaresLoss": true,
+      "copy": {
+        "headline": "The average household orders food delivery 3.4 times per week.",
+        "items": [
+          "Average order: $34.",
+          "Annual spend on delivery: $6,000+.",
+          "Add fees, tips, and service charges - the \"nothing to eat\" tax is $150-200 per month."
+        ],
+        "citation": "Statista delivery frequency data; DoorDash / Uber Eats annual consumer reports."
+      },
+      "threadState": {
+        "progress": 0.22,
+        "label": "Service fee",
+        "tone": "loss"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "light",
+      "layout": "timeline",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Why it happens:",
+        "items": [
+          "By 6 PM, your brain has made 200+ decisions.",
+          "The fridge asks you to invent a meal from chaos.",
+          "The app shows you pictures. The pictures win. Every time.",
+          "This isn't laziness - it's decision fatigue. The app is designed to win."
+        ]
+      },
+      "threadState": {
+        "progress": 0.36,
+        "label": "Small order fee",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "split-compare",
+      "accent": "signalRed",
+      "declaresLoss": true,
+      "copy": {
+        "headline": "What's in your fridge right now, when you're about to order: half an onion, a chicken breast, two servings of pasta, wilting spinach, three eggs.",
+        "items": [
+          "That's dinner for two. It costs $4 in ingredients and 20 minutes.",
+          "It's about to cost $35 and 40 minutes of waiting."
+        ]
+      },
+      "threadState": {
+        "progress": 0.5,
+        "label": "Tip",
+        "tone": "loss"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "light",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The invisible food problem: When you open the fridge and see chaos, you see scraps - not meals.",
+        "body": "The food doesn't announce itself as a complete dinner. It just looks like leftovers. The \"nothing to eat\" feeling is real. The fridge is failing to communicate - and you pay for that failure."
+      },
+      "threadState": {
+        "progress": 0.64,
+        "label": "Grand total",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 6,
+      "archetype": "value",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "signalRed",
+      "declaresLoss": true,
+      "copy": {
+        "headline": "The math over a year:",
+        "items": [
+          "3 delivery orders/week at $35 average = $5,460/year.",
+          "If 2 of those 3 are \"nothing to eat\" orders - the fridge had $15-40 of food in it - that's $3,640/year in avoidable spend.",
+          "Plus the groceries that then expired and got thrown away anyway."
+        ]
+      },
+      "threadState": {
+        "progress": 0.78,
+        "label": "Full length",
+        "tone": "loss"
+      }
+    },
+    {
+      "index": 7,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "You don't have a \"nothing to eat\" problem. You have a \"can't see what you have\" problem.",
+        "ctaLine": "fond shows you what's in your fridge and what you can make with it. Link in bio."
+      },
+      "threadState": {
+        "progress": 1.0,
+        "label": "Total",
+        "tone": "good"
+      }
+    }
+  ]
+}

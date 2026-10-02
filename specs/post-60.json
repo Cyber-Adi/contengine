@@ -1,0 +1,175 @@
+{
+  "postNumber": 60,
+  "title": "The Shrinking Cart, The Same Trash Can",
+  "pillar": "The $2913 Problem",
+  "ctaTier": "Tier 2",
+  "sendTrigger": "Send this to whoever does the groceries.",
+  "briefSource": "fond_Carousel_Design_Brief_Posts_60-62.md",
+  "provenance": "brief",
+  "editorialNotes": [
+    "The 6% grocery-spend drop is cited to the Numerator GLP-1 tracker. The claim that their \"food waste percentage didn't move\" has no source in the brief; Adi should source it or soften it before publishing.",
+    "Brief draws the waste tag in Signal Red; thread palette here is Steel Blue and Ink Gray because no slide declares a loss figure and Gate 2.4 forbids red elsewhere.",
+    "Slide 3 splits one sentence at its em dash into headline plus list items (dash dropped, no words changed)."
+  ],
+  "thread": {
+    "element": "grocery bag shrinking beside an unchanged waste tag",
+    "kind": "meter",
+    "startState": "full-size bag with a waste: unchanged tag",
+    "endState": "bag replaced by the fond wordmark, tag replaced by a check",
+    "zone": "bottom-rail",
+    "heightPct": 15,
+    "palette": [
+      "steelBlue",
+      "inkGray"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "GLP-1 households cut grocery spending 6%. Their food waste percentage didn't move.",
+        "citation": "Numerator GLP-1 Consumer Spending Tracker (2023-2024); category-level grocery spend decline widely reported across major retailers."
+      },
+      "threadState": {
+        "progress": 0.08,
+        "label": "Full bag",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Smaller appetite.",
+        "items": [
+          "Same shopping list.",
+          "That gap is where the money goes."
+        ]
+      },
+      "threadState": {
+        "progress": 0.2,
+        "label": "90%",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "light",
+      "layout": "timeline",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Retailers report GLP-1 households buying fewer snacks and impulse items",
+        "items": [
+          "but the core weekly list (produce, dairy, bread) barely shrinks.",
+          "The habit purchases keep coming regardless of how much gets eaten."
+        ]
+      },
+      "threadState": {
+        "progress": 0.32,
+        "label": "80%",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The bag of spinach doesn't know your appetite changed. It gets bought on the same Tuesday, out of the same habit, whether or not you'll actually eat it this week."
+      },
+      "threadState": {
+        "progress": 0.44,
+        "label": "65%",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "light",
+      "layout": "timeline",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "This isn't a GLP-1-only problem.",
+        "items": [
+          "Anyone whose eating pattern changes - a new job schedule, kids moving out, a diet, a busy month - keeps shopping for the person they used to be.",
+          "The cart lags behind the appetite every time."
+        ]
+      },
+      "threadState": {
+        "progress": 0.56,
+        "label": "55%",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 6,
+      "archetype": "value",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The fix was never \"buy less.\"",
+        "items": [
+          "Buying less just shrinks the bag.",
+          "The fix is knowing what's actually in the fridge before the next trip - so the list matches this week's real appetite, not last year's."
+        ]
+      },
+      "threadState": {
+        "progress": 0.68,
+        "label": "40%",
+        "tone": "good"
+      }
+    },
+    {
+      "index": 7,
+      "archetype": "reframe",
+      "background": "light",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The problem was never the size of your appetite. It's the gap between your cart and your actual eating pattern."
+      },
+      "threadState": {
+        "progress": 0.8,
+        "label": "25%",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 8,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Whatever changed your appetite, fond tracks what's actually being eaten - not what the list says you always buy.",
+        "sendTrigger": "Send this to whoever does the groceries."
+      },
+      "threadState": {
+        "progress": 1.0,
+        "label": "Check",
+        "tone": "good"
+      }
+    }
+  ]
+}

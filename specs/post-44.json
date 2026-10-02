@@ -1,0 +1,198 @@
+{
+  "postNumber": 44,
+  "title": "Quick Pickle Anything",
+  "pillar": "Waste Hacks",
+  "ctaTier": "Tier 2",
+  "valueEncapsulated": "Failure Is Data",
+  "sendTrigger": "Save this for your next fridge clean-out.",
+  "briefSource": "fond_Content_Brief_Posts_44-45-46_and_Kinetic_Reel_OpportunityCost.md",
+  "provenance": "brief",
+  "editorialNotes": [
+    "Slide 2 repeats slide 1 layout (hero-statement): both are short hooks with no sentence-level split that satisfies a multi-item layout.",
+    "The brief's \"10x shelf-life extension\" does not match its own 2 days to 2-4 weeks (roughly 7x to 14x). Copy kept verbatim; Adi should rule on it.",
+    "The signalRed on the before value (2 days) is a shelf-life loss framing, declared as loss; no hero figure."
+  ],
+  "thread": {
+    "element": "jar filling with brine and vegetable slices",
+    "kind": "builder",
+    "startState": "empty glass jar outline",
+    "endState": "full sealed jar with a green checkmark lid",
+    "zone": "bottom-rail",
+    "heightPct": 14,
+    "palette": [
+      "inkGray",
+      "harvestGold",
+      "fondGreen"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "That dying vegetable in your fridge is 15 minutes from being a condiment."
+      },
+      "threadState": {
+        "progress": 0.08,
+        "label": "Empty jar",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Most people watch a vegetable die between day 3 and day 5. There's a 15-minute window that resets the clock completely."
+      },
+      "threadState": {
+        "progress": 0.2,
+        "label": "Brine",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "light",
+      "layout": "timeline",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The formula: 1 cup vinegar + 1 cup water + 1 tablespoon salt + 1 tablespoon sugar.",
+        "items": [
+          "Heat until dissolved.",
+          "Pour over sliced vegetables.",
+          "Wait 30 minutes minimum.",
+          "Done."
+        ]
+      },
+      "threadState": {
+        "progress": 0.32,
+        "label": "First slice",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The all-stars:",
+        "items": [
+          "Red onion - ready in 20 minutes, the fastest and most versatile.",
+          "Cucumber.",
+          "Carrots - best at 1 hour."
+        ]
+      },
+      "threadState": {
+        "progress": 0.44,
+        "label": "Half full",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "light",
+      "layout": "timeline",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The deep bench:",
+        "items": [
+          "Radishes.",
+          "Jalapeños.",
+          "Cauliflower.",
+          "Green beans.",
+          "Beets.",
+          "Cabbage - becomes slaw."
+        ]
+      },
+      "threadState": {
+        "progress": 0.56,
+        "label": "Nearly full",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 6,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "diagram",
+      "accent": "steelBlue",
+      "declaresLoss": true,
+      "diagram": {
+        "kind": "before-after",
+        "data": {
+          "before": {
+            "label": "A vegetable that had",
+            "value": "2 days",
+            "tone": "loss"
+          },
+          "after": {
+            "label": "A condiment that has",
+            "value": "2-4 weeks",
+            "note": "5 min of work",
+            "tone": "good"
+          }
+        }
+      },
+      "copy": {
+        "headline": "Quick pickles last 2-4 weeks in the fridge.",
+        "body": "You just turned a vegetable that had 2 days into a condiment that has 2 weeks. That's a 10x shelf-life extension for 5 minutes of work."
+      },
+      "threadState": {
+        "progress": 0.68,
+        "label": "Sealed",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 7,
+      "archetype": "reframe",
+      "background": "light",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Quick-pickled red onion goes on tacos, salads, sandwiches, grain bowls, burgers, eggs.",
+        "body": "One jar runs for 2 weeks and upgrades every meal it touches."
+      },
+      "threadState": {
+        "progress": 0.8,
+        "label": "Check stamp",
+        "tone": "good"
+      }
+    },
+    {
+      "index": 8,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The best rescue move in the kitchen takes 5 minutes and turns a dying vegetable into something you'll actually crave.",
+        "ctaLine": "fond alerts you when produce hits the pickle window - before it's too far gone.",
+        "sendTrigger": "Save this for your next fridge clean-out."
+      },
+      "threadState": {
+        "progress": 1.0,
+        "label": "Complete",
+        "tone": "good"
+      }
+    }
+  ]
+}

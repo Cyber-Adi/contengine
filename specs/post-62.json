@@ -1,0 +1,139 @@
+{
+  "postNumber": 62,
+  "title": "Citrus Peels Aren't Trash",
+  "pillar": "Waste Hacks",
+  "ctaTier": "Tier 2",
+  "sendTrigger": "Send this to whoever just juiced a lemon and tossed the rest.",
+  "briefSource": "fond_Carousel_Design_Brief_Posts_60-62.md",
+  "provenance": "brief",
+  "editorialNotes": [
+    "The $4-6 store-bought cleaner price is the brief's own figure with no citation; used inside body copy as the single declared cost slide, never hero type."
+  ],
+  "thread": {
+    "element": "glass jar filling with peel products",
+    "kind": "accumulator",
+    "startState": "empty jar",
+    "endState": "full jar with all four peel-product layers",
+    "zone": "bottom-rail",
+    "heightPct": 15,
+    "palette": [
+      "harvestGold",
+      "inkGray",
+      "fondGreen"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "You're throwing away the most versatile ingredient in your kitchen. It's the peel."
+      },
+      "threadState": {
+        "progress": 0.08,
+        "label": "Empty jar",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Zest first, always.",
+        "items": [
+          "Before you juice or peel for cooking, zest the whole thing into a small container.",
+          "It freezes indefinitely and adds instant flavor to baking, cocktails, or finishing a dish - with zero prep next time."
+        ]
+      },
+      "threadState": {
+        "progress": 0.25,
+        "label": "Quarter full",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "light",
+      "layout": "timeline",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Candied peel.",
+        "items": [
+          "Simmer strips in a simple sugar syrup until translucent, roll in sugar, let dry.",
+          "Keeps for weeks at room temperature.",
+          "A free garnish or snack from what would've gone in the trash with the juice."
+        ]
+      },
+      "threadState": {
+        "progress": 0.42,
+        "label": "Half full",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "signalRed",
+      "declaresLoss": true,
+      "copy": {
+        "headline": "All-purpose cleaner.",
+        "body": "Steep peels in white vinegar for two weeks, strain, dilute. A natural degreaser that replaces a $4-6 bottle of store-bought spray - made entirely from scraps you were about to bin."
+      },
+      "threadState": {
+        "progress": 0.58,
+        "label": "Three quarters",
+        "tone": "loss"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "light",
+      "layout": "split-compare",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "One orange. Four products. Zero trash:",
+        "items": [
+          "zest for cooking, candied peel for snacking, cleaner for the counters, and the fruit itself for eating.",
+          "The peel was never the waste. Throwing it out was."
+        ]
+      },
+      "threadState": {
+        "progress": 0.75,
+        "label": "Full jar",
+        "tone": "good"
+      }
+    },
+    {
+      "index": 6,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "fond flags produce before it's only good for the compost bin - so you catch the zest window, not just the trash can.",
+        "sendTrigger": "Send this to whoever just juiced a lemon and tossed the rest."
+      },
+      "threadState": {
+        "progress": 1.0,
+        "label": "Complete",
+        "tone": "good"
+      }
+    }
+  ]
+}

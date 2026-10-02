@@ -1,0 +1,182 @@
+{
+  "postNumber": 53,
+  "title": "Counter vs. Fridge: Stop Refrigerating These 8 Foods",
+  "pillar": "Store It Right",
+  "ctaTier": "Tier 2",
+  "briefSource": "fond_Carousel_Design_Brief_Posts_51-53.md",
+  "provenance": "brief",
+  "editorialNotes": [
+    "Version-stale: only the pre-Aug-19 7-slide brief is present; the post is from the Aug 19 re-brief window per COVERAGE.md. Treated as current because no later file exists.",
+    "The cheat-sheet copy is internally inconsistent (Honey and Citrus listed under Counter while Honey is also under Never; \"Uncut tomatoes\" under Never while Tomatoes are under Counter). Copy kept verbatim; Adi should resolve.",
+    "Brief claims \"8 foods\" while the Counter list names 9; verbatim."
+  ],
+  "thread": {
+    "element": "fridge-vs-counter diagram with food icons migrating to the right place",
+    "kind": "builder",
+    "startState": "all 8 icons packed in the fridge",
+    "endState": "all 8 icons correctly placed, labeled, green check",
+    "zone": "bottom-rail",
+    "heightPct": 14,
+    "palette": [
+      "inkGray",
+      "fondGreen"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "split-compare",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "You're probably refrigerating half these foods.",
+        "items": [
+          "Refrigerating them is making them worse.",
+          "And you've been doing it your whole life."
+        ]
+      },
+      "threadState": {
+        "progress": 0.08,
+        "label": "All in fridge",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "light",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The rule: Cold air preserves food vulnerable to bacteria and moisture loss.",
+        "body": "But cold also breaks down starches in vegetables, stops ripening mid-track, and turns fats grainy. Not every food benefits. The question is always: is this food vulnerable, or is it alive?"
+      },
+      "threadState": {
+        "progress": 0.22,
+        "label": "Tomato moves",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Tomatoes: Cold destroys the enzymes that create flavor.",
+        "items": [
+          "A refrigerated tomato tastes like a tomato-shaped nothing.",
+          "Counter: 3-5 days ripe, full flavor. Fridge: 2 weeks, no flavor.",
+          "Avocados: Cold stops ripening entirely.",
+          "Counter until ripe, then fridge for 1-2 days max - any longer and the flesh browns and goes mushy."
+        ]
+      },
+      "threadState": {
+        "progress": 0.36,
+        "label": "Avocado moves",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "timeline",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Bananas: Fridge cold turns the skin black within hours.",
+        "items": [
+          "The fruit is fine, but it looks rotten - and confusion follows.",
+          "Counter until your preferred ripeness, then freeze (not refrigerate) to pause.",
+          "Onions & Garlic: Cold and humidity make them sprout and go mushy.",
+          "They need airflow and dry conditions - a counter bowl or mesh bag.",
+          "Exception: cut onion -> fridge, airtight container only."
+        ]
+      },
+      "threadState": {
+        "progress": 0.5,
+        "label": "Five placed",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Potatoes: Cold converts starch to sugar, giving them an unnaturally sweet taste and causing them to darken when cooked.",
+        "items": [
+          "Store in a cool, dark, dry place - pantry, never fridge.",
+          "Never store with onions; they accelerate each other's spoilage.",
+          "Bread: Refrigeration stales bread 3x faster through starch retrogradation.",
+          "Counter for up to 4 days. Freeze beyond that - never refrigerate."
+        ]
+      },
+      "threadState": {
+        "progress": 0.64,
+        "label": "Seven placed",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 6,
+      "archetype": "value",
+      "background": "light",
+      "layout": "quadrant-card",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The cheat sheet - save this:",
+        "quadrants": [
+          {
+            "label": "Counter",
+            "value": "Tomatoes · Avocados (until ripe) · Bananas · Onions · Garlic · Potatoes · Bread · Honey · Citrus",
+            "tone": "good"
+          },
+          {
+            "label": "Fridge",
+            "value": "Anything cut · Anything cooked · Raw meat · Dairy · Berries · Leafy greens · Herbs (in water) · Opened condiments",
+            "tone": "neutral"
+          },
+          {
+            "label": "Never",
+            "value": "Honey (solidifies) · Whole coffee beans (absorbs fridge odors) · Uncut tomatoes",
+            "tone": "caution"
+          }
+        ]
+      },
+      "threadState": {
+        "progress": 0.78,
+        "label": "All eight placed",
+        "tone": "good"
+      }
+    },
+    {
+      "index": 7,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Your fridge isn't too full. Half of what's in it doesn't belong there.",
+        "ctaLine": "fond tracks storage location and shelf life for everything in your kitchen - no guessing. Link in bio."
+      },
+      "threadState": {
+        "progress": 1.0,
+        "label": "Balanced",
+        "tone": "good"
+      }
+    }
+  ]
+}
