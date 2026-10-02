@@ -1,0 +1,29 @@
+{
+  "updatedAt": "2026-10-02T20:04:18.983Z",
+  "posts": {
+    "31": {
+      "rounds": 0,
+      "bestScores": null,
+      "lastError": "gate7 FAIL: word-limit s1: hook line \"The price didn't go up. The box got smaller.\" is 9 words; max 8.",
+      "copyB": "discarded",
+      "stage": "copy",
+      "updatedAt": "2026-10-02T20:03:31.998Z"
+    },
+    "32": {
+      "rounds": 0,
+      "bestScores": null,
+      "lastError": null,
+      "copyB": "pass",
+      "stage": "copy",
+      "updatedAt": "2026-10-02T20:04:08.770Z"
+    },
+    "35": {
+      "rounds": 0,
+      "bestScores": null,
+      "lastError": null,
+      "copyB": "pass",
+      "stage": "copy",
+      "updatedAt": "2026-10-02T20:04:18.982Z"
+    }
+  }
+}
