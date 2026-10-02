@@ -1,0 +1,115 @@
+{
+  "postNumber": 25,
+  "title": "3 Meals From 1 Rotisserie Chicken",
+  "pillar": "Waste Hacks",
+  "ctaTier": "Tier 2",
+  "briefSource": "Notion: Carousel & Reel Scripts — Posts 18–30",
+  "provenance": "converted-from-notion-script",
+  "gtmAngle": "money-leak",
+  "editorialNotes": [
+    "PantryPal -> fond swap on slide 5.",
+    "Rotisserie price and stock-value figures ($6, $8-12) are body copy, not hero type."
+  ],
+  "thread": {
+    "element": "chicken progressing whole, carved, shredded, then stock",
+    "kind": "builder",
+    "startState": "whole chicken outline",
+    "endState": "pot of stock",
+    "zone": "bottom-rail",
+    "heightPct": 12,
+    "palette": [
+      "inkGray",
+      "fondGreen"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "One $6 rotisserie chicken. Three meals. Zero waste."
+      },
+      "threadState": {
+        "progress": 0.2,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "light",
+      "layout": "split-compare",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Night 1: Eat it.",
+        "items": [
+          "Carve the breasts and thighs.",
+          "Serve with whatever you have — rice, salad, bread. This is the easy one. Save every bone and scrap."
+        ]
+      },
+      "threadState": {
+        "progress": 0.4,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Day 2: Shred the leftovers.",
+        "body": "Pull all remaining meat off the bones. Toss into a grain bowl with greens, pickled onion, and whatever sauce is in the fridge. Or make chicken salad. Or quesadillas."
+      },
+      "threadState": {
+        "progress": 0.6,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "light",
+      "layout": "timeline",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Day 3: Bone broth.",
+        "items": [
+          "Carcass + water + an onion + 2 celery stalks + salt.",
+          "Simmer 2–4 hours (or 45 min in a pressure cooker).",
+          "Strain.",
+          "You now have 6–8 cups of stock worth $8–12 at the store."
+        ]
+      },
+      "threadState": {
+        "progress": 0.8,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "$6 bird. 3 meals. Plus free stock for next week's soup.",
+        "ctaLine": "fond reminds you what's left in your fridge so nothing goes to waste. Link in bio."
+      },
+      "threadState": {
+        "progress": 1,
+        "tone": "good"
+      }
+    }
+  ]
+}

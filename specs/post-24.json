@@ -1,0 +1,133 @@
+{
+  "postNumber": 24,
+  "title": "The Ethylene Effect: Why Your Fruit Dies Next to Your Greens",
+  "pillar": "Store It Right",
+  "ctaTier": "Tier 1",
+  "briefSource": "Notion: Carousel & Reel Scripts — Posts 18–30",
+  "provenance": "converted-from-notion-script",
+  "gtmAngle": "money-leak",
+  "editorialNotes": [
+    "No PantryPal occurrence (Tier 1 CTA is anonymous); no swap.",
+    "Ethylene mechanism sourced to USDA / UC Davis Postharvest Center per the Notion source index; the 2-3x and 4-7 day figures are carried as body copy, never hero type."
+  ],
+  "thread": {
+    "element": "two crisper drawers separating fruit from greens",
+    "kind": "builder",
+    "startState": "fruit and greens mixed in one drawer",
+    "endState": "one drawer of each, cleanly separated",
+    "zone": "side-rail",
+    "heightPct": 12,
+    "palette": [
+      "inkGray",
+      "fondGreen"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "Your fruit is killing your vegetables.",
+        "body": "And you're putting them in the same drawer."
+      },
+      "threadState": {
+        "progress": 0.17,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "light",
+      "layout": "split-compare",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Ethylene gas.",
+        "items": [
+          "Apples, bananas, avocados, tomatoes, and peaches release a natural ripening gas as they age.",
+          "It's invisible and odorless. It accelerates spoilage in everything around them."
+        ],
+        "citation": "Source: USDA / UC Davis Postharvest Center"
+      },
+      "threadState": {
+        "progress": 0.33,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "What it destroys.",
+        "body": "Leafy greens, broccoli, cauliflower, cucumbers, and carrots are ethylene-sensitive. Stored next to ethylene producers, they wilt and yellow 2–3x faster."
+      },
+      "threadState": {
+        "progress": 0.5,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The crisper drawer fix.",
+        "items": [
+          "If your fridge has two drawers:",
+          "Drawer 1 (high humidity) = greens, herbs, cucumbers.",
+          "Drawer 2 (low humidity) = fruits.",
+          "Never mix them. One drawer of each."
+        ]
+      },
+      "threadState": {
+        "progress": 0.67,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The counter rule.",
+        "body": "Bananas on the counter ripen everything nearby. Keep them isolated. A banana hook isn't aesthetic — it's functional."
+      },
+      "threadState": {
+        "progress": 0.83,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 6,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Separating ethylene producers from sensitive foods can extend produce life by 4–7 days. That's the difference between eating it and trashing it.",
+        "ctaLine": "We built an app that tracks all of this for you. Link in bio."
+      },
+      "threadState": {
+        "progress": 1,
+        "tone": "good"
+      }
+    }
+  ]
+}

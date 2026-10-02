@@ -1,0 +1,176 @@
+{
+  "postNumber": 37,
+  "title": "The Freezer Is a Time Machine",
+  "pillar": "Store It Right",
+  "ctaTier": "Tier 2",
+  "briefSource": "Notion: Carousel Scripts — Posts 31–40 (Visual-First)",
+  "provenance": "converted-from-notion-script",
+  "gtmAngle": "money-leak",
+  "editorialNotes": [
+    "PantryPal -> fond swap on slide 8.",
+    "Slide 2 second item is split at the em dash so the two-panel layout stays verbatim.",
+    "Storage durations and the $3-5/week stale-bread figure have no source-index entry; body copy only, never hero type."
+  ],
+  "thread": {
+    "element": "clock frozen inside an ice cube",
+    "kind": "builder",
+    "startState": "ice cube forming around a running clock",
+    "endState": "clock hands stopped inside the finished cube",
+    "zone": "side-rail",
+    "heightPct": 12,
+    "palette": [
+      "inkGray",
+      "steelBlue"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "Your freezer doesn't store food.",
+        "body": "It pauses time."
+      },
+      "threadState": {
+        "progress": 0.13,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "light",
+      "layout": "split-compare",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Most people use their freezer for ice cream, frozen pizza, and meat.",
+        "items": [
+          "It can hold almost everything in your kitchen —",
+          "if you freeze it at the right time."
+        ]
+      },
+      "threadState": {
+        "progress": 0.25,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Bread.",
+        "items": [
+          "Freezes perfectly for 3–6 months.",
+          "Slice before freezing — pull individual slices straight to the toaster. No thawing needed.",
+          "This alone saves most households $3–5/week in stale bread waste."
+        ]
+      },
+      "threadState": {
+        "progress": 0.38,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "light",
+      "layout": "split-compare",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Cheese.",
+        "items": [
+          "Hard and semi-hard cheeses (cheddar, mozzarella, parmesan) freeze for 6+ months.",
+          "Shred before freezing — frozen blocks crumble when thawed. Shredded cheese goes straight from freezer to pan."
+        ]
+      },
+      "threadState": {
+        "progress": 0.5,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Cooked rice and grains.",
+        "body": "Cool completely. Freeze flat in bags. Reheat with a splash of water. Lasts 4–6 months. Frozen rice actually makes BETTER fried rice than fresh — the texture is dryer and crisps up faster."
+      },
+      "threadState": {
+        "progress": 0.63,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 6,
+      "archetype": "value",
+      "background": "light",
+      "layout": "timeline",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Fresh herbs.",
+        "items": [
+          "Chop them.",
+          "Mix with olive oil.",
+          "Pour into ice cube trays.",
+          "Freeze.",
+          "Drop a cube into any pan and you have instant herb butter. One tray lasts 2 months."
+        ]
+      },
+      "threadState": {
+        "progress": 0.75,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 7,
+      "archetype": "value",
+      "background": "light",
+      "layout": "split-compare",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The rule: Freeze food BEFORE it expires, not after.",
+        "items": [
+          "Freezing doesn't fix food that's already gone bad. It suspends food that's still good.",
+          "Time the freeze, and you never throw that item away again."
+        ]
+      },
+      "threadState": {
+        "progress": 0.88,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 8,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Your freezer is the most underused appliance in your kitchen.",
+        "ctaLine": "fond tells you the ideal freeze date for every item — so you pause time instead of wasting it. Link in bio."
+      },
+      "threadState": {
+        "progress": 1,
+        "tone": "good"
+      }
+    }
+  ]
+}

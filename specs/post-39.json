@@ -1,0 +1,149 @@
+{
+  "postNumber": 39,
+  "title": "The Meal Kit Math",
+  "pillar": "Supermarket Secrets",
+  "ctaTier": "Tier 2",
+  "briefSource": "Notion: Carousel Scripts — Posts 31–40 (Visual-First)",
+  "provenance": "converted-from-notion-script",
+  "gtmAngle": "money-leak",
+  "editorialNotes": [
+    "PantryPal -> fond swap on slide 7.",
+    "Names a real brand (HelloFresh) on slide 2 verbatim; Adi to confirm that is acceptable.",
+    "All meal-kit price, retention and 2022-study figures have no source-index entry; body copy only, never hero type."
+  ],
+  "thread": {
+    "element": "plate whose price tag is peeled back to reveal the grocery receipt",
+    "kind": "line",
+    "startState": "full meal-kit price tag",
+    "endState": "tag peeled, grocery receipt showing",
+    "zone": "bottom-rail",
+    "heightPct": 12,
+    "palette": [
+      "inkGray",
+      "steelBlue"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "Meal kits charge you $12 per plate for $4 worth of groceries."
+      },
+      "threadState": {
+        "progress": 0.14,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "light",
+      "layout": "split-compare",
+      "accent": "signalRed",
+      "declaresLoss": true,
+      "copy": {
+        "headline": "A HelloFresh subscription for 2 people runs $10–12 per serving.",
+        "items": [
+          "That's $80–96 per week.",
+          "The grocery cost of the same ingredients averages $28–35."
+        ]
+      },
+      "threadState": {
+        "progress": 0.29,
+        "tone": "loss"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "You're paying for portioning, packaging, and last-mile cold chain logistics.",
+        "body": "Every ingredient arrives in its own plastic bag. A single meal generates 4–7 individual wrappers."
+      },
+      "threadState": {
+        "progress": 0.43,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "light",
+      "layout": "timeline",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Meal kit companies have an average customer retention of 3–4 months.",
+        "items": [
+          "The model isn't designed for loyalty.",
+          "It's designed for a burst of convenience spending before you cancel."
+        ]
+      },
+      "threadState": {
+        "progress": 0.57,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "light",
+      "layout": "split-compare",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The irony: meal kits were sold as reducing food waste because they pre-portion.",
+        "items": [
+          "But a 2022 study found meal kit packaging waste INCREASED overall household waste by volume.",
+          "Less food waste, more everything-else waste."
+        ]
+      },
+      "threadState": {
+        "progress": 0.71,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 6,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The alternative isn't meal prepping 14 containers on Sunday.",
+        "body": "It's knowing what you already have and cooking one thing at a time before it expires."
+      },
+      "threadState": {
+        "progress": 0.86,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 7,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Stop subscribing to groceries. Start seeing what you already bought.",
+        "ctaLine": "fond shows you everything in your kitchen — and what to cook with it. Link in bio."
+      },
+      "threadState": {
+        "progress": 1,
+        "tone": "good"
+      }
+    }
+  ]
+}

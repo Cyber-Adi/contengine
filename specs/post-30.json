@@ -1,0 +1,152 @@
+{
+  "postNumber": 30,
+  "title": "Origin Story: I'm 17 and I Think Grocery Stores Are Lying to You",
+  "pillar": "Origin Story",
+  "ctaTier": "Tier 3",
+  "briefSource": "Notion: Carousel & Reel Scripts — Posts 18–30",
+  "provenance": "converted-from-notion-script",
+  "gtmAngle": "money-leak",
+  "editorialNotes": [
+    "PantryPal -> fond swap on slide 7 (\"It's called PantryPal.\" -> \"It's called fond.\").",
+    "The $1,500/year family-savings claim on slide 6 has no source and is a product-impact claim for a pre-launch app; carried verbatim as body copy, never hero type. Adi to confirm before publish.",
+    "$2,913/year is EPA, April 2025 per the Notion index. Slide 5 describes the scanner as already built; confirm that is accurate before publish."
+  ],
+  "thread": {
+    "element": "bedroom desk lamp light brightening across the carousel",
+    "kind": "builder",
+    "startState": "dark desk, lamp off",
+    "endState": "lamp on, desk lit, laptop open",
+    "zone": "side-rail",
+    "heightPct": 12,
+    "palette": [
+      "inkGray",
+      "fondGreen"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "I'm 17 and I think grocery stores are lying to you.",
+        "body": "Here's why I'm building an app about it."
+      },
+      "threadState": {
+        "progress": 0.14,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "light",
+      "layout": "split-compare",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "I work at a retirement home.",
+        "items": [
+          "Every week I watch perfectly good food get thrown away because no one could see what the kitchen had.",
+          "Hundreds of dollars. Every single week."
+        ]
+      },
+      "threadState": {
+        "progress": 0.29,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "signalRed",
+      "declaresLoss": true,
+      "copy": {
+        "headline": "Then I started reading the research.",
+        "items": [
+          "The average family wastes $2,913/year on food they buy and never eat.",
+          "Expiration dates are unregulated suggestions — not safety warnings.",
+          "Grocery stores are designed to make you overbuy."
+        ]
+      },
+      "threadState": {
+        "progress": 0.43,
+        "tone": "loss"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "This isn't a personal failure.",
+        "body": "It's a system designed to extract maximum spending from you while giving you no tools to track what you actually have."
+      },
+      "threadState": {
+        "progress": 0.57,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "light",
+      "layout": "split-compare",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "So I taught myself to code.",
+        "items": [
+          "I used Google's AI to build a scanner that reads your grocery receipt and instantly logs every item — with shelf life data, storage instructions, and meal suggestions.",
+          "No typing. No manual entry."
+        ]
+      },
+      "threadState": {
+        "progress": 0.71,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 6,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "I'm 17. I have no budget, no investors, no team.",
+        "body": "I built this in my bedroom between homework and AP exams. And I think it can save the average family $1,500/year."
+      },
+      "threadState": {
+        "progress": 0.86,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 7,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "It's called fond.",
+        "body": "The Kitchen OS.",
+        "ctaLine": "We're opening the waitlist soon. If you want in early — link in bio."
+      },
+      "threadState": {
+        "progress": 1,
+        "tone": "good"
+      }
+    }
+  ]
+}

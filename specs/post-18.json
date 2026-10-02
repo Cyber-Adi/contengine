@@ -1,0 +1,154 @@
+{
+  "postNumber": 18,
+  "title": "\"10 for $10\" Doesn't Mean You Buy 10",
+  "pillar": "Supermarket Secrets",
+  "ctaTier": "Tier 2",
+  "briefSource": "Notion: Carousel & Reel Scripts — Posts 18–30",
+  "provenance": "converted-from-notion-script",
+  "gtmAngle": "money-leak",
+  "editorialNotes": [
+    "PantryPal -> fond swap on slide 7.",
+    "The \"10 for $10 rings up at $1 each\" claim is sourced to FTC consumer guidance in the Notion source index; kept as body copy, never hero type."
+  ],
+  "thread": {
+    "element": "shelf label zooming in from the big price to the small unit price",
+    "kind": "line",
+    "startState": "full shelf label, big price dominant",
+    "endState": "unit price circled, the only number left",
+    "zone": "bottom-rail",
+    "heightPct": 12,
+    "palette": [
+      "inkGray",
+      "steelBlue"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "\"10 for $10\" does not mean you have to buy 10."
+      },
+      "threadState": {
+        "progress": 0.14,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Most \"10 for $10\" deals ring up at $1 each no matter how many you grab.",
+        "items": [
+          "The store formats it as a bulk number because your brain reads it as a bundle.",
+          "You feel pressure to hit the number.",
+          "That's the point."
+        ]
+      },
+      "threadState": {
+        "progress": 0.29,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "light",
+      "layout": "split-compare",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Same trick, different label: \"3 for $9\" yogurts.",
+        "items": [
+          "Each one scans at $3.",
+          "You don't need 3. You just think you do because the sign grouped them."
+        ]
+      },
+      "threadState": {
+        "progress": 0.43,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "End-cap displays use the same psychology.",
+        "body": "The product isn't on sale — it's on a paid advertising spot. Brands pay thousands for end-cap placement. That \"deal\" is a media buy, not a discount."
+      },
+      "threadState": {
+        "progress": 0.57,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "light",
+      "layout": "timeline",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "BOGO (Buy One Get One) is the most effective version.",
+        "items": [
+          "You needed one.",
+          "Now you have two.",
+          "The second one expires before you use it."
+        ],
+        "body": "Net cost: higher than buying one at full price."
+      },
+      "threadState": {
+        "progress": 0.71,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 6,
+      "archetype": "value",
+      "background": "light",
+      "layout": "split-compare",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The rule: check the unit price tag on the shelf (small print, bottom left).",
+        "items": [
+          "It shows cost per ounce or per count.",
+          "That number is the only number that matters."
+        ]
+      },
+      "threadState": {
+        "progress": 0.86,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 7,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Grocery stores are designed to make you overbuy. Every extra item you don't eat is money in the trash.",
+        "ctaLine": "fond tracks what you actually use — so you buy what you need. Link in bio."
+      },
+      "threadState": {
+        "progress": 1,
+        "tone": "good"
+      }
+    }
+  ]
+}

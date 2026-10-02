@@ -1,0 +1,149 @@
+{
+  "postNumber": 23,
+  "title": "The Bulk Buying Trap",
+  "pillar": "The $2913 Problem",
+  "ctaTier": "Tier 2",
+  "briefSource": "Notion: Carousel & Reel Scripts — Posts 18–30",
+  "provenance": "converted-from-notion-script",
+  "gtmAngle": "money-leak",
+  "editorialNotes": [
+    "PantryPal -> fond swap on slide 7.",
+    "The 40% unit-price gap and 30% usage figures have no Notion source-index entry; carried as body copy, never hero type."
+  ],
+  "thread": {
+    "element": "shopping cart filling, then half its contents fading out",
+    "kind": "accumulator",
+    "startState": "empty cart outline",
+    "endState": "cart with half the contents faded",
+    "zone": "bottom-rail",
+    "heightPct": 12,
+    "palette": [
+      "inkGray",
+      "steelBlue"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "Buying in bulk saves you money.",
+        "body": "Unless you throw half of it away."
+      },
+      "threadState": {
+        "progress": 0.14,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "light",
+      "layout": "split-compare",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The unit price on a 5 lb bag of spinach is 40% lower than the 5 oz container.",
+        "items": [
+          "Sounds like a win.",
+          "But the average person uses 30% of the bag before it goes bad. The actual cost per usable ounce is higher."
+        ]
+      },
+      "threadState": {
+        "progress": 0.29,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Costco's business model depends on this math.",
+        "body": "The membership fee is subsidized by the assumption that you'll overbuy perishables. Rotisserie chicken at $4.99 gets you in the door. The $14 bag of avocados you throw half of covers the margin."
+      },
+      "threadState": {
+        "progress": 0.43,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The breakeven question:",
+        "items": [
+          "Before buying bulk produce, ask: \"Will I use 100% of this before it spoils?\"",
+          "If the answer is no, the smaller size is cheaper."
+        ]
+      },
+      "threadState": {
+        "progress": 0.57,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Bulk buying works for:",
+        "body": "dry goods, frozen items, canned foods, cleaning supplies — anything with a shelf life measured in months, not days."
+      },
+      "threadState": {
+        "progress": 0.71,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 6,
+      "archetype": "value",
+      "background": "light",
+      "layout": "split-compare",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Bulk buying fails for:",
+        "items": [
+          "leafy greens, berries, fresh herbs, bread, dairy, and any produce you \"might\" use.",
+          "\"Might\" means \"won't.\""
+        ]
+      },
+      "threadState": {
+        "progress": 0.86,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 7,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "fond tracks what you actually consume — so you can see the real cost of bulk vs. small before you buy.",
+        "ctaLine": "Join the waitlist — link in bio."
+      },
+      "threadState": {
+        "progress": 1,
+        "tone": "good"
+      }
+    }
+  ]
+}
