@@ -1,0 +1,187 @@
+{
+  "postNumber": 9,
+  "title": "The Counter vs. Fridge Cheat Sheet",
+  "pillar": "Store It Right",
+  "ctaTier": "Tier 2",
+  "briefSource": "fond_Carousel_Design_Brief_Posts_9-16-19.md",
+  "provenance": "brief",
+  "editorialNotes": [
+    "Local brief 9-16-19 used over the older 1-5-9 brief (which names PantryPal and uses a retired palette) and the Notion script; all three differ in copy.",
+    "Final slide carries \"2,000+ items\" and \"Join the waitlist\" verbatim from the brief: a product claim and a CTA that are not live in the setup phase. Flagged for Adi."
+  ],
+  "thread": {
+    "element": "six food icons migrating from a fridge silhouette to the counter",
+    "kind": "accumulator",
+    "startState": "all icons inside the fridge",
+    "endState": "all icons on the counter, fridge empty",
+    "zone": "bottom-rail",
+    "heightPct": 12,
+    "palette": [
+      "steelBlue",
+      "harvestGold"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "7 foods you're refrigerating that should be on the counter."
+      },
+      "threadState": {
+        "progress": 0.13,
+        "label": "0 moved",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "light",
+      "layout": "split-compare",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Tomatoes.",
+        "items": [
+          "Cold destroys the enzymes that create flavor. Counter: up to 7 days once ripe.",
+          "Fridge turns them mealy and tasteless."
+        ],
+        "citation": "USDA Food Safety; UC Davis Postharvest Center"
+      },
+      "threadState": {
+        "progress": 0.25,
+        "label": "Tomatoes out",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Bananas.",
+        "items": [
+          "Refrigerating unripe bananas halts ripening permanently.",
+          "Leave them on the counter until yellow with spots.",
+          "Only refrigerate once fully ripe — then you get 4–5 more days (skin browns, flesh stays fine)."
+        ]
+      },
+      "threadState": {
+        "progress": 0.38,
+        "label": "Bananas out",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "split-compare",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Potatoes.",
+        "items": [
+          "Cold converts their starch to sugar — making them gritty and overly sweet when cooked. Cool, dark pantry: 3–5 weeks.",
+          "Fridge: ruined texture, ruined flavor."
+        ]
+      },
+      "threadState": {
+        "progress": 0.5,
+        "label": "Potatoes out",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "light",
+      "layout": "timeline",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Onions.",
+        "items": [
+          "Whole onions need airflow.",
+          "Fridge moisture softens and molds them faster.",
+          "Pantry: 1–3 months.",
+          "Once cut, then refrigerate — and use within 7–10 days."
+        ]
+      },
+      "threadState": {
+        "progress": 0.63,
+        "label": "Onions out",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 6,
+      "archetype": "value",
+      "background": "light",
+      "layout": "split-compare",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Garlic.",
+        "items": [
+          "Refrigeration triggers sprouting and mold.",
+          "A cool, dry spot with ventilation keeps whole bulbs fresh 3–6 months. Individual cloves: 3 weeks."
+        ]
+      },
+      "threadState": {
+        "progress": 0.75,
+        "label": "Garlic out",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 7,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Avocados (unripe).",
+        "items": [
+          "Counter until ripe — 3–5 days.",
+          "It yields to gentle pressure when ready.",
+          "Then fridge for 2–3 more days.",
+          "Only refrigerate after ripe — never before."
+        ]
+      },
+      "threadState": {
+        "progress": 0.88,
+        "label": "Avocados out",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 8,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "fond tracks shelf life for 2,000+ items and tells you when food is about to expire — and exactly where to store it.",
+        "ctaLine": "Join the waitlist — link in bio.",
+        "citation": "USDA FoodData Central; UC Davis Postharvest Center; FDA Refrigerator & Freezer Storage Chart (2018); National Onion Association"
+      },
+      "threadState": {
+        "progress": 1,
+        "label": "Complete",
+        "tone": "good"
+      }
+    }
+  ]
+}
