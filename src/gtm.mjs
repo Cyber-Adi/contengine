@@ -61,3 +61,45 @@ export function unsourcedFigures(text) {
   }
   return [...new Set(out)];
 }
+
+// ---- launch state and CTA honesty (refinery S1c) ---------------------------
+const LAUNCH_FILE = path.join(ROOT, 'state', 'launch.json');
+const SETUP_LAUNCH = { phase: 'setup', waitlistLive: false, foundingMemberLive: false };
+
+/** Read state/launch.json. A missing or broken file means setup, the safe default. */
+export function loadLaunch(file = LAUNCH_FILE) {
+  try { return { ...SETUP_LAUNCH, ...JSON.parse(fs.readFileSync(file, 'utf8')) }; }
+  catch { return { ...SETUP_LAUNCH }; }
+}
+
+/** Closed-list setup CTA, rotated deterministically by post number. */
+export function setupCta(postNumber) {
+  const list = gtm.ctas.setup;
+  return list[Math.abs(Number(postNumber) || 0) % list.length];
+}
+
+const waitlistIsLive = (l) => l.phase !== 'setup' && l.waitlistLive === true;
+const memberIsLive = (l) => l.phase !== 'setup' && l.foundingMemberLive === true;
+
+/** The one CTA line for a caption. Tier 0 has none; setup phase uses the closed list. */
+export function ctaLine(spec, launch = loadLaunch()) {
+  if (spec.ctaTier === 'Tier 0') return '';
+  if (!waitlistIsLive(launch)) return setupCta(spec.postNumber);
+  const tier = spec.ctaTier === 'Tier 3' && !memberIsLive(launch) ? 'Tier 2' : spec.ctaTier;
+  return (gtm.ctas[tier] || {}).text || '';
+}
+
+/** Findings for text that promises something not yet live. Tier 1 ("More in the bio.") is allowed. */
+export function launchCheck(text, where = '', launch = loadLaunch()) {
+  const low = String(text || '').toLowerCase();
+  const found = [];
+  const hit = (match, why) => found.push({ where, kind: 'cta-not-live', match, why });
+  if (!waitlistIsLive(launch)) {
+    for (const p of ['waitlist', 'link in bio', 'pre-order']) {
+      if (low.includes(p)) hit(p, 'Setup phase: no waitlist, pre-order or link claim until state/launch.json says live.');
+    }
+  }
+  const t3 = (gtm.ctas['Tier 3'] || {}).text;
+  if (!memberIsLive(launch) && t3 && low.includes(t3.toLowerCase())) hit(t3, 'Tier 3 CTA text while founding member is not live.');
+  return found;
+}

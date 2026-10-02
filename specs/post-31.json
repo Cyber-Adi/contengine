@@ -17,7 +17,10 @@
     "endState": "full receipt, total stamped \"+8-12% - charged, not shown.\"",
     "zone": "side-rail",
     "heightPct": 14,
-    "palette": ["offWhite", "signalRed"]
+    "palette": [
+      "offWhite",
+      "signalRed"
+    ]
   },
   "slides": [
     {
@@ -32,7 +35,11 @@
         "headline": "The price didn't go up. The box got smaller.",
         "body": "Two products, same shelf, same price. One of them is quietly lying to you."
       },
-      "threadState": { "progress": 0.1, "label": "Line 1", "tone": "neutral" }
+      "threadState": {
+        "progress": 0.1,
+        "label": "Line 1",
+        "tone": "neutral"
+      }
     },
     {
       "index": 2,
@@ -48,7 +55,11 @@
           "Less product inside. The packaging barely changes, so you don't notice."
         ]
       },
-      "threadState": { "progress": 0.25, "label": "Line 2", "tone": "neutral" }
+      "threadState": {
+        "progress": 0.25,
+        "label": "Line 2",
+        "tone": "neutral"
+      }
     },
     {
       "index": 3,
@@ -65,7 +76,11 @@
           "A \"family size\" package of cookies is now the size a regular package used to be."
         ]
       },
-      "threadState": { "progress": 0.4, "label": "Line 3", "tone": "loss" }
+      "threadState": {
+        "progress": 0.4,
+        "label": "Line 3",
+        "tone": "loss"
+      }
     },
     {
       "index": 4,
@@ -79,7 +94,11 @@
         "heroNumberCaption": "The effective price increase on a bag of chips isn't 0%. They just hid it in the packaging instead of the price tag.",
         "citation": "Documented shrinkflation cases, 2023-2025 consumer reporting"
       },
-      "threadState": { "progress": 0.55, "label": "Line 4", "tone": "loss" }
+      "threadState": {
+        "progress": 0.55,
+        "label": "Line 4",
+        "tone": "loss"
+      }
     },
     {
       "index": 5,
@@ -96,7 +115,11 @@
         ],
         "body": "Companies count on this: people notice price increases but not size decreases."
       },
-      "threadState": { "progress": 0.7, "label": "Line 5", "tone": "neutral" }
+      "threadState": {
+        "progress": 0.7,
+        "label": "Line 5",
+        "tone": "neutral"
+      }
     },
     {
       "index": 6,
@@ -111,7 +134,11 @@
         "heroNumberCaption": "Cost per ounce is the number the store doesn't want you looking at. It's printed on the shelf tag, smaller than the price.",
         "body": "Check that number, not the sticker price."
       },
-      "threadState": { "progress": 0.85, "label": "Line 6", "tone": "neutral" }
+      "threadState": {
+        "progress": 0.85,
+        "label": "Line 6",
+        "tone": "neutral"
+      }
     },
     {
       "index": 7,
@@ -126,7 +153,12 @@
         "sendTrigger": "Send this to whoever does the groceries.",
         "citation": "Join the waitlist - link in bio"
       },
-      "threadState": { "progress": 1.0, "label": "Line 7", "tone": "loss" }
+      "threadState": {
+        "progress": 1.0,
+        "label": "Line 7",
+        "tone": "loss"
+      }
     }
-  ]
+  ],
+  "hold": "HOLD-UNTIL-LAUNCH"
 }

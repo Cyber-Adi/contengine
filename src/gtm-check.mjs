@@ -9,9 +9,9 @@
 // a brief may legitimately carry a number gtm.json has not catalogued. FAIL is
 // reserved for claims that are pre-launch-dishonest, which are never legitimate.
 import fs from 'node:fs';
-import { gtm, honestyCheck, unsourcedFigures } from './gtm.mjs';
+import { gtm, honestyCheck, unsourcedFigures, launchCheck, loadLaunch } from './gtm.mjs';
 
-export function gtmCheck(spec) {
+export function gtmCheck(spec, opts = {}) {
   const findings = [];
   const add = (level, check, detail, slide = null) => findings.push({ level, check, detail, slide });
 
@@ -29,6 +29,24 @@ export function gtmCheck(spec) {
   for (const { i, text } of allText) {
     for (const f of honestyCheck(text, `slide ${i}`)) {
       add('FAIL', 'honesty', `${f.why} Found: "${f.match}"`, i);
+    }
+  }
+
+  // 6.1b - CTA reality. Slide copy is verbatim and never rewritten, so a slide that
+  // promises a waitlist or pre-order before launch FAILS unless the spec carries
+  // hold:"HOLD-UNTIL-LAUNCH", in which case it is reported as HOLD (WARN) and the
+  // post is excluded from publishing by isPublishable.
+  const launch = opts.launch || loadLaunch();
+  const held = spec.hold === 'HOLD-UNTIL-LAUNCH';
+  for (const { i, text } of allText) {
+    for (const f of launchCheck(text, `slide ${i}`, launch)) {
+      if (held) add('WARN', 'hold', `HOLD: slide copy promises "${f.match}" which is not live. Not publishable until launch.`, i);
+      else add('FAIL', 'cta-not-live', `${f.why} Found: "${f.match}". Slide copy is verbatim: add hold:"HOLD-UNTIL-LAUNCH" to the spec or fix the brief.`, i);
+    }
+  }
+  if (opts.caption != null) {
+    for (const f of launchCheck(opts.caption, 'caption', launch)) {
+      add('FAIL', 'cta-not-live', `${f.why} Found: "${f.match}" in caption.`);
     }
   }
 

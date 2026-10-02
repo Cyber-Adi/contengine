@@ -653,6 +653,13 @@
           "type": "string"
         }
       }
+    },
+    "hold": {
+      "type": "string",
+      "enum": [
+        "HOLD-UNTIL-LAUNCH"
+      ],
+      "description": "Set when slide copy contains Tier 2/3 CTA text that is not yet true (setup phase). Held posts are not publishable until launch."
     }
   },
   "$comment": " | Layout-conditional content rules added 2026-09-20 after post-31 shipped empty split-compare panels past all six gates.",

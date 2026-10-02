@@ -19,8 +19,13 @@
     "endState": "all five segments lit, W1-3 Steel Blue and W4-5 Harvest Gold",
     "zone": "bottom-rail",
     "heightPct": 12,
-    "palette": ["steelBlue", "harvestGold"],
-    "forbidColors": ["signalRed"]
+    "palette": [
+      "steelBlue",
+      "harvestGold"
+    ],
+    "forbidColors": [
+      "signalRed"
+    ]
   },
   "slides": [
     {
@@ -35,7 +40,11 @@
         "headline": "Your eggs have 5 weeks. Not 5 days.",
         "body": "The number printed on the carton is not telling you what you think it is."
       },
-      "threadState": { "progress": 0.2, "label": "Week 1", "tone": "good" }
+      "threadState": {
+        "progress": 0.2,
+        "label": "Week 1",
+        "tone": "good"
+      }
     },
     {
       "index": 2,
@@ -51,7 +60,11 @@
         "heroNumberCaption": "How long eggs keep in the refrigerator after you bring them home.",
         "citation": "USDA FSIS, Shell Eggs from Farm to Table"
       },
-      "threadState": { "progress": 0.2, "label": "Week 1", "tone": "good" }
+      "threadState": {
+        "progress": 0.2,
+        "label": "Week 1",
+        "tone": "good"
+      }
     },
     {
       "index": 3,
@@ -67,7 +80,11 @@
           "Pack date. The day the eggs were graded and boxed. This is the one your fridge clock actually starts from."
         ]
       },
-      "threadState": { "progress": 0.4, "label": "Week 2", "tone": "good" }
+      "threadState": {
+        "progress": 0.4,
+        "label": "Week 2",
+        "tone": "good"
+      }
     },
     {
       "index": 4,
@@ -84,7 +101,11 @@
           "Add three to five weeks. That is your real window."
         ]
       },
-      "threadState": { "progress": 0.6, "label": "Week 3", "tone": "good" }
+      "threadState": {
+        "progress": 0.6,
+        "label": "Week 3",
+        "tone": "good"
+      }
     },
     {
       "index": 5,
@@ -103,7 +124,11 @@
         ],
         "citation": "The float test measures the air cell, which grows as an egg ages."
       },
-      "threadState": { "progress": 0.8, "label": "Week 4", "tone": "caution" }
+      "threadState": {
+        "progress": 0.8,
+        "label": "Week 4",
+        "tone": "caution"
+      }
     },
     {
       "index": 6,
@@ -116,7 +141,11 @@
         "headline": "Roughly three in four people throw eggs out on the date alone.",
         "body": "Not because the eggs went bad. Because nobody ever told them the date was a stocking guideline."
       },
-      "threadState": { "progress": 0.8, "label": "Week 4", "tone": "caution" }
+      "threadState": {
+        "progress": 0.8,
+        "label": "Week 4",
+        "tone": "caution"
+      }
     },
     {
       "index": 7,
@@ -128,14 +157,34 @@
       "copy": {
         "headline": "Keep this. Your egg week-by-week.",
         "quadrants": [
-          { "label": "Weeks 1–2", "value": "Any use", "tone": "good" },
-          { "label": "Weeks 3–4", "value": "Cook them", "tone": "good" },
-          { "label": "Week 5", "value": "Float test", "tone": "caution" },
-          { "label": "Floats", "value": "Let it go", "tone": "neutral" }
+          {
+            "label": "Weeks 1–2",
+            "value": "Any use",
+            "tone": "good"
+          },
+          {
+            "label": "Weeks 3–4",
+            "value": "Cook them",
+            "tone": "good"
+          },
+          {
+            "label": "Week 5",
+            "value": "Float test",
+            "tone": "caution"
+          },
+          {
+            "label": "Floats",
+            "value": "Let it go",
+            "tone": "neutral"
+          }
         ],
         "body": "Hard-boiling gets easier as eggs age. Older eggs peel cleaner than fresh ones."
       },
-      "threadState": { "progress": 1.0, "label": "Week 5", "tone": "caution" }
+      "threadState": {
+        "progress": 1.0,
+        "label": "Week 5",
+        "tone": "caution"
+      }
     },
     {
       "index": 8,
@@ -150,7 +199,12 @@
         "sendTrigger": "Send this to whoever cleans out the fridge.",
         "citation": "Join the waitlist — link in bio"
       },
-      "threadState": { "progress": 1.0, "label": "Week 5", "tone": "caution" }
+      "threadState": {
+        "progress": 1.0,
+        "label": "Week 5",
+        "tone": "caution"
+      }
     }
-  ]
+  ],
+  "hold": "HOLD-UNTIL-LAUNCH"
 }

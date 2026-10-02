@@ -4,6 +4,7 @@
 // fixture is worse than no gate, because it manufactures confidence.
 import fs from 'node:fs';
 import { gtmCheck } from './gtm-check.mjs';
+import { gtm, launchCheck, ctaLine } from './gtm.mjs';
 import { validateSpec } from './validate.mjs';
 import { judge, hookShape } from './entropy.mjs';
 import { decide, performanceSignal } from './decide.mjs';
@@ -244,6 +245,42 @@ t('saveRefinery leaves valid JSON and no temp file', () => {
   assert(REFINERY_STAGES.includes('vault'), 'stage enum');
   let threw = false; try { setPostStage({ posts: {} }, 5, 'bogus'); } catch { threw = true; }
   assert(threw, 'unknown stage rejected');
+});
+
+console.log('\nCTA honesty (setup phase)');
+const SETUP = { phase: 'setup', waitlistLive: false, foundingMemberLive: false };
+const LIVE = { phase: 'live', waitlistLive: true, foundingMemberLive: false };
+t('Tier-2 caption fails with waitlistLive:false and passes with true', () => {
+  const cap = `Save this.\n${gtm.ctas['Tier 2'].text}\n`;
+  assert(launchCheck(cap, 'caption', SETUP).length > 0, 'waitlist/link in bio must fail in setup');
+  assert(launchCheck(cap, 'caption', LIVE).length === 0, 'Tier 2 text passes once waitlist is live');
+  assert(launchCheck('Link in bio. Pre-order now.', 'caption', SETUP).length >= 2, 'link in bio and pre-order both caught');
+});
+t('Tier-3 text fails unless foundingMemberLive', () => {
+  assert(launchCheck(gtm.ctas['Tier 3'].text, 'c', { ...LIVE, foundingMemberLive: false }).some((f) => f.match === gtm.ctas['Tier 3'].text), 'tier 3 blocked');
+  assert(launchCheck(gtm.ctas['Tier 3'].text, 'c', { ...LIVE, foundingMemberLive: true }).length === 0, 'tier 3 allowed when live');
+});
+t('slide with Tier-2 text FAILs gate 6, and is WARN HOLD when held', () => {
+  const s = spec({}, { body: gtm.ctas['Tier 2'].text });
+  assert(hasCheck(gtmCheck(s, { launch: SETUP }), 'cta-not-live', 'FAIL'), 'unheld slide must fail');
+  const held = gtmCheck({ ...s, hold: 'HOLD-UNTIL-LAUNCH' }, { launch: SETUP });
+  assert(hasCheck(held, 'hold', 'WARN') && held.verdict === 'PASS', 'held reports WARN, no fail');
+  assert(gtmCheck(s, { launch: LIVE }).verdict === 'PASS', 'passes once live');
+});
+t('rotated setup CTA is deterministic per post number', () => {
+  for (let n = 0; n < 12; n++) {
+    assert(ctaLine({ postNumber: n, ctaTier: 'Tier 2' }, SETUP) === gtm.ctas.setup[n % 4], `post ${n} wrong line`);
+    assert(ctaLine({ postNumber: n, ctaTier: 'Tier 2' }, SETUP) === ctaLine({ postNumber: n, ctaTier: 'Tier 1' }, SETUP), 'same line any tier');
+  }
+  assert(ctaLine({ postNumber: 5, ctaTier: 'Tier 0' }, SETUP) === '', 'Tier 0 has no CTA line');
+  assert(ctaLine({ postNumber: 5, ctaTier: 'Tier 2' }, LIVE) === gtm.ctas['Tier 2'].text, 'tier text once live');
+  assert(!gtm.ctas.setup.some((l) => launchCheck(l, 'c', SETUP).length), 'setup lines are themselves honest');
+});
+t('held spec is not publishable', () => {
+  assert(!isPublishable({ provenance: 'brief', hold: 'HOLD-UNTIL-LAUNCH' }), 'held must not ship');
+  assert(isPublishable({ provenance: 'brief' }), 'unheld brief ships');
+  let threw = false; try { validateSpec({ ...spec(), hold: 'nope' }); } catch { threw = true; }
+  assert(threw, 'invalid hold value rejected by schema');
 });
 
 console.log(`\n  ${pass} passed, ${fail} failed\n`);

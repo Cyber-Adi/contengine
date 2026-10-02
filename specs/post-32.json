@@ -18,7 +18,10 @@
     "endState": "bar full of everything the money could have bought",
     "zone": "bottom-rail",
     "heightPct": 15,
-    "palette": ["signalRed", "steelBlue"]
+    "palette": [
+      "signalRed",
+      "steelBlue"
+    ]
   },
   "slides": [
     {
@@ -36,7 +39,11 @@
         "heroNumberCaption": "Wasted on food every year. Here's what it could buy instead.",
         "citation": "EPA, April 2025"
       },
-      "threadState": { "progress": 0.1, "label": "Intact", "tone": "loss" }
+      "threadState": {
+        "progress": 0.1,
+        "label": "Intact",
+        "tone": "loss"
+      }
     },
     {
       "index": 2,
@@ -54,7 +61,11 @@
           "Fare: $2,913, previously wasted."
         ]
       },
-      "threadState": { "progress": 0.25, "label": "Collection 1", "tone": "neutral" }
+      "threadState": {
+        "progress": 0.25,
+        "label": "Collection 1",
+        "tone": "neutral"
+      }
     },
     {
       "index": 3,
@@ -71,7 +82,11 @@
           "Months 7-12: still your own money"
         ]
       },
-      "threadState": { "progress": 0.4, "label": "Collection 2", "tone": "neutral" }
+      "threadState": {
+        "progress": 0.4,
+        "label": "Collection 2",
+        "tone": "neutral"
+      }
     },
     {
       "index": 4,
@@ -85,17 +100,36 @@
         "data": {
           "title": "This week, straight to trash",
           "lines": [
-            { "label": "Produce, gone soft", "value": "$18", "tone": "loss" },
-            { "label": "Dairy, past date", "value": "$14", "tone": "loss" },
-            { "label": "Leftovers, forgotten", "value": "$24", "tone": "loss" }
+            {
+              "label": "Produce, gone soft",
+              "value": "$18",
+              "tone": "loss"
+            },
+            {
+              "label": "Dairy, past date",
+              "value": "$14",
+              "tone": "loss"
+            },
+            {
+              "label": "Leftovers, forgotten",
+              "value": "$24",
+              "tone": "loss"
+            }
           ],
-          "total": { "label": "Cash, into the trash", "value": "$56" }
+          "total": {
+            "label": "Cash, into the trash",
+            "value": "$56"
+          }
         }
       },
       "copy": {
         "headline": "That discomfort is the point."
       },
-      "threadState": { "progress": 0.55, "label": "Collection 3", "tone": "loss" }
+      "threadState": {
+        "progress": 0.55,
+        "label": "Collection 3",
+        "tone": "loss"
+      }
     },
     {
       "index": 5,
@@ -107,12 +141,28 @@
       "copy": {
         "headline": "Over 10 years, that's roughly $35,000.",
         "quadrants": [
-          { "label": "A down payment", "value": "on a home", "tone": "loss" },
-          { "label": "A year of tuition", "value": "at a state school", "tone": "loss" },
-          { "label": "A small business", "value": "started from scratch", "tone": "loss" }
+          {
+            "label": "A down payment",
+            "value": "on a home",
+            "tone": "loss"
+          },
+          {
+            "label": "A year of tuition",
+            "value": "at a state school",
+            "tone": "loss"
+          },
+          {
+            "label": "A small business",
+            "value": "started from scratch",
+            "tone": "loss"
+          }
         ]
       },
-      "threadState": { "progress": 0.7, "label": "Collection 4", "tone": "loss" }
+      "threadState": {
+        "progress": 0.7,
+        "label": "Collection 4",
+        "tone": "loss"
+      }
     },
     {
       "index": 6,
@@ -124,9 +174,18 @@
       "copy": {
         "headline": "It adds up because it's invisible",
         "body": "Waste isn't one big event. It's $8 of produce on Tuesday, forgotten yogurt on Thursday, leftovers no one reheated on Saturday.",
-        "items": ["Tue: $8", "Thu: $5", "Sat: $3", "Sun total: $56"]
+        "items": [
+          "Tue: $8",
+          "Thu: $5",
+          "Sat: $3",
+          "Sun total: $56"
+        ]
       },
-      "threadState": { "progress": 0.85, "label": "Collection 5", "tone": "loss" }
+      "threadState": {
+        "progress": 0.85,
+        "label": "Collection 5",
+        "tone": "loss"
+      }
     },
     {
       "index": 7,
@@ -141,7 +200,12 @@
         "sendTrigger": "Send this to whoever does the groceries.",
         "citation": "Join the waitlist - link in bio"
       },
-      "threadState": { "progress": 1.0, "label": "Full", "tone": "good" }
+      "threadState": {
+        "progress": 1.0,
+        "label": "Full",
+        "tone": "good"
+      }
     }
-  ]
+  ],
+  "hold": "HOLD-UNTIL-LAUNCH"
 }

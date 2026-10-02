@@ -16,7 +16,9 @@
     "endState": "fully gone, crisp clear edge",
     "zone": "bottom-rail",
     "heightPct": 12,
-    "palette": ["harvestGold"]
+    "palette": [
+      "harvestGold"
+    ]
   },
   "slides": [
     {
@@ -30,7 +32,11 @@
       "copy": {
         "headline": "That fresh bread smell when you walk in? It's pumped through the vents."
       },
-      "threadState": { "progress": 0.1, "label": "70% haze", "tone": "neutral" }
+      "threadState": {
+        "progress": 0.1,
+        "label": "70% haze",
+        "tone": "neutral"
+      }
     },
     {
       "index": 2,
@@ -43,8 +49,16 @@
         "kind": "shelf-map",
         "data": {
           "zones": [
-            { "label": "HVAC unit", "note": "Pipes bakery scent through the vents near the entrance.", "tone": "caution" },
-            { "label": "Scent zone, first ~20 feet", "note": "The smell triggers hunger before you've picked up a basket.", "tone": "caution" }
+            {
+              "label": "HVAC unit",
+              "note": "Pipes bakery scent through the vents near the entrance.",
+              "tone": "caution"
+            },
+            {
+              "label": "Scent zone, first ~20 feet",
+              "note": "The smell triggers hunger before you've picked up a basket.",
+              "tone": "caution"
+            }
           ]
         }
       },
@@ -52,7 +66,11 @@
         "headline": "It's called \"scent marketing.\"",
         "body": "Many grocery chains pipe bakery scent through HVAC systems near the entrance."
       },
-      "threadState": { "progress": 0.25, "label": "55% haze", "tone": "neutral" }
+      "threadState": {
+        "progress": 0.25,
+        "label": "55% haze",
+        "tone": "neutral"
+      }
     },
     {
       "index": 3,
@@ -64,12 +82,24 @@
       "copy": {
         "headline": "The smell doesn't make you hungry. It makes you slow down.",
         "quadrants": [
-          { "label": "Time in-store", "value": "+16%", "tone": "caution" },
-          { "label": "Basket size", "value": "+12%", "tone": "loss" }
+          {
+            "label": "Time in-store",
+            "value": "+16%",
+            "tone": "caution"
+          },
+          {
+            "label": "Basket size",
+            "value": "+12%",
+            "tone": "loss"
+          }
         ],
         "citation": "2023 retail scent-marketing study"
       },
-      "threadState": { "progress": 0.4, "label": "40% haze", "tone": "loss" }
+      "threadState": {
+        "progress": 0.4,
+        "label": "40% haze",
+        "tone": "loss"
+      }
     },
     {
       "index": 4,
@@ -81,15 +111,29 @@
       "diagram": {
         "kind": "before-after",
         "data": {
-          "before": { "label": "Rotisserie chicken", "value": "$5.99", "note": "the store loses money on it", "tone": "good" },
-          "after": { "label": "Prepared foods", "value": "60%+", "note": "margin on sides, salads, prepared meals", "tone": "loss" }
+          "before": {
+            "label": "Rotisserie chicken",
+            "value": "$5.99",
+            "note": "the store loses money on it",
+            "tone": "good"
+          },
+          "after": {
+            "label": "Prepared foods",
+            "value": "60%+",
+            "note": "margin on sides, salads, prepared meals",
+            "tone": "loss"
+          }
         }
       },
       "copy": {
         "headline": "The bait and the hook",
         "body": "The smell pulls you into the hot-food section, where margins run 60%+."
       },
-      "threadState": { "progress": 0.6, "label": "25% haze", "tone": "loss" }
+      "threadState": {
+        "progress": 0.6,
+        "label": "25% haze",
+        "tone": "loss"
+      }
     },
     {
       "index": 5,
@@ -102,12 +146,28 @@
         "headline": "Nothing in the store is accidental.",
         "body": "Fresh flowers at the entrance. Warm lighting in produce. Cool lighting on the meat to make it look redder.",
         "quadrants": [
-          { "label": "Flowers", "value": "Calm", "tone": "neutral" },
-          { "label": "Produce lighting", "value": "Fresh", "tone": "neutral" },
-          { "label": "Meat lighting", "value": "Red", "tone": "neutral" }
+          {
+            "label": "Flowers",
+            "value": "Calm",
+            "tone": "neutral"
+          },
+          {
+            "label": "Produce lighting",
+            "value": "Fresh",
+            "tone": "neutral"
+          },
+          {
+            "label": "Meat lighting",
+            "value": "Red",
+            "tone": "neutral"
+          }
         ]
       },
-      "threadState": { "progress": 0.8, "label": "10% haze", "tone": "neutral" }
+      "threadState": {
+        "progress": 0.8,
+        "label": "10% haze",
+        "tone": "neutral"
+      }
     },
     {
       "index": 6,
@@ -122,7 +182,12 @@
         "sendTrigger": "Send this to someone who thinks grocery shopping is neutral.",
         "citation": "Join the waitlist - link in bio"
       },
-      "threadState": { "progress": 1.0, "label": "Clear", "tone": "good" }
+      "threadState": {
+        "progress": 1.0,
+        "label": "Clear",
+        "tone": "good"
+      }
     }
-  ]
+  ],
+  "hold": "HOLD-UNTIL-LAUNCH"
 }

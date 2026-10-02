@@ -12,7 +12,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { ROOT } from './../src/tokens.mjs';
 import { gtm } from './../src/gtm.mjs';
-import { honestyCheck } from './../src/gtm.mjs';
+import { honestyCheck, ctaLine, launchCheck } from './../src/gtm.mjs';
 
 const n = process.argv[2];
 const tiktok = process.argv.includes('--tiktok');
@@ -36,6 +36,7 @@ if (spec.provenance === 'refined' && spec.picked !== true) {
   process.exit(1);
 }
 
+// Held posts still export (caption refresh); isPublishable keeps them out of READY-TO-POST.
 const src = path.join(outDir, tiktok ? 'slides-tiktok' : 'slides');
 const dst = path.join(outDir, tiktok ? 'PUBLISH-tiktok' : 'PUBLISH');
 fs.mkdirSync(dst, { recursive: true });
@@ -60,7 +61,7 @@ const opener = plain(s1.copy?.headline)
   || (heroLead && heroCap ? `${heroLead}. ${heroCap.charAt(0).toUpperCase()}${heroCap.slice(1)}` : '')
   || heroLead || heroCap || spec.title;
 const trigger = plain(last.copy?.sendTrigger || spec.sendTrigger || '');
-const cta = (gtm.ctas[spec.ctaTier] || {}).text || '';
+const cta = ctaLine(spec);
 const tags = {
   'The $2913 Problem': ['#foodwaste', '#grocerybudget', '#mealplanning'],
   'Store It Right': ['#foodstorage', '#kitchentips', '#foodwaste'],
@@ -69,7 +70,7 @@ const tags = {
 }[spec.pillar] || ['#foodwaste', '#kitchentips'];
 
 const caption = [opener, '', trigger, cta].filter(Boolean).join('\n') + '\n\n' + tags.slice(0, 4).join(' ') + '\n';
-const findings = honestyCheck(caption, 'caption');
+const findings = [...honestyCheck(caption, 'caption'), ...launchCheck(caption, 'caption')];
 
 fs.writeFileSync(path.join(dst, 'caption.txt'), caption);
 fs.writeFileSync(path.join(dst, 'POST-ME.txt'),

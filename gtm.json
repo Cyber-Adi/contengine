@@ -122,7 +122,13 @@
     "Tier 3": {
       "text": "Founding member pre-order is live, $19/yr, capped at 100. Link in bio.",
       "note": "GTM section 3. Refundable anytime before launch. Do not restate the cap as sold-out or scarce unless the real count supports it."
-    }
+    },
+    "setup": [
+      "Save this for your next grocery run. Follow for more, something's coming.",
+      "Worth saving. Follow along, we're building something for exactly this.",
+      "Save it before your fridge does the forgetting. Follow for more, something's on the way.",
+      "Keep this one. Follow for more, we're working on something for this."
+    ]
   },
   "postTypes": {
     "$comment": "GTM section 2. Applies to the personal-brand channels; carried here because the Friday robot drafts both and must not mix registers.",

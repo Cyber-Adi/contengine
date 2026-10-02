@@ -43,7 +43,7 @@ export const STAGES = [
 /** The ONE publishability rule. Fixtures carry reconstructed copy; a Refinery variant is a
  *  proposal until Adi picks it. Neither may be exported or slotted into READY-TO-POST. */
 export const isPublishable = (p) =>
-  p.provenance !== 'reconstructed-fixture' && !(p.provenance === 'refined' && p.picked !== true);
+  p.provenance !== 'reconstructed-fixture' && !(p.provenance === 'refined' && p.picked !== true) && !p.hold;
 
 export const stageIndex = (s) => STAGES.indexOf(s);
 

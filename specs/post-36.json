@@ -17,7 +17,11 @@
     "endState": "full row of container-headstones under a red total, one rescued green",
     "zone": "bottom-rail",
     "heightPct": 15,
-    "palette": ["inkGray", "signalRed", "fondGreen"]
+    "palette": [
+      "inkGray",
+      "signalRed",
+      "fondGreen"
+    ]
   },
   "slides": [
     {
@@ -32,7 +36,11 @@
         "headline": "There are leftovers in your fridge right now that you will never eat.",
         "body": "You already know which ones."
       },
-      "threadState": { "progress": 0.1, "label": "1 headstone", "tone": "neutral" }
+      "threadState": {
+        "progress": 0.1,
+        "label": "1 headstone",
+        "tone": "neutral"
+      }
     },
     {
       "index": 2,
@@ -51,7 +59,11 @@
           "Day 7: it's gone."
         ]
       },
-      "threadState": { "progress": 0.28, "label": "2 headstones", "tone": "loss" }
+      "threadState": {
+        "progress": 0.28,
+        "label": "2 headstones",
+        "tone": "loss"
+      }
     },
     {
       "index": 3,
@@ -69,7 +81,11 @@
           "Old items sit hidden, out of sight."
         ]
       },
-      "threadState": { "progress": 0.42, "label": "3 headstones", "tone": "neutral" }
+      "threadState": {
+        "progress": 0.42,
+        "label": "3 headstones",
+        "tone": "neutral"
+      }
     },
     {
       "index": 4,
@@ -85,7 +101,11 @@
         "heroNumberCaption": "The average household throws away 6-8 leftover containers a week. At $3-5 per serving, that's $18-40 a week.",
         "citation": "Household leftover-waste estimate; EPA annual food-waste figure"
       },
-      "threadState": { "progress": 0.57, "label": "4 headstones", "tone": "loss" }
+      "threadState": {
+        "progress": 0.57,
+        "label": "4 headstones",
+        "tone": "loss"
+      }
     },
     {
       "index": 5,
@@ -97,11 +117,23 @@
       "copy": {
         "headline": "The top 5 most-wasted leftovers all freeze perfectly.",
         "quadrants": [
-          { "label": "Rice, pasta, soup, vegetables, chicken", "value": "All freeze well", "tone": "good" },
-          { "label": "Households that freeze leftovers", "value": "14%", "tone": "loss" }
+          {
+            "label": "Rice, pasta, soup, vegetables, chicken",
+            "value": "All freeze well",
+            "tone": "good"
+          },
+          {
+            "label": "Households that freeze leftovers",
+            "value": "14%",
+            "tone": "loss"
+          }
         ]
       },
-      "threadState": { "progress": 0.7, "label": "5 headstones", "tone": "loss" }
+      "threadState": {
+        "progress": 0.7,
+        "label": "5 headstones",
+        "tone": "loss"
+      }
     },
     {
       "index": 6,
@@ -113,15 +145,29 @@
       "diagram": {
         "kind": "before-after",
         "data": {
-          "before": { "label": "How you load your fridge", "value": "New in front", "note": "old hidden behind", "tone": "loss" },
-          "after": { "label": "FIFO", "value": "Old pulled forward", "note": "new placed behind - 30 seconds when you unload groceries", "tone": "good" }
+          "before": {
+            "label": "How you load your fridge",
+            "value": "New in front",
+            "note": "old hidden behind",
+            "tone": "loss"
+          },
+          "after": {
+            "label": "FIFO",
+            "value": "Old pulled forward",
+            "note": "new placed behind - 30 seconds when you unload groceries",
+            "tone": "good"
+          }
         }
       },
       "copy": {
         "headline": "The fix",
         "body": "Restaurants use FIFO: First In, First Out. It saves hundreds a year."
       },
-      "threadState": { "progress": 0.85, "label": "1 rescued", "tone": "good" }
+      "threadState": {
+        "progress": 0.85,
+        "label": "1 rescued",
+        "tone": "good"
+      }
     },
     {
       "index": 7,
@@ -136,7 +182,12 @@
         "sendTrigger": "Send this to whoever hates cleaning out the fridge.",
         "citation": "Join the waitlist - link in bio"
       },
-      "threadState": { "progress": 1.0, "label": "Complete", "tone": "good" }
+      "threadState": {
+        "progress": 1.0,
+        "label": "Complete",
+        "tone": "good"
+      }
     }
-  ]
+  ],
+  "hold": "HOLD-UNTIL-LAUNCH"
 }
