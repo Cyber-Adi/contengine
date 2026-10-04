@@ -39,7 +39,8 @@
         "progress": 0.08,
         "label": "Empty",
         "tone": "neutral"
-      }
+      },
+      "valign": "top"
     },
     {
       "index": 2,
@@ -55,13 +56,14 @@
         "progress": 0.2,
         "label": "Door marked",
         "tone": "neutral"
-      }
+      },
+      "valign": "bottom"
     },
     {
       "index": 3,
       "archetype": "value",
       "background": "light",
-      "layout": "stack-list",
+      "layout": "timeline",
       "accent": "steelBlue",
       "declaresLoss": false,
       "copy": {
@@ -92,12 +94,13 @@
         "progress": 0.44,
         "label": "Bottom shelf",
         "tone": "neutral"
-      }
+      },
+      "valign": "bottom"
     },
     {
       "index": 5,
       "archetype": "value",
-      "background": "light",
+      "background": "dark",
       "layout": "split-compare",
       "accent": "steelBlue",
       "declaresLoss": false,
@@ -118,7 +121,7 @@
       "index": 6,
       "archetype": "value",
       "background": "dark",
-      "layout": "stack-list",
+      "layout": "timeline",
       "accent": "steelBlue",
       "declaresLoss": false,
       "copy": {
@@ -150,7 +153,8 @@
         "progress": 0.8,
         "label": "Full map",
         "tone": "good"
-      }
+      },
+      "valign": "bottom"
     },
     {
       "index": 8,
@@ -164,10 +168,72 @@
         "sendTrigger": "Save this for your next fridge clean-out."
       },
       "threadState": {
-        "progress": 1.0,
+        "progress": 1,
         "label": "Badge",
         "tone": "good"
-      }
+      },
+      "valign": "top"
     }
-  ]
+  ],
+  "refinement": {
+    "round": 0,
+    "changes": [
+      {
+        "slide": 1,
+        "field": "valign",
+        "from": "center",
+        "to": "top",
+        "why": "slides 1 and 2 centre at 0.39 and 0.39 of frame height (need 0.12 apart); slides 1 and 2 share layout hero-statement"
+      },
+      {
+        "slide": 2,
+        "field": "valign",
+        "from": "center",
+        "to": "bottom",
+        "why": "slides 1 and 2 centre at 0.39 and 0.39 of frame height (need 0.12 apart); slides 1 and 2 share layout hero-statement; slides 2 and 3 centre at 0.39 and 0.38 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 3,
+        "field": "layout",
+        "from": "stack-list",
+        "to": "timeline",
+        "why": "slides 3-4-5 share one ground (light); slides 2 and 3 centre at 0.39 and 0.38 of frame height (need 0.12 apart); slides 3 and 4 centre at 0.38 and 0.39 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 4,
+        "field": "valign",
+        "from": "center",
+        "to": "bottom",
+        "why": "slides 3-4-5 share one ground (light); slides 3 and 4 centre at 0.38 and 0.39 of frame height (need 0.12 apart); slides 4 and 5 centre at 0.39 and 0.38 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 5,
+        "field": "background",
+        "from": "light",
+        "to": "dark",
+        "why": "slides 3-4-5 share one ground (light); slides 4 and 5 centre at 0.39 and 0.38 of frame height (need 0.12 apart); slides 5 and 6 centre at 0.38 and 0.38 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 6,
+        "field": "layout",
+        "from": "stack-list",
+        "to": "timeline",
+        "why": "slides 5 and 6 centre at 0.38 and 0.38 of frame height (need 0.12 apart); slides 6 and 7 centre at 0.38 and 0.39 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 7,
+        "field": "valign",
+        "from": "center",
+        "to": "bottom",
+        "why": "slides 6 and 7 centre at 0.38 and 0.39 of frame height (need 0.12 apart); slides 7 and 8 centre at 0.39 and 0.46 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 8,
+        "field": "valign",
+        "from": "center",
+        "to": "top",
+        "why": "slides 7 and 8 centre at 0.39 and 0.46 of frame height (need 0.12 apart)"
+      }
+    ]
+  }
 }

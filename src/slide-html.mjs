@@ -220,7 +220,12 @@ function layoutHtml(spec, slide, S = 1) {
       const rows = Math.ceil((c.quadrants || []).length / 2) || 1;
       const byWidth = Math.floor((330 * 2) / (0.66 * maxChars));
       const byHeight = Math.floor((560 / rows - 130) / 2.32);   // two lines of value + label + padding
-      const qv = Math.max(52, Math.min(tokens.type.numeric.sizes.hero.max, byWidth, byHeight));
+      const qv0 = Math.max(52, Math.min(tokens.type.numeric.sizes.hero.max, byWidth, byHeight));
+      // Dense values step down the type scale (floor: body min) until the wrapped lines fit the
+      // quadrant; short values keep the larger step chosen above.
+      const availQ = 560 / rows - 130, linesAt = (px) => Math.ceil(maxChars * 0.58 * px / 330);
+      let qv = qv0;
+      while (qv > tokens.type.body.sizes.body.min && linesAt(qv) * qv * 1.2 > availQ) qv -= 2;
       const q = (c.quadrants || []).map(x => {
         const col = C[toneToken(x.tone, slide.background)];
         return `<div class="quad" style="border-color:${col}">
@@ -297,6 +302,7 @@ export function effectiveSlide(spec, slide) {
 // natural height and never changes type size, so text can only gain room, not clip.
 // The group then sits wherever .content's valign puts it, which is what lets
 // neighbouring slides land at different heights.
+const HOLE_GUARD_SHARE = 0.85, HOLE_FLOOR_PX = 14;
 function fillScript(aim, S = 1, idx = 0) {
   return `<script>window.__fillDone=(async()=>{
   await Promise.all([document.fonts.load("700 96px 'Playfair Display'"),document.fonts.load("400 32px 'DM Sans'"),document.fonts.load("700 140px 'Space Grotesk'")]);
@@ -341,16 +347,22 @@ function fillScript(aim, S = 1, idx = 0) {
   const nat=blk.getBoundingClientRect().height, e=extent();
   let want=${aim}*cr.height-(e.bot-e.top);
   // A stack row's own padding is a hole between ink rows (Gate 5.1). Stretch no further than
-  // keeps the worst hole under 0.85 of the deadband limit.
+  // keeps the worst hole under 0.88 of the deadband limit.
   if(blk.classList.contains('stack')&&want>0){
     const lis=[...blk.children], n=lis.length||1;
     const tmin=Math.min(...lis.map(li=>Math.max(...[...li.children].map(c=>c.getBoundingClientRect().height))));
-    const lim=${tokens.rules.optical.maxDeadBandPct}*0.85, span0=e.bot-e.top;
+    const lim=${tokens.rules.optical.maxDeadBandPct}*0.88, span0=e.bot-e.top;
     let lo=0,hi=want;
-    for(let k=0;k<30;k++){const mid=(lo+hi)/2, H=nat+mid, hole=(H/n-tmin)/2, sp=span0+mid;
+    for(let k=0;k<30;k++){const mid=(lo+hi)/2, H=nat+mid, hole=(H/n-tmin*0.62)/2, sp=span0+mid;
       if(hole/sp<=lim) lo=mid; else hi=mid;}
     want=lo;
   }
+  // The block may not grow past the room the content box actually has: its own padding is
+  // not in the text extent above, so without this cap a stretched column set overruns the frame.
+  { const ccs=getComputedStyle(content), inner=cr.height-(parseFloat(ccs.paddingTop)||0)-(parseFloat(ccs.paddingBottom)||0),
+      kids=[...content.children].filter(k=>k.getBoundingClientRect().height>0),
+      used=kids.reduce((a,k)=>a+k.getBoundingClientRect().height,0)+(parseFloat(ccs.rowGap)||0)*Math.max(0,kids.length-1);
+    want=Math.min(want,Math.max(0,inner-used)); }
   if(want>0){blk.style.height=(nat+want)+'px';}
   })();
   // Margin guard: stacked blocks that overrun the safe frame give back their own
@@ -369,6 +381,37 @@ function fillScript(aim, S = 1, idx = 0) {
     const take=Math.min(g0*0.75, ov/n+1);
     content.style.rowGap=(g0-take)+'px';
   }
+  // Type-step guard: a long verbatim headline that still overruns the safe frame steps its
+  // size down toward its token floor (hook min or reframe min). Copy is never touched.
+  (()=>{
+    const hd=content.querySelector('.h-mid,.h-hook'); if(!hd||over()<=0) return;
+    const fmin=(hd.classList.contains('h-hook')?${tokens.type.display.sizes.hook.min}:${tokens.type.display.sizes.reframe.min})*${S};
+    let f=parseFloat(getComputedStyle(hd).fontSize);
+    for(let k=0;k<60&&over()>0&&f>fmin;k++){ f=Math.max(fmin,f*0.97); hd.style.fontSize=f+'px'; }
+  })();
+  // Hole guard (Gate 5.1): in a short copy block the structural gap between two blocks can
+  // exceed the deadband share of the block. Close only the offending gap, never below a
+  // floor, never touching type or copy. Estimate = box gap plus the line padding that is not ink.
+  (()=>{
+    const hroot=content.querySelector(':scope > .cta-wrap')||content;
+    const kids=[...hroot.children].filter(k=>{const r=k.getBoundingClientRect();return r.width&&r.height;});
+    if(kids.length<2) return;
+    const lh=k=>{const cs=getComputedStyle(k),fs=parseFloat(cs.fontSize)||0,l=parseFloat(cs.lineHeight);return (l>0?l:fs*1.2);};
+    const lim=${tokens.rules.optical.maxDeadBandPct}*${HOLE_GUARD_SHARE}, floor=${HOLE_FLOOR_PX}*${S};
+    for(let it=0;it<60;it++){
+      const rs=kids.map(k=>k.getBoundingClientRect()), spanAll=rs[rs.length-1].bottom-rs[0].top;
+      const body=kids.filter(k=>!k.classList.contains('swipe')), s0=kids.find(k=>!k.classList.contains('hero-num'))||kids[0], spanBody=body.length?body[body.length-1].getBoundingClientRect().bottom-s0.getBoundingClientRect().top:spanAll;
+      let worst=-1,wv=0;
+      for(let i=1;i<kids.length;i++){
+        const gap=rs[i].top-rs[i-1].bottom, est=gap+(kids[i-1].classList.contains('hero-num')?0.04:0.25)*lh(kids[i-1])+(kids[i].classList.contains('hero-num')?0.04:0.11)*lh(kids[i]);
+        const span=kids[i].classList.contains('swipe')?spanAll:spanBody;
+        if(est/span>lim&&est>wv&&gap>floor){wv=est;worst=i;}
+      }
+      if(worst<0) break;
+      const mt=parseFloat(kids[worst].style.marginTop)||0;
+      kids[worst].style.marginTop=(mt-4*${S})+'px';
+    }
+  })();
 })();</script>`;
 }
 

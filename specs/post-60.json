@@ -40,13 +40,14 @@
         "progress": 0.08,
         "label": "Full bag",
         "tone": "neutral"
-      }
+      },
+      "valign": "bottom"
     },
     {
       "index": 2,
       "archetype": "backupHook",
       "background": "light",
-      "layout": "stack-list",
+      "layout": "split-compare",
       "accent": "steelBlue",
       "declaresLoss": false,
       "copy": {
@@ -96,7 +97,8 @@
         "progress": 0.44,
         "label": "65%",
         "tone": "neutral"
-      }
+      },
+      "valign": "bottom"
     },
     {
       "index": 5,
@@ -141,7 +143,7 @@
     {
       "index": 7,
       "archetype": "reframe",
-      "background": "light",
+      "background": "dark",
       "layout": "hero-statement",
       "accent": "steelBlue",
       "declaresLoss": false,
@@ -152,7 +154,8 @@
         "progress": 0.8,
         "label": "25%",
         "tone": "neutral"
-      }
+      },
+      "valign": "bottom"
     },
     {
       "index": 8,
@@ -166,10 +169,58 @@
         "sendTrigger": "Send this to whoever does the groceries."
       },
       "threadState": {
-        "progress": 1.0,
+        "progress": 1,
         "label": "Check",
         "tone": "good"
-      }
+      },
+      "valign": "top"
     }
-  ]
+  ],
+  "refinement": {
+    "round": 0,
+    "changes": [
+      {
+        "slide": 1,
+        "field": "valign",
+        "from": "center",
+        "to": "bottom",
+        "why": "slides 1 and 2 centre at 0.39 and 0.38 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 4,
+        "field": "valign",
+        "from": "center",
+        "to": "bottom",
+        "why": "slides 3 and 4 centre at 0.35 and 0.39 of frame height (need 0.12 apart); slides 4 and 5 centre at 0.39 and 0.35 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 7,
+        "field": "background",
+        "from": "light",
+        "to": "dark",
+        "why": "slides 5-6-7 share one ground (light); slides 6 and 7 centre at 0.38 and 0.39 of frame height (need 0.12 apart); slides 7 and 8 centre at 0.39 and 0.46 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 7,
+        "field": "valign",
+        "from": "center",
+        "to": "bottom",
+        "why": "slides 5-6-7 share one ground (light); slides 6 and 7 centre at 0.38 and 0.39 of frame height (need 0.12 apart); slides 7 and 8 centre at 0.39 and 0.46 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 8,
+        "field": "valign",
+        "from": "center",
+        "to": "top",
+        "why": "slides 7 and 8 centre at 0.39 and 0.46 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 2,
+        "field": "layout",
+        "from": "stack-list",
+        "to": "split-compare",
+        "why": "slide 2 copy is sparse in its original layout (fill below 55 percent); lossless layout swap among legal alternatives"
+      }
+    ]
+  }
 }

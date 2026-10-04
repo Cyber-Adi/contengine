@@ -41,13 +41,14 @@
         "progress": 0.08,
         "label": "Far apart",
         "tone": "neutral"
-      }
+      },
+      "valign": "bottom"
     },
     {
       "index": 2,
       "archetype": "backupHook",
       "background": "dark",
-      "layout": "stack-list",
+      "layout": "timeline",
       "accent": "steelBlue",
       "declaresLoss": false,
       "copy": {
@@ -67,7 +68,7 @@
       "index": 3,
       "archetype": "value",
       "background": "light",
-      "layout": "timeline",
+      "layout": "stack-list",
       "accent": "steelBlue",
       "declaresLoss": false,
       "copy": {
@@ -102,13 +103,14 @@
         "progress": 0.44,
         "label": "Closer than far",
         "tone": "loss"
-      }
+      },
+      "valign": "bottom"
     },
     {
       "index": 5,
       "archetype": "value",
       "background": "light",
-      "layout": "stack-list",
+      "layout": "timeline",
       "accent": "steelBlue",
       "declaresLoss": false,
       "copy": {
@@ -128,7 +130,7 @@
     {
       "index": 6,
       "archetype": "value",
-      "background": "light",
+      "background": "dark",
       "layout": "hero-statement",
       "accent": "steelBlue",
       "declaresLoss": false,
@@ -140,13 +142,14 @@
         "progress": 0.68,
         "label": "Quarter apart",
         "tone": "neutral"
-      }
+      },
+      "valign": "bottom"
     },
     {
       "index": 7,
       "archetype": "value",
       "background": "light",
-      "layout": "split-compare",
+      "layout": "timeline",
       "accent": "fondGreen",
       "declaresLoss": false,
       "copy": {
@@ -176,10 +179,79 @@
         "citation": "Join the waitlist, link in bio."
       },
       "threadState": {
-        "progress": 1.0,
+        "progress": 1,
         "label": "Met",
         "tone": "good"
-      }
+      },
+      "valign": "bottom"
     }
-  ]
+  ],
+  "refinement": {
+    "round": 0,
+    "changes": [
+      {
+        "slide": 1,
+        "field": "valign",
+        "from": "center",
+        "to": "bottom",
+        "why": "slides 1 and 2 centre at 0.39 and 0.38 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 2,
+        "field": "layout",
+        "from": "stack-list",
+        "to": "timeline",
+        "why": "slides 1 and 2 centre at 0.39 and 0.38 of frame height (need 0.12 apart); slides 2 and 3 centre at 0.38 and 0.35 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 3,
+        "field": "layout",
+        "from": "timeline",
+        "to": "stack-list",
+        "why": "slides 2 and 3 centre at 0.38 and 0.35 of frame height (need 0.12 apart); slides 3 and 4 centre at 0.35 and 0.37 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 4,
+        "field": "valign",
+        "from": "center",
+        "to": "bottom",
+        "why": "slides 3 and 4 centre at 0.35 and 0.37 of frame height (need 0.12 apart); slides 4 and 5 centre at 0.37 and 0.38 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 5,
+        "field": "layout",
+        "from": "stack-list",
+        "to": "timeline",
+        "why": "slides 5-6-7 share one ground (light); slides 4 and 5 centre at 0.37 and 0.38 of frame height (need 0.12 apart); slides 5 and 6 centre at 0.38 and 0.39 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 6,
+        "field": "background",
+        "from": "light",
+        "to": "dark",
+        "why": "slides 5-6-7 share one ground (light); slides 5 and 6 centre at 0.38 and 0.39 of frame height (need 0.12 apart); slides 6 and 7 centre at 0.39 and 0.38 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 6,
+        "field": "valign",
+        "from": "center",
+        "to": "bottom",
+        "why": "slides 5-6-7 share one ground (light); slides 5 and 6 centre at 0.38 and 0.39 of frame height (need 0.12 apart); slides 6 and 7 centre at 0.39 and 0.38 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 7,
+        "field": "layout",
+        "from": "split-compare",
+        "to": "timeline",
+        "why": "slides 5-6-7 share one ground (light); slides 6 and 7 centre at 0.39 and 0.38 of frame height (need 0.12 apart); slides 7 and 8 centre at 0.38 and 0.46 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 8,
+        "field": "valign",
+        "from": "center",
+        "to": "bottom",
+        "why": "slides 7 and 8 centre at 0.38 and 0.46 of frame height (need 0.12 apart)"
+      }
+    ]
+  }
 }

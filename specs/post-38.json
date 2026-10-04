@@ -26,7 +26,7 @@
     {
       "index": 1,
       "archetype": "hook",
-      "background": "dark",
+      "background": "light",
       "layout": "hero-statement",
       "accent": "fondGreen",
       "declaresLoss": false,
@@ -37,13 +37,14 @@
       "threadState": {
         "progress": 0.17,
         "tone": "neutral"
-      }
+      },
+      "valign": "bottom"
     },
     {
       "index": 2,
       "archetype": "backupHook",
       "background": "light",
-      "layout": "stack-list",
+      "layout": "timeline",
       "accent": "fondGreen",
       "declaresLoss": false,
       "copy": {
@@ -61,9 +62,9 @@
     {
       "index": 3,
       "archetype": "value",
-      "background": "light",
+      "background": "dark",
       "layout": "split-compare",
-      "accent": "fondGreen",
+      "accent": "steelBlue",
       "declaresLoss": false,
       "copy": {
         "headline": "Save these:",
@@ -75,13 +76,14 @@
       "threadState": {
         "progress": 0.5,
         "tone": "neutral"
-      }
+      },
+      "valign": "bottom"
     },
     {
       "index": 4,
       "archetype": "value",
       "background": "light",
-      "layout": "stack-list",
+      "layout": "timeline",
       "accent": "fondGreen",
       "declaresLoss": false,
       "copy": {
@@ -101,7 +103,7 @@
     {
       "index": 5,
       "archetype": "value",
-      "background": "dark",
+      "background": "light",
       "layout": "hero-statement",
       "accent": "fondGreen",
       "declaresLoss": false,
@@ -112,7 +114,8 @@
       "threadState": {
         "progress": 0.83,
         "tone": "neutral"
-      }
+      },
+      "valign": "bottom"
     },
     {
       "index": 6,
@@ -128,7 +131,83 @@
       "threadState": {
         "progress": 1,
         "tone": "good"
-      }
+      },
+      "valign": "top"
     }
-  ]
+  ],
+  "refinement": {
+    "round": 0,
+    "changes": [
+      {
+        "slide": 1,
+        "field": "background",
+        "from": "dark",
+        "to": "light",
+        "why": "slides 1 and 2 centre at 0.39 and 0.38 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 1,
+        "field": "valign",
+        "from": "center",
+        "to": "bottom",
+        "why": "slides 1 and 2 centre at 0.39 and 0.38 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 2,
+        "field": "layout",
+        "from": "stack-list",
+        "to": "timeline",
+        "why": "slides 2-3-4 share one ground (light); slides 1 and 2 centre at 0.39 and 0.38 of frame height (need 0.12 apart); slides 2 and 3 centre at 0.38 and 0.38 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 3,
+        "field": "valign",
+        "from": "center",
+        "to": "bottom",
+        "why": "slides 2-3-4 share one ground (light); slides 2 and 3 centre at 0.38 and 0.38 of frame height (need 0.12 apart); slides 3 and 4 centre at 0.38 and 0.38 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 4,
+        "field": "layout",
+        "from": "stack-list",
+        "to": "timeline",
+        "why": "slides 2-3-4 share one ground (light); slides 3 and 4 centre at 0.38 and 0.38 of frame height (need 0.12 apart); slides 4 and 5 centre at 0.38 and 0.39 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 5,
+        "field": "background",
+        "from": "dark",
+        "to": "light",
+        "why": "slides 4 and 5 centre at 0.38 and 0.39 of frame height (need 0.12 apart); slides 5 and 6 centre at 0.39 and 0.46 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 5,
+        "field": "valign",
+        "from": "center",
+        "to": "bottom",
+        "why": "slides 4 and 5 centre at 0.38 and 0.39 of frame height (need 0.12 apart); slides 5 and 6 centre at 0.39 and 0.46 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 6,
+        "field": "valign",
+        "from": "center",
+        "to": "top",
+        "why": "slides 5 and 6 centre at 0.39 and 0.46 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 3,
+        "field": "accent",
+        "from": "fondGreen",
+        "to": "steelBlue",
+        "why": "fondGreen pins the ground to light on slides 1-5 (three light slides in a row); steelBlue is legal on dark, so slide 3 can break the run"
+      },
+      {
+        "slide": 3,
+        "field": "background",
+        "from": "light",
+        "to": "dark",
+        "why": "break the 3-light run created by the fondGreen ground restriction"
+      }
+    ]
+  }
 }

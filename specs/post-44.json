@@ -41,7 +41,8 @@
         "progress": 0.08,
         "label": "Empty jar",
         "tone": "neutral"
-      }
+      },
+      "valign": "top"
     },
     {
       "index": 2,
@@ -57,7 +58,8 @@
         "progress": 0.2,
         "label": "Brine",
         "tone": "neutral"
-      }
+      },
+      "valign": "bottom"
     },
     {
       "index": 3,
@@ -100,12 +102,13 @@
         "progress": 0.44,
         "label": "Half full",
         "tone": "neutral"
-      }
+      },
+      "valign": "bottom"
     },
     {
       "index": 5,
       "archetype": "value",
-      "background": "light",
+      "background": "dark",
       "layout": "timeline",
       "accent": "steelBlue",
       "declaresLoss": false,
@@ -157,7 +160,8 @@
         "progress": 0.68,
         "label": "Sealed",
         "tone": "neutral"
-      }
+      },
+      "valign": "bottom"
     },
     {
       "index": 7,
@@ -174,7 +178,8 @@
         "progress": 0.8,
         "label": "Check stamp",
         "tone": "good"
-      }
+      },
+      "valign": "top"
     },
     {
       "index": 8,
@@ -189,10 +194,57 @@
         "sendTrigger": "Save this for your next fridge clean-out."
       },
       "threadState": {
-        "progress": 1.0,
+        "progress": 1,
         "label": "Complete",
         "tone": "good"
       }
     }
-  ]
+  ],
+  "refinement": {
+    "round": 0,
+    "changes": [
+      {
+        "slide": 1,
+        "field": "valign",
+        "from": "center",
+        "to": "top",
+        "why": "slides 1 and 2 centre at 0.39 and 0.39 of frame height (need 0.12 apart); slides 1 and 2 share layout hero-statement"
+      },
+      {
+        "slide": 2,
+        "field": "valign",
+        "from": "center",
+        "to": "bottom",
+        "why": "slides 1 and 2 centre at 0.39 and 0.39 of frame height (need 0.12 apart); slides 1 and 2 share layout hero-statement; slides 2 and 3 centre at 0.39 and 0.35 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 4,
+        "field": "valign",
+        "from": "center",
+        "to": "bottom",
+        "why": "slides 3-4-5 share one ground (light); slides 3 and 4 centre at 0.35 and 0.38 of frame height (need 0.12 apart); slides 4 and 5 centre at 0.38 and 0.35 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 5,
+        "field": "background",
+        "from": "light",
+        "to": "dark",
+        "why": "slides 3-4-5 share one ground (light); slides 4 and 5 centre at 0.38 and 0.35 of frame height (need 0.12 apart); slides 5 and 6 centre at 0.35 and 0.39 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 6,
+        "field": "valign",
+        "from": "center",
+        "to": "bottom",
+        "why": "slides 5 and 6 centre at 0.35 and 0.39 of frame height (need 0.12 apart); slides 6 and 7 centre at 0.39 and 0.39 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 7,
+        "field": "valign",
+        "from": "center",
+        "to": "top",
+        "why": "slides 6 and 7 centre at 0.39 and 0.39 of frame height (need 0.12 apart); slides 7 and 8 centre at 0.39 and 0.46 of frame height (need 0.12 apart)"
+      }
+    ]
+  }
 }

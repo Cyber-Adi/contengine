@@ -43,7 +43,7 @@
       "index": 2,
       "archetype": "backupHook",
       "background": "light",
-      "layout": "stack-list",
+      "layout": "split-compare",
       "accent": "steelBlue",
       "declaresLoss": false,
       "copy": {
@@ -119,5 +119,17 @@
         "tone": "good"
       }
     }
-  ]
+  ],
+  "refinement": {
+    "round": 0,
+    "changes": [
+      {
+        "slide": 2,
+        "field": "layout",
+        "from": "stack-list",
+        "to": "split-compare",
+        "why": "slide 2 copy is sparse in its original layout (fill below 55 percent); lossless layout swap among legal alternatives"
+      }
+    ]
+  }
 }
