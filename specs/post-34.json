@@ -38,12 +38,13 @@
         "progress": 0.1,
         "label": "Cluttered",
         "tone": "neutral"
-      }
+      },
+      "valign": "bottom"
     },
     {
       "index": 2,
       "archetype": "backupHook",
-      "background": "light",
+      "background": "dark",
       "layout": "quadrant-card",
       "accent": "harvestGold",
       "declaresLoss": true,
@@ -129,7 +130,8 @@
         "progress": 0.65,
         "label": "Nearly full",
         "tone": "neutral"
-      }
+      },
+      "valign": "center"
     },
     {
       "index": 5,
@@ -148,7 +150,8 @@
         "progress": 0.85,
         "label": "Sorted",
         "tone": "good"
-      }
+      },
+      "valign": "bottom"
     },
     {
       "index": 6,
@@ -164,11 +167,58 @@
         "citation": "Join the waitlist - link in bio"
       },
       "threadState": {
-        "progress": 1.0,
+        "progress": 1,
         "label": "Complete",
         "tone": "good"
       }
     }
   ],
-  "hold": "HOLD-UNTIL-LAUNCH"
+  "hold": "HOLD-UNTIL-LAUNCH",
+  "refinement": {
+    "round": 0,
+    "changes": [
+      {
+        "slide": 1,
+        "field": "valign",
+        "from": "center",
+        "to": "bottom",
+        "why": "slides 1 and 2 centre at 0.39 and 0.35 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 2,
+        "field": "background",
+        "from": "light",
+        "to": "dark",
+        "why": "slides 2-3-4 share one ground (light); slides 1 and 2 centre at 0.39 and 0.35 of frame height (need 0.12 apart); slides 2 and 3 centre at 0.35 and 0.38 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 4,
+        "field": "valign",
+        "from": "center",
+        "to": "bottom",
+        "why": "slides 2-3-4 share one ground (light); slides 3 and 4 centre at 0.38 and 0.39 of frame height (need 0.12 apart); slides 4 and 5 centre at 0.39 and 0.37 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 5,
+        "field": "valign",
+        "from": "center",
+        "to": "top",
+        "why": "slides 4 and 5 centre at 0.39 and 0.37 of frame height (need 0.12 apart); slides 5 and 6 centre at 0.37 and 0.46 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 5,
+        "field": "valign",
+        "from": "top",
+        "to": "bottom",
+        "why": "X-distinct: slides 4 and 5 hashed alike with slide 5 top-aligned; design-only move."
+      },
+      {
+        "slide": 4,
+        "field": "valign",
+        "from": "bottom",
+        "to": "center",
+        "why": "X-distinct: bottom-aligned diagram hashed alike with slide 5; centre keeps them distinct."
+      }
+    ]
+  }
 }

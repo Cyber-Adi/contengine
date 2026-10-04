@@ -297,11 +297,12 @@ export function effectiveSlide(spec, slide) {
 // natural height and never changes type size, so text can only gain room, not clip.
 // The group then sits wherever .content's valign puts it, which is what lets
 // neighbouring slides land at different heights.
-function fillScript(aim) {
+function fillScript(aim, S = 1, idx = 0) {
   return `<script>window.__fillDone=(async()=>{
   await Promise.all([document.fonts.load("700 96px 'Playfair Display'"),document.fonts.load("400 32px 'DM Sans'"),document.fonts.load("700 140px 'Space Grotesk'")]);
   await document.fonts.ready;
   const content=document.querySelector('.content'), cr=content.getBoundingClientRect();
+  await (async()=>{
   const blk=document.querySelector('.content .fill');
   if(!blk){
     // No stretchable block (hero-number): open the gaps between the content's own
@@ -327,10 +328,47 @@ function fillScript(aim) {
       const r=el.getBoundingClientRect(); if(!r.width||!r.height) continue;
       top=Math.min(top,r.top); bot=Math.max(bot,r.bottom);}
     return {top:Math.max(top,cr.top),bot:Math.min(bot,cr.bottom)};};
+  // Headline first: it may grow to its type ceiling (hook ceiling on slide 2, reframe ceiling after).
+  const hd=content.querySelector('.h-mid');
+  if(hd){ const cap=(${idx}<=2?${tokens.type.display.sizes.hook.max}:${tokens.type.display.sizes.reframe.max})*${S};
+    const f0=parseFloat(getComputedStyle(hd).fontSize), pad=parseFloat(getComputedStyle(content).paddingLeft)||0;
+    const sl=document.querySelector('.slide').getBoundingClientRect();
+    const fits=()=>{const r=hd.getBoundingClientRect(), e=extent();
+      return hd.scrollWidth<=hd.clientWidth+1 && r.left>=sl.left+pad-1 && r.right<=sl.right-pad+1 && e.top>=sl.top+pad-1 && e.bot<=sl.bottom-pad+1;};
+    // Grow toward the ceiling only while the headline still clears the margin and the box.
+    for(let f=Math.max(f0,cap); f>f0; f*=0.96){ hd.style.fontSize=f+'px'; if(fits()) break; hd.style.fontSize=f0+'px'; } }
   blk.style.flex='none'; blk.style.height='auto';
   const nat=blk.getBoundingClientRect().height, e=extent();
-  const want=${aim}*cr.height-(e.bot-e.top);
+  let want=${aim}*cr.height-(e.bot-e.top);
+  // A stack row's own padding is a hole between ink rows (Gate 5.1). Stretch no further than
+  // keeps the worst hole under 0.85 of the deadband limit.
+  if(blk.classList.contains('stack')&&want>0){
+    const lis=[...blk.children], n=lis.length||1;
+    const tmin=Math.min(...lis.map(li=>Math.max(...[...li.children].map(c=>c.getBoundingClientRect().height))));
+    const lim=${tokens.rules.optical.maxDeadBandPct}*0.85, span0=e.bot-e.top;
+    let lo=0,hi=want;
+    for(let k=0;k<30;k++){const mid=(lo+hi)/2, H=nat+mid, hole=(H/n-tmin)/2, sp=span0+mid;
+      if(hole/sp<=lim) lo=mid; else hi=mid;}
+    want=lo;
+  }
   if(want>0){blk.style.height=(nat+want)+'px';}
+  })();
+  // Margin guard: stacked blocks that overrun the safe frame give back their own
+  // inter-block gaps (never type size, never copy) until the content clears the margin.
+  const m=parseFloat(getComputedStyle(content).paddingLeft)||0, root=document.querySelector('.slide').getBoundingClientRect();
+  const span=()=>{let top=1e9,bot=-1e9;
+    for(const el of content.children){
+      if(el.classList.contains('swipe')) continue;
+      const r=el.getBoundingClientRect(); if(!r.width||!r.height) continue;
+      top=Math.min(top,r.top); bot=Math.max(bot,r.bottom);}
+    return {top,bot};};
+  const over=()=>{const s=span();return Math.max(0,root.top+m-s.top)+Math.max(0,s.bot-(root.bottom-m));};
+  let ov=over();
+  if(ov>0){
+    const g0=parseFloat(getComputedStyle(content).rowGap)||0, n=Math.max(1,content.children.length-1);
+    const take=Math.min(g0*0.75, ov/n+1);
+    content.style.rowGap=(g0-take)+'px';
+  }
 })();</script>`;
 }
 
@@ -506,5 +544,5 @@ ${scaledCss}
    scaledCss and from g.canvas directly, because these two values are the real
    target resolution and must never go through the reference-scale pass. */
 .slide{width:${g.canvas.w}px;height:${g.canvas.h}px}
-</style></head><body>${slideInner(spec, slide, g.canvas.w).replace(/→/g, ARROW_MARK)}${fillScript(tokens.rules.optical.fillAim)}</body></html>`;
+</style></head><body>${slideInner(spec, slide, g.canvas.w).replace(/→/g, ARROW_MARK)}${fillScript(tokens.rules.optical.fillAim, S, slide.index)}</body></html>`;
 }
