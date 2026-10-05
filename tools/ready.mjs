@@ -111,7 +111,7 @@ const entries = ordered.map((c, i) => {
   const src = path.join(ROOT, 'out', `post-${c.post}`, 'PUBLISH');
   fs.mkdirSync(dst, { recursive: true });
   const files = fs.readdirSync(src).sort();
-  for (const f of files) fs.copyFileSync(path.join(src, f), path.join(dst, f));
+  for (const f of files) fs.cpSync(path.join(src, f), path.join(dst, f), { recursive: true }); // PUBLISH/tiktok/ is a folder
   const slides = files.filter((f) => f.endsWith('.png'));
   const caption = fs.readFileSync(path.join(src, 'caption.txt'), 'utf8');
   const markCmd = `node tools/log-post.mjs ${c.post} --published --date ${iso(slot)}`;
