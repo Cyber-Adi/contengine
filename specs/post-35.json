@@ -180,7 +180,7 @@
         "headline": "You're not shopping. You're being directed.",
         "ctaLine": "fond shows you what you actually need before you walk in.",
         "sendTrigger": "Send this to someone who thinks grocery shopping is neutral.",
-        "citation": "Join the waitlist - link in bio"
+        "citation": "Keep this one. Follow for more, we're working on something for this."
       },
       "threadState": {
         "progress": 1.0,
@@ -189,5 +189,14 @@
       }
     }
   ],
-  "hold": "HOLD-UNTIL-LAUNCH"
+  "ctaSwap": [
+    {
+      "slide": 6,
+      "field": "citation",
+      "from": "Join the waitlist - link in bio",
+      "to": "Keep this one. Follow for more, we're working on something for this.",
+      "rule": "setup-cta",
+      "heldBefore": true
+    }
+  ]
 }

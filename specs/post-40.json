@@ -124,12 +124,21 @@
       "declaresLoss": false,
       "copy": {
         "headline": "You'd cancel a subscription that charged you $56/week for nothing. Your fridge has been running that subscription for years.",
-        "ctaLine": "fond is how you cancel it. Link in bio."
+        "ctaLine": "fond is how you cancel it. Save this for your next grocery run. Follow for more, something's coming."
       },
       "threadState": {
         "progress": 1,
         "tone": "good"
       }
+    }
+  ],
+  "ctaSwap": [
+    {
+      "slide": 6,
+      "field": "ctaLine",
+      "from": "fond is how you cancel it. Link in bio.",
+      "to": "fond is how you cancel it. Save this for your next grocery run. Follow for more, something's coming.",
+      "rule": "setup-cta"
     }
   ]
 }

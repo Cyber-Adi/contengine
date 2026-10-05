@@ -141,12 +141,21 @@
       "copy": {
         "headline": "It's called fond.",
         "body": "The Kitchen OS.",
-        "ctaLine": "We're opening the waitlist soon. If you want in early — link in bio."
+        "ctaLine": "Save it before your fridge does the forgetting. Follow for more, something's on the way."
       },
       "threadState": {
         "progress": 1,
         "tone": "good"
       }
+    }
+  ],
+  "ctaSwap": [
+    {
+      "slide": 7,
+      "field": "ctaLine",
+      "from": "We're opening the waitlist soon. If you want in early — link in bio.",
+      "to": "Save it before your fridge does the forgetting. Follow for more, something's on the way.",
+      "rule": "setup-cta"
     }
   ]
 }

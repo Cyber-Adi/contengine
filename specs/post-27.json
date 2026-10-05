@@ -120,12 +120,21 @@
       "declaresLoss": false,
       "copy": {
         "headline": "fond tracks everything in your kitchen so nothing gets lost, forgotten, or wasted. The easiest raise you'll ever give yourself.",
-        "ctaLine": "Join the waitlist — link in bio."
+        "ctaLine": "Keep this one. Follow for more, we're working on something for this."
       },
       "threadState": {
         "progress": 1,
         "tone": "good"
       }
+    }
+  ],
+  "ctaSwap": [
+    {
+      "slide": 6,
+      "field": "ctaLine",
+      "from": "Join the waitlist — link in bio.",
+      "to": "Keep this one. Follow for more, we're working on something for this.",
+      "rule": "setup-cta"
     }
   ]
 }

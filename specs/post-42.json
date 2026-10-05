@@ -189,13 +189,22 @@
         "headline": "You don't need her budget. You need her visibility.",
         "ctaLine": "fond puts the constraints back - automatically.",
         "sendTrigger": "Send this to whoever does the groceries.",
-        "citation": "Join the waitlist - link in bio"
+        "citation": "Save it before your fridge does the forgetting. Follow for more, something's on the way."
       },
       "threadState": {
         "progress": 1.0,
         "label": "1950",
         "tone": "good"
       }
+    }
+  ],
+  "ctaSwap": [
+    {
+      "slide": 8,
+      "field": "citation",
+      "from": "Join the waitlist - link in bio",
+      "to": "Save it before your fridge does the forgetting. Follow for more, something's on the way.",
+      "rule": "setup-cta"
     }
   ]
 }

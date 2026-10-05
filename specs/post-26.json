@@ -140,12 +140,21 @@
       "declaresLoss": false,
       "copy": {
         "headline": "Your loyalty app rewards you with convenience. It rewards the store with your entire behavioral profile.",
-        "ctaLine": "fond tracks your kitchen — not your behavior. No ads. No data selling. Link in bio."
+        "ctaLine": "fond tracks your kitchen — not your behavior. No ads. No data selling. Save it before your fridge does the forgetting. Follow for more, something's on the way."
       },
       "threadState": {
         "progress": 1,
         "tone": "good"
       }
+    }
+  ],
+  "ctaSwap": [
+    {
+      "slide": 7,
+      "field": "ctaLine",
+      "from": "fond tracks your kitchen — not your behavior. No ads. No data selling. Link in bio.",
+      "to": "fond tracks your kitchen — not your behavior. No ads. No data selling. Save it before your fridge does the forgetting. Follow for more, something's on the way.",
+      "rule": "setup-cta"
     }
   ]
 }

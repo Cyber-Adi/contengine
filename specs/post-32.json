@@ -198,7 +198,7 @@
         "headline": "You didn't choose to waste $2,913. You just never got to see it happening.",
         "ctaLine": "fond makes the invisible visible.",
         "sendTrigger": "Send this to whoever does the groceries.",
-        "citation": "Join the waitlist - link in bio"
+        "citation": "Save this for your next grocery run. Follow for more, something's coming."
       },
       "threadState": {
         "progress": 1.0,
@@ -207,5 +207,14 @@
       }
     }
   ],
-  "hold": "HOLD-UNTIL-LAUNCH"
+  "ctaSwap": [
+    {
+      "slide": 7,
+      "field": "citation",
+      "from": "Join the waitlist - link in bio",
+      "to": "Save this for your next grocery run. Follow for more, something's coming.",
+      "rule": "setup-cta",
+      "heldBefore": true
+    }
+  ]
 }

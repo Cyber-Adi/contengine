@@ -169,7 +169,7 @@
       "declaresLoss": false,
       "copy": {
         "headline": "Your freezer is the most underused appliance in your kitchen.",
-        "ctaLine": "fond tells you the ideal freeze date for every item — so you pause time instead of wasting it. Link in bio."
+        "ctaLine": "fond tells you the ideal freeze date for every item — so you pause time instead of wasting it. Worth saving. Follow along, we're building something for exactly this."
       },
       "threadState": {
         "progress": 1,
@@ -238,5 +238,14 @@
         "why": "slides 7 and 8 centre at 0.38 and 0.46 of frame height (need 0.12 apart)"
       }
     ]
-  }
+  },
+  "ctaSwap": [
+    {
+      "slide": 8,
+      "field": "ctaLine",
+      "from": "fond tells you the ideal freeze date for every item — so you pause time instead of wasting it. Link in bio.",
+      "to": "fond tells you the ideal freeze date for every item — so you pause time instead of wasting it. Worth saving. Follow along, we're building something for exactly this.",
+      "rule": "setup-cta"
+    }
+  ]
 }

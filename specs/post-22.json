@@ -139,12 +139,21 @@
       "declaresLoss": false,
       "copy": {
         "headline": "Every aisle is a funnel. The store profits when you overbuy and overwaste.",
-        "ctaLine": "fond helps you track what you actually have — so you only buy what you need. Link in bio."
+        "ctaLine": "fond helps you track what you actually have — so you only buy what you need. Save it before your fridge does the forgetting. Follow for more, something's on the way."
       },
       "threadState": {
         "progress": 1,
         "tone": "good"
       }
+    }
+  ],
+  "ctaSwap": [
+    {
+      "slide": 7,
+      "field": "ctaLine",
+      "from": "fond helps you track what you actually have — so you only buy what you need. Link in bio.",
+      "to": "fond helps you track what you actually have — so you only buy what you need. Save it before your fridge does the forgetting. Follow for more, something's on the way.",
+      "rule": "setup-cta"
     }
   ]
 }

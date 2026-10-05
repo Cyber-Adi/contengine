@@ -157,13 +157,22 @@
       "declaresLoss": false,
       "copy": {
         "headline": "You don't have a \"nothing to eat\" problem. You have a \"can't see what you have\" problem.",
-        "ctaLine": "fond shows you what's in your fridge and what you can make with it. Link in bio."
+        "ctaLine": "fond shows you what's in your fridge and what you can make with it. Save this for your next grocery run. Follow for more, something's coming."
       },
       "threadState": {
         "progress": 1.0,
         "label": "Total",
         "tone": "good"
       }
+    }
+  ],
+  "ctaSwap": [
+    {
+      "slide": 7,
+      "field": "ctaLine",
+      "from": "fond shows you what's in your fridge and what you can make with it. Link in bio.",
+      "to": "fond shows you what's in your fridge and what you can make with it. Save this for your next grocery run. Follow for more, something's coming.",
+      "rule": "setup-cta"
     }
   ]
 }

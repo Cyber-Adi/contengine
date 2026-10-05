@@ -151,7 +151,7 @@
         "headline": "The price didn't change. Your serving count did.",
         "ctaLine": "fond tracks what you actually get per dollar, not what the box says.",
         "sendTrigger": "Send this to whoever does the groceries.",
-        "citation": "Join the waitlist - link in bio"
+        "citation": "Keep this one. Follow for more, we're working on something for this."
       },
       "threadState": {
         "progress": 1.0,
@@ -160,5 +160,14 @@
       }
     }
   ],
-  "hold": "HOLD-UNTIL-LAUNCH"
+  "ctaSwap": [
+    {
+      "slide": 7,
+      "field": "citation",
+      "from": "Join the waitlist - link in bio",
+      "to": "Keep this one. Follow for more, we're working on something for this.",
+      "rule": "setup-cta",
+      "heldBefore": true
+    }
+  ]
 }

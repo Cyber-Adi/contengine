@@ -159,13 +159,22 @@
       "declaresLoss": false,
       "copy": {
         "headline": "The label tells you when the manufacturer stops being responsible for quality. It says nothing about when the food stops being safe.",
-        "ctaLine": "fond tracks real shelf life - not label dates. Link in bio."
+        "ctaLine": "fond tracks real shelf life - not label dates. Save this for your next grocery run. Follow for more, something's coming."
       },
       "threadState": {
         "progress": 1.0,
         "label": "Ghost outline",
         "tone": "good"
       }
+    }
+  ],
+  "ctaSwap": [
+    {
+      "slide": 7,
+      "field": "ctaLine",
+      "from": "fond tracks real shelf life - not label dates. Link in bio.",
+      "to": "fond tracks real shelf life - not label dates. Save this for your next grocery run. Follow for more, something's coming.",
+      "rule": "setup-cta"
     }
   ]
 }

@@ -174,7 +174,7 @@
       "declaresLoss": false,
       "copy": {
         "headline": "fond tracks shelf life for 2,000+ items and tells you when food is about to expire — and exactly where to store it.",
-        "ctaLine": "Join the waitlist — link in bio.",
+        "ctaLine": "Worth saving. Follow along, we're building something for exactly this.",
         "citation": "USDA FoodData Central; UC Davis Postharvest Center; FDA Refrigerator & Freezer Storage Chart (2018); National Onion Association"
       },
       "threadState": {
@@ -182,6 +182,15 @@
         "label": "Complete",
         "tone": "good"
       }
+    }
+  ],
+  "ctaSwap": [
+    {
+      "slide": 8,
+      "field": "ctaLine",
+      "from": "Join the waitlist — link in bio.",
+      "to": "Worth saving. Follow along, we're building something for exactly this.",
+      "rule": "setup-cta"
     }
   ]
 }

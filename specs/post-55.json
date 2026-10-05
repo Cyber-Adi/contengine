@@ -168,7 +168,7 @@
         "headline": "You are not buying fresher vegetables. You are buying wetter ones.",
         "ctaLine": "Know what you brought home, and how long it actually has.",
         "sendTrigger": "Send this to whoever does the groceries.",
-        "citation": "Join the waitlist, link in bio."
+        "citation": "Keep this one. Follow for more, we're working on something for this."
       },
       "threadState": {
         "progress": 1.0,
@@ -188,5 +188,14 @@
         "why": "slide 2 copy is sparse in its original layout (fill below 55 percent); lossless layout swap among legal alternatives"
       }
     ]
-  }
+  },
+  "ctaSwap": [
+    {
+      "slide": 8,
+      "field": "citation",
+      "from": "Join the waitlist, link in bio.",
+      "to": "Keep this one. Follow for more, we're working on something for this.",
+      "rule": "setup-cta"
+    }
+  ]
 }

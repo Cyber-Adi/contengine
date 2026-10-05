@@ -143,12 +143,21 @@
       "declaresLoss": false,
       "copy": {
         "headline": "Grocery stores are designed to make you overbuy. Every extra item you don't eat is money in the trash.",
-        "ctaLine": "fond tracks what you actually use — so you buy what you need. Link in bio."
+        "ctaLine": "fond tracks what you actually use — so you buy what you need. Save it before your fridge does the forgetting. Follow for more, something's on the way."
       },
       "threadState": {
         "progress": 1,
         "tone": "good"
       }
+    }
+  ],
+  "ctaSwap": [
+    {
+      "slide": 7,
+      "field": "ctaLine",
+      "from": "fond tracks what you actually use — so you buy what you need. Link in bio.",
+      "to": "fond tracks what you actually use — so you buy what you need. Save it before your fridge does the forgetting. Follow for more, something's on the way.",
+      "rule": "setup-cta"
     }
   ]
 }

@@ -132,7 +132,7 @@
         "headline": "The cheapest upgrade to your kitchen isn't an appliance. It's putting old food in front of new food.",
         "ctaLine": "fond tracks dates for you - but FIFO costs $0. Start today.",
         "sendTrigger": "Send this to whoever cleans out the fridge.",
-        "citation": "Join the waitlist - link in bio"
+        "citation": "Worth saving. Follow along, we're building something for exactly this."
       },
       "threadState": {
         "progress": 1.0,
@@ -141,5 +141,14 @@
       }
     }
   ],
-  "hold": "HOLD-UNTIL-LAUNCH"
+  "ctaSwap": [
+    {
+      "slide": 6,
+      "field": "citation",
+      "from": "Join the waitlist - link in bio",
+      "to": "Worth saving. Follow along, we're building something for exactly this.",
+      "rule": "setup-cta",
+      "heldBefore": true
+    }
+  ]
 }

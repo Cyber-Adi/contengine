@@ -142,13 +142,22 @@
       "declaresLoss": false,
       "copy": {
         "headline": "We built an app that tracks all of this automatically.",
-        "ctaLine": "Link in bio."
+        "ctaLine": "Save this for your next grocery run. Follow for more, something's coming."
       },
       "threadState": {
         "progress": 1,
         "label": "One unit",
         "tone": "good"
       }
+    }
+  ],
+  "ctaSwap": [
+    {
+      "slide": 7,
+      "field": "ctaLine",
+      "from": "Link in bio.",
+      "to": "Save this for your next grocery run. Follow for more, something's coming.",
+      "rule": "setup-cta"
     }
   ]
 }

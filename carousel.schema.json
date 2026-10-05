@@ -184,6 +184,7 @@
             "type": "string",
             "enum": [
               "hero-statement",
+              "statement-xl",
               "hero-number",
               "split-compare",
               "stack-list",
@@ -669,6 +670,23 @@
         "HOLD-UNTIL-LAUNCH"
       ],
       "description": "Set when slide copy contains Tier 2/3 CTA text that is not yet true (setup phase). Held posts are not publishable until launch."
+    },
+    "ctaSwap": {
+      "type": "array",
+      "description": "Logged setup-phase substitution of the waitlist / link-in-bio / pre-order CTA by a line from gtm.json ctas.setup (tools/setup-cta.mjs). Reversible with --restore on launch day.",
+      "items": {
+        "type": "object",
+        "required": ["slide", "field", "from", "to", "rule"],
+        "additionalProperties": false,
+        "properties": {
+          "slide": { "type": "integer", "minimum": 1 },
+          "field": { "type": "string" },
+          "from": { "type": "string" },
+          "to": { "type": "string" },
+          "rule": { "const": "setup-cta" },
+          "heldBefore": { "type": "boolean" }
+        }
+      }
     }
   },
   "$comment": " | Layout-conditional content rules added 2026-09-20 after post-31 shipped empty split-compare panels past all six gates.",

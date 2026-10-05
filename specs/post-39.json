@@ -138,12 +138,21 @@
       "declaresLoss": false,
       "copy": {
         "headline": "Stop subscribing to groceries. Start seeing what you already bought.",
-        "ctaLine": "fond shows you everything in your kitchen — and what to cook with it. Link in bio."
+        "ctaLine": "fond shows you everything in your kitchen — and what to cook with it. Keep this one. Follow for more, we're working on something for this."
       },
       "threadState": {
         "progress": 1,
         "tone": "good"
       }
+    }
+  ],
+  "ctaSwap": [
+    {
+      "slide": 7,
+      "field": "ctaLine",
+      "from": "fond shows you everything in your kitchen — and what to cook with it. Link in bio.",
+      "to": "fond shows you everything in your kitchen — and what to cook with it. Keep this one. Follow for more, we're working on something for this.",
+      "rule": "setup-cta"
     }
   ]
 }

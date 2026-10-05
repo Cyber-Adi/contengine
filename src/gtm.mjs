@@ -36,7 +36,10 @@ export function honestyCheck(text, where = '') {
         why: 'Reads as a traction claim. Projections, never traction.' });
     }
   }
-  if (/\bcustomers?\b/i.test(hay) && !/founding member/i.test(hay)) {
+  // Framing applies to statements about fond / us only. A sentence about a third party
+  // ("meal kit companies ... customer retention") is not a traction claim.
+  const aboutUs = (hay.match(/[^.!?]+[.!?]*/g) || []).some((x) => /\bcustomers?\b/i.test(x) && /\b(fond|our|we|we're|we've|us|my)\b/i.test(x));
+  if (aboutUs && !/founding member/i.test(hay)) {
     found.push({ where, kind: 'framing', match: 'customer',
       why: gtm.honesty.requiredFraming.foundingMember });
   }

@@ -143,13 +143,22 @@
       "declaresLoss": false,
       "copy": {
         "headline": "We built an app that tracks all of this automatically.",
-        "ctaLine": "Link in bio."
+        "ctaLine": "Save it before your fridge does the forgetting. Follow for more, something's on the way."
       },
       "threadState": {
         "progress": 1,
         "label": "Contained",
         "tone": "good"
       }
+    }
+  ],
+  "ctaSwap": [
+    {
+      "slide": 7,
+      "field": "ctaLine",
+      "from": "Link in bio.",
+      "to": "Save it before your fridge does the forgetting. Follow for more, something's on the way.",
+      "rule": "setup-cta"
     }
   ]
 }

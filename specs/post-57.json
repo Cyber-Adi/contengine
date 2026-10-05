@@ -145,13 +145,22 @@
       "declaresLoss": false,
       "copy": {
         "headline": "Your herbs weren't fragile. They were just in the wrong place.",
-        "ctaLine": "fond tells you what's about to turn - and how to store it before it does. Link in bio."
+        "ctaLine": "fond tells you what's about to turn - and how to store it before it does. Worth saving. Follow along, we're building something for exactly this."
       },
       "threadState": {
         "progress": 1.0,
         "label": "Thriving",
         "tone": "good"
       }
+    }
+  ],
+  "ctaSwap": [
+    {
+      "slide": 7,
+      "field": "ctaLine",
+      "from": "fond tells you what's about to turn - and how to store it before it does. Link in bio.",
+      "to": "fond tells you what's about to turn - and how to store it before it does. Worth saving. Follow along, we're building something for exactly this.",
+      "rule": "setup-cta"
     }
   ]
 }

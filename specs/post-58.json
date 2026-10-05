@@ -132,13 +132,22 @@
       "declaresLoss": false,
       "copy": {
         "headline": "The freezer doesn't stop time. But it buys you weeks you were throwing away.",
-        "ctaLine": "We built an app that tracks what's about to expire - so you can freeze it in time. Link in bio."
+        "ctaLine": "We built an app that tracks what's about to expire - so you can freeze it in time. Save it before your fridge does the forgetting. Follow for more, something's on the way."
       },
       "threadState": {
         "progress": 1.0,
         "label": "Full tray",
         "tone": "good"
       }
+    }
+  ],
+  "ctaSwap": [
+    {
+      "slide": 6,
+      "field": "ctaLine",
+      "from": "We built an app that tracks what's about to expire - so you can freeze it in time. Link in bio.",
+      "to": "We built an app that tracks what's about to expire - so you can freeze it in time. Save it before your fridge does the forgetting. Follow for more, something's on the way.",
+      "rule": "setup-cta"
     }
   ]
 }

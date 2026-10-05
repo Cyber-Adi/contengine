@@ -197,7 +197,7 @@
         "headline": "Your fridge is full of food with more time than you think.",
         "ctaLine": "fond tracks the real window on everything you buy, so you stop guessing at labels.",
         "sendTrigger": "Send this to whoever cleans out the fridge.",
-        "citation": "Join the waitlist — link in bio"
+        "citation": "Worth saving. Follow along, we're building something for exactly this."
       },
       "threadState": {
         "progress": 1.0,
@@ -206,5 +206,14 @@
       }
     }
   ],
-  "hold": "HOLD-UNTIL-LAUNCH"
+  "ctaSwap": [
+    {
+      "slide": 8,
+      "field": "citation",
+      "from": "Join the waitlist — link in bio",
+      "to": "Worth saving. Follow along, we're building something for exactly this.",
+      "rule": "setup-cta",
+      "heldBefore": true
+    }
+  ]
 }

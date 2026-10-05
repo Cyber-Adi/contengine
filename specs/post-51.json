@@ -153,13 +153,22 @@
       "declaresLoss": false,
       "copy": {
         "headline": "The best deal in the grocery store isn't a sale. It's a sticker that appears twice a week at a predictable time.",
-        "ctaLine": "fond tracks your freezer so you always know what's worth buying when the sticker appears. Link in bio."
+        "ctaLine": "fond tracks your freezer so you always know what's worth buying when the sticker appears. Keep this one. Follow for more, we're working on something for this."
       },
       "threadState": {
         "progress": 1.0,
         "label": "10 PM",
         "tone": "good"
       }
+    }
+  ],
+  "ctaSwap": [
+    {
+      "slide": 7,
+      "field": "ctaLine",
+      "from": "fond tracks your freezer so you always know what's worth buying when the sticker appears. Link in bio.",
+      "to": "fond tracks your freezer so you always know what's worth buying when the sticker appears. Keep this one. Follow for more, we're working on something for this.",
+      "rule": "setup-cta"
     }
   ]
 }

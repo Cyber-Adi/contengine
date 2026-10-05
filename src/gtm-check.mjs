@@ -50,6 +50,22 @@ export function gtmCheck(spec, opts = {}) {
     }
   }
 
+  // 6.1c - setup-phase CTA swap (tools/setup-cta.mjs). The substituted line must come
+  // from the closed list gtm.ctas.setup; whatever else the field carries must be the
+  // original non-CTA text, verbatim. Anything else is an unlogged copy rewrite.
+  for (const w of spec.ctaSwap || []) {
+    const line = gtm.ctas.setup.find((l) => String(w.to).includes(l));
+    const rest = line ? String(w.to).replace(line, '').trim() : null;
+    if (!line || (rest && !String(w.from).includes(rest))) {
+      add('FAIL', 'cta-swap', `ctaSwap on slide ${w.slide} ${w.field} is not a gtm.ctas.setup line plus verbatim original text. Found: "${w.to}"`, w.slide);
+    } else if (spec.slides?.[w.slide - 1]?.copy?.[w.field] !== w.to) {
+      add('FAIL', 'cta-swap', `ctaSwap log for slide ${w.slide} ${w.field} does not match the copy actually in the spec.`, w.slide);
+    }
+  }
+  if (spec.ctaSwap?.length && launch.phase !== 'setup') {
+    add('WARN', 'cta-swap-active', 'Launch phase is live but setup CTA swap is still applied. Run tools/setup-cta.mjs --restore --write.');
+  }
+
   // 6.2 - hero numbers must trace to a sourced GTM stat.
   for (const s of spec.slides || []) {
     const hero = s.copy?.heroNumber;

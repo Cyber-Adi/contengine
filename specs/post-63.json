@@ -176,7 +176,7 @@
         "headline": "I do not think the answer to wasted food is telling people to care more. I think it is making the thing visible while there is still time to act on it.",
         "ctaLine": "Building an app that makes what is in your kitchen impossible to forget.",
         "sendTrigger": "Send this to whoever still has a fridge they are scared to open.",
-        "citation": "Join the waitlist, link in bio."
+        "citation": "Keep this one. Follow for more, we're working on something for this."
       },
       "threadState": {
         "progress": 1,
@@ -253,5 +253,14 @@
         "why": "slides 7 and 8 centre at 0.38 and 0.46 of frame height (need 0.12 apart)"
       }
     ]
-  }
+  },
+  "ctaSwap": [
+    {
+      "slide": 8,
+      "field": "citation",
+      "from": "Join the waitlist, link in bio.",
+      "to": "Keep this one. Follow for more, we're working on something for this.",
+      "rule": "setup-cta"
+    }
+  ]
 }

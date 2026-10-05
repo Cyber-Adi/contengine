@@ -4,6 +4,7 @@
 // fixture is worse than no gate, because it manufactures confidence.
 import fs from 'node:fs';
 import { gtmCheck } from './gtm-check.mjs';
+import { planSwaps, applySwapText, restoreText, swapText } from '../tools/setup-cta.mjs';
 import { gtm, launchCheck, ctaLine } from './gtm.mjs';
 import { validateSpec } from './validate.mjs';
 import { judge, hookShape } from './entropy.mjs';
@@ -281,6 +282,49 @@ t('held spec is not publishable', () => {
   assert(isPublishable({ provenance: 'brief' }), 'unheld brief ships');
   let threw = false; try { validateSpec({ ...spec(), hold: 'nope' }); } catch { threw = true; }
   assert(threw, 'invalid hold value rejected by schema');
+});
+
+console.log('\nSETUP CTA SWAP');
+const swapRaw = (n, ctaLine, hold) => JSON.stringify({ postNumber: n, title: 'fixture', pillar: 'The $2913 Problem', ctaTier: 'Tier 2', provenance: 'brief', gtmAngle: 'money-leak', slides: [{ index: 1, archetype: 'cta', copy: { headline: 'A clean headline about food.', ctaLine } }], ...(hold ? { hold: 'HOLD-UNTIL-LAUNCH' } : {}) }, null, 2) + '\n';
+const swapped = (n, ctaLine, hold) => { const raw = swapRaw(n, ctaLine, hold); return applySwapText(raw, planSwaps(JSON.parse(raw))); };
+t('swap is deterministic per post number', () => {
+  for (let n = 1; n < 9; n++) {
+    const w = planSwaps(JSON.parse(swapRaw(n, 'Join the waitlist - link in bio.')));
+    assert(w.length === 1 && w[0].to === gtm.ctas.setup[n % 4] && w[0].rule === 'setup-cta', `post ${n} wrong swap`);
+  }
+});
+t('swapped spec passes Gate 6', () => {
+  const sp = JSON.parse(swapped(7, 'Join the waitlist - link in bio.', true));
+  assert(!('hold' in sp) && sp.ctaSwap.length === 1, 'hold removed, swap logged');
+  assert(gtmCheck(sp, { launch: SETUP }).verdict === 'PASS', 'swapped spec must pass');
+});
+t('restore round-trips byte-identical (held and unheld)', () => {
+  for (const hold of [true, false]) {
+    const raw = swapRaw(7, 'Join the waitlist - link in bio.', hold);
+    assert(restoreText(swapped(7, 'Join the waitlist - link in bio.', hold)) === raw, `restore differs (hold=${hold})`);
+  }
+  const once = swapped(7, 'Link in bio.', false);
+  assert(restoreText(restoreText(once)) === restoreText(once), 'restore idempotent');
+  assert(planSwaps(JSON.parse(once)).length === 0, 'swap idempotent');
+});
+t('mixed field keeps the non-CTA sentence verbatim', () => {
+  const to = swapText('fond tracks what you use. Link in bio.', gtm.ctas.setup[0]);
+  assert(to === `fond tracks what you use. ${gtm.ctas.setup[0]}`, `got ${to}`);
+  assert(swapText('A value sentence only.', gtm.ctas.setup[0]) === null, 'no CTA, no swap');
+});
+t('customer framing: third-party sentence passes, fond traction claim still fails', () => {
+  const third = spec({}, { body: 'Meal kit companies have an average customer retention of 3-4 months.' });
+  assert(gtmCheck(third, { launch: SETUP }).verdict === 'PASS', 'third-party customer sentence must pass');
+  for (const txt of ['fond has customers who love it.', 'Our customers save money.', 'We have 40 customers.']) {
+    assert(gtmCheck(spec({}, { body: txt }), { launch: SETUP }).verdict === 'FAIL', `must fail: ${txt}`);
+  }
+});
+t('ctaSwap.to outside ctas.setup FAILS Gate 6', () => {
+  const sp = JSON.parse(swapped(7, 'Join the waitlist - link in bio.'));
+  const bad = { ...sp, slides: [{ ...sp.slides[0], copy: { ...sp.slides[0].copy, ctaLine: 'Follow us for updates.' } }], ctaSwap: [{ ...sp.ctaSwap[0], to: 'Follow us for updates.' }] };
+  assert(hasCheck(gtmCheck(bad, { launch: SETUP }), 'cta-swap', 'FAIL'), 'off-list swap must fail');
+  const left = { ...sp, slides: [{ ...sp.slides[0], copy: { ...sp.slides[0].copy, body: 'Join the waitlist.' } }] };
+  assert(hasCheck(gtmCheck(left, { launch: SETUP }), 'cta-not-live', 'FAIL'), 'leftover waitlist still fails');
 });
 
 console.log(`\n  ${pass} passed, ${fail} failed\n`);

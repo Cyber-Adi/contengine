@@ -164,7 +164,7 @@
         "headline": "The best kitchen habit isn't a recipe. It's seeing what you have before you decide what to buy.",
         "ctaLine": "fond does the audit for you, every day.",
         "sendTrigger": "Send this to whoever does the fridge clean-out.",
-        "citation": "Join the waitlist - link in bio"
+        "citation": "Save it before your fridge does the forgetting. Follow for more, something's on the way."
       },
       "threadState": {
         "progress": 1,
@@ -173,7 +173,6 @@
       }
     }
   ],
-  "hold": "HOLD-UNTIL-LAUNCH",
   "refinement": {
     "round": 0,
     "changes": [
@@ -220,5 +219,15 @@
         "why": "X-distinct: bottom-aligned diagram hashed alike with slide 5; centre keeps them distinct."
       }
     ]
-  }
+  },
+  "ctaSwap": [
+    {
+      "slide": 6,
+      "field": "citation",
+      "from": "Join the waitlist - link in bio",
+      "to": "Save it before your fridge does the forgetting. Follow for more, something's on the way.",
+      "rule": "setup-cta",
+      "heldBefore": true
+    }
+  ]
 }

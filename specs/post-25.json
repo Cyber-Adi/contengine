@@ -104,12 +104,21 @@
       "declaresLoss": false,
       "copy": {
         "headline": "$6 bird. 3 meals. Plus free stock for next week's soup.",
-        "ctaLine": "fond reminds you what's left in your fridge so nothing goes to waste. Link in bio."
+        "ctaLine": "fond reminds you what's left in your fridge so nothing goes to waste. Worth saving. Follow along, we're building something for exactly this."
       },
       "threadState": {
         "progress": 1,
         "tone": "good"
       }
+    }
+  ],
+  "ctaSwap": [
+    {
+      "slide": 5,
+      "field": "ctaLine",
+      "from": "fond reminds you what's left in your fridge so nothing goes to waste. Link in bio.",
+      "to": "fond reminds you what's left in your fridge so nothing goes to waste. Worth saving. Follow along, we're building something for exactly this.",
+      "rule": "setup-cta"
     }
   ]
 }

@@ -126,7 +126,7 @@
       "declaresLoss": false,
       "copy": {
         "headline": "The best ingredient in your kitchen costs nothing. It's already in your trash can.",
-        "ctaLine": "We built an app that helps you use every part of what you buy. Link in bio."
+        "ctaLine": "We built an app that helps you use every part of what you buy. Save it before your fridge does the forgetting. Follow for more, something's on the way."
       },
       "threadState": {
         "progress": 1,
@@ -209,5 +209,14 @@
         "why": "break the 3-light run created by the fondGreen ground restriction"
       }
     ]
-  }
+  },
+  "ctaSwap": [
+    {
+      "slide": 6,
+      "field": "ctaLine",
+      "from": "We built an app that helps you use every part of what you buy. Link in bio.",
+      "to": "We built an app that helps you use every part of what you buy. Save it before your fridge does the forgetting. Follow for more, something's on the way.",
+      "rule": "setup-cta"
+    }
+  ]
 }

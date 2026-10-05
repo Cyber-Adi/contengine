@@ -277,7 +277,7 @@
         "headline": "The money is not lost at the store. It is lost in the **fridge**.",
         "ctaLine": "fond watches the clock on everything you buy, so nothing goes quietly.",
         "sendTrigger": "Send this to whoever does the groceries.",
-        "citation": "Join the waitlist — link in bio"
+        "citation": "Worth saving. Follow along, we're building something for exactly this."
       },
       "threadState": {
         "progress": 1.0,
@@ -286,5 +286,14 @@
       }
     }
   ],
-  "hold": "HOLD-UNTIL-LAUNCH"
+  "ctaSwap": [
+    {
+      "slide": 8,
+      "field": "citation",
+      "from": "Join the waitlist — link in bio",
+      "to": "Worth saving. Follow along, we're building something for exactly this.",
+      "rule": "setup-cta",
+      "heldBefore": true
+    }
+  ]
 }

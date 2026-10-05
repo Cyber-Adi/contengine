@@ -106,12 +106,21 @@
       "copy": {
         "headline": "Ice cream.",
         "body": "Freeze sliced bananas. Blend frozen. That's it. It's creamy, it's sweet, it's ice cream. No dairy. No sugar. No machine.",
-        "ctaLine": "fond alerts you before bananas go bad — so you freeze them instead of trashing them. Link in bio."
+        "ctaLine": "fond alerts you before bananas go bad — so you freeze them instead of trashing them. Worth saving. Follow along, we're building something for exactly this."
       },
       "threadState": {
         "progress": 1,
         "tone": "good"
       }
+    }
+  ],
+  "ctaSwap": [
+    {
+      "slide": 5,
+      "field": "ctaLine",
+      "from": "fond alerts you before bananas go bad — so you freeze them instead of trashing them. Link in bio.",
+      "to": "fond alerts you before bananas go bad — so you freeze them instead of trashing them. Worth saving. Follow along, we're building something for exactly this.",
+      "rule": "setup-cta"
     }
   ]
 }

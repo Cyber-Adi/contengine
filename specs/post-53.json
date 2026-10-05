@@ -170,13 +170,22 @@
       "declaresLoss": false,
       "copy": {
         "headline": "Your fridge isn't too full. Half of what's in it doesn't belong there.",
-        "ctaLine": "fond tracks storage location and shelf life for everything in your kitchen - no guessing. Link in bio."
+        "ctaLine": "fond tracks storage location and shelf life for everything in your kitchen - no guessing. Worth saving. Follow along, we're building something for exactly this."
       },
       "threadState": {
         "progress": 1.0,
         "label": "Balanced",
         "tone": "good"
       }
+    }
+  ],
+  "ctaSwap": [
+    {
+      "slide": 7,
+      "field": "ctaLine",
+      "from": "fond tracks storage location and shelf life for everything in your kitchen - no guessing. Link in bio.",
+      "to": "fond tracks storage location and shelf life for everything in your kitchen - no guessing. Worth saving. Follow along, we're building something for exactly this.",
+      "rule": "setup-cta"
     }
   ]
 }

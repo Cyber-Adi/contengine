@@ -162,13 +162,22 @@
       "declaresLoss": false,
       "copy": {
         "headline": "The store is designed around where you look. Spending less starts with looking somewhere else.",
-        "ctaLine": "We're building an app that helps you waste less of what you already bought. Link in bio."
+        "ctaLine": "We're building an app that helps you waste less of what you already bought. Keep this one. Follow for more, we're working on something for this."
       },
       "threadState": {
         "progress": 1.0,
         "label": "Spotlit",
         "tone": "good"
       }
+    }
+  ],
+  "ctaSwap": [
+    {
+      "slide": 7,
+      "field": "ctaLine",
+      "from": "We're building an app that helps you waste less of what you already bought. Link in bio.",
+      "to": "We're building an app that helps you waste less of what you already bought. Keep this one. Follow for more, we're working on something for this.",
+      "rule": "setup-cta"
     }
   ]
 }

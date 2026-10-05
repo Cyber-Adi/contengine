@@ -180,7 +180,7 @@
         "headline": "Your fridge isn't failing you. You just can't see what's in it.",
         "ctaLine": "fond tracks every item and alerts you before anything becomes a leftover graveyard.",
         "sendTrigger": "Send this to whoever hates cleaning out the fridge.",
-        "citation": "Join the waitlist - link in bio"
+        "citation": "Save this for your next grocery run. Follow for more, something's coming."
       },
       "threadState": {
         "progress": 1.0,
@@ -189,5 +189,14 @@
       }
     }
   ],
-  "hold": "HOLD-UNTIL-LAUNCH"
+  "ctaSwap": [
+    {
+      "slide": 7,
+      "field": "citation",
+      "from": "Join the waitlist - link in bio",
+      "to": "Save this for your next grocery run. Follow for more, something's coming.",
+      "rule": "setup-cta",
+      "heldBefore": true
+    }
+  ]
 }
