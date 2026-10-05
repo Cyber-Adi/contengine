@@ -235,5 +235,72 @@
       "consecutiveMisses": 3,
       "enforced": "src/decide.mjs, not a note in a doc."
     }
+  },
+  "hashtags": {
+    "The $2913 Problem": [
+      "#foodwaste",
+      "#grocerybudget",
+      "#savemoney",
+      "#budgettips",
+      "#frugalliving"
+    ],
+    "Store It Right": [
+      "#foodwaste",
+      "#fridgeorganization",
+      "#foodstorage",
+      "#kitchentips",
+      "#zerowastekitchen"
+    ],
+    "Supermarket Secrets": [
+      "#foodwaste",
+      "#grocerybudget",
+      "#grocerytips",
+      "#savemoney",
+      "#frugalliving"
+    ],
+    "Waste Hacks": [
+      "#foodwaste",
+      "#zerowastekitchen",
+      "#kitchenhacks",
+      "#mealprep",
+      "#sustainableliving"
+    ],
+    "Origin Story": [
+      "#foodwaste",
+      "#smallbusiness",
+      "#buildinpublic",
+      "#zerowastekitchen"
+    ]
+  },
+  "tiktokKeywords": {
+    "The $2913 Problem": [
+      "food waste",
+      "grocery budget",
+      "save money on groceries",
+      "wasted food cost"
+    ],
+    "Store It Right": [
+      "food storage tips",
+      "keep produce fresh",
+      "fridge organization",
+      "reduce food waste"
+    ],
+    "Supermarket Secrets": [
+      "grocery store tricks",
+      "grocery budget",
+      "shrinkflation",
+      "save money on groceries"
+    ],
+    "Waste Hacks": [
+      "zero waste kitchen",
+      "kitchen hacks",
+      "use up leftovers",
+      "reduce food waste"
+    ],
+    "Origin Story": [
+      "food waste",
+      "building in public",
+      "startup story"
+    ]
   }
 }
