@@ -258,6 +258,9 @@ function layoutHtml(spec, slide, S = 1) {
         <div class="dia">${diagramHtml(slide.diagram, slide.background, accent)}</div>
         ${body}${cite}`;
     }
+    case 'statement-xl': { // headline-only poster: one display step above hook, grown to fit the frame
+      return `${eyebrow}<h1 class="h-mid h-xl" style="color:${fg}">${rich(c.headline, accent)}</h1>${body}${cite}`;
+    }
     default: { // hero-statement
       return `${eyebrow}<h1 class="h-hook" style="color:${fg}">${rich(c.headline, accent)}</h1>${body}${cite}`;
     }
@@ -315,7 +318,26 @@ function fillScript(aim, S = 1, idx = 0) {
     // children, but never past the point where one gap exceeds ${tokens.rules.optical.maxGapShare} of the group
     // (Gate 5.1 fails a hole wider than ${tokens.rules.optical.maxDeadBandPct}), so sparse copy stays sparse
     // rather than being padded into a hole.
+    const xl=content.querySelector('.h-xl');
+    if(xl){ // statement-xl: largest display step (token ceiling) at which the headline clears frame and margins
+      const pad=parseFloat(getComputedStyle(content).paddingLeft)||0, sl=document.querySelector('.slide').getBoundingClientRect();
+      const fmax=${tokens.type.display.sizes.statement.max}*${S}, fmin=${tokens.type.display.sizes.statement.min}*${S};
+      for(let f=fmax; f>=fmin; f*=0.97){ xl.style.fontSize=f+'px';
+        const r=xl.getBoundingClientRect(), cb=content.getBoundingClientRect();
+        if(xl.scrollWidth<=xl.clientWidth+1 && r.left>=sl.left+pad-1 && r.right<=sl.right-pad+1 && r.bottom<=cb.bottom-${aim}*0+1 && r.height<=${aim}*1.12*cb.height) break; }
+      return;
+    }
     if(!content.classList.contains('lay-hero-number')) return;
+    { // poster step: a short hero number grows toward the token ceiling while it still clears the margins
+      const hn=content.querySelector('.hero-num');
+      const ks=[...content.children].filter(k=>!k.classList.contains('swipe')&&k.getBoundingClientRect().height>0);
+      const Tn=ks.reduce((a,k)=>a+k.getBoundingClientRect().height,0), nn=Math.max(1,ks.length-1);
+      // only a slide that gap-opening alone cannot bring to the fill floor (every other hero-number keeps its size)
+      if(hn && Tn/(1-${tokens.rules.optical.maxGapShare}*nn) < ${tokens.rules.optical.minFillRatio}*1.08*cr.height){ const pad=parseFloat(getComputedStyle(content).paddingLeft)||0, sl=document.querySelector('.slide').getBoundingClientRect();
+        const f0=parseFloat(getComputedStyle(hn).fontSize), fmax=${tokens.type.numeric.sizes.poster.max}*${S};
+        const sp=document.createElement('span'); sp.style.cssText='display:inline-block;white-space:nowrap'; while(hn.firstChild) sp.appendChild(hn.firstChild); hn.appendChild(sp);
+        for(let f=fmax; f>f0; f*=0.97){ hn.style.fontSize=f+'px'; const r=sp.getBoundingClientRect(); if(r.right<=sl.right-pad-1) break; hn.style.fontSize=f0+'px'; }
+        const hc=content.querySelector('.hero-cap'); if(hc){ const c0=parseFloat(getComputedStyle(hc).fontSize); hc.style.fontSize=Math.max(c0,${tokens.type.numeric.sizes.poster.captionMax}*${S})+'px'; } } }
     // The swipe pill is a trailing flourish, not copy: it keeps its natural gap.
     const kids=[...content.children].filter(k=>!k.classList.contains('swipe')&&k.getBoundingClientRect().height>0);
     if(kids.length<2) return;
@@ -336,7 +358,7 @@ function fillScript(aim, S = 1, idx = 0) {
     return {top:Math.max(top,cr.top),bot:Math.min(bot,cr.bottom)};};
   // Headline first: it may grow to its type ceiling (hook ceiling on slide 2, reframe ceiling after).
   const hd=content.querySelector('.h-mid');
-  if(hd){ const cap=(${idx}<=2?${tokens.type.display.sizes.hook.max}:${tokens.type.display.sizes.reframe.max})*${S};
+  if(hd){ const cap=(hd.classList.contains('h-xl')?${tokens.type.display.sizes.statement.max}:${idx}<=2?${tokens.type.display.sizes.hook.max}:${tokens.type.display.sizes.reframe.max})*${S};
     const f0=parseFloat(getComputedStyle(hd).fontSize), pad=parseFloat(getComputedStyle(content).paddingLeft)||0;
     const sl=document.querySelector('.slide').getBoundingClientRect();
     const fits=()=>{const r=hd.getBoundingClientRect(), e=extent();
@@ -385,7 +407,7 @@ function fillScript(aim, S = 1, idx = 0) {
   // size down toward its token floor (hook min or reframe min). Copy is never touched.
   (()=>{
     const hd=content.querySelector('.h-mid,.h-hook'); if(!hd||over()<=0) return;
-    const fmin=(hd.classList.contains('h-hook')?${tokens.type.display.sizes.hook.min}:${tokens.type.display.sizes.reframe.min})*${S};
+    const fmin=(hd.classList.contains('h-xl')?${tokens.type.display.sizes.statement.min}:hd.classList.contains('h-hook')?${tokens.type.display.sizes.hook.min}:${tokens.type.display.sizes.reframe.min})*${S};
     let f=parseFloat(getComputedStyle(hd).fontSize);
     for(let k=0;k<60&&over()>0&&f>fmin;k++){ f=Math.max(fmin,f*0.97); hd.style.fontSize=f+'px'; }
   })();
@@ -446,6 +468,7 @@ export function wrapSlideHtml(spec, rawSlide, { debug = false, canvas = 'ig' } =
   line-height:1.03;letter-spacing:-.015em;text-align:left;max-width:13.5ch;text-wrap:balance}
 .h-mid{font-family:${T.display.stack};font-weight:700;font-size:64px;
   line-height:1.06;letter-spacing:-.012em;text-align:left;max-width:16ch;text-wrap:balance}
+.h-mid.h-xl{max-width:none;line-height:1.02;letter-spacing:-.018em}
 .h-sub{font-family:${T.display.stack};font-weight:700;font-size:${T.display.sizes.reframe.min}px;
   line-height:1.08;letter-spacing:-.012em;text-align:left;max-width:17ch;text-wrap:balance}
 .h-cta{font-family:${T.display.stack};font-weight:700;font-size:${T.display.sizes.reframe.min}px;

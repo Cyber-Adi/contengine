@@ -46,7 +46,7 @@
       "index": 2,
       "archetype": "backupHook",
       "background": "dark",
-      "layout": "hero-statement",
+      "layout": "statement-xl",
       "accent": "steelBlue",
       "declaresLoss": false,
       "copy": {
@@ -233,6 +233,13 @@
         "from": "center",
         "to": "top",
         "why": "slides 7 and 8 centre at 0.39 and 0.46 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 2,
+        "field": "layout",
+        "from": "hero-statement",
+        "to": "statement-xl",
+        "why": "slides 1 and 2 were both headline-only hero-statement (X-distinct) and the short slide-2 headline filled <55% of its frame (G5.5); statement-xl is the token-defined large-scale headline-only layout"
       }
     ]
   }

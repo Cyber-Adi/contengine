@@ -44,7 +44,7 @@
       "index": 2,
       "archetype": "backupHook",
       "background": "dark",
-      "layout": "hero-statement",
+      "layout": "statement-xl",
       "accent": "harvestGold",
       "declaresLoss": false,
       "copy": {
@@ -165,7 +165,7 @@
         "headline": "A list is immune to a playlist.",
         "ctaLine": "fond builds yours from what your kitchen actually needs.",
         "sendTrigger": "Send this to whoever does the groceries.",
-        "citation": "Join the waitlist - link in bio"
+        "citation": "Worth saving. Follow along, we're building something for exactly this."
       },
       "threadState": {
         "progress": 1.0,
@@ -173,5 +173,26 @@
         "tone": "good"
       }
     }
-  ]
+  ],
+  "ctaSwap": [
+    {
+      "slide": 8,
+      "field": "citation",
+      "from": "Join the waitlist - link in bio",
+      "to": "Worth saving. Follow along, we're building something for exactly this.",
+      "rule": "setup-cta"
+    }
+  ],
+  "refinement": {
+    "round": 0,
+    "changes": [
+      {
+        "slide": 2,
+        "field": "layout",
+        "from": "hero-statement",
+        "to": "statement-xl",
+        "why": "slides 1 and 2 were both headline-only hero-statement (X-distinct) and the short slide-2 headline filled <55% of its frame (G5.5); statement-xl is the token-defined large-scale headline-only layout"
+      }
+    ]
+  }
 }
