@@ -1,0 +1,109 @@
+{
+  "post": 39,
+  "title": "The Meal Kit Math",
+  "provenance": "converted-from-notion-script",
+  "verdict": "PASS",
+  "fails": 0,
+  "warns": 9,
+  "ocr": "skipped (opt-in: QA_OCR=1 or --ocr, run at batch end)",
+  "normalizations": [
+    {
+      "slide": 2,
+      "field": "copy.items[0]",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 3,
+      "field": "copy.headline",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 4,
+      "field": "copy.items[0]",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 4,
+      "field": "copy.items[1]",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 6,
+      "field": "copy.headline",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 6,
+      "field": "copy.body",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 7,
+      "field": "copy.ctaLine",
+      "rule": "apostrophe",
+      "count": 1
+    }
+  ],
+  "findings": [
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 1,
+      "msg": "content occupies 42% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.4-orphan",
+      "level": "WARN",
+      "slide": 2,
+      "msg": "headline ends on an orphan: 'serving.'"
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 6,
+      "msg": "content occupies 54% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.4-orphan",
+      "level": "WARN",
+      "slide": 7,
+      "msg": "headline ends on an orphan: 'bought.'"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 3,
+      "msg": "slides 2 and 3 centre at 36% and 41% of frame height, 6% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 4,
+      "msg": "slides 3 and 4 centre at 41% and 33% of frame height, 8% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 5,
+      "msg": "slides 4 and 5 centre at 33% and 36% of frame height, 3% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 6,
+      "msg": "slides 5 and 6 centre at 36% and 47% of frame height, 11% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 7,
+      "msg": "slides 6 and 7 centre at 47% and 35% of frame height, 12% apart (need 12%)"
+    }
+  ]
+}

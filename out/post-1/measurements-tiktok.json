@@ -1,0 +1,1287 @@
+[
+  {
+    "index": 1,
+    "archetype": "hook",
+    "layout": "hero-statement",
+    "valign": "bottom",
+    "normalizations": [],
+    "declaresLoss": false,
+    "background": "dark",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [],
+    "accents": [
+      "rgb(245, 242, 236)",
+      "rgb(0, 0, 0)",
+      "rgb(217, 164, 65)",
+      "rgb(107, 114, 128)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "h-hook",
+        "svg": false,
+        "text": "The brands at your eye level paid to be there.",
+        "words": 10,
+        "chars": 46,
+        "color": "rgb(245, 242, 236)",
+        "size": 128,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1630,
+          "w": 1115,
+          "h": 395
+        },
+        "lines": [
+          "The brands at your",
+          "eye level paid to",
+          "be there."
+        ]
+      },
+      {
+        "cls": "swipe-l",
+        "svg": false,
+        "text": "Swipe",
+        "words": 1,
+        "chars": 5,
+        "color": "rgb(245, 242, 236)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 253,
+          "y": 2050,
+          "w": 97,
+          "h": 52
+        },
+        "lines": null
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "Blank tags",
+        "words": 2,
+        "chars": 10,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2282,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "1/7",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1254,
+          "y": 2441,
+          "w": 58,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 2134,
+      "height": 2134
+    },
+    "threadBox": {
+      "top": 2134,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-1/slides-tiktok/slide-01.png"
+  },
+  {
+    "index": 2,
+    "archetype": "backupHook",
+    "layout": "stack-list",
+    "valign": "center",
+    "normalizations": [],
+    "declaresLoss": false,
+    "background": "dark",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [
+      {
+        "cls": "li-t",
+        "text": "often $250 to $1,000+ per item per store —",
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif"
+      },
+      {
+        "cls": "thread-label",
+        "text": "1 paid",
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif"
+      }
+    ],
+    "accents": [
+      "rgb(245, 242, 236)",
+      "rgb(0, 0, 0)",
+      "rgb(217, 164, 65)",
+      "rgb(107, 114, 128)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "h-mid",
+        "svg": false,
+        "text": "Grocery stores sell shelf space like real estate.",
+        "words": 8,
+        "chars": 49,
+        "color": "rgb(245, 242, 236)",
+        "size": 128,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 333,
+          "w": 1184,
+          "h": 407
+        },
+        "lines": [
+          "Grocery stores sell",
+          "shelf space like",
+          "real estate."
+        ]
+      },
+      {
+        "cls": "li-n",
+        "svg": false,
+        "text": "01",
+        "words": 1,
+        "chars": 2,
+        "color": "rgb(217, 164, 65)",
+        "size": 112,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 888,
+          "w": 200,
+          "h": 112
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-t",
+        "svg": false,
+        "text": "Premium brands pay slotting fees —",
+        "words": 6,
+        "chars": 34,
+        "color": "rgb(245, 242, 236)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 349,
+          "y": 909,
+          "w": 963,
+          "h": 70
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-n",
+        "svg": false,
+        "text": "02",
+        "words": 1,
+        "chars": 2,
+        "color": "rgb(217, 164, 65)",
+        "size": 112,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1206,
+          "w": 200,
+          "h": 112
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-t",
+        "svg": false,
+        "text": "often $250 to $1,000+ per item per store —",
+        "words": 9,
+        "chars": 42,
+        "color": "rgb(245, 242, 236)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 349,
+          "y": 1191,
+          "w": 963,
+          "h": 141
+        },
+        "lines": [
+          "often $250 to $1,000+ per",
+          "item per store —"
+        ]
+      },
+      {
+        "cls": "li-n",
+        "svg": false,
+        "text": "03",
+        "words": 1,
+        "chars": 2,
+        "color": "rgb(217, 164, 65)",
+        "size": 112,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1524,
+          "w": 200,
+          "h": 112
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-t",
+        "svg": false,
+        "text": "just to sit at eye level.",
+        "words": 6,
+        "chars": 25,
+        "color": "rgb(245, 242, 236)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 349,
+          "y": 1545,
+          "w": 963,
+          "h": 70
+        },
+        "lines": null
+      },
+      {
+        "cls": "cite",
+        "svg": false,
+        "text": "Nielsen via Pantry.ai",
+        "words": 3,
+        "chars": 21,
+        "color": "rgb(107, 114, 128)",
+        "size": 32,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1783,
+          "w": 1184,
+          "h": 43
+        },
+        "lines": null
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "1 paid",
+        "words": 2,
+        "chars": 6,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2282,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "2/7",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1243,
+          "y": 2441,
+          "w": 69,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 2134,
+      "height": 2134
+    },
+    "threadBox": {
+      "top": 2134,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-1/slides-tiktok/slide-02.png"
+  },
+  {
+    "index": 3,
+    "archetype": "value",
+    "layout": "hero-statement",
+    "valign": "bottom",
+    "normalizations": [
+      {
+        "slide": 3,
+        "field": "copy.body",
+        "rule": "apostrophe",
+        "count": 2
+      }
+    ],
+    "declaresLoss": false,
+    "background": "light",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [
+      {
+        "cls": "h-hook",
+        "text": "Products at eye level sell 30–35% more than products on the ",
+        "family": "\"Playfair Display\", Georgia, serif"
+      },
+      {
+        "cls": "thread-label",
+        "text": "2 paid",
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif"
+      }
+    ],
+    "accents": [
+      "rgb(20, 22, 26)",
+      "rgb(107, 114, 128)",
+      "rgb(0, 0, 0)",
+      "rgb(74, 123, 166)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "h-hook",
+        "svg": false,
+        "text": "Products at eye level sell 30–35% more than products on the bottom shelf.",
+        "words": 13,
+        "chars": 73,
+        "color": "rgb(20, 22, 26)",
+        "size": 128,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 987,
+          "w": 1115,
+          "h": 659
+        },
+        "lines": [
+          "Products at eye",
+          "level sell 30–35%",
+          "more than products",
+          "on the bottom",
+          "shelf."
+        ]
+      },
+      {
+        "cls": "body",
+        "svg": false,
+        "text": "Not because they’re better. Because your neck doesn’t have to move.",
+        "words": 11,
+        "chars": 67,
+        "color": "rgb(20, 22, 26)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1689,
+          "w": 803,
+          "h": 221
+        },
+        "lines": [
+          "Not because they’re better.",
+          "Because your neck doesn’t",
+          "have to move."
+        ]
+      },
+      {
+        "cls": "cite",
+        "svg": false,
+        "text": "PlanOHero retail study, 2025",
+        "words": 4,
+        "chars": 28,
+        "color": "rgb(107, 114, 128)",
+        "size": 32,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1953,
+          "w": 1184,
+          "h": 43
+        },
+        "lines": null
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "2 paid",
+        "words": 2,
+        "chars": 6,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2282,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "3/7",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1244,
+          "y": 2441,
+          "w": 68,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 2134,
+      "height": 2134
+    },
+    "threadBox": {
+      "top": 2134,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-1/slides-tiktok/slide-03.png"
+  },
+  {
+    "index": 4,
+    "archetype": "value",
+    "layout": "split-compare",
+    "valign": "center",
+    "normalizations": [
+      {
+        "slide": 4,
+        "field": "copy.items[1]",
+        "rule": "apostrophe",
+        "count": 1
+      }
+    ],
+    "declaresLoss": false,
+    "background": "dark",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [
+      {
+        "cls": "thread-label",
+        "text": "3 paid",
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif"
+      }
+    ],
+    "accents": [
+      "rgb(245, 242, 236)",
+      "rgb(0, 0, 0)",
+      "rgb(107, 114, 128)",
+      "rgb(217, 164, 65)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "h-mid",
+        "svg": false,
+        "text": "The store-brand version of the same product?",
+        "words": 7,
+        "chars": 44,
+        "color": "rgb(245, 242, 236)",
+        "size": 96,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 304,
+          "w": 991,
+          "h": 305
+        },
+        "lines": [
+          "The store-brand version",
+          "of the same",
+          "product?"
+        ]
+      },
+      {
+        "cls": "col-i",
+        "svg": false,
+        "text": "01",
+        "words": 1,
+        "chars": 2,
+        "color": "rgb(107, 114, 128)",
+        "size": 186.67,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 177,
+          "y": 710,
+          "w": 475,
+          "h": 187
+        },
+        "lines": null
+      },
+      {
+        "cls": "col-t",
+        "svg": false,
+        "text": "Bottom shelf. Always.",
+        "words": 3,
+        "chars": 21,
+        "color": "rgb(245, 242, 236)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 177,
+          "y": 1655,
+          "w": 475,
+          "h": 143
+        },
+        "lines": [
+          "Bottom shelf.",
+          "Always."
+        ]
+      },
+      {
+        "cls": "col-i",
+        "svg": false,
+        "text": "02",
+        "words": 1,
+        "chars": 2,
+        "color": "rgb(217, 164, 65)",
+        "size": 186.67,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 788,
+          "y": 710,
+          "w": 475,
+          "h": 187
+        },
+        "lines": null
+      },
+      {
+        "cls": "col-t",
+        "svg": false,
+        "text": "You have to bend down to save money. That’s by design.",
+        "words": 11,
+        "chars": 54,
+        "color": "rgb(245, 242, 236)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 788,
+          "y": 1512,
+          "w": 475,
+          "h": 286
+        },
+        "lines": [
+          "You have to",
+          "bend down to",
+          "save money. That’s",
+          "by design."
+        ]
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "3 paid",
+        "words": 2,
+        "chars": 6,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2282,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "4/7",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1241,
+          "y": 2441,
+          "w": 71,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 2134,
+      "height": 2134
+    },
+    "threadBox": {
+      "top": 2134,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-1/slides-tiktok/slide-04.png"
+  },
+  {
+    "index": 5,
+    "archetype": "value",
+    "layout": "hero-statement",
+    "valign": "bottom",
+    "normalizations": [
+      {
+        "slide": 5,
+        "field": "copy.body",
+        "rule": "apostrophe",
+        "count": 1
+      }
+    ],
+    "declaresLoss": false,
+    "background": "dark",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [
+      {
+        "cls": "h-hook",
+        "text": "In the freezer aisle, a single shelf slot can cost manufactu",
+        "family": "\"Playfair Display\", Georgia, serif"
+      },
+      {
+        "cls": "thread-label",
+        "text": "4 paid",
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif"
+      }
+    ],
+    "accents": [
+      "rgb(245, 242, 236)",
+      "rgb(107, 114, 128)",
+      "rgb(0, 0, 0)",
+      "rgb(217, 164, 65)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "h-hook",
+        "svg": false,
+        "text": "In the freezer aisle, a single shelf slot can cost manufacturers up to $9,000 in",
+        "words": 17,
+        "chars": 96,
+        "color": "rgb(245, 242, 236)",
+        "size": 128,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1003,
+          "w": 1115,
+          "h": 791
+        },
+        "lines": [
+          "In the freezer",
+          "aisle, a single",
+          "shelf slot can",
+          "cost manufacturers up",
+          "to $9,000 in",
+          "smaller chains."
+        ]
+      },
+      {
+        "cls": "body",
+        "svg": false,
+        "text": "In major chains, it’s six figures.",
+        "words": 6,
+        "chars": 34,
+        "color": "rgb(245, 242, 236)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1836,
+          "w": 803,
+          "h": 74
+        },
+        "lines": null
+      },
+      {
+        "cls": "cite",
+        "svg": false,
+        "text": "Frozen & Refrigerated Foods trade publication",
+        "words": 6,
+        "chars": 45,
+        "color": "rgb(107, 114, 128)",
+        "size": 32,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1953,
+          "w": 1184,
+          "h": 43
+        },
+        "lines": null
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "4 paid",
+        "words": 2,
+        "chars": 6,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2282,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "5/7",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1243,
+          "y": 2441,
+          "w": 69,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 2134,
+      "height": 2134
+    },
+    "threadBox": {
+      "top": 2134,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-1/slides-tiktok/slide-05.png"
+  },
+  {
+    "index": 6,
+    "archetype": "value",
+    "layout": "stack-list",
+    "valign": "center",
+    "normalizations": [
+      {
+        "slide": 6,
+        "field": "copy.items[0]",
+        "rule": "apostrophe",
+        "count": 2
+      },
+      {
+        "slide": 6,
+        "field": "copy.items[1]",
+        "rule": "apostrophe",
+        "count": 1
+      }
+    ],
+    "declaresLoss": false,
+    "background": "light",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [
+      {
+        "cls": "thread-label",
+        "text": "5 paid",
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif"
+      }
+    ],
+    "accents": [
+      "rgb(20, 22, 26)",
+      "rgb(0, 0, 0)",
+      "rgb(74, 123, 166)",
+      "rgb(107, 114, 128)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "h-mid",
+        "svg": false,
+        "text": "Every aisle is a bidding war between brands.",
+        "words": 8,
+        "chars": 44,
+        "color": "rgb(20, 22, 26)",
+        "size": 96,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 702,
+          "w": 991,
+          "h": 204
+        },
+        "lines": [
+          "Every aisle is a",
+          "bidding war between brands."
+        ]
+      },
+      {
+        "cls": "li-n",
+        "svg": false,
+        "text": "01",
+        "words": 1,
+        "chars": 2,
+        "color": "rgb(74, 123, 166)",
+        "size": 112,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1021,
+          "w": 200,
+          "h": 112
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-t",
+        "svg": false,
+        "text": "You’re walking through it thinking you’re choosing.",
+        "words": 7,
+        "chars": 51,
+        "color": "rgb(20, 22, 26)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 349,
+          "y": 1006,
+          "w": 963,
+          "h": 141
+        },
+        "lines": [
+          "You’re walking through it",
+          "thinking you’re choosing."
+        ]
+      },
+      {
+        "cls": "li-n",
+        "svg": false,
+        "text": "02",
+        "words": 1,
+        "chars": 2,
+        "color": "rgb(74, 123, 166)",
+        "size": 112,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1273,
+          "w": 200,
+          "h": 112
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-t",
+        "svg": false,
+        "text": "You’re being guided.",
+        "words": 3,
+        "chars": 20,
+        "color": "rgb(20, 22, 26)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 349,
+          "y": 1294,
+          "w": 963,
+          "h": 70
+        },
+        "lines": null
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "5 paid",
+        "words": 2,
+        "chars": 6,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2282,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "6/7",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1242,
+          "y": 2441,
+          "w": 70,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 2134,
+      "height": 2134
+    },
+    "threadBox": {
+      "top": 2134,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-1/slides-tiktok/slide-06.png"
+  },
+  {
+    "index": 7,
+    "archetype": "reframe",
+    "layout": "hero-statement",
+    "valign": "bottom",
+    "normalizations": [],
+    "declaresLoss": false,
+    "background": "dark",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [],
+    "accents": [
+      "rgb(245, 242, 236)",
+      "rgb(107, 114, 128)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "h-hook",
+        "svg": false,
+        "text": "Next time you reach for something at eye level — look down.",
+        "words": 12,
+        "chars": 59,
+        "color": "rgb(245, 242, 236)",
+        "size": 128,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1578,
+          "w": 1115,
+          "h": 527
+        },
+        "lines": [
+          "Next time you",
+          "reach for something",
+          "at eye level",
+          "— look down."
+        ]
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "All paid",
+        "words": 2,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2282,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "7/7",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1248,
+          "y": 2441,
+          "w": 64,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 2134,
+      "height": 2134
+    },
+    "threadBox": {
+      "top": 2134,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-1/slides-tiktok/slide-07.png"
+  }
+]

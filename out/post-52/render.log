@@ -1,0 +1,22 @@
+valid: specs/post-52.json
+  gate 6 -> PASS  (0 fail, 0 warn)
+  downsampled 7 slides -> 1440x1800 (Lanczos)
+rendered 7 slides (ig) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-52/slides
+  contact sheet -> out/post-52/contact-sheet.png  (7 slides, 1450x904)
+  feed-scale thumbs -> out/post-52/thumbs.png  (rendered at 200px wide)
+
+  QA — post 52: The Takeout Tax: You Have $40 of Food in Your Fridge. You Ordered Delivery Anyway.
+  verdict: PASS   fails=0  warns=8   ocr: skipped
+  typographic normalizer: 21 substitution(s) logged (apostrophe, double-quote-close, double-quote-open, spaced-hyphen-to-en-dash)
+    [WARN] G5.4-orphan slide 2: headline ends on an orphan: 'week.'
+    [WARN] G5.4-orphan slide 4: headline ends on an orphan: 'eggs.'
+    [WARN] G5.4-orphan slide 7: headline ends on an orphan: 'problem.'
+    [WARN] G5.7-rhythm-centroid slide 2: slides 1 and 2 centre at 35% and 36% of frame height, 2% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 3: slides 2 and 3 centre at 36% and 38% of frame height, 2% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 4: slides 3 and 4 centre at 38% and 37% of frame height, 1% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 5: slides 4 and 5 centre at 37% and 33% of frame height, 4% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 6: slides 5 and 6 centre at 33% and 39% of frame height, 6% apart (need 12%)
+  downsampled 7 slides -> 1440x2560 (Lanczos)
+rendered 7 slides (tiktok) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-52/slides-tiktok
+exported 7 slides + 7 tiktok -> out/post-52/PUBLISH
+caption, alt, tiktok, POST-ME.txt written. Honesty check clean.

@@ -1,0 +1,1293 @@
+[
+  {
+    "index": 1,
+    "archetype": "hook",
+    "layout": "hero-statement",
+    "valign": "bottom",
+    "normalizations": [
+      {
+        "slide": 1,
+        "field": "copy.headline",
+        "rule": "double-quote-open",
+        "count": 1
+      },
+      {
+        "slide": 1,
+        "field": "copy.headline",
+        "rule": "double-quote-close",
+        "count": 1
+      }
+    ],
+    "declaresLoss": false,
+    "background": "dark",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [
+      {
+        "cls": "h-hook",
+        "text": "“10 for $10” does not require you to buy 10.",
+        "family": "\"Playfair Display\", Georgia, serif"
+      },
+      {
+        "cls": "thread-label",
+        "text": "10 for $10",
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif"
+      }
+    ],
+    "accents": [
+      "rgb(245, 242, 236)",
+      "rgb(0, 0, 0)",
+      "rgb(217, 164, 65)",
+      "rgb(107, 114, 128)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "h-hook",
+        "svg": false,
+        "text": "“10 for $10” does not require you to buy 10.",
+        "words": 10,
+        "chars": 44,
+        "color": "rgb(245, 242, 236)",
+        "size": 128,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1630,
+          "w": 1115,
+          "h": 395
+        },
+        "lines": [
+          "“10 for $10” does",
+          "not require you to",
+          "buy 10."
+        ]
+      },
+      {
+        "cls": "swipe-l",
+        "svg": false,
+        "text": "Swipe",
+        "words": 1,
+        "chars": 5,
+        "color": "rgb(245, 242, 236)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 253,
+          "y": 2050,
+          "w": 97,
+          "h": 52
+        },
+        "lines": null
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "10 for $10",
+        "words": 3,
+        "chars": 10,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2282,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "1/7",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1254,
+          "y": 2441,
+          "w": 58,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 2134,
+      "height": 2134
+    },
+    "threadBox": {
+      "top": 2134,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-4/slides-tiktok/slide-01.png"
+  },
+  {
+    "index": 2,
+    "archetype": "backupHook",
+    "layout": "stack-list",
+    "valign": "center",
+    "normalizations": [],
+    "declaresLoss": false,
+    "background": "light",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [
+      {
+        "cls": "li-t",
+        "text": "You can buy 1 for $1.",
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif"
+      },
+      {
+        "cls": "li-t",
+        "text": "But the sign is designed to anchor you at 10.",
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif"
+      }
+    ],
+    "accents": [
+      "rgb(20, 22, 26)",
+      "rgb(0, 0, 0)",
+      "rgb(74, 123, 166)",
+      "rgb(107, 114, 128)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "h-mid",
+        "svg": false,
+        "text": "Most stores honor the per-unit price regardless of quantity.",
+        "words": 9,
+        "chars": 60,
+        "color": "rgb(20, 22, 26)",
+        "size": 128,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 331,
+          "w": 1184,
+          "h": 543
+        },
+        "lines": [
+          "Most stores honor",
+          "the per-unit price",
+          "regardless of quantity.",
+          ""
+        ]
+      },
+      {
+        "cls": "li-n",
+        "svg": false,
+        "text": "01",
+        "words": 1,
+        "chars": 2,
+        "color": "rgb(74, 123, 166)",
+        "size": 112,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1014,
+          "w": 200,
+          "h": 112
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-t",
+        "svg": false,
+        "text": "You can buy 1 for $1.",
+        "words": 6,
+        "chars": 21,
+        "color": "rgb(20, 22, 26)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 349,
+          "y": 1035,
+          "w": 963,
+          "h": 70
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-n",
+        "svg": false,
+        "text": "02",
+        "words": 1,
+        "chars": 2,
+        "color": "rgb(74, 123, 166)",
+        "size": 112,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1317,
+          "w": 200,
+          "h": 112
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-t",
+        "svg": false,
+        "text": "But the sign is designed to anchor you at 10.",
+        "words": 10,
+        "chars": 45,
+        "color": "rgb(20, 22, 26)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 349,
+          "y": 1302,
+          "w": 963,
+          "h": 141
+        },
+        "lines": [
+          "But the sign is designed",
+          "to anchor you at 10."
+        ]
+      },
+      {
+        "cls": "li-n",
+        "svg": false,
+        "text": "03",
+        "words": 1,
+        "chars": 2,
+        "color": "rgb(74, 123, 166)",
+        "size": 112,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1619,
+          "w": 200,
+          "h": 112
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-t",
+        "svg": false,
+        "text": "Anchoring is one of the most studied effects in pricing psychology.",
+        "words": 11,
+        "chars": 67,
+        "color": "rgb(20, 22, 26)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 349,
+          "y": 1605,
+          "w": 963,
+          "h": 141
+        },
+        "lines": [
+          "Anchoring is one of the most",
+          "studied effects in pricing psychology."
+        ]
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "Per-unit",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2282,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "2/7",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1243,
+          "y": 2441,
+          "w": 69,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 2134,
+      "height": 2134
+    },
+    "threadBox": {
+      "top": 2134,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-4/slides-tiktok/slide-02.png"
+  },
+  {
+    "index": 3,
+    "archetype": "value",
+    "layout": "hero-statement",
+    "valign": "bottom",
+    "normalizations": [
+      {
+        "slide": 3,
+        "field": "copy.headline",
+        "rule": "apostrophe",
+        "count": 2
+      }
+    ],
+    "declaresLoss": false,
+    "background": "dark",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [],
+    "accents": [
+      "rgb(245, 242, 236)",
+      "rgb(0, 0, 0)",
+      "rgb(217, 164, 65)",
+      "rgb(107, 114, 128)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "h-hook",
+        "svg": false,
+        "text": "End-cap displays aren’t curated deals. They’re paid advertisements.",
+        "words": 8,
+        "chars": 67,
+        "color": "rgb(245, 242, 236)",
+        "size": 128,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1205,
+          "w": 1115,
+          "h": 527
+        },
+        "lines": [
+          "End-cap displays",
+          "aren’t curated",
+          "deals. They’re",
+          "paid advertisements."
+        ]
+      },
+      {
+        "cls": "body",
+        "svg": false,
+        "text": "Brands pay premium placement fees to sit at the end of the aisle where foot traf",
+        "words": 18,
+        "chars": 95,
+        "color": "rgb(245, 242, 236)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1775,
+          "w": 803,
+          "h": 221
+        },
+        "lines": [
+          "Brands pay premium placement fees to",
+          "sit at the end of the",
+          "aisle where foot traffic is highest."
+        ]
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "End-cap",
+        "words": 1,
+        "chars": 7,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2282,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "3/7",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1244,
+          "y": 2441,
+          "w": 68,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 2134,
+      "height": 2134
+    },
+    "threadBox": {
+      "top": 2134,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-4/slides-tiktok/slide-03.png"
+  },
+  {
+    "index": 4,
+    "archetype": "value",
+    "layout": "stack-list",
+    "valign": "center",
+    "normalizations": [
+      {
+        "slide": 4,
+        "field": "copy.headline",
+        "rule": "double-quote-open",
+        "count": 1
+      },
+      {
+        "slide": 4,
+        "field": "copy.headline",
+        "rule": "double-quote-close",
+        "count": 1
+      },
+      {
+        "slide": 4,
+        "field": "copy.headline",
+        "rule": "apostrophe",
+        "count": 1
+      },
+      {
+        "slide": 4,
+        "field": "copy.items[0]",
+        "rule": "apostrophe",
+        "count": 1
+      }
+    ],
+    "declaresLoss": false,
+    "background": "light",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [],
+    "accents": [
+      "rgb(20, 22, 26)",
+      "rgb(0, 0, 0)",
+      "rgb(74, 123, 166)",
+      "rgb(107, 114, 128)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "h-mid",
+        "svg": false,
+        "text": "“Manager’s Special” stickers appear early morning and Sunday evenings.",
+        "words": 9,
+        "chars": 70,
+        "color": "rgb(20, 22, 26)",
+        "size": 96,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 466,
+          "w": 991,
+          "h": 407
+        },
+        "lines": [
+          "“Manager’s Special” stickers",
+          "appear early morning",
+          "and Sunday evenings.",
+          ""
+        ]
+      },
+      {
+        "cls": "li-n",
+        "svg": false,
+        "text": "01",
+        "words": 1,
+        "chars": 2,
+        "color": "rgb(74, 123, 166)",
+        "size": 112,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1055,
+          "w": 200,
+          "h": 112
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-t",
+        "svg": false,
+        "text": "That’s when stores clear short-dated inventory.",
+        "words": 6,
+        "chars": 47,
+        "color": "rgb(20, 22, 26)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 349,
+          "y": 1041,
+          "w": 963,
+          "h": 141
+        },
+        "lines": [
+          "That’s when stores",
+          "clear short-dated inventory."
+        ]
+      },
+      {
+        "cls": "li-n",
+        "svg": false,
+        "text": "02",
+        "words": 1,
+        "chars": 2,
+        "color": "rgb(74, 123, 166)",
+        "size": 112,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1442,
+          "w": 200,
+          "h": 112
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-t",
+        "svg": false,
+        "text": "This one actually can save you money — if you plan to eat it that day.",
+        "words": 16,
+        "chars": 70,
+        "color": "rgb(20, 22, 26)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 349,
+          "y": 1428,
+          "w": 963,
+          "h": 141
+        },
+        "lines": [
+          "This one actually can save you money —",
+          "if you plan to eat it that day."
+        ]
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "Specials",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2282,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "4/7",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1241,
+          "y": 2441,
+          "w": 71,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 2134,
+      "height": 2134
+    },
+    "threadBox": {
+      "top": 2134,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-4/slides-tiktok/slide-04.png"
+  },
+  {
+    "index": 5,
+    "archetype": "value",
+    "layout": "hero-statement",
+    "valign": "bottom",
+    "normalizations": [
+      {
+        "slide": 5,
+        "field": "copy.headline",
+        "rule": "double-quote-open",
+        "count": 1
+      },
+      {
+        "slide": 5,
+        "field": "copy.headline",
+        "rule": "double-quote-close",
+        "count": 1
+      }
+    ],
+    "declaresLoss": false,
+    "background": "dark",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [],
+    "accents": [
+      "rgb(245, 242, 236)",
+      "rgb(0, 0, 0)",
+      "rgb(217, 164, 65)",
+      "rgb(107, 114, 128)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "h-hook",
+        "svg": false,
+        "text": "Grocery store loyalty apps track your purchase history and serve you “personaliz",
+        "words": 13,
+        "chars": 90,
+        "color": "rgb(245, 242, 236)",
+        "size": 128,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 941,
+          "w": 1115,
+          "h": 791
+        },
+        "lines": [
+          "Grocery store loyalty",
+          "apps track your",
+          "purchase history and",
+          "serve you “personalized",
+          "deals.”",
+          ""
+        ]
+      },
+      {
+        "cls": "body",
+        "svg": false,
+        "text": "In many cases, the tracked price is higher than the untracked shelf price for th",
+        "words": 17,
+        "chars": 92,
+        "color": "rgb(245, 242, 236)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1775,
+          "w": 803,
+          "h": 221
+        },
+        "lines": [
+          "In many cases, the tracked price",
+          "is higher than the untracked shelf",
+          "price for the same item."
+        ]
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "Loyalty",
+        "words": 1,
+        "chars": 7,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2282,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "5/7",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1243,
+          "y": 2441,
+          "w": 69,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 2134,
+      "height": 2134
+    },
+    "threadBox": {
+      "top": 2134,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-4/slides-tiktok/slide-05.png"
+  },
+  {
+    "index": 6,
+    "archetype": "value",
+    "layout": "split-compare",
+    "valign": "center",
+    "normalizations": [
+      {
+        "slide": 6,
+        "field": "copy.items[0]",
+        "rule": "apostrophe",
+        "count": 1
+      }
+    ],
+    "declaresLoss": false,
+    "background": "light",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [],
+    "accents": [
+      "rgb(20, 22, 26)",
+      "rgb(0, 0, 0)",
+      "rgb(107, 114, 128)",
+      "rgb(74, 123, 166)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "h-mid",
+        "svg": false,
+        "text": "Every pricing trick in the store is optimized around one idea:",
+        "words": 11,
+        "chars": 62,
+        "color": "rgb(20, 22, 26)",
+        "size": 96,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 304,
+          "w": 991,
+          "h": 305
+        },
+        "lines": [
+          "Every pricing trick in",
+          "the store is optimized",
+          "around one idea:"
+        ]
+      },
+      {
+        "cls": "col-i",
+        "svg": false,
+        "text": "01",
+        "words": 1,
+        "chars": 2,
+        "color": "rgb(107, 114, 128)",
+        "size": 186.67,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 177,
+          "y": 710,
+          "w": 475,
+          "h": 187
+        },
+        "lines": null
+      },
+      {
+        "cls": "col-t",
+        "svg": false,
+        "text": "making you feel like you’re saving",
+        "words": 6,
+        "chars": 34,
+        "color": "rgb(20, 22, 26)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 177,
+          "y": 1655,
+          "w": 475,
+          "h": 143
+        },
+        "lines": [
+          "making you feel",
+          "like you’re saving"
+        ]
+      },
+      {
+        "cls": "col-i",
+        "svg": false,
+        "text": "02",
+        "words": 1,
+        "chars": 2,
+        "color": "rgb(74, 123, 166)",
+        "size": 186.67,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 788,
+          "y": 710,
+          "w": 475,
+          "h": 187
+        },
+        "lines": null
+      },
+      {
+        "cls": "col-t",
+        "svg": false,
+        "text": "while you spend more.",
+        "words": 4,
+        "chars": 21,
+        "color": "rgb(20, 22, 26)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 788,
+          "y": 1655,
+          "w": 475,
+          "h": 143
+        },
+        "lines": [
+          "while you",
+          "spend more."
+        ]
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "The idea",
+        "words": 2,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2282,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "6/7",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1242,
+          "y": 2441,
+          "w": 70,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 2134,
+      "height": 2134
+    },
+    "threadBox": {
+      "top": 2134,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-4/slides-tiktok/slide-06.png"
+  },
+  {
+    "index": 7,
+    "archetype": "cta",
+    "layout": "cta-card",
+    "valign": "bottom",
+    "normalizations": [
+      {
+        "slide": 7,
+        "field": "copy.ctaLine",
+        "rule": "apostrophe",
+        "count": 1
+      }
+    ],
+    "declaresLoss": false,
+    "background": "dark",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [],
+    "accents": [
+      "rgb(0, 0, 0)",
+      "rgb(245, 242, 236)",
+      "rgba(245, 242, 236, 0.7)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "wordmark",
+        "svg": false,
+        "text": "fond",
+        "words": 1,
+        "chars": 4,
+        "color": "rgb(245, 242, 236)",
+        "size": 58.67,
+        "weight": 500,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1704,
+          "w": 1184,
+          "h": 76
+        },
+        "lines": null
+      },
+      {
+        "cls": "h-cta",
+        "svg": false,
+        "text": "We built an app that tracks all of this automatically.",
+        "words": 10,
+        "chars": 54,
+        "color": "rgb(245, 242, 236)",
+        "size": 74.67,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1809,
+          "w": 722,
+          "h": 260
+        },
+        "lines": [
+          "We built an app",
+          "that tracks all of",
+          "this automatically."
+        ]
+      },
+      {
+        "cls": "cta-line",
+        "svg": false,
+        "text": "Save this for your next grocery run. Follow for more, something’s coming.",
+        "words": 12,
+        "chars": 73,
+        "color": "rgb(245, 242, 236)",
+        "size": 53.33,
+        "weight": 500,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2098,
+          "w": 883,
+          "h": 214
+        },
+        "lines": [
+          "Save this for your",
+          "next grocery run. Follow",
+          "for more, something’s coming."
+        ]
+      },
+      {
+        "cls": "arrow",
+        "svg": false,
+        "text": "↓",
+        "words": 1,
+        "chars": 1,
+        "color": "rgba(245, 242, 236, 0.7)",
+        "size": 58.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2342,
+          "w": 1184,
+          "h": 70
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(245, 242, 236)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "7/7",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(245, 242, 236)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1248,
+          "y": 2441,
+          "w": 64,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 2441,
+      "height": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-4/slides-tiktok/slide-07.png"
+  }
+]

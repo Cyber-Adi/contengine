@@ -1,0 +1,1309 @@
+[
+  {
+    "index": 1,
+    "archetype": "hook",
+    "layout": "hero-statement",
+    "valign": "top",
+    "normalizations": [],
+    "declaresLoss": false,
+    "background": "dark",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [],
+    "accents": [
+      "rgb(245, 242, 236)",
+      "rgb(0, 0, 0)",
+      "rgb(107, 114, 128)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "h-hook",
+        "svg": false,
+        "text": "Your fridge came with a place to put everything. Most of those places are wrong.",
+        "words": 15,
+        "chars": 80,
+        "color": "rgb(245, 242, 236)",
+        "size": 128,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 224,
+          "w": 1115,
+          "h": 659
+        },
+        "lines": [
+          "Your fridge came",
+          "with a place",
+          "to put everything.",
+          "Most of those",
+          "places are wrong."
+        ]
+      },
+      {
+        "cls": "swipe-l",
+        "svg": false,
+        "text": "Swipe",
+        "words": 1,
+        "chars": 5,
+        "color": "rgb(245, 242, 236)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 253,
+          "y": 937,
+          "w": 97,
+          "h": 52
+        },
+        "lines": null
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "Empty",
+        "words": 1,
+        "chars": 5,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2206,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "1/8",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1252,
+          "y": 2441,
+          "w": 60,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 1980,
+      "height": 1980
+    },
+    "threadBox": {
+      "top": 1980,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-61/slides-tiktok/slide-01.png"
+  },
+  {
+    "index": 2,
+    "archetype": "backupHook",
+    "layout": "statement-xl",
+    "valign": "bottom",
+    "normalizations": [
+      {
+        "slide": 2,
+        "field": "copy.headline",
+        "rule": "apostrophe",
+        "count": 1
+      }
+    ],
+    "declaresLoss": false,
+    "background": "dark",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [],
+    "accents": [
+      "rgb(245, 242, 236)",
+      "rgb(0, 0, 0)",
+      "rgb(74, 123, 166)",
+      "rgb(107, 114, 128)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "h-mid h-xl",
+        "svg": false,
+        "text": "The egg holder is built into your door. That’s the worst spot in the whole fridg",
+        "words": 18,
+        "chars": 91,
+        "color": "rgb(245, 242, 236)",
+        "size": 186.586,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 320,
+          "w": 1184,
+          "h": 1522
+        },
+        "lines": [
+          "The egg holder",
+          "is built into",
+          "your door. That’s",
+          "the worst spot",
+          "in the whole",
+          "fridge for eggs.",
+          "",
+          ""
+        ]
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "Door marked",
+        "words": 2,
+        "chars": 11,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2206,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "2/8",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1241,
+          "y": 2441,
+          "w": 71,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 1980,
+      "height": 1980
+    },
+    "threadBox": {
+      "top": 1980,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-61/slides-tiktok/slide-02.png"
+  },
+  {
+    "index": 3,
+    "archetype": "value",
+    "layout": "timeline",
+    "valign": "center",
+    "normalizations": [
+      {
+        "slide": 3,
+        "field": "copy.items[1]",
+        "rule": "spaced-hyphen-to-en-dash",
+        "count": 1
+      },
+      {
+        "slide": 3,
+        "field": "copy.items[1]",
+        "rule": "double-quote-open",
+        "count": 1
+      },
+      {
+        "slide": 3,
+        "field": "copy.items[1]",
+        "rule": "double-quote-close",
+        "count": 1
+      }
+    ],
+    "declaresLoss": false,
+    "background": "light",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [
+      {
+        "cls": "step-t",
+        "text": "The door runs 7-10°F warmer than the back of the fridge – cl",
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif"
+      }
+    ],
+    "accents": [
+      "rgb(20, 22, 26)",
+      "rgb(0, 0, 0)",
+      "rgb(74, 123, 166)",
+      "rgb(107, 114, 128)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "h-mid",
+        "svg": false,
+        "text": "The door opens dozens of times a day.",
+        "words": 8,
+        "chars": 37,
+        "color": "rgb(20, 22, 26)",
+        "size": 96,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 305,
+          "w": 991,
+          "h": 204
+        },
+        "lines": [
+          "The door opens dozens",
+          "of times a day."
+        ]
+      },
+      {
+        "cls": "step-t",
+        "svg": false,
+        "text": "Every open lets warm kitchen air in.",
+        "words": 7,
+        "chars": 36,
+        "color": "rgb(20, 22, 26)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 224,
+          "y": 810,
+          "w": 870,
+          "h": 68
+        },
+        "lines": null
+      },
+      {
+        "cls": "step-t",
+        "svg": false,
+        "text": "The door runs 7-10°F warmer than the back of the fridge – closer to room tempera",
+        "words": 20,
+        "chars": 108,
+        "color": "rgb(20, 22, 26)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 224,
+          "y": 1306,
+          "w": 1088,
+          "h": 205
+        },
+        "lines": [
+          "The door runs 7-10°F warmer than the",
+          "back of the fridge – closer to",
+          "room temperature than to “cold storage.”"
+        ]
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "Door zone",
+        "words": 2,
+        "chars": 9,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2206,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "3/8",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1242,
+          "y": 2441,
+          "w": 70,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 1980,
+      "height": 1980
+    },
+    "threadBox": {
+      "top": 1980,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-61/slides-tiktok/slide-03.png"
+  },
+  {
+    "index": 4,
+    "archetype": "value",
+    "layout": "hero-statement",
+    "valign": "bottom",
+    "normalizations": [
+      {
+        "slide": 4,
+        "field": "copy.headline",
+        "rule": "spaced-hyphen-to-en-dash",
+        "count": 1
+      },
+      {
+        "slide": 4,
+        "field": "copy.body",
+        "rule": "apostrophe",
+        "count": 1
+      }
+    ],
+    "declaresLoss": false,
+    "background": "light",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [],
+    "accents": [
+      "rgb(20, 22, 26)",
+      "rgb(0, 0, 0)",
+      "rgb(74, 123, 166)",
+      "rgb(107, 114, 128)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "h-hook",
+        "svg": false,
+        "text": "Bottom shelf, back: the coldest zone in the fridge – this is where raw meat and ",
+        "words": 18,
+        "chars": 92,
+        "color": "rgb(20, 22, 26)",
+        "size": 128,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 846,
+          "w": 1115,
+          "h": 659
+        },
+        "lines": [
+          "Bottom shelf, back: the",
+          "coldest zone in the",
+          "fridge – this is",
+          "where raw meat and",
+          "fish belong."
+        ]
+      },
+      {
+        "cls": "body",
+        "svg": false,
+        "text": "It also keeps any drips contained below everything else, instead of dripping ont",
+        "words": 18,
+        "chars": 108,
+        "color": "rgb(20, 22, 26)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1548,
+          "w": 803,
+          "h": 294
+        },
+        "lines": [
+          "It also keeps any drips",
+          "contained below everything else, instead",
+          "of dripping onto food you",
+          "won’t cook first."
+        ]
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "Bottom shelf",
+        "words": 2,
+        "chars": 12,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2206,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "4/8",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1240,
+          "y": 2441,
+          "w": 72,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 1980,
+      "height": 1980
+    },
+    "threadBox": {
+      "top": 1980,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-61/slides-tiktok/slide-04.png"
+  },
+  {
+    "index": 5,
+    "archetype": "value",
+    "layout": "split-compare",
+    "valign": "center",
+    "normalizations": [
+      {
+        "slide": 5,
+        "field": "copy.items[1]",
+        "rule": "spaced-hyphen-to-en-dash",
+        "count": 1
+      },
+      {
+        "slide": 5,
+        "field": "copy.items[1]",
+        "rule": "apostrophe",
+        "count": 1
+      }
+    ],
+    "declaresLoss": false,
+    "background": "dark",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [],
+    "accents": [
+      "rgb(245, 242, 236)",
+      "rgb(0, 0, 0)",
+      "rgb(107, 114, 128)",
+      "rgb(74, 123, 166)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "h-mid",
+        "svg": false,
+        "text": "Middle shelf: dairy, eggs, leftovers.",
+        "words": 5,
+        "chars": 37,
+        "color": "rgb(245, 242, 236)",
+        "size": 96,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 281,
+          "w": 991,
+          "h": 204
+        },
+        "lines": [
+          "Middle shelf: dairy,",
+          "eggs, leftovers."
+        ]
+      },
+      {
+        "cls": "col-i",
+        "svg": false,
+        "text": "01",
+        "words": 1,
+        "chars": 2,
+        "color": "rgb(107, 114, 128)",
+        "size": 186.67,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 177,
+          "y": 585,
+          "w": 475,
+          "h": 187
+        },
+        "lines": null
+      },
+      {
+        "cls": "col-t",
+        "svg": false,
+        "text": "Consistent mid-range cold, easy to see, easy to rotate.",
+        "words": 9,
+        "chars": 55,
+        "color": "rgb(245, 242, 236)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 177,
+          "y": 1453,
+          "w": 475,
+          "h": 214
+        },
+        "lines": [
+          "Consistent mid-range cold,",
+          "easy to see,",
+          "easy to rotate."
+        ]
+      },
+      {
+        "cls": "col-i",
+        "svg": false,
+        "text": "02",
+        "words": 1,
+        "chars": 2,
+        "color": "rgb(74, 123, 166)",
+        "size": 186.67,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 788,
+          "y": 585,
+          "w": 475,
+          "h": 187
+        },
+        "lines": null
+      },
+      {
+        "cls": "col-t",
+        "svg": false,
+        "text": "Top shelf: the least perishable stuff – drinks, ready-to-eat items, leftovers yo",
+        "words": 14,
+        "chars": 98,
+        "color": "rgb(245, 242, 236)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 788,
+          "y": 1310,
+          "w": 475,
+          "h": 357
+        },
+        "lines": [
+          "Top shelf: the",
+          "least perishable stuff",
+          "– drinks, ready-to-eat",
+          "items, leftovers you’ll",
+          "finish today."
+        ]
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "Shelves filled",
+        "words": 2,
+        "chars": 14,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2206,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "5/8",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1241,
+          "y": 2441,
+          "w": 71,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 1980,
+      "height": 1980
+    },
+    "threadBox": {
+      "top": 1980,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-61/slides-tiktok/slide-05.png"
+  },
+  {
+    "index": 6,
+    "archetype": "value",
+    "layout": "timeline",
+    "valign": "center",
+    "normalizations": [
+      {
+        "slide": 6,
+        "field": "copy.headline",
+        "rule": "apostrophe",
+        "count": 1
+      }
+    ],
+    "declaresLoss": false,
+    "background": "dark",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [],
+    "accents": [
+      "rgb(245, 242, 236)",
+      "rgb(0, 0, 0)",
+      "rgb(74, 123, 166)",
+      "rgb(107, 114, 128)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "h-mid",
+        "svg": false,
+        "text": "Crisper drawers aren’t interchangeable.",
+        "words": 4,
+        "chars": 39,
+        "color": "rgb(245, 242, 236)",
+        "size": 96,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 305,
+          "w": 991,
+          "h": 204
+        },
+        "lines": [
+          "Crisper drawers",
+          "aren’t interchangeable."
+        ]
+      },
+      {
+        "cls": "step-t",
+        "svg": false,
+        "text": "High-humidity setting = leafy greens and herbs (they wilt when they lose moistur",
+        "words": 13,
+        "chars": 83,
+        "color": "rgb(245, 242, 236)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 224,
+          "y": 681,
+          "w": 1088,
+          "h": 137
+        },
+        "lines": [
+          "High-humidity setting = leafy greens and herbs",
+          "(they wilt when they lose moisture)."
+        ]
+      },
+      {
+        "cls": "step-t",
+        "svg": false,
+        "text": "Low-humidity setting = fruit (it rots faster in trapped moisture).",
+        "words": 10,
+        "chars": 66,
+        "color": "rgb(245, 242, 236)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 224,
+          "y": 1058,
+          "w": 1088,
+          "h": 137
+        },
+        "lines": [
+          "Low-humidity setting = fruit (it",
+          "rots faster in trapped moisture)."
+        ]
+      },
+      {
+        "cls": "step-t",
+        "svg": false,
+        "text": "Same drawer shape, opposite jobs.",
+        "words": 5,
+        "chars": 33,
+        "color": "rgb(245, 242, 236)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 224,
+          "y": 1468,
+          "w": 861,
+          "h": 68
+        },
+        "lines": null
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "Map complete",
+        "words": 2,
+        "chars": 12,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2206,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "6/8",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1241,
+          "y": 2441,
+          "w": 71,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 1980,
+      "height": 1980
+    },
+    "threadBox": {
+      "top": 1980,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-61/slides-tiktok/slide-06.png"
+  },
+  {
+    "index": 7,
+    "archetype": "reframe",
+    "layout": "hero-statement",
+    "valign": "bottom",
+    "normalizations": [
+      {
+        "slide": 7,
+        "field": "copy.headline",
+        "rule": "apostrophe",
+        "count": 2
+      },
+      {
+        "slide": 7,
+        "field": "copy.body",
+        "rule": "apostrophe",
+        "count": 1
+      }
+    ],
+    "declaresLoss": false,
+    "background": "light",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [],
+    "accents": [
+      "rgb(20, 22, 26)",
+      "rgb(0, 0, 0)",
+      "rgb(74, 123, 166)",
+      "rgb(107, 114, 128)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "h-hook",
+        "svg": false,
+        "text": "The fridge isn’t one temperature. It’s five zones.",
+        "words": 8,
+        "chars": 50,
+        "color": "rgb(20, 22, 26)",
+        "size": 128,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1370,
+          "w": 1115,
+          "h": 395
+        },
+        "lines": [
+          "The fridge isn’t",
+          "one temperature. It’s",
+          "five zones."
+        ]
+      },
+      {
+        "cls": "body",
+        "svg": false,
+        "text": "You’ve been using one.",
+        "words": 4,
+        "chars": 22,
+        "color": "rgb(20, 22, 26)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1782,
+          "w": 803,
+          "h": 74
+        },
+        "lines": null
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "Full map",
+        "words": 2,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2206,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "7/8",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1247,
+          "y": 2441,
+          "w": 65,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 1980,
+      "height": 1980
+    },
+    "threadBox": {
+      "top": 1980,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-61/slides-tiktok/slide-07.png"
+  },
+  {
+    "index": 8,
+    "archetype": "cta",
+    "layout": "cta-card",
+    "valign": "top",
+    "normalizations": [
+      {
+        "slide": 8,
+        "field": "copy.headline",
+        "rule": "spaced-hyphen-to-en-dash",
+        "count": 1
+      },
+      {
+        "slide": 8,
+        "field": "copy.headline",
+        "rule": "apostrophe",
+        "count": 1
+      }
+    ],
+    "declaresLoss": false,
+    "background": "dark",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [],
+    "accents": [
+      "rgb(0, 0, 0)",
+      "rgb(245, 242, 236)",
+      "rgba(245, 242, 236, 0.7)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "wordmark",
+        "svg": false,
+        "text": "fond",
+        "words": 1,
+        "chars": 4,
+        "color": "rgb(245, 242, 236)",
+        "size": 58.67,
+        "weight": 500,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 224,
+          "w": 1184,
+          "h": 76
+        },
+        "lines": null
+      },
+      {
+        "cls": "h-cta",
+        "svg": false,
+        "text": "fond tracks shelf life by what’s actually in each zone of your fridge – not a ge",
+        "words": 18,
+        "chars": 96,
+        "color": "rgb(245, 242, 236)",
+        "size": 74.67,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 329,
+          "w": 722,
+          "h": 433
+        },
+        "lines": [
+          "fond tracks shelf life",
+          "by what’s actually in",
+          "each zone of your",
+          "fridge – not a",
+          "generic countdown."
+        ]
+      },
+      {
+        "cls": "send",
+        "svg": false,
+        "text": "Save this for your next fridge clean-out.",
+        "words": 7,
+        "chars": 41,
+        "color": "rgba(245, 242, 236, 0.7)",
+        "size": 40,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 792,
+          "w": 657,
+          "h": 107
+        },
+        "lines": [
+          "Save this for your",
+          "next fridge clean-out."
+        ]
+      },
+      {
+        "cls": "arrow",
+        "svg": false,
+        "text": "↓",
+        "words": 1,
+        "chars": 1,
+        "color": "rgba(245, 242, 236, 0.7)",
+        "size": 58.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 928,
+          "w": 1184,
+          "h": 70
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(245, 242, 236)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "8/8",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(245, 242, 236)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1241,
+          "y": 2441,
+          "w": 71,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 2441,
+      "height": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-61/slides-tiktok/slide-08.png"
+  }
+]

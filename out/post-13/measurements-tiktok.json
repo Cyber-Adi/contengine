@@ -1,0 +1,883 @@
+[
+  {
+    "index": 1,
+    "archetype": "hook",
+    "layout": "hero-statement",
+    "valign": "bottom",
+    "normalizations": [],
+    "declaresLoss": false,
+    "background": "dark",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [],
+    "accents": [
+      "rgb(245, 242, 236)",
+      "rgb(0, 0, 0)",
+      "rgb(74, 123, 166)",
+      "rgb(107, 114, 128)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "h-hook",
+        "svg": false,
+        "text": "You can freeze all of these. Yes, seriously.",
+        "words": 8,
+        "chars": 44,
+        "color": "rgb(245, 242, 236)",
+        "size": 128,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1630,
+          "w": 1115,
+          "h": 395
+        },
+        "lines": [
+          "You can freeze",
+          "all of these.",
+          "Yes, seriously."
+        ]
+      },
+      {
+        "cls": "swipe-l",
+        "svg": false,
+        "text": "Swipe",
+        "words": 1,
+        "chars": 5,
+        "color": "rgb(245, 242, 236)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 253,
+          "y": 2050,
+          "w": 97,
+          "h": 52
+        },
+        "lines": null
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "Empty tray",
+        "words": 2,
+        "chars": 10,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2282,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "1/5",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1252,
+          "y": 2441,
+          "w": 60,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 2134,
+      "height": 2134
+    },
+    "threadBox": {
+      "top": 2134,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-13/slides-tiktok/slide-01.png"
+  },
+  {
+    "index": 2,
+    "archetype": "backupHook",
+    "layout": "stack-list",
+    "valign": "center",
+    "normalizations": [
+      {
+        "slide": 2,
+        "field": "copy.items[3]",
+        "rule": "apostrophe",
+        "count": 1
+      }
+    ],
+    "declaresLoss": false,
+    "background": "light",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [],
+    "accents": [
+      "rgb(20, 22, 26)",
+      "rgb(0, 0, 0)",
+      "rgb(74, 123, 166)",
+      "rgb(107, 114, 128)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "li-n",
+        "svg": false,
+        "text": "01",
+        "words": 1,
+        "chars": 2,
+        "color": "rgb(74, 123, 166)",
+        "size": 112,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 551,
+          "w": 200,
+          "h": 112
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-t",
+        "svg": false,
+        "text": "Pour leftover wine into an ice cube tray.",
+        "words": 8,
+        "chars": 41,
+        "color": "rgb(20, 22, 26)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 349,
+          "y": 537,
+          "w": 963,
+          "h": 141
+        },
+        "lines": [
+          "Pour leftover wine into",
+          "an ice cube tray."
+        ]
+      },
+      {
+        "cls": "li-n",
+        "svg": false,
+        "text": "02",
+        "words": 1,
+        "chars": 2,
+        "color": "rgb(74, 123, 166)",
+        "size": 112,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 926,
+          "w": 200,
+          "h": 112
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-t",
+        "svg": false,
+        "text": "Freeze.",
+        "words": 1,
+        "chars": 7,
+        "color": "rgb(20, 22, 26)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 349,
+          "y": 947,
+          "w": 963,
+          "h": 70
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-n",
+        "svg": false,
+        "text": "03",
+        "words": 1,
+        "chars": 2,
+        "color": "rgb(74, 123, 166)",
+        "size": 112,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1300,
+          "w": 200,
+          "h": 112
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-t",
+        "svg": false,
+        "text": "Drop cubes into pasta sauce, risotto, or stew.",
+        "words": 8,
+        "chars": 46,
+        "color": "rgb(20, 22, 26)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 349,
+          "y": 1286,
+          "w": 963,
+          "h": 141
+        },
+        "lines": [
+          "Drop cubes into pasta",
+          "sauce, risotto, or stew."
+        ]
+      },
+      {
+        "cls": "li-n",
+        "svg": false,
+        "text": "04",
+        "words": 1,
+        "chars": 2,
+        "color": "rgb(74, 123, 166)",
+        "size": 112,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1675,
+          "w": 200,
+          "h": 112
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-t",
+        "svg": false,
+        "text": "Restaurant-level flavor from last Tuesday’s bottle.",
+        "words": 6,
+        "chars": 51,
+        "color": "rgb(20, 22, 26)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 349,
+          "y": 1660,
+          "w": 963,
+          "h": 141
+        },
+        "lines": [
+          "Restaurant-level flavor from",
+          "last Tuesday’s bottle."
+        ]
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "Wine",
+        "words": 1,
+        "chars": 4,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2282,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "2/5",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1241,
+          "y": 2441,
+          "w": 71,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 2134,
+      "height": 2134
+    },
+    "threadBox": {
+      "top": 2134,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-13/slides-tiktok/slide-02.png"
+  },
+  {
+    "index": 3,
+    "archetype": "value",
+    "layout": "timeline",
+    "valign": "center",
+    "normalizations": [],
+    "declaresLoss": false,
+    "background": "dark",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [],
+    "accents": [
+      "rgb(245, 242, 236)",
+      "rgb(0, 0, 0)",
+      "rgb(217, 164, 65)",
+      "rgb(107, 114, 128)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "step-t",
+        "svg": false,
+        "text": "Throw the whole root in the freezer.",
+        "words": 7,
+        "chars": 36,
+        "color": "rgb(245, 242, 236)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 224,
+          "y": 620,
+          "w": 870,
+          "h": 68
+        },
+        "lines": null
+      },
+      {
+        "cls": "step-t",
+        "svg": false,
+        "text": "Grate it straight from frozen — it shreds easier frozen than fresh.",
+        "words": 12,
+        "chars": 67,
+        "color": "rgb(245, 242, 236)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 224,
+          "y": 1084,
+          "w": 1088,
+          "h": 137
+        },
+        "lines": [
+          "Grate it straight from frozen —",
+          "it shreds easier frozen than fresh."
+        ]
+      },
+      {
+        "cls": "step-t",
+        "svg": false,
+        "text": "No peeling needed.",
+        "words": 3,
+        "chars": 18,
+        "color": "rgb(245, 242, 236)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 224,
+          "y": 1616,
+          "w": 475,
+          "h": 68
+        },
+        "lines": null
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "Ginger",
+        "words": 1,
+        "chars": 6,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2282,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "3/5",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1242,
+          "y": 2441,
+          "w": 70,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 2134,
+      "height": 2134
+    },
+    "threadBox": {
+      "top": 2134,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-13/slides-tiktok/slide-03.png"
+  },
+  {
+    "index": 4,
+    "archetype": "value",
+    "layout": "stack-list",
+    "valign": "center",
+    "normalizations": [],
+    "declaresLoss": false,
+    "background": "light",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [],
+    "accents": [
+      "rgb(20, 22, 26)",
+      "rgb(0, 0, 0)",
+      "rgb(74, 123, 166)",
+      "rgb(107, 114, 128)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "li-n",
+        "svg": false,
+        "text": "01",
+        "words": 1,
+        "chars": 2,
+        "color": "rgb(74, 123, 166)",
+        "size": 112,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 839,
+          "w": 200,
+          "h": 112
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-t",
+        "svg": false,
+        "text": "Leftover yolks from a recipe?",
+        "words": 5,
+        "chars": 29,
+        "color": "rgb(20, 22, 26)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 349,
+          "y": 859,
+          "w": 963,
+          "h": 70
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-n",
+        "svg": false,
+        "text": "02",
+        "words": 1,
+        "chars": 2,
+        "color": "rgb(74, 123, 166)",
+        "size": 112,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1096,
+          "w": 200,
+          "h": 112
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-t",
+        "svg": false,
+        "text": "Whisk with a pinch of salt, pour into ice cube molds.",
+        "words": 11,
+        "chars": 53,
+        "color": "rgb(20, 22, 26)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 349,
+          "y": 1082,
+          "w": 963,
+          "h": 141
+        },
+        "lines": [
+          "Whisk with a pinch of salt,",
+          "pour into ice cube molds."
+        ]
+      },
+      {
+        "cls": "li-n",
+        "svg": false,
+        "text": "03",
+        "words": 1,
+        "chars": 2,
+        "color": "rgb(74, 123, 166)",
+        "size": 112,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1353,
+          "w": 200,
+          "h": 112
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-t",
+        "svg": false,
+        "text": "Thaw later for custards, carbonara, or enriching sauces.",
+        "words": 8,
+        "chars": 56,
+        "color": "rgb(20, 22, 26)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 349,
+          "y": 1339,
+          "w": 963,
+          "h": 141
+        },
+        "lines": [
+          "Thaw later for custards,",
+          "carbonara, or enriching sauces."
+        ]
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "Yolks",
+        "words": 1,
+        "chars": 5,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2282,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "4/5",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1240,
+          "y": 2441,
+          "w": 73,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 2134,
+      "height": 2134
+    },
+    "threadBox": {
+      "top": 2134,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-13/slides-tiktok/slide-04.png"
+  },
+  {
+    "index": 5,
+    "archetype": "reframe",
+    "layout": "hero-statement",
+    "valign": "bottom",
+    "normalizations": [
+      {
+        "slide": 5,
+        "field": "copy.body",
+        "rule": "apostrophe",
+        "count": 2
+      }
+    ],
+    "declaresLoss": false,
+    "background": "dark",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [],
+    "accents": [
+      "rgb(245, 242, 236)",
+      "rgb(107, 114, 128)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "body",
+        "svg": false,
+        "text": "Peel first, then freeze. Frozen bananas blend into smoothies better than fresh. ",
+        "words": 27,
+        "chars": 159,
+        "color": "rgb(245, 242, 236)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1664,
+          "w": 803,
+          "h": 441
+        },
+        "lines": [
+          "Peel first, then freeze. Frozen",
+          "bananas blend into smoothies better",
+          "than fresh. They also replace",
+          "ice cream if you blend",
+          "them solo. That’s it. That’s",
+          "the hack."
+        ]
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "Full tray",
+        "words": 2,
+        "chars": 9,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2282,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "5/5",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1241,
+          "y": 2441,
+          "w": 71,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 2134,
+      "height": 2134
+    },
+    "threadBox": {
+      "top": 2134,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-13/slides-tiktok/slide-05.png"
+  }
+]

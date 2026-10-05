@@ -1,0 +1,1230 @@
+[
+  {
+    "index": 1,
+    "archetype": "hook",
+    "layout": "hero-statement",
+    "valign": "bottom",
+    "normalizations": [
+      {
+        "slide": 1,
+        "field": "copy.headline",
+        "rule": "apostrophe",
+        "count": 1
+      },
+      {
+        "slide": 1,
+        "field": "copy.body",
+        "rule": "apostrophe",
+        "count": 1
+      }
+    ],
+    "declaresLoss": false,
+    "background": "dark",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [
+      {
+        "cls": "thread-label",
+        "text": "0 of 5",
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif"
+      }
+    ],
+    "accents": [
+      "rgb(245, 242, 236)",
+      "rgb(0, 0, 0)",
+      "rgb(217, 164, 65)",
+      "rgb(107, 114, 128)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "h-hook",
+        "svg": false,
+        "text": "Your freezer is a pause button. You’re using it for ice and not much else.",
+        "words": 15,
+        "chars": 74,
+        "color": "rgb(245, 242, 236)",
+        "size": 128,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1147,
+          "w": 1115,
+          "h": 659
+        },
+        "lines": [
+          "Your freezer is",
+          "a pause button.",
+          "You’re using it",
+          "for ice and",
+          "not much else."
+        ]
+      },
+      {
+        "cls": "body",
+        "svg": false,
+        "text": "Here are 5 things you didn’t know you could freeze.",
+        "words": 10,
+        "chars": 51,
+        "color": "rgb(245, 242, 236)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1849,
+          "w": 803,
+          "h": 147
+        },
+        "lines": [
+          "Here are 5 things you",
+          "didn’t know you could freeze."
+        ]
+      },
+      {
+        "cls": "swipe-l",
+        "svg": false,
+        "text": "Swipe",
+        "words": 1,
+        "chars": 5,
+        "color": "rgb(245, 242, 236)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 253,
+          "y": 2050,
+          "w": 97,
+          "h": 52
+        },
+        "lines": null
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "0 of 5",
+        "words": 3,
+        "chars": 6,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2282,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "1/6",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1251,
+          "y": 2441,
+          "w": 61,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 2134,
+      "height": 2134
+    },
+    "threadBox": {
+      "top": 2134,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-58/slides-tiktok/slide-01.png"
+  },
+  {
+    "index": 2,
+    "archetype": "backupHook",
+    "layout": "stack-list",
+    "valign": "center",
+    "normalizations": [
+      {
+        "slide": 2,
+        "field": "copy.items[0]",
+        "rule": "arrow",
+        "count": 1
+      }
+    ],
+    "declaresLoss": false,
+    "background": "light",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [
+      {
+        "cls": "h-mid",
+        "text": "1. WINE.",
+        "family": "\"Playfair Display\", Georgia, serif"
+      },
+      {
+        "cls": "thread-label",
+        "text": "1 of 5",
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif"
+      }
+    ],
+    "accents": [
+      "rgb(20, 22, 26)",
+      "rgb(0, 0, 0)",
+      "rgb(74, 123, 166)",
+      "rgb(107, 114, 128)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "h-mid",
+        "svg": false,
+        "text": "1. WINE.",
+        "words": 2,
+        "chars": 8,
+        "color": "rgb(20, 22, 26)",
+        "size": 128,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 331,
+          "w": 1184,
+          "h": 136
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-n",
+        "svg": false,
+        "text": "01",
+        "words": 1,
+        "chars": 2,
+        "color": "rgb(74, 123, 166)",
+        "size": 112,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 675,
+          "w": 200,
+          "h": 112
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-n",
+        "svg": false,
+        "text": "02",
+        "words": 1,
+        "chars": 2,
+        "color": "rgb(74, 123, 166)",
+        "size": 112,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1113,
+          "w": 200,
+          "h": 112
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-t",
+        "svg": false,
+        "text": "Drop a cube straight into sauces, braises, and pan deglazes.",
+        "words": 10,
+        "chars": 60,
+        "color": "rgb(20, 22, 26)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 349,
+          "y": 1099,
+          "w": 963,
+          "h": 141
+        },
+        "lines": [
+          "Drop a cube straight into",
+          "sauces, braises, and pan deglazes."
+        ]
+      },
+      {
+        "cls": "li-n",
+        "svg": false,
+        "text": "03",
+        "words": 1,
+        "chars": 2,
+        "color": "rgb(74, 123, 166)",
+        "size": 112,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1551,
+          "w": 200,
+          "h": 112
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-t",
+        "svg": false,
+        "text": "Never pour the last of the bottle out again.",
+        "words": 9,
+        "chars": 44,
+        "color": "rgb(20, 22, 26)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 349,
+          "y": 1537,
+          "w": 963,
+          "h": 141
+        },
+        "lines": [
+          "Never pour the last of",
+          "the bottle out again."
+        ]
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "1 of 5",
+        "words": 3,
+        "chars": 6,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2282,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "2/6",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1240,
+          "y": 2441,
+          "w": 72,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 2134,
+      "height": 2134
+    },
+    "threadBox": {
+      "top": 2134,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-58/slides-tiktok/slide-02.png"
+  },
+  {
+    "index": 3,
+    "archetype": "value",
+    "layout": "hero-statement",
+    "valign": "bottom",
+    "normalizations": [
+      {
+        "slide": 3,
+        "field": "copy.body",
+        "rule": "spaced-hyphen-to-en-dash",
+        "count": 1
+      }
+    ],
+    "declaresLoss": false,
+    "background": "dark",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [
+      {
+        "cls": "h-hook",
+        "text": "2. FRESH GINGER.",
+        "family": "\"Playfair Display\", Georgia, serif"
+      },
+      {
+        "cls": "thread-label",
+        "text": "2 of 5",
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif"
+      }
+    ],
+    "accents": [
+      "rgb(245, 242, 236)",
+      "rgb(0, 0, 0)",
+      "rgb(74, 123, 166)",
+      "rgb(107, 114, 128)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "h-hook",
+        "svg": false,
+        "text": "2. FRESH GINGER.",
+        "words": 3,
+        "chars": 16,
+        "color": "rgb(245, 242, 236)",
+        "size": 128,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1480,
+          "w": 1115,
+          "h": 132
+        },
+        "lines": null
+      },
+      {
+        "cls": "body",
+        "svg": false,
+        "text": "Freeze the whole knob. Grate it straight from frozen – no peeling, no stringy me",
+        "words": 26,
+        "chars": 144,
+        "color": "rgb(245, 242, 236)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1628,
+          "w": 803,
+          "h": 368
+        },
+        "lines": [
+          "Freeze the whole knob. Grate it",
+          "straight from frozen – no peeling,",
+          "no stringy mess, and it lasts",
+          "for months instead of shriveling in",
+          "the drawer."
+        ]
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "2 of 5",
+        "words": 3,
+        "chars": 6,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2282,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "3/6",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1241,
+          "y": 2441,
+          "w": 71,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 2134,
+      "height": 2134
+    },
+    "threadBox": {
+      "top": 2134,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-58/slides-tiktok/slide-03.png"
+  },
+  {
+    "index": 4,
+    "archetype": "value",
+    "layout": "timeline",
+    "valign": "center",
+    "normalizations": [
+      {
+        "slide": 4,
+        "field": "copy.items[0]",
+        "rule": "spaced-hyphen-to-en-dash",
+        "count": 1
+      }
+    ],
+    "declaresLoss": false,
+    "background": "light",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [
+      {
+        "cls": "h-mid",
+        "text": "3. EGGS.",
+        "family": "\"Playfair Display\", Georgia, serif"
+      },
+      {
+        "cls": "thread-label",
+        "text": "3 of 5",
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif"
+      }
+    ],
+    "accents": [
+      "rgb(20, 22, 26)",
+      "rgb(0, 0, 0)",
+      "rgb(74, 123, 166)",
+      "rgb(107, 114, 128)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "h-mid",
+        "svg": false,
+        "text": "3. EGGS.",
+        "words": 2,
+        "chars": 8,
+        "color": "rgb(20, 22, 26)",
+        "size": 96,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 328,
+          "w": 991,
+          "h": 102
+        },
+        "lines": null
+      },
+      {
+        "cls": "step-t",
+        "svg": false,
+        "text": "Not in the shell – crack them first.",
+        "words": 8,
+        "chars": 36,
+        "color": "rgb(20, 22, 26)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 224,
+          "y": 672,
+          "w": 833,
+          "h": 68
+        },
+        "lines": null
+      },
+      {
+        "cls": "step-t",
+        "svg": false,
+        "text": "Whisk, pour into a tray, freeze.",
+        "words": 6,
+        "chars": 32,
+        "color": "rgb(20, 22, 26)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 224,
+          "y": 1118,
+          "w": 737,
+          "h": 68
+        },
+        "lines": null
+      },
+      {
+        "cls": "step-t",
+        "svg": false,
+        "text": "Perfect for baking and scrambles. Yolks and whites freeze separately too.",
+        "words": 11,
+        "chars": 73,
+        "color": "rgb(20, 22, 26)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 224,
+          "y": 1530,
+          "w": 1088,
+          "h": 137
+        },
+        "lines": [
+          "Perfect for baking and scrambles. Yolks",
+          "and whites freeze separately too."
+        ]
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "3 of 5",
+        "words": 3,
+        "chars": 6,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2282,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "4/6",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1239,
+          "y": 2441,
+          "w": 73,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 2134,
+      "height": 2134
+    },
+    "threadBox": {
+      "top": 2134,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-58/slides-tiktok/slide-04.png"
+  },
+  {
+    "index": 5,
+    "archetype": "value",
+    "layout": "stack-list",
+    "valign": "bottom",
+    "normalizations": [
+      {
+        "slide": 5,
+        "field": "copy.items[2]",
+        "rule": "spaced-hyphen-to-en-dash",
+        "count": 1
+      },
+      {
+        "slide": 5,
+        "field": "copy.items[2]",
+        "rule": "apostrophe",
+        "count": 1
+      }
+    ],
+    "declaresLoss": false,
+    "background": "dark",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [
+      {
+        "cls": "h-mid",
+        "text": "4. GREEK YOGURT.",
+        "family": "\"Playfair Display\", Georgia, serif"
+      },
+      {
+        "cls": "li-t",
+        "text": "5. FRESH HERBS. Chop, pack into a tray, top with olive oil, ",
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif"
+      },
+      {
+        "cls": "thread-label",
+        "text": "5 of 5",
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif"
+      }
+    ],
+    "accents": [
+      "rgb(245, 242, 236)",
+      "rgb(0, 0, 0)",
+      "rgb(74, 123, 166)",
+      "rgb(107, 114, 128)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "h-mid",
+        "svg": false,
+        "text": "4. GREEK YOGURT.",
+        "words": 3,
+        "chars": 16,
+        "color": "rgb(245, 242, 236)",
+        "size": 96,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 498,
+          "w": 991,
+          "h": 102
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-n",
+        "svg": false,
+        "text": "01",
+        "words": 1,
+        "chars": 2,
+        "color": "rgb(74, 123, 166)",
+        "size": 112,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 757,
+          "w": 200,
+          "h": 112
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-t",
+        "svg": false,
+        "text": "About to expire? Freeze dollops on a tray.",
+        "words": 8,
+        "chars": 42,
+        "color": "rgb(245, 242, 236)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 349,
+          "y": 743,
+          "w": 963,
+          "h": 141
+        },
+        "lines": [
+          "About to expire? Freeze",
+          "dollops on a tray."
+        ]
+      },
+      {
+        "cls": "li-n",
+        "svg": false,
+        "text": "02",
+        "words": 1,
+        "chars": 2,
+        "color": "rgb(74, 123, 166)",
+        "size": 112,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1094,
+          "w": 200,
+          "h": 112
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-t",
+        "svg": false,
+        "text": "Drop them frozen into smoothies, or thaw for baking.",
+        "words": 9,
+        "chars": 52,
+        "color": "rgb(245, 242, 236)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 349,
+          "y": 1080,
+          "w": 963,
+          "h": 141
+        },
+        "lines": [
+          "Drop them frozen into smoothies,",
+          "or thaw for baking."
+        ]
+      },
+      {
+        "cls": "li-n",
+        "svg": false,
+        "text": "03",
+        "words": 1,
+        "chars": 2,
+        "color": "rgb(74, 123, 166)",
+        "size": 112,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1432,
+          "w": 200,
+          "h": 112
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-t",
+        "svg": false,
+        "text": "Texture shifts slightly – flavor doesn’t.",
+        "words": 6,
+        "chars": 41,
+        "color": "rgb(245, 242, 236)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 349,
+          "y": 1453,
+          "w": 963,
+          "h": 70
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-n",
+        "svg": false,
+        "text": "04",
+        "words": 1,
+        "chars": 2,
+        "color": "rgb(74, 123, 166)",
+        "size": 112,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1769,
+          "w": 200,
+          "h": 112
+        },
+        "lines": null
+      },
+      {
+        "cls": "li-t",
+        "svg": false,
+        "text": "5. FRESH HERBS. Chop, pack into a tray, top with olive oil, freeze. Sauté-ready ",
+        "words": 20,
+        "chars": 114,
+        "color": "rgb(245, 242, 236)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 349,
+          "y": 1684,
+          "w": 963,
+          "h": 282
+        },
+        "lines": [
+          "5. FRESH HERBS. Chop, pack",
+          "into a tray, top with",
+          "olive oil, freeze. Sauté-ready flavor",
+          "cubes that last for months."
+        ]
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "5 of 5",
+        "words": 3,
+        "chars": 6,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2282,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "5/6",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1240,
+          "y": 2441,
+          "w": 72,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 2134,
+      "height": 2134
+    },
+    "threadBox": {
+      "top": 2134,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-58/slides-tiktok/slide-05.png"
+  },
+  {
+    "index": 6,
+    "archetype": "cta",
+    "layout": "cta-card",
+    "valign": "bottom",
+    "normalizations": [
+      {
+        "slide": 6,
+        "field": "copy.headline",
+        "rule": "apostrophe",
+        "count": 1
+      },
+      {
+        "slide": 6,
+        "field": "copy.ctaLine",
+        "rule": "spaced-hyphen-to-en-dash",
+        "count": 1
+      },
+      {
+        "slide": 6,
+        "field": "copy.ctaLine",
+        "rule": "apostrophe",
+        "count": 2
+      }
+    ],
+    "declaresLoss": false,
+    "background": "dark",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [],
+    "accents": [
+      "rgb(0, 0, 0)",
+      "rgb(245, 242, 236)",
+      "rgba(245, 242, 236, 0.7)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "wordmark",
+        "svg": false,
+        "text": "fond",
+        "words": 1,
+        "chars": 4,
+        "color": "rgb(245, 242, 236)",
+        "size": 58.67,
+        "weight": 500,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1403,
+          "w": 1184,
+          "h": 76
+        },
+        "lines": null
+      },
+      {
+        "cls": "h-cta",
+        "svg": false,
+        "text": "The freezer doesn’t stop time. But it buys you weeks you were throwing away.",
+        "words": 14,
+        "chars": 76,
+        "color": "rgb(245, 242, 236)",
+        "size": 74.67,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1508,
+          "w": 722,
+          "h": 346
+        },
+        "lines": [
+          "The freezer doesn’t stop",
+          "time. But it buys",
+          "you weeks you were",
+          "throwing away."
+        ]
+      },
+      {
+        "cls": "cta-line",
+        "svg": false,
+        "text": "We built an app that tracks what’s about to expire – so you can freeze it in tim",
+        "words": 33,
+        "chars": 171,
+        "color": "rgb(245, 242, 236)",
+        "size": 53.33,
+        "weight": 500,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1884,
+          "w": 883,
+          "h": 429
+        },
+        "lines": [
+          "We built an app that tracks",
+          "what’s about to expire – so",
+          "you can freeze it in time.",
+          "Save it before your fridge does",
+          "the forgetting. Follow for more, something’s",
+          "on the way."
+        ]
+      },
+      {
+        "cls": "arrow",
+        "svg": false,
+        "text": "↓",
+        "words": 1,
+        "chars": 1,
+        "color": "rgba(245, 242, 236, 0.7)",
+        "size": 58.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2342,
+          "w": 1184,
+          "h": 70
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(245, 242, 236)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "6/6",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(245, 242, 236)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1239,
+          "y": 2441,
+          "w": 73,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "contentBox": {
+      "top": 0,
+      "bottom": 2441,
+      "height": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-58/slides-tiktok/slide-06.png"
+  }
+]

@@ -1,0 +1,23 @@
+valid: specs/post-46.json
+  WARN unsourced-hero   s3 Hero number $800, 1,100 is not in gtm.json's sourced set ($2,913/year, 43%). Either add its citation to gtm.json or render it qualitatively.
+  WARN no-angle         No gtmAngle set. Angles: money-leak, date-label-lie, takeout-guilt. Without one this post cannot feed the Ad Bank, whose rule is 90% adaptation and 10% origination.
+  gate 6 -> PASS  (0 fail, 2 warn)
+  downsampled 8 slides -> 1440x1800 (Lanczos)
+rendered 8 slides (ig) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-46/slides
+  contact sheet -> out/post-46/contact-sheet.png  (8 slides, 1450x904)
+  feed-scale thumbs -> out/post-46/thumbs.png  (rendered at 200px wide)
+
+  QA — post 46: The Kids' Plate Tax
+  verdict: PASS   fails=0  warns=7   ocr: skipped
+  typographic normalizer: 17 substitution(s) logged (apostrophe, double-quote-close, double-quote-open, spaced-hyphen-to-en-dash)
+    [WARN] G5.4-orphan slide 2: headline ends on an orphan: 'it.'
+    [WARN] G5.5-fill slide 4: content occupies 42% of its box — type or diagram could carry more of the frame
+    [WARN] G5.4-orphan slide 6: headline ends on an orphan: 'free.”'
+    [WARN] G5.7-rhythm-centroid slide 2: slides 1 and 2 centre at 37% and 36% of frame height, 1% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 3: slides 2 and 3 centre at 36% and 38% of frame height, 2% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 6: slides 5 and 6 centre at 39% and 36% of frame height, 4% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 7: slides 6 and 7 centre at 36% and 38% of frame height, 2% apart (need 12%)
+  downsampled 8 slides -> 1440x2560 (Lanczos)
+rendered 8 slides (tiktok) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-46/slides-tiktok
+exported 8 slides + 8 tiktok -> out/post-46/PUBLISH
+caption, alt, tiktok, POST-ME.txt written. Honesty check clean.

@@ -1,0 +1,109 @@
+{
+  "post": 58,
+  "title": "5 Things You Didn't Know You Could Freeze",
+  "provenance": "brief",
+  "verdict": "PASS",
+  "fails": 0,
+  "warns": 6,
+  "ocr": "skipped (opt-in: QA_OCR=1 or --ocr, run at batch end)",
+  "normalizations": [
+    {
+      "slide": 1,
+      "field": "copy.headline",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 1,
+      "field": "copy.body",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 2,
+      "field": "copy.items[0]",
+      "rule": "arrow",
+      "count": 1
+    },
+    {
+      "slide": 3,
+      "field": "copy.body",
+      "rule": "spaced-hyphen-to-en-dash",
+      "count": 1
+    },
+    {
+      "slide": 4,
+      "field": "copy.items[0]",
+      "rule": "spaced-hyphen-to-en-dash",
+      "count": 1
+    },
+    {
+      "slide": 5,
+      "field": "copy.items[2]",
+      "rule": "spaced-hyphen-to-en-dash",
+      "count": 1
+    },
+    {
+      "slide": 5,
+      "field": "copy.items[2]",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 6,
+      "field": "copy.headline",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 6,
+      "field": "copy.ctaLine",
+      "rule": "spaced-hyphen-to-en-dash",
+      "count": 1
+    },
+    {
+      "slide": 6,
+      "field": "copy.ctaLine",
+      "rule": "apostrophe",
+      "count": 2
+    }
+  ],
+  "findings": [
+    {
+      "gate": "G4.3-dominance",
+      "level": "WARN",
+      "slide": 2,
+      "msg": "no dominant element at feed scale (largest ink band 8% of height)"
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 3,
+      "msg": "content occupies 35% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.2-balance",
+      "level": "WARN",
+      "slide": 3,
+      "msg": "ink centre of mass at 63% of height \u2014 bottom-heavy"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 2,
+      "msg": "slides 1 and 2 centre at 48% and 41% of frame height, 7% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 4,
+      "msg": "slides 3 and 4 centre at 55% and 43% of frame height, 12% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 5,
+      "msg": "slides 4 and 5 centre at 43% and 44% of frame height, 1% apart (need 12%)"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+valid: specs/post-43.json
+  WARN no-angle         No gtmAngle set. Angles: money-leak, date-label-lie, takeout-guilt. Without one this post cannot feed the Ad Bank, whose rule is 90% adaptation and 10% origination.
+  gate 6 -> PASS  (0 fail, 1 warn)
+  downsampled 8 slides -> 1440x1800 (Lanczos)
+rendered 8 slides (ig) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-43/slides
+  contact sheet -> out/post-43/contact-sheet.png  (8 slides, 1450x904)
+  feed-scale thumbs -> out/post-43/thumbs.png  (rendered at 200px wide)
+
+  QA — post 43: Your Fridge Is 5 Degrees Too Warm
+  verdict: PASS   fails=0  warns=8   ocr: skipped
+  typographic normalizer: 6 substitution(s) logged (apostrophe, double-quote-close, double-quote-open, spaced-hyphen-to-en-dash)
+    [WARN] G2.5-ink slide 8: ink ratio 2.3% < 2% — slide reads empty
+    [WARN] G5.5-fill slide 4: content occupies 51% of its box — type or diagram could carry more of the frame
+    [WARN] G5.5-fill slide 7: content occupies 46% of its box — type or diagram could carry more of the frame
+    [WARN] G5.5-fill slide 8: content occupies 41% of its box — type or diagram could carry more of the frame
+    [WARN] G5.2-balance slide 8: ink centre of mass at 33% of height — top-heavy
+    [WARN] G5.7-rhythm-centroid slide 2: slides 1 and 2 centre at 36% and 40% of frame height, 5% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 3: slides 2 and 3 centre at 40% and 34% of frame height, 6% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 6: slides 5 and 6 centre at 36% and 31% of frame height, 4% apart (need 12%)
+  downsampled 8 slides -> 1440x2560 (Lanczos)
+rendered 8 slides (tiktok) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-43/slides-tiktok
+exported 8 slides + 8 tiktok -> out/post-43/PUBLISH
+caption, alt, tiktok, POST-ME.txt written. Honesty check clean.

@@ -3,6 +3,8 @@
     "index": 1,
     "archetype": "hook",
     "layout": "hero-statement",
+    "valign": "top",
+    "normalizations": [],
     "declaresLoss": false,
     "background": "dark",
     "fontStatus": {
@@ -44,7 +46,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 768,
+          "y": 224,
           "w": 1184,
           "h": 55
         },
@@ -63,7 +65,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 865,
+          "y": 322,
           "w": 1115,
           "h": 264
         },
@@ -85,8 +87,8 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1171,
-          "w": 802,
+          "y": 617,
+          "w": 803,
           "h": 221
         },
         "lines": [
@@ -108,7 +110,7 @@
         "surface": null,
         "box": {
           "x": 253,
-          "y": 1446,
+          "y": 892,
           "w": 97,
           "h": 52
         },
@@ -181,12 +183,14 @@
       "top": 2134,
       "bottom": 2441
     },
-    "file": "/home/claude/fond-carousel-engine/out/post-49/slides-tiktok/slide-01.png"
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-49/slides-tiktok/slide-01.png"
   },
   {
     "index": 2,
     "archetype": "backupHook",
     "layout": "hero-number",
+    "valign": "bottom",
+    "normalizations": [],
     "declaresLoss": false,
     "background": "dark",
     "fontStatus": {
@@ -223,7 +227,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 701,
+          "y": 1024,
           "w": 1184,
           "h": 55
         },
@@ -242,7 +246,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 799,
+          "y": 1148,
           "w": 1184,
           "h": 95
         },
@@ -255,15 +259,15 @@
         "words": 12,
         "chars": 65,
         "color": "rgb(245, 242, 236)",
-        "size": 58.67,
+        "size": 80,
         "weight": 500,
         "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1151,
-          "w": 769,
-          "h": 222
+          "y": 1581,
+          "w": 1049,
+          "h": 302
         },
         "lines": [
           "How long eggs keep",
@@ -284,7 +288,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1415,
+          "y": 1953,
           "w": 1184,
           "h": 43
         },
@@ -357,12 +361,14 @@
       "top": 2134,
       "bottom": 2441
     },
-    "file": "/home/claude/fond-carousel-engine/out/post-49/slides-tiktok/slide-02.png"
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-49/slides-tiktok/slide-02.png"
   },
   {
     "index": 3,
     "archetype": "value",
     "layout": "split-compare",
+    "valign": "center",
+    "normalizations": [],
     "declaresLoss": false,
     "background": "light",
     "fontStatus": {
@@ -393,15 +399,15 @@
         "words": 7,
         "chars": 33,
         "color": "rgb(20, 22, 26)",
-        "size": 85.33,
+        "size": 96,
         "weight": 700,
         "family": "\"Playfair Display\", Georgia, serif",
         "surface": null,
         "box": {
           "x": 128,
-          "y": 726,
-          "w": 881,
-          "h": 181
+          "y": 304,
+          "w": 991,
+          "h": 204
         },
         "lines": [
           "Two dates. Only one",
@@ -415,15 +421,15 @@
         "words": 1,
         "chars": 2,
         "color": "rgb(107, 114, 128)",
-        "size": 45.33,
+        "size": 186.67,
         "weight": 700,
         "family": "\"Space Grotesk\", ui-monospace, monospace",
         "surface": null,
         "box": {
-          "x": 172,
-          "y": 999,
-          "w": 485,
-          "h": 58
+          "x": 177,
+          "y": 608,
+          "w": 475,
+          "h": 187
         },
         "lines": null
       },
@@ -434,22 +440,23 @@
         "words": 17,
         "chars": 98,
         "color": "rgb(20, 22, 26)",
-        "size": 45.33,
+        "size": 53.33,
         "weight": 400,
         "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
         "surface": null,
         "box": {
-          "x": 172,
-          "y": 1081,
-          "w": 485,
-          "h": 304
+          "x": 177,
+          "y": 1369,
+          "w": 475,
+          "h": 429
         },
         "lines": [
-          "Sell-By or EXP. A",
-          "stocking instruction written for",
-          "the store, not a",
-          "safety cutoff written for",
-          "you."
+          "Sell-By or EXP.",
+          "A stocking instruction",
+          "written for the",
+          "store, not a",
+          "safety cutoff written",
+          "for you."
         ]
       },
       {
@@ -459,15 +466,15 @@
         "words": 1,
         "chars": 2,
         "color": "rgb(74, 123, 166)",
-        "size": 45.33,
+        "size": 186.67,
         "weight": 700,
         "family": "\"Space Grotesk\", ui-monospace, monospace",
         "surface": null,
         "box": {
-          "x": 783,
-          "y": 999,
-          "w": 485,
-          "h": 58
+          "x": 788,
+          "y": 608,
+          "w": 475,
+          "h": 187
         },
         "lines": null
       },
@@ -478,22 +485,24 @@
         "words": 20,
         "chars": 106,
         "color": "rgb(20, 22, 26)",
-        "size": 45.33,
+        "size": 53.33,
         "weight": 400,
         "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
         "surface": null,
         "box": {
-          "x": 783,
-          "y": 1081,
-          "w": 485,
-          "h": 304
+          "x": 788,
+          "y": 1298,
+          "w": 475,
+          "h": 500
         },
         "lines": [
-          "Pack date. The day",
-          "the eggs were graded",
-          "and boxed. This is",
-          "the one your fridge",
-          "clock actually starts from."
+          "Pack date. The",
+          "day the eggs",
+          "were graded and",
+          "boxed. This is",
+          "the one your",
+          "fridge clock actually",
+          "starts from."
         ]
       },
       {
@@ -563,12 +572,14 @@
       "top": 2134,
       "bottom": 2441
     },
-    "file": "/home/claude/fond-carousel-engine/out/post-49/slides-tiktok/slide-03.png"
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-49/slides-tiktok/slide-03.png"
   },
   {
     "index": 4,
     "archetype": "value",
     "layout": "stack-list",
+    "valign": "bottom",
+    "normalizations": [],
     "declaresLoss": false,
     "background": "dark",
     "fontStatus": {
@@ -604,15 +615,15 @@
         "words": 5,
         "chars": 22,
         "color": "rgb(245, 242, 236)",
-        "size": 85.33,
+        "size": 96,
         "weight": 700,
         "family": "\"Playfair Display\", Georgia, serif",
         "surface": null,
         "box": {
           "x": 128,
-          "y": 783,
-          "w": 881,
-          "h": 90
+          "y": 498,
+          "w": 991,
+          "h": 102
         },
         "lines": null
       },
@@ -623,15 +634,15 @@
         "words": 1,
         "chars": 2,
         "color": "rgb(74, 123, 166)",
-        "size": 48,
+        "size": 112,
         "weight": 700,
         "family": "\"Space Grotesk\", ui-monospace, monospace",
         "surface": null,
         "box": {
           "x": 128,
-          "y": 919,
-          "w": 101,
-          "h": 61
+          "y": 813,
+          "w": 200,
+          "h": 112
         },
         "lines": null
       },
@@ -642,15 +653,15 @@
         "words": 8,
         "chars": 48,
         "color": "rgb(245, 242, 236)",
-        "size": 50.67,
+        "size": 53.33,
         "weight": 400,
         "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
         "surface": null,
         "box": {
-          "x": 245,
-          "y": 916,
-          "w": 1067,
-          "h": 134
+          "x": 349,
+          "y": 799,
+          "w": 963,
+          "h": 141
         },
         "lines": [
           "Find the three-digit code",
@@ -664,15 +675,15 @@
         "words": 1,
         "chars": 2,
         "color": "rgb(74, 123, 166)",
-        "size": 48,
+        "size": 112,
         "weight": 700,
         "family": "\"Space Grotesk\", ui-monospace, monospace",
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1083,
-          "w": 101,
-          "h": 61
+          "y": 1263,
+          "w": 200,
+          "h": 112
         },
         "lines": null
       },
@@ -683,15 +694,15 @@
         "words": 9,
         "chars": 46,
         "color": "rgb(245, 242, 236)",
-        "size": 50.67,
+        "size": 53.33,
         "weight": 400,
         "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
         "surface": null,
         "box": {
-          "x": 245,
-          "y": 1080,
-          "w": 1067,
-          "h": 134
+          "x": 349,
+          "y": 1249,
+          "w": 963,
+          "h": 141
         },
         "lines": [
           "That is the pack date,",
@@ -705,15 +716,15 @@
         "words": 1,
         "chars": 2,
         "color": "rgb(74, 123, 166)",
-        "size": 48,
+        "size": 112,
         "weight": 700,
         "family": "\"Space Grotesk\", ui-monospace, monospace",
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1246,
-          "w": 101,
-          "h": 61
+          "y": 1713,
+          "w": 200,
+          "h": 112
         },
         "lines": null
       },
@@ -724,15 +735,15 @@
         "words": 10,
         "chars": 50,
         "color": "rgb(245, 242, 236)",
-        "size": 50.67,
+        "size": 53.33,
         "weight": 400,
         "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
         "surface": null,
         "box": {
-          "x": 245,
-          "y": 1243,
-          "w": 1067,
-          "h": 134
+          "x": 349,
+          "y": 1698,
+          "w": 963,
+          "h": 141
         },
         "lines": [
           "Add three to five weeks.",
@@ -806,12 +817,14 @@
       "top": 2134,
       "bottom": 2441
     },
-    "file": "/home/claude/fond-carousel-engine/out/post-49/slides-tiktok/slide-04.png"
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-49/slides-tiktok/slide-04.png"
   },
   {
     "index": 5,
     "archetype": "value",
     "layout": "timeline",
+    "valign": "center",
+    "normalizations": [],
     "declaresLoss": false,
     "background": "light",
     "fontStatus": {
@@ -842,15 +855,15 @@
         "words": 7,
         "chars": 32,
         "color": "rgb(20, 22, 26)",
-        "size": 85.33,
+        "size": 96,
         "weight": 700,
         "family": "\"Playfair Display\", Georgia, serif",
         "surface": null,
         "box": {
           "x": 128,
-          "y": 798,
-          "w": 881,
-          "h": 181
+          "y": 333,
+          "w": 991,
+          "h": 204
         },
         "lines": [
           "When you are unsure,",
@@ -864,21 +877,17 @@
         "words": 6,
         "chars": 28,
         "color": "rgb(20, 22, 26)",
-        "size": 44,
+        "size": 53.33,
         "weight": 400,
         "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
         "surface": null,
         "box": {
-          "x": 128,
-          "y": 1096,
-          "w": 224,
-          "h": 169
+          "x": 224,
+          "y": 698,
+          "w": 641,
+          "h": 68
         },
-        "lines": [
-          "Fill a",
-          "bowl with",
-          "cold water."
-        ]
+        "lines": null
       },
       {
         "cls": "step-t",
@@ -887,20 +896,17 @@
         "words": 4,
         "chars": 17,
         "color": "rgb(20, 22, 26)",
-        "size": 44,
+        "size": 53.33,
         "weight": 400,
         "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
         "surface": null,
         "box": {
-          "x": 448,
-          "y": 1096,
-          "w": 224,
-          "h": 113
+          "x": 224,
+          "y": 983,
+          "w": 415,
+          "h": 68
         },
-        "lines": [
-          "Lower the",
-          "egg in."
-        ]
+        "lines": null
       },
       {
         "cls": "step-t",
@@ -909,20 +915,17 @@
         "words": 5,
         "chars": 24,
         "color": "rgb(20, 22, 26)",
-        "size": 44,
+        "size": 53.33,
         "weight": 400,
         "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
         "surface": null,
         "box": {
-          "x": 768,
-          "y": 1096,
-          "w": 224,
-          "h": 113
+          "x": 224,
+          "y": 1268,
+          "w": 483,
+          "h": 68
         },
-        "lines": [
-          "Sinks flat, it",
-          "is fresh."
-        ]
+        "lines": null
       },
       {
         "cls": "step-t",
@@ -931,21 +934,17 @@
         "words": 4,
         "chars": 22,
         "color": "rgb(20, 22, 26)",
-        "size": 44,
+        "size": 53.33,
         "weight": 400,
         "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
         "surface": null,
         "box": {
-          "x": 1088,
-          "y": 1096,
-          "w": 224,
-          "h": 169
+          "x": 224,
+          "y": 1554,
+          "w": 521,
+          "h": 68
         },
-        "lines": [
-          "Floats, that",
-          "one goes.",
-          ""
-        ]
+        "lines": null
       },
       {
         "cls": "cite",
@@ -960,7 +959,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1318,
+          "y": 1783,
           "w": 1184,
           "h": 43
         },
@@ -1033,12 +1032,14 @@
       "top": 2134,
       "bottom": 2441
     },
-    "file": "/home/claude/fond-carousel-engine/out/post-49/slides-tiktok/slide-05.png"
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-49/slides-tiktok/slide-05.png"
   },
   {
     "index": 6,
     "archetype": "value",
     "layout": "hero-statement",
+    "valign": "bottom",
+    "normalizations": [],
     "declaresLoss": false,
     "background": "dark",
     "fontStatus": {
@@ -1075,7 +1076,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 648,
+          "y": 1131,
           "w": 1115,
           "h": 527
         },
@@ -1099,8 +1100,8 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1218,
-          "w": 802,
+          "y": 1701,
+          "w": 803,
           "h": 294
         },
         "lines": [
@@ -1177,12 +1178,14 @@
       "top": 2134,
       "bottom": 2441
     },
-    "file": "/home/claude/fond-carousel-engine/out/post-49/slides-tiktok/slide-06.png"
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-49/slides-tiktok/slide-06.png"
   },
   {
     "index": 7,
     "archetype": "reframe",
     "layout": "quadrant-card",
+    "valign": "center",
+    "normalizations": [],
     "declaresLoss": false,
     "background": "light",
     "fontStatus": {
@@ -1229,15 +1232,15 @@
         "words": 5,
         "chars": 33,
         "color": "rgb(20, 22, 26)",
-        "size": 85.33,
+        "size": 96,
         "weight": 700,
         "family": "\"Playfair Display\", Georgia, serif",
         "surface": null,
         "box": {
           "x": 128,
-          "y": 601,
-          "w": 881,
-          "h": 181
+          "y": 333,
+          "w": 991,
+          "h": 204
         },
         "lines": [
           "Keep this. Your",
@@ -1256,9 +1259,9 @@
         "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
         "surface": null,
         "box": {
-          "x": 173,
-          "y": 859,
-          "w": 495,
+          "x": 176,
+          "y": 728,
+          "w": 489,
           "h": 55
         },
         "lines": null
@@ -1270,15 +1273,15 @@
         "words": 2,
         "chars": 7,
         "color": "rgb(46, 94, 78)",
-        "size": 69.33,
+        "size": 82.67,
         "weight": 700,
         "family": "\"Space Grotesk\", ui-monospace, monospace",
         "surface": null,
         "box": {
-          "x": 173,
-          "y": 930,
-          "w": 495,
-          "h": 80
+          "x": 176,
+          "y": 812,
+          "w": 489,
+          "h": 96
         },
         "lines": null
       },
@@ -1294,9 +1297,9 @@
         "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
         "surface": null,
         "box": {
-          "x": 780,
-          "y": 859,
-          "w": 495,
+          "x": 783,
+          "y": 728,
+          "w": 489,
           "h": 55
         },
         "lines": null
@@ -1308,15 +1311,15 @@
         "words": 2,
         "chars": 9,
         "color": "rgb(46, 94, 78)",
-        "size": 69.33,
+        "size": 82.67,
         "weight": 700,
         "family": "\"Space Grotesk\", ui-monospace, monospace",
         "surface": null,
         "box": {
-          "x": 780,
-          "y": 930,
-          "w": 495,
-          "h": 80
+          "x": 783,
+          "y": 812,
+          "w": 489,
+          "h": 96
         },
         "lines": null
       },
@@ -1332,9 +1335,9 @@
         "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
         "surface": null,
         "box": {
-          "x": 173,
-          "y": 1109,
-          "w": 495,
+          "x": 176,
+          "y": 1234,
+          "w": 489,
           "h": 55
         },
         "lines": null
@@ -1346,15 +1349,15 @@
         "words": 2,
         "chars": 10,
         "color": "rgb(74, 123, 166)",
-        "size": 69.33,
+        "size": 82.67,
         "weight": 700,
         "family": "\"Space Grotesk\", ui-monospace, monospace",
         "surface": null,
         "box": {
-          "x": 173,
-          "y": 1180,
-          "w": 495,
-          "h": 80
+          "x": 176,
+          "y": 1319,
+          "w": 489,
+          "h": 96
         },
         "lines": null
       },
@@ -1370,9 +1373,9 @@
         "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
         "surface": null,
         "box": {
-          "x": 780,
-          "y": 1109,
-          "w": 495,
+          "x": 783,
+          "y": 1234,
+          "w": 489,
           "h": 55
         },
         "lines": null
@@ -1384,15 +1387,15 @@
         "words": 3,
         "chars": 9,
         "color": "rgb(107, 114, 128)",
-        "size": 69.33,
+        "size": 82.67,
         "weight": 700,
         "family": "\"Space Grotesk\", ui-monospace, monospace",
         "surface": null,
         "box": {
-          "x": 780,
-          "y": 1180,
-          "w": 495,
-          "h": 80
+          "x": 783,
+          "y": 1319,
+          "w": 489,
+          "h": 96
         },
         "lines": null
       },
@@ -1409,8 +1412,8 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1338,
-          "w": 802,
+          "y": 1606,
+          "w": 803,
           "h": 221
         },
         "lines": [
@@ -1486,12 +1489,21 @@
       "top": 2134,
       "bottom": 2441
     },
-    "file": "/home/claude/fond-carousel-engine/out/post-49/slides-tiktok/slide-07.png"
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-49/slides-tiktok/slide-07.png"
   },
   {
     "index": 8,
     "archetype": "cta",
     "layout": "cta-card",
+    "valign": "bottom",
+    "normalizations": [
+      {
+        "slide": 8,
+        "field": "copy.citation",
+        "rule": "apostrophe",
+        "count": 1
+      }
+    ],
     "declaresLoss": false,
     "background": "dark",
     "fontStatus": {
@@ -1521,7 +1533,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 866,
+          "y": 1567,
           "w": 1184,
           "h": 76
         },
@@ -1540,7 +1552,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 971,
+          "y": 1672,
           "w": 722,
           "h": 260
         },
@@ -1563,7 +1575,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1260,
+          "y": 1962,
           "w": 883,
           "h": 214
         },
@@ -1586,7 +1598,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1504,
+          "y": 2205,
           "w": 657,
           "h": 107
         },
@@ -1608,7 +1620,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1640,
+          "y": 2342,
           "w": 1184,
           "h": 70
         },
@@ -1658,6 +1670,6 @@
       "bottom": 2441,
       "height": 2441
     },
-    "file": "/home/claude/fond-carousel-engine/out/post-49/slides-tiktok/slide-08.png"
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-49/slides-tiktok/slide-08.png"
   }
 ]

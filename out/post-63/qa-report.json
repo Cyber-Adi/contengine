@@ -1,0 +1,55 @@
+{
+  "post": 63,
+  "title": "Two Rooms, Same Thursday",
+  "provenance": "brief",
+  "verdict": "PASS",
+  "fails": 0,
+  "warns": 6,
+  "ocr": "skipped (opt-in: QA_OCR=1 or --ocr, run at batch end)",
+  "normalizations": [
+    {
+      "slide": 8,
+      "field": "copy.citation",
+      "rule": "apostrophe",
+      "count": 1
+    }
+  ],
+  "findings": [
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 4,
+      "msg": "content occupies 47% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 6,
+      "msg": "content occupies 53% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 3,
+      "msg": "slides 2 and 3 centre at 31% and 35% of frame height, 4% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 4,
+      "msg": "slides 3 and 4 centre at 35% and 37% of frame height, 2% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 5,
+      "msg": "slides 4 and 5 centre at 37% and 36% of frame height, 0% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 6,
+      "msg": "slides 5 and 6 centre at 36% and 47% of frame height, 11% apart (need 12%)"
+    }
+  ]
+}

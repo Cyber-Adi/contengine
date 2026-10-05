@@ -1,0 +1,85 @@
+{
+  "post": 3,
+  "title": "The Bulk-Buy Lie",
+  "provenance": "converted-from-notion-script",
+  "verdict": "PASS",
+  "fails": 0,
+  "warns": 7,
+  "ocr": "skipped (opt-in: QA_OCR=1 or --ocr, run at batch end)",
+  "normalizations": [
+    {
+      "slide": 2,
+      "field": "copy.items[0]",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 4,
+      "field": "copy.heroNumberCaption",
+      "rule": "double-quote-open",
+      "count": 1
+    },
+    {
+      "slide": 4,
+      "field": "copy.heroNumberCaption",
+      "rule": "double-quote-close",
+      "count": 1
+    },
+    {
+      "slide": 5,
+      "field": "copy.items[0]",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 5,
+      "field": "copy.items[1]",
+      "rule": "apostrophe",
+      "count": 1
+    }
+  ],
+  "findings": [
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 1,
+      "msg": "content occupies 42% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.2-balance",
+      "level": "WARN",
+      "slide": 1,
+      "msg": "ink centre of mass at 62% of height \u2014 bottom-heavy"
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 3,
+      "msg": "content occupies 49% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 4,
+      "msg": "content occupies 48% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 6,
+      "msg": "content occupies 39% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 7,
+      "msg": "content occupies 34% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 5,
+      "msg": "slides 4 and 5 centre at 32% and 33% of frame height, 1% apart (need 12%)"
+    }
+  ]
+}

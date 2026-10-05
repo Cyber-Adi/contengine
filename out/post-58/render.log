@@ -1,0 +1,21 @@
+valid: specs/post-58.json
+  WARN no-angle         No gtmAngle set. Angles: money-leak, date-label-lie, takeout-guilt. Without one this post cannot feed the Ad Bank, whose rule is 90% adaptation and 10% origination.
+  gate 6 -> PASS  (0 fail, 1 warn)
+  downsampled 6 slides -> 1440x1800 (Lanczos)
+rendered 6 slides (ig) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-58/slides
+  contact sheet -> out/post-58/contact-sheet.png  (6 slides, 1450x904)
+  feed-scale thumbs -> out/post-58/thumbs.png  (rendered at 200px wide)
+
+  QA — post 58: 5 Things You Didn't Know You Could Freeze
+  verdict: PASS   fails=0  warns=6   ocr: skipped
+  typographic normalizer: 10 substitution(s) logged (apostrophe, arrow, spaced-hyphen-to-en-dash)
+    [WARN] G4.3-dominance slide 2: no dominant element at feed scale (largest ink band 8% of height)
+    [WARN] G5.5-fill slide 3: content occupies 35% of its box — type or diagram could carry more of the frame
+    [WARN] G5.2-balance slide 3: ink centre of mass at 63% of height — bottom-heavy
+    [WARN] G5.7-rhythm-centroid slide 2: slides 1 and 2 centre at 48% and 41% of frame height, 7% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 4: slides 3 and 4 centre at 55% and 43% of frame height, 12% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 5: slides 4 and 5 centre at 43% and 44% of frame height, 1% apart (need 12%)
+  downsampled 6 slides -> 1440x2560 (Lanczos)
+rendered 6 slides (tiktok) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-58/slides-tiktok
+exported 6 slides + 6 tiktok -> out/post-58/PUBLISH
+caption, alt, tiktok, POST-ME.txt written. Honesty check clean.

@@ -1,0 +1,103 @@
+{
+  "post": 44,
+  "title": "Quick Pickle Anything",
+  "provenance": "brief",
+  "verdict": "PASS",
+  "fails": 0,
+  "warns": 7,
+  "ocr": "skipped (opt-in: QA_OCR=1 or --ocr, run at batch end)",
+  "normalizations": [
+    {
+      "slide": 2,
+      "field": "copy.headline",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 4,
+      "field": "copy.items[0]",
+      "rule": "spaced-hyphen-to-en-dash",
+      "count": 1
+    },
+    {
+      "slide": 4,
+      "field": "copy.items[2]",
+      "rule": "spaced-hyphen-to-en-dash",
+      "count": 1
+    },
+    {
+      "slide": 5,
+      "field": "copy.items[5]",
+      "rule": "spaced-hyphen-to-en-dash",
+      "count": 1
+    },
+    {
+      "slide": 6,
+      "field": "copy.body",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 8,
+      "field": "copy.headline",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 8,
+      "field": "copy.ctaLine",
+      "rule": "spaced-hyphen-to-en-dash",
+      "count": 1
+    },
+    {
+      "slide": 8,
+      "field": "copy.ctaLine",
+      "rule": "apostrophe",
+      "count": 1
+    }
+  ],
+  "findings": [
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 1,
+      "msg": "content occupies 54% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 2,
+      "msg": "slides 1 and 2 centre at 33% and 44% of frame height, 11% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 4,
+      "msg": "slides 3 and 4 centre at 31% and 39% of frame height, 8% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 5,
+      "msg": "slides 4 and 5 centre at 39% and 35% of frame height, 4% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 6,
+      "msg": "slides 5 and 6 centre at 35% and 37% of frame height, 1% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 7,
+      "msg": "slides 6 and 7 centre at 37% and 37% of frame height, 0% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 8,
+      "msg": "slides 7 and 8 centre at 37% and 46% of frame height, 9% apart (need 12%)"
+    }
+  ]
+}

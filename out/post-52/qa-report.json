@@ -1,0 +1,187 @@
+{
+  "post": 52,
+  "title": "The Takeout Tax: You Have $40 of Food in Your Fridge. You Ordered Delivery Anyway.",
+  "provenance": "brief",
+  "verdict": "PASS",
+  "fails": 0,
+  "warns": 8,
+  "ocr": "skipped (opt-in: QA_OCR=1 or --ocr, run at batch end)",
+  "normalizations": [
+    {
+      "slide": 2,
+      "field": "copy.items[2]",
+      "rule": "spaced-hyphen-to-en-dash",
+      "count": 1
+    },
+    {
+      "slide": 2,
+      "field": "copy.items[2]",
+      "rule": "double-quote-open",
+      "count": 1
+    },
+    {
+      "slide": 2,
+      "field": "copy.items[2]",
+      "rule": "double-quote-close",
+      "count": 1
+    },
+    {
+      "slide": 3,
+      "field": "copy.items[3]",
+      "rule": "spaced-hyphen-to-en-dash",
+      "count": 1
+    },
+    {
+      "slide": 3,
+      "field": "copy.items[3]",
+      "rule": "apostrophe",
+      "count": 2
+    },
+    {
+      "slide": 4,
+      "field": "copy.headline",
+      "rule": "apostrophe",
+      "count": 2
+    },
+    {
+      "slide": 4,
+      "field": "copy.items[0]",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 4,
+      "field": "copy.items[1]",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 5,
+      "field": "copy.headline",
+      "rule": "spaced-hyphen-to-en-dash",
+      "count": 1
+    },
+    {
+      "slide": 5,
+      "field": "copy.body",
+      "rule": "spaced-hyphen-to-en-dash",
+      "count": 1
+    },
+    {
+      "slide": 5,
+      "field": "copy.body",
+      "rule": "double-quote-open",
+      "count": 1
+    },
+    {
+      "slide": 5,
+      "field": "copy.body",
+      "rule": "double-quote-close",
+      "count": 1
+    },
+    {
+      "slide": 5,
+      "field": "copy.body",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 6,
+      "field": "copy.items[1]",
+      "rule": "spaced-hyphen-to-en-dash",
+      "count": 2
+    },
+    {
+      "slide": 6,
+      "field": "copy.items[1]",
+      "rule": "double-quote-open",
+      "count": 1
+    },
+    {
+      "slide": 6,
+      "field": "copy.items[1]",
+      "rule": "double-quote-close",
+      "count": 1
+    },
+    {
+      "slide": 6,
+      "field": "copy.items[1]",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 7,
+      "field": "copy.headline",
+      "rule": "double-quote-open",
+      "count": 2
+    },
+    {
+      "slide": 7,
+      "field": "copy.headline",
+      "rule": "double-quote-close",
+      "count": 2
+    },
+    {
+      "slide": 7,
+      "field": "copy.headline",
+      "rule": "apostrophe",
+      "count": 2
+    },
+    {
+      "slide": 7,
+      "field": "copy.ctaLine",
+      "rule": "apostrophe",
+      "count": 2
+    }
+  ],
+  "findings": [
+    {
+      "gate": "G5.4-orphan",
+      "level": "WARN",
+      "slide": 2,
+      "msg": "headline ends on an orphan: 'week.'"
+    },
+    {
+      "gate": "G5.4-orphan",
+      "level": "WARN",
+      "slide": 4,
+      "msg": "headline ends on an orphan: 'eggs.'"
+    },
+    {
+      "gate": "G5.4-orphan",
+      "level": "WARN",
+      "slide": 7,
+      "msg": "headline ends on an orphan: 'problem.'"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 2,
+      "msg": "slides 1 and 2 centre at 35% and 36% of frame height, 2% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 3,
+      "msg": "slides 2 and 3 centre at 36% and 38% of frame height, 2% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 4,
+      "msg": "slides 3 and 4 centre at 38% and 37% of frame height, 1% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 5,
+      "msg": "slides 4 and 5 centre at 37% and 33% of frame height, 4% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 6,
+      "msg": "slides 5 and 6 centre at 33% and 39% of frame height, 6% apart (need 12%)"
+    }
+  ]
+}

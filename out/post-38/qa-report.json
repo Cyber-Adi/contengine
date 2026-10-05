@@ -1,0 +1,73 @@
+{
+  "post": 38,
+  "title": "Vegetable Scrap Broth: The $0 Ingredient",
+  "provenance": "converted-from-notion-script",
+  "verdict": "PASS",
+  "fails": 0,
+  "warns": 6,
+  "ocr": "skipped (opt-in: QA_OCR=1 or --ocr, run at batch end)",
+  "normalizations": [
+    {
+      "slide": 4,
+      "field": "copy.items[3]",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 5,
+      "field": "copy.body",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 6,
+      "field": "copy.headline",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 6,
+      "field": "copy.ctaLine",
+      "rule": "apostrophe",
+      "count": 1
+    }
+  ],
+  "findings": [
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 1,
+      "msg": "content occupies 42% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.2-balance",
+      "level": "WARN",
+      "slide": 1,
+      "msg": "ink centre of mass at 64% of height \u2014 bottom-heavy"
+    },
+    {
+      "gate": "G5.4-orphan",
+      "level": "WARN",
+      "slide": 1,
+      "msg": "headline ends on an orphan: 'broth.'"
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 5,
+      "msg": "content occupies 50% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 4,
+      "msg": "slides 3 and 4 centre at 45% and 39% of frame height, 6% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 5,
+      "msg": "slides 4 and 5 centre at 39% and 49% of frame height, 10% apart (need 12%)"
+    }
+  ]
+}

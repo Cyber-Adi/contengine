@@ -1,0 +1,115 @@
+{
+  "post": 26,
+  "title": "Your Grocery Store App Is Spying on You",
+  "provenance": "converted-from-notion-script",
+  "verdict": "PASS",
+  "fails": 0,
+  "warns": 8,
+  "ocr": "skipped (opt-in: QA_OCR=1 or --ocr, run at batch end)",
+  "normalizations": [
+    {
+      "slide": 1,
+      "field": "copy.headline",
+      "rule": "double-quote-open",
+      "count": 1
+    },
+    {
+      "slide": 1,
+      "field": "copy.headline",
+      "rule": "double-quote-close",
+      "count": 1
+    },
+    {
+      "slide": 1,
+      "field": "copy.headline",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 1,
+      "field": "copy.body",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 2,
+      "field": "copy.items[1]",
+      "rule": "double-quote-open",
+      "count": 1
+    },
+    {
+      "slide": 2,
+      "field": "copy.items[1]",
+      "rule": "double-quote-close",
+      "count": 1
+    },
+    {
+      "slide": 2,
+      "field": "copy.items[1]",
+      "rule": "apostrophe",
+      "count": 3
+    },
+    {
+      "slide": 4,
+      "field": "copy.items[2]",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 7,
+      "field": "copy.ctaLine",
+      "rule": "apostrophe",
+      "count": 1
+    }
+  ],
+  "findings": [
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 1,
+      "msg": "content occupies 52% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 3,
+      "msg": "content occupies 48% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.4-orphan",
+      "level": "WARN",
+      "slide": 5,
+      "msg": "headline ends on an orphan: 'score.'"
+    },
+    {
+      "gate": "G5.4-orphan",
+      "level": "WARN",
+      "slide": 7,
+      "msg": "headline ends on an orphan: 'profile.'"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 3,
+      "msg": "slides 2 and 3 centre at 37% and 48% of frame height, 11% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 4,
+      "msg": "slides 3 and 4 centre at 48% and 37% of frame height, 11% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 5,
+      "msg": "slides 4 and 5 centre at 37% and 42% of frame height, 5% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 6,
+      "msg": "slides 5 and 6 centre at 42% and 39% of frame height, 3% apart (need 12%)"
+    }
+  ]
+}

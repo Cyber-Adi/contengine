@@ -1,0 +1,19 @@
+valid: specs/post-18.json
+  gate 6 -> PASS  (0 fail, 0 warn)
+  downsampled 7 slides -> 1440x1800 (Lanczos)
+rendered 7 slides (ig) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-18/slides
+  contact sheet -> out/post-18/contact-sheet.png  (7 slides, 1450x904)
+  feed-scale thumbs -> out/post-18/thumbs.png  (rendered at 200px wide)
+
+  QA — post 18: "10 for $10" Doesn't Mean You Buy 10
+  verdict: PASS   fails=0  warns=5   ocr: skipped
+  typographic normalizer: 13 substitution(s) logged (apostrophe, double-quote-close, double-quote-open)
+    [WARN] G5.5-fill slide 1: content occupies 32% of its box — type or diagram could carry more of the frame
+    [WARN] G5.2-balance slide 1: ink centre of mass at 31% of height — top-heavy
+    [WARN] G5.7-rhythm-centroid slide 3: slides 2 and 3 centre at 41% and 37% of frame height, 4% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 4: slides 3 and 4 centre at 37% and 47% of frame height, 10% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 6: slides 5 and 6 centre at 34% and 38% of frame height, 5% apart (need 12%)
+  downsampled 7 slides -> 1440x2560 (Lanczos)
+rendered 7 slides (tiktok) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-18/slides-tiktok
+exported 7 slides + 7 tiktok -> out/post-18/PUBLISH
+caption, alt, tiktok, POST-ME.txt written. Honesty check clean.

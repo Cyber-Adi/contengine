@@ -1,0 +1,18 @@
+valid: specs/post-29.json
+  gate 6 -> PASS  (0 fail, 0 warn)
+  downsampled 5 slides -> 1440x1800 (Lanczos)
+rendered 5 slides (ig) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-29/slides
+  contact sheet -> out/post-29/contact-sheet.png  (5 slides, 1450x904)
+  feed-scale thumbs -> out/post-29/thumbs.png  (rendered at 200px wide)
+
+  QA — post 29: Your Overripe Bananas Are Worth $8
+  verdict: PASS   fails=0  warns=4   ocr: skipped
+  typographic normalizer: 3 substitution(s) logged (apostrophe)
+    [WARN] G5.5-fill slide 1: content occupies 50% of its box — type or diagram could carry more of the frame
+    [WARN] G5.5-fill slide 3: content occupies 41% of its box — type or diagram could carry more of the frame
+    [WARN] G5.5-fill slide 5: content occupies 40% of its box — type or diagram could carry more of the frame
+    [WARN] G5.2-balance slide 5: ink centre of mass at 72% of height — bottom-heavy
+  downsampled 5 slides -> 1440x2560 (Lanczos)
+rendered 5 slides (tiktok) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-29/slides-tiktok
+exported 5 slides + 5 tiktok -> out/post-29/PUBLISH
+caption, alt, tiktok, POST-ME.txt written. Honesty check clean.

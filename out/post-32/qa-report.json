@@ -4,26 +4,53 @@
   "provenance": "brief",
   "verdict": "PASS",
   "fails": 0,
-  "warns": 5,
-  "findings": [
+  "warns": 6,
+  "ocr": "skipped (opt-in: QA_OCR=1 or --ocr, run at batch end)",
+  "normalizations": [
     {
-      "gate": "G5.5-fill",
-      "level": "WARN",
       "slide": 1,
-      "msg": "content occupies 51% of its box \u2014 type or diagram could carry more of the frame"
+      "field": "copy.heroNumberCaption",
+      "rule": "apostrophe",
+      "count": 1
     },
     {
-      "gate": "G5.5-fill",
-      "level": "WARN",
       "slide": 2,
-      "msg": "content occupies 46% of its box \u2014 type or diagram could carry more of the frame"
+      "field": "copy.headline",
+      "rule": "arrow",
+      "count": 1
     },
     {
-      "gate": "G5.5-fill",
-      "level": "WARN",
-      "slide": 3,
-      "msg": "content occupies 49% of its box \u2014 type or diagram could carry more of the frame"
+      "slide": 5,
+      "field": "copy.headline",
+      "rule": "apostrophe",
+      "count": 1
     },
+    {
+      "slide": 6,
+      "field": "copy.headline",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 6,
+      "field": "copy.body",
+      "rule": "apostrophe",
+      "count": 2
+    },
+    {
+      "slide": 7,
+      "field": "copy.headline",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 7,
+      "field": "copy.citation",
+      "rule": "apostrophe",
+      "count": 1
+    }
+  ],
+  "findings": [
     {
       "gate": "G5.5-fill",
       "level": "WARN",
@@ -35,6 +62,30 @@
       "level": "WARN",
       "slide": 7,
       "msg": "content occupies 47% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.2-balance",
+      "level": "WARN",
+      "slide": 7,
+      "msg": "ink centre of mass at 65% of height \u2014 bottom-heavy"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 2,
+      "msg": "slides 1 and 2 centre at 30% and 35% of frame height, 5% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 3,
+      "msg": "slides 2 and 3 centre at 35% and 37% of frame height, 2% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 6,
+      "msg": "slides 5 and 6 centre at 32% and 39% of frame height, 7% apart (need 12%)"
     }
   ]
 }
