@@ -414,6 +414,7 @@ function fillScript(aim, S = 1, idx = 0) {
   // Hole guard (Gate 5.1): in a short copy block the structural gap between two blocks can
   // exceed the deadband share of the block. Close only the offending gap, never below a
   // floor, never touching type or copy. Estimate = box gap plus the line padding that is not ink.
+  // Below a hero numeral that padding is large: digits sit on the baseline with no descenders.
   (()=>{
     const hroot=content.querySelector(':scope > .cta-wrap')||content;
     const kids=[...hroot.children].filter(k=>{const r=k.getBoundingClientRect();return r.width&&r.height;});
@@ -425,8 +426,9 @@ function fillScript(aim, S = 1, idx = 0) {
       const body=kids.filter(k=>!k.classList.contains('swipe')), s0=kids.find(k=>!k.classList.contains('hero-num'))||kids[0], spanBody=body.length?body[body.length-1].getBoundingClientRect().bottom-s0.getBoundingClientRect().top:spanAll;
       let worst=-1,wv=0;
       for(let i=1;i<kids.length;i++){
-        const gap=rs[i].top-rs[i-1].bottom, est=gap+(kids[i-1].classList.contains('hero-num')?0.04:0.25)*lh(kids[i-1])+(kids[i].classList.contains('hero-num')?0.04:0.11)*lh(kids[i]);
-        const span=kids[i].classList.contains('swipe')?spanAll:spanBody;
+        const gap=rs[i].top-rs[i-1].bottom, est=gap+(kids[i-1].classList.contains('hero-num')?0.2:0.25)*lh(kids[i-1])+(kids[i].classList.contains('hero-num')?0.04:0.11)*lh(kids[i]);
+        // Gate 5.1 measures the swipe gap against the block from the first non-numeral element, as here.
+        const span=kids[i].classList.contains('swipe')?rs[rs.length-1].bottom-s0.getBoundingClientRect().top:spanBody;
         if(est/span>lim&&est>wv&&gap>floor){wv=est;worst=i;}
       }
       if(worst<0) break;
