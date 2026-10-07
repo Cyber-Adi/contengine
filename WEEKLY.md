@@ -41,20 +41,18 @@ By hand, for each post:
 2. **TikTok** goes out from your phone on the same day: the folder's `tiktok/` images plus
    `tiktok.txt`, with a trending sound picked in-app (TikTok's web scheduler skips photo posts).
 
-Schedule **everything on the page**, then mark the whole page scheduled in **one command**
-instead of one per post:
+Then mark **only the posts you actually scheduled**, one command each (the agent's report
+prints them, and each post on the page shows its own):
 
 ```bash
-node tools/log-post.mjs --scheduled-all
+node tools/log-post.mjs N --published --date YYYY-MM-DD
 ```
 
-It reads the dates already printed on the page and marks each post scheduled on its own
-slot date — that's what removes them from the page and tells the engine they've gone out.
-(Skipped one on purpose? Use its individual "mark scheduled" command instead, still on
-the page under that post.)
+Don't use `--scheduled-all` for now: it marks every post on the page, including the ones
+past the 28-day window that nobody scheduled.
 
-It holds at most a few weeks, so doing it all in one sitting is how posts keep going out
-on weeks you don't sit down at all. The page also shows how many days the oldest post has
+Scheduling four weeks in one sitting is how posts keep going out on weeks you don't sit
+down at all. The page also shows how many days the oldest post has
 been waiting — that number does not reset when the page regenerates, so a stalled queue
 stays visible instead of looking fresh every time you open it.
 

@@ -112,11 +112,10 @@ Fix anything wrong (open the scheduled post → edit date or order). If you can'
 - **TikTok:** Meta Business Suite cannot post to TikTok, and TikTok's own web scheduler
   does not take photo carousels. Adi posts TikTok from the phone on the same day, using
   the folder's `tiktok/` images and `tiktok.txt`, with a trending sound picked in-app.
-- **Marking posts scheduled in the repo:** you can't run commands. Adi runs this once
-  you report success, and it removes them from `READY-TO-POST/`:
-  `node tools/log-post.mjs --scheduled-all`
-  If you scheduled only part of the page, list the post numbers so Adi can run
-  `node tools/log-post.mjs N --published --date YYYY-MM-DD` for each instead.
+- **Marking posts scheduled in the repo:** you can't run commands. In your report, print
+  one line per scheduled post for Adi to paste:
+  `node tools/log-post.mjs N --published --date YYYY-MM-DD`
+  Never suggest `--scheduled-all`: it marks every post on the page, not just the window.
 - Insights, comments and replies stay Adi's.
 
 ## 8 · Report back in exactly this shape
@@ -128,7 +127,7 @@ SCHEDULED (Instagram only, verified in Planner)
 SKIPPED   post-N  reason
 PROBLEMS  anything that differed from this file (UI changes, timezone, crops, order fixes)
 ALT TEXT TO ADD AFTER GO-LIVE   post-N, post-N ...
-ADI RUNS  node tools/log-post.mjs --scheduled-all   (or the per-post commands)
+ADI RUNS  one line per scheduled post: node tools/log-post.mjs N --published --date YYYY-MM-DD
 NEXT RUN  on or after YYYY-MM-DD (the first date beyond this window, minus 28 days)
 ```
 
