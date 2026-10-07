@@ -29,6 +29,10 @@ if (argv.includes('--scheduled-all') || argv.includes('--scheduled')) {
   const file = optFlag('schedule-file') || path.join(STATE_DIR, 'schedule.json');
   const today = optFlag('today') || new Date().toISOString().slice(0, 10);
   const dry = argv.includes('--dry-run');
+  // The hooks only redirect the schedule file; children still write real performance/ledger.
+  if ((optFlag('schedule-file') || optFlag('today')) && !dry) {
+    console.error('--schedule-file / --today are test hooks and need --dry-run'); process.exit(2);
+  }
   const only = argv.includes('--scheduled')
     ? String(optFlag('scheduled') ?? '').split(',').map((x) => Number(x.trim())).filter((x) => Number.isInteger(x) && x > 0)
     : undefined;
@@ -41,10 +45,19 @@ if (argv.includes('--scheduled-all') || argv.includes('--scheduled')) {
   if (!marked.length) { console.log('nothing to mark: no planned posts in the NOW window (or the named posts are already scheduled)'); process.exit(0); }
   console.log(`marking ${marked.length} post(s) scheduled${only ? '' : ' (NOW window only)'}:`);
   if (!dry) {
-    for (const { post, date } of marked) {
-      execFileSync(process.execPath, [path.join(ROOT, 'tools', 'log-post.mjs'), String(post), '--published', '--date', date], { stdio: 'inherit' });
+    // Save whatever succeeded even if a later post fails, so schedule.json never lags
+    // behind the performance rows the children already wrote.
+    const done = new Set();
+    try {
+      for (const { post, date } of marked) {
+        execFileSync(process.execPath, [path.join(ROOT, 'tools', 'log-post.mjs'), String(post), '--published', '--date', date], { stdio: 'inherit' });
+        done.add(String(post));
+      }
+    } finally {
+      const posts = Object.fromEntries(Object.entries(schedule.posts)
+        .map(([k, v]) => [k, done.has(k) || !marked.some((m) => String(m.post) === k) ? v : current.posts[k]]));
+      saveSchedule(file, { ...schedule, posts });
     }
-    saveSchedule(file, schedule);
   } else for (const m of marked) console.log(`  post-${m.post} ${m.date}`);
   process.exit(0);
 }
@@ -63,7 +76,7 @@ const num = (name) => {
   const v = flag(name);
   if (v === undefined || v === '' || v.startsWith('--')) return undefined;
   const x = Number(v);
-  return Number.isFinite(x) ? x : undefined;
+  return Number.isFinite(x) && x >= 0 ? x : undefined;   // a negative count is a typo, not data
 };
 
 const perf = loadPerformance();
