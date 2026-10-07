@@ -48,21 +48,22 @@
         "words": 8,
         "chars": 54,
         "color": "rgb(245, 242, 236)",
-        "size": 128,
+        "size": 165.333,
         "weight": 700,
         "family": "\"Playfair Display\", Georgia, serif",
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1279,
-          "w": 1115,
-          "h": 527
+          "y": 928,
+          "w": 1184,
+          "h": 851
         },
         "lines": [
           "You ordered",
           "DoorDash because",
           "“there’s nothing",
-          "to eat.”"
+          "to eat.”",
+          ""
         ]
       },
       {
@@ -78,7 +79,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1849,
+          "y": 1822,
           "w": 803,
           "h": 147
         },
@@ -164,6 +165,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -402,6 +404,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -566,6 +569,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -631,7 +635,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 333,
+          "y": 417,
           "w": 991,
           "h": 305
         },
@@ -654,7 +658,7 @@
         "surface": null,
         "box": {
           "x": 177,
-          "y": 738,
+          "y": 822,
           "w": 475,
           "h": 187
         },
@@ -673,7 +677,7 @@
         "surface": null,
         "box": {
           "x": 177,
-          "y": 1398,
+          "y": 1046,
           "w": 475,
           "h": 286
         },
@@ -697,7 +701,7 @@
         "surface": null,
         "box": {
           "x": 788,
-          "y": 738,
+          "y": 822,
           "w": 475,
           "h": 187
         },
@@ -716,7 +720,7 @@
         "surface": null,
         "box": {
           "x": 788,
-          "y": 1541,
+          "y": 1046,
           "w": 475,
           "h": 143
         },
@@ -738,7 +742,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1783,
+          "y": 1700,
           "w": 1184,
           "h": 43
         },
@@ -802,6 +806,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -957,6 +962,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -1072,6 +1078,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,

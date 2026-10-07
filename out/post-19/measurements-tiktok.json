@@ -59,19 +59,20 @@
         "words": 8,
         "chars": 46,
         "color": "rgb(245, 242, 236)",
-        "size": 128,
+        "size": 165.333,
         "weight": 700,
         "family": "\"Playfair Display\", Georgia, serif",
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1681,
-          "w": 1115,
-          "h": 395
+          "y": 1339,
+          "w": 1184,
+          "h": 681
         },
         "lines": [
-          "“There’s nothing to",
-          "eat” is a",
+          "“There’s nothing",
+          "to eat”",
+          "is a",
           "$5,000/year lie."
         ]
       },
@@ -152,6 +153,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2185,
@@ -279,7 +281,7 @@
         "surface": null,
         "box": {
           "x": 177,
-          "y": 1584,
+          "y": 1479,
           "w": 475,
           "h": 143
         },
@@ -320,7 +322,7 @@
         "surface": null,
         "box": {
           "x": 788,
-          "y": 1584,
+          "y": 1479,
           "w": 475,
           "h": 143
         },
@@ -406,6 +408,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2185,
@@ -595,6 +598,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2185,
@@ -834,6 +838,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2185,
@@ -1055,6 +1060,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2185,
@@ -1218,6 +1224,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2185,
@@ -1384,6 +1391,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2441,

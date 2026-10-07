@@ -58,16 +58,16 @@
   ],
   "findings": [
     {
-      "gate": "G5.5-fill",
+      "gate": "G5.7-rhythm-centroid",
       "level": "WARN",
-      "slide": 1,
-      "msg": "content occupies 46% of its box \u2014 type or diagram could carry more of the frame"
+      "slide": 2,
+      "msg": "slides 1 and 2 centre at 46% and 36% of frame height, 11% apart (need 12%)"
     },
     {
       "gate": "G5.7-rhythm-centroid",
       "level": "WARN",
       "slide": 3,
-      "msg": "slides 2 and 3 centre at 38% and 31% of frame height, 6% apart (need 12%)"
+      "msg": "slides 2 and 3 centre at 36% and 31% of frame height, 4% apart (need 12%)"
     },
     {
       "gate": "G5.7-rhythm-centroid",

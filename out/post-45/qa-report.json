@@ -4,7 +4,7 @@
   "provenance": "brief",
   "verdict": "PASS",
   "fails": 0,
-  "warns": 9,
+  "warns": 8,
   "ocr": "skipped (opt-in: QA_OCR=1 or --ocr, run at batch end)",
   "normalizations": [
     {
@@ -58,18 +58,6 @@
   ],
   "findings": [
     {
-      "gate": "G5.5-fill",
-      "level": "WARN",
-      "slide": 1,
-      "msg": "content occupies 31% of its box \u2014 type or diagram could carry more of the frame"
-    },
-    {
-      "gate": "G5.2-balance",
-      "level": "WARN",
-      "slide": 1,
-      "msg": "ink centre of mass at 69% of height \u2014 bottom-heavy"
-    },
-    {
       "gate": "G5.4-orphan",
       "level": "WARN",
       "slide": 7,
@@ -80,6 +68,12 @@
       "level": "WARN",
       "slide": 8,
       "msg": "content occupies 50% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 2,
+      "msg": "slides 1 and 2 centre at 50% and 42% of frame height, 8% apart (need 12%)"
     },
     {
       "gate": "G5.7-rhythm-centroid",
@@ -97,13 +91,13 @@
       "gate": "G5.7-rhythm-centroid",
       "level": "WARN",
       "slide": 5,
-      "msg": "slides 4 and 5 centre at 32% and 42% of frame height, 9% apart (need 12%)"
+      "msg": "slides 4 and 5 centre at 32% and 41% of frame height, 9% apart (need 12%)"
     },
     {
       "gate": "G5.7-rhythm-centroid",
       "level": "WARN",
       "slide": 6,
-      "msg": "slides 5 and 6 centre at 42% and 36% of frame height, 6% apart (need 12%)"
+      "msg": "slides 5 and 6 centre at 41% and 36% of frame height, 5% apart (need 12%)"
     },
     {
       "gate": "G5.7-rhythm-centroid",

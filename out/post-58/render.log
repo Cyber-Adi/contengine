@@ -12,7 +12,7 @@ rendered 6 slides (ig) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees
     [WARN] G4.3-dominance slide 2: no dominant element at feed scale (largest ink band 8% of height)
     [WARN] G5.5-fill slide 3: content occupies 35% of its box — type or diagram could carry more of the frame
     [WARN] G5.2-balance slide 3: ink centre of mass at 63% of height — bottom-heavy
-    [WARN] G5.7-rhythm-centroid slide 2: slides 1 and 2 centre at 48% and 41% of frame height, 7% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 2: slides 1 and 2 centre at 41% and 41% of frame height, 0% apart (need 12%)
     [WARN] G5.7-rhythm-centroid slide 4: slides 3 and 4 centre at 55% and 43% of frame height, 12% apart (need 12%)
     [WARN] G5.7-rhythm-centroid slide 5: slides 4 and 5 centre at 43% and 44% of frame height, 1% apart (need 12%)
   downsampled 6 slides -> 1440x2560 (Lanczos)

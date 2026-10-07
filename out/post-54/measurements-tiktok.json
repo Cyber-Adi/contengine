@@ -29,22 +29,23 @@
         "words": 14,
         "chars": 75,
         "color": "rgb(245, 242, 236)",
-        "size": 128,
+        "size": 165.333,
         "weight": 700,
         "family": "\"Playfair Display\", Georgia, serif",
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1285,
-          "w": 1115,
-          "h": 659
+          "y": 896,
+          "w": 1184,
+          "h": 1022
         },
         "lines": [
           "Three of the",
           "best ingredients in",
           "your kitchen go",
           "down the drain",
-          "every week."
+          "every week.",
+          ""
         ]
       },
       {
@@ -124,6 +125,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -278,6 +280,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -471,6 +474,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -645,6 +649,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -876,6 +881,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -1058,6 +1064,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2441,

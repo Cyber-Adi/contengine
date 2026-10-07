@@ -47,22 +47,23 @@
         "words": 15,
         "chars": 80,
         "color": "rgb(245, 242, 236)",
-        "size": 128,
+        "size": 165.333,
         "weight": 700,
         "family": "\"Playfair Display\", Georgia, serif",
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1220,
-          "w": 1115,
-          "h": 659
+          "y": 831,
+          "w": 1184,
+          "h": 1022
         },
         "lines": [
           "Grocery prices are",
           "up 19.1% since",
           "2022. You’re also",
           "wasting 30% of",
-          "what you buy."
+          "what you buy.",
+          ""
         ]
       },
       {
@@ -78,7 +79,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1922,
+          "y": 1896,
           "w": 803,
           "h": 74
         },
@@ -161,6 +162,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -389,6 +391,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -541,6 +544,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -753,6 +757,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -918,6 +923,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -1091,6 +1097,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2441,

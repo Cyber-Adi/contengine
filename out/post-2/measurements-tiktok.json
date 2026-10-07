@@ -29,20 +29,21 @@
         "words": 13,
         "chars": 62,
         "color": "rgb(245, 242, 236)",
-        "size": 128,
+        "size": 165.333,
         "weight": 700,
         "family": "\"Playfair Display\", Georgia, serif",
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1482,
-          "w": 1115,
-          "h": 527
+          "y": 1118,
+          "w": 1184,
+          "h": 851
         },
         "lines": [
-          "Milk, eggs, and bread",
-          "are at the back",
-          "of the store on",
+          "Milk, eggs, and",
+          "bread are at",
+          "the back of",
+          "the store on",
           "purpose."
         ]
       },
@@ -104,6 +105,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -295,6 +297,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -424,6 +427,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -631,6 +635,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -774,6 +779,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -868,6 +874,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,

@@ -48,7 +48,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 378,
+          "y": 434,
           "w": 1184,
           "h": 407
         },
@@ -71,7 +71,7 @@
         "surface": null,
         "box": {
           "x": 177,
-          "y": 885,
+          "y": 941,
           "w": 475,
           "h": 187
         },
@@ -90,7 +90,7 @@
         "surface": null,
         "box": {
           "x": 177,
-          "y": 1458,
+          "y": 1165,
           "w": 475,
           "h": 214
         },
@@ -113,7 +113,7 @@
         "surface": null,
         "box": {
           "x": 788,
-          "y": 885,
+          "y": 941,
           "w": 475,
           "h": 187
         },
@@ -132,7 +132,7 @@
         "surface": null,
         "box": {
           "x": 788,
-          "y": 1458,
+          "y": 1165,
           "w": 475,
           "h": 214
         },
@@ -155,7 +155,7 @@
         "surface": null,
         "box": {
           "x": 253,
-          "y": 1784,
+          "y": 1728,
           "w": 97,
           "h": 52
         },
@@ -219,6 +219,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -363,6 +364,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -658,6 +660,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -880,6 +883,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -1193,6 +1197,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -1447,6 +1452,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -1625,6 +1631,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2441,

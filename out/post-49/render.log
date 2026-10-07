@@ -10,11 +10,11 @@ rendered 8 slides (ig) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees
   QA — post 49: Your Eggs Have 5 Weeks. Not 5 Days.
   verdict: PASS   fails=0  warns=8   ocr: skipped
   typographic normalizer: 1 substitution(s) logged (apostrophe)
-    [WARN] G5.5-fill slide 1: content occupies 49% of its box — type or diagram could carry more of the frame
     [WARN] G5.5-fill slide 8: content occupies 50% of its box — type or diagram could carry more of the frame
     [WARN] G5.2-balance slide 8: ink centre of mass at 64% of height — bottom-heavy
-    [WARN] G5.7-rhythm-centroid slide 3: slides 2 and 3 centre at 45% and 40% of frame height, 5% apart (need 12%)
-    [WARN] G5.7-rhythm-centroid slide 4: slides 3 and 4 centre at 40% and 41% of frame height, 1% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 2: slides 1 and 2 centre at 36% and 45% of frame height, 9% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 3: slides 2 and 3 centre at 45% and 39% of frame height, 6% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 4: slides 3 and 4 centre at 39% and 41% of frame height, 2% apart (need 12%)
     [WARN] G5.7-rhythm-centroid slide 5: slides 4 and 5 centre at 41% and 35% of frame height, 6% apart (need 12%)
     [WARN] G5.7-rhythm-centroid slide 6: slides 5 and 6 centre at 35% and 46% of frame height, 11% apart (need 12%)
     [WARN] G5.7-rhythm-centroid slide 7: slides 6 and 7 centre at 46% and 38% of frame height, 8% apart (need 12%)

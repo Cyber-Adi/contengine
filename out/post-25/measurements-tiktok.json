@@ -40,20 +40,22 @@
         "words": 8,
         "chars": 51,
         "color": "rgb(245, 242, 236)",
-        "size": 128,
+        "size": 165.333,
         "weight": 700,
         "family": "\"Playfair Display\", Georgia, serif",
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1630,
-          "w": 1115,
-          "h": 395
+          "y": 1118,
+          "w": 1184,
+          "h": 851
         },
         "lines": [
-          "One $6 rotisserie",
-          "chicken. Three meals.",
-          "Zero waste."
+          "One $6",
+          "rotisserie chicken.",
+          "Three meals.",
+          "Zero waste.",
+          ""
         ]
       },
       {
@@ -133,6 +135,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -342,6 +345,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -493,6 +497,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -715,6 +720,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -892,6 +898,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2441,

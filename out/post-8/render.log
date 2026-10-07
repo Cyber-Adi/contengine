@@ -6,9 +6,8 @@ rendered 7 slides (ig) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees
   feed-scale thumbs -> out/post-8/thumbs.png  (rendered at 200px wide)
 
   QA — post 8: The Inflation Multiplier
-  verdict: PASS   fails=0  warns=9   ocr: skipped
+  verdict: PASS   fails=0  warns=8   ocr: skipped
   typographic normalizer: 5 substitution(s) logged (apostrophe)
-    [WARN] G5.5-fill slide 1: content occupies 46% of its box — type or diagram could carry more of the frame
     [WARN] G5.4-orphan slide 1: headline ends on an orphan: '2020.'
     [WARN] G5.5-fill slide 4: content occupies 40% of its box — type or diagram could carry more of the frame
     [WARN] G5.5-fill slide 6: content occupies 45% of its box — type or diagram could carry more of the frame

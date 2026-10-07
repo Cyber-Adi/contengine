@@ -42,19 +42,20 @@
         "words": 6,
         "chars": 38,
         "color": "rgb(245, 242, 236)",
-        "size": 128,
+        "size": 165.333,
         "weight": 700,
         "family": "\"Playfair Display\", Georgia, serif",
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1582,
-          "w": 1115,
-          "h": 264
+          "y": 1285,
+          "w": 1184,
+          "h": 511
         },
         "lines": [
-          "Your fruit is",
-          "killing your vegetables."
+          "Your fruit",
+          "is killing",
+          "your vegetables."
         ]
       },
       {
@@ -70,7 +71,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1862,
+          "y": 1822,
           "w": 803,
           "h": 147
         },
@@ -156,6 +157,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -216,7 +218,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 333,
+          "y": 400,
           "w": 1184,
           "h": 136
         },
@@ -235,7 +237,7 @@
         "surface": null,
         "box": {
           "x": 177,
-          "y": 569,
+          "y": 635,
           "w": 475,
           "h": 187
         },
@@ -254,7 +256,7 @@
         "surface": null,
         "box": {
           "x": 177,
-          "y": 1255,
+          "y": 859,
           "w": 475,
           "h": 429
         },
@@ -280,7 +282,7 @@
         "surface": null,
         "box": {
           "x": 788,
-          "y": 569,
+          "y": 635,
           "w": 475,
           "h": 187
         },
@@ -299,7 +301,7 @@
         "surface": null,
         "box": {
           "x": 788,
-          "y": 1255,
+          "y": 859,
           "w": 475,
           "h": 429
         },
@@ -325,7 +327,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1783,
+          "y": 1717,
           "w": 1184,
           "h": 43
         },
@@ -389,6 +391,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -532,6 +535,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -814,6 +818,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -962,6 +967,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -1143,6 +1149,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2441,

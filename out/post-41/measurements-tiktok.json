@@ -29,21 +29,22 @@
         "words": 11,
         "chars": 59,
         "color": "rgb(245, 242, 236)",
-        "size": 128,
+        "size": 165.333,
         "weight": 700,
         "family": "\"Playfair Display\", Georgia, serif",
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1482,
-          "w": 1115,
-          "h": 527
+          "y": 1118,
+          "w": 1184,
+          "h": 851
         },
         "lines": [
           "The music in",
           "the grocery store",
           "is chosen by",
-          "a psychologist."
+          "a psychologist.",
+          ""
         ]
       },
       {
@@ -104,6 +105,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -218,6 +220,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -431,6 +434,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -478,7 +482,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 333,
+          "y": 410,
           "w": 991,
           "h": 102
         },
@@ -497,7 +501,7 @@
         "surface": null,
         "box": {
           "x": 177,
-          "y": 535,
+          "y": 611,
           "w": 475,
           "h": 187
         },
@@ -516,7 +520,7 @@
         "surface": null,
         "box": {
           "x": 177,
-          "y": 1210,
+          "y": 835,
           "w": 475,
           "h": 357
         },
@@ -541,7 +545,7 @@
         "surface": null,
         "box": {
           "x": 788,
-          "y": 535,
+          "y": 611,
           "w": 475,
           "h": 187
         },
@@ -560,7 +564,7 @@
         "surface": null,
         "box": {
           "x": 788,
-          "y": 1281,
+          "y": 835,
           "w": 475,
           "h": 286
         },
@@ -584,7 +588,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1667,
+          "y": 1591,
           "w": 803,
           "h": 74
         },
@@ -603,7 +607,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1783,
+          "y": 1707,
           "w": 1184,
           "h": 43
         },
@@ -648,6 +652,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -769,6 +774,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -963,6 +969,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -1067,6 +1074,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -1250,6 +1258,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2441,

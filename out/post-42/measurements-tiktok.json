@@ -47,21 +47,23 @@
         "words": 13,
         "chars": 79,
         "color": "rgb(245, 242, 236)",
-        "size": 128,
+        "size": 165.333,
         "weight": 700,
         "family": "\"Playfair Display\", Georgia, serif",
         "surface": null,
         "box": {
           "x": 128,
           "y": 224,
-          "w": 1115,
-          "h": 659
+          "w": 1184,
+          "h": 1192
         },
         "lines": [
-          "Your grandparents wasted",
-          "almost no food.",
-          "You waste $2,913",
-          "a year. What",
+          "Your grandparents",
+          "wasted almost",
+          "no food.",
+          "You waste",
+          "$2,913 a",
+          "year. What",
           "changed?"
         ]
       },
@@ -78,7 +80,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 926,
+          "y": 1459,
           "w": 1184,
           "h": 43
         },
@@ -97,7 +99,7 @@
         "surface": null,
         "box": {
           "x": 253,
-          "y": 1023,
+          "y": 1582,
           "w": 97,
           "h": 52
         },
@@ -161,6 +163,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -356,6 +359,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -434,7 +438,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 325,
+          "y": 441,
           "w": 991,
           "h": 102
         },
@@ -453,7 +457,7 @@
         "surface": null,
         "box": {
           "x": 177,
-          "y": 527,
+          "y": 643,
           "w": 475,
           "h": 187
         },
@@ -472,7 +476,7 @@
         "surface": null,
         "box": {
           "x": 177,
-          "y": 1322,
+          "y": 867,
           "w": 475,
           "h": 214
         },
@@ -495,7 +499,7 @@
         "surface": null,
         "box": {
           "x": 788,
-          "y": 527,
+          "y": 643,
           "w": 475,
           "h": 187
         },
@@ -514,7 +518,7 @@
         "surface": null,
         "box": {
           "x": 788,
-          "y": 1250,
+          "y": 867,
           "w": 475,
           "h": 286
         },
@@ -538,7 +542,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1636,
+          "y": 1520,
           "w": 803,
           "h": 147
         },
@@ -605,6 +609,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -846,6 +851,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -1107,6 +1113,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -1266,6 +1273,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -1475,6 +1483,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -1671,6 +1680,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2441,

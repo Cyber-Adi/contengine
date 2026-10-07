@@ -60,12 +60,6 @@
     {
       "gate": "G5.5-fill",
       "level": "WARN",
-      "slide": 1,
-      "msg": "content occupies 42% of its box \u2014 type or diagram could carry more of the frame"
-    },
-    {
-      "gate": "G5.5-fill",
-      "level": "WARN",
       "slide": 7,
       "msg": "content occupies 36% of its box \u2014 type or diagram could carry more of the frame"
     },
@@ -84,6 +78,12 @@
     {
       "gate": "G5.7-rhythm-centroid",
       "level": "WARN",
+      "slide": 2,
+      "msg": "slides 1 and 2 centre at 49% and 41% of frame height, 8% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
       "slide": 3,
       "msg": "slides 2 and 3 centre at 41% and 39% of frame height, 2% apart (need 12%)"
     },
@@ -97,7 +97,7 @@
       "gate": "G5.7-rhythm-centroid",
       "level": "WARN",
       "slide": 5,
-      "msg": "slides 4 and 5 centre at 37% and 45% of frame height, 8% apart (need 12%)"
+      "msg": "slides 4 and 5 centre at 37% and 45% of frame height, 9% apart (need 12%)"
     }
   ]
 }

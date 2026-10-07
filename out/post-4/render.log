@@ -7,10 +7,9 @@ rendered 7 slides (ig) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees
   feed-scale thumbs -> out/post-4/thumbs.png  (rendered at 200px wide)
 
   QA — post 4: 10 for $10 Doesn't Mean Buy 10
-  verdict: PASS   fails=0  warns=8   ocr: skipped
+  verdict: PASS   fails=0  warns=7   ocr: skipped
   typographic normalizer: 11 substitution(s) logged (apostrophe, double-quote-close, double-quote-open)
-    [WARN] G5.5-fill slide 1: content occupies 32% of its box — type or diagram could carry more of the frame
-    [WARN] G5.2-balance slide 1: ink centre of mass at 68% of height — bottom-heavy
+    [WARN] G5.4-orphan slide 1: headline ends on an orphan: '10.'
     [WARN] G5.5-fill slide 3: content occupies 54% of its box — type or diagram could carry more of the frame
     [WARN] G5.5-fill slide 7: content occupies 42% of its box — type or diagram could carry more of the frame
     [WARN] G5.2-balance slide 7: ink centre of mass at 67% of height — bottom-heavy

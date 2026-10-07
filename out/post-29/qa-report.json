@@ -4,7 +4,7 @@
   "provenance": "converted-from-notion-script",
   "verdict": "PASS",
   "fails": 0,
-  "warns": 4,
+  "warns": 3,
   "ocr": "skipped (opt-in: QA_OCR=1 or --ocr, run at batch end)",
   "normalizations": [
     {
@@ -27,12 +27,6 @@
     }
   ],
   "findings": [
-    {
-      "gate": "G5.5-fill",
-      "level": "WARN",
-      "slide": 1,
-      "msg": "content occupies 50% of its box \u2014 type or diagram could carry more of the frame"
-    },
     {
       "gate": "G5.5-fill",
       "level": "WARN",

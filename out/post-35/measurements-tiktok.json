@@ -42,22 +42,23 @@
         "words": 13,
         "chars": 71,
         "color": "rgb(245, 242, 236)",
-        "size": 128,
+        "size": 165.333,
         "weight": 700,
         "family": "\"Playfair Display\", Georgia, serif",
         "surface": null,
         "box": {
           "x": 128,
           "y": 224,
-          "w": 1115,
-          "h": 659
+          "w": 1184,
+          "h": 1022
         },
         "lines": [
           "That fresh bread",
           "smell when you",
           "walk in? It’s",
           "pumped through the",
-          "vents."
+          "vents.",
+          ""
         ]
       },
       {
@@ -73,7 +74,7 @@
         "surface": null,
         "box": {
           "x": 253,
-          "y": 937,
+          "y": 1326,
           "w": 97,
           "h": 52
         },
@@ -137,6 +138,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -386,6 +388,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -610,6 +613,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -871,6 +875,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -1129,6 +1134,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -1319,6 +1325,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2441,

@@ -29,23 +29,25 @@
         "words": 22,
         "chars": 113,
         "color": "rgb(245, 242, 236)",
-        "size": 128,
+        "size": 155.562,
         "weight": 700,
         "family": "\"Playfair Display\", Georgia, serif",
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1022,
-          "w": 1115,
-          "h": 923
+          "y": 478,
+          "w": 1184,
+          "h": 1442
         },
         "lines": [
-          "The shelf in front",
-          "of you is a",
-          "paid advertisement. The cheapest",
-          "version of what you",
-          "want is usually by",
-          "your feet.",
+          "The shelf in",
+          "front of you",
+          "is a paid",
+          "advertisement. The cheapest",
+          "version of what",
+          "you want is",
+          "usually by your",
+          "feet.",
           ""
         ]
       },
@@ -126,6 +128,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -337,6 +340,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -501,6 +505,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -665,6 +670,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -887,6 +893,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -1128,6 +1135,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -1296,6 +1304,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2441,

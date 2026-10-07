@@ -47,15 +47,15 @@
         "words": 10,
         "chars": 59,
         "color": "rgb(245, 242, 236)",
-        "size": 128,
+        "size": 165.333,
         "weight": 700,
         "family": "\"Playfair Display\", Georgia, serif",
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1482,
-          "w": 1115,
-          "h": 527
+          "y": 1288,
+          "w": 1184,
+          "h": 681
         },
         "lines": [
           "7 foods you’re",
@@ -141,6 +141,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -194,7 +195,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 333,
+          "y": 451,
           "w": 1184,
           "h": 136
         },
@@ -213,7 +214,7 @@
         "surface": null,
         "box": {
           "x": 177,
-          "y": 569,
+          "y": 686,
           "w": 475,
           "h": 187
         },
@@ -232,7 +233,7 @@
         "surface": null,
         "box": {
           "x": 177,
-          "y": 1326,
+          "y": 910,
           "w": 475,
           "h": 357
         },
@@ -257,7 +258,7 @@
         "surface": null,
         "box": {
           "x": 788,
-          "y": 569,
+          "y": 686,
           "w": 475,
           "h": 187
         },
@@ -276,7 +277,7 @@
         "surface": null,
         "box": {
           "x": 788,
-          "y": 1469,
+          "y": 910,
           "w": 475,
           "h": 214
         },
@@ -299,7 +300,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1783,
+          "y": 1666,
           "w": 1184,
           "h": 43
         },
@@ -363,6 +364,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -604,6 +606,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -809,6 +812,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -1013,6 +1017,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -1217,6 +1222,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -1497,6 +1503,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -1668,6 +1675,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2441,

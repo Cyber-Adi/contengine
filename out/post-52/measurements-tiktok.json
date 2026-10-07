@@ -219,6 +219,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -515,6 +516,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -733,6 +735,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -856,7 +859,7 @@
         "surface": null,
         "box": {
           "x": 177,
-          "y": 1469,
+          "y": 1333,
           "w": 475,
           "h": 286
         },
@@ -899,7 +902,7 @@
         "surface": null,
         "box": {
           "x": 788,
-          "y": 1540,
+          "y": 1333,
           "w": 475,
           "h": 214
         },
@@ -967,6 +970,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -1142,6 +1146,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -1414,6 +1419,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -1599,6 +1605,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2441,

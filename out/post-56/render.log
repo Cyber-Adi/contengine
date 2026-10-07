@@ -11,11 +11,11 @@ rendered 7 slides (ig) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees
   typographic normalizer: 34 substitution(s) logged (apostrophe, double-quote-close, double-quote-open, spaced-hyphen-to-en-dash)
     [WARN] G5.5-fill slide 4: content occupies 54% of its box — type or diagram could carry more of the frame
     [WARN] G5.4-orphan slide 7: headline ends on an orphan: 'safe.'
-    [WARN] G5.7-rhythm-centroid slide 2: slides 1 and 2 centre at 45% and 39% of frame height, 6% apart (need 12%)
-    [WARN] G5.7-rhythm-centroid slide 3: slides 2 and 3 centre at 39% and 34% of frame height, 6% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 2: slides 1 and 2 centre at 40% and 40% of frame height, 0% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 3: slides 2 and 3 centre at 40% and 34% of frame height, 7% apart (need 12%)
     [WARN] G5.7-rhythm-centroid slide 4: slides 3 and 4 centre at 34% and 43% of frame height, 10% apart (need 12%)
     [WARN] G5.7-rhythm-centroid slide 5: slides 4 and 5 centre at 43% and 38% of frame height, 5% apart (need 12%)
-    [WARN] G5.7-rhythm-centroid slide 6: slides 5 and 6 centre at 38% and 37% of frame height, 1% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 6: slides 5 and 6 centre at 38% and 39% of frame height, 0% apart (need 12%)
   downsampled 7 slides -> 1440x2560 (Lanczos)
 rendered 7 slides (tiktok) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-56/slides-tiktok
 exported 7 slides + 7 tiktok -> out/post-56/PUBLISH

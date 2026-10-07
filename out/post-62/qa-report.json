@@ -4,7 +4,7 @@
   "provenance": "brief",
   "verdict": "PASS",
   "fails": 0,
-  "warns": 9,
+  "warns": 7,
   "ocr": "skipped (opt-in: QA_OCR=1 or --ocr, run at batch end)",
   "normalizations": [
     {
@@ -48,18 +48,6 @@
     {
       "gate": "G5.5-fill",
       "level": "WARN",
-      "slide": 1,
-      "msg": "content occupies 54% of its box \u2014 type or diagram could carry more of the frame"
-    },
-    {
-      "gate": "G5.4-orphan",
-      "level": "WARN",
-      "slide": 1,
-      "msg": "headline ends on an orphan: 'peel.'"
-    },
-    {
-      "gate": "G5.5-fill",
-      "level": "WARN",
       "slide": 4,
       "msg": "content occupies 53% of its box \u2014 type or diagram could carry more of the frame"
     },
@@ -84,6 +72,12 @@
     {
       "gate": "G5.7-rhythm-centroid",
       "level": "WARN",
+      "slide": 2,
+      "msg": "slides 1 and 2 centre at 43% and 37% of frame height, 6% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
       "slide": 3,
       "msg": "slides 2 and 3 centre at 37% and 37% of frame height, 0% apart (need 12%)"
     },
@@ -92,12 +86,6 @@
       "level": "WARN",
       "slide": 4,
       "msg": "slides 3 and 4 centre at 37% and 48% of frame height, 11% apart (need 12%)"
-    },
-    {
-      "gate": "G5.7-rhythm-centroid",
-      "level": "WARN",
-      "slide": 5,
-      "msg": "slides 4 and 5 centre at 48% and 37% of frame height, 11% apart (need 12%)"
     }
   ]
 }

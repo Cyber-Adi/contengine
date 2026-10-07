@@ -35,15 +35,15 @@
         "words": 8,
         "chars": 52,
         "color": "rgb(245, 242, 236)",
-        "size": 128,
+        "size": 165.333,
         "weight": 700,
         "family": "\"Playfair Display\", Georgia, serif",
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1227,
-          "w": 1115,
-          "h": 527
+          "y": 1047,
+          "w": 1184,
+          "h": 681
         },
         "lines": [
           "Every Sunday,",
@@ -65,7 +65,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1797,
+          "y": 1771,
           "w": 803,
           "h": 147
         },
@@ -151,6 +151,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -403,6 +404,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -762,6 +764,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -1030,6 +1033,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -1199,6 +1203,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -1391,6 +1396,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2441,

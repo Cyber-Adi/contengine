@@ -35,22 +35,23 @@
         "words": 13,
         "chars": 73,
         "color": "rgb(245, 242, 236)",
-        "size": 128,
+        "size": 165.333,
         "weight": 700,
         "family": "\"Playfair Display\", Georgia, serif",
         "surface": null,
         "box": {
           "x": 128,
           "y": 224,
-          "w": 1115,
-          "h": 659
+          "w": 1184,
+          "h": 1022
         },
         "lines": [
           "That dying vegetable",
           "in your fridge",
           "is 15 minutes",
           "from being a",
-          "condiment."
+          "condiment.",
+          ""
         ]
       },
       {
@@ -66,7 +67,7 @@
         "surface": null,
         "box": {
           "x": 253,
-          "y": 937,
+          "y": 1326,
           "w": 97,
           "h": 52
         },
@@ -130,6 +131,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -265,6 +267,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -468,6 +471,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -720,6 +724,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -952,6 +957,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -1214,6 +1220,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -1354,6 +1361,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -1561,6 +1569,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2441,

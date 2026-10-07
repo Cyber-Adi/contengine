@@ -15,7 +15,7 @@ rendered 7 slides (ig) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees
     [WARN] G5.5-fill slide 7: content occupies 45% of its box — type or diagram could carry more of the frame
     [WARN] G5.2-balance slide 7: ink centre of mass at 64% of height — bottom-heavy
     [WARN] G5.7-rhythm-centroid slide 3: slides 2 and 3 centre at 40% and 30% of frame height, 10% apart (need 12%)
-    [WARN] G5.7-rhythm-centroid slide 4: slides 3 and 4 centre at 30% and 35% of frame height, 5% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 4: slides 3 and 4 centre at 30% and 36% of frame height, 5% apart (need 12%)
   downsampled 7 slides -> 1440x2560 (Lanczos)
 rendered 7 slides (tiktok) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-5/slides-tiktok
 exported 8 slides + 7 tiktok -> out/post-5/PUBLISH

@@ -34,21 +34,23 @@
         "words": 13,
         "chars": 69,
         "color": "rgb(245, 242, 236)",
-        "size": 128,
+        "size": 165.333,
         "weight": 700,
         "family": "\"Playfair Display\", Georgia, serif",
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1286,
-          "w": 1115,
-          "h": 527
+          "y": 755,
+          "w": 1184,
+          "h": 1022
         },
         "lines": [
-          "There are leftovers in",
-          "your fridge right now",
-          "that you will never",
-          "eat."
+          "There are leftovers",
+          "in your fridge",
+          "right now that",
+          "you will never",
+          "eat.",
+          ""
         ]
       },
       {
@@ -64,7 +66,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1845,
+          "y": 1819,
           "w": 803,
           "h": 74
         },
@@ -147,6 +149,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2057,
@@ -430,6 +433,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2057,
@@ -694,6 +698,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2057,
@@ -886,6 +891,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2057,
@@ -1099,6 +1105,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2057,
@@ -1381,6 +1388,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2057,
@@ -1572,6 +1580,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2441,

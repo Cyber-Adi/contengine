@@ -4,7 +4,7 @@
   "provenance": "converted-from-notion-script",
   "verdict": "PASS",
   "fails": 0,
-  "warns": 6,
+  "warns": 5,
   "ocr": "skipped (opt-in: QA_OCR=1 or --ocr, run at batch end)",
   "normalizations": [
     {
@@ -67,7 +67,7 @@
       "gate": "G5.7-rhythm-centroid",
       "level": "WARN",
       "slide": 2,
-      "msg": "slides 1 and 2 centre at 49% and 41% of frame height, 8% apart (need 12%)"
+      "msg": "slides 1 and 2 centre at 41% and 41% of frame height, 0% apart (need 12%)"
     },
     {
       "gate": "G5.7-rhythm-centroid",
@@ -78,14 +78,8 @@
     {
       "gate": "G5.7-rhythm-centroid",
       "level": "WARN",
-      "slide": 4,
-      "msg": "slides 3 and 4 centre at 49% and 37% of frame height, 12% apart (need 12%)"
-    },
-    {
-      "gate": "G5.7-rhythm-centroid",
-      "level": "WARN",
       "slide": 5,
-      "msg": "slides 4 and 5 centre at 37% and 41% of frame height, 4% apart (need 12%)"
+      "msg": "slides 4 and 5 centre at 35% and 41% of frame height, 6% apart (need 12%)"
     },
     {
       "gate": "G5.7-rhythm-centroid",

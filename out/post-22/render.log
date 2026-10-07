@@ -6,16 +6,14 @@ rendered 7 slides (ig) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees
   feed-scale thumbs -> out/post-22/thumbs.png  (rendered at 200px wide)
 
   QA — post 22: The Checkout Lane Is Designed to Break You
-  verdict: PASS   fails=0  warns=9   ocr: skipped
+  verdict: PASS   fails=0  warns=7   ocr: skipped
   typographic normalizer: 11 substitution(s) logged (apostrophe, double-quote-close, double-quote-open)
     [WARN] G4.3-dominance slide 2: no dominant element at feed scale (largest ink band 12% of height)
-    [WARN] G5.5-fill slide 1: content occupies 32% of its box — type or diagram could carry more of the frame
-    [WARN] G5.2-balance slide 1: ink centre of mass at 64% of height — bottom-heavy
+    [WARN] G5.4-orphan slide 1: headline ends on an orphan: 'works.'
     [WARN] G5.5-fill slide 3: content occupies 47% of its box — type or diagram could carry more of the frame
     [WARN] G5.5-fill slide 5: content occupies 51% of its box — type or diagram could carry more of the frame
     [WARN] G5.2-balance slide 7: ink centre of mass at 63% of height — bottom-heavy
-    [WARN] G5.7-rhythm-centroid slide 4: slides 3 and 4 centre at 51% and 40% of frame height, 12% apart (need 12%)
-    [WARN] G5.7-rhythm-centroid slide 5: slides 4 and 5 centre at 40% and 48% of frame height, 8% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 5: slides 4 and 5 centre at 38% and 48% of frame height, 10% apart (need 12%)
     [WARN] G5.7-rhythm-centroid slide 6: slides 5 and 6 centre at 48% and 37% of frame height, 11% apart (need 12%)
   downsampled 7 slides -> 1440x2560 (Lanczos)
 rendered 7 slides (tiktok) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-22/slides-tiktok

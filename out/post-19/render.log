@@ -8,8 +8,8 @@ rendered 7 slides (ig) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees
   QA — post 19: The Takeout Lie
   verdict: PASS   fails=0  warns=6   ocr: skipped
   typographic normalizer: 16 substitution(s) logged (apostrophe, double-quote-close, double-quote-open)
-    [WARN] G5.5-fill slide 1: content occupies 31% of its box — type or diagram could carry more of the frame
-    [WARN] G5.2-balance slide 1: ink centre of mass at 69% of height — bottom-heavy
+    [WARN] G5.5-fill slide 1: content occupies 54% of its box — type or diagram could carry more of the frame
+    [WARN] G5.2-balance slide 1: ink centre of mass at 62% of height — bottom-heavy
     [WARN] G5.5-fill slide 3: content occupies 51% of its box — type or diagram could carry more of the frame
     [WARN] G5.5-fill slide 5: content occupies 46% of its box — type or diagram could carry more of the frame
     [WARN] G5.5-fill slide 6: content occupies 43% of its box — type or diagram could carry more of the frame

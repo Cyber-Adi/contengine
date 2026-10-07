@@ -6,9 +6,8 @@ rendered 5 slides (ig) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees
   feed-scale thumbs -> out/post-29/thumbs.png  (rendered at 200px wide)
 
   QA — post 29: Your Overripe Bananas Are Worth $8
-  verdict: PASS   fails=0  warns=4   ocr: skipped
+  verdict: PASS   fails=0  warns=3   ocr: skipped
   typographic normalizer: 3 substitution(s) logged (apostrophe)
-    [WARN] G5.5-fill slide 1: content occupies 50% of its box — type or diagram could carry more of the frame
     [WARN] G5.5-fill slide 3: content occupies 41% of its box — type or diagram could carry more of the frame
     [WARN] G5.5-fill slide 5: content occupies 40% of its box — type or diagram could carry more of the frame
     [WARN] G5.2-balance slide 5: ink centre of mass at 72% of height — bottom-heavy

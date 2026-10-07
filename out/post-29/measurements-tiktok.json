@@ -40,15 +40,15 @@
         "words": 9,
         "chars": 49,
         "color": "rgb(245, 242, 236)",
-        "size": 128,
+        "size": 165.333,
         "weight": 700,
         "family": "\"Playfair Display\", Georgia, serif",
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1363,
-          "w": 1115,
-          "h": 527
+          "y": 1172,
+          "w": 1184,
+          "h": 681
         },
         "lines": [
           "Those brown bananas",
@@ -70,7 +70,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1922,
+          "y": 1896,
           "w": 803,
           "h": 74
         },
@@ -153,6 +153,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -365,6 +366,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -515,6 +517,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -761,6 +764,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -928,6 +932,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2441,

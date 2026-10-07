@@ -4,7 +4,7 @@
   "provenance": "converted-from-notion-script",
   "verdict": "PASS",
   "fails": 0,
-  "warns": 6,
+  "warns": 5,
   "ocr": "skipped (opt-in: QA_OCR=1 or --ocr, run at batch end)",
   "normalizations": [
     {
@@ -36,20 +36,8 @@
     {
       "gate": "G5.5-fill",
       "level": "WARN",
-      "slide": 1,
-      "msg": "content occupies 42% of its box \u2014 type or diagram could carry more of the frame"
-    },
-    {
-      "gate": "G5.2-balance",
-      "level": "WARN",
-      "slide": 1,
-      "msg": "ink centre of mass at 64% of height \u2014 bottom-heavy"
-    },
-    {
-      "gate": "G5.4-orphan",
-      "level": "WARN",
-      "slide": 1,
-      "msg": "headline ends on an orphan: 'broth.'"
+      "slide": 3,
+      "msg": "content occupies 53% of its box \u2014 type or diagram could carry more of the frame"
     },
     {
       "gate": "G5.5-fill",
@@ -60,8 +48,14 @@
     {
       "gate": "G5.7-rhythm-centroid",
       "level": "WARN",
+      "slide": 3,
+      "msg": "slides 2 and 3 centre at 32% and 39% of frame height, 7% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
       "slide": 4,
-      "msg": "slides 3 and 4 centre at 45% and 39% of frame height, 6% apart (need 12%)"
+      "msg": "slides 3 and 4 centre at 39% and 39% of frame height, 1% apart (need 12%)"
     },
     {
       "gate": "G5.7-rhythm-centroid",

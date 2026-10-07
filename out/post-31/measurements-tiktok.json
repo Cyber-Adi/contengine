@@ -35,15 +35,15 @@
         "words": 9,
         "chars": 44,
         "color": "rgb(245, 242, 236)",
-        "size": 128,
+        "size": 165.333,
         "weight": 700,
         "family": "\"Playfair Display\", Georgia, serif",
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1296,
-          "w": 1115,
-          "h": 395
+          "y": 1149,
+          "w": 1184,
+          "h": 511
         },
         "lines": [
           "The price didn’t",
@@ -64,7 +64,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1724,
+          "y": 1697,
           "w": 803,
           "h": 221
         },
@@ -132,6 +132,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -322,6 +323,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -519,6 +521,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -649,6 +652,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -709,7 +713,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 487,
+          "y": 747,
           "w": 991,
           "h": 204
         },
@@ -731,7 +735,7 @@
         "surface": null,
         "box": {
           "x": 177,
-          "y": 790,
+          "y": 1051,
           "w": 475,
           "h": 187
         },
@@ -750,7 +754,7 @@
         "surface": null,
         "box": {
           "x": 177,
-          "y": 1481,
+          "y": 1275,
           "w": 475,
           "h": 143
         },
@@ -772,7 +776,7 @@
         "surface": null,
         "box": {
           "x": 788,
-          "y": 790,
+          "y": 1051,
           "w": 475,
           "h": 187
         },
@@ -791,7 +795,7 @@
         "surface": null,
         "box": {
           "x": 788,
-          "y": 1481,
+          "y": 1275,
           "w": 475,
           "h": 143
         },
@@ -862,6 +866,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -1014,6 +1019,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2083,
@@ -1204,6 +1210,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2441,

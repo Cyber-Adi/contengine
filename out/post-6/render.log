@@ -8,15 +8,15 @@ rendered 8 slides (ig) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees
   QA — post 6: The Expiration Date Is a Suggestion
   verdict: PASS   fails=0  warns=10   ocr: skipped
   typographic normalizer: 9 substitution(s) logged (apostrophe, double-quote-close, double-quote-open)
-    [WARN] G5.5-fill slide 1: content occupies 52% of its box — type or diagram could carry more of the frame
     [WARN] G5.4-orphan slide 2: headline ends on an orphan: 'labels.'
     [WARN] G5.5-fill slide 4: content occupies 48% of its box — type or diagram could carry more of the frame
     [WARN] G5.5-fill slide 8: content occupies 27% of its box — type or diagram could carry more of the frame
     [WARN] G5.2-balance slide 8: ink centre of mass at 71% of height — bottom-heavy
-    [WARN] G5.7-rhythm-centroid slide 3: slides 2 and 3 centre at 39% and 38% of frame height, 1% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 2: slides 1 and 2 centre at 50% and 38% of frame height, 12% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 3: slides 2 and 3 centre at 38% and 38% of frame height, 0% apart (need 12%)
     [WARN] G5.7-rhythm-centroid slide 4: slides 3 and 4 centre at 38% and 44% of frame height, 6% apart (need 12%)
-    [WARN] G5.7-rhythm-centroid slide 5: slides 4 and 5 centre at 44% and 37% of frame height, 7% apart (need 12%)
-    [WARN] G5.7-rhythm-centroid slide 6: slides 5 and 6 centre at 37% and 42% of frame height, 6% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 5: slides 4 and 5 centre at 44% and 35% of frame height, 9% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 6: slides 5 and 6 centre at 35% and 42% of frame height, 7% apart (need 12%)
     [WARN] G5.7-rhythm-centroid slide 7: slides 6 and 7 centre at 42% and 34% of frame height, 8% apart (need 12%)
   downsampled 8 slides -> 1440x2560 (Lanczos)
 rendered 8 slides (tiktok) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-6/slides-tiktok

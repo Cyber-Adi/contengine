@@ -109,7 +109,7 @@
       "gate": "G5.7-rhythm-centroid",
       "level": "WARN",
       "slide": 4,
-      "msg": "slides 3 and 4 centre at 30% and 35% of frame height, 5% apart (need 12%)"
+      "msg": "slides 3 and 4 centre at 30% and 36% of frame height, 5% apart (need 12%)"
     }
   ]
 }

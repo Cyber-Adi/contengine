@@ -4,7 +4,7 @@
   "provenance": "converted-from-notion-script",
   "verdict": "PASS",
   "fails": 0,
-  "warns": 9,
+  "warns": 7,
   "ocr": "skipped (opt-in: QA_OCR=1 or --ocr, run at batch end)",
   "normalizations": [
     {
@@ -82,16 +82,10 @@
       "msg": "no dominant element at feed scale (largest ink band 12% of height)"
     },
     {
-      "gate": "G5.5-fill",
+      "gate": "G5.4-orphan",
       "level": "WARN",
       "slide": 1,
-      "msg": "content occupies 32% of its box \u2014 type or diagram could carry more of the frame"
-    },
-    {
-      "gate": "G5.2-balance",
-      "level": "WARN",
-      "slide": 1,
-      "msg": "ink centre of mass at 64% of height \u2014 bottom-heavy"
+      "msg": "headline ends on an orphan: 'works.'"
     },
     {
       "gate": "G5.5-fill",
@@ -114,14 +108,8 @@
     {
       "gate": "G5.7-rhythm-centroid",
       "level": "WARN",
-      "slide": 4,
-      "msg": "slides 3 and 4 centre at 51% and 40% of frame height, 12% apart (need 12%)"
-    },
-    {
-      "gate": "G5.7-rhythm-centroid",
-      "level": "WARN",
       "slide": 5,
-      "msg": "slides 4 and 5 centre at 40% and 48% of frame height, 8% apart (need 12%)"
+      "msg": "slides 4 and 5 centre at 38% and 48% of frame height, 10% apart (need 12%)"
     },
     {
       "gate": "G5.7-rhythm-centroid",

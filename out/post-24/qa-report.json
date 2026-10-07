@@ -4,7 +4,7 @@
   "provenance": "converted-from-notion-script",
   "verdict": "PASS",
   "fails": 0,
-  "warns": 6,
+  "warns": 5,
   "ocr": "skipped (opt-in: QA_OCR=1 or --ocr, run at batch end)",
   "normalizations": [
     {
@@ -42,18 +42,6 @@
     {
       "gate": "G5.5-fill",
       "level": "WARN",
-      "slide": 1,
-      "msg": "content occupies 35% of its box \u2014 type or diagram could carry more of the frame"
-    },
-    {
-      "gate": "G5.2-balance",
-      "level": "WARN",
-      "slide": 1,
-      "msg": "ink centre of mass at 65% of height \u2014 bottom-heavy"
-    },
-    {
-      "gate": "G5.5-fill",
-      "level": "WARN",
       "slide": 3,
       "msg": "content occupies 41% of its box \u2014 type or diagram could carry more of the frame"
     },
@@ -74,6 +62,12 @@
       "level": "WARN",
       "slide": 6,
       "msg": "headline ends on an orphan: 'it.'"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 2,
+      "msg": "slides 1 and 2 centre at 51% and 39% of frame height, 12% apart (need 12%)"
     }
   ]
 }

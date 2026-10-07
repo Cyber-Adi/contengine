@@ -59,19 +59,20 @@
         "words": 8,
         "chars": 35,
         "color": "rgb(245, 242, 236)",
-        "size": 128,
+        "size": 165.333,
         "weight": 700,
         "family": "\"Playfair Display\", Georgia, serif",
         "surface": null,
         "box": {
           "x": 128,
           "y": 322,
-          "w": 1115,
-          "h": 264
+          "w": 1184,
+          "h": 511
         },
         "lines": [
-          "Your eggs have 5",
-          "weeks. Not 5 days."
+          "Your eggs have",
+          "5 weeks. Not",
+          "5 days."
         ]
       },
       {
@@ -87,7 +88,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 617,
+          "y": 875,
           "w": 803,
           "h": 221
         },
@@ -110,7 +111,7 @@
         "surface": null,
         "box": {
           "x": 253,
-          "y": 892,
+          "y": 1176,
           "w": 97,
           "h": 52
         },
@@ -174,6 +175,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -352,6 +354,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -563,6 +566,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -808,6 +812,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -1023,6 +1028,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -1169,6 +1175,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -1480,6 +1487,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -1665,6 +1673,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2441,

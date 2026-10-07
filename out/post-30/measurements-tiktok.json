@@ -53,20 +53,21 @@
         "words": 11,
         "chars": 51,
         "color": "rgb(245, 242, 236)",
-        "size": 128,
+        "size": 165.333,
         "weight": 700,
         "family": "\"Playfair Display\", Georgia, serif",
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1426,
-          "w": 1115,
-          "h": 395
+          "y": 1098,
+          "w": 1184,
+          "h": 681
         },
         "lines": [
-          "I’m 17 and I",
-          "think grocery stores are",
-          "lying to you."
+          "I’m 17 and",
+          "I think grocery",
+          "stores are lying",
+          "to you."
         ]
       },
       {
@@ -82,7 +83,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1849,
+          "y": 1822,
           "w": 803,
           "h": 147
         },
@@ -168,6 +169,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -376,6 +378,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -624,6 +627,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -781,6 +785,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -882,7 +887,7 @@
         "surface": null,
         "box": {
           "x": 177,
-          "y": 1083,
+          "y": 832,
           "w": 475,
           "h": 715
         },
@@ -931,7 +936,7 @@
         "surface": null,
         "box": {
           "x": 788,
-          "y": 1655,
+          "y": 832,
           "w": 475,
           "h": 143
         },
@@ -998,6 +1003,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -1155,6 +1161,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -1320,6 +1327,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2441,

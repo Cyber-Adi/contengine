@@ -35,19 +35,20 @@
         "words": 6,
         "chars": 31,
         "color": "rgb(245, 242, 236)",
-        "size": 128,
+        "size": 165.333,
         "weight": 700,
         "family": "\"Playfair Display\", Georgia, serif",
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1661,
-          "w": 1115,
-          "h": 264
+          "y": 1364,
+          "w": 1184,
+          "h": 511
         },
         "lines": [
-          "Buying in bulk",
-          "saves you money."
+          "Buying in",
+          "bulk saves",
+          "you money."
         ]
       },
       {
@@ -63,7 +64,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1941,
+          "y": 1896,
           "w": 803,
           "h": 74
         },
@@ -146,6 +147,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -252,7 +254,7 @@
         "surface": null,
         "box": {
           "x": 177,
-          "y": 1727,
+          "y": 1171,
           "w": 475,
           "h": 71
         },
@@ -290,7 +292,7 @@
         "surface": null,
         "box": {
           "x": 788,
-          "y": 1298,
+          "y": 1171,
           "w": 475,
           "h": 500
         },
@@ -362,6 +364,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -523,6 +526,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -743,6 +747,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -887,6 +892,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -1120,6 +1126,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2134,
@@ -1286,6 +1293,7 @@
         "lines": null
       }
     ],
+    "chromeCollisions": [],
     "contentBox": {
       "top": 0,
       "bottom": 2441,
