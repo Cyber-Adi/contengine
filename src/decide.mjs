@@ -34,56 +34,91 @@ const specIsValid = (n) => {
 /** Above this many approved-but-unpublished posts, generating more copy is forbidden. */
 export const DRAIN_CEILING = 12;
 
+/** Read a post's spec; null when absent or unreadable (synthetic ledgers). */
+const readSpec = (n) => {
+  try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'specs', `post-${n}.json`), 'utf8')); } catch { return null; }
+};
+
+/**
+ * A post's format: the spec's declared `format` field if present, else the
+ * most common layout across its slides EXCLUDING cta-card (the closer is on
+ * every post, so counting it or slide 1 alone says nothing about the body).
+ * Ties go to the layout seen first. Falls back to the row, then 'unspecified'.
+ */
+export function formatOf(row, spec) {
+  if (spec && typeof spec.format === 'string' && spec.format) return spec.format;
+  const counts = new Map();
+  for (const s of (spec && spec.slides) || []) {
+    if (s && s.layout && s.layout !== 'cta-card') counts.set(s.layout, (counts.get(s.layout) || 0) + 1);
+  }
+  let best = null;
+  for (const [layout, n] of counts) if (!best || n > best[1]) best = [layout, n];
+  return best ? best[0] : (row.format || row.archetype || 'unspecified');
+}
+
+const med = (xs) => {
+  const s = xs.slice().sort((a, b) => a - b);
+  if (!s.length) return null;
+  return s.length % 2 ? s[(s.length - 1) / 2] : (s[s.length / 2 - 1] + s[s.length / 2]) / 2;
+};
+
 /**
  * Score published posts against the account median and apply the GTM kill
- * criterion. This is the feedback edge. Without it the loop is still a line
- * that happens to run twice.
+ * criterion. This is the feedback edge of the loop.
+ *
+ * SCORE = savesPerReach + sendWeight * sendsPerReach. A post missing reach or
+ * saves is UNSCORED: absent data is not a miss, so it neither counts toward
+ * nor breaks a run of misses. Missing sends count as zero. Swipe-through to
+ * slide 3 is optional (per-slide reach is unconfirmed in Instagram Insights)
+ * and never enters the score.
  */
-export function performanceSignal(perf = loadPerformance()) {
-  const rows = Object.values(perf.posts || {}).filter((p) => p.reach > 0);
-  if (rows.length < 3) {
-    return { ready: false, n: rows.length,
-      note: `${rows.length} measured post(s). Need 3 before any claim about what works is anything but a guess.` };
-  }
+export function performanceSignal(perf = loadPerformance(), { specFor = readSpec } = {}) {
+  const all = Object.values(perf.posts || {});
   const w = gtm.organicMetrics.sendWeight;
-  const score = (p) => ((p.saves || 0) + w * (p.sends || 0)) / p.reach;
-  const scored = rows.map((p) => ({ ...p, score: score(p) })).sort((a, b) => b.score - a.score);
-  const med = (xs) => {
-    const s = xs.slice().sort((a, b) => a - b);
-    if (!s.length) return null;
-    return s.length % 2 ? s[(s.length - 1) / 2] : (s[s.length / 2 - 1] + s[s.length / 2]) / 2;
-  };
+  const scoredRows = all
+    .filter((p) => p.reach > 0 && Number.isFinite(p.saves))
+    .map((p) => {
+      const savesPerReach = p.saves / p.reach;
+      const sendsPerReach = (Number.isFinite(p.sends) ? p.sends : 0) / p.reach;
+      return { ...p, savesPerReach, sendsPerReach, score: savesPerReach + w * sendsPerReach,
+        format: formatOf(p, specFor(p.post)) };
+    });
+  const unscored = all.length - scoredRows.length;
+  if (scoredRows.length < 3) {
+    return { ready: false, n: scoredRows.length, unscored,
+      note: `${scoredRows.length} scored post(s)${unscored ? `, ${unscored} unscored (missing reach or saves)` : ''}. Need 3 before any claim about what works is anything but a guess.` };
+  }
+  const scored = scoredRows.slice().sort((a, b) => b.score - a.score);
   const median = med(scored.map((p) => p.score));
 
-  // Kill criterion: a format underperforming 3 posts running.
+  // Kill criterion: a format underperforming 3 scored posts running.
   //
-  // The comparator is a LEAVE-ONE-FORMAT-OUT median, not the global one. A fixture
-  // caught why: when a tiring format is most of the sample, it drags the global
-  // median down into its own band, the format then scores at or above "median", and
-  // the criterion can never fire. That is the decay-is-invisible failure the whole
-  // loop exists to prevent, reintroduced through the back door of a lazy baseline.
-  // Comparing a format against the rest of the account makes the baseline immune to
-  // the thing it is supposed to be judging.
+  // The comparator is the LEAVE-ONE-FORMAT-OUT median, not the global one. A
+  // fixture caught why: when the tiring format is most of the sample it drags
+  // the global median into its own band, so it scores "above median" and the
+  // criterion never fires. Comparing a format against the rest of the account
+  // is immune to the thing it is judging.
   const byFormat = {};
-  for (const p of rows.slice().sort((a, b) => (a.publishedAt || '').localeCompare(b.publishedAt || ''))) {
-    const f = p.format || p.archetype || 'unspecified';
-    (byFormat[f] ||= []).push(p);
+  for (const p of scoredRows.slice().sort((a, b) => (a.publishedAt || '').localeCompare(b.publishedAt || ''))) {
+    (byFormat[p.format] ||= []).push(p);
   }
   const need = gtm.organicMetrics.killCriterion.consecutiveMisses;
   const retire = Object.entries(byFormat)
     .filter(([f, posts]) => {
-      const others = rows.filter((p) => (p.format || p.archetype || 'unspecified') !== f).map(score);
+      const others = scoredRows.filter((p) => p.format !== f).map((p) => p.score);
       const baseline = others.length ? med(others) : median;
-      const misses = posts.map((p) => score(p) < baseline);
+      const misses = posts.map((p) => p.score < baseline);
       return misses.length >= need && misses.slice(-need).every(Boolean);
     })
     .map(([f]) => f);
 
+  const brief = (p) => ({ post: p.post, score: Number(p.score.toFixed(4)), savesPerReach: Number(p.savesPerReach.toFixed(4)),
+    sendsPerReach: Number(p.sendsPerReach.toFixed(4)), angle: p.angle, format: p.format });
   return {
-    ready: true, n: rows.length, median: Number(median.toFixed(4)),
-    top: scored.slice(0, 3).map((p) => ({ post: p.post, score: Number(p.score.toFixed(4)), angle: p.angle, format: p.format })),
-    bottom: scored.slice(-3).map((p) => ({ post: p.post, score: Number(p.score.toFixed(4)), angle: p.angle, format: p.format })),
-    retire
+    ready: true, n: scored.length, unscored, median: Number(median.toFixed(4)),
+    top: scored.slice(0, 3).map(brief),
+    bottom: scored.slice(-3).map(brief),
+    retire,
   };
 }
 
@@ -96,6 +131,16 @@ export function performanceSignal(perf = loadPerformance()) {
 export const READY_CEILING = 6;
 /** Days after go-live before a post's numbers mean anything. */
 export const MEASURE_LAG_DAYS = 7;
+/** Posts planned inside this many days must be scheduled in Meta Business Suite. */
+export const SCHEDULE_WINDOW_DAYS = 28;
+
+/** state/schedule.json: post -> {date, time, status: planned|scheduled|published}. Absent is fine. */
+export function loadSchedule() {
+  try {
+    const j = JSON.parse(fs.readFileSync(path.join(ROOT, 'state', 'schedule.json'), 'utf8'));
+    return j && typeof j === 'object' ? (j.posts && typeof j.posts === 'object' ? j.posts : j) : {};
+  } catch { return {}; }
+}
 
 /**
  * machineOnly: skip rungs that only a human can act on (PUBLISH, MEASURE,
@@ -103,9 +148,9 @@ export const MEASURE_LAG_DAYS = 7;
  * if it got "PUBLISH" it would do nothing useful and the drain would stall. The
  * tap lists human actions separately under YOUR PART.
  */
-export function decide({ ledger = reconcile(loadLedger()), perf = loadPerformance(), fresh = loadFreshness(), machineOnly = false, today = new Date() } = {}) {
+export function decide({ ledger = reconcile(loadLedger()), perf = loadPerformance(), fresh = loadFreshness(), machineOnly = false, today = new Date(), schedule = loadSchedule(), specFor } = {}) {
   const c = census(ledger);
-  const signal = performanceSignal(perf);
+  const signal = performanceSignal(perf, specFor ? { specFor } : undefined);
   const undrained = c.approved + c.rendered;
 
   const act = (id, why, what, blocked = false) => ({ action: id, why, what, blocked, census: c, signal });
@@ -135,10 +180,24 @@ export function decide({ ledger = reconcile(loadLedger()), perf = loadPerformanc
       `${invalidApproved.length} post(s) render and pass every image gate but fail the schema (${invalidApproved.map((p) => p.post).join(', ')}) — usually a layout missing the content it draws, like empty split-compare panels.`,
       `Run node src/validate.mjs on each, restore the missing content VERBATIM from its brief, re-render. If the brief has no content for that panel, change the layout rather than writing copy.`);
   }
-  if (machineOnly && publishable.length >= READY_CEILING) {
-    return act('HOLD',
-      `${publishable.length} post(s) are ready and unscheduled against a ceiling of ${READY_CEILING}. Building more is the six-week queue failure moved one stage later.`,
-      'Do nothing to the drain this week. The bottleneck is scheduling, which is Adi\'s: READY-TO-POST/index.html.', true);
+  // Scheduling is the human bottleneck, and it must not stall the machine.
+  const statusOf = (n) => (schedule[String(n)] || {}).status;
+  const horizon = new Date(today.getTime() + SCHEDULE_WINDOW_DAYS * 864e5).toISOString().slice(0, 10);
+  const toSchedule = publishable.filter((p) => {
+    const e = schedule[String(p.post)];
+    return e && e.status === 'planned' && e.date && e.date <= horizon;
+  });
+  // HOLD gates only copy-generating rungs (BUILD_SPECS, REQUEST_BRIEFS, GENERATE),
+  // never fixes, measuring, harvesting or retiring a format.
+  const unscheduled = publishable.filter((p) => !['scheduled', 'published'].includes(statusOf(p.post)));
+  const held = unscheduled.length >= READY_CEILING;
+  const holdAct = () => act('HOLD',
+    `${unscheduled.length} post(s) ready and unscheduled, at or above the ceiling of ${READY_CEILING}. Writing more copy is the six-week queue failure moved one stage later.`,
+    'Write no new specs or briefs. Schedule the ready posts (docs/META-SCHEDULING-AGENT.md); fixes, measuring, harvesting and retiring formats still run.', true);
+  if (!machineOnly && toSchedule.length > 0) {
+    return act('SCHEDULE',
+      `${toSchedule.length} post(s) pass every gate and are planned inside the next ${SCHEDULE_WINDOW_DAYS} days but are not scheduled in Meta Business Suite (${toSchedule.map((p) => `post-${p.post} ${schedule[String(p.post)].date}`).join(', ')}).`,
+      'Run the Meta scheduling agent: paste docs/META-SCHEDULING-AGENT.md into Claude in Chrome, then run the node tools/log-post.mjs N --published --date lines it prints.');
   }
   if (!machineOnly && publishable.length > 0) {
     return act('PUBLISH',
@@ -159,7 +218,7 @@ export function decide({ ledger = reconcile(loadLedger()), perf = loadPerformanc
   if (!machineOnly && measurable.length > 0) {
     return act('MEASURE',
       `${measurable.length} post(s) live for over a week with no insights recorded. Until this runs, every claim about what works on this account is a guess.`,
-      `Record reach, saves, sends and swipe-through-to-slide-3 for post ${measurable.map((p) => p.post).join(', ')} into state/performance.json. Manual entry from the app is acceptable and takes two minutes; the Insights API is a convenience, not a prerequisite.`);
+      `Record reach, saves and sends (slide-3 swipe-through is optional) for post ${measurable.map((p) => p.post).join(', ')} into state/performance.json. docs/META-INSIGHTS-AGENT.md has a read-only agent that prints the log-post lines. Manual entry from the app is acceptable and takes two minutes; the Insights API is a convenience, not a prerequisite.`);
   }
 
   // 4 - Specs exist and have not rendered. Cheapest possible throughput.
@@ -170,7 +229,7 @@ export function decide({ ledger = reconcile(loadLedger()), perf = loadPerformanc
   }
 
   // 5 - Scripted copy exists that has never become a spec. Drain, do not fill.
-  if (c.scripted > 0) {
+  if (c.scripted > 0 && !held) {
     return act('BUILD_SPECS',
       `${c.scripted} post(s) have verbatim copy and no spec. Converting existing copy is strictly better than writing new copy.`,
       `Convert the next batch to specs/post-N.json. Copy verbatim, provenance set honestly, PantryPal to fond as a mechanical substitution only. Never write a line to fill a hole - flag it.`);
@@ -193,6 +252,8 @@ export function decide({ ledger = reconcile(loadLedger()), perf = loadPerformanc
   }
 
   // 8 - Gaps: copy that exists but is not in this repo. Blocked on Adi, not the engine.
+  if (held) return holdAct();
+
   if (!machineOnly && c.gap > 0) {
     return act('REQUEST_BRIEFS',
       `${c.gap} post(s) have no retrievable copy. The engine must not write it.`,

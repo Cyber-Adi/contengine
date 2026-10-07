@@ -24,7 +24,7 @@ copy variant B that Adi picks or rejects. Nothing publishes.
    max 6 model calls per post; on rate limit, checkpoint and exit 0, never retry in a loop.
 7. No hex outside tokens.json. No em dashes in generated text. No new top-level docs.
 8. Verify loop after any change to `src/` or `tools/` (CLAUDE.md §5):
-   `npm test` (15/15+) · `npm run test:autonomy` (36/36+) · `./run.sh specs/fixtures/post-9005.json` ·
+   `npm run test:all` (npm test 24, test:autonomy 53, test:fidelity 26, test:package 10) · `./run.sh specs/fixtures/post-9005.json` ·
    `./run.sh specs/post-49.json` · `node src/render.mjs specs/fixtures/post-9005.json --canvas=tiktok`.
 
 ## 1. Adi's decisions (Oct 1)
@@ -70,7 +70,7 @@ stay intact for later and flipping `phase` restores them.
 
 Format: **goal** · files · must-pass · depends on. Subagents in brackets.
 
-### S0 · Refinery contract (keystone, pass^3) [tdd-guide]
+### S0 · Refinery contract (keystone, pass^3) [tdd-guide] [DONE 2026-10-07]
 - Schema (`carousel.schema.json`): provenance += `refined`; optional `variant` (A|B),
   `refinedFrom` (int), `picked` (bool), `originalCopy` (per-slide verbatim A, **required when variant=B**),
   `refinement` {round, changes:[{slide, field, from, to, why}], model, at}.
@@ -83,7 +83,7 @@ Format: **goal** · files · must-pass · depends on. Subagents in brackets.
 - Fixtures: B without `originalCopy` rejected; `refined` without `picked:true` never enters READY-TO-POST.
 - Verify: validate good A, good B, two bad fixtures x3 (same result every time); kill -9 mid-write leaves valid JSON.
 
-### S1 · Inventory + CTA honesty (pass^3) [tdd-guide] · after S0
+### S1 · Inventory + CTA honesty (pass^3) [tdd-guide] · after S0 [DONE 2026-10-07]
 - (a) Copy the 2 available briefs into `briefs/` unchanged. List the 4 missing; continue.
 - (b) Generate specs, verbatim, for every post with retrievable copy: 1-16, 18-30, 37-40
   (Notion pages, `converted-from-notion-script`), 41-46, 51, 53-63 from `briefs/` (`brief`).
@@ -96,12 +96,12 @@ Format: **goal** · files · must-pass · depends on. Subagents in brackets.
   - Gate 6 (`src/gtm-check.mjs`): in phase setup, any Tier 2/3 text in a slide or caption FAILs,
     and banned substrings += "link in bio", "waitlist", "pre-order" for generated text.
   - Caption builder emits the rotated `ctas.setup` line (or nothing for Tier 0). Never more than that one line.
-  - Slide copy that verbatim contains Tier 2/3 text: mark spec `hold: "HOLD-UNTIL-LAUNCH"`, do not rewrite.
+  - Slide copy that verbatim contains Tier 2/3 text: the `hold` field is SUPERSEDED by `ctaSwap` (tools/setup-cta.mjs swaps the CTA, logged in spec.ctaSwap, restorable at launch); do not rewrite copy.
   - Re-export READY-TO-POST captions 31-36.
 - Fixture: Tier 2 caption fails at waitlistLive:false, passes at true.
 - Verify: `grep -ri "waitlist\|pre-order\|link in bio" READY-TO-POST VAULT` returns nothing outside HOLD posts.
 
-### S2 · Engine quality, zero tokens (pass^3) [tdd-guide, code-reviewer] · after S0
+### S2 · Engine quality, zero tokens (pass^3) [tdd-guide, code-reviewer] · after S0 [DONE 2026-10-07]
 Fixes critic's two failing dimensions: "stand" (slide 2 alone) and "arrive" (each swipe new).
 - a) Rhythm gate (Gate 5 cross-slide): no 3 consecutive same background; no 2 adjacent slides with
   vertical ink centroid within 12% of frame height. `tools/rhythm.mjs` reassigns background/layout
@@ -116,7 +116,7 @@ Fixes critic's two failing dimensions: "stand" (slide 2 alone) and "arrive" (eac
 - g) Diagram demand audit: report only (which specs ask for visuals the engine lacks).
 - Verify: re-render 31-36 three times, byte-identical; each passes rhythm + fill or the report names the slide and why.
 
-### S3 · Blind critic + calibration (pass^2) · after S2
+### S3 · Blind critic + calibration (pass^2) · after S2 [OPEN]
 - `tools/critic.mjs run`: separate `claude -p --model <config.models.critic> --max-turns 2`, given ONLY the
   downscaled contact sheet + 5-dimension rubric. No spec, copy or rationale.
 - Validate JSON with `validateCritique()`; one retry, then `critic-error`.
@@ -124,7 +124,7 @@ Fixes critic's two failing dimensions: "stand" (slide 2 alone) and "arrive" (eac
 - Calibration (needs Adi, 10 min): Adi scores 31-36 via `node tools/critic.mjs record`; model must agree within
   +-1 on >=80% of 30 scores, else add 3 text-only anchors and retest once. Store rate in `state/critic.json`.
 
-### S4 · Copy refinery + Gate 7 Fidelity (gate pass^3, copy pass@2) [tdd-guide] · after S0
+### S4 · Copy refinery + Gate 7 Fidelity (gate pass^3, copy pass@2) [tdd-guide] · after S0 [DONE 2026-10-07]
 - `tools/refine-copy.mjs`, text-only, model from config. Input: A copy, pillar, angle, gtm.json voice/honesty, critic findings.
 - Rules (in prompt AND code): same argument/thread/slide count (+-1 only on flagged dead slide); hook <=8 words/line,
   body <=40 words/slide; slide 2 stands alone; one idea per slide; zero new numbers, proper nouns or claims;
@@ -133,7 +133,7 @@ Fixes critic's two failing dimensions: "stand" (slide 2 alone) and "arrive" (eac
   no banned honesty strings; word limits; slide-count rule; every change has a `why`. FAIL discards B, A continues.
 - Fixtures (each must fail): invented %, new brand name, em dash, 45-word body, missing `why`.
 
-### S5 · Batch runner + Notion writeback (pass^3) [code-reviewer] · after S1-S4
+### S5 · Batch runner + Notion writeback (pass^3) [code-reviewer] · after S1-S4 [OPEN]
 `npm run refine -- [--posts 37-43] [--batch 5] [--resume] [--dry-run]`, steps per post, state in `state/refinery.json`:
 1. A spec -> validate -> Gate 6. 2. Rhythm + normalizer -> render IG -> Gates 1-6.
 3. Critic A; if every dimension >=4, skip 4. 4. Design-fix rounds (layout/diagram/background/emphasis/thread only;
@@ -147,20 +147,20 @@ caption.txt, alt.txt, tiktok.txt, critic.json, diff.md. Stage `vault`.
   Designed=true + Status "Designed" for vaulted posts. Never create rows.
 - Verify: kill mid-step-4 then `--resume` gives byte-identical output; simulated rate limit pauses with exit 0.
 
-### S6 · Post package (pass@2) · after S4
+### S6 · Post package (pass@2) · after S4 [DONE 2026-10-07]
 - IG caption: keyword in first sentence, 1-2 value lines, send-trigger, CTA = rotated `ctas.setup` line or none, 3-5 hashtags
   (1 broad, 2 niche, 1 community). No em dashes. Aim <600 chars.
 - Alt text per slide from spec (no model). tiktok.txt: search-phrase title, 3-5 keyword phrases, 3 hashtags,
   "SOUND: pick a trending sound in-app".
 - Everything passes Gate 6.
 
-### S7 · VAULT page + pick tool (pass^2) · after S5, S6
+### S7 · VAULT page + pick tool (pass^2) · after S5, S6 [OPEN]
 - `tools/vault.mjs` -> `VAULT/index.html` (git-ignored): A/B strips, critic scores, inline diff, IG/TikTok tabs,
   copy buttons, pick commands.
 - `tools/pick.mjs N A|B` / `N reject "reason"` / `--accept-critic 37-43`. Picked spec gets `picked:true` and joins
   the READY queue (HOLD cap still applies there). Rejects feed S4.
 
-### S8 · Calibration batch, then full run · after S7
+### S8 · Calibration batch, then full run · after S7 [OPEN]
 - Batch 1 = 37-43. Stop, print report + VAULT path, wait for Adi's picks.
 - If Adi picks B on <2 of 7: tighten S4. If critic and Adi disagree on >=3: rerun S3 calibration.
 - Then `npm run refine -- --batch 5 --resume` per usage window, pillar-balanced, until every renderable post is vaulted.

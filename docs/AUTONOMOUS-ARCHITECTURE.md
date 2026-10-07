@@ -91,8 +91,8 @@ six weeks it had nine better things to do.
 
 ```bash
 npm run decide         # what should I do right now, and why
-npm run test:autonomy  # 18/18 - every new gate catches its own failure
-npm run gtm specs/post-5.json
+npm run test:autonomy  # 53/53 - every new gate catches its own failure
+npm run gtm specs/fixtures/post-9005.json
 ```
 
 ### The board, right now

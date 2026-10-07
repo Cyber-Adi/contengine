@@ -222,11 +222,12 @@
   },
   "organicMetrics": {
     "$comment": "Per Strategy v2. These are the numbers the loop optimises. Likes are deliberately absent.",
-    "primary": "swipeThroughToSlide3",
-    "primaryNote": "The closest proxy for 'a stranger stopped'. Never once logged to date.",
+    "primary": "savesPerReach + sendWeight * sendsPerReach",
+    "primaryNote": "Real saves/reach and sends/reach, read per post from Instagram Insights. A post missing reach or saves is UNSCORED, not a miss. Swipe-through to slide 3 is optional: per-slide reach is unconfirmed in Insights, so it never enters the score.",
     "secondary": [
       "savesPerReach",
-      "sendsPerReach"
+      "sendsPerReach",
+      "swipeThroughToSlide3"
     ],
     "sendWeight": 4,
     "sendWeightNote": "Sends are weighted 3-5x likes. Using 4 as the midpoint.",

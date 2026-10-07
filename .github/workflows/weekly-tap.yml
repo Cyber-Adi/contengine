@@ -48,6 +48,11 @@ jobs:
           sudo apt-get update && sudo apt-get install -y tesseract-ocr
           pip install --quiet pillow numpy pytesseract
 
+      # Gate regressions must not ship in the daily commit: a failure here stops the job
+      # before tap and push. Suites generate their own post-9xxx fixtures (ignored by VCS).
+      - name: run test suites (gates, autonomy, fidelity, package)
+        run: npm run test:all
+
       - name: run the tap
         run: npm run tap
 

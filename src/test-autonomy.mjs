@@ -8,7 +8,7 @@ import { planSwaps, applySwapText, restoreText, swapText } from '../tools/setup-
 import { gtm, launchCheck, ctaLine } from './gtm.mjs';
 import { validateSpec } from './validate.mjs';
 import { judge, hookShape } from './entropy.mjs';
-import { decide, performanceSignal } from './decide.mjs';
+import { decide, performanceSignal, formatOf } from './decide.mjs';
 import { saveFreshness, loadFreshness, isPublishable } from './state.mjs';
 import os from 'node:os';
 import path from 'node:path';
@@ -127,7 +127,7 @@ t('kill criterion fires after 3 consecutive misses', () => {
     ['4', { post: 4, reach: 1000, saves: 4, sends: 1, format: 'tired', publishedAt: '2026-08-07' }],
     ['5', { post: 5, reach: 1000, saves: 3, sends: 0, format: 'tired', publishedAt: '2026-08-09' }]
   ]) };
-  const s = performanceSignal(perf);
+  const s = performanceSignal(perf, { specFor: () => null });
   assert(s.ready && s.retire.includes('tired'), `should retire "tired": ${JSON.stringify(s)}`);
 });
 t('refuses to claim a signal from under 3 posts', () => {
@@ -137,46 +137,104 @@ t('refuses to claim a signal from under 3 posts', () => {
 t('drain beats generate', () => {
   const ledger = { posts: Object.fromEntries(
     Array.from({ length: 20 }, (_, i) => [String(i), { post: i, stage: 'approved' }])) };
-  const d = decide({ ledger, perf: { posts: {} }, fresh: { items: [] } });
+  const d = decide({ schedule: {}, ledger, perf: { posts: {} }, fresh: { items: [] } });
   assert(d.action === 'PUBLISH', `20 approved posts must not produce GENERATE, got ${d.action}`);
 });
 t('a fixture-provenance post is not publishable', () => {
   const ledger = { posts: { 5: { post: 5, stage: 'approved', provenance: 'reconstructed-fixture' } } };
-  const d = decide({ ledger, perf: { posts: {} }, fresh: { items: [{ id: 'f', observedAt: new Date().toISOString() }] } });
+  const d = decide({ schedule: {}, ledger, perf: { posts: {} }, fresh: { items: [{ id: 'f', observedAt: new Date().toISOString() }] } });
   assert(d.action !== 'PUBLISH', `must not send you to publish reconstructed copy, got ${d.action}`);
   assert(d.action === 'REPLACE_FIXTURE', `should ask for the real brief copy, got ${d.action}`);
 });
 t('a real-brief post IS publishable', () => {
   const ledger = { posts: { 5: { post: 5, stage: 'approved', provenance: 'brief' } } };
-  const d = decide({ ledger, perf: { posts: {} }, fresh: { items: [] } });
+  const d = decide({ schedule: {}, ledger, perf: { posts: {} }, fresh: { items: [] } });
   assert(d.action === 'PUBLISH', `real copy that passed its gates must be published, got ${d.action}`);
 });
 t('machine-only never returns a human action', () => {
   const ledger = { posts: { 5: { post: 5, stage: 'approved', provenance: 'brief' }, 7: { post: 7, stage: 'scripted' } } };
-  const d = decide({ ledger, perf: { posts: {} }, fresh: { items: [] }, machineOnly: true });
+  const d = decide({ schedule: {}, ledger, perf: { posts: {} }, fresh: { items: [] }, machineOnly: true });
   assert(!['PUBLISH', 'MEASURE', 'REQUEST_BRIEFS'].includes(d.action), `machine-only returned human action ${d.action}`);
   assert(d.action === 'BUILD_SPECS', `with copy waiting, the machine should drain it, got ${d.action}`);
 });
-t('a full ready buffer holds the drain', () => {
+t('a full ready buffer holds copy generation', () => {
   const posts = Object.fromEntries(Array.from({ length: 6 }, (_, i) => [String(900 + i), { post: 900 + i, stage: 'approved', provenance: 'brief' }]));
   posts['7'] = { post: 7, stage: 'scripted' };
-  const d = decide({ ledger: { posts }, perf: { posts: {} }, fresh: { items: [] }, machineOnly: true });
-  assert(d.action === 'HOLD', `6 unscheduled ready posts must hold the drain, got ${d.action}`);
+  const fresh = { items: [{ id: 'f', observedAt: new Date().toISOString() }] };
+  const d = decide({ schedule: {}, ledger: { posts }, perf: { posts: {} }, fresh, machineOnly: true, schedule: {} });
+  assert(d.action === 'HOLD', `6 unscheduled ready posts must hold copy work, got ${d.action}`);
 });
+
+t('SCHEDULE fires for an unscheduled post planned inside 28 days, and machine mode does not block on it', () => {
+  const today = new Date('2026-10-07T12:00:00Z');
+  const ledger = { posts: { 5: { post: 5, stage: 'approved', provenance: 'brief' } } };
+  const schedule = { 5: { date: '2026-10-13', time: '15:00', status: 'planned' } };
+  const base = { ledger, perf: { posts: {} }, fresh: { items: [] }, today, schedule };
+  const human = decide(base);
+  assert(human.action === 'SCHEDULE', `expected SCHEDULE, got ${human.action}`);
+  assert(/META-SCHEDULING-AGENT/.test(human.what), 'SCHEDULE must point at the scheduling brief');
+  const machine = decide({ ...base, machineOnly: true });
+  assert(machine.action !== 'SCHEDULE' && !machine.blocked, `machine mode must not block on scheduling, got ${machine.action}`);
+  const later = decide({ ...base, schedule: { 5: { date: '2026-12-01', status: 'planned' } } });
+  assert(later.action === 'PUBLISH', `a post planned beyond 28 days is not SCHEDULE, got ${later.action}`);
+  const done = decide({ ...base, schedule: { 5: { date: '2026-10-13', status: 'scheduled' } } });
+  assert(done.action !== 'SCHEDULE', `a scheduled post needs no SCHEDULE, got ${done.action}`);
+});
+
+const tiredRows = () => ({
+  1: { post: 1, reach: 1000, saves: 90, sends: 40, format: 'good', publishedAt: '2026-08-01' },
+  2: { post: 2, reach: 1000, saves: 80, sends: 35, format: 'good', publishedAt: '2026-08-03' },
+  3: { post: 3, reach: 1000, saves: 5, sends: 1, format: 'tired', publishedAt: '2026-08-05' },
+  4: { post: 4, reach: 1000, saves: 4, sends: 1, format: 'tired', publishedAt: '2026-08-07' },
+  5: { post: 5, reach: 1000, saves: 3, sends: 0, format: 'tired', publishedAt: '2026-08-09' },
+});
+const noSpec = { specFor: () => null };
+
+t('HOLD no longer blocks RETIRE_FORMAT', () => {
+  const posts = Object.fromEntries(Array.from({ length: 6 }, (_, i) => [String(900 + i), { post: 900 + i, stage: 'approved', provenance: 'brief' }]));
+  const d = decide({ schedule: {}, ledger: { posts }, perf: { posts: tiredRows() }, fresh: { items: [] }, machineOnly: true, schedule: {}, ...noSpec });
+  assert(d.action === 'RETIRE_FORMAT', `a full buffer must not mask a decaying format, got ${d.action}`);
+});
+
+t('a post missing saves or reach is unscored, not a miss', () => {
+  const s = performanceSignal({ posts: { ...tiredRows(), 6: { post: 6, reach: 1000, format: 'tired', publishedAt: '2026-08-11' },
+    7: { post: 7, saves: 50, format: 'good', publishedAt: '2026-08-12' } } }, noSpec);
+  assert(s.ready && s.n === 5 && s.unscored === 2, `unscored accounting wrong: ${JSON.stringify(s)}`);
+  const few = performanceSignal({ posts: { 1: { post: 1, reach: 100, saves: 5 }, 2: { post: 2, reach: 100 }, 3: { post: 3, saves: 4 } } }, noSpec);
+  assert(!few.ready && few.n === 1 && few.unscored === 2, 'unscored posts must not count toward the 3-post minimum');
+  const gap = performanceSignal({ posts: { ...tiredRows(), 4: { post: 4, format: 'tired', publishedAt: '2026-08-07' }, 5: { post: 5, format: 'tired', publishedAt: '2026-08-09' } } }, noSpec);
+  assert(!gap.retire.includes('tired'), 'two unscored posts must not extend a run of misses to 3');
+});
+
+t('3 scored misses retire a format, 2 do not', () => {
+  assert(performanceSignal({ posts: tiredRows() }, noSpec).retire.includes('tired'), '3 scored misses should retire');
+  const rec = performanceSignal({ posts: { ...tiredRows(), 5: { post: 5, reach: 1000, saves: 95, sends: 45, format: 'tired', publishedAt: '2026-08-09' } } }, noSpec);
+  assert(!rec.retire.includes('tired'), 'a recovery on the third post must not retire');
+  const r = tiredRows();
+  const two = performanceSignal({ posts: { 1: r[1], 2: r[2], 3: r[3], 4: r[4], 6: { post: 6, reach: 1000, saves: 60, sends: 20, format: 'good', publishedAt: '2026-08-10' } } }, noSpec);
+  assert(!two.retire.includes('tired'), '2 misses must not retire');
+});
+
+t('format is the declared spec field, else the dominant non-cta layout', () => {
+  assert(formatOf({}, { format: 'decl', slides: [{ layout: 'a' }] }) === 'decl', 'declared wins');
+  const slides = ['a', 'b', 'b', 'cta-card', 'cta-card', 'cta-card'].map((layout) => ({ layout }));
+  assert(formatOf({}, { slides }) === 'b', 'cta-card excluded; majority beats slide 1');
+});
+
 t('a scheduled future post is not due for measurement', () => {
   const ledger = { posts: { 5: { post: 5, stage: 'published', provenance: 'brief' }, 7: { post: 7, stage: 'scripted' } } };
   const future = new Date(Date.now() + 5 * 864e5).toISOString().slice(0, 10);
-  const d = decide({ ledger, perf: { posts: { 5: { post: 5, publishedAt: future } } }, fresh: { items: [] } });
+  const d = decide({ schedule: {}, ledger, perf: { posts: { 5: { post: 5, publishedAt: future } } }, fresh: { items: [] } });
   assert(d.action !== 'MEASURE', `a post going live in 5 days has no numbers yet, got ${d.action}`);
 });
 t('a post live 8 days with no numbers IS due', () => {
   const ledger = { posts: { 5: { post: 5, stage: 'published', provenance: 'brief' } } };
   const past = new Date(Date.now() - 8 * 864e5).toISOString().slice(0, 10);
-  const d = decide({ ledger, perf: { posts: { 5: { post: 5, publishedAt: past } } }, fresh: { items: [] } });
+  const d = decide({ schedule: {}, ledger, perf: { posts: { 5: { post: 5, publishedAt: past } } }, fresh: { items: [] } });
   assert(d.action === 'MEASURE', `8 days live, unmeasured, should be MEASURE, got ${d.action}`);
 });
 t('generate only when the board is genuinely clear', () => {
-  const d = decide({ ledger: { posts: { 1: { post: 1, stage: 'measured' } } }, perf: { posts: {} },
+  const d = decide({ schedule: {}, ledger: { posts: { 1: { post: 1, stage: 'measured' } } }, perf: { posts: {} },
     fresh: { items: [{ id: 'f', observedAt: new Date().toISOString() }] } });
   assert(d.action === 'GENERATE', `clear board should generate, got ${d.action}`);
 });
