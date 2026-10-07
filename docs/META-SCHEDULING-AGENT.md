@@ -115,7 +115,8 @@ Fix anything wrong (open the scheduled post → edit date or order). If you can'
 - **Marking posts scheduled in the repo:** you can't run commands. In your report, print
   one line per scheduled post for Adi to paste:
   `node tools/log-post.mjs N --published --date YYYY-MM-DD`
-  Never suggest `--scheduled-all`: it marks every post on the page, not just the window.
+  If you scheduled every post in the NOW section, one line covers them all:
+  `node tools/log-post.mjs --scheduled-all` (it only touches the 28-day NOW window).
 - Insights, comments and replies stay Adi's.
 
 ## 8 · Report back in exactly this shape

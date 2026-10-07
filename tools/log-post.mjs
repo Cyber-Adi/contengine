@@ -73,7 +73,8 @@ const row = perf.posts[n] || { post: Number(n) };
 let specMeta = {};
 try {
   const s = JSON.parse(fs.readFileSync(path.join(ROOT, 'specs', `post-${n}.json`), 'utf8'));
-  specMeta = { title: s.title, angle: s.gtmAngle, pillar: s.pillar, format: s.slides?.[0]?.layout };
+  // format is derived from the spec by decide.mjs (formatOf), not frozen here from slide 1.
+  specMeta = { title: s.title, angle: s.gtmAngle, pillar: s.pillar };
 } catch { /* spec may not exist yet */ }
 
 // --date lets you record a post you SCHEDULED rather than posted. Scheduling is the
