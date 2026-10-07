@@ -5,53 +5,66 @@
 // enough friction to never happen. This makes it one command.
 //
 //   node tools/log-post.mjs 49 --published
-//   node tools/log-post.mjs 49 --reach 1240 --saves 41 --sends 18 --slide3 0.42
+//   node tools/log-post.mjs 49 --reach 1240 --saves 41 --sends 18
 //   node tools/log-post.mjs 49 --reach 1240 --saves 41 --sends 18 --profile 22 --follows 6
 //
-// --slide3 is swipe-through to slide 3: read it off Instagram's per-slide reach
-// graph as (slide 3 reach / slide 1 reach). Strategy v2 calls it the primary metric
-// and it has never once been logged. It is the closest proxy for "a stranger stopped."
+// --slide3 is OPTIONAL: Instagram's per-slide reach is unconfirmed. If you can read it,
+// it is (slide 3 reach / slide 1 reach). Any metric you omit is stored as absent, never 0.
 import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { ROOT } from './../src/tokens.mjs';
-import { loadPerformance, savePerformance, reconcile, loadLedger, saveLedger } from './../src/state.mjs';
+import { STATE_DIR, loadPerformance, savePerformance, reconcile, loadLedger, saveLedger } from './../src/state.mjs';
+import { loadSchedule, saveSchedule, markScheduled } from './../src/schedule.mjs';
 
 const argv = process.argv.slice(2);
 
-// --scheduled-all: the whole weekly ritual's "mark it gone out" step collapsed
-// into one command. Reads the exact `node tools/log-post.mjs N --published
-// --date D` lines tools/ready.mjs already printed into SCHEDULE.txt, and runs
-// each one — instead of Adi copying six commands out of six cards by hand.
-if (argv.includes('--scheduled-all')) {
-  const scheduleFile = path.join(ROOT, 'READY-TO-POST', 'SCHEDULE.txt');
-  if (!fs.existsSync(scheduleFile)) {
-    console.error('READY-TO-POST/SCHEDULE.txt not found — run npm run tap first');
-    process.exit(2);
-  }
-  const text = fs.readFileSync(scheduleFile, 'utf8');
-  const cmds = [...text.matchAll(/node tools\/log-post\.mjs (\d+) --published --date (\d{4}-\d{2}-\d{2})/g)];
-  if (!cmds.length) {
-    console.log('nothing in SCHEDULE.txt to mark — READY-TO-POST/ is empty');
-    process.exit(0);
-  }
-  console.log(`marking ${cmds.length} post(s) scheduled, as printed in SCHEDULE.txt:`);
-  for (const [, post, date] of cmds) {
-    execFileSync(process.execPath, [path.join(ROOT, 'tools', 'log-post.mjs'), post, '--published', '--date', date], { stdio: 'inherit' });
-  }
+// --scheduled-all / --scheduled N,N,N: mark posts scheduled on the dates PERSISTED in
+// state/schedule.json (written once by tools/ready.mjs, never recomputed). --scheduled-all
+// touches ONLY planned posts inside the NOW window (next 28 days); the LATER posts have not
+// been put in Meta yet and must stay in the queue. Testing hooks: --schedule-file F,
+// --today YYYY-MM-DD, --dry-run (prints, writes nothing).
+const optFlag = (name) => { const i = argv.indexOf(`--${name}`); return i === -1 ? undefined : argv[i + 1]; };
+if (argv.includes('--scheduled-all') || argv.includes('--scheduled')) {
+  const file = optFlag('schedule-file') || path.join(STATE_DIR, 'schedule.json');
+  const today = optFlag('today') || new Date().toISOString().slice(0, 10);
+  const dry = argv.includes('--dry-run');
+  const only = argv.includes('--scheduled')
+    ? String(optFlag('scheduled') ?? '').split(',').map((x) => Number(x.trim())).filter((x) => Number.isInteger(x) && x > 0)
+    : undefined;
+  if (only && !only.length) { console.error('--scheduled needs post numbers, e.g. --scheduled 9,43,58'); process.exit(2); }
+  const current = loadSchedule(file);
+  if (!Object.keys(current.posts).length) { console.error('state/schedule.json is empty -- run npm run tap first'); process.exit(2); }
+  const unknown = (only ?? []).filter((p) => !current.posts[p]);
+  if (unknown.length) { console.error(`no assigned slot for post(s) ${unknown.join(', ')} -- run npm run tap first`); process.exit(2); }
+  const { schedule, marked } = markScheduled(current, today, only);
+  if (!marked.length) { console.log('nothing to mark: no planned posts in the NOW window (or the named posts are already scheduled)'); process.exit(0); }
+  console.log(`marking ${marked.length} post(s) scheduled${only ? '' : ' (NOW window only)'}:`);
+  if (!dry) {
+    for (const { post, date } of marked) {
+      execFileSync(process.execPath, [path.join(ROOT, 'tools', 'log-post.mjs'), String(post), '--published', '--date', date], { stdio: 'inherit' });
+    }
+    saveSchedule(file, schedule);
+  } else for (const m of marked) console.log(`  post-${m.post} ${m.date}`);
   process.exit(0);
 }
 
 const n = argv[0];
 if (!n || n.startsWith('--')) {
-  console.error('usage: node tools/log-post.mjs <postNumber> [--published [--date YYYY-MM-DD]] [--reach N --saves N --sends N --slide3 0.42 --profile N --follows N] [--platform instagram|tiktok]\n   or: node tools/log-post.mjs --scheduled-all   (marks every post in READY-TO-POST/SCHEDULE.txt as scheduled on its listed date)');
+  console.error('usage: node tools/log-post.mjs <postNumber> [--published [--date YYYY-MM-DD]] [--reach N --saves N --sends N --profile N --follows N] [--slide3 0.42, optional] [--platform instagram|tiktok]\n   or: node tools/log-post.mjs --scheduled-all   (marks planned NOW-window posts, next 28 days, on their persisted dates)\n   or: node tools/log-post.mjs --scheduled 9,43,58');
   process.exit(2);
 }
 const flag = (name) => {
   const i = argv.indexOf(`--${name}`);
   return i === -1 ? undefined : argv[i + 1];
 };
-const num = (name) => (flag(name) === undefined ? undefined : Number(flag(name)));
+// A metric that was not given (or is blank / not a number) is ABSENT, never 0.
+const num = (name) => {
+  const v = flag(name);
+  if (v === undefined || v === '' || v.startsWith('--')) return undefined;
+  const x = Number(v);
+  return Number.isFinite(x) ? x : undefined;
+};
 
 const perf = loadPerformance();
 perf.posts ||= {};

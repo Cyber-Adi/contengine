@@ -14,10 +14,11 @@
     "decide": "node src/decide.mjs",
     "seed": "node src/seed-ledger.mjs",
     "test:autonomy": "node src/test-autonomy.mjs",
+    "test:schedule": "node src/test-schedule.mjs",
     "test:fidelity": "node src/test-fidelity.mjs",
     "test:package": "node src/test-package.mjs",
     "refine:copy": "node tools/refine-copy.mjs",
-    "test:all": "python3 tools/test_gates.py && node src/test-autonomy.mjs && node src/test-fidelity.mjs && node src/test-package.mjs",
+    "test:all": "python3 tools/test_gates.py && node src/test-autonomy.mjs && node src/test-fidelity.mjs && node src/test-package.mjs && node src/test-schedule.mjs",
     "tap": "node tools/tap.mjs"
   },
   "keywords": [],
