@@ -104,6 +104,14 @@ def gate1(meas, findings):
         for v in m.get("marginViolations", []):
             findings.append(dict(gate="G1.2-margins", level="FAIL", slide=i,
                                  msg=f"'{v.get('cls')}' intrudes into the {round(TOKENS['grid']['margin']*SCALE)}px margin"))
+        seen_cc = set()
+        for v in m.get("chromeCollisions", []):
+            key = (v.get("cls"), v.get("chrome"))
+            if key in seen_cc:
+                continue
+            seen_cc.add(key)
+            findings.append(dict(gate="G1.6-chrome", level="FAIL", slide=i,
+                                 msg=f"'{v.get('cls')}' text \"{v.get('text')}\" collides with chrome '{v.get('chrome')}'"))
         # 1.5 numerals: hero/stat elements only. Numerals inside running Playfair
         # headline prose are exempt — swapping the face mid-sentence looks worse.
         for n in m.get("numeralFonts", []):

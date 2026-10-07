@@ -194,6 +194,24 @@ def render_is_deterministic():
     return same, ("two renders byte-identical" if same else "RENDERS DIFFER")
 
 
+def synthetic_chrome_collision():
+    """Wave 2e: a headline box intersecting the micro-label box is a Gate 1.6 FAIL.
+    Built synthetically (the engine now keeps content clear of chrome, so a real
+    spec cannot reach it); a clean slide with the same shape must NOT fire."""
+    Q = _qa()
+    base = dict(index=2, archetype="value", layout="hero-statement", background="light",
+                declaresLoss=False, fontStatus=dict(playfair=True, dmsans=True, grotesk=True),
+                overflow=[], marginViolations=[], numeralFonts=[], accents=[], textBoxes=[])
+    bad = dict(base, chromeCollisions=[dict(cls="h-mid", text="A headline", chrome="micro")])
+    hit, clean = [], []
+    for meas, sink in (([bad], hit), ([base], clean)):
+        findings = []
+        Q.gate1(meas, findings)
+        sink.extend(f for f in findings if f["gate"] == "G1.6-chrome" and f["level"] == "FAIL")
+    ok = bool(hit) and not clean
+    return ok, ("collision flagged, clean slide not" if ok else "GATE DID NOT FIRE or false-fired")
+
+
 CHECKS = (
     ("edge step 5px (synthetic)", synthetic_edge_5px, "G3.2-edge"),
     ("hook in grid strip (synth)", synthetic_gridsafe, "G4.6-gridsafe"),
@@ -201,5 +219,6 @@ CHECKS = (
     ("rhythm.mjs repairs plan", rhythm_solver_repairs, "S2a-solver"),
     ("normalizer closed table", normalizer_closed_table, "S2f-normalize"),
     ("normalizer logs (real)", renderer_logs_normalizations, "S2f-log"),
+    ("chrome collision (synth)", synthetic_chrome_collision, "G1.6-chrome"),
     ("re-render byte-identical", render_is_deterministic, "determinism"),
 )

@@ -306,6 +306,7 @@ export function effectiveSlide(spec, slide) {
 // The group then sits wherever .content's valign puts it, which is what lets
 // neighbouring slides land at different heights.
 const HOLE_GUARD_SHARE = 0.85, HOLE_FLOOR_PX = 14;
+const MICRO_CLEAR_PX = 14;
 function fillScript(aim, S = 1, idx = 0) {
   return `<script>window.__fillDone=(async()=>{
   await Promise.all([document.fonts.load("700 96px 'Playfair Display'"),document.fonts.load("400 32px 'DM Sans'"),document.fonts.load("700 140px 'Space Grotesk'")]);
@@ -318,6 +319,14 @@ function fillScript(aim, S = 1, idx = 0) {
     // children, but never past the point where one gap exceeds ${tokens.rules.optical.maxGapShare} of the group
     // (Gate 5.1 fails a hole wider than ${tokens.rules.optical.maxDeadBandPct}), so sparse copy stays sparse
     // rather than being padded into a hole.
+    const hk=content.querySelector('.h-hook');
+    if(hk && ${idx}===1){ // cover step: slide 1 hook grows toward the cover ceiling while it clears the frame
+      const pad=parseFloat(getComputedStyle(content).paddingLeft)||0, sl=document.querySelector('.slide').getBoundingClientRect();
+      const mi=document.querySelector('.micro'), top=mi?mi.getBoundingClientRect().bottom+${MICRO_CLEAR_PX}*${S}:sl.top+pad;
+      const f0=parseFloat(getComputedStyle(hk).fontSize), fmax=${tokens.type.display.sizes.cover.max}*${S};
+      const fitsH=()=>{const r=hk.getBoundingClientRect(); return hk.scrollWidth<=hk.clientWidth+1 && r.left>=sl.left+pad-1 && r.right<=sl.right-pad+1 && r.top>=top-1 && r.height<=${aim}*cr.height;};
+      for(let f=fmax; f>f0; f*=0.97){ hk.style.fontSize=f+'px'; if(fitsH()) break; hk.style.fontSize=f0+'px'; }
+      const sw=content.querySelector('.swipe'); if(sw) sw.style.paddingTop=(0.16*parseFloat(getComputedStyle(hk).fontSize))+'px'; }
     const xl=content.querySelector('.h-xl');
     if(xl){ // statement-xl: largest display step (token ceiling) at which the headline clears frame and margins
       const pad=parseFloat(getComputedStyle(content).paddingLeft)||0, sl=document.querySelector('.slide').getBoundingClientRect();
@@ -356,13 +365,16 @@ function fillScript(aim, S = 1, idx = 0) {
       const r=el.getBoundingClientRect(); if(!r.width||!r.height) continue;
       top=Math.min(top,r.top); bot=Math.max(bot,r.bottom);}
     return {top:Math.max(top,cr.top),bot:Math.min(bot,cr.bottom)};};
+  // Chrome band: the micro-label is pinned top-right; content may never ride up into it (Gate 1.6).
+  const safeTop=()=>{const mi=document.querySelector('.micro'); if(!mi) return -1e9; const mr=mi.getBoundingClientRect(), r0=document.querySelector('.slide').getBoundingClientRect();
+    return mr.bottom+${MICRO_CLEAR_PX}*${S};};
   // Headline first: it may grow to its type ceiling (hook ceiling on slide 2, reframe ceiling after).
   const hd=content.querySelector('.h-mid');
   if(hd){ const cap=(hd.classList.contains('h-xl')?${tokens.type.display.sizes.statement.max}:${idx}<=2?${tokens.type.display.sizes.hook.max}:${tokens.type.display.sizes.reframe.max})*${S};
     const f0=parseFloat(getComputedStyle(hd).fontSize), pad=parseFloat(getComputedStyle(content).paddingLeft)||0;
     const sl=document.querySelector('.slide').getBoundingClientRect();
     const fits=()=>{const r=hd.getBoundingClientRect(), e=extent();
-      return hd.scrollWidth<=hd.clientWidth+1 && r.left>=sl.left+pad-1 && r.right<=sl.right-pad+1 && e.top>=sl.top+pad-1 && e.bot<=sl.bottom-pad+1;};
+      return hd.scrollWidth<=hd.clientWidth+1 && r.left>=sl.left+pad-1 && r.right<=sl.right-pad+1 && e.top>=Math.max(sl.top+pad-1,safeTop()) && e.bot<=sl.bottom-pad+1;};
     // Grow toward the ceiling only while the headline still clears the margin and the box.
     for(let f=Math.max(f0,cap); f>f0; f*=0.96){ hd.style.fontSize=f+'px'; if(fits()) break; hd.style.fontSize=f0+'px'; } }
   blk.style.flex='none'; blk.style.height='auto';
@@ -385,6 +397,18 @@ function fillScript(aim, S = 1, idx = 0) {
       kids=[...content.children].filter(k=>k.getBoundingClientRect().height>0),
       used=kids.reduce((a,k)=>a+k.getBoundingClientRect().height,0)+(parseFloat(ccs.rowGap)||0)*Math.max(0,kids.length-1);
     want=Math.min(want,Math.max(0,inner-used)); }
+  // Split columns: prefer boxes sized to their content (slack under the token share, numeral and
+  // text together). Gate 5.5 measures text extent, so if compact boxes would leave the slide under
+  // the fill floor, fall back to the stretched spread layout rather than trade the gate away.
+  if(blk.classList.contains('split')&&want>0){
+    const slackCap=nat*${tokens.rules.optical.splitMaxSlackShare}/(1-${tokens.rules.optical.splitMaxSlackShare});
+    if(want>slackCap){
+      const wFull=want; blk.style.height=(nat+slackCap)+'px';
+      const ee=extent();
+      if((ee.bot-ee.top)/cr.height>=${tokens.rules.optical.minFillRatio}*1.03){ want=slackCap; }
+      else { blk.classList.add('spread'); want=wFull; }
+    }
+  }
   if(want>0){blk.style.height=(nat+want)+'px';}
   })();
   // Margin guard: stacked blocks that overrun the safe frame give back their own
@@ -396,7 +420,8 @@ function fillScript(aim, S = 1, idx = 0) {
       const r=el.getBoundingClientRect(); if(!r.width||!r.height) continue;
       top=Math.min(top,r.top); bot=Math.max(bot,r.bottom);}
     return {top,bot};};
-  const over=()=>{const s=span();return Math.max(0,root.top+m-s.top)+Math.max(0,s.bot-(root.bottom-m));};
+  const microBand=()=>{const mi=document.querySelector('.micro'); return mi?mi.getBoundingClientRect().bottom+${MICRO_CLEAR_PX}*${S}:-1e9;};
+  const over=()=>{const s=span();return Math.max(0,Math.max(root.top+m,microBand())-s.top)+Math.max(0,s.bot-(root.bottom-m));};
   let ov=over();
   if(ov>0){
     const g0=parseFloat(getComputedStyle(content).rowGap)||0, n=Math.max(1,content.children.length-1);
@@ -410,6 +435,18 @@ function fillScript(aim, S = 1, idx = 0) {
     const fmin=(hd.classList.contains('h-xl')?${tokens.type.display.sizes.statement.min}:hd.classList.contains('h-hook')?${tokens.type.display.sizes.hook.min}:${tokens.type.display.sizes.reframe.min})*${S};
     let f=parseFloat(getComputedStyle(hd).fontSize);
     for(let k=0;k<60&&over()>0&&f>fmin;k++){ f=Math.max(fmin,f*0.97); hd.style.fontSize=f+'px'; }
+  })();
+  // Fill-block guard: a stretched block (columns, rows) that still overruns the frame or the
+  // micro-label band after the headline is at its floor gives back its own stretch, then its
+  // numeral steps down toward the numeric floor. Copy is never touched.
+  (()=>{
+    const blk=content.querySelector('.fill'); if(!blk||over()<=0) return;
+    const h0=blk.getBoundingClientRect().height;
+    blk.style.height='auto'; const nat=blk.getBoundingClientRect().height;
+    blk.style.height=Math.max(nat,h0-over())+'px';
+    const ci=[...blk.querySelectorAll('.col-i')];
+    if(ci.length&&over()>0){ let f=parseFloat(getComputedStyle(ci[0]).fontSize), fmin=${tokens.type.numeric.sizes.hero.min}*${S};
+      for(let k=0;k<40&&over()>0&&f>fmin;k++){ f=Math.max(fmin,f*0.95); ci.forEach(c=>{c.style.fontSize=f+'px';}); blk.style.height='auto'; } }
   })();
   // Hole guard (Gate 5.1): in a short copy block the structural gap between two blocks can
   // exceed the deadband share of the block. Close only the offending gap, never below a
@@ -494,7 +531,8 @@ export function wrapSlideHtml(spec, rawSlide, { debug = false, canvas = 'ig' } =
 /* S2b fill mode: columns stretch to the content box, the numeral scales up to the
    numeric ceiling and the text sits at the foot, so the frame is used, not just the top. */
 .split.fill{flex:0 1 auto;grid-template-rows:1fr}
-.split.fill .col{justify-content:space-between;padding:40px 34px}
+.split.fill .col{justify-content:flex-start;gap:28px;padding:40px 34px}
+.split.fill.spread .col{justify-content:space-between;gap:18px}
 .split.fill .col-i{font-size:${T.numeric.sizes.hero.max}px;line-height:1}
 .split.fill .col-t{font-size:${T.body.sizes.body.max}px}
 

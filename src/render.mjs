@@ -150,6 +150,29 @@ export async function renderCarousel(spec, { outDir, debug = false, canvas = 'ig
         if (cs.color) out.accents.add(cs.color);
       }
       out.accents = [...out.accents];
+      // Chrome collision (Gate 1.6): ink-bearing content boxes must never intersect a chrome box.
+      // Range rects give the real glyph lines, so a wide block box with short text does not false-fire.
+      const chromeEls = [...document.querySelectorAll('.micro, .orn, .handle, .counter, .thread-label')];
+      const chromeBoxes = chromeEls.map((c) => { const r = c.getBoundingClientRect();
+        return { cls: String(c.className?.baseVal ?? c.className), l: r.left, r: r.right, t: r.top, b: r.bottom }; });
+      out.chromeCollisions = [];
+      for (const el of document.querySelectorAll('.content *')) {
+        const own = [...el.childNodes].some((n) => n.nodeType === 3 && n.textContent.trim());
+        if (!own) continue;
+        const rg = document.createRange(); rg.selectNodeContents(el);
+        const fsz = parseFloat(getComputedStyle(el).fontSize) || 0;
+        for (const rc of rg.getClientRects()) {
+          if (!rc.width || !rc.height) continue;
+          // A Range rect is the font's content area, taller than the ink. Trim to a glyph band
+          // (0.45em either side of the line centre) so only real ink contact counts.
+          const mid = (rc.top + rc.bottom) / 2, ink = { t: Math.max(rc.top, mid - 0.45 * fsz), b: Math.min(rc.bottom, mid + 0.45 * fsz) };
+          for (const cb of chromeBoxes) {
+            if (rc.left < cb.r && rc.right > cb.l && ink.t < cb.b && ink.b > cb.t) {
+              out.chromeCollisions.push({ cls: String(el.className?.baseVal ?? el.className), text: (el.textContent || '').trim().slice(0, 40), chrome: cb.cls });
+            }
+          }
+        }
+      }
       const cb = document.querySelector('.content')?.getBoundingClientRect();
       if (cb) out.contentBox = { top: Math.round(cb.top - rb.top), bottom: Math.round(cb.bottom - rb.top),
                                  height: Math.round(cb.height) };
