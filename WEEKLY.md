@@ -29,10 +29,17 @@ have to find this file.
 Double-click **`READY-TO-POST/index.html`**. Every post there passes all six gates,
 carries real brief copy, and is already slotted two a week with pillars alternated.
 
-For each post:
-1. **business.facebook.com** → Create post → Instagram → drag in its slides **in order** →
-   paste the caption (Copy button) → set the date shown → Schedule.
-   *(Or the Instagram app: new post → Advanced settings → Schedule. Up to 75 days ahead.)*
+**Fastest:** paste `docs/META-SCHEDULING-AGENT.md` to a Claude agent with Claude in Chrome.
+It schedules the next 28 days of posts in Meta Business Suite (Instagram only, Tue 3:00 PM /
+Thu 12:30 PM ET) and reports back. Run it every 3-4 weeks.
+
+By hand, for each post:
+1. **business.facebook.com** → Create post → Instagram only → drag in its slides **in order** →
+   paste the caption (Copy button) → Schedule for the date shown. Business Suite reaches ~29 days
+   ahead and no longer takes alt text on scheduled posts.
+   *(Or the Instagram app: new post → Advanced settings → alt text + Schedule. Up to 75 days ahead.)*
+2. **TikTok** goes out from your phone on the same day: the folder's `tiktok/` images plus
+   `tiktok.txt`, with a trending sound picked in-app (TikTok's web scheduler skips photo posts).
 
 Schedule **everything on the page**, then mark the whole page scheduled in **one command**
 instead of one per post:

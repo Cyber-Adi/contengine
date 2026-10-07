@@ -22,7 +22,9 @@ import { gtmCheck } from './../src/gtm-check.mjs';
 
 const OUT = path.join(ROOT, 'READY-TO-POST');
 const PER_WEEK_DAYS = [2, 4];           // Tue, Thu
-const DEFAULT_TIME = '7:00 PM';         // a default, not a claim about optimal timing
+// US Eastern. Inside both Sprout Social's and Hootsuite's 2026 high-engagement windows for
+// those days; docs/META-SCHEDULING-AGENT.md schedules at exactly these times.
+const SLOT_TIME = { 2: '3:00 PM ET', 4: '12:30 PM ET' };
 
 const esc = (s = '') => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const iso = (d) => d.toISOString().slice(0, 10);
@@ -138,7 +140,7 @@ const lines = [
   'READY TO SCHEDULE',
   `generated ${new Date().toLocaleString()} — regenerated every time you run npm run tap`,
   '',
-  entries.length ? `${entries.length} post(s), two a week, suggested ${DEFAULT_TIME} (a default — change it freely). Oldest has waited ${oldestWait}d.` : 'Nothing ready. Run npm run tap, or see what it says is blocking.',
+  entries.length ? `${entries.length} post(s), two a week, Tue 3:00 PM / Thu 12:30 PM ET. Oldest has waited ${oldestWait}d.` : 'Nothing ready. Run npm run tap, or see what it says is blocking.',
   entries.length ? 'Mark the whole page scheduled in one command:  node tools/log-post.mjs --scheduled-all' : '',
   '',
 ];
@@ -154,7 +156,7 @@ fs.writeFileSync(path.join(OUT, 'SCHEDULE.txt'), lines.join('\n'));
 const card = (e) => `
 <article class="post${e.heroWarn.length ? ' warn' : ''}">
   <header>
-    <div class="slot"><span class="day">${DAY[e.slot.getDay()]}</span><span class="date">${e.slot.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span><span class="time">${DEFAULT_TIME}</span></div>
+    <div class="slot"><span class="day">${DAY[e.slot.getDay()]}</span><span class="date">${e.slot.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span><span class="time">${SLOT_TIME[e.slot.getDay()]}</span></div>
     <div class="meta">
       <h2>${esc(e.spec.title)}</h2>
       <p>post-${e.post} · ${esc(e.spec.pillar)}${e.spec.gtmAngle ? ' · ' + esc(e.spec.gtmAngle) : ''} · ${e.slides.length} slides</p>
