@@ -165,7 +165,7 @@ Cover brief (one system for all, 1080x1920, icon inside the centre 60 percent so
 
 Scheduling itself is in docs/META-SCHEDULING-AGENT.md; this is setup only.
 - [ ] Log in as Adi only. Meta ad accounts require 18+ (GTM paid.blockedReasons); no ads are set up.
-- [ ] Confirm @getfond (Instagram professional, Creator) is **connected** to Business Suite. If a linked Facebook Page is required, if a linked Facebook Page is required and none is visible, stop and ask Adi; do not create one.
+- [ ] Confirm @getfond (Instagram professional, Creator) is **connected** to Business Suite. If a linked Facebook Page is required and none is visible, stop and ask Adi; do not create one.
 - [ ] Open **Planner**; confirm @getfond is selectable and the calendar loads; default to week or month view.
 - [ ] Timezone **America/New_York**. Slots are Tue 3:00 PM ET and Thu 12:30 PM ET (SCHED).
 - [ ] **Notifications**: keep only new-comment and scheduled-post-failure alerts; turn off marketing and tips emails.

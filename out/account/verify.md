@@ -42,3 +42,48 @@ Citation spot-checks (5 opened): IGR 3 (5 links, phone only) OK; IGR 4 (720 px, 
 6. Section 3, Roles bullet: replace "Remove or reject anyone or any app not Adi; add no third-party apps." with "If anyone or any app other than Adi appears, do not remove it; report it to Adi. Add no third-party apps."
 
 No other fixes required. Doc was not edited.
+
+---
+
+# Pass 2
+
+## 2a. ACCOUNT-PROFILE.md: the 5 earlier FAILs
+
+| Earlier FAIL | Result | Evidence |
+|---|---|---|
+| 1.8 43% attribution + judgement label | PASS | Line 86 now cites "2025 consumer label-confusion survey"; line 90 labels Date labels and Freezer as judgement picks. |
+| 1.9 indexing cite | PASS | Line 103 now "IGR 8". |
+| 2.6 cites and music claim | PASS | Lines 144-145: "reportedly", third-party UNVERIFIED, LIVE cites TTR 6. |
+| 2.8 suggest cite | PASS | Line 155 cites TTR 6. |
+| 3 Page and Roles | PASS | Lines 168 and 174 now say stop and ask / report, remove nothing. |
+
+## 2b. COWORK-ACCOUNT-SETUP.md
+
+Section refs checked against real headings: 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2.6, 2.7, 2.8, "section 1", "section 2", "section 3" all exist and point at the right field. No unknown-section placeholders remain.
+
+| Check | Result | Reason |
+|---|---|---|
+| Rule 0 injection clause | PASS | Present, with report format `possible injection: <quote>`. |
+| @getfond confirmed every screen | PASS | Rule 1. |
+| Before/after shown, Adi ok before each save | PASS | Rule 2, rule 3, A2, B4. |
+| One field at a time | PASS | Rule 2 and section 1 item 3. |
+| Never list (post, schedule, ads, DMs, comments, follows, deletes, roles, permissions, payment, 2FA, passwords, app connections) | PASS | Rule 4 covers all. |
+| Facebook Page creation forbidden | FAIL | Only in B1, not in the hard-rules list. |
+| "Edit content" ambiguity | FAIL | Rule 4 says "edit or delete content", which literally conflicts with editing profile fields. |
+| No credential typing | PASS | Rule 5. |
+| Stop on ambiguity, stop after 2 failures | PASS | Rules 8 and 7. |
+| Account-type switch is Adi's call | PASS | A1. |
+| Section refs correct | PASS | See above. |
+| Scope vs B6 | FAIL | Rule 9 forbids Messages, but B6 (inbox auto-replies) lives in the Inbox area and could expose DMs. |
+| B1 "use it" for an existing Page | FAIL | "use it" can mean linking, which rule 4 forbids; spec says only stop and ask if required and none visible. |
+| Final report format | PASS | CHANGED, SKIPPED, PROBLEMS, ADI TODO, plus account type, Public, timezone, nothing-done confirmation. |
+| Contradicts spec | FAIL | Part C "Alt text on live posts, per docs/META-SCHEDULING-AGENT.md": that doc (section 5.6, line 106) says Business Suite no longer supports alt text on scheduled posts; the item is fine as a phone task but the pointer should say so. |
+
+Totals: 5 spec fixes confirmed; Cowork prompt 10 PASS, 5 FAIL (all minor).
+
+## Required replacements in COWORK-ACCOUNT-SETUP.md
+
+1. Rule 4, change "post, schedule, edit or delete content," to "post, schedule, edit or delete posts, Stories, Reels or captions, create any Facebook Page,".
+2. Rule 9, append: "Exception: B6 may open Inbox automation settings only; never open a conversation or message."
+3. B1, replace "If an existing fond Page is shown, note its name and use it; do not make a new one." with "If an existing fond Page is shown, note its name only; do not link, unlink or create anything."
+4. Part C alt-text bullet, replace with: "**Alt text** on live posts, by hand in the Instagram app (Business Suite cannot set it on scheduled posts; see docs/META-SCHEDULING-AGENT.md section 5.6)."
