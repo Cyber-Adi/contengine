@@ -2,7 +2,7 @@
   "postNumber": 43,
   "title": "Your Fridge Is 5 Degrees Too Warm",
   "pillar": "Store It Right",
-  "ctaTier": "Tier 2",
+  "ctaTier": "Tier 0",
   "sendTrigger": "Save this for your next fridge clean-out.",
   "briefSource": "fond_Carousel_Design_Brief_Posts_41-43_v2.md",
   "provenance": "brief",
@@ -172,23 +172,13 @@
       "copy": {
         "headline": "Three degrees buys you days.",
         "ctaLine": "fond tracks real shelf life - tuned to how you actually store food.",
-        "sendTrigger": "Save this for your next fridge clean-out.",
-        "citation": "Keep this one. Follow for more, we're working on something for this."
+        "sendTrigger": "Save this for your next fridge clean-out."
       },
       "threadState": {
-        "progress": 1.0,
+        "progress": 1,
         "label": "37°F",
         "tone": "good"
       }
-    }
-  ],
-  "ctaSwap": [
-    {
-      "slide": 8,
-      "field": "citation",
-      "from": "Join the waitlist - link in bio",
-      "to": "Keep this one. Follow for more, we're working on something for this.",
-      "rule": "setup-cta"
     }
   ],
   "refinement": {
@@ -200,6 +190,13 @@
         "from": "hero-statement",
         "to": "statement-xl",
         "why": "slides 1 and 2 were both headline-only hero-statement (X-distinct) and the short slide-2 headline filled <55% of its frame (G5.5); statement-xl is the token-defined large-scale headline-only layout"
+      },
+      {
+        "slide": 8,
+        "field": "citation",
+        "from": "Keep this one. Follow for more, we're working on something for this.",
+        "to": "",
+        "why": "Adi-authorized Oct 7: ctaTier moved to Tier 0 (majority of feed, gtm.json); field was entirely a setup CTA line, removed with its ctaSwap entry"
       }
     ]
   }

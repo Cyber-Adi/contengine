@@ -155,7 +155,7 @@
       "copy": {
         "headline": "It is called fond. It is not launched yet.",
         "items": [
-          "There is a waitlist, a TestFlight beta coming this summer, and no user numbers I can honestly quote you.",
+          "There are no user numbers I can honestly quote you.",
           "I would rather tell you that than inflate it."
         ]
       },
@@ -251,6 +251,13 @@
         "from": "center",
         "to": "bottom",
         "why": "slides 7 and 8 centre at 0.38 and 0.46 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 7,
+        "field": "items.0",
+        "from": "There is a waitlist, a TestFlight beta coming this summer, and no user numbers I can honestly quote you.",
+        "to": "There are no user numbers I can honestly quote you.",
+        "why": "Adi-authorized Oct 7: deleted stale \"TestFlight beta coming this summer\" Waitlist mention also removed: state/launch.json has waitlistLive false."
       }
     ]
   },

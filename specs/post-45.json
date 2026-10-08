@@ -2,7 +2,7 @@
   "postNumber": 45,
   "title": "The Color of Fresh Is a Lie",
   "pillar": "Supermarket Secrets",
-  "ctaTier": "Tier 2",
+  "ctaTier": "Tier 0",
   "valueEncapsulated": "Awareness = Prerequisite for Change",
   "sendTrigger": "Send this to whoever does the groceries.",
   "briefSource": "fond_Content_Brief_Posts_44-45-46_and_Kinetic_Reel_OpportunityCost.md",
@@ -170,7 +170,7 @@
         "sendTrigger": "Send this to whoever does the groceries."
       },
       "threadState": {
-        "progress": 1.0,
+        "progress": 1,
         "label": "Actual expiry, tracked",
         "tone": "good"
       }

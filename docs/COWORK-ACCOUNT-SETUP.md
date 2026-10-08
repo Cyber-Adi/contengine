@@ -13,8 +13,8 @@ follow the intent, and say what differed in the final report.
 ## 1 · How Adi uses this
 
 1. Paste this file and docs/ACCOUNT-PROFILE.md (the spec) into Cowork in one message.
-2. Before starting, Adi tells the agent which options he chose in the spec's open questions
-   (name keyword, bio variant, positioning line). The agent never picks an alternative itself.
+2. Before starting, Adi tells the agent which options he chose in the spec's section 4 decisions
+   (decisions in spec section 4: name keyword, bio variant). The agent never picks an alternative itself.
 3. The agent works one field at a time. For each field it shows the BEFORE value and the NEW
    value, then waits for Adi's "ok". Adi can say "skip" or "change to X" at any step.
 4. The agent reads every value from the spec file. It does not retype values from memory or
@@ -52,12 +52,14 @@ follow the intent, and say what differed in the final report.
 10. **Copy is verbatim.** Never reword, shorten, add emoji, add hashtags or add a link.
     If a field rejects the text, stop and report.
 11. **Do not change the username.** It stays `getfond` (spec 1.1).
+12. **Account type is Adi's call.** Never view-to-change, switch, or comment on account type. If a field is unavailable because of account type, SKIP it and note it in the report.
+13. **Highlights are out of scope** (spec 1.8 is marked later). Do not open or create them.
 
 ## 3 · Start
 
 1. List tabs, then open a **new tab** at `https://www.instagram.com/getfond/`.
 2. Confirm you are logged in as @getfond and note the current profile (name, bio, link,
-   category, picture present or not, Public or Private). Screenshot it as `00-start.png`.
+   picture present or not, Public or Private). Screenshot it as `00-start.png`.
 3. Tell Adi the starting state and which spec options he chose, then begin Part A.
 
 ## 4 · Part A: Instagram profile (spec section 1)
@@ -65,11 +67,7 @@ follow the intent, and say what differed in the final report.
 Use Meta Business Suite if it exposes the field; otherwise instagram.com, Edit profile.
 Say which surface you used for each field.
 
-**A1. Account type check (do this first, spec 1.6).** Find the account type (Settings,
-Account type and tools, or the professional account section). Expected: professional,
-**Creator**. If it is **Business**, or a **personal** account, or you cannot tell: **STOP
-and ask Adi.** Switching type is Adi's call; never switch it yourself. If the account is
-Private, report it and ask before changing visibility.
+**A1. Visibility.** If the account is Private, report it and ask before changing visibility. Do not look at or discuss account type (rule 12).
 
 **A2. Name field (spec 1.2).** Show the current name and the chosen name from the spec.
 Note on screen any limit on name changes (the spec marks this UNVERIFIED). Name changes
@@ -83,7 +81,7 @@ currently empty. If it holds something, show Adi and ask; do not remove it on yo
 
 **A5. Category and contact options (spec 1.6).** Set the category to Adi's chosen label
 (spec default first choice), picking from the labels offered; if the label is not offered,
-show the list and ask. Contact options (email, phone, address): leave **none**. If a
+show the list and ask; if there is no category field, skip it and note it. Contact options (email, phone, address): leave **none**. If a
 contact button is currently on, report it; do not remove it without Adi's "ok". Do not add one.
 
 **A6. Discoverability and settings (spec 1.9).** Check each item the spec lists and report
@@ -133,15 +131,14 @@ Print this list in the final report as ADI TODO, adjusted for what you saw. Sect
 refer to the spec.
 
 - [ ] **TikTok profile (spec section 2):** name, bio, and the Instagram link via Edit
-      profile if offered, using the values Adi chose. No URL. Stay Personal or Creator,
-      never Business (spec 2.6).
+      profile if offered, using the values Adi chose. No URL. Account type is Adi's call
+      (spec 2.6).
 - [ ] **TikTok to Public:** switch from Private to Public and review "suggest your account
-      to others" (spec 2.8). Adi's decision.
+      to others" (spec 2.8). Adi's decision (spec Decision 6).
 - [ ] **Profile picture on both apps:** upload the fond mark (spec 1.5) in the app if Adi
       did not do it in Part A. Check it small, in the circle.
 - [ ] **Instagram 2FA and recovery email:** confirm both are on and are Adi's own.
-- [ ] **Highlights (spec 1.8):** need real Stories first. Post a few Stories, then create
-      the Highlights using the spec's names and cover brief. No empty Highlights.
+- [ ] **Highlights (spec 1.8, later):** skipped for now. Revisit after Adi has posted a few Stories. No empty Highlights.
 - [ ] **Pinned posts (spec 1.7, 2.7):** pin only after the posts are live, in the order the
       spec gives. TikTok pins wait until the spec's minimum post count.
 - **Alt text** on live posts, by hand in the Instagram app (Business Suite cannot set it on scheduled posts; see docs/META-SCHEDULING-AGENT.md section 5.6).
@@ -162,5 +159,5 @@ ADI TODO
   <Part C items, plus anything that needs Adi's decision or hands>
 ```
 
-Also state the account type found, whether the account is Public, and the timezone found,
+Also state whether the account is Public, and the timezone found,
 and confirm that nothing was posted, scheduled, sent, followed, deleted or connected.

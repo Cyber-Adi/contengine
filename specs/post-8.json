@@ -2,7 +2,7 @@
   "postNumber": 8,
   "title": "The Inflation Multiplier",
   "pillar": "The $2913 Problem",
-  "ctaTier": "Tier 1",
+  "ctaTier": "Tier 0",
   "gtmAngle": "money-leak",
   "briefSource": "Notion: Carousel Scripts - Posts 1-8",
   "provenance": "converted-from-notion-script",
@@ -141,8 +141,7 @@
       "accent": "fondGreen",
       "declaresLoss": false,
       "copy": {
-        "headline": "We built an app that tracks all of this automatically.",
-        "ctaLine": "Save this for your next grocery run. Follow for more, something's coming."
+        "headline": "We built an app that tracks all of this automatically."
       },
       "threadState": {
         "progress": 1,
@@ -151,13 +150,16 @@
       }
     }
   ],
-  "ctaSwap": [
-    {
-      "slide": 7,
-      "field": "ctaLine",
-      "from": "Link in bio.",
-      "to": "Save this for your next grocery run. Follow for more, something's coming.",
-      "rule": "setup-cta"
-    }
-  ]
+  "refinement": {
+    "round": 0,
+    "changes": [
+      {
+        "slide": 7,
+        "field": "ctaLine",
+        "from": "Save this for your next grocery run. Follow for more, something's coming.",
+        "to": "",
+        "why": "Adi-authorized Oct 7: ctaTier moved to Tier 0 (majority of feed, gtm.json); field was entirely a setup CTA line, removed with its ctaSwap entry"
+      }
+    ]
+  }
 }

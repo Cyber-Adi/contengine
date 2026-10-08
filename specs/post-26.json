@@ -140,7 +140,7 @@
       "declaresLoss": false,
       "copy": {
         "headline": "Your loyalty app rewards you with convenience. It rewards the store with your entire behavioral profile.",
-        "ctaLine": "fond tracks your kitchen — not your behavior. No ads. No data selling. Save it before your fridge does the forgetting. Follow for more, something's on the way."
+        "ctaLine": "fond tracks your kitchen — not your behavior. Save it before your fridge does the forgetting. Follow for more, something's on the way."
       },
       "threadState": {
         "progress": 1,
@@ -152,9 +152,21 @@
     {
       "slide": 7,
       "field": "ctaLine",
-      "from": "fond tracks your kitchen — not your behavior. No ads. No data selling. Link in bio.",
-      "to": "fond tracks your kitchen — not your behavior. No ads. No data selling. Save it before your fridge does the forgetting. Follow for more, something's on the way.",
+      "from": "fond tracks your kitchen — not your behavior. Link in bio.",
+      "to": "fond tracks your kitchen — not your behavior. Save it before your fridge does the forgetting. Follow for more, something's on the way.",
       "rule": "setup-cta"
     }
-  ]
+  ],
+  "refinement": {
+    "round": 0,
+    "changes": [
+      {
+        "slide": 7,
+        "field": "ctaLine",
+        "from": "fond tracks your kitchen — not your behavior. No ads. No data selling. Save it before your fridge does the forgetting. Follow for more, something's on the way.",
+        "to": "fond tracks your kitchen — not your behavior. Save it before your fridge does the forgetting. Follow for more, something's on the way.",
+        "why": "Adi-authorized Oct 7: deleted unsourced pre-launch product promise \"No ads. No data selling.\""
+      }
+    ]
+  }
 }

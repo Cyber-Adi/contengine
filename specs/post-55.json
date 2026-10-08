@@ -2,7 +2,7 @@
   "postNumber": 55,
   "title": "The Misting Machine",
   "pillar": "Supermarket Secrets",
-  "ctaTier": "Tier 2",
+  "ctaTier": "Tier 0",
   "valueEncapsulated": "Awareness = Prerequisite for Change",
   "sendTrigger": "Send this to whoever does the groceries.",
   "briefSource": "fond_Content_Brief_Posts_54-55-63_and_Kinetic_Reel_56Friday.md",
@@ -167,11 +167,10 @@
       "copy": {
         "headline": "You are not buying fresher vegetables. You are buying wetter ones.",
         "ctaLine": "Know what you brought home, and how long it actually has.",
-        "sendTrigger": "Send this to whoever does the groceries.",
-        "citation": "Keep this one. Follow for more, we're working on something for this."
+        "sendTrigger": "Send this to whoever does the groceries."
       },
       "threadState": {
-        "progress": 1.0,
+        "progress": 1,
         "label": "Dry weight",
         "tone": "good"
       }
@@ -186,16 +185,14 @@
         "from": "stack-list",
         "to": "split-compare",
         "why": "slide 2 copy is sparse in its original layout (fill below 55 percent); lossless layout swap among legal alternatives"
+      },
+      {
+        "slide": 8,
+        "field": "citation",
+        "from": "Keep this one. Follow for more, we're working on something for this.",
+        "to": "",
+        "why": "Adi-authorized Oct 7: ctaTier moved to Tier 0 (majority of feed, gtm.json); field was entirely a setup CTA line, removed with its ctaSwap entry"
       }
     ]
-  },
-  "ctaSwap": [
-    {
-      "slide": 8,
-      "field": "citation",
-      "from": "Join the waitlist, link in bio.",
-      "to": "Keep this one. Follow for more, we're working on something for this.",
-      "rule": "setup-cta"
-    }
-  ]
+  }
 }

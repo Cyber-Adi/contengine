@@ -2,7 +2,7 @@
   "postNumber": 42,
   "title": "Your Grandparents Wasted Almost Nothing",
   "pillar": "The $2913 Problem",
-  "ctaTier": "Tier 2",
+  "ctaTier": "Tier 0",
   "sendTrigger": "Send this to whoever does the groceries.",
   "briefSource": "fond_Carousel_Design_Brief_Posts_41-43_v2.md",
   "provenance": "brief",
@@ -188,23 +188,25 @@
       "copy": {
         "headline": "You don't need her budget. You need her visibility.",
         "ctaLine": "fond puts the constraints back - automatically.",
-        "sendTrigger": "Send this to whoever does the groceries.",
-        "citation": "Save it before your fridge does the forgetting. Follow for more, something's on the way."
+        "sendTrigger": "Send this to whoever does the groceries."
       },
       "threadState": {
-        "progress": 1.0,
+        "progress": 1,
         "label": "1950",
         "tone": "good"
       }
     }
   ],
-  "ctaSwap": [
-    {
-      "slide": 8,
-      "field": "citation",
-      "from": "Join the waitlist - link in bio",
-      "to": "Save it before your fridge does the forgetting. Follow for more, something's on the way.",
-      "rule": "setup-cta"
-    }
-  ]
+  "refinement": {
+    "round": 0,
+    "changes": [
+      {
+        "slide": 8,
+        "field": "citation",
+        "from": "Save it before your fridge does the forgetting. Follow for more, something's on the way.",
+        "to": "",
+        "why": "Adi-authorized Oct 7: ctaTier moved to Tier 0 (majority of feed, gtm.json); field was entirely a setup CTA line, removed with its ctaSwap entry"
+      }
+    ]
+  }
 }

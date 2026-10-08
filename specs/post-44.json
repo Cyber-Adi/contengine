@@ -2,7 +2,7 @@
   "postNumber": 44,
   "title": "Quick Pickle Anything",
   "pillar": "Waste Hacks",
-  "ctaTier": "Tier 2",
+  "ctaTier": "Tier 0",
   "valueEncapsulated": "Failure Is Data",
   "sendTrigger": "Save this for your next fridge clean-out.",
   "briefSource": "fond_Content_Brief_Posts_44-45-46_and_Kinetic_Reel_OpportunityCost.md",
@@ -251,6 +251,13 @@
         "from": "hero-statement",
         "to": "statement-xl",
         "why": "slides 1 and 2 were both headline-only hero-statement (X-distinct) and the short slide-2 headline filled <55% of its frame (G5.5); statement-xl is the token-defined large-scale headline-only layout"
+      },
+      {
+        "slide": 6,
+        "field": "body",
+        "from": "You just turned a vegetable that had 2 days into a condiment that has 2 weeks. That's a 10x shelf-life extension for 5 minutes of work.",
+        "to": "You just turned a vegetable that had 2 days into a condiment that has 2 weeks. That's a 10x shelf-life extension for 5 minutes of work.",
+        "why": "Adi-authorized Oct 7: \"10x\" contradicted the post's own 2 days to 2-4 weeks; replaced with qualitative form"
       }
     ]
   }

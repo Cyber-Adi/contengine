@@ -2,7 +2,7 @@
   "postNumber": 34,
   "title": "The Sunday Fridge Audit",
   "pillar": "Waste Hacks",
-  "ctaTier": "Tier 2",
+  "ctaTier": "Tier 0",
   "sendTrigger": "Send this to whoever does the fridge clean-out.",
   "briefSource": "fond_Carousel_Design_Brief_Posts_34-36.md",
   "provenance": "brief",
@@ -137,14 +137,12 @@
       "index": 5,
       "archetype": "value",
       "background": "dark",
-      "layout": "hero-number",
+      "layout": "hero-statement",
       "accent": "steelBlue",
       "declaresLoss": false,
       "copy": {
         "eyebrow": "Weekly fridge audit",
-        "heroNumber": "40%",
-        "heroNumberCaption": "less food waste - $1,165 saved per year, for 10 minutes on Sunday.",
-        "citation": "Weekly fridge-audit waste-reduction estimate; EPA household food-waste figure"
+        "headline": "Less food waste and money saved every year, for 10 minutes on Sunday."
       },
       "threadState": {
         "progress": 0.85,
@@ -163,8 +161,7 @@
       "copy": {
         "headline": "The best kitchen habit isn't a recipe. It's seeing what you have before you decide what to buy.",
         "ctaLine": "fond does the audit for you, every day.",
-        "sendTrigger": "Send this to whoever does the fridge clean-out.",
-        "citation": "Save it before your fridge does the forgetting. Follow for more, something's on the way."
+        "sendTrigger": "Send this to whoever does the fridge clean-out."
       },
       "threadState": {
         "progress": 1,
@@ -217,17 +214,49 @@
         "from": "bottom",
         "to": "center",
         "why": "X-distinct: bottom-aligned diagram hashed alike with slide 5; centre keeps them distinct."
+      },
+      {
+        "slide": 5,
+        "field": "layout",
+        "from": "hero-number",
+        "to": "hero-statement",
+        "why": "Adi-authorized Oct 7: unsourced hero figure rendered qualitatively (CLAUDE.md: no uncited hero numbers)"
+      },
+      {
+        "slide": 5,
+        "field": "heroNumber",
+        "from": "40%",
+        "to": "",
+        "why": "Adi-authorized Oct 7: unsourced hero figure rendered qualitatively (CLAUDE.md: no uncited hero numbers)"
+      },
+      {
+        "slide": 5,
+        "field": "heroNumberCaption",
+        "from": "less food waste - $1,165 saved per year, for 10 minutes on Sunday.",
+        "to": "",
+        "why": "Adi-authorized Oct 7: unsourced hero figure rendered qualitatively (CLAUDE.md: no uncited hero numbers)"
+      },
+      {
+        "slide": 5,
+        "field": "citation",
+        "from": "Weekly fridge-audit waste-reduction estimate; EPA household food-waste figure",
+        "to": "",
+        "why": "Adi-authorized Oct 7: unsourced hero figure rendered qualitatively (CLAUDE.md: no uncited hero numbers)"
+      },
+      {
+        "slide": 5,
+        "field": "headline",
+        "from": "",
+        "to": "Less food waste and money saved every year, for 10 minutes on Sunday.",
+        "why": "Adi-authorized Oct 7: unsourced hero figure rendered qualitatively (CLAUDE.md: no uncited hero numbers)"
+      },
+      {
+        "slide": 6,
+        "field": "citation",
+        "from": "Save it before your fridge does the forgetting. Follow for more, something's on the way.",
+        "to": "",
+        "why": "Adi-authorized Oct 7: ctaTier moved to Tier 0 (majority of feed, gtm.json); field was entirely a setup CTA line, removed with its ctaSwap entry"
       }
     ]
-  },
-  "ctaSwap": [
-    {
-      "slide": 6,
-      "field": "citation",
-      "from": "Join the waitlist - link in bio",
-      "to": "Save it before your fridge does the forgetting. Follow for more, something's on the way.",
-      "rule": "setup-cta",
-      "heldBefore": true
-    }
-  ]
+  }
 }

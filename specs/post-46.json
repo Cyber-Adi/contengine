@@ -2,12 +2,11 @@
   "postNumber": 46,
   "title": "The Kids' Plate Tax",
   "pillar": "The $2913 Problem",
-  "ctaTier": "Tier 2",
+  "ctaTier": "Tier 0",
   "valueEncapsulated": "Acknowledgment / Visibility",
   "briefSource": "fond_Content_Brief_Posts_44-45-46_and_Kinetic_Reel_OpportunityCost.md",
   "provenance": "brief",
   "editorialNotes": [
-    "The $800-1,100/year plate-waste range is the brief's own translation of a WRAP/Journal estimate for a two-child family; it is rendered as a hero range with its citation. Adi should confirm it is acceptable as hero type.",
     "The \"$4 per plate\" and \"5 times a week\" figures in the hook are anecdotal, not sourced; kept as headline-level scene copy."
   ],
   "thread": {
@@ -65,14 +64,12 @@
       "index": 3,
       "archetype": "value",
       "background": "light",
-      "layout": "hero-number",
+      "layout": "hero-statement",
       "accent": "signalRed",
       "declaresLoss": true,
       "copy": {
-        "heroNumber": "$800-1,100",
-        "heroNumberUnit": "/year",
-        "heroNumberCaption": "Children under 12 waste an estimated 30-40% of the food served to them. For a family with two kids, that's roughly $800-1,100 per year in plate waste alone - separate from the fridge waste figure.",
-        "citation": "WRAP UK Children's Food Waste report / Journal of the Academy of Nutrition and Dietetics."
+        "headline": "Children under 12 waste food served to them.",
+        "body": "For a family with two kids, that's plate waste alone - separate from the fridge waste figure."
       },
       "threadState": {
         "progress": 0.32,
@@ -177,7 +174,7 @@
         "ctaLine": "fond helps you track what your household actually eats - so you serve what gets used."
       },
       "threadState": {
-        "progress": 1.0,
+        "progress": 1,
         "label": "Complete",
         "tone": "good"
       }
@@ -192,6 +189,55 @@
         "from": "hero-statement",
         "to": "statement-xl",
         "why": "slides 1 and 2 were both headline-only hero-statement (X-distinct) and the short slide-2 headline filled <55% of its frame (G5.5); statement-xl is the token-defined large-scale headline-only layout"
+      },
+      {
+        "slide": 3,
+        "field": "heroNumber",
+        "from": "$800-1,100",
+        "to": "",
+        "why": "Adi-authorized Oct 7: derived $800-1,100 range and unsourced 30-40% removed; figure traces only to a derivation, so it renders qualitatively."
+      },
+      {
+        "slide": 3,
+        "field": "heroNumberUnit",
+        "from": "/year",
+        "to": "",
+        "why": "Adi-authorized Oct 7: derived $800-1,100 range and unsourced 30-40% removed; figure traces only to a derivation, so it renders qualitatively."
+      },
+      {
+        "slide": 3,
+        "field": "heroNumberCaption",
+        "from": "Children under 12 waste an estimated 30-40% of the food served to them. For a family with two kids, that's roughly $800-1,100 per year in plate waste alone - separate from the fridge waste figure.",
+        "to": "",
+        "why": "Adi-authorized Oct 7: derived $800-1,100 range and unsourced 30-40% removed; figure traces only to a derivation, so it renders qualitatively."
+      },
+      {
+        "slide": 3,
+        "field": "citation",
+        "from": "WRAP UK Children's Food Waste report / Journal of the Academy of Nutrition and Dietetics.",
+        "to": "",
+        "why": "Adi-authorized Oct 7: derived $800-1,100 range and unsourced 30-40% removed; figure traces only to a derivation, so it renders qualitatively."
+      },
+      {
+        "slide": 3,
+        "field": "headline",
+        "from": "",
+        "to": "Children under 12 waste food served to them.",
+        "why": "Adi-authorized Oct 7: qualitative restatement using the caption's own words."
+      },
+      {
+        "slide": 3,
+        "field": "body",
+        "from": "",
+        "to": "For a family with two kids, that's plate waste alone - separate from the fridge waste figure.",
+        "why": "Adi-authorized Oct 7: qualitative restatement using the caption's own words."
+      },
+      {
+        "slide": 3,
+        "field": "layout",
+        "from": "hero-number",
+        "to": "hero-statement",
+        "why": "Adi-authorized Oct 7: no hero figure remains."
       }
     ]
   }

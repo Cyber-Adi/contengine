@@ -2,7 +2,7 @@
   "postNumber": 32,
   "title": "What $2,913 Could Buy Instead",
   "pillar": "The $2913 Problem",
-  "ctaTier": "Tier 2",
+  "ctaTier": "Tier 0",
   "sendTrigger": "Send this to whoever does the groceries.",
   "briefSource": "fond_Carousel_Design_Brief_Posts_31-33.md",
   "provenance": "brief",
@@ -197,24 +197,25 @@
       "copy": {
         "headline": "You didn't choose to waste $2,913. You just never got to see it happening.",
         "ctaLine": "fond makes the invisible visible.",
-        "sendTrigger": "Send this to whoever does the groceries.",
-        "citation": "Save this for your next grocery run. Follow for more, something's coming."
+        "sendTrigger": "Send this to whoever does the groceries."
       },
       "threadState": {
-        "progress": 1.0,
+        "progress": 1,
         "label": "Full",
         "tone": "good"
       }
     }
   ],
-  "ctaSwap": [
-    {
-      "slide": 7,
-      "field": "citation",
-      "from": "Join the waitlist - link in bio",
-      "to": "Save this for your next grocery run. Follow for more, something's coming.",
-      "rule": "setup-cta",
-      "heldBefore": true
-    }
-  ]
+  "refinement": {
+    "round": 0,
+    "changes": [
+      {
+        "slide": 7,
+        "field": "citation",
+        "from": "Save this for your next grocery run. Follow for more, something's coming.",
+        "to": "",
+        "why": "Adi-authorized Oct 7: ctaTier moved to Tier 0 (majority of feed, gtm.json); field was entirely a setup CTA line, removed with its ctaSwap entry"
+      }
+    ]
+  }
 }

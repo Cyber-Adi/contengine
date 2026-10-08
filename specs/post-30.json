@@ -124,7 +124,7 @@
       "declaresLoss": false,
       "copy": {
         "headline": "I'm 17. I have no budget, no investors, no team.",
-        "body": "I built this in my bedroom between homework and AP exams. And I think it can save the average family $1,500/year."
+        "body": "I built this in my bedroom between homework and AP exams. And I think it can save the average family money."
       },
       "threadState": {
         "progress": 0.86,
@@ -157,5 +157,17 @@
       "to": "Save it before your fridge does the forgetting. Follow for more, something's on the way.",
       "rule": "setup-cta"
     }
-  ]
+  ],
+  "refinement": {
+    "round": 0,
+    "changes": [
+      {
+        "slide": 6,
+        "field": "body",
+        "from": "I built this in my bedroom between homework and AP exams. And I think it can save the average family $1,500/year.",
+        "to": "I built this in my bedroom between homework and AP exams. And I think it can save the average family money.",
+        "why": "Adi-authorized Oct 7: removed unsourced $1,500 figure, kept the sentence qualitative"
+      }
+    ]
+  }
 }

@@ -39,7 +39,7 @@ Source key: GTM = gtm.json; IGR = out/account/ig-research.md (section number); T
   Starting with wasted food. Save, follow, something's coming.
   ```
 - Reason: line 1 is plain keywords in the audience's own territory (plain beats poetic for search, IGR 2; fridge, groceries, money from LAND 3). Line 2 in the chosen and Alt 1 versions is `ctas.setup` entries 1 and 2 verbatim, so it is pre-launch honest by construction. No emoji, no link wording, no counts.
-- Positioning conflict (Open Question 1): GTM positioning.rule says the positioning line goes in "every bio, every platform". The chosen bio omits it because @getfond is the faceless distribution arm, not the credibility arm (GTM stance.note). Alt 2 carries it.
+- Positioning line (Decision 1, section 4): left out of the bios; the chosen bios stay. GTM positioning.rule says it goes in "every bio, every platform", but @getfond is the faceless distribution arm, not the credibility arm (GTM stance.note). Alt 2 carries it and is not used.
 - Source: GTM ctas.setup, positioning, stance; IGR 2; LAND 2.
 
 ### 1.4 Link
@@ -59,9 +59,8 @@ Source key: GTM = gtm.json; IGR = out/account/ig-research.md (section number); T
 - Source: CLAUDE.md section 4, tokens.json palette, IGR 4, LAND 2.
 
 ### 1.6 Account type, category, contact buttons
-- Type: professional account, **Creator** (not Business). Reason: owner is 17; Creator gets the full music library; Insights, native scheduling and Meta Business Suite work on both, and neither is favoured in reach (IGR 5).
-- Teen rules: under-18 accounts are Teen Accounts; professional accounts must be public; ages 16 to 17 do not need parental permission to go public unless supervised (IGR 5). Verify on screen that nothing blocks the switch, and whether Insights or scheduling are limited on teen professional accounts (IGR 5, UNVERIFIED).
-- Category label: chosen `Education`; Alt 1 `Digital creator`; Alt 2 `Blogger`. Neutral labels (IGR 5). Verify on screen which labels are offered.
+- Account type: Adi decides; nothing here depends on it.
+- Category label (if the account type offers one): chosen `Education`; Alt 1 `Digital creator`; Alt 2 `Blogger`. Neutral labels (IGR 5). Verify on screen which labels are offered. If no category field is available, skip it and note it.
 - Contact buttons (email, phone, address): **none**. Reason: no real fond inbox exists, and a button invites messages nobody has committed to answering; no public phone or address for a 17-year-old. Revisit when a fond-owned inbox exists. Source: IGR 5 (judgement).
 
 ### 1.7 Pinned posts (max 3; the last one pinned shows first, left)
@@ -74,10 +73,12 @@ Pins need live posts, so pin after each publishes. Dates from SCHED (NOW block).
 - Order to pin: post-58, then post-9, then post-5 last so post-5 shows first. The 4th-pin behaviour is disputed (IGR 6): verify on screen.
 - Until 2026-10-20, pin whichever of post-9 and post-58 are live. Never pin before publishing.
 - Rotation: first review 2 to 4 weeks after pinning. Replace any pin whose save rate is below the account median with the top post by saves/reach from Insights (GTM organicMetrics.primary). Then review monthly. Check each cover crop in the grid.
-- Runner-up pick: post-1 "The Shelf Is Rigged" (Thu 2026-10-15). No dedicated intro carousel exists (Open Question 3).
+- Runner-up pick: post-1 "The Shelf Is Rigged" (Thu 2026-10-15). No dedicated intro carousel is planned for now (Decision 3, section 4).
 - Source: SCHED, GTM angles and organicMetrics, IGR 6.
 
-### 1.8 Story Highlights
+### 1.8 Story Highlights (LATER: skip until Adi has posted a few Stories)
+Status: deferred per Decision 5 (section 4). The plan below is kept for when real Stories exist; it is not part of the current setup.
+
 Highlights need real Stories first. Do not create empty highlights. This repo renders files and does not publish, so Adi must post the Stories.
 
 Names (15 max each), with 2 alternates:
@@ -96,8 +97,8 @@ Cover brief (one system for all, 1080x1920, icon inside the centre 60 percent so
 - Source: IGR 7 (3 to 5, safe zone; value of Highlights is from marketing blogs, UNVERIFIED), tokens.json, CLAUDE.md section 4.
 
 ### 1.9 Settings checklist (Instagram)
-- [ ] Account is Public (required for professional; teen default is private).
-- [ ] Switched to professional, Creator, category set (1.6).
+- [ ] Account visibility is Public (teen default is private).
+- [ ] Category set if the account offers the field (1.6); otherwise skipped and noted.
 - [ ] Name, bio and photo applied exactly as chosen; link field empty.
 - [ ] Account suggestions ("suggest account to others"): leave ON; verify the exact label on screen (IGR 8).
 - [ ] Search-engine indexing of the profile: verify on screen whether the toggle exists (IGR 8, UNVERIFIED); leave ON if present.
@@ -141,7 +142,8 @@ Cover brief (one system for all, 1080x1920, icon inside the centre 60 percent so
 - Profile video avatar: skip (nothing current found, TTR 5, UNVERIFIED).
 
 ### 2.6 Account type
-- Stay **Personal or Creator**. Never TikTok Business: linking it requires the owner to be 18+ and it reportedly limits music to the commercial library (TTR 1, third-party, UNVERIFIED; verify on screen). Whether the in-app switch is age-gated is UNVERIFIED, so do not try it.
+- Account type: Adi decides; nothing here depends on it.
+- Facts only: a bio link is tied to Business verification (18+) per TTR 4, and a personal-account link has been reported to need 1,000 followers (UNVERIFIED); if a field is not offered, skip it.
 - Do not use TikTok Shop, ads or LIVE (LIVE is 18+, TTR 6).
 - Source: TTR 1 and recommendation 1.
 
@@ -151,8 +153,8 @@ Cover brief (one system for all, 1080x1920, icon inside the centre 60 percent so
 - Source: TTR 5, SCHED.
 
 ### 2.8 Settings checklist (TikTok)
-- [ ] Account switched from Private to **Public** (teen default is private).
-- [ ] "Suggest your account to others" reviewed; enable if present and allowed for a 17-year-old (TTR 6 says it is off for 13-17, UNVERIFIED for 17-year-olds in the app).
+- [ ] Adi, on the phone (Decision 6): switch the account from Private to **Public** (teen default is private).
+- [ ] Adi, on the phone (Decision 6): review "Suggest your account to others"; enable if present and allowed for a 17-year-old (TTR 6 says it is off for 13-17, UNVERIFIED for 17-year-olds in the app).
 - [ ] Downloads and direct messages: leave at teen defaults; do not loosen.
 - [ ] Comments: teen defaults, spam filter on.
 - [ ] Instagram linked via Edit profile if the button appears (2.4).
@@ -165,7 +167,7 @@ Cover brief (one system for all, 1080x1920, icon inside the centre 60 percent so
 
 Scheduling itself is in docs/META-SCHEDULING-AGENT.md; this is setup only.
 - [ ] Log in as Adi only. Meta ad accounts require 18+ (GTM paid.blockedReasons); no ads are set up.
-- [ ] Confirm @getfond (Instagram professional, Creator) is **connected** to Business Suite. If a linked Facebook Page is required and none is visible, stop and ask Adi; do not create one.
+- [ ] Confirm @getfond (Instagram) is **connected** to Business Suite. If a linked Facebook Page is required and none is visible, stop and ask Adi; do not create one.
 - [ ] Open **Planner**; confirm @getfond is selectable and the calendar loads; default to week or month view.
 - [ ] Timezone **America/New_York**. Slots are Tue 3:00 PM ET and Thu 12:30 PM ET (SCHED).
 - [ ] **Notifications**: keep only new-comment and scheduled-post-failure alerts; turn off marketing and tips emails.
@@ -176,11 +178,11 @@ Scheduling itself is in docs/META-SCHEDULING-AGENT.md; this is setup only.
 
 ---
 
-## 4. Open questions for Adi
+## 4. Decisions (Oct 7)
 
-1. Positioning line: gtm.json says it goes in "every bio", but @getfond is faceless and the line says "the 17-year-old". The chosen bios omit it; IG Alt 2 includes it, and TikTok has no room. Which do you want?
-2. Name keyword: "Food Waste Tips" (validated territory) or "Grocery Savings" (money angle, still an untested hypothesis)?
-3. Pin 1 is post-5 because no "what this account is" intro carousel exists. Want one made first (copy must come from a brief)?
-4. OK to use Creator on Instagram, Personal or Creator on TikTok, and no contact buttons until a real fond inbox exists?
-5. Highlights need real Stories. Will you post a few first, or skip Highlights for now?
-6. Are you comfortable switching TikTok to Public with "suggest to others" reviewed now, given teen defaults are private and off, before the first post goes live?
+1. Positioning line: left out of the bios; the chosen bios stay.
+2. Name keyword: "Food Waste Tips"; the chosen name field stays.
+3. Intro carousel: none for now; pin post-5 first as specced (1.7).
+4. Account type: Adi decides it himself. This spec makes no account-type recommendation; contact buttons stay none until a real fond inbox exists.
+5. Highlights: skipped until Adi has posted a few Stories; the plan in 1.8 is marked later and is out of scope for the Cowork setup.
+6. TikTok: switch to Public with "suggest to others" reviewed, done by Adi on his phone (2.8); Cowork does not touch TikTok.

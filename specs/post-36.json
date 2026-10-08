@@ -91,15 +91,13 @@
       "index": 4,
       "archetype": "value",
       "background": "dark",
-      "layout": "hero-number",
+      "layout": "hero-statement",
       "accent": "signalRed",
       "declaresLoss": true,
       "copy": {
         "eyebrow": "Just in leftovers",
-        "heroNumber": "$936-2,080",
-        "heroNumberUnit": "/yr",
-        "heroNumberCaption": "The average household throws away 6-8 leftover containers a week. At $3-5 per serving, that's $18-40 a week.",
-        "citation": "Household leftover-waste estimate; EPA annual food-waste figure"
+        "headline": "The average household throws away leftover containers every week.",
+        "body": "At a few dollars per serving, that adds up every week."
       },
       "threadState": {
         "progress": 0.57,
@@ -183,7 +181,7 @@
         "citation": "Save this for your next grocery run. Follow for more, something's coming."
       },
       "threadState": {
-        "progress": 1.0,
+        "progress": 1,
         "label": "Complete",
         "tone": "good"
       }
@@ -198,5 +196,59 @@
       "rule": "setup-cta",
       "heldBefore": true
     }
-  ]
+  ],
+  "refinement": {
+    "round": 0,
+    "changes": [
+      {
+        "slide": 4,
+        "field": "layout",
+        "from": "hero-number",
+        "to": "hero-statement",
+        "why": "Adi-authorized Oct 7: unsourced hero figure rendered qualitatively (CLAUDE.md: no uncited hero numbers)"
+      },
+      {
+        "slide": 4,
+        "field": "heroNumber",
+        "from": "$936-2,080",
+        "to": "",
+        "why": "Adi-authorized Oct 7: unsourced hero figure rendered qualitatively (CLAUDE.md: no uncited hero numbers)"
+      },
+      {
+        "slide": 4,
+        "field": "heroNumberUnit",
+        "from": "/yr",
+        "to": "",
+        "why": "Adi-authorized Oct 7: unsourced hero figure rendered qualitatively (CLAUDE.md: no uncited hero numbers)"
+      },
+      {
+        "slide": 4,
+        "field": "heroNumberCaption",
+        "from": "The average household throws away 6-8 leftover containers a week. At $3-5 per serving, that's $18-40 a week.",
+        "to": "",
+        "why": "Adi-authorized Oct 7: unsourced hero figure rendered qualitatively (CLAUDE.md: no uncited hero numbers)"
+      },
+      {
+        "slide": 4,
+        "field": "citation",
+        "from": "Household leftover-waste estimate; EPA annual food-waste figure",
+        "to": "",
+        "why": "Adi-authorized Oct 7: unsourced hero figure rendered qualitatively (CLAUDE.md: no uncited hero numbers)"
+      },
+      {
+        "slide": 4,
+        "field": "headline",
+        "from": "",
+        "to": "The average household throws away leftover containers every week.",
+        "why": "Adi-authorized Oct 7: unsourced hero figure rendered qualitatively (CLAUDE.md: no uncited hero numbers)"
+      },
+      {
+        "slide": 4,
+        "field": "body",
+        "from": "",
+        "to": "At a few dollars per serving, that adds up every week.",
+        "why": "Adi-authorized Oct 7: unsourced hero figure rendered qualitatively (CLAUDE.md: no uncited hero numbers)"
+      }
+    ]
+  }
 }

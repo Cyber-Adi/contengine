@@ -2,7 +2,7 @@
   "postNumber": 62,
   "title": "Citrus Peels Aren't Trash",
   "pillar": "Waste Hacks",
-  "ctaTier": "Tier 2",
+  "ctaTier": "Tier 0",
   "sendTrigger": "Send this to whoever just juiced a lemon and tossed the rest.",
   "briefSource": "fond_Carousel_Design_Brief_Posts_60-62.md",
   "provenance": "brief",
@@ -130,7 +130,7 @@
         "sendTrigger": "Send this to whoever just juiced a lemon and tossed the rest."
       },
       "threadState": {
-        "progress": 1.0,
+        "progress": 1,
         "label": "Complete",
         "tone": "good"
       }

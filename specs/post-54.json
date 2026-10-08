@@ -2,7 +2,7 @@
   "postNumber": 54,
   "title": "Liquid Gold",
   "pillar": "Waste Hacks",
-  "ctaTier": "Tier 2",
+  "ctaTier": "Tier 0",
   "valueEncapsulated": "Failure Is Data",
   "sendTrigger": "Send this to whoever cooks.",
   "briefSource": "fond_Content_Brief_Posts_54-55-63_and_Kinetic_Reel_56Friday.md",
@@ -136,8 +136,7 @@
       "copy": {
         "headline": "You already paid for these. You have been throwing away the part that was free.",
         "ctaLine": "Track what you have before it becomes something you pour out.",
-        "sendTrigger": "Send this to whoever cooks.",
-        "citation": "Save it before your fridge does the forgetting. Follow for more, something's on the way."
+        "sendTrigger": "Send this to whoever cooks."
       },
       "threadState": {
         "progress": 1,
@@ -205,16 +204,14 @@
         "from": "center",
         "to": "bottom",
         "why": "slides 5 and 6 centre at 0.38 and 0.46 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 6,
+        "field": "citation",
+        "from": "Save it before your fridge does the forgetting. Follow for more, something's on the way.",
+        "to": "",
+        "why": "Adi-authorized Oct 7: ctaTier moved to Tier 0 (majority of feed, gtm.json); field was entirely a setup CTA line, removed with its ctaSwap entry"
       }
     ]
-  },
-  "ctaSwap": [
-    {
-      "slide": 6,
-      "field": "citation",
-      "from": "Join the waitlist, link in bio.",
-      "to": "Save it before your fridge does the forgetting. Follow for more, something's on the way.",
-      "rule": "setup-cta"
-    }
-  ]
+  }
 }

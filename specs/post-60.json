@@ -2,7 +2,7 @@
   "postNumber": 60,
   "title": "The Shrinking Cart, The Same Trash Can",
   "pillar": "The $2913 Problem",
-  "ctaTier": "Tier 2",
+  "ctaTier": "Tier 0",
   "sendTrigger": "Send this to whoever does the groceries.",
   "briefSource": "fond_Carousel_Design_Brief_Posts_60-62.md",
   "provenance": "brief",
@@ -33,7 +33,7 @@
       "declaresLoss": false,
       "swipeLabel": "Swipe",
       "copy": {
-        "headline": "GLP-1 households cut grocery spending 6%. Their food waste percentage didn't move.",
+        "headline": "GLP-1 households cut grocery spending 6%. Their food waste percentage may not have moved.",
         "citation": "Numerator GLP-1 Consumer Spending Tracker (2023-2024); category-level grocery spend decline widely reported across major retailers."
       },
       "threadState": {
@@ -220,6 +220,13 @@
         "from": "stack-list",
         "to": "split-compare",
         "why": "slide 2 copy is sparse in its original layout (fill below 55 percent); lossless layout swap among legal alternatives"
+      },
+      {
+        "slide": 1,
+        "field": "headline",
+        "from": "GLP-1 households cut grocery spending 6%. Their food waste percentage didn't move.",
+        "to": "GLP-1 households cut grocery spending 6%. Their food waste percentage may not have moved.",
+        "why": "Adi-authorized Oct 7: unsourced \"didn't move\" softened to a non-claim"
       }
     ]
   }
