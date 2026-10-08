@@ -384,6 +384,13 @@ t('ctaSwap.to outside ctas.setup FAILS Gate 6', () => {
   const left = { ...sp, slides: [{ ...sp.slides[0], copy: { ...sp.slides[0].copy, body: 'Join the waitlist.' } }] };
   assert(hasCheck(gtmCheck(left, { launch: SETUP }), 'cta-not-live', 'FAIL'), 'leftover waitlist still fails');
 });
+t('waitlist claim inside a list item FAILS Gate 6 (items arrays are slide copy too)', () => {
+  const sp = JSON.parse(swapped(7, 'Join the waitlist - link in bio.'));
+  const inItem = { ...sp, slides: [{ ...sp.slides[0], copy: { ...sp.slides[0].copy, items: ['There is a waitlist.', 'Second item.'] } }] };
+  assert(hasCheck(gtmCheck(inItem, { launch: SETUP }), 'cta-not-live', 'FAIL'), 'waitlist in items[] must fail');
+  const inObj = { ...sp, slides: [{ ...sp.slides[0], copy: { ...sp.slides[0].copy, items: [{ label: 'Our customers love it' }] } }] };
+  assert(hasCheck(gtmCheck(inObj, { launch: SETUP }), 'honesty', 'FAIL'), 'traction claim in an item object must fail');
+});
 
 console.log(`\n  ${pass} passed, ${fail} failed\n`);
 process.exit(fail ? 1 : 0);

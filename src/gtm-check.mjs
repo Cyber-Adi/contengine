@@ -19,10 +19,14 @@ export function gtmCheck(spec, opts = {}) {
   // real shape rather than a guessed one - guessing the shape is what made the word-count
   // gate measure a 55-word paragraph as 16 words.
   const diagramText = (d) => !d ? [] : JSON.stringify(d.data || {}).match(/"[^"]{2,}"/g)?.map((x) => x.slice(1, -1)) || [];
+  // Every string in copy counts, including list items (arrays of strings or objects):
+  // reading only top-level strings let a waitlist claim inside items[] pass Gate 6.
+  const strings = (v) => typeof v === 'string' ? [v]
+    : Array.isArray(v) ? v.flatMap(strings)
+    : v && typeof v === 'object' ? Object.values(v).flatMap(strings) : [];
   const allText = (spec.slides || []).map((s, i) => ({
     i: i + 1,
-    text: [...Object.values(s.copy || {}).filter((v) => typeof v === 'string'),
-           ...diagramText(s.diagram)].join(' ')
+    text: [...strings(s.copy || {}), ...diagramText(s.diagram)].join(' ')
   }));
 
   // 6.1 - pre-launch honesty. Hard fail.
