@@ -1,6 +1,6 @@
 post-33 — The FIFO Fridge
 6 slides, in order 01..06   (9:16 set in tiktok/, 6 slides)
-pillar: Store It Right   angle: (unset)   cta: Tier 2
+pillar: Store It Right   angle: (unset)   cta: Tier 0
 qa: PASS   provenance: brief
 
 1. AirDrop this folder to your phone.

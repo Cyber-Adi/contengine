@@ -7,7 +7,7 @@ rendered 8 slides (ig) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees
 
   QA — post 42: Your Grandparents Wasted Almost Nothing
   verdict: PASS   fails=0  warns=10   ocr: skipped
-  typographic normalizer: 15 substitution(s) logged (apostrophe, arrow, spaced-hyphen-to-en-dash)
+  typographic normalizer: 14 substitution(s) logged (apostrophe, arrow, spaced-hyphen-to-en-dash)
     [WARN] G4.3-dominance slide 2: no dominant element at feed scale (largest ink band 8% of height)
     [WARN] G5.4-orphan slide 6: headline ends on an orphan: 'more.'
     [WARN] G5.5-fill slide 8: content occupies 46% of its box — type or diagram could carry more of the frame

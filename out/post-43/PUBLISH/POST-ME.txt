@@ -1,6 +1,6 @@
 post-43 — Your Fridge Is 5 Degrees Too Warm
 8 slides, in order 01..08   (9:16 set in tiktok/, 8 slides)
-pillar: Store It Right   angle: (unset)   cta: Tier 2
+pillar: Store It Right   angle: (unset)   cta: Tier 0
 qa: PASS   provenance: brief
 
 1. AirDrop this folder to your phone.

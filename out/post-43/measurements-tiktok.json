@@ -1419,12 +1419,6 @@
         "field": "copy.ctaLine",
         "rule": "spaced-hyphen-to-en-dash",
         "count": 1
-      },
-      {
-        "slide": 8,
-        "field": "copy.citation",
-        "rule": "apostrophe",
-        "count": 1
       }
     ],
     "declaresLoss": false,

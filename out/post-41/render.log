@@ -8,7 +8,7 @@ rendered 8 slides (ig) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees
 
   QA — post 41: The Music Is Slowing You Down
   verdict: PASS   fails=0  warns=8   ocr: skipped
-  typographic normalizer: 7 substitution(s) logged (apostrophe, double-quote-close, double-quote-open, spaced-hyphen-to-en-dash)
+  typographic normalizer: 6 substitution(s) logged (apostrophe, double-quote-close, double-quote-open, spaced-hyphen-to-en-dash)
     [WARN] G2.5-ink slide 8: ink ratio 2.4% < 2% — slide reads empty
     [WARN] G5.5-fill slide 7: content occupies 36% of its box — type or diagram could carry more of the frame
     [WARN] G5.5-fill slide 8: content occupies 41% of its box — type or diagram could carry more of the frame

@@ -339,7 +339,7 @@
     "index": 3,
     "archetype": "value",
     "layout": "stack-list",
-    "valign": "bottom",
+    "valign": "center",
     "normalizations": [
       {
         "slide": 3,
@@ -396,7 +396,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 603,
+          "y": 384,
           "w": 991,
           "h": 102
         },
@@ -415,7 +415,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 893,
+          "y": 673,
           "w": 200,
           "h": 112
         },
@@ -434,7 +434,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1290,
+          "y": 1070,
           "w": 200,
           "h": 112
         },
@@ -453,7 +453,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1688,
+          "y": 1468,
           "w": 200,
           "h": 112
         },
@@ -472,7 +472,7 @@
         "surface": null,
         "box": {
           "x": 349,
-          "y": 1638,
+          "y": 1418,
           "w": 963,
           "h": 211
         },
@@ -536,12 +536,12 @@
   {
     "index": 4,
     "archetype": "value",
-    "layout": "hero-number",
-    "valign": "top",
+    "layout": "hero-statement",
+    "valign": "bottom",
     "normalizations": [
       {
         "slide": 4,
-        "field": "copy.heroNumberCaption",
+        "field": "copy.headline",
         "rule": "apostrophe",
         "count": 1
       }
@@ -555,63 +555,58 @@
     },
     "overflow": [],
     "marginViolations": [],
-    "numeralFonts": [
-      {
-        "cls": "hero-cap",
-        "text": "The effective price increase on a bag of chips isn’t 0%. The",
-        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif"
-      }
-    ],
+    "numeralFonts": [],
     "accents": [
       "rgb(245, 242, 236)",
-      "rgb(107, 114, 128)",
       "rgb(0, 0, 0)",
-      "rgb(214, 69, 65)"
+      "rgb(214, 69, 65)",
+      "rgb(107, 114, 128)"
     ],
     "textBoxes": [
       {
-        "cls": "hero-cap",
+        "cls": "h-hook",
         "svg": false,
-        "text": "The effective price increase on a bag of chips isn’t 0%. They just hid it in the",
-        "words": 23,
-        "chars": 116,
+        "text": "The effective price increase on a bag of chips isn’t zero.",
+        "words": 11,
+        "chars": 58,
         "color": "rgb(245, 242, 236)",
-        "size": 80,
-        "weight": 500,
-        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "size": 128,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
         "surface": null,
         "box": {
           "x": 128,
-          "y": 512,
-          "w": 1049,
-          "h": 504
+          "y": 1375,
+          "w": 1115,
+          "h": 395
         },
         "lines": [
-          "The effective price increase on",
-          "a bag of chips isn’t",
-          "0%. They just hid it",
-          "in the packaging instead of",
-          "the price tag."
+          "The effective price increase",
+          "on a bag of",
+          "chips isn’t zero."
         ]
       },
       {
-        "cls": "cite",
+        "cls": "body",
         "svg": false,
-        "text": "Documented shrinkflation cases, 2023-2025 consumer reporting",
-        "words": 6,
-        "chars": 60,
-        "color": "rgb(107, 114, 128)",
-        "size": 32,
+        "text": "They just hid it in the packaging instead of the price tag.",
+        "words": 12,
+        "chars": 59,
+        "color": "rgb(245, 242, 236)",
+        "size": 53.33,
         "weight": 400,
         "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1056,
-          "w": 1184,
-          "h": 43
+          "y": 1797,
+          "w": 803,
+          "h": 147
         },
-        "lines": null
+        "lines": [
+          "They just hid it in the",
+          "packaging instead of the price tag."
+        ]
       },
       {
         "cls": "handle",
@@ -668,7 +663,7 @@
     "index": 5,
     "archetype": "value",
     "layout": "split-compare",
-    "valign": "bottom",
+    "valign": "center",
     "normalizations": [
       {
         "slide": 5,
@@ -713,7 +708,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 747,
+          "y": 456,
           "w": 991,
           "h": 204
         },
@@ -735,7 +730,7 @@
         "surface": null,
         "box": {
           "x": 177,
-          "y": 1051,
+          "y": 759,
           "w": 475,
           "h": 187
         },
@@ -754,7 +749,7 @@
         "surface": null,
         "box": {
           "x": 177,
-          "y": 1275,
+          "y": 983,
           "w": 475,
           "h": 143
         },
@@ -776,7 +771,7 @@
         "surface": null,
         "box": {
           "x": 788,
-          "y": 1051,
+          "y": 759,
           "w": 475,
           "h": 187
         },
@@ -795,7 +790,7 @@
         "surface": null,
         "box": {
           "x": 788,
-          "y": 1275,
+          "y": 983,
           "w": 475,
           "h": 143
         },
@@ -817,7 +812,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1724,
+          "y": 1432,
           "w": 803,
           "h": 221
         },
@@ -881,8 +876,8 @@
   {
     "index": 6,
     "archetype": "value",
-    "layout": "hero-number",
-    "valign": "top",
+    "layout": "hero-statement",
+    "valign": "bottom",
     "normalizations": [
       {
         "slide": 6,
@@ -892,9 +887,15 @@
       },
       {
         "slide": 6,
-        "field": "copy.heroNumberCaption",
+        "field": "copy.headline",
         "rule": "apostrophe",
-        "count": 2
+        "count": 1
+      },
+      {
+        "slide": 6,
+        "field": "copy.body",
+        "rule": "apostrophe",
+        "count": 1
       }
     ],
     "declaresLoss": false,
@@ -927,43 +928,42 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 224,
+          "y": 983,
           "w": 1184,
           "h": 55
         },
         "lines": null
       },
       {
-        "cls": "hero-cap",
+        "cls": "h-hook",
         "svg": false,
-        "text": "Cost per ounce is the number the store doesn’t want you looking at. It’s printed",
-        "words": 23,
-        "chars": 122,
+        "text": "Cost per ounce is the number the store doesn’t want you looking at.",
+        "words": 13,
+        "chars": 67,
         "color": "rgb(20, 22, 26)",
-        "size": 80,
-        "weight": 500,
-        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "size": 128,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
         "surface": null,
         "box": {
           "x": 128,
-          "y": 716,
-          "w": 1049,
-          "h": 504
+          "y": 1080,
+          "w": 1115,
+          "h": 527
         },
         "lines": [
-          "Cost per ounce is the",
-          "number the store doesn’t want",
-          "you looking at. It’s printed",
-          "on the shelf tag, smaller",
-          "than the price."
+          "Cost per ounce is",
+          "the number the store",
+          "doesn’t want you looking",
+          "at."
         ]
       },
       {
         "cls": "body",
         "svg": false,
-        "text": "Check that number, not the sticker price.",
-        "words": 7,
-        "chars": 41,
+        "text": "It’s printed on the shelf tag, smaller than the price. Check that number, not th",
+        "words": 17,
+        "chars": 96,
         "color": "rgb(20, 22, 26)",
         "size": 53.33,
         "weight": 400,
@@ -971,13 +971,15 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1307,
+          "y": 1650,
           "w": 803,
-          "h": 147
+          "h": 294
         },
         "lines": [
-          "Check that number, not",
-          "the sticker price."
+          "It’s printed on the shelf",
+          "tag, smaller than the price.",
+          "Check that number, not the",
+          "sticker price."
         ]
       },
       {
@@ -1035,17 +1037,11 @@
     "index": 7,
     "archetype": "cta",
     "layout": "cta-card",
-    "valign": "center",
+    "valign": "top",
     "normalizations": [
       {
         "slide": 7,
         "field": "copy.headline",
-        "rule": "apostrophe",
-        "count": 1
-      },
-      {
-        "slide": 7,
-        "field": "copy.citation",
         "rule": "apostrophe",
         "count": 1
       }
@@ -1079,7 +1075,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 901,
+          "y": 224,
           "w": 1184,
           "h": 76
         },
@@ -1098,7 +1094,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1007,
+          "y": 329,
           "w": 722,
           "h": 260
         },
@@ -1121,7 +1117,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1296,
+          "y": 618,
           "w": 883,
           "h": 143
         },
@@ -1143,7 +1139,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1468,
+          "y": 791,
           "w": 657,
           "h": 107
         },
@@ -1165,7 +1161,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1605,
+          "y": 927,
           "w": 1184,
           "h": 70
         },

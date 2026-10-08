@@ -4,14 +4,7 @@
     "archetype": "hook",
     "layout": "hero-statement",
     "valign": "bottom",
-    "normalizations": [
-      {
-        "slide": 1,
-        "field": "copy.headline",
-        "rule": "apostrophe",
-        "count": 1
-      }
-    ],
+    "normalizations": [],
     "declaresLoss": false,
     "background": "dark",
     "fontStatus": {
@@ -38,19 +31,19 @@
       {
         "cls": "h-hook",
         "svg": false,
-        "text": "GLP-1 households cut grocery spending 6%. Their food waste percentage didn’t mov",
-        "words": 12,
-        "chars": 82,
+        "text": "GLP-1 households cut grocery spending 6%. Their food waste percentage may not ha",
+        "words": 14,
+        "chars": 89,
         "color": "rgb(245, 242, 236)",
-        "size": 165.333,
+        "size": 160.373,
         "weight": 700,
         "family": "\"Playfair Display\", Georgia, serif",
         "surface": null,
         "box": {
           "x": 128,
-          "y": 401,
+          "y": 443,
           "w": 1184,
-          "h": 1362
+          "h": 1321
         },
         "lines": [
           "GLP-1 households",
@@ -58,8 +51,8 @@
           "spending 6%.",
           "Their food",
           "waste percentage",
-          "didn’t move.",
-          "",
+          "may not",
+          "have moved.",
           ""
         ]
       },
@@ -76,7 +69,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1806,
+          "y": 1807,
           "w": 1184,
           "h": 86
         },

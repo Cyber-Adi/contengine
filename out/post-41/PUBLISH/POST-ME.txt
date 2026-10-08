@@ -1,6 +1,6 @@
 post-41 — The Music Is Slowing You Down
 8 slides, in order 01..08   (9:16 set in tiktok/, 8 slides)
-pillar: Supermarket Secrets   angle: (unset)   cta: Tier 2
+pillar: Supermarket Secrets   angle: (unset)   cta: Tier 0
 qa: PASS   provenance: brief
 
 1. AirDrop this folder to your phone.

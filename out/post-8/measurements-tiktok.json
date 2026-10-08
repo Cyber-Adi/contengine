@@ -1028,14 +1028,7 @@
     "archetype": "cta",
     "layout": "cta-card",
     "valign": "top",
-    "normalizations": [
-      {
-        "slide": 7,
-        "field": "copy.ctaLine",
-        "rule": "apostrophe",
-        "count": 1
-      }
-    ],
+    "normalizations": [],
     "declaresLoss": false,
     "background": "dark",
     "fontStatus": {
@@ -1084,7 +1077,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 329,
+          "y": 324,
           "w": 722,
           "h": 260
         },
@@ -1092,29 +1085,6 @@
           "We built an app",
           "that tracks all of",
           "this automatically."
-        ]
-      },
-      {
-        "cls": "cta-line",
-        "svg": false,
-        "text": "Save this for your next grocery run. Follow for more, something’s coming.",
-        "words": 12,
-        "chars": 73,
-        "color": "rgb(245, 242, 236)",
-        "size": 53.33,
-        "weight": 500,
-        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
-        "surface": null,
-        "box": {
-          "x": 128,
-          "y": 618,
-          "w": 883,
-          "h": 214
-        },
-        "lines": [
-          "Save this for your",
-          "next grocery run. Follow",
-          "for more, something’s coming."
         ]
       },
       {
@@ -1130,7 +1100,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 862,
+          "y": 608,
           "w": 1184,
           "h": 70
         },

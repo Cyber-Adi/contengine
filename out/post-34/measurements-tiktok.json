@@ -1048,16 +1048,9 @@
   {
     "index": 5,
     "archetype": "value",
-    "layout": "hero-number",
+    "layout": "hero-statement",
     "valign": "bottom",
-    "normalizations": [
-      {
-        "slide": 5,
-        "field": "copy.heroNumberCaption",
-        "rule": "spaced-hyphen-to-en-dash",
-        "count": 1
-      }
-    ],
+    "normalizations": [],
     "declaresLoss": false,
     "background": "dark",
     "fontStatus": {
@@ -1069,16 +1062,16 @@
     "marginViolations": [],
     "numeralFonts": [
       {
-        "cls": "hero-cap",
-        "text": "less food waste – $1,165 saved per year, for 10 minutes on S",
-        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif"
+        "cls": "h-hook",
+        "text": "Less food waste and money saved every year, for 10 minutes o",
+        "family": "\"Playfair Display\", Georgia, serif"
       }
     ],
     "accents": [
       "rgb(74, 123, 166)",
       "rgb(245, 242, 236)",
-      "rgb(107, 114, 128)",
-      "rgb(0, 0, 0)"
+      "rgb(0, 0, 0)",
+      "rgb(107, 114, 128)"
     ],
     "textBoxes": [
       {
@@ -1094,55 +1087,35 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1068,
+          "y": 1188,
           "w": 1184,
           "h": 55
         },
         "lines": null
       },
       {
-        "cls": "hero-cap",
+        "cls": "h-hook",
         "svg": false,
-        "text": "less food waste – $1,165 saved per year, for 10 minutes on Sunday.",
+        "text": "Less food waste and money saved every year, for 10 minutes on Sunday.",
         "words": 13,
-        "chars": 66,
+        "chars": 69,
         "color": "rgb(245, 242, 236)",
-        "size": 80,
-        "weight": 500,
-        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "size": 128,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1493,
-          "w": 1049,
-          "h": 302
+          "y": 1285,
+          "w": 1115,
+          "h": 659
         },
         "lines": [
-          "less food waste – $1,165",
-          "saved per year, for 10",
-          "minutes on Sunday."
-        ]
-      },
-      {
-        "cls": "cite",
-        "svg": false,
-        "text": "Weekly fridge-audit waste-reduction estimate; EPA household food-waste figure",
-        "words": 8,
-        "chars": 77,
-        "color": "rgb(107, 114, 128)",
-        "size": 32,
-        "weight": 400,
-        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
-        "surface": null,
-        "box": {
-          "x": 128,
-          "y": 1858,
-          "w": 1184,
-          "h": 86
-        },
-        "lines": [
-          "Weekly fridge-audit waste-reduction estimate;",
-          "EPA household food-waste figure"
+          "Less food waste",
+          "and money saved",
+          "every year, for",
+          "10 minutes on",
+          "Sunday."
         ]
       },
       {
@@ -1226,12 +1199,6 @@
         "field": "copy.headline",
         "rule": "apostrophe",
         "count": 2
-      },
-      {
-        "slide": 6,
-        "field": "copy.citation",
-        "rule": "apostrophe",
-        "count": 1
       }
     ],
     "declaresLoss": false,

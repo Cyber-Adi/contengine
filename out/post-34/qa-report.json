@@ -62,22 +62,10 @@
       "count": 1
     },
     {
-      "slide": 5,
-      "field": "copy.heroNumberCaption",
-      "rule": "spaced-hyphen-to-en-dash",
-      "count": 1
-    },
-    {
       "slide": 6,
       "field": "copy.headline",
       "rule": "apostrophe",
       "count": 2
-    },
-    {
-      "slide": 6,
-      "field": "copy.citation",
-      "rule": "apostrophe",
-      "count": 1
     }
   ],
   "findings": [
@@ -92,6 +80,18 @@
       "level": "WARN",
       "slide": 4,
       "msg": "content occupies 47% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 5,
+      "msg": "content occupies 53% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.4-orphan",
+      "level": "WARN",
+      "slide": 5,
+      "msg": "headline ends on an orphan: 'Sunday.'"
     },
     {
       "gate": "G5.7-rhythm-centroid",
@@ -110,18 +110,6 @@
       "level": "WARN",
       "slide": 4,
       "msg": "slides 3 and 4 centre at 39% and 37% of frame height, 2% apart (need 12%)"
-    },
-    {
-      "gate": "G5.7-rhythm-centroid",
-      "level": "WARN",
-      "slide": 5,
-      "msg": "slides 4 and 5 centre at 37% and 45% of frame height, 8% apart (need 12%)"
-    },
-    {
-      "gate": "G5.7-rhythm-centroid",
-      "level": "WARN",
-      "slide": 6,
-      "msg": "slides 5 and 6 centre at 45% and 34% of frame height, 11% apart (need 12%)"
     }
   ]
 }

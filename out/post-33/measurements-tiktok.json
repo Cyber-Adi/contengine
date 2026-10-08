@@ -399,7 +399,7 @@
     "index": 3,
     "archetype": "value",
     "layout": "stack-list",
-    "valign": "bottom",
+    "valign": "center",
     "normalizations": [
       {
         "slide": 3,
@@ -444,7 +444,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 502,
+          "y": 333,
           "w": 991,
           "h": 204
         },
@@ -466,7 +466,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 882,
+          "y": 713,
           "w": 200,
           "h": 112
         },
@@ -485,7 +485,7 @@
         "surface": null,
         "box": {
           "x": 349,
-          "y": 903,
+          "y": 734,
           "w": 963,
           "h": 70
         },
@@ -504,7 +504,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1258,
+          "y": 1089,
           "w": 200,
           "h": 112
         },
@@ -523,7 +523,7 @@
         "surface": null,
         "box": {
           "x": 349,
-          "y": 1279,
+          "y": 1110,
           "w": 963,
           "h": 70
         },
@@ -542,7 +542,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1634,
+          "y": 1465,
           "w": 200,
           "h": 112
         },
@@ -561,7 +561,7 @@
         "surface": null,
         "box": {
           "x": 349,
-          "y": 1654,
+          "y": 1485,
           "w": 963,
           "h": 70
         },
@@ -580,7 +580,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1922,
+          "y": 1753,
           "w": 803,
           "h": 74
         },
@@ -659,19 +659,13 @@
   {
     "index": 4,
     "archetype": "value",
-    "layout": "hero-number",
-    "valign": "top",
+    "layout": "hero-statement",
+    "valign": "bottom",
     "normalizations": [
       {
         "slide": 4,
-        "field": "copy.heroNumberCaption",
+        "field": "copy.body",
         "rule": "spaced-hyphen-to-en-dash",
-        "count": 1
-      },
-      {
-        "slide": 4,
-        "field": "copy.heroNumberCaption",
-        "rule": "apostrophe",
         "count": 1
       }
     ],
@@ -684,66 +678,59 @@
     },
     "overflow": [],
     "marginViolations": [],
-    "numeralFonts": [
-      {
-        "cls": "hero-cap",
-        "text": "Restaurants use FIFO to cut food waste by 20-30%. Applied to",
-        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif"
-      }
-    ],
+    "numeralFonts": [],
     "accents": [
       "rgb(245, 242, 236)",
-      "rgb(107, 114, 128)",
       "rgb(0, 0, 0)",
-      "rgb(74, 123, 166)"
+      "rgb(74, 123, 166)",
+      "rgb(107, 114, 128)"
     ],
     "textBoxes": [
       {
-        "cls": "hero-cap",
+        "cls": "h-hook",
         "svg": false,
-        "text": "Restaurants use FIFO to cut food waste by 20-30%. Applied to a home kitchen, tha",
-        "words": 27,
-        "chars": 148,
+        "text": "Restaurants use FIFO to cut food waste.",
+        "words": 7,
+        "chars": 39,
         "color": "rgb(245, 242, 236)",
-        "size": 80,
-        "weight": 500,
-        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "size": 128,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
         "surface": null,
         "box": {
           "x": 128,
-          "y": 445,
-          "w": 1049,
-          "h": 605
+          "y": 1263,
+          "w": 1115,
+          "h": 395
         },
         "lines": [
-          "Restaurants use FIFO to cut",
-          "food waste by 20-30%. Applied",
-          "to a home kitchen, that’s",
-          "the annual savings – from",
-          "30 seconds of effort per",
-          "grocery trip."
+          "Restaurants use FIFO",
+          "to cut food",
+          "waste."
         ]
       },
       {
-        "cls": "cite",
+        "cls": "body",
         "svg": false,
-        "text": "Foodservice FIFO waste-reduction benchmarks, applied to average household spend",
-        "words": 9,
-        "chars": 79,
-        "color": "rgb(107, 114, 128)",
-        "size": 32,
+        "text": "Applied to a home kitchen, it saves money every year – from 30 seconds of effort",
+        "words": 19,
+        "chars": 98,
+        "color": "rgb(245, 242, 236)",
+        "size": 53.33,
         "weight": 400,
         "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1104,
-          "w": 1184,
-          "h": 86
+          "y": 1701,
+          "w": 803,
+          "h": 294
         },
         "lines": [
-          "Foodservice FIFO waste-reduction benchmarks, applied",
-          "to average household spend"
+          "Applied to a home kitchen,",
+          "it saves money every year",
+          "– from 30 seconds of",
+          "effort per grocery trip."
         ]
       },
       {
@@ -820,7 +807,7 @@
     "index": 5,
     "archetype": "value",
     "layout": "split-compare",
-    "valign": "bottom",
+    "valign": "center",
     "normalizations": [
       {
         "slide": 5,
@@ -877,7 +864,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 445,
+          "y": 304,
           "w": 991,
           "h": 204
         },
@@ -899,7 +886,7 @@
         "surface": null,
         "box": {
           "x": 177,
-          "y": 748,
+          "y": 608,
           "w": 475,
           "h": 187
         },
@@ -918,7 +905,7 @@
         "surface": null,
         "box": {
           "x": 177,
-          "y": 1795,
+          "y": 1655,
           "w": 475,
           "h": 143
         },
@@ -940,7 +927,7 @@
         "surface": null,
         "box": {
           "x": 788,
-          "y": 748,
+          "y": 608,
           "w": 475,
           "h": 187
         },
@@ -959,7 +946,7 @@
         "surface": null,
         "box": {
           "x": 788,
-          "y": 1510,
+          "y": 1369,
           "w": 475,
           "h": 429
         },
@@ -1058,12 +1045,6 @@
         "slide": 6,
         "field": "copy.ctaLine",
         "rule": "spaced-hyphen-to-en-dash",
-        "count": 1
-      },
-      {
-        "slide": 6,
-        "field": "copy.citation",
-        "rule": "apostrophe",
         "count": 1
       }
     ],

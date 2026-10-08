@@ -1204,7 +1204,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1301,
+          "y": 1372,
           "w": 1184,
           "h": 76
         },
@@ -1223,7 +1223,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1406,
+          "y": 1478,
           "w": 722,
           "h": 520
         },
@@ -1239,9 +1239,9 @@
       {
         "cls": "cta-line",
         "svg": false,
-        "text": "fond tracks your kitchen — not your behavior. No ads. No data selling. Save it b",
-        "words": 28,
-        "chars": 159,
+        "text": "fond tracks your kitchen — not your behavior. Save it before your fridge does th",
+        "words": 23,
+        "chars": 134,
         "color": "rgb(245, 242, 236)",
         "size": 53.33,
         "weight": 500,
@@ -1249,16 +1249,15 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1955,
+          "y": 2027,
           "w": 883,
-          "h": 357
+          "h": 286
         },
         "lines": [
           "fond tracks your kitchen — not",
-          "your behavior. No ads. No data",
-          "selling. Save it before your fridge",
-          "does the forgetting. Follow for more,",
-          "something’s on the way."
+          "your behavior. Save it before your",
+          "fridge does the forgetting. Follow for",
+          "more, something’s on the way."
         ]
       },
       {

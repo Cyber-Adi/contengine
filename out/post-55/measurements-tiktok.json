@@ -1213,14 +1213,7 @@
     "archetype": "cta",
     "layout": "cta-card",
     "valign": "bottom",
-    "normalizations": [
-      {
-        "slide": 8,
-        "field": "copy.citation",
-        "rule": "apostrophe",
-        "count": 1
-      }
-    ],
+    "normalizations": [],
     "declaresLoss": false,
     "background": "dark",
     "fontStatus": {

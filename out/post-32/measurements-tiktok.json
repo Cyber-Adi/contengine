@@ -1455,12 +1455,6 @@
         "field": "copy.headline",
         "rule": "apostrophe",
         "count": 1
-      },
-      {
-        "slide": 7,
-        "field": "copy.citation",
-        "rule": "apostrophe",
-        "count": 1
       }
     ],
     "declaresLoss": false,

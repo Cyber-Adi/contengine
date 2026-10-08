@@ -8,7 +8,6 @@ rendered 8 slides (ig) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees
 
   QA — post 55: The Misting Machine
   verdict: PASS   fails=0  warns=6   ocr: skipped
-  typographic normalizer: 1 substitution(s) logged (apostrophe)
     [WARN] G5.5-fill slide 4: content occupies 44% of its box — type or diagram could carry more of the frame
     [WARN] G5.5-fill slide 8: content occupies 51% of its box — type or diagram could carry more of the frame
     [WARN] G5.2-balance slide 8: ink centre of mass at 63% of height — bottom-heavy

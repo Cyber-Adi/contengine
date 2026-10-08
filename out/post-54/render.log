@@ -8,7 +8,6 @@ rendered 6 slides (ig) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees
 
   QA — post 54: Liquid Gold
   verdict: PASS   fails=0  warns=5   ocr: skipped
-  typographic normalizer: 1 substitution(s) logged (apostrophe)
     [WARN] G5.5-fill slide 6: content occupies 48% of its box — type or diagram could carry more of the frame
     [WARN] G5.2-balance slide 6: ink centre of mass at 66% of height — bottom-heavy
     [WARN] G5.7-rhythm-centroid slide 2: slides 1 and 2 centre at 41% and 31% of frame height, 10% apart (need 12%)

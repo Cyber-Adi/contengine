@@ -3,7 +3,7 @@
     "index": 1,
     "archetype": "hook",
     "layout": "split-compare",
-    "valign": "center",
+    "valign": "bottom",
     "normalizations": [],
     "declaresLoss": true,
     "background": "dark",
@@ -46,7 +46,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 485,
+          "y": 807,
           "w": 1184,
           "h": 407
         },
@@ -69,7 +69,7 @@
         "surface": null,
         "box": {
           "x": 177,
-          "y": 992,
+          "y": 1314,
           "w": 475,
           "h": 187
         },
@@ -88,7 +88,7 @@
         "surface": null,
         "box": {
           "x": 177,
-          "y": 1216,
+          "y": 1538,
           "w": 475,
           "h": 143
         },
@@ -110,7 +110,7 @@
         "surface": null,
         "box": {
           "x": 788,
-          "y": 992,
+          "y": 1314,
           "w": 475,
           "h": 187
         },
@@ -129,7 +129,7 @@
         "surface": null,
         "box": {
           "x": 788,
-          "y": 1216,
+          "y": 1538,
           "w": 475,
           "h": 143
         },
@@ -151,7 +151,7 @@
         "surface": null,
         "box": {
           "x": 253,
-          "y": 1677,
+          "y": 1998,
           "w": 97,
           "h": 52
         },
@@ -231,7 +231,7 @@
     "index": 2,
     "archetype": "backupHook",
     "layout": "statement-xl",
-    "valign": "bottom",
+    "valign": "top",
     "normalizations": [
       {
         "slide": 2,
@@ -282,7 +282,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 767,
+          "y": 224,
           "w": 1184,
           "h": 914
         },
@@ -306,7 +306,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1724,
+          "y": 1181,
           "w": 803,
           "h": 221
         },
@@ -389,24 +389,18 @@
   {
     "index": 3,
     "archetype": "value",
-    "layout": "hero-number",
-    "valign": "top",
+    "layout": "hero-statement",
+    "valign": "bottom",
     "normalizations": [
       {
         "slide": 3,
-        "field": "copy.heroNumberCaption",
+        "field": "copy.body",
         "rule": "spaced-hyphen-to-en-dash",
         "count": 1
       },
       {
         "slide": 3,
-        "field": "copy.heroNumberCaption",
-        "rule": "apostrophe",
-        "count": 1
-      },
-      {
-        "slide": 3,
-        "field": "copy.citation",
+        "field": "copy.body",
         "rule": "apostrophe",
         "count": 1
       }
@@ -419,103 +413,65 @@
       "grotesk": true
     },
     "overflow": [],
-    "marginViolations": [
-      {
-        "cls": "",
-        "l": 128,
-        "r": 1399,
-        "t": 224,
-        "b": 396
-      },
-      {
-        "cls": "unit",
-        "l": 1131,
-        "r": 1399,
-        "t": 260,
-        "b": 408
-      }
-    ],
+    "marginViolations": [],
     "numeralFonts": [
       {
-        "cls": "hero-cap",
-        "text": "Children under 12 waste an estimated 30-40% of the food serv",
-        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif"
+        "cls": "h-hook",
+        "text": "Children under 12 waste food served to them.",
+        "family": "\"Playfair Display\", Georgia, serif"
       }
     ],
     "accents": [
       "rgb(20, 22, 26)",
+      "rgb(0, 0, 0)",
       "rgb(214, 69, 65)",
-      "rgb(107, 114, 128)",
-      "rgb(0, 0, 0)"
+      "rgb(107, 114, 128)"
     ],
     "textBoxes": [
       {
-        "cls": "unit",
+        "cls": "h-hook",
         "svg": false,
-        "text": "/year",
-        "words": 1,
-        "chars": 5,
-        "color": "rgb(214, 69, 65)",
-        "size": 115.735,
-        "weight": 700,
-        "family": "\"Space Grotesk\", ui-monospace, monospace",
-        "surface": null,
-        "box": {
-          "x": 1131,
-          "y": 260,
-          "w": 268,
-          "h": 148
-        },
-        "lines": null
-      },
-      {
-        "cls": "hero-cap",
-        "svg": false,
-        "text": "Children under 12 waste an estimated 30-40% of the food served to them. For a fa",
-        "words": 35,
-        "chars": 196,
+        "text": "Children under 12 waste food served to them.",
+        "words": 8,
+        "chars": 44,
         "color": "rgb(20, 22, 26)",
-        "size": 80,
-        "weight": 500,
-        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "size": 128,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
         "surface": null,
         "box": {
           "x": 128,
-          "y": 461,
-          "w": 1049,
-          "h": 806
+          "y": 1296,
+          "w": 1115,
+          "h": 395
         },
         "lines": [
-          "Children under 12 waste an",
-          "estimated 30-40% of the food",
-          "served to them. For a",
-          "family with two kids, that’s",
-          "roughly $800-1,100 per year in",
-          "plate waste alone – separate",
-          "from the fridge waste figure.",
-          ""
+          "Children under 12",
+          "waste food served",
+          "to them."
         ]
       },
       {
-        "cls": "cite",
+        "cls": "body",
         "svg": false,
-        "text": "WRAP UK Children’s Food Waste report / Journal of the Academy of Nutrition and D",
-        "words": 15,
-        "chars": 89,
-        "color": "rgb(107, 114, 128)",
-        "size": 32,
+        "text": "For a family with two kids, that’s plate waste alone – separate from the fridge ",
+        "words": 17,
+        "chars": 93,
+        "color": "rgb(20, 22, 26)",
+        "size": 53.33,
         "weight": 400,
         "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1349,
-          "w": 1184,
-          "h": 86
+          "y": 1724,
+          "w": 803,
+          "h": 221
         },
         "lines": [
-          "WRAP UK Children’s Food Waste report / Journal",
-          "of the Academy of Nutrition and Dietetics."
+          "For a family with two kids,",
+          "that’s plate waste alone – separate",
+          "from the fridge waste figure."
         ]
       },
       {
@@ -592,7 +548,7 @@
     "index": 4,
     "archetype": "value",
     "layout": "stack-list",
-    "valign": "bottom",
+    "valign": "center",
     "normalizations": [
       {
         "slide": 4,
@@ -649,7 +605,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1320,
+          "y": 742,
           "w": 991,
           "h": 102
         },
@@ -668,7 +624,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1553,
+          "y": 975,
           "w": 200,
           "h": 112
         },
@@ -687,7 +643,7 @@
         "surface": null,
         "box": {
           "x": 349,
-          "y": 1468,
+          "y": 890,
           "w": 963,
           "h": 282
         },
@@ -711,7 +667,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1791,
+          "y": 1213,
           "w": 200,
           "h": 112
         },
@@ -730,7 +686,7 @@
         "surface": null,
         "box": {
           "x": 349,
-          "y": 1777,
+          "y": 1199,
           "w": 963,
           "h": 141
         },

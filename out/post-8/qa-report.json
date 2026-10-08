@@ -4,7 +4,7 @@
   "provenance": "converted-from-notion-script",
   "verdict": "PASS",
   "fails": 0,
-  "warns": 8,
+  "warns": 9,
   "ocr": "skipped (opt-in: QA_OCR=1 or --ocr, run at batch end)",
   "normalizations": [
     {
@@ -30,15 +30,15 @@
       "field": "copy.headline",
       "rule": "apostrophe",
       "count": 2
-    },
-    {
-      "slide": 7,
-      "field": "copy.ctaLine",
-      "rule": "apostrophe",
-      "count": 1
     }
   ],
   "findings": [
+    {
+      "gate": "G2.5-ink",
+      "level": "WARN",
+      "slide": 7,
+      "msg": "ink ratio 2.0% < 2% \u2014 slide reads empty"
+    },
     {
       "gate": "G5.4-orphan",
       "level": "WARN",
@@ -67,13 +67,13 @@
       "gate": "G5.5-fill",
       "level": "WARN",
       "slide": 7,
-      "msg": "content occupies 42% of its box \u2014 type or diagram could carry more of the frame"
+      "msg": "content occupies 27% of its box \u2014 type or diagram could carry more of the frame"
     },
     {
       "gate": "G5.2-balance",
       "level": "WARN",
       "slide": 7,
-      "msg": "ink centre of mass at 32% of height \u2014 top-heavy"
+      "msg": "ink centre of mass at 28% of height \u2014 top-heavy"
     },
     {
       "gate": "G5.7-rhythm-centroid",

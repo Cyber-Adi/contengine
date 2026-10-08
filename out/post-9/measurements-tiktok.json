@@ -1520,14 +1520,7 @@
     "archetype": "cta",
     "layout": "cta-card",
     "valign": "bottom",
-    "normalizations": [
-      {
-        "slide": 8,
-        "field": "copy.ctaLine",
-        "rule": "apostrophe",
-        "count": 1
-      }
-    ],
+    "normalizations": [],
     "declaresLoss": false,
     "background": "dark",
     "fontStatus": {
@@ -1563,7 +1556,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1515,
+          "y": 1687,
           "w": 1184,
           "h": 76
         },
@@ -1582,7 +1575,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1621,
+          "y": 1793,
           "w": 722,
           "h": 520
         },
@@ -1593,28 +1586,6 @@
           "is about to expire",
           "— and exactly where",
           "to store it."
-        ]
-      },
-      {
-        "cls": "cta-line",
-        "svg": false,
-        "text": "Worth saving. Follow along, we’re building something for exactly this.",
-        "words": 10,
-        "chars": 70,
-        "color": "rgb(245, 242, 236)",
-        "size": 53.33,
-        "weight": 500,
-        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
-        "surface": null,
-        "box": {
-          "x": 128,
-          "y": 2170,
-          "w": 883,
-          "h": 143
-        },
-        "lines": [
-          "Worth saving. Follow along, we’re",
-          "building something for exactly this."
         ]
       },
       {

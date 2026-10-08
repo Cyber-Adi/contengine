@@ -713,16 +713,9 @@
   {
     "index": 4,
     "archetype": "value",
-    "layout": "hero-number",
+    "layout": "hero-statement",
     "valign": "bottom",
-    "normalizations": [
-      {
-        "slide": 4,
-        "field": "copy.heroNumberCaption",
-        "rule": "apostrophe",
-        "count": 1
-      }
-    ],
+    "normalizations": [],
     "declaresLoss": true,
     "background": "dark",
     "fontStatus": {
@@ -734,11 +727,6 @@
     "marginViolations": [],
     "numeralFonts": [
       {
-        "cls": "hero-cap",
-        "text": "The average household throws away 6-8 leftover containers a ",
-        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif"
-      },
-      {
         "cls": "thread-label",
         "text": "4 headstones",
         "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif"
@@ -747,8 +735,8 @@
     "accents": [
       "rgb(214, 69, 65)",
       "rgb(245, 242, 236)",
-      "rgb(107, 114, 128)",
-      "rgb(0, 0, 0)"
+      "rgb(0, 0, 0)",
+      "rgb(107, 114, 128)"
     ],
     "textBoxes": [
       {
@@ -764,74 +752,58 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 934,
+          "y": 972,
           "w": 1184,
           "h": 55
         },
         "lines": null
       },
       {
-        "cls": "unit",
+        "cls": "h-hook",
         "svg": false,
-        "text": "/yr",
-        "words": 1,
-        "chars": 3,
-        "color": "rgb(214, 69, 65)",
-        "size": 118.729,
-        "weight": 700,
-        "family": "\"Space Grotesk\", ui-monospace, monospace",
-        "surface": null,
-        "box": {
-          "x": 1157,
-          "y": 1095,
-          "w": 149,
-          "h": 152
-        },
-        "lines": null
-      },
-      {
-        "cls": "hero-cap",
-        "svg": false,
-        "text": "The average household throws away 6-8 leftover containers a week. At $3-5 per se",
-        "words": 18,
-        "chars": 108,
+        "text": "The average household throws away leftover containers every week.",
+        "words": 9,
+        "chars": 65,
         "color": "rgb(245, 242, 236)",
-        "size": 80,
-        "weight": 500,
-        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "size": 128,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1303,
-          "w": 1049,
-          "h": 504
+          "y": 1070,
+          "w": 1115,
+          "h": 659
         },
         "lines": [
-          "The average household throws",
-          "away 6-8 leftover containers",
-          "a week. At $3-5",
-          "per serving, that’s $18-40",
-          "a week."
+          "The average",
+          "household throws",
+          "away leftover",
+          "containers every",
+          "week."
         ]
       },
       {
-        "cls": "cite",
+        "cls": "body",
         "svg": false,
-        "text": "Household leftover-waste estimate; EPA annual food-waste figure",
-        "words": 7,
-        "chars": 63,
-        "color": "rgb(107, 114, 128)",
-        "size": 32,
+        "text": "At a few dollars per serving, that adds up every week.",
+        "words": 11,
+        "chars": 54,
+        "color": "rgb(245, 242, 236)",
+        "size": 53.33,
         "weight": 400,
         "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1876,
-          "w": 1184,
-          "h": 43
+          "y": 1772,
+          "w": 803,
+          "h": 147
         },
-        "lines": null
+        "lines": [
+          "At a few dollars per serving,",
+          "that adds up every week."
+        ]
       },
       {
         "cls": "thread-label",

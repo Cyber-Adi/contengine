@@ -1080,9 +1080,9 @@
       {
         "cls": "step-t",
         "svg": false,
-        "text": "There is a waitlist, a TestFlight beta coming this summer, and no user numbers I",
-        "words": 19,
-        "chars": 104,
+        "text": "There are no user numbers I can honestly quote you.",
+        "words": 10,
+        "chars": 51,
         "color": "rgb(20, 22, 26)",
         "size": 53.33,
         "weight": 400,
@@ -1090,13 +1090,12 @@
         "surface": null,
         "box": {
           "x": 224,
-          "y": 766,
+          "y": 801,
           "w": 1088,
-          "h": 205
+          "h": 137
         },
         "lines": [
-          "There is a waitlist, a TestFlight beta",
-          "coming this summer, and no user numbers",
+          "There are no user numbers",
           "I can honestly quote you."
         ]
       },
