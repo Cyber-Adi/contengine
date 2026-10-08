@@ -1,0 +1,127 @@
+{
+  "post": 51,
+  "title": "Manager's Special: The Best Deal in the Store Has a 4-Hour Window",
+  "provenance": "brief",
+  "verdict": "PASS",
+  "fails": 0,
+  "warns": 5,
+  "ocr": "skipped (opt-in: QA_OCR=1 or --ocr, run at batch end)",
+  "normalizations": [
+    {
+      "slide": 1,
+      "field": "copy.headline",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 1,
+      "field": "copy.body",
+      "rule": "apostrophe",
+      "count": 2
+    },
+    {
+      "slide": 2,
+      "field": "copy.headline",
+      "rule": "double-quote-open",
+      "count": 1
+    },
+    {
+      "slide": 2,
+      "field": "copy.headline",
+      "rule": "double-quote-close",
+      "count": 1
+    },
+    {
+      "slide": 2,
+      "field": "copy.headline",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 2,
+      "field": "copy.items[0]",
+      "rule": "spaced-hyphen-to-en-dash",
+      "count": 1
+    },
+    {
+      "slide": 3,
+      "field": "copy.items[1]",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 4,
+      "field": "copy.headline",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 5,
+      "field": "copy.items[1]",
+      "rule": "spaced-hyphen-to-en-dash",
+      "count": 1
+    },
+    {
+      "slide": 5,
+      "field": "copy.items[3]",
+      "rule": "apostrophe",
+      "count": 2
+    },
+    {
+      "slide": 5,
+      "field": "copy.items[4]",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 6,
+      "field": "copy.body",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 7,
+      "field": "copy.headline",
+      "rule": "apostrophe",
+      "count": 2
+    },
+    {
+      "slide": 7,
+      "field": "copy.ctaLine",
+      "rule": "apostrophe",
+      "count": 2
+    }
+  ],
+  "findings": [
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 2,
+      "msg": "slides 1 and 2 centre at 40% and 38% of frame height, 2% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 3,
+      "msg": "slides 2 and 3 centre at 38% and 36% of frame height, 1% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 4,
+      "msg": "slides 3 and 4 centre at 36% and 40% of frame height, 4% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 5,
+      "msg": "slides 4 and 5 centre at 40% and 40% of frame height, 0% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 6,
+      "msg": "slides 5 and 6 centre at 40% and 40% of frame height, 0% apart (need 12%)"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "post": 55,
+  "title": "The Misting Machine",
+  "provenance": "brief",
+  "verdict": "PASS",
+  "fails": 0,
+  "warns": 6,
+  "ocr": "skipped (opt-in: QA_OCR=1 or --ocr, run at batch end)",
+  "normalizations": [],
+  "findings": [
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 4,
+      "msg": "content occupies 44% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 8,
+      "msg": "content occupies 51% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.2-balance",
+      "level": "WARN",
+      "slide": 8,
+      "msg": "ink centre of mass at 63% of height \u2014 bottom-heavy"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 3,
+      "msg": "slides 2 and 3 centre at 32% and 35% of frame height, 2% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 6,
+      "msg": "slides 5 and 6 centre at 38% and 38% of frame height, 1% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 7,
+      "msg": "slides 6 and 7 centre at 38% and 35% of frame height, 3% apart (need 12%)"
+    }
+  ]
+}

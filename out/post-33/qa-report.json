@@ -5,6 +5,69 @@
   "verdict": "PASS",
   "fails": 0,
   "warns": 5,
+  "ocr": "skipped (opt-in: QA_OCR=1 or --ocr, run at batch end)",
+  "normalizations": [
+    {
+      "slide": 1,
+      "field": "copy.body",
+      "rule": "spaced-hyphen-to-en-dash",
+      "count": 1
+    },
+    {
+      "slide": 2,
+      "field": "copy.headline",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 3,
+      "field": "copy.body",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 4,
+      "field": "copy.body",
+      "rule": "spaced-hyphen-to-en-dash",
+      "count": 1
+    },
+    {
+      "slide": 5,
+      "field": "copy.headline",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 5,
+      "field": "copy.items[1]",
+      "rule": "double-quote-open",
+      "count": 3
+    },
+    {
+      "slide": 5,
+      "field": "copy.items[1]",
+      "rule": "double-quote-close",
+      "count": 3
+    },
+    {
+      "slide": 5,
+      "field": "copy.items[1]",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 6,
+      "field": "copy.headline",
+      "rule": "apostrophe",
+      "count": 2
+    },
+    {
+      "slide": 6,
+      "field": "copy.ctaLine",
+      "rule": "spaced-hyphen-to-en-dash",
+      "count": 1
+    }
+  ],
   "findings": [
     {
       "gate": "G5.4-orphan",
@@ -15,26 +78,26 @@
     {
       "gate": "G5.5-fill",
       "level": "WARN",
-      "slide": 2,
-      "msg": "content occupies 49% of its box \u2014 type or diagram could carry more of the frame"
+      "slide": 4,
+      "msg": "content occupies 50% of its box \u2014 type or diagram could carry more of the frame"
     },
     {
-      "gate": "G5.5-fill",
-      "level": "WARN",
-      "slide": 3,
-      "msg": "content occupies 41% of its box \u2014 type or diagram could carry more of the frame"
-    },
-    {
-      "gate": "G5.5-fill",
+      "gate": "G5.4-orphan",
       "level": "WARN",
       "slide": 4,
-      "msg": "content occupies 39% of its box \u2014 type or diagram could carry more of the frame"
+      "msg": "headline ends on an orphan: 'waste.'"
     },
     {
-      "gate": "G5.5-fill",
+      "gate": "G5.7-rhythm-centroid",
       "level": "WARN",
-      "slide": 5,
-      "msg": "content occupies 45% of its box \u2014 type or diagram could carry more of the frame"
+      "slide": 2,
+      "msg": "slides 1 and 2 centre at 37% and 35% of frame height, 2% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 3,
+      "msg": "slides 2 and 3 centre at 35% and 36% of frame height, 1% apart (need 12%)"
     }
   ]
 }

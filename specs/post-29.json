@@ -1,0 +1,126 @@
+{
+  "postNumber": 29,
+  "title": "Your Overripe Bananas Are Worth $8",
+  "pillar": "Waste Hacks",
+  "ctaTier": "Tier 2",
+  "briefSource": "Notion: Carousel & Reel Scripts — Posts 18–30",
+  "provenance": "converted-from-notion-script",
+  "gtmAngle": "money-leak",
+  "editorialNotes": [
+    "PantryPal -> fond swap on slide 5.",
+    "Source pillar is \"Cook It Before It's Gone\" (Pillar 5), which is not in the schema pillar enum; mapped to \"Waste Hacks\" (the pillar it alternates with on Sundays). Needs an Adi ruling or an enum addition.",
+    "$8, $6-8 and $9 price figures are body copy, not hero type."
+  ],
+  "thread": {
+    "element": "banana ripening from yellow to brown, then into four uses",
+    "kind": "builder",
+    "startState": "single brown banana",
+    "endState": "four finished uses beside the banana",
+    "zone": "bottom-rail",
+    "heightPct": 12,
+    "palette": [
+      "inkGray",
+      "fondGreen"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "Those brown bananas on your counter are worth $8.",
+        "body": "Stop throwing them away."
+      },
+      "threadState": {
+        "progress": 0.2,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "light",
+      "layout": "split-compare",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Smoothie base.",
+        "items": [
+          "Peel, freeze in a bag. One frozen banana replaces ice AND adds sweetness to any smoothie.",
+          "A bag of 4 frozen bananas lasts a month and saves you from buying smoothie mix ($6–8/bag)."
+        ]
+      },
+      "threadState": {
+        "progress": 0.4,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Pancake binder.",
+        "body": "Mash one banana + 2 eggs + pinch of cinnamon. That's the entire batter. No flour needed. 3-ingredient pancakes in 10 minutes. Kids don't know the difference."
+      },
+      "threadState": {
+        "progress": 0.6,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Oatmeal sweetener.",
+        "items": [
+          "Mash half a banana into your oatmeal instead of sugar, honey, or maple syrup.",
+          "It dissolves into the heat and sweetens naturally.",
+          "You just saved a squeeze of $9 maple syrup."
+        ]
+      },
+      "threadState": {
+        "progress": 0.8,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Ice cream.",
+        "body": "Freeze sliced bananas. Blend frozen. That's it. It's creamy, it's sweet, it's ice cream. No dairy. No sugar. No machine.",
+        "ctaLine": "fond alerts you before bananas go bad — so you freeze them instead of trashing them. Worth saving. Follow along, we're building something for exactly this."
+      },
+      "threadState": {
+        "progress": 1,
+        "tone": "good"
+      }
+    }
+  ],
+  "ctaSwap": [
+    {
+      "slide": 5,
+      "field": "ctaLine",
+      "from": "fond alerts you before bananas go bad — so you freeze them instead of trashing them. Link in bio.",
+      "to": "fond alerts you before bananas go bad — so you freeze them instead of trashing them. Worth saving. Follow along, we're building something for exactly this.",
+      "rule": "setup-cta"
+    }
+  ]
+}

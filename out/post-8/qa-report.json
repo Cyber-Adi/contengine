@@ -1,0 +1,91 @@
+{
+  "post": 8,
+  "title": "The Inflation Multiplier",
+  "provenance": "converted-from-notion-script",
+  "verdict": "PASS",
+  "fails": 0,
+  "warns": 9,
+  "ocr": "skipped (opt-in: QA_OCR=1 or --ocr, run at batch end)",
+  "normalizations": [
+    {
+      "slide": 1,
+      "field": "copy.body",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 2,
+      "field": "copy.items[0]",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 3,
+      "field": "copy.body",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 6,
+      "field": "copy.headline",
+      "rule": "apostrophe",
+      "count": 2
+    }
+  ],
+  "findings": [
+    {
+      "gate": "G2.5-ink",
+      "level": "WARN",
+      "slide": 7,
+      "msg": "ink ratio 2.0% < 2% \u2014 slide reads empty"
+    },
+    {
+      "gate": "G5.4-orphan",
+      "level": "WARN",
+      "slide": 1,
+      "msg": "headline ends on an orphan: '2020.'"
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 4,
+      "msg": "content occupies 40% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 6,
+      "msg": "content occupies 45% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.4-orphan",
+      "level": "WARN",
+      "slide": 6,
+      "msg": "headline ends on an orphan: 'bought.'"
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 7,
+      "msg": "content occupies 27% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.2-balance",
+      "level": "WARN",
+      "slide": 7,
+      "msg": "ink centre of mass at 28% of height \u2014 top-heavy"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 3,
+      "msg": "slides 2 and 3 centre at 36% and 44% of frame height, 8% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 5,
+      "msg": "slides 4 and 5 centre at 32% and 38% of frame height, 6% apart (need 12%)"
+    }
+  ]
+}

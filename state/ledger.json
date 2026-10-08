@@ -1,49 +1,85 @@
 {
-  "updatedAt": "2026-10-01T15:02:07.885Z",
+  "updatedAt": "2026-10-08T01:42:19.545Z",
   "posts": {
     "1": {
       "post": 1,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "The Shelf Is Rigged",
+      "pillar": "Supermarket Secrets",
+      "provenance": "brief",
+      "qaVerdict": "PASS"
     },
     "2": {
       "post": 2,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "The Back-of-Store Trap",
+      "pillar": "Supermarket Secrets",
+      "provenance": "converted-from-notion-script",
+      "qaVerdict": "PASS"
     },
     "3": {
       "post": 3,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "The Bulk-Buy Lie",
+      "pillar": "Supermarket Secrets",
+      "provenance": "converted-from-notion-script",
+      "qaVerdict": "PASS"
     },
     "4": {
       "post": 4,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "10 for $10 Doesn't Mean Buy 10",
+      "pillar": "Supermarket Secrets",
+      "provenance": "converted-from-notion-script",
+      "qaVerdict": "PASS"
     },
     "5": {
       "post": 5,
       "stage": "approved",
-      "title": "$2,913 — The Number",
+      "title": "The Number",
       "pillar": "The $2913 Problem",
-      "provenance": "reconstructed-fixture",
+      "provenance": "brief",
       "qaVerdict": "PASS"
     },
     "6": {
       "post": 6,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "The Expiration Date Is a Suggestion",
+      "pillar": "The $2913 Problem",
+      "provenance": "converted-from-notion-script",
+      "qaVerdict": "PASS"
     },
     "7": {
       "post": 7,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "The Takeout Paradox",
+      "pillar": "The $2913 Problem",
+      "provenance": "converted-from-notion-script",
+      "qaVerdict": "PASS"
     },
     "8": {
       "post": 8,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "The Inflation Multiplier",
+      "pillar": "The $2913 Problem",
+      "provenance": "converted-from-notion-script",
+      "qaVerdict": "PASS"
     },
     "9": {
       "post": 9,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "The Counter vs. Fridge Cheat Sheet",
+      "pillar": "Store It Right",
+      "provenance": "brief",
+      "qaVerdict": "PASS"
     },
     "10": {
       "post": 10,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "The Ethylene Enemies List",
+      "pillar": "Store It Right",
+      "provenance": "converted-from-notion-script",
+      "qaVerdict": "PASS"
     },
     "11": {
       "post": 11,
@@ -55,11 +91,19 @@
     },
     "13": {
       "post": 13,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "Freezer Hacks You Didn't Know Existed",
+      "pillar": "Waste Hacks",
+      "provenance": "converted-from-notion-script",
+      "qaVerdict": "PASS"
     },
     "14": {
       "post": 14,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "Trash Ingredients That Are Actually Worth Money",
+      "pillar": "Waste Hacks",
+      "provenance": "converted-from-notion-script",
+      "qaVerdict": "PASS"
     },
     "15": {
       "post": 15,
@@ -67,7 +111,11 @@
     },
     "16": {
       "post": 16,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "The Sheet Pan Clean-Out",
+      "pillar": "Waste Hacks",
+      "provenance": "converted-from-notion-script",
+      "qaVerdict": "PASS"
     },
     "17": {
       "post": 17,
@@ -75,11 +123,19 @@
     },
     "18": {
       "post": 18,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "\"10 for $10\" Doesn't Mean You Buy 10",
+      "pillar": "Supermarket Secrets",
+      "provenance": "converted-from-notion-script",
+      "qaVerdict": "PASS"
     },
     "19": {
       "post": 19,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "The Takeout Lie",
+      "pillar": "The $2913 Problem",
+      "provenance": "brief",
+      "qaVerdict": "PASS"
     },
     "20": {
       "post": 20,
@@ -91,27 +147,51 @@
     },
     "22": {
       "post": 22,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "The Checkout Lane Is Designed to Break You",
+      "pillar": "Supermarket Secrets",
+      "provenance": "converted-from-notion-script",
+      "qaVerdict": "PASS"
     },
     "23": {
       "post": 23,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "The Bulk Buying Trap",
+      "pillar": "The $2913 Problem",
+      "provenance": "converted-from-notion-script",
+      "qaVerdict": "PASS"
     },
     "24": {
       "post": 24,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "The Ethylene Effect: Why Your Fruit Dies Next to Your Greens",
+      "pillar": "Store It Right",
+      "provenance": "converted-from-notion-script",
+      "qaVerdict": "PASS"
     },
     "25": {
       "post": 25,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "3 Meals From 1 Rotisserie Chicken",
+      "pillar": "Waste Hacks",
+      "provenance": "converted-from-notion-script",
+      "qaVerdict": "PASS"
     },
     "26": {
       "post": 26,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "Your Grocery Store App Is Spying on You",
+      "pillar": "Supermarket Secrets",
+      "provenance": "converted-from-notion-script",
+      "qaVerdict": "PASS"
     },
     "27": {
       "post": 27,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "You're Paying 19% More AND Wasting 30%",
+      "pillar": "The $2913 Problem",
+      "provenance": "converted-from-notion-script",
+      "qaVerdict": "PASS"
     },
     "28": {
       "post": 28,
@@ -119,11 +199,19 @@
     },
     "29": {
       "post": 29,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "Your Overripe Bananas Are Worth $8",
+      "pillar": "Waste Hacks",
+      "provenance": "converted-from-notion-script",
+      "qaVerdict": "PASS"
     },
     "30": {
       "post": 30,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "Origin Story: I'm 17 and I Think Grocery Stores Are Lying to You",
+      "pillar": "Origin Story",
+      "provenance": "converted-from-notion-script",
+      "qaVerdict": "PASS"
     },
     "31": {
       "post": 31,
@@ -175,43 +263,83 @@
     },
     "37": {
       "post": 37,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "The Freezer Is a Time Machine",
+      "pillar": "Store It Right",
+      "provenance": "converted-from-notion-script",
+      "qaVerdict": "PASS"
     },
     "38": {
       "post": 38,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "Vegetable Scrap Broth: The $0 Ingredient",
+      "pillar": "Waste Hacks",
+      "provenance": "converted-from-notion-script",
+      "qaVerdict": "PASS"
     },
     "39": {
       "post": 39,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "The Meal Kit Math",
+      "pillar": "Supermarket Secrets",
+      "provenance": "converted-from-notion-script",
+      "qaVerdict": "PASS"
     },
     "40": {
       "post": 40,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "The $56 Friday",
+      "pillar": "The $2913 Problem",
+      "provenance": "converted-from-notion-script",
+      "qaVerdict": "PASS"
     },
     "41": {
       "post": 41,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "The Music Is Slowing You Down",
+      "pillar": "Supermarket Secrets",
+      "provenance": "brief",
+      "qaVerdict": "PASS"
     },
     "42": {
       "post": 42,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "Your Grandparents Wasted Almost Nothing",
+      "pillar": "The $2913 Problem",
+      "provenance": "brief",
+      "qaVerdict": "PASS"
     },
     "43": {
       "post": 43,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "Your Fridge Is 5 Degrees Too Warm",
+      "pillar": "Store It Right",
+      "provenance": "brief",
+      "qaVerdict": "PASS"
     },
     "44": {
       "post": 44,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "Quick Pickle Anything",
+      "pillar": "Waste Hacks",
+      "provenance": "brief",
+      "qaVerdict": "PASS"
     },
     "45": {
       "post": 45,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "The Color of Fresh Is a Lie",
+      "pillar": "Supermarket Secrets",
+      "provenance": "brief",
+      "qaVerdict": "PASS"
     },
     "46": {
       "post": 46,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "The Kids' Plate Tax",
+      "pillar": "The $2913 Problem",
+      "provenance": "brief",
+      "qaVerdict": "PASS"
     },
     "47": {
       "post": 47,
@@ -235,55 +363,107 @@
     },
     "51": {
       "post": 51,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "Manager's Special: The Best Deal in the Store Has a 4-Hour Window",
+      "pillar": "Supermarket Secrets",
+      "provenance": "brief",
+      "qaVerdict": "PASS"
     },
     "52": {
       "post": 52,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "The Takeout Tax: You Have $40 of Food in Your Fridge. You Ordered Delivery Anyway.",
+      "pillar": "The $2913 Problem",
+      "provenance": "brief",
+      "qaVerdict": "PASS"
     },
     "53": {
       "post": 53,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "Counter vs. Fridge: Stop Refrigerating These 8 Foods",
+      "pillar": "Store It Right",
+      "provenance": "brief",
+      "qaVerdict": "PASS"
     },
     "54": {
       "post": 54,
-      "stage": "gap"
+      "stage": "approved",
+      "title": "Liquid Gold",
+      "pillar": "Waste Hacks",
+      "provenance": "brief",
+      "qaVerdict": "PASS"
     },
     "55": {
       "post": 55,
-      "stage": "gap"
+      "stage": "approved",
+      "title": "The Misting Machine",
+      "pillar": "Supermarket Secrets",
+      "provenance": "brief",
+      "qaVerdict": "PASS"
     },
     "56": {
       "post": 56,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "\"Best By\" Is Not an Expiration Date",
+      "pillar": "The $2913 Problem",
+      "provenance": "brief",
+      "qaVerdict": "PASS"
     },
     "57": {
       "post": 57,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "The Wrong Drawer Is Killing Your Herbs",
+      "pillar": "Store It Right",
+      "provenance": "brief",
+      "qaVerdict": "PASS"
     },
     "58": {
       "post": 58,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "5 Things You Didn't Know You Could Freeze",
+      "pillar": "Waste Hacks",
+      "provenance": "brief",
+      "qaVerdict": "PASS"
     },
     "59": {
       "post": 59,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "Eye-Level Is Buy-Level",
+      "pillar": "Supermarket Secrets",
+      "provenance": "brief",
+      "qaVerdict": "PASS"
     },
     "60": {
       "post": 60,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "The Shrinking Cart, The Same Trash Can",
+      "pillar": "The $2913 Problem",
+      "provenance": "brief",
+      "qaVerdict": "PASS"
     },
     "61": {
       "post": 61,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "The Fridge Map Nobody Reads",
+      "pillar": "Store It Right",
+      "provenance": "brief",
+      "qaVerdict": "PASS"
     },
     "62": {
       "post": 62,
-      "stage": "scripted"
+      "stage": "approved",
+      "title": "Citrus Peels Aren't Trash",
+      "pillar": "Waste Hacks",
+      "provenance": "brief",
+      "qaVerdict": "PASS"
     },
     "63": {
       "post": 63,
-      "stage": "gap"
+      "stage": "approved",
+      "title": "Two Rooms, Same Thursday",
+      "pillar": "Origin Story",
+      "provenance": "brief",
+      "qaVerdict": "PASS"
     },
     "64": {
       "post": 64,

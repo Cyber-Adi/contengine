@@ -1,0 +1,121 @@
+{
+  "post": 4,
+  "title": "10 for $10 Doesn't Mean Buy 10",
+  "provenance": "converted-from-notion-script",
+  "verdict": "PASS",
+  "fails": 0,
+  "warns": 7,
+  "ocr": "skipped (opt-in: QA_OCR=1 or --ocr, run at batch end)",
+  "normalizations": [
+    {
+      "slide": 1,
+      "field": "copy.headline",
+      "rule": "double-quote-open",
+      "count": 1
+    },
+    {
+      "slide": 1,
+      "field": "copy.headline",
+      "rule": "double-quote-close",
+      "count": 1
+    },
+    {
+      "slide": 3,
+      "field": "copy.headline",
+      "rule": "apostrophe",
+      "count": 2
+    },
+    {
+      "slide": 4,
+      "field": "copy.headline",
+      "rule": "double-quote-open",
+      "count": 1
+    },
+    {
+      "slide": 4,
+      "field": "copy.headline",
+      "rule": "double-quote-close",
+      "count": 1
+    },
+    {
+      "slide": 4,
+      "field": "copy.headline",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 4,
+      "field": "copy.items[0]",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 5,
+      "field": "copy.headline",
+      "rule": "double-quote-open",
+      "count": 1
+    },
+    {
+      "slide": 5,
+      "field": "copy.headline",
+      "rule": "double-quote-close",
+      "count": 1
+    },
+    {
+      "slide": 6,
+      "field": "copy.items[0]",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 7,
+      "field": "copy.ctaLine",
+      "rule": "apostrophe",
+      "count": 1
+    }
+  ],
+  "findings": [
+    {
+      "gate": "G5.4-orphan",
+      "level": "WARN",
+      "slide": 1,
+      "msg": "headline ends on an orphan: '10.'"
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 3,
+      "msg": "content occupies 54% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 7,
+      "msg": "content occupies 42% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.2-balance",
+      "level": "WARN",
+      "slide": 7,
+      "msg": "ink centre of mass at 67% of height \u2014 bottom-heavy"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 3,
+      "msg": "slides 2 and 3 centre at 39% and 48% of frame height, 9% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 5,
+      "msg": "slides 4 and 5 centre at 36% and 40% of frame height, 4% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 6,
+      "msg": "slides 5 and 6 centre at 40% and 33% of frame height, 7% apart (need 12%)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+valid: specs/post-25.json
+  gate 6 -> PASS  (0 fail, 0 warn)
+  downsampled 5 slides -> 1440x1800 (Lanczos)
+rendered 5 slides (ig) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-25/slides
+  contact sheet -> out/post-25/contact-sheet.png  (5 slides, 1450x904)
+  feed-scale thumbs -> out/post-25/thumbs.png  (rendered at 200px wide)
+
+  QA — post 25: 3 Meals From 1 Rotisserie Chicken
+  verdict: PASS   fails=0  warns=4   ocr: skipped
+  typographic normalizer: 2 substitution(s) logged (apostrophe)
+    [WARN] G4.3-dominance slide 1: no dominant element at feed scale (largest ink band 9% of height)
+    [WARN] G5.5-fill slide 3: content occupies 51% of its box — type or diagram could carry more of the frame
+    [WARN] G5.5-fill slide 5: content occupies 51% of its box — type or diagram could carry more of the frame
+    [WARN] G5.2-balance slide 5: ink centre of mass at 66% of height — bottom-heavy
+  downsampled 5 slides -> 1440x2560 (Lanczos)
+rendered 5 slides (tiktok) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-25/slides-tiktok
+exported 5 slides + 5 tiktok -> out/post-25/PUBLISH
+caption, alt, tiktok, POST-ME.txt written. Honesty check clean.

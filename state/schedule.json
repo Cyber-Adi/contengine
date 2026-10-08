@@ -1,0 +1,225 @@
+{
+  "$comment": "Slot dates are assigned once and never recomputed. planned = ready to schedule, scheduled = in Meta Planner, published = went out. A planned date in the past is re-slotted forward with a note. Written by tools/ready.mjs and tools/log-post.mjs.",
+  "posts": {
+    "1": {
+      "date": "2026-10-15",
+      "time": "12:30 PM ET",
+      "status": "planned"
+    },
+    "2": {
+      "date": "2026-10-27",
+      "time": "3:00 PM ET",
+      "status": "planned"
+    },
+    "3": {
+      "date": "2026-11-05",
+      "time": "12:30 PM ET",
+      "status": "planned"
+    },
+    "5": {
+      "date": "2026-10-20",
+      "time": "3:00 PM ET",
+      "status": "planned"
+    },
+    "6": {
+      "date": "2026-10-29",
+      "time": "12:30 PM ET",
+      "status": "planned"
+    },
+    "7": {
+      "date": "2026-11-10",
+      "time": "3:00 PM ET",
+      "status": "planned"
+    },
+    "8": {
+      "date": "2026-12-01",
+      "time": "3:00 PM ET",
+      "status": "planned"
+    },
+    "9": {
+      "date": "2026-10-08",
+      "time": "12:30 PM ET",
+      "status": "planned"
+    },
+    "16": {
+      "date": "2026-12-31",
+      "time": "12:30 PM ET",
+      "status": "planned"
+    },
+    "18": {
+      "date": "2026-12-29",
+      "time": "3:00 PM ET",
+      "status": "planned"
+    },
+    "22": {
+      "date": "2026-11-26",
+      "time": "12:30 PM ET",
+      "status": "planned"
+    },
+    "24": {
+      "date": "2027-01-07",
+      "time": "12:30 PM ET",
+      "status": "planned"
+    },
+    "25": {
+      "date": "2026-12-03",
+      "time": "12:30 PM ET",
+      "status": "planned"
+    },
+    "26": {
+      "date": "2026-12-08",
+      "time": "3:00 PM ET",
+      "status": "planned"
+    },
+    "27": {
+      "date": "2027-01-12",
+      "time": "3:00 PM ET",
+      "status": "planned"
+    },
+    "29": {
+      "date": "2027-01-14",
+      "time": "12:30 PM ET",
+      "status": "planned"
+    },
+    "30": {
+      "date": "2027-01-19",
+      "time": "3:00 PM ET",
+      "status": "planned"
+    },
+    "31": {
+      "date": "2027-01-21",
+      "time": "12:30 PM ET",
+      "status": "planned"
+    },
+    "32": {
+      "date": "2027-01-26",
+      "time": "3:00 PM ET",
+      "status": "planned"
+    },
+    "33": {
+      "date": "2026-12-15",
+      "time": "3:00 PM ET",
+      "status": "planned"
+    },
+    "34": {
+      "date": "2026-12-24",
+      "time": "12:30 PM ET",
+      "status": "planned"
+    },
+    "35": {
+      "date": "2027-01-28",
+      "time": "12:30 PM ET",
+      "status": "planned"
+    },
+    "36": {
+      "date": "2027-03-30",
+      "time": "3:00 PM ET",
+      "status": "planned"
+    },
+    "37": {
+      "date": "2027-02-02",
+      "time": "3:00 PM ET",
+      "status": "planned"
+    },
+    "38": {
+      "date": "2027-02-04",
+      "time": "12:30 PM ET",
+      "status": "planned"
+    },
+    "39": {
+      "date": "2027-02-09",
+      "time": "3:00 PM ET",
+      "status": "planned"
+    },
+    "40": {
+      "date": "2027-02-11",
+      "time": "12:30 PM ET",
+      "status": "planned"
+    },
+    "41": {
+      "date": "2027-02-16",
+      "time": "3:00 PM ET",
+      "status": "planned"
+    },
+    "42": {
+      "date": "2027-02-18",
+      "time": "12:30 PM ET",
+      "status": "planned"
+    },
+    "43": {
+      "date": "2026-10-22",
+      "time": "12:30 PM ET",
+      "status": "planned"
+    },
+    "44": {
+      "date": "2026-11-24",
+      "time": "3:00 PM ET",
+      "status": "planned"
+    },
+    "45": {
+      "date": "2027-02-23",
+      "time": "3:00 PM ET",
+      "status": "planned"
+    },
+    "46": {
+      "date": "2027-04-01",
+      "time": "12:30 PM ET",
+      "status": "planned"
+    },
+    "51": {
+      "date": "2027-03-02",
+      "time": "3:00 PM ET",
+      "status": "planned"
+    },
+    "54": {
+      "date": "2027-03-09",
+      "time": "3:00 PM ET",
+      "status": "planned"
+    },
+    "55": {
+      "date": "2027-03-11",
+      "time": "12:30 PM ET",
+      "status": "planned"
+    },
+    "56": {
+      "date": "2027-04-06",
+      "time": "3:00 PM ET",
+      "status": "planned"
+    },
+    "57": {
+      "date": "2026-11-12",
+      "time": "12:30 PM ET",
+      "status": "planned"
+    },
+    "58": {
+      "date": "2026-10-13",
+      "time": "3:00 PM ET",
+      "status": "planned"
+    },
+    "59": {
+      "date": "2027-03-18",
+      "time": "12:30 PM ET",
+      "status": "planned"
+    },
+    "60": {
+      "date": "2027-03-16",
+      "time": "3:00 PM ET",
+      "status": "planned"
+    },
+    "61": {
+      "date": "2026-11-03",
+      "time": "3:00 PM ET",
+      "status": "planned"
+    },
+    "62": {
+      "date": "2027-03-23",
+      "time": "3:00 PM ET",
+      "status": "planned"
+    },
+    "63": {
+      "date": "2027-03-25",
+      "time": "12:30 PM ET",
+      "status": "planned"
+    }
+  }
+}

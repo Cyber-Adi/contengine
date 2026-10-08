@@ -2,7 +2,7 @@
   "postNumber": 31,
   "title": "Shrinkflation Receipt",
   "pillar": "Supermarket Secrets",
-  "ctaTier": "Tier 2",
+  "ctaTier": "Tier 0",
   "sendTrigger": "Send this to whoever does the groceries.",
   "briefSource": "fond_Carousel_Design_Brief_Posts_31-33.md",
   "provenance": "brief",
@@ -17,7 +17,10 @@
     "endState": "full receipt, total stamped \"+8-12% - charged, not shown.\"",
     "zone": "side-rail",
     "heightPct": 14,
-    "palette": ["offWhite", "signalRed"]
+    "palette": [
+      "offWhite",
+      "signalRed"
+    ]
   },
   "slides": [
     {
@@ -32,7 +35,11 @@
         "headline": "The price didn't go up. The box got smaller.",
         "body": "Two products, same shelf, same price. One of them is quietly lying to you."
       },
-      "threadState": { "progress": 0.1, "label": "Line 1", "tone": "neutral" }
+      "threadState": {
+        "progress": 0.1,
+        "label": "Line 1",
+        "tone": "neutral"
+      }
     },
     {
       "index": 2,
@@ -48,7 +55,11 @@
           "Less product inside. The packaging barely changes, so you don't notice."
         ]
       },
-      "threadState": { "progress": 0.25, "label": "Line 2", "tone": "neutral" }
+      "threadState": {
+        "progress": 0.25,
+        "label": "Line 2",
+        "tone": "neutral"
+      }
     },
     {
       "index": 3,
@@ -65,21 +76,28 @@
           "A \"family size\" package of cookies is now the size a regular package used to be."
         ]
       },
-      "threadState": { "progress": 0.4, "label": "Line 3", "tone": "loss" }
+      "threadState": {
+        "progress": 0.4,
+        "label": "Line 3",
+        "tone": "loss"
+      }
     },
     {
       "index": 4,
       "archetype": "value",
       "background": "dark",
-      "layout": "hero-number",
+      "layout": "hero-statement",
       "accent": "signalRed",
       "declaresLoss": true,
       "copy": {
-        "heroNumber": "8-12%",
-        "heroNumberCaption": "The effective price increase on a bag of chips isn't 0%. They just hid it in the packaging instead of the price tag.",
-        "citation": "Documented shrinkflation cases, 2023-2025 consumer reporting"
+        "headline": "The effective price increase on a bag of chips isn't zero.",
+        "body": "They just hid it in the packaging instead of the price tag."
       },
-      "threadState": { "progress": 0.55, "label": "Line 4", "tone": "loss" }
+      "threadState": {
+        "progress": 0.55,
+        "label": "Line 4",
+        "tone": "loss"
+      }
     },
     {
       "index": 5,
@@ -96,22 +114,29 @@
         ],
         "body": "Companies count on this: people notice price increases but not size decreases."
       },
-      "threadState": { "progress": 0.7, "label": "Line 5", "tone": "neutral" }
+      "threadState": {
+        "progress": 0.7,
+        "label": "Line 5",
+        "tone": "neutral"
+      }
     },
     {
       "index": 6,
       "archetype": "value",
       "background": "light",
-      "layout": "hero-number",
+      "layout": "hero-statement",
       "accent": "steelBlue",
       "declaresLoss": false,
       "copy": {
         "eyebrow": "The number that doesn't shrink",
-        "heroNumber": "$0.43/oz",
-        "heroNumberCaption": "Cost per ounce is the number the store doesn't want you looking at. It's printed on the shelf tag, smaller than the price.",
-        "body": "Check that number, not the sticker price."
+        "headline": "Cost per ounce is the number the store doesn't want you looking at.",
+        "body": "It's printed on the shelf tag, smaller than the price. Check that number, not the sticker price."
       },
-      "threadState": { "progress": 0.85, "label": "Line 6", "tone": "neutral" }
+      "threadState": {
+        "progress": 0.85,
+        "label": "Line 6",
+        "tone": "neutral"
+      }
     },
     {
       "index": 7,
@@ -123,10 +148,102 @@
       "copy": {
         "headline": "The price didn't change. Your serving count did.",
         "ctaLine": "fond tracks what you actually get per dollar, not what the box says.",
-        "sendTrigger": "Send this to whoever does the groceries.",
-        "citation": "Join the waitlist - link in bio"
+        "sendTrigger": "Send this to whoever does the groceries."
       },
-      "threadState": { "progress": 1.0, "label": "Line 7", "tone": "loss" }
+      "threadState": {
+        "progress": 1,
+        "label": "Line 7",
+        "tone": "loss"
+      }
     }
-  ]
+  ],
+  "refinement": {
+    "round": 0,
+    "changes": [
+      {
+        "slide": 4,
+        "field": "layout",
+        "from": "hero-number",
+        "to": "hero-statement",
+        "why": "Adi-authorized Oct 7: unsourced hero figure rendered qualitatively (CLAUDE.md: no uncited hero numbers)"
+      },
+      {
+        "slide": 4,
+        "field": "heroNumber",
+        "from": "8-12%",
+        "to": "",
+        "why": "Adi-authorized Oct 7: unsourced hero figure rendered qualitatively (CLAUDE.md: no uncited hero numbers)"
+      },
+      {
+        "slide": 4,
+        "field": "heroNumberCaption",
+        "from": "The effective price increase on a bag of chips isn't 0%. They just hid it in the packaging instead of the price tag.",
+        "to": "",
+        "why": "Adi-authorized Oct 7: unsourced hero figure rendered qualitatively (CLAUDE.md: no uncited hero numbers)"
+      },
+      {
+        "slide": 4,
+        "field": "citation",
+        "from": "Documented shrinkflation cases, 2023-2025 consumer reporting",
+        "to": "",
+        "why": "Adi-authorized Oct 7: unsourced hero figure rendered qualitatively (CLAUDE.md: no uncited hero numbers)"
+      },
+      {
+        "slide": 4,
+        "field": "headline",
+        "from": "",
+        "to": "The effective price increase on a bag of chips isn't zero.",
+        "why": "Adi-authorized Oct 7: unsourced hero figure rendered qualitatively (CLAUDE.md: no uncited hero numbers)"
+      },
+      {
+        "slide": 4,
+        "field": "body",
+        "from": "",
+        "to": "They just hid it in the packaging instead of the price tag.",
+        "why": "Adi-authorized Oct 7: unsourced hero figure rendered qualitatively (CLAUDE.md: no uncited hero numbers)"
+      },
+      {
+        "slide": 6,
+        "field": "layout",
+        "from": "hero-number",
+        "to": "hero-statement",
+        "why": "Adi-authorized Oct 7: unsourced hero figure rendered qualitatively (CLAUDE.md: no uncited hero numbers)"
+      },
+      {
+        "slide": 6,
+        "field": "heroNumber",
+        "from": "$0.43/oz",
+        "to": "",
+        "why": "Adi-authorized Oct 7: unsourced hero figure rendered qualitatively (CLAUDE.md: no uncited hero numbers)"
+      },
+      {
+        "slide": 6,
+        "field": "heroNumberCaption",
+        "from": "Cost per ounce is the number the store doesn't want you looking at. It's printed on the shelf tag, smaller than the price.",
+        "to": "",
+        "why": "Adi-authorized Oct 7: unsourced hero figure rendered qualitatively (CLAUDE.md: no uncited hero numbers)"
+      },
+      {
+        "slide": 6,
+        "field": "body",
+        "from": "Check that number, not the sticker price.",
+        "to": "It's printed on the shelf tag, smaller than the price. Check that number, not the sticker price.",
+        "why": "Adi-authorized Oct 7: unsourced hero figure rendered qualitatively (CLAUDE.md: no uncited hero numbers)"
+      },
+      {
+        "slide": 6,
+        "field": "headline",
+        "from": "",
+        "to": "Cost per ounce is the number the store doesn't want you looking at.",
+        "why": "Adi-authorized Oct 7: unsourced hero figure rendered qualitatively (CLAUDE.md: no uncited hero numbers)"
+      },
+      {
+        "slide": 7,
+        "field": "citation",
+        "from": "Keep this one. Follow for more, we're working on something for this.",
+        "to": "",
+        "why": "Adi-authorized Oct 7: ctaTier moved to Tier 0 (majority of feed, gtm.json); field was entirely a setup CTA line, removed with its ctaSwap entry"
+      }
+    ]
+  }
 }

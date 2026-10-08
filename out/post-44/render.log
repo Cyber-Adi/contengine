@@ -1,0 +1,21 @@
+valid: specs/post-44.json
+  WARN no-angle         No gtmAngle set. Angles: money-leak, date-label-lie, takeout-guilt. Without one this post cannot feed the Ad Bank, whose rule is 90% adaptation and 10% origination.
+  gate 6 -> PASS  (0 fail, 1 warn)
+  downsampled 8 slides -> 1440x1800 (Lanczos)
+rendered 8 slides (ig) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-44/slides
+  contact sheet -> out/post-44/contact-sheet.png  (8 slides, 1450x904)
+  feed-scale thumbs -> out/post-44/thumbs.png  (rendered at 200px wide)
+
+  QA — post 44: Quick Pickle Anything
+  verdict: PASS   fails=0  warns=6   ocr: skipped
+  typographic normalizer: 8 substitution(s) logged (apostrophe, spaced-hyphen-to-en-dash)
+    [WARN] G5.7-rhythm-centroid slide 2: slides 1 and 2 centre at 41% and 44% of frame height, 2% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 4: slides 3 and 4 centre at 31% and 39% of frame height, 8% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 5: slides 4 and 5 centre at 39% and 35% of frame height, 4% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 6: slides 5 and 6 centre at 35% and 37% of frame height, 2% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 7: slides 6 and 7 centre at 37% and 37% of frame height, 0% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 8: slides 7 and 8 centre at 37% and 46% of frame height, 9% apart (need 12%)
+  downsampled 8 slides -> 1440x2560 (Lanczos)
+rendered 8 slides (tiktok) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-44/slides-tiktok
+exported 8 slides + 8 tiktok -> out/post-44/PUBLISH
+caption, alt, tiktok, POST-ME.txt written. Honesty check clean.

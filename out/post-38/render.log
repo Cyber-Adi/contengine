@@ -1,0 +1,19 @@
+valid: specs/post-38.json
+  gate 6 -> PASS  (0 fail, 0 warn)
+  downsampled 6 slides -> 1440x1800 (Lanczos)
+rendered 6 slides (ig) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-38/slides
+  contact sheet -> out/post-38/contact-sheet.png  (6 slides, 1450x904)
+  feed-scale thumbs -> out/post-38/thumbs.png  (rendered at 200px wide)
+
+  QA — post 38: Vegetable Scrap Broth: The $0 Ingredient
+  verdict: PASS   fails=0  warns=5   ocr: skipped
+  typographic normalizer: 4 substitution(s) logged (apostrophe)
+    [WARN] G5.5-fill slide 3: content occupies 53% of its box — type or diagram could carry more of the frame
+    [WARN] G5.5-fill slide 5: content occupies 50% of its box — type or diagram could carry more of the frame
+    [WARN] G5.7-rhythm-centroid slide 3: slides 2 and 3 centre at 32% and 39% of frame height, 7% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 4: slides 3 and 4 centre at 39% and 39% of frame height, 1% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 5: slides 4 and 5 centre at 39% and 49% of frame height, 10% apart (need 12%)
+  downsampled 6 slides -> 1440x2560 (Lanczos)
+rendered 6 slides (tiktok) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-38/slides-tiktok
+exported 6 slides + 6 tiktok -> out/post-38/PUBLISH
+caption, alt, tiktok, POST-ME.txt written. Honesty check clean.

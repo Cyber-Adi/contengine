@@ -1,0 +1,135 @@
+{
+  "postNumber": 16,
+  "title": "The Sheet Pan Clean-Out",
+  "pillar": "Waste Hacks",
+  "ctaTier": "Tier 0",
+  "briefSource": "Notion: Carousel Scripts - Posts 9-16 + Origin Story",
+  "provenance": "converted-from-notion-script",
+  "editorialNotes": [
+    "Notion 5-slide script used: the local 9-16-19 brief is a 4-slide Tier 1 version, below the schema 5-slide minimum, and differs in copy."
+  ],
+  "thread": {
+    "element": "sheet pan filling with vegetables and roasting",
+    "kind": "builder",
+    "startState": "empty pan outline",
+    "endState": "full roasted pan",
+    "zone": "bottom-rail",
+    "heightPct": 12,
+    "palette": [
+      "harvestGold",
+      "inkGray"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "\"There's nothing to eat\" is almost always a lie.",
+        "body": "Here's the technique that proves it."
+      },
+      "threadState": {
+        "progress": 0.2,
+        "label": "Empty pan",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "light",
+      "layout": "split-compare",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Open your fridge.",
+        "items": [
+          "Pull out every vegetable that's about to turn.",
+          "Any combination works: bell peppers, zucchini, broccoli, sweet potato, onion, carrots, mushrooms — literally anything."
+        ]
+      },
+      "threadState": {
+        "progress": 0.4,
+        "label": "Veg in",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "timeline",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Chop it roughly.",
+        "items": [
+          "Toss with olive oil + salt + whatever spices you have.",
+          "Spread on a sheet pan.",
+          "400°F.",
+          "25 minutes.",
+          "Walk away."
+        ]
+      },
+      "threadState": {
+        "progress": 0.6,
+        "label": "Seasoned",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "light",
+      "layout": "split-compare",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Add a protein if you have one:",
+        "items": [
+          "chicken thighs, sausage, tofu, canned chickpeas.",
+          "All of them work. None of them are required."
+        ]
+      },
+      "threadState": {
+        "progress": 0.8,
+        "label": "Protein",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "reframe",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "This technique turns \"I have nothing\" into dinner in 30 minutes.",
+        "body": "The only ingredient is whatever's about to die in your fridge."
+      },
+      "threadState": {
+        "progress": 1,
+        "label": "Roasted",
+        "tone": "good"
+      }
+    }
+  ],
+  "refinement": {
+    "round": 0,
+    "changes": [
+      {
+        "slide": 2,
+        "field": "layout",
+        "from": "stack-list",
+        "to": "split-compare",
+        "why": "slide 2 copy is sparse in its original layout (fill below 55 percent); lossless layout swap among legal alternatives"
+      }
+    ]
+  }
+}

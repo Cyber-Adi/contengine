@@ -1,0 +1,123 @@
+{
+  "postNumber": 13,
+  "title": "Freezer Hacks You Didn't Know Existed",
+  "pillar": "Waste Hacks",
+  "ctaTier": "Tier 0",
+  "briefSource": "Notion: Carousel Scripts - Posts 9-16 + Origin Story",
+  "provenance": "converted-from-notion-script",
+  "editorialNotes": [
+    "Bold lead words carry the arrow from the script (\"Wine →\") as headline; body split at sentence boundaries only."
+  ],
+  "thread": {
+    "element": "ice cube tray filling one cube per slide",
+    "kind": "accumulator",
+    "startState": "empty tray",
+    "endState": "full tray",
+    "zone": "bottom-rail",
+    "heightPct": 12,
+    "palette": [
+      "steelBlue",
+      "inkGray"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "You can freeze all of these. Yes, seriously."
+      },
+      "threadState": {
+        "progress": 0.2,
+        "label": "Empty tray",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Wine →",
+        "items": [
+          "Pour leftover wine into an ice cube tray.",
+          "Freeze.",
+          "Drop cubes into pasta sauce, risotto, or stew.",
+          "Restaurant-level flavor from last Tuesday's bottle."
+        ]
+      },
+      "threadState": {
+        "progress": 0.4,
+        "label": "Wine",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "timeline",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Fresh ginger →",
+        "items": [
+          "Throw the whole root in the freezer.",
+          "Grate it straight from frozen — it shreds easier frozen than fresh.",
+          "No peeling needed."
+        ]
+      },
+      "threadState": {
+        "progress": 0.6,
+        "label": "Ginger",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Egg yolks →",
+        "items": [
+          "Leftover yolks from a recipe?",
+          "Whisk with a pinch of salt, pour into ice cube molds.",
+          "Thaw later for custards, carbonara, or enriching sauces."
+        ]
+      },
+      "threadState": {
+        "progress": 0.8,
+        "label": "Yolks",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "reframe",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Overripe bananas →",
+        "body": "Peel first, then freeze. Frozen bananas blend into smoothies better than fresh. They also replace ice cream if you blend them solo. That's it. That's the hack."
+      },
+      "threadState": {
+        "progress": 1,
+        "label": "Full tray",
+        "tone": "good"
+      }
+    }
+  ]
+}

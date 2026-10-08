@@ -9,9 +9,9 @@
 // a brief may legitimately carry a number gtm.json has not catalogued. FAIL is
 // reserved for claims that are pre-launch-dishonest, which are never legitimate.
 import fs from 'node:fs';
-import { gtm, honestyCheck, unsourcedFigures } from './gtm.mjs';
+import { gtm, honestyCheck, unsourcedFigures, launchCheck, loadLaunch } from './gtm.mjs';
 
-export function gtmCheck(spec) {
+export function gtmCheck(spec, opts = {}) {
   const findings = [];
   const add = (level, check, detail, slide = null) => findings.push({ level, check, detail, slide });
 
@@ -19,10 +19,14 @@ export function gtmCheck(spec) {
   // real shape rather than a guessed one - guessing the shape is what made the word-count
   // gate measure a 55-word paragraph as 16 words.
   const diagramText = (d) => !d ? [] : JSON.stringify(d.data || {}).match(/"[^"]{2,}"/g)?.map((x) => x.slice(1, -1)) || [];
+  // Every string in copy counts, including list items (arrays of strings or objects):
+  // reading only top-level strings let a waitlist claim inside items[] pass Gate 6.
+  const strings = (v) => typeof v === 'string' ? [v]
+    : Array.isArray(v) ? v.flatMap(strings)
+    : v && typeof v === 'object' ? Object.values(v).flatMap(strings) : [];
   const allText = (spec.slides || []).map((s, i) => ({
     i: i + 1,
-    text: [...Object.values(s.copy || {}).filter((v) => typeof v === 'string'),
-           ...diagramText(s.diagram)].join(' ')
+    text: [...strings(s.copy || {}), ...diagramText(s.diagram)].join(' ')
   }));
 
   // 6.1 - pre-launch honesty. Hard fail.
@@ -30,6 +34,40 @@ export function gtmCheck(spec) {
     for (const f of honestyCheck(text, `slide ${i}`)) {
       add('FAIL', 'honesty', `${f.why} Found: "${f.match}"`, i);
     }
+  }
+
+  // 6.1b - CTA reality. Slide copy is verbatim and never rewritten, so a slide that
+  // promises a waitlist or pre-order before launch FAILS unless the spec carries
+  // hold:"HOLD-UNTIL-LAUNCH", in which case it is reported as HOLD (WARN) and the
+  // post is excluded from publishing by isPublishable.
+  const launch = opts.launch || loadLaunch();
+  const held = spec.hold === 'HOLD-UNTIL-LAUNCH';
+  for (const { i, text } of allText) {
+    for (const f of launchCheck(text, `slide ${i}`, launch)) {
+      if (held) add('WARN', 'hold', `HOLD: slide copy promises "${f.match}" which is not live. Not publishable until launch.`, i);
+      else add('FAIL', 'cta-not-live', `${f.why} Found: "${f.match}". Slide copy is verbatim: add hold:"HOLD-UNTIL-LAUNCH" to the spec or fix the brief.`, i);
+    }
+  }
+  if (opts.caption != null) {
+    for (const f of launchCheck(opts.caption, 'caption', launch)) {
+      add('FAIL', 'cta-not-live', `${f.why} Found: "${f.match}" in caption.`);
+    }
+  }
+
+  // 6.1c - setup-phase CTA swap (tools/setup-cta.mjs). The substituted line must come
+  // from the closed list gtm.ctas.setup; whatever else the field carries must be the
+  // original non-CTA text, verbatim. Anything else is an unlogged copy rewrite.
+  for (const w of spec.ctaSwap || []) {
+    const line = gtm.ctas.setup.find((l) => String(w.to).includes(l));
+    const rest = line ? String(w.to).replace(line, '').trim() : null;
+    if (!line || (rest && !String(w.from).includes(rest))) {
+      add('FAIL', 'cta-swap', `ctaSwap on slide ${w.slide} ${w.field} is not a gtm.ctas.setup line plus verbatim original text. Found: "${w.to}"`, w.slide);
+    } else if (spec.slides?.[w.slide - 1]?.copy?.[w.field] !== w.to) {
+      add('FAIL', 'cta-swap', `ctaSwap log for slide ${w.slide} ${w.field} does not match the copy actually in the spec.`, w.slide);
+    }
+  }
+  if (spec.ctaSwap?.length && launch.phase !== 'setup') {
+    add('WARN', 'cta-swap-active', 'Launch phase is live but setup CTA swap is still applied. Run tools/setup-cta.mjs --restore --write.');
   }
 
   // 6.2 - hero numbers must trace to a sourced GTM stat.

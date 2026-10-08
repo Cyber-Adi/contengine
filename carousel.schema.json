@@ -68,9 +68,10 @@
       "enum": [
         "brief",
         "converted-from-notion-script",
-        "reconstructed-fixture"
+        "reconstructed-fixture",
+        "refined"
       ],
-      "description": "'brief' = parsed from a real v2 markdown brief. 'converted-from-notion-script' = carried verbatim from a Notion Carousel Script page (PantryPal->fond substitution permitted, nothing else). 'reconstructed-fixture' = assembled from Notion metadata for pipeline testing and MUST be replaced before publishing."
+      "description": "'brief' = parsed from a real v2 markdown brief. 'converted-from-notion-script' = carried verbatim from a Notion Carousel Script page (PantryPal->fond substitution permitted, nothing else). 'reconstructed-fixture' = assembled from Notion metadata for pipeline testing and MUST be replaced before publishing. 'refined' = Refinery-lane variant; never ships unless picked is true."
     },
     "editorialNotes": {
       "type": "array",
@@ -183,6 +184,7 @@
             "type": "string",
             "enum": [
               "hero-statement",
+              "statement-xl",
               "hero-number",
               "split-compare",
               "stack-list",
@@ -192,6 +194,15 @@
               "diagram"
             ],
             "description": "Adjacent slides must not share a layout - Design System 3.8."
+          },
+          "valign": {
+            "type": "string",
+            "enum": [
+              "top",
+              "center",
+              "bottom"
+            ],
+            "description": "Design-only vertical anchor of the slide's content block. Optional: when absent the renderer picks one per slide so adjacent slides do not centre at the same height (rules.rhythm). tools/rhythm.mjs --write may set it and logs the change in refinement.changes."
           },
           "diagram": {
             "type": "object",
@@ -489,7 +500,209 @@
         "takeout-guilt"
       ],
       "description": "Which gtm.json angle this carousel serves. Optional but strongly wanted: it is what lets the Ad Bank adapt this post later instead of originating a new angle, per its 90%-adaptation rule."
+    },
+    "variant": {
+      "type": "string",
+      "enum": [
+        "A",
+        "B"
+      ],
+      "description": "A = verbatim brief copy. B = Refinery copy proposal, requires originalCopy."
+    },
+    "refinedFrom": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Post number this variant was refined from."
+    },
+    "picked": {
+      "type": "boolean",
+      "description": "True only when Adi picked this refined variant. Refined specs without it never export."
+    },
+    "originalCopy": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "headline"
+            ]
+          },
+          {
+            "required": [
+              "heroNumber"
+            ]
+          }
+        ],
+        "description": "Every slide carries either a headline or a heroNumber as its primary content - the hero-number layout uses heroNumber with no literal headline.",
+        "additionalProperties": false,
+        "properties": {
+          "eyebrow": {
+            "type": "string"
+          },
+          "headline": {
+            "type": "string"
+          },
+          "heroNumber": {
+            "type": "string",
+            "description": "Set in Space Grotesk. Numbers never use the body font."
+          },
+          "heroNumberUnit": {
+            "type": "string",
+            "description": "Colour-split unit beside heroNumber, e.g. '%' or 'lbs'."
+          },
+          "heroNumberCaption": {
+            "type": "string"
+          },
+          "strikethrough": {
+            "type": "string",
+            "description": "Rendered struck-through beside a hero number, for correction slides."
+          },
+          "body": {
+            "type": "string",
+            "maxLength": 400
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 6
+          },
+          "quadrants": {
+            "type": "array",
+            "maxItems": 4,
+            "items": {
+              "type": "object",
+              "required": [
+                "label",
+                "value"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "label": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "string"
+                },
+                "tone": {
+                  "type": "string",
+                  "enum": [
+                    "good",
+                    "caution",
+                    "loss",
+                    "neutral"
+                  ]
+                }
+              }
+            }
+          },
+          "citation": {
+            "type": "string"
+          },
+          "ctaLine": {
+            "type": "string"
+          },
+          "sendTrigger": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "Per-slide verbatim copy of variant A, same shape as slide copy. Required for variant B."
+    },
+    "refinement": {
+      "type": "object",
+      "required": [
+        "round",
+        "changes"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "round": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "changes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "slide",
+              "field",
+              "from",
+              "to",
+              "why"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "slide": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "field": {
+                "type": "string"
+              },
+              "from": {
+                "type": "string"
+              },
+              "to": {
+                "type": "string"
+              },
+              "why": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        "model": {
+          "type": "string"
+        },
+        "at": {
+          "type": "string"
+        }
+      }
+    },
+    "hold": {
+      "type": "string",
+      "enum": [
+        "HOLD-UNTIL-LAUNCH"
+      ],
+      "description": "Set when slide copy contains Tier 2/3 CTA text that is not yet true (setup phase). Held posts are not publishable until launch."
+    },
+    "ctaSwap": {
+      "type": "array",
+      "description": "Logged setup-phase substitution of the waitlist / link-in-bio / pre-order CTA by a line from gtm.json ctas.setup (tools/setup-cta.mjs). Reversible with --restore on launch day.",
+      "items": {
+        "type": "object",
+        "required": ["slide", "field", "from", "to", "rule"],
+        "additionalProperties": false,
+        "properties": {
+          "slide": { "type": "integer", "minimum": 1 },
+          "field": { "type": "string" },
+          "from": { "type": "string" },
+          "to": { "type": "string" },
+          "rule": { "const": "setup-cta" },
+          "heldBefore": { "type": "boolean" }
+        }
+      }
     }
   },
-  "$comment": " | Layout-conditional content rules added 2026-09-20 after post-31 shipped empty split-compare panels past all six gates."
+  "$comment": " | Layout-conditional content rules added 2026-09-20 after post-31 shipped empty split-compare panels past all six gates.",
+  "if": {
+    "required": [
+      "variant"
+    ],
+    "properties": {
+      "variant": {
+        "const": "B"
+      }
+    }
+  },
+  "then": {
+    "required": [
+      "originalCopy"
+    ]
+  }
 }

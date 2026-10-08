@@ -1,0 +1,176 @@
+{
+  "postNumber": 6,
+  "title": "The Expiration Date Is a Suggestion",
+  "pillar": "The $2913 Problem",
+  "ctaTier": "Tier 0",
+  "gtmAngle": "date-label-lie",
+  "briefSource": "Notion: Carousel Scripts - Posts 1-8",
+  "provenance": "converted-from-notion-script",
+  "editorialNotes": [
+    "43% is the 2025 Food Date Label Survey figure (gtm.json date-label-lie), the only number allowed hero treatment. Other survey percentages stay body copy."
+  ],
+  "thread": {
+    "element": "date label sticker peeling off the pack",
+    "kind": "clearing",
+    "startState": "sticker fully stuck",
+    "endState": "sticker fully peeled, bare package",
+    "zone": "bottom-rail",
+    "heightPct": 12,
+    "palette": [
+      "harvestGold",
+      "inkGray"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "The date on your food is not regulated by the federal government."
+      },
+      "threadState": {
+        "progress": 0.13,
+        "label": "Stuck",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "44% of Americans think the government oversees food date labels.",
+        "items": [
+          "It doesn't.",
+          "The only federally mandated date label in the U.S. is on infant formula.",
+          "Everything else is the manufacturer's best guess at peak quality."
+        ],
+        "citation": "2025 Food Date Label Survey — Harvard Law, ReFED, Johns Hopkins, via Harris Poll"
+      },
+      "threadState": {
+        "progress": 0.25,
+        "label": "Corner lifting",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "timeline",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "\"Best by\" = quality, not safety.",
+        "items": [
+          "\"Sell by\" = stock rotation for the store, not a warning for you.",
+          "\"Use by\" = the closest thing to a safety date, and even that one confused 49% of people surveyed."
+        ]
+      },
+      "threadState": {
+        "progress": 0.38,
+        "label": "Quarter peeled",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "light",
+      "layout": "hero-number",
+      "accent": "signalRed",
+      "declaresLoss": true,
+      "copy": {
+        "heroNumber": "43%",
+        "heroNumberCaption": "43% of consumers say they always or usually throw food away based on the date label alone. Up from 37% in 2016. The confusion is getting worse, not better.",
+        "citation": "Same 2025 survey — 2,069 U.S. adults"
+      },
+      "threadState": {
+        "progress": 0.5,
+        "label": "Half peeled",
+        "tone": "loss"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "split-compare",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Gen Z and millennials are the worst offenders:",
+        "items": [
+          "52% and 51% always or usually toss food at the label date.",
+          "Boomers? 32%."
+        ]
+      },
+      "threadState": {
+        "progress": 0.63,
+        "label": "Most peeled",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 6,
+      "archetype": "value",
+      "background": "light",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Manufacturers benefit from you throwing food out early.",
+        "body": "Earlier disposal = faster repurchase cycle. The dates aren't designed to protect you. They're designed to sell more product."
+      },
+      "threadState": {
+        "progress": 0.75,
+        "label": "Nearly off",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 7,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "stack-list",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The sniff test is more reliable than the printed date for most refrigerated foods.",
+        "items": [
+          "Your nose evolved over millions of years.",
+          "The label was printed last Tuesday."
+        ]
+      },
+      "threadState": {
+        "progress": 0.88,
+        "label": "Edge only",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 8,
+      "archetype": "reframe",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Stop trusting the sticker. Start trusting the food."
+      },
+      "threadState": {
+        "progress": 1,
+        "label": "Bare",
+        "tone": "good"
+      }
+    }
+  ]
+}

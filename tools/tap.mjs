@@ -11,7 +11,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { ROOT } from './../src/tokens.mjs';
-import { reconcile, loadLedger, saveLedger, census, atStage } from './../src/state.mjs';
+import { reconcile, loadLedger, saveLedger, census, atStage, isPublishable } from './../src/state.mjs';
 import { decide } from './../src/decide.mjs';
 
 const sh = (cmd, args) => execFileSync(cmd, args, { cwd: ROOT, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] });
@@ -77,7 +77,7 @@ for (const n of toRender) {
 saveLedger(reconcile(loadLedger()));
 const ledger = reconcile(loadLedger());
 const ready = atStage('approved', ledger)
-  .filter((p) => p.provenance !== 'reconstructed-fixture')
+  .filter(isPublishable)
   .filter((p) => !invalid.some((x) => x.n === p.post));
 const fixtures = atStage('approved', ledger).filter((p) => p.provenance === 'reconstructed-fixture');
 
@@ -103,9 +103,10 @@ say('');
 
 say('  YOUR PART — nothing below can be done without you');
 say('');
-const readyLines = readyOut.split('\n').filter((l) => /^\s+\d{4}-\d{2}-\d{2}/.test(l));
+// ready.mjs prefixes each line NOW (inside the 28-day scheduling window) or later.
+const readyLines = readyOut.split('\n').filter((l) => /^\s+NOW\s+\d{4}-\d{2}-\d{2}/.test(l)).map((l) => l.replace(/^\s+NOW\s+/, '  '));
 if (readyLines.length) {
-  say(`  1. SCHEDULE  ${readyLines.length} carousel(s) — open READY-TO-POST/index.html`);
+  say(`  1. SCHEDULE  ${readyLines.length} carousel(s) in the next 28 days — docs/META-SCHEDULING-AGENT.md or READY-TO-POST/index.html`);
   for (const l of readyLines) say('     ' + l.trim());
   say('       Meta Business Suite or the Instagram app → schedule each for its date,');
   say('       then ONE command for the whole page: node tools/log-post.mjs --scheduled-all');

@@ -1,0 +1,139 @@
+{
+  "postNumber": 7,
+  "title": "The Takeout Paradox",
+  "pillar": "The $2913 Problem",
+  "ctaTier": "Tier 0",
+  "gtmAngle": "takeout-guilt",
+  "briefSource": "Notion: Carousel Scripts - Posts 1-8",
+  "provenance": "converted-from-notion-script",
+  "editorialNotes": [
+    "$40, $22, 19.1% and 30% figures are script copy with a BLS or EPA tie only for $56/week and 19.1%; none is hero type."
+  ],
+  "thread": {
+    "element": "receipt tape growing one cost line per slide",
+    "kind": "accumulator",
+    "startState": "blank receipt tape",
+    "endState": "tape showing three stacked costs",
+    "zone": "bottom-rail",
+    "heightPct": 12,
+    "palette": [
+      "signalRed",
+      "inkGray"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "You ordered DoorDash because \"there's nothing to eat.\"",
+        "body": "There was $40 of food in your fridge."
+      },
+      "threadState": {
+        "progress": 0.17,
+        "label": "Blank tape",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "signalRed",
+      "declaresLoss": true,
+      "copy": {
+        "headline": "The average American household wastes $56/week in food.",
+        "items": [
+          "That's not food you couldn't afford.",
+          "It's food you already paid for and then replaced with a $22 delivery order."
+        ],
+        "citation": "EPA, April 2025 — $2,913/yr ÷ 52 weeks"
+      },
+      "threadState": {
+        "progress": 0.33,
+        "label": "Wasted groceries",
+        "tone": "loss"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The fridge isn't empty. It's disorganized.",
+        "body": "You can't see what you have, so your brain defaults to \"nothing good\" and your thumb opens an app."
+      },
+      "threadState": {
+        "progress": 0.5,
+        "label": "Disorganized",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "light",
+      "layout": "split-compare",
+      "accent": "signalRed",
+      "declaresLoss": true,
+      "copy": {
+        "headline": "Inflation raised grocery prices 19.1% over 4 years.",
+        "items": [
+          "You're paying more for the food AND throwing 30% of it away.",
+          "Then paying again for takeout."
+        ],
+        "citation": "BLS Consumer Price Index food data, 2020–2024"
+      },
+      "threadState": {
+        "progress": 0.67,
+        "label": "Prices up",
+        "tone": "loss"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "timeline",
+      "accent": "signalRed",
+      "declaresLoss": true,
+      "copy": {
+        "headline": "Three costs stacking on top of each other:",
+        "items": [
+          "the groceries you wasted + the delivery fee + the markup on the restaurant food.",
+          "One meal just cost you triple."
+        ]
+      },
+      "threadState": {
+        "progress": 0.83,
+        "label": "Triple cost",
+        "tone": "loss"
+      }
+    },
+    {
+      "index": 6,
+      "archetype": "reframe",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The most expensive meal is the one you already paid for and forgot about."
+      },
+      "threadState": {
+        "progress": 1,
+        "label": "Total",
+        "tone": "good"
+      }
+    }
+  ]
+}

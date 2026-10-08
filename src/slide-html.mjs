@@ -6,6 +6,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { diagramHtml, diagramCss } from './diagrams.mjs';
+import { normalizeSlide } from './normalize.mjs';
+import { resolveValign } from './rhythm-core.mjs';
 
 import { tokens, C, esc, ROOT, scaleForWidth } from './tokens.mjs';
 export { tokens, ROOT };
@@ -173,7 +175,7 @@ export function toneToken(tone, background) {
 }
 
 // ---------- layout bodies ----------
-function layoutHtml(spec, slide) {
+function layoutHtml(spec, slide, S = 1) {
   const c = slide.copy || {};
   const accent = C[legalAccent(slide.accent, slide.background)];
   const dark = slide.background === 'dark';
@@ -198,7 +200,7 @@ function layoutHtml(spec, slide) {
     case 'split-compare': {
       const [a, b] = c.items || [];
       return `${eyebrow}<h1 class="h-mid" style="color:${fg}">${rich(c.headline, accent)}</h1>
-        <div class="split">
+        <div class="split fill">
           <div class="col" style="border-color:${C.inkGray}55"><div class="col-i" style="color:${C.inkGray}">01</div><div class="col-t" style="color:${fg}">${esc(a || '')}</div></div>
           <div class="col" style="border-color:${accent}"><div class="col-i" style="color:${accent}">02</div><div class="col-t" style="color:${fg}">${esc(b || '')}</div></div>
         </div>${body}${cite}`;
@@ -208,17 +210,30 @@ function layoutHtml(spec, slide) {
         <li><span class="li-n" style="color:${accent}">${String(i + 1).padStart(2, '0')}</span>
         <span class="li-t" style="color:${fg}">${esc(it)}</span></li>`).join('');
       return `${eyebrow}<h1 class="h-mid" style="color:${fg}">${rich(c.headline, accent)}</h1>
-        <ul class="stack">${items}</ul>${body}${cite}`;
+        <ul class="stack fill">${items}</ul>${body}${cite}`;
     }
     case 'quadrant-card': {
+      // S2b: scale the value type to the width the column really has, up to the
+      // numeric ceiling (tokens.type.numeric.sizes.hero.max), never past it. Two lines
+      // are allowed, so short values grow and long ones still fit.
+      const maxChars = Math.max(1, ...(c.quadrants || []).map(x => String(x.value).length));
+      const rows = Math.ceil((c.quadrants || []).length / 2) || 1;
+      const byWidth = Math.floor((330 * 2) / (0.66 * maxChars));
+      const byHeight = Math.floor((560 / rows - 130) / 2.32);   // two lines of value + label + padding
+      const qv0 = Math.max(52, Math.min(tokens.type.numeric.sizes.hero.max, byWidth, byHeight));
+      // Dense values step down the type scale (floor: body min) until the wrapped lines fit the
+      // quadrant; short values keep the larger step chosen above.
+      const availQ = 560 / rows - 130, linesAt = (px) => Math.ceil(maxChars * 0.58 * px / 330);
+      let qv = qv0;
+      while (qv > tokens.type.body.sizes.body.min && linesAt(qv) * qv * 1.2 > availQ) qv -= 2;
       const q = (c.quadrants || []).map(x => {
         const col = C[toneToken(x.tone, slide.background)];
         return `<div class="quad" style="border-color:${col}">
           <div class="q-l" style="color:${C.inkGray}">${esc(x.label)}</div>
-          <div class="q-v" style="color:${col}">${esc(x.value)}</div></div>`;
+          <div class="q-v" style="color:${col};font-size:${Math.round(qv * S * 100) / 100}px">${esc(x.value)}</div></div>`;
       }).join('');
       return `${eyebrow}<h1 class="h-mid" style="color:${fg}">${rich(c.headline, accent)}</h1>
-        <div class="quads">${q}</div>${body}${cite}`;
+        <div class="quads fill">${q}</div>${body}${cite}`;
     }
     case 'timeline': {
       const steps = (c.items || []).map((it, i, arr) => `
@@ -227,7 +242,7 @@ function layoutHtml(spec, slide) {
           <div class="step-t" style="color:${fg}">${esc(it)}</div>
         </div>`).join(`<div class="rule" style="background:${C.inkGray}55"></div>`);
       return `${eyebrow}<h1 class="h-mid" style="color:${fg}">${rich(c.headline, accent)}</h1>
-        <div class="timeline">${steps}</div>${body}${cite}`;
+        <div class="timeline fill">${steps}</div>${body}${cite}`;
     }
     case 'cta-card': {
       return `<div class="cta-wrap">
@@ -243,6 +258,9 @@ function layoutHtml(spec, slide) {
         <div class="dia">${diagramHtml(slide.diagram, slide.background, accent)}</div>
         ${body}${cite}`;
     }
+    case 'statement-xl': { // headline-only poster: one display step above hook, grown to fit the frame
+      return `${eyebrow}<h1 class="h-mid h-xl" style="color:${fg}">${rich(c.headline, accent)}</h1>${body}${cite}`;
+    }
     default: { // hero-statement
       return `${eyebrow}<h1 class="h-hook" style="color:${fg}">${rich(c.headline, accent)}</h1>${body}${cite}`;
     }
@@ -256,10 +274,10 @@ export function slideInner(spec, slide, canvasW = tokens.grid.canvas.w) {
   const chrome = isCta ? C.offWhite : C.inkGray;
   return `<div class="slide" data-index="${slide.index}" data-archetype="${slide.archetype}"
      data-layout="${slide.layout || 'hero-statement'}" data-declares-loss="${!!slide.declaresLoss}"
-     style="background:${bg}">
+     data-valign="${slide.valign || 'center'}" style="background:${bg}">
     ${microLabelHtml(spec, slide, isCta ? C.offWhite + 'B3' : C.inkGray)}
     ${ornamentHtml(slide, isCta ? C.harvestGold : C[legalAccent(slide.accent, slide.background)])}
-    <div class="content">${layoutHtml(spec, slide)}${swipeHtml(spec, slide, isCta ? C.offWhite : C[legalAccent(slide.accent, slide.background)], isCta ? C.offWhite : (dark ? C.offWhite : C.slateBlack))}</div>
+    <div class="content v-${slide.valign || 'center'} lay-${slide.layout || 'hero-statement'}">${layoutHtml(spec, slide, scaleForWidth(canvasW))}${swipeHtml(spec, slide, isCta ? C.offWhite : C[legalAccent(slide.accent, slide.background)], isCta ? C.offWhite : (dark ? C.offWhite : C.slateBlack))}</div>
     ${isCta ? '' : threadHtml(spec, slide, canvasW)}
     <div class="chrome">
       <div class="handle" style="color:${chrome}">${esc(tokens.grid.handle.text)}</div>
@@ -268,7 +286,198 @@ export function slideInner(spec, slide, canvasW = tokens.grid.canvas.w) {
   </div>`;
 }
 
-export function wrapSlideHtml(spec, slide, { debug = false, canvas = 'ig' } = {}) {
+// U+2192 is absent from every vendored face (checked against each cmap), so a text
+// arrow would silently fall to a system font. The normalizer still produces it;
+// it is painted here as an inline vector mark in the surrounding text colour.
+const ARROW_MARK = `<span class="arr" role="img" aria-label="to"><svg viewBox="0 0 40 18"><path d="M2 9h32m-9-7 9 7-9 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>`;
+
+// Design-only vertical anchor. An explicit slide.valign wins; otherwise the rhythm
+// solver picks one per slide so adjacent swipes never land at the same height.
+export function effectiveSlide(spec, slide) {
+  const { slide: norm } = normalizeSlide(slide);
+  return { ...norm, valign: slide.valign || resolveValign(spec)[slide.index] || 'center' };
+}
+
+// S2b fill pass, embedded in the page so a preview and an export lay out identically.
+// A fill block (.fill: list, split, quadrants, timeline) is grown from its natural
+// height until the content elements span `aim` of the content box (the same extent
+// Gate 5.5 measures: leaf text boxes, chrome excluded). It never shrinks below its
+// natural height and never changes type size, so text can only gain room, not clip.
+// The group then sits wherever .content's valign puts it, which is what lets
+// neighbouring slides land at different heights.
+const HOLE_GUARD_SHARE = 0.85, HOLE_FLOOR_PX = 14;
+const MICRO_CLEAR_PX = 14;
+function fillScript(aim, S = 1, idx = 0) {
+  return `<script>window.__fillDone=(async()=>{
+  await Promise.all([document.fonts.load("700 96px 'Playfair Display'"),document.fonts.load("400 32px 'DM Sans'"),document.fonts.load("700 140px 'Space Grotesk'")]);
+  await document.fonts.ready;
+  const content=document.querySelector('.content'), cr=content.getBoundingClientRect();
+  await (async()=>{
+  const blk=document.querySelector('.content .fill');
+  if(!blk){
+    // No stretchable block (hero-number): open the gaps between the content's own
+    // children, but never past the point where one gap exceeds ${tokens.rules.optical.maxGapShare} of the group
+    // (Gate 5.1 fails a hole wider than ${tokens.rules.optical.maxDeadBandPct}), so sparse copy stays sparse
+    // rather than being padded into a hole.
+    const hk=content.querySelector('.h-hook');
+    if(hk && ${idx}===1){ // cover step: slide 1 hook grows toward the cover ceiling while it clears the frame
+      const pad=parseFloat(getComputedStyle(content).paddingLeft)||0, sl=document.querySelector('.slide').getBoundingClientRect();
+      const mi=document.querySelector('.micro'), top=mi?mi.getBoundingClientRect().bottom+${MICRO_CLEAR_PX}*${S}:sl.top+pad;
+      const f0=parseFloat(getComputedStyle(hk).fontSize), fmax=${tokens.type.display.sizes.cover.max}*${S};
+      const fitsH=()=>{const r=hk.getBoundingClientRect(); return hk.scrollWidth<=hk.clientWidth+1 && r.left>=sl.left+pad-1 && r.right<=sl.right-pad+1 && r.top>=top-1 && r.height<=${aim}*cr.height;};
+      for(let f=fmax; f>f0; f*=0.97){ hk.style.fontSize=f+'px'; if(fitsH()) break; hk.style.fontSize=f0+'px'; }
+      const sw=content.querySelector('.swipe'); if(sw) sw.style.paddingTop=(0.16*parseFloat(getComputedStyle(hk).fontSize))+'px'; }
+    const xl=content.querySelector('.h-xl');
+    if(xl){ // statement-xl: largest display step (token ceiling) at which the headline clears frame and margins
+      const pad=parseFloat(getComputedStyle(content).paddingLeft)||0, sl=document.querySelector('.slide').getBoundingClientRect();
+      const fmax=${tokens.type.display.sizes.statement.max}*${S}, fmin=${tokens.type.display.sizes.statement.min}*${S};
+      for(let f=fmax; f>=fmin; f*=0.97){ xl.style.fontSize=f+'px';
+        const r=xl.getBoundingClientRect(), cb=content.getBoundingClientRect();
+        if(xl.scrollWidth<=xl.clientWidth+1 && r.left>=sl.left+pad-1 && r.right<=sl.right-pad+1 && r.bottom<=cb.bottom-${aim}*0+1 && r.height<=${aim}*1.12*cb.height) break; }
+      return;
+    }
+    if(!content.classList.contains('lay-hero-number')) return;
+    { // poster step: a short hero number grows toward the token ceiling while it still clears the margins
+      const hn=content.querySelector('.hero-num');
+      const ks=[...content.children].filter(k=>!k.classList.contains('swipe')&&k.getBoundingClientRect().height>0);
+      const Tn=ks.reduce((a,k)=>a+k.getBoundingClientRect().height,0), nn=Math.max(1,ks.length-1);
+      // only a slide that gap-opening alone cannot bring to the fill floor (every other hero-number keeps its size)
+      if(hn && Tn/(1-${tokens.rules.optical.maxGapShare}*nn) < ${tokens.rules.optical.minFillRatio}*1.08*cr.height){ const pad=parseFloat(getComputedStyle(content).paddingLeft)||0, sl=document.querySelector('.slide').getBoundingClientRect();
+        const f0=parseFloat(getComputedStyle(hn).fontSize), fmax=${tokens.type.numeric.sizes.poster.max}*${S};
+        const sp=document.createElement('span'); sp.style.cssText='display:inline-block;white-space:nowrap'; while(hn.firstChild) sp.appendChild(hn.firstChild); hn.appendChild(sp);
+        for(let f=fmax; f>f0; f*=0.97){ hn.style.fontSize=f+'px'; const r=sp.getBoundingClientRect(); if(r.right<=sl.right-pad-1) break; hn.style.fontSize=f0+'px'; }
+        const hc=content.querySelector('.hero-cap'); if(hc){ const c0=parseFloat(getComputedStyle(hc).fontSize); hc.style.fontSize=Math.max(c0,${tokens.type.numeric.sizes.poster.captionMax}*${S})+'px'; } } }
+    // The swipe pill is a trailing flourish, not copy: it keeps its natural gap.
+    const kids=[...content.children].filter(k=>!k.classList.contains('swipe')&&k.getBoundingClientRect().height>0);
+    if(kids.length<2) return;
+    const T=kids.reduce((a,k)=>a+k.getBoundingClientRect().height,0), n=kids.length-1;
+    const g0=parseFloat(getComputedStyle(content).rowGap)||0, E0=T+g0*n;
+    const cap=T/(1-${tokens.rules.optical.maxGapShare}*n);
+    const E=Math.min(${aim}*cr.height, cap>0?cap:E0);
+    if(E>E0){const extra=(E-E0)/n; kids.slice(1).forEach(k=>{k.style.marginTop=extra+'px';});}
+    return;
+  }
+  const CH=/micro|orn|handle|counter|thread/;
+  const extent=()=>{let top=1e9,bot=-1e9;
+    for(const el of content.querySelectorAll('*')){
+      const cls=typeof el.className==='string'?el.className:(el.getAttribute('class')||'');
+      if(el.children.length||!(el.textContent||'').trim()||CH.test(cls)) continue;
+      const r=el.getBoundingClientRect(); if(!r.width||!r.height) continue;
+      top=Math.min(top,r.top); bot=Math.max(bot,r.bottom);}
+    return {top:Math.max(top,cr.top),bot:Math.min(bot,cr.bottom)};};
+  // Chrome band: the micro-label is pinned top-right; content may never ride up into it (Gate 1.6).
+  const safeTop=()=>{const mi=document.querySelector('.micro'); if(!mi) return -1e9; const mr=mi.getBoundingClientRect(), r0=document.querySelector('.slide').getBoundingClientRect();
+    return mr.bottom+${MICRO_CLEAR_PX}*${S};};
+  // Headline first: it may grow to its type ceiling (hook ceiling on slide 2, reframe ceiling after).
+  const hd=content.querySelector('.h-mid');
+  if(hd){ const cap=(hd.classList.contains('h-xl')?${tokens.type.display.sizes.statement.max}:${idx}<=2?${tokens.type.display.sizes.hook.max}:${tokens.type.display.sizes.reframe.max})*${S};
+    const f0=parseFloat(getComputedStyle(hd).fontSize), pad=parseFloat(getComputedStyle(content).paddingLeft)||0;
+    const sl=document.querySelector('.slide').getBoundingClientRect();
+    const fits=()=>{const r=hd.getBoundingClientRect(), e=extent();
+      return hd.scrollWidth<=hd.clientWidth+1 && r.left>=sl.left+pad-1 && r.right<=sl.right-pad+1 && e.top>=Math.max(sl.top+pad-1,safeTop()) && e.bot<=sl.bottom-pad+1;};
+    // Grow toward the ceiling only while the headline still clears the margin and the box.
+    for(let f=Math.max(f0,cap); f>f0; f*=0.96){ hd.style.fontSize=f+'px'; if(fits()) break; hd.style.fontSize=f0+'px'; } }
+  blk.style.flex='none'; blk.style.height='auto';
+  const nat=blk.getBoundingClientRect().height, e=extent();
+  let want=${aim}*cr.height-(e.bot-e.top);
+  // A stack row's own padding is a hole between ink rows (Gate 5.1). Stretch no further than
+  // keeps the worst hole under 0.88 of the deadband limit.
+  if(blk.classList.contains('stack')&&want>0){
+    const lis=[...blk.children], n=lis.length||1;
+    const tmin=Math.min(...lis.map(li=>Math.max(...[...li.children].map(c=>c.getBoundingClientRect().height))));
+    const lim=${tokens.rules.optical.maxDeadBandPct}*0.88, span0=e.bot-e.top;
+    let lo=0,hi=want;
+    for(let k=0;k<30;k++){const mid=(lo+hi)/2, H=nat+mid, hole=(H/n-tmin*0.62)/2, sp=span0+mid;
+      if(hole/sp<=lim) lo=mid; else hi=mid;}
+    want=lo;
+  }
+  // The block may not grow past the room the content box actually has: its own padding is
+  // not in the text extent above, so without this cap a stretched column set overruns the frame.
+  { const ccs=getComputedStyle(content), inner=cr.height-(parseFloat(ccs.paddingTop)||0)-(parseFloat(ccs.paddingBottom)||0),
+      kids=[...content.children].filter(k=>k.getBoundingClientRect().height>0),
+      used=kids.reduce((a,k)=>a+k.getBoundingClientRect().height,0)+(parseFloat(ccs.rowGap)||0)*Math.max(0,kids.length-1);
+    want=Math.min(want,Math.max(0,inner-used)); }
+  // Split columns: prefer boxes sized to their content (slack under the token share, numeral and
+  // text together). Gate 5.5 measures text extent, so if compact boxes would leave the slide under
+  // the fill floor, fall back to the stretched spread layout rather than trade the gate away.
+  if(blk.classList.contains('split')&&want>0){
+    const slackCap=nat*${tokens.rules.optical.splitMaxSlackShare}/(1-${tokens.rules.optical.splitMaxSlackShare});
+    if(want>slackCap){
+      const wFull=want; blk.style.height=(nat+slackCap)+'px';
+      const ee=extent();
+      if((ee.bot-ee.top)/cr.height>=${tokens.rules.optical.minFillRatio}*1.03){ want=slackCap; }
+      else { blk.classList.add('spread'); want=wFull; }
+    }
+  }
+  if(want>0){blk.style.height=(nat+want)+'px';}
+  })();
+  // Margin guard: stacked blocks that overrun the safe frame give back their own
+  // inter-block gaps (never type size, never copy) until the content clears the margin.
+  const m=parseFloat(getComputedStyle(content).paddingLeft)||0, root=document.querySelector('.slide').getBoundingClientRect();
+  const span=()=>{let top=1e9,bot=-1e9;
+    for(const el of content.children){
+      if(el.classList.contains('swipe')) continue;
+      const r=el.getBoundingClientRect(); if(!r.width||!r.height) continue;
+      top=Math.min(top,r.top); bot=Math.max(bot,r.bottom);}
+    return {top,bot};};
+  const microBand=()=>{const mi=document.querySelector('.micro'); return mi?mi.getBoundingClientRect().bottom+${MICRO_CLEAR_PX}*${S}:-1e9;};
+  const over=()=>{const s=span();return Math.max(0,Math.max(root.top+m,microBand())-s.top)+Math.max(0,s.bot-(root.bottom-m));};
+  let ov=over();
+  if(ov>0){
+    const g0=parseFloat(getComputedStyle(content).rowGap)||0, n=Math.max(1,content.children.length-1);
+    const take=Math.min(g0*0.75, ov/n+1);
+    content.style.rowGap=(g0-take)+'px';
+  }
+  // Type-step guard: a long verbatim headline that still overruns the safe frame steps its
+  // size down toward its token floor (hook min or reframe min). Copy is never touched.
+  (()=>{
+    const hd=content.querySelector('.h-mid,.h-hook'); if(!hd||over()<=0) return;
+    const fmin=(hd.classList.contains('h-xl')?${tokens.type.display.sizes.statement.min}:hd.classList.contains('h-hook')?${tokens.type.display.sizes.hook.min}:${tokens.type.display.sizes.reframe.min})*${S};
+    let f=parseFloat(getComputedStyle(hd).fontSize);
+    for(let k=0;k<60&&over()>0&&f>fmin;k++){ f=Math.max(fmin,f*0.97); hd.style.fontSize=f+'px'; }
+  })();
+  // Fill-block guard: a stretched block (columns, rows) that still overruns the frame or the
+  // micro-label band after the headline is at its floor gives back its own stretch, then its
+  // numeral steps down toward the numeric floor. Copy is never touched.
+  (()=>{
+    const blk=content.querySelector('.fill'); if(!blk||over()<=0) return;
+    const h0=blk.getBoundingClientRect().height;
+    blk.style.height='auto'; const nat=blk.getBoundingClientRect().height;
+    blk.style.height=Math.max(nat,h0-over())+'px';
+    const ci=[...blk.querySelectorAll('.col-i')];
+    if(ci.length&&over()>0){ let f=parseFloat(getComputedStyle(ci[0]).fontSize), fmin=${tokens.type.numeric.sizes.hero.min}*${S};
+      for(let k=0;k<40&&over()>0&&f>fmin;k++){ f=Math.max(fmin,f*0.95); ci.forEach(c=>{c.style.fontSize=f+'px';}); blk.style.height='auto'; } }
+  })();
+  // Hole guard (Gate 5.1): in a short copy block the structural gap between two blocks can
+  // exceed the deadband share of the block. Close only the offending gap, never below a
+  // floor, never touching type or copy. Estimate = box gap plus the line padding that is not ink.
+  // Below a hero numeral that padding is large: digits sit on the baseline with no descenders.
+  (()=>{
+    const hroot=content.querySelector(':scope > .cta-wrap')||content;
+    const kids=[...hroot.children].filter(k=>{const r=k.getBoundingClientRect();return r.width&&r.height;});
+    if(kids.length<2) return;
+    const lh=k=>{const cs=getComputedStyle(k),fs=parseFloat(cs.fontSize)||0,l=parseFloat(cs.lineHeight);return (l>0?l:fs*1.2);};
+    const lim=${tokens.rules.optical.maxDeadBandPct}*${HOLE_GUARD_SHARE}, floor=${HOLE_FLOOR_PX}*${S};
+    for(let it=0;it<60;it++){
+      const rs=kids.map(k=>k.getBoundingClientRect()), spanAll=rs[rs.length-1].bottom-rs[0].top;
+      const body=kids.filter(k=>!k.classList.contains('swipe')), s0=kids.find(k=>!k.classList.contains('hero-num'))||kids[0], spanBody=body.length?body[body.length-1].getBoundingClientRect().bottom-s0.getBoundingClientRect().top:spanAll;
+      let worst=-1,wv=0;
+      for(let i=1;i<kids.length;i++){
+        const gap=rs[i].top-rs[i-1].bottom, est=gap+(kids[i-1].classList.contains('hero-num')?0.2:0.25)*lh(kids[i-1])+(kids[i].classList.contains('hero-num')?0.04:0.11)*lh(kids[i]);
+        // Gate 5.1 measures the swipe gap against the block from the first non-numeral element, as here.
+        const span=kids[i].classList.contains('swipe')?rs[rs.length-1].bottom-s0.getBoundingClientRect().top:spanBody;
+        if(est/span>lim&&est>wv&&gap>floor){wv=est;worst=i;}
+      }
+      if(worst<0) break;
+      const mt=parseFloat(kids[worst].style.marginTop)||0;
+      kids[worst].style.marginTop=(mt-4*${S})+'px';
+    }
+  })();
+})();</script>`;
+}
+
+export function wrapSlideHtml(spec, rawSlide, { debug = false, canvas = 'ig' } = {}) {
+  const slide = effectiveSlide(spec, rawSlide);
   const cv = tokens.grid.canvases?.[canvas] || tokens.grid.canvas;
   const g = { ...tokens.grid, canvas: cv }, T = tokens.type;
   // C1: g.canvas.w/h is the REAL target resolution (tokens.json > grid.canvases),
@@ -281,6 +490,13 @@ export function wrapSlideHtml(spec, slide, { debug = false, canvas = 'ig' } = {}
   const rawCss = `
 *{margin:0;padding:0;box-sizing:border-box}
 .slide{position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between}
+/* S2b: a hero-number slide has few elements, so its spacing and caption scale up
+   instead of leaving the lower half bare (the numeral is already at its 140px ceiling). */
+.content.lay-hero-number{gap:32px}
+.lay-hero-number .hero-cap{font-size:44px}
+/* top anchor: clear the micro-label (pinned at the margin, ~30px tall) with a real gap */
+.content.v-top{justify-content:flex-start;padding-top:${Math.round(g.margin*1.75)}px}
+.content.v-bottom{justify-content:flex-end}
 .content{padding:${Math.round(g.margin*1.28)}px ${g.margin}px 0 ${g.margin}px;flex:1;display:flex;
   flex-direction:column;justify-content:center;gap:32px;min-height:0;padding-bottom:2%}
 
@@ -291,6 +507,7 @@ export function wrapSlideHtml(spec, slide, { debug = false, canvas = 'ig' } = {}
   line-height:1.03;letter-spacing:-.015em;text-align:left;max-width:13.5ch;text-wrap:balance}
 .h-mid{font-family:${T.display.stack};font-weight:700;font-size:64px;
   line-height:1.06;letter-spacing:-.012em;text-align:left;max-width:16ch;text-wrap:balance}
+.h-mid.h-xl{max-width:none;line-height:1.02;letter-spacing:-.018em}
 .h-sub{font-family:${T.display.stack};font-weight:700;font-size:${T.display.sizes.reframe.min}px;
   line-height:1.08;letter-spacing:-.012em;text-align:left;max-width:17ch;text-wrap:balance}
 .h-cta{font-family:${T.display.stack};font-weight:700;font-size:${T.display.sizes.reframe.min}px;
@@ -311,14 +528,31 @@ export function wrapSlideHtml(spec, slide, { debug = false, canvas = 'ig' } = {}
 .col{border:3px solid;border-radius:2px;padding:34px 30px;display:flex;flex-direction:column;gap:18px}
 .col-i{font-family:${T.numeric.stack};font-weight:700;font-size:34px}
 .col-t{font-family:${T.body.stack};font-weight:400;font-size:34px;line-height:1.34}
+/* S2b fill mode: columns stretch to the content box, the numeral scales up to the
+   numeric ceiling and the text sits at the foot, so the frame is used, not just the top. */
+.split.fill{flex:0 1 auto;grid-template-rows:1fr}
+.split.fill .col{justify-content:flex-start;gap:28px;padding:40px 34px}
+.split.fill.spread .col{justify-content:space-between;gap:18px}
+.split.fill .col-i{font-size:${T.numeric.sizes.hero.max}px;line-height:1}
+.split.fill .col-t{font-size:${T.body.sizes.body.max}px}
 
 .stack{list-style:none;display:flex;flex-direction:column;gap:22px}
 .stack li{display:grid;grid-template-columns:76px 1fr;align-items:baseline;gap:12px}
 .li-n{font-family:${T.numeric.stack};font-weight:700;font-size:36px;font-variant-numeric:tabular-nums}
 .li-t{font-family:${T.body.stack};font-weight:400;font-size:38px;line-height:1.32}
+/* S2b fill mode: rows share the box evenly between flat rules (the rules also keep
+   Gate 5.1 honest: no hole between rows is wider than half a row). */
+.stack.fill{flex:0 1 auto;gap:0;border-bottom:3px solid ${C.inkGray}55}
+.stack.fill li{flex:1 1 0;grid-template-columns:150px 1fr;align-items:center;gap:16px;
+  border-top:3px solid ${C.inkGray}55}
+.stack.fill .li-n{font-size:84px;line-height:1}
+.stack.fill .li-t{font-size:${T.body.sizes.body.max}px}
 
 .quads{display:grid;grid-template-columns:1fr 1fr;gap:22px}
 .quad{border-left:6px solid;padding:26px 28px;display:flex;flex-direction:column;gap:12px}
+.quads.fill{flex:0 1 auto;grid-auto-rows:1fr}
+.quads.fill .quad{justify-content:center;gap:22px;padding:34px 30px}
+.quads.fill .q-v{overflow-wrap:anywhere}
 .q-l{font-family:${T.body.stack};font-weight:700;font-size:32px;letter-spacing:.08em;text-transform:uppercase}
 .q-v{font-family:${T.numeric.stack};font-weight:700;font-size:52px;line-height:1.16;font-variant-numeric:tabular-nums}
 
@@ -327,6 +561,15 @@ export function wrapSlideHtml(spec, slide, { debug = false, canvas = 'ig' } = {}
 .dot{width:28px;height:28px;border-radius:50%;flex:none}
 .step-t{font-family:${T.body.stack};font-weight:400;font-size:33px;line-height:1.28}
 .rule{height:3px;flex:0 0 40px;margin-top:12px}
+/* S2b fill mode: the timeline runs down the frame instead of across it, so each step
+   is set at the body ceiling instead of ~25px in a five-way column. */
+.timeline.fill{position:relative;flex-direction:column;align-items:stretch;gap:0;flex:0 1 auto;
+  padding:8px 0}
+.timeline.fill::before{content:"";position:absolute;left:11px;top:46px;bottom:46px;width:6px;background:${C.inkGray}55}
+.timeline.fill .step{flex-direction:row;align-items:center;gap:0;flex:1 1 0;position:relative;padding-left:72px}
+.timeline.fill .dot{position:absolute;left:0;top:50%;margin-top:-14px}
+.timeline.fill .step-t{font-size:${T.body.sizes.body.max}px;line-height:1.28}
+.timeline.fill .rule{display:none}
 
 .cta-wrap{display:flex;flex-direction:column;gap:22px}
 .wordmark{font-family:${T.body.stack};font-weight:500;font-size:44px;letter-spacing:.02em}
@@ -365,6 +608,8 @@ ${diagramCss(T)}
 .circled{position:relative;display:inline-block;white-space:nowrap}
 .anno{position:absolute;left:-7%;top:-16%;width:114%;height:132%;overflow:visible;pointer-events:none}
 .it{font-family:${T.display.stack};font-style:italic}
+.arr{display:inline-block;width:.78em;height:.36em;vertical-align:.04em;margin:0 .06em}
+.arr svg{display:block;width:100%;height:100%;overflow:visible}
 .unit{font-size:.62em}
 .dia{width:100%;display:flex;align-items:center;justify-content:center}
 .diagram{display:block;max-width:100%}
@@ -405,5 +650,5 @@ ${scaledCss}
    scaledCss and from g.canvas directly, because these two values are the real
    target resolution and must never go through the reference-scale pass. */
 .slide{width:${g.canvas.w}px;height:${g.canvas.h}px}
-</style></head><body>${slideInner(spec, slide, g.canvas.w)}</body></html>`;
+</style></head><body>${slideInner(spec, slide, g.canvas.w).replace(/→/g, ARROW_MARK)}${fillScript(tokens.rules.optical.fillAim, S, slide.index)}</body></html>`;
 }

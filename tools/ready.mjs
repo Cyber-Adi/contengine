@@ -17,12 +17,11 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { ROOT } from './../src/tokens.mjs';
-import { reconcile, loadLedger, loadPerformance, atStage } from './../src/state.mjs';
+import { reconcile, loadLedger, loadPerformance, atStage, isPublishable } from './../src/state.mjs';
 import { gtmCheck } from './../src/gtm-check.mjs';
+import { SLOT_TIME, assignSlots, loadSchedule, saveSchedule, isNow, weekday } from './../src/schedule.mjs';
 
 const OUT = path.join(ROOT, 'READY-TO-POST');
-const PER_WEEK_DAYS = [2, 4];           // Tue, Thu
-const DEFAULT_TIME = '7:00 PM';         // a default, not a claim about optimal timing
 
 const esc = (s = '') => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const iso = (d) => d.toISOString().slice(0, 10);
@@ -36,7 +35,7 @@ const valid = (n) => {
   catch { return false; }
 };
 const cands = atStage('approved', ledger)
-  .filter((p) => p.provenance !== 'reconstructed-fixture')
+  .filter(isPublishable)
   .filter((p) => !(perf.posts?.[p.post]?.publishedAt))
   .filter((p) => fs.existsSync(path.join(ROOT, 'out', `post-${p.post}`, 'PUBLISH')))
   .filter((p) => valid(p.post))
@@ -67,23 +66,23 @@ fs.mkdirSync(path.dirname(waitingFile), { recursive: true });
 fs.writeFileSync(waitingFile, JSON.stringify(waitingSince, null, 2));
 const daysWaiting = (post) => Math.floor((Date.now() - new Date(waitingSince[post]).getTime()) / 864e5);
 
-// Posts with no hero-number question go first, then alternate pillars.
+// ---- order + persisted slots (src/schedule.mjs) ------------------------------
+// Dates are assigned ONCE and kept in state/schedule.json; a rerun never moves them.
+// Clean posts tie-break before hero-flagged ones; save-magnets lead per state/queue.json.
 cands.sort((a, b) => (a.heroWarn.length - b.heroWarn.length) || (a.post - b.post));
-const ordered = [];
-const pool = [...cands];
-while (pool.length) {
-  const last = ordered[ordered.length - 1];
-  const i = pool.findIndex((c) => !last || c.spec.pillar !== last.spec.pillar);
-  ordered.push(pool.splice(i === -1 ? 0 : i, 1)[0]);
+let queue = { exclude: [], priority: [], nearDuplicates: [] };
+try { queue = { ...queue, ...JSON.parse(fs.readFileSync(path.join(ROOT, 'state', 'queue.json'), 'utf8')) }; } catch { /* defaults */ }
+const scheduleFile = path.join(ROOT, 'state', 'schedule.json');
+const schedule = assignSlots(loadSchedule(scheduleFile), cands.map((c) => ({ post: c.post, pillar: c.spec.pillar, risky: c.heroWarn.length > 0 })), queue, today);
+for (const [k, e] of Object.entries(schedule.posts)) {
+  if (perf.posts?.[k]?.publishedAt && e.status === 'planned') schedule.posts[k] = { ...e, status: 'scheduled' };
 }
-
-// ---- slots: the next Tue/Thu after today, then onward -----------------------
-const slots = [];
-const d = new Date(); d.setHours(12, 0, 0, 0);
-while (slots.length < ordered.length) {
-  d.setDate(d.getDate() + 1);
-  if (PER_WEEK_DAYS.includes(d.getDay())) slots.push(new Date(d));
-}
+saveSchedule(scheduleFile, schedule);
+const ordered = cands
+  .filter((c) => schedule.posts[c.post] && !(queue.exclude ?? []).includes(c.post))
+  .sort((a, b) => schedule.posts[a.post].date.localeCompare(schedule.posts[b.post].date) || a.post - b.post);
+const slotOf = (c) => schedule.posts[c.post];
+const dayOf = (date) => DAY[weekday(date)];
 
 // ---- build ------------------------------------------------------------------
 // Clear the previous build. Some sandboxes forbid unlink; there, stale folders are
@@ -92,7 +91,7 @@ while (slots.length < ordered.length) {
 const tryRm = (p) => { try { fs.rmSync(p, { recursive: true, force: true }); return true; } catch { return false; } };
 if (!tryRm(OUT)) {
   const keep = new Set(ordered.map((c) => c.post));
-  const wanted = new Set(ordered.map((c, i) => `${iso(slots[i])} ${DAY[slots[i].getDay()]} - post-${c.post} ${c.spec.title}`.replace(/[\/:*?"<>|]/g, '')));
+  const wanted = new Set(ordered.map((c) => `${slotOf(c).date} ${dayOf(slotOf(c).date)} - post-${c.post} ${c.spec.title}`.replace(/[\/:*?"<>|]/g, '')));
   const aside = path.join(ROOT, '_to_delete', `READY-TO-POST-stale-${Date.now()}`);
   for (const name of fs.existsSync(OUT) ? fs.readdirSync(OUT) : []) {
     const m = name.match(/post-(\d+)/);
@@ -104,17 +103,18 @@ if (!tryRm(OUT)) {
 }
 fs.mkdirSync(OUT, { recursive: true });
 
-const entries = ordered.map((c, i) => {
-  const slot = slots[i];
-  const folder = `${iso(slot)} ${DAY[slot.getDay()]} - post-${c.post} ${c.spec.title}`.replace(/[\/:*?"<>|]/g, '');
+const entries = ordered.map((c) => {
+  const slot = slotOf(c).date;
+  const now = isNow(slot, today);
+  const folder = `${slot} ${dayOf(slot)} - post-${c.post} ${c.spec.title}`.replace(/[\/:*?"<>|]/g, '');
   const dst = path.join(OUT, folder);
   const src = path.join(ROOT, 'out', `post-${c.post}`, 'PUBLISH');
   fs.mkdirSync(dst, { recursive: true });
   const files = fs.readdirSync(src).sort();
-  for (const f of files) fs.copyFileSync(path.join(src, f), path.join(dst, f));
+  for (const f of files) fs.cpSync(path.join(src, f), path.join(dst, f), { recursive: true }); // PUBLISH/tiktok/ is a folder
   const slides = files.filter((f) => f.endsWith('.png'));
   const caption = fs.readFileSync(path.join(src, 'caption.txt'), 'utf8');
-  const markCmd = `node tools/log-post.mjs ${c.post} --published --date ${iso(slot)}`;
+  const markCmd = `node tools/log-post.mjs ${c.post} --published --date ${slot}`;
   const flagFile = path.join(dst, 'CHECK-FIRST.txt');
   if (!c.heroWarn.length && fs.existsSync(flagFile)) tryRm(flagFile);
   if (c.heroWarn.length) {
@@ -128,33 +128,41 @@ const entries = ordered.map((c, i) => {
       `  SKIP     you cannot -> do not schedule this post. Leave it; it sorts after every clean post.\n` +
       '           A made-up or unsourced statistic is the one thing this account cannot ship.\n');
   }
-  return { ...c, slot, folder, slides, caption, markCmd, waitingDays: daysWaiting(c.post) };
+  return { ...c, slot, now, folder, slides, caption, markCmd, waitingDays: daysWaiting(c.post) };
 });
 
 const oldestWait = entries.length ? Math.max(...entries.map((e) => e.waitingDays)) : 0;
 
 // ---- SCHEDULE.txt: the plain-text version -----------------------------------
+const nowEntries = entries.filter((e) => e.now);
+const laterEntries = entries.filter((e) => !e.now);
 const lines = [
   'READY TO SCHEDULE',
-  `generated ${new Date().toLocaleString()} — regenerated every time you run npm run tap`,
+  `generated ${new Date().toLocaleString()} — regenerated every time you run npm run tap; dates come from state/schedule.json and never shift`,
   '',
-  entries.length ? `${entries.length} post(s), two a week, suggested ${DEFAULT_TIME} (a default — change it freely). Oldest has waited ${oldestWait}d.` : 'Nothing ready. Run npm run tap, or see what it says is blocking.',
-  entries.length ? 'Mark the whole page scheduled in one command:  node tools/log-post.mjs --scheduled-all' : '',
+  entries.length ? `${nowEntries.length} post(s) NOW (next 28 days), ${laterEntries.length} LATER. Tue 3:00 PM / Thu 12:30 PM ET. Oldest has waited ${oldestWait}d.` : 'Nothing ready. Run npm run tap, or see what it says is blocking.',
+  nowEntries.length ? 'After scheduling the NOW block in Meta, mark it in one command:  node tools/log-post.mjs --scheduled-all   (NOW window only)' : '',
+  'Partial run? Name exactly what you scheduled:  node tools/log-post.mjs --scheduled 9,43,58',
   '',
 ];
-for (const e of entries) {
-  lines.push(`${iso(e.slot)} ${DAY[e.slot.getDay()]}   post-${e.post}  ${e.spec.title}   [${e.spec.pillar}]${e.heroWarn.length ? '   ⚠ CHECK-FIRST' : ''}   (waiting ${e.waitingDays}d)`);
-  lines.push(`    folder:  ${e.folder}/`);
-  lines.push(`    after scheduling:  ${e.markCmd}`);
-  lines.push('');
-}
+const block = (title, list) => {
+  lines.push(`==== ${title} (${list.length}) ====`, '');
+  for (const e of list) {
+    lines.push(`${e.slot} ${dayOf(e.slot)} ${slotOf(e).time}   post-${e.post}  ${e.spec.title}   [${e.spec.pillar}]${e.heroWarn.length ? '   ⚠ CHECK-FIRST' : ''}   (waiting ${e.waitingDays}d)`);
+    lines.push(`    folder:  ${e.folder}/`);
+    lines.push(`    after scheduling:  ${e.markCmd}`);
+    lines.push('');
+  }
+};
+block('SCHEDULE NOW', nowEntries);
+block('LATER', laterEntries);
 fs.writeFileSync(path.join(OUT, 'SCHEDULE.txt'), lines.join('\n'));
 
 // ---- index.html: the visual version -----------------------------------------
 const card = (e) => `
-<article class="post${e.heroWarn.length ? ' warn' : ''}">
+<article class="post${e.heroWarn.length ? ' warn' : ''}${e.now ? ' now' : ''}">
   <header>
-    <div class="slot"><span class="day">${DAY[e.slot.getDay()]}</span><span class="date">${e.slot.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span><span class="time">${DEFAULT_TIME}</span></div>
+    <div class="slot"><span class="day">${dayOf(e.slot)}</span><span class="date">${new Date(`${e.slot}T12:00:00Z`).toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' })}</span><span class="time">${slotOf(e).time}</span></div>
     <div class="meta">
       <h2>${esc(e.spec.title)}</h2>
       <p>post-${e.post} · ${esc(e.spec.pillar)}${e.spec.gtmAngle ? ' · ' + esc(e.spec.gtmAngle) : ''} · ${e.slides.length} slides</p>
@@ -201,6 +209,7 @@ textarea{width:100%;font:13px/1.5 ui-monospace,Menlo,monospace;background:var(--
 button{font:600 13px/1 -apple-system,sans-serif;padding:9px 14px;border-radius:3px;border:1px solid var(--accent);background:var(--accent);color:#fff;cursor:pointer}
 button.ghost{background:transparent;color:var(--accent)}button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
 code{font:12px ui-monospace,Menlo,monospace;color:var(--dim);overflow-wrap:anywhere}
+.sec{font:700 22px/1.2 Georgia,serif;margin:28px 0 14px}
 .empty{padding:40px;text-align:center;color:var(--dim)}
 </style></head><body><div class="wrap">
 <h1>Ready to post</h1>
@@ -210,9 +219,9 @@ ${entries.length ? `<p class="lede"${oldestWait >= 10 ? ' style="color:var(--war
 <li>Open <b>business.facebook.com</b> on this Mac → Create post → Instagram → Schedule. (Or the Instagram app: new post → Advanced settings → Schedule — up to 75 days ahead.)</li>
 <li>Drag in the slides from that post's folder in <code>READY-TO-POST/</code>, <b>in order</b>. Order is the carousel.</li>
 <li>Copy caption below, paste. Set the date shown on the left.</li>
-<li>After scheduling everything on the page, run <b>one</b> command from <code>~/Desktop/contengine</code> instead of one per post: <code>node tools/log-post.mjs --scheduled-all</code> — it marks every post above scheduled on the date shown here. (Skipped one? Use its own "mark scheduled" command instead.)</li>
+<li>After scheduling everything on the page, run <b>one</b> command from <code>~/Desktop/contengine</code> instead of one per post: <code>node tools/log-post.mjs --scheduled-all</code> — it marks only the NOW posts (next 28 days) scheduled on the date shown. Scheduled a different set? Use <code>--scheduled N,N,N</code> or a post's own command.</li>
 </ol></section>
-${entries.length ? entries.map(card).join('\n') : '<p class="empty">Nothing ready right now. Run <code>npm run tap</code>; its last lines say what is blocking.</p>'}
+${entries.length ? `<h2 class="sec">Schedule now (${nowEntries.length}): next 28 days</h2>${nowEntries.map(card).join('\n') || '<p class="empty">Nothing due in the next 28 days.</p>'}<h2 class="sec">Later (${laterEntries.length})</h2>${laterEntries.map(card).join('\n')}` : '<p class="empty">Nothing ready right now. Run <code>npm run tap</code>; its last lines say what is blocking.</p>'}
 </div>
 <script>
 document.addEventListener('click', async (ev) => {
@@ -226,4 +235,4 @@ document.addEventListener('click', async (ev) => {
 fs.writeFileSync(path.join(OUT, 'index.html'), html);
 
 console.log(`READY-TO-POST/  ${entries.length} post(s)`);
-for (const e of entries) console.log(`  ${iso(e.slot)} ${DAY[e.slot.getDay()]}  post-${e.post}  ${e.spec.title}${e.heroWarn.length ? '   ⚠ CHECK-FIRST' : ''}`);
+for (const e of entries) console.log(`  ${e.now ? 'NOW  ' : 'later'} ${e.slot} ${dayOf(e.slot)}  post-${e.post}  ${e.spec.title}${e.heroWarn.length ? '   ⚠ CHECK-FIRST' : ''}`);

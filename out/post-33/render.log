@@ -1,0 +1,20 @@
+valid: specs/post-33.json
+  WARN no-angle         No gtmAngle set. Angles: money-leak, date-label-lie, takeout-guilt. Without one this post cannot feed the Ad Bank, whose rule is 90% adaptation and 10% origination.
+  gate 6 -> PASS  (0 fail, 1 warn)
+  downsampled 6 slides -> 1440x1800 (Lanczos)
+rendered 6 slides (ig) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-33/slides
+  contact sheet -> out/post-33/contact-sheet.png  (6 slides, 1450x904)
+  feed-scale thumbs -> out/post-33/thumbs.png  (rendered at 200px wide)
+
+  QA — post 33: The FIFO Fridge
+  verdict: PASS   fails=0  warns=5   ocr: skipped
+  typographic normalizer: 10 substitution(s) logged (apostrophe, double-quote-close, double-quote-open, spaced-hyphen-to-en-dash)
+    [WARN] G5.4-orphan slide 1: headline ends on an orphan: 'does.'
+    [WARN] G5.5-fill slide 4: content occupies 50% of its box — type or diagram could carry more of the frame
+    [WARN] G5.4-orphan slide 4: headline ends on an orphan: 'waste.'
+    [WARN] G5.7-rhythm-centroid slide 2: slides 1 and 2 centre at 37% and 35% of frame height, 2% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 3: slides 2 and 3 centre at 35% and 36% of frame height, 1% apart (need 12%)
+  downsampled 6 slides -> 1440x2560 (Lanczos)
+rendered 6 slides (tiktok) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-33/slides-tiktok
+exported 6 slides + 6 tiktok -> out/post-33/PUBLISH
+caption, alt, tiktok, POST-ME.txt written. Honesty check clean.

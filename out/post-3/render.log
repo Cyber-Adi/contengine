@@ -1,0 +1,19 @@
+valid: specs/post-3.json
+  gate 6 -> PASS  (0 fail, 0 warn)
+  downsampled 7 slides -> 1440x1800 (Lanczos)
+rendered 7 slides (ig) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-3/slides
+  contact sheet -> out/post-3/contact-sheet.png  (7 slides, 1450x904)
+  feed-scale thumbs -> out/post-3/thumbs.png  (rendered at 200px wide)
+
+  QA — post 3: The Bulk-Buy Lie
+  verdict: PASS   fails=0  warns=5   ocr: skipped
+  typographic normalizer: 5 substitution(s) logged (apostrophe, double-quote-close, double-quote-open)
+    [WARN] G5.5-fill slide 3: content occupies 49% of its box — type or diagram could carry more of the frame
+    [WARN] G5.5-fill slide 4: content occupies 48% of its box — type or diagram could carry more of the frame
+    [WARN] G5.5-fill slide 6: content occupies 39% of its box — type or diagram could carry more of the frame
+    [WARN] G5.5-fill slide 7: content occupies 34% of its box — type or diagram could carry more of the frame
+    [WARN] G5.7-rhythm-centroid slide 5: slides 4 and 5 centre at 32% and 33% of frame height, 1% apart (need 12%)
+  downsampled 7 slides -> 1440x2560 (Lanczos)
+rendered 7 slides (tiktok) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-3/slides-tiktok
+exported 7 slides + 7 tiktok -> out/post-3/PUBLISH
+caption, alt, tiktok, POST-ME.txt written. Honesty check clean.

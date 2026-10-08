@@ -1,0 +1,85 @@
+{
+  "post": 16,
+  "title": "The Sheet Pan Clean-Out",
+  "provenance": "converted-from-notion-script",
+  "verdict": "PASS",
+  "fails": 0,
+  "warns": 4,
+  "ocr": "skipped (opt-in: QA_OCR=1 or --ocr, run at batch end)",
+  "normalizations": [
+    {
+      "slide": 1,
+      "field": "copy.headline",
+      "rule": "double-quote-open",
+      "count": 1
+    },
+    {
+      "slide": 1,
+      "field": "copy.headline",
+      "rule": "double-quote-close",
+      "count": 1
+    },
+    {
+      "slide": 1,
+      "field": "copy.headline",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 1,
+      "field": "copy.body",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 2,
+      "field": "copy.items[0]",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 5,
+      "field": "copy.headline",
+      "rule": "double-quote-open",
+      "count": 1
+    },
+    {
+      "slide": 5,
+      "field": "copy.headline",
+      "rule": "double-quote-close",
+      "count": 1
+    },
+    {
+      "slide": 5,
+      "field": "copy.body",
+      "rule": "apostrophe",
+      "count": 1
+    }
+  ],
+  "findings": [
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 2,
+      "msg": "slides 1 and 2 centre at 46% and 36% of frame height, 11% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 3,
+      "msg": "slides 2 and 3 centre at 36% and 31% of frame height, 4% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 4,
+      "msg": "slides 3 and 4 centre at 31% and 38% of frame height, 7% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 5,
+      "msg": "slides 4 and 5 centre at 38% and 49% of frame height, 10% apart (need 12%)"
+    }
+  ]
+}

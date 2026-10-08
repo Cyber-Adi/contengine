@@ -1,0 +1,121 @@
+{
+  "postNumber": 14,
+  "title": "Trash Ingredients That Are Actually Worth Money",
+  "pillar": "Waste Hacks",
+  "ctaTier": "Tier 0",
+  "briefSource": "Notion: Carousel Scripts - Posts 9-16 + Origin Story",
+  "provenance": "converted-from-notion-script",
+  "editorialNotes": [
+    "\"$3-4 of flavor\" per rind is script copy with no cited source: body copy only, never hero type."
+  ],
+  "thread": {
+    "element": "ingredient moving from a trash can to a plate",
+    "kind": "builder",
+    "startState": "ingredient in the bin",
+    "endState": "ingredient plated",
+    "zone": "bottom-rail",
+    "heightPct": 12,
+    "palette": [
+      "harvestGold",
+      "inkGray"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "You're throwing away ingredients worth more than what you cooked."
+      },
+      "threadState": {
+        "progress": 0.2,
+        "label": "In the bin",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Parmesan rinds →",
+        "items": [
+          "Don't throw the rind away.",
+          "Drop it into soups, stews, or risotto while it simmers.",
+          "It melts into the broth and adds depth you can't get from anything else.",
+          "One rind = $3–4 of flavor."
+        ]
+      },
+      "threadState": {
+        "progress": 0.4,
+        "label": "Rinds",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "split-compare",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Pasta water →",
+        "items": [
+          "That starchy water is a free emulsifier. A ladle of it turns any sauce silky.",
+          "Every Italian restaurant does this. Every home cook pours it down the drain."
+        ]
+      },
+      "threadState": {
+        "progress": 0.6,
+        "label": "Pasta water",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "light",
+      "layout": "timeline",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Chickpea can liquid (aquafaba) →",
+        "items": [
+          "The liquid in your can of chickpeas whips like egg whites.",
+          "Meringue, mousse, cocktail foam — all from something you were about to rinse off."
+        ]
+      },
+      "threadState": {
+        "progress": 0.8,
+        "label": "Aquafaba",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "reframe",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Bacon grease →",
+        "body": "Strain it into a jar. Store in the fridge. Use it instead of butter or oil for roasting vegetables, frying eggs, or making cornbread. Your grandparents did this. It's not gross. It's free cooking fat."
+      },
+      "threadState": {
+        "progress": 1,
+        "label": "Plated",
+        "tone": "good"
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+post-27 — You're Paying 19% More AND Wasting 30%
+6 slides, in order 01..06   (9:16 set in tiktok/, 6 slides)
+pillar: The $2913 Problem   angle: money-leak   cta: Tier 2
+qa: PASS   provenance: converted-from-notion-script
+
+1. AirDrop this folder to your phone.
+2. Instagram > new post > select 01..06 IN ORDER. Paste caption.txt; per-slide alt text is in alt.txt.
+3. TikTok: upload the images in tiktok/, use tiktok.txt (title, caption, hashtags, sound).
+4. Then, same day:  node tools/log-post.mjs 27 --published
+   and about a week later, the numbers:
+   node tools/log-post.mjs 27 --reach 1200 --saves 40 --sends 18 --slide3 0.42

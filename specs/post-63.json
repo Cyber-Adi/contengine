@@ -1,0 +1,273 @@
+{
+  "postNumber": 63,
+  "title": "Two Rooms, Same Thursday",
+  "pillar": "Origin Story",
+  "ctaTier": "Tier 3",
+  "valueEncapsulated": "Acknowledgment / Visibility",
+  "sendTrigger": "Send this to whoever still has a fridge they are scared to open.",
+  "briefSource": "fond_Content_Brief_Posts_54-55-63_and_Kinetic_Reel_56Friday.md",
+  "provenance": "brief",
+  "editorialNotes": [
+    "Only external stat is the EPA April 2025 figure ($2,913, sourced in gtm.json). No user counts or traction claims.",
+    "Slide 7 states pre-launch status and says \"a TestFlight beta coming this summer\"; today is 2026-10-02, so that phrase is stale and the post needs a hold plus Adi review before it ships.",
+    "Brief allows a parchment tone on light slides for Origin Story posts; no spec field exists for it, so light slides render on standard Off-White."
+  ],
+  "thread": {
+    "element": "two dotted paths converging along the bottom rail into a fond mark",
+    "kind": "builder",
+    "startState": "two dots at the far left and far right",
+    "endState": "paths meet at center, resolving into a single small fond mark",
+    "zone": "bottom-rail",
+    "heightPct": 15,
+    "palette": [
+      "harvestGold",
+      "inkGray",
+      "fondGreen"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "inkGray",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "On Thursday nights I push carts at a food pantry. On weekends I serve dinner at a retirement home."
+      },
+      "threadState": {
+        "progress": 0.08,
+        "label": "Far apart",
+        "tone": "neutral"
+      },
+      "valign": "bottom"
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "dark",
+      "layout": "timeline",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "In one room, people need food.",
+        "items": [
+          "In the other, food gets thrown away.",
+          "Both rooms are within fifteen minutes of my house."
+        ]
+      },
+      "threadState": {
+        "progress": 0.2,
+        "label": "Closing in",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Nobody in either room is doing anything wrong.",
+        "items": [
+          "The pantry is run by people who show up in the rain.",
+          "The kitchen follows food safety rules it has to follow.",
+          "The waste is not a villain."
+        ],
+        "body": "It is a gap."
+      },
+      "threadState": {
+        "progress": 0.32,
+        "label": "Closing in",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "hero-number",
+      "accent": "signalRed",
+      "declaresLoss": true,
+      "copy": {
+        "heroNumber": "$2,913",
+        "heroNumberCaption": "The average American household of four throws away $2,913 of food a year.",
+        "body": "That is the national version of the thing I was watching happen in one building on one night.",
+        "citation": "U.S. Environmental Protection Agency, April 2025."
+      },
+      "threadState": {
+        "progress": 0.44,
+        "label": "Closer than far",
+        "tone": "loss"
+      },
+      "valign": "bottom"
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "light",
+      "layout": "timeline",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Here is what I kept getting stuck on.",
+        "items": [
+          "Nobody decides to waste that.",
+          "There is no moment where someone chooses it.",
+          "It happens because the food stops being visible long before it stops being good."
+        ]
+      },
+      "threadState": {
+        "progress": 0.56,
+        "label": "Closer",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 6,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "So I built something.",
+        "body": "I am seventeen, I did not have a formal coding background when I started, and I used AI to close the gap between what I could picture and what I could actually ship."
+      },
+      "threadState": {
+        "progress": 0.68,
+        "label": "Quarter apart",
+        "tone": "neutral"
+      },
+      "valign": "bottom"
+    },
+    {
+      "index": 7,
+      "archetype": "value",
+      "background": "light",
+      "layout": "timeline",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "It is called fond. It is not launched yet.",
+        "items": [
+          "There are no user numbers I can honestly quote you.",
+          "I would rather tell you that than inflate it."
+        ]
+      },
+      "threadState": {
+        "progress": 0.8,
+        "label": "Nearly touching",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 8,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "I do not think the answer to wasted food is telling people to care more. I think it is making the thing visible while there is still time to act on it.",
+        "ctaLine": "Building an app that makes what is in your kitchen impossible to forget.",
+        "sendTrigger": "Send this to whoever still has a fridge they are scared to open.",
+        "citation": "Keep this one. Follow for more, we're working on something for this."
+      },
+      "threadState": {
+        "progress": 1,
+        "label": "Met",
+        "tone": "good"
+      },
+      "valign": "bottom"
+    }
+  ],
+  "refinement": {
+    "round": 0,
+    "changes": [
+      {
+        "slide": 1,
+        "field": "valign",
+        "from": "center",
+        "to": "bottom",
+        "why": "slides 1 and 2 centre at 0.39 and 0.38 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 2,
+        "field": "layout",
+        "from": "stack-list",
+        "to": "timeline",
+        "why": "slides 1 and 2 centre at 0.39 and 0.38 of frame height (need 0.12 apart); slides 2 and 3 centre at 0.38 and 0.35 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 3,
+        "field": "layout",
+        "from": "timeline",
+        "to": "stack-list",
+        "why": "slides 2 and 3 centre at 0.38 and 0.35 of frame height (need 0.12 apart); slides 3 and 4 centre at 0.35 and 0.37 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 4,
+        "field": "valign",
+        "from": "center",
+        "to": "bottom",
+        "why": "slides 3 and 4 centre at 0.35 and 0.37 of frame height (need 0.12 apart); slides 4 and 5 centre at 0.37 and 0.38 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 5,
+        "field": "layout",
+        "from": "stack-list",
+        "to": "timeline",
+        "why": "slides 5-6-7 share one ground (light); slides 4 and 5 centre at 0.37 and 0.38 of frame height (need 0.12 apart); slides 5 and 6 centre at 0.38 and 0.39 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 6,
+        "field": "background",
+        "from": "light",
+        "to": "dark",
+        "why": "slides 5-6-7 share one ground (light); slides 5 and 6 centre at 0.38 and 0.39 of frame height (need 0.12 apart); slides 6 and 7 centre at 0.39 and 0.38 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 6,
+        "field": "valign",
+        "from": "center",
+        "to": "bottom",
+        "why": "slides 5-6-7 share one ground (light); slides 5 and 6 centre at 0.38 and 0.39 of frame height (need 0.12 apart); slides 6 and 7 centre at 0.39 and 0.38 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 7,
+        "field": "layout",
+        "from": "split-compare",
+        "to": "timeline",
+        "why": "slides 5-6-7 share one ground (light); slides 6 and 7 centre at 0.39 and 0.38 of frame height (need 0.12 apart); slides 7 and 8 centre at 0.38 and 0.46 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 8,
+        "field": "valign",
+        "from": "center",
+        "to": "bottom",
+        "why": "slides 7 and 8 centre at 0.38 and 0.46 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 7,
+        "field": "items.0",
+        "from": "There is a waitlist, a TestFlight beta coming this summer, and no user numbers I can honestly quote you.",
+        "to": "There are no user numbers I can honestly quote you.",
+        "why": "Adi-authorized Oct 7: deleted stale \"TestFlight beta coming this summer\" Waitlist mention also removed: state/launch.json has waitlistLive false."
+      }
+    ]
+  },
+  "ctaSwap": [
+    {
+      "slide": 8,
+      "field": "citation",
+      "from": "Join the waitlist, link in bio.",
+      "to": "Keep this one. Follow for more, we're working on something for this.",
+      "rule": "setup-cta"
+    }
+  ]
+}

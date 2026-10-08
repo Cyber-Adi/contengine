@@ -1,0 +1,19 @@
+valid: specs/post-16.json
+  WARN no-angle         No gtmAngle set. Angles: money-leak, date-label-lie, takeout-guilt. Without one this post cannot feed the Ad Bank, whose rule is 90% adaptation and 10% origination.
+  gate 6 -> PASS  (0 fail, 1 warn)
+  downsampled 5 slides -> 1440x1800 (Lanczos)
+rendered 5 slides (ig) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-16/slides
+  contact sheet -> out/post-16/contact-sheet.png  (5 slides, 1450x904)
+  feed-scale thumbs -> out/post-16/thumbs.png  (rendered at 200px wide)
+
+  QA — post 16: The Sheet Pan Clean-Out
+  verdict: PASS   fails=0  warns=4   ocr: skipped
+  typographic normalizer: 8 substitution(s) logged (apostrophe, double-quote-close, double-quote-open)
+    [WARN] G5.7-rhythm-centroid slide 2: slides 1 and 2 centre at 46% and 36% of frame height, 11% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 3: slides 2 and 3 centre at 36% and 31% of frame height, 4% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 4: slides 3 and 4 centre at 31% and 38% of frame height, 7% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 5: slides 4 and 5 centre at 38% and 49% of frame height, 10% apart (need 12%)
+  downsampled 5 slides -> 1440x2560 (Lanczos)
+rendered 5 slides (tiktok) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-16/slides-tiktok
+exported 5 slides + 5 tiktok -> out/post-16/PUBLISH
+caption, alt, tiktok, POST-ME.txt written. Honesty check clean.

@@ -1,0 +1,49 @@
+{
+  "post": 25,
+  "title": "3 Meals From 1 Rotisserie Chicken",
+  "provenance": "converted-from-notion-script",
+  "verdict": "PASS",
+  "fails": 0,
+  "warns": 4,
+  "ocr": "skipped (opt-in: QA_OCR=1 or --ocr, run at batch end)",
+  "normalizations": [
+    {
+      "slide": 5,
+      "field": "copy.headline",
+      "rule": "apostrophe",
+      "count": 1
+    },
+    {
+      "slide": 5,
+      "field": "copy.ctaLine",
+      "rule": "apostrophe",
+      "count": 2
+    }
+  ],
+  "findings": [
+    {
+      "gate": "G4.3-dominance",
+      "level": "WARN",
+      "slide": 1,
+      "msg": "no dominant element at feed scale (largest ink band 9% of height)"
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 3,
+      "msg": "content occupies 51% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.5-fill",
+      "level": "WARN",
+      "slide": 5,
+      "msg": "content occupies 51% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.2-balance",
+      "level": "WARN",
+      "slide": 5,
+      "msg": "ink centre of mass at 66% of height \u2014 bottom-heavy"
+    }
+  ]
+}

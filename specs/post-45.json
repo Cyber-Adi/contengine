@@ -1,0 +1,191 @@
+{
+  "postNumber": 45,
+  "title": "The Color of Fresh Is a Lie",
+  "pillar": "Supermarket Secrets",
+  "ctaTier": "Tier 0",
+  "valueEncapsulated": "Awareness = Prerequisite for Change",
+  "sendTrigger": "Send this to whoever does the groceries.",
+  "briefSource": "fond_Content_Brief_Posts_44-45-46_and_Kinetic_Reel_OpportunityCost.md",
+  "provenance": "brief",
+  "editorialNotes": [
+    "Slide 2 repeats slide 1 layout (hero-statement): both are two-line hooks; same constraint as post 41.",
+    "Brief draws the stamp with a Signal Red outline; thread palette here is Ink Gray and Steel Blue because no slide declares a loss figure and Gate 2.4 forbids red elsewhere.",
+    "No statistic appears; the 12-month apple claim is cited to USDA Postharvest Handling guidelines."
+  ],
+  "thread": {
+    "element": "FRESH stamp losing ink and clarity each slide",
+    "kind": "clearing",
+    "startState": "crisp bold stamp",
+    "endState": "stamp gone, replaced by a small honest check",
+    "zone": "side-rail",
+    "heightPct": 10,
+    "palette": [
+      "inkGray",
+      "steelBlue"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "That apple looks fresh because the store wants it to."
+      },
+      "threadState": {
+        "progress": 0.08,
+        "label": "Crisp",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "dark",
+      "layout": "statement-xl",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "You have never once seen this store's food in its actual condition. Only its optimized one."
+      },
+      "threadState": {
+        "progress": 0.2,
+        "label": "Blurring",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Produce misting systems spray a fine water mist every few minutes.",
+        "items": [
+          "It makes vegetables look dewy and fresh.",
+          "It also adds water weight - you're paying per pound for water - and accelerates rot by introducing moisture to surfaces."
+        ]
+      },
+      "threadState": {
+        "progress": 0.32,
+        "label": "Fading",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "light",
+      "layout": "timeline",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Apples in the produce section may be up to 12 months old.",
+        "items": [
+          "Controlled-atmosphere storage (low oxygen, low temperature) suspends ripening.",
+          "A wax coating restores the shine."
+        ],
+        "citation": "USDA Postharvest Handling guidelines."
+      },
+      "threadState": {
+        "progress": 0.44,
+        "label": "Fading",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "split-compare",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Meat cases use specific lighting.",
+        "items": [
+          "Red-spectrum lights make beef look redder and fresher.",
+          "Under neutral light, the same steak looks brown and dull."
+        ],
+        "body": "The meat hasn't changed. The light has."
+      },
+      "threadState": {
+        "progress": 0.56,
+        "label": "Half faded",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 6,
+      "archetype": "value",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Bakery items labeled \"baked fresh today\" may have arrived frozen and been reheated on-site.",
+        "items": [
+          "The legal definition of \"baked\" includes finishing a par-baked product.",
+          "Fresh is a feeling, not a fact."
+        ]
+      },
+      "threadState": {
+        "progress": 0.68,
+        "label": "Cracked",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 7,
+      "archetype": "reframe",
+      "background": "light",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Misting, waxing, lighting, and labeling are all legal. None are disclosed at the point of sale.",
+        "body": "Freshness is a visual performance, not a guarantee."
+      },
+      "threadState": {
+        "progress": 0.8,
+        "label": "Outline only",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 8,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The store shows you what it wants you to see.",
+        "ctaLine": "fond tracks what you actually bought and when it actually expires.",
+        "sendTrigger": "Send this to whoever does the groceries."
+      },
+      "threadState": {
+        "progress": 1,
+        "label": "Actual expiry, tracked",
+        "tone": "good"
+      }
+    }
+  ],
+  "refinement": {
+    "round": 0,
+    "changes": [
+      {
+        "slide": 2,
+        "field": "layout",
+        "from": "hero-statement",
+        "to": "statement-xl",
+        "why": "slides 1 and 2 were both headline-only hero-statement (X-distinct) and the short slide-2 headline filled <55% of its frame (G5.5); statement-xl is the token-defined large-scale headline-only layout"
+      }
+    ]
+  }
+}

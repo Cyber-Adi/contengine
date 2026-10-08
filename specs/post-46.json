@@ -1,0 +1,244 @@
+{
+  "postNumber": 46,
+  "title": "The Kids' Plate Tax",
+  "pillar": "The $2913 Problem",
+  "ctaTier": "Tier 0",
+  "valueEncapsulated": "Acknowledgment / Visibility",
+  "briefSource": "fond_Content_Brief_Posts_44-45-46_and_Kinetic_Reel_OpportunityCost.md",
+  "provenance": "brief",
+  "editorialNotes": [
+    "The \"$4 per plate\" and \"5 times a week\" figures in the hook are anecdotal, not sourced; kept as headline-level scene copy."
+  ],
+  "thread": {
+    "element": "dinner plate emptying from overflowing to correctly portioned",
+    "kind": "clearing",
+    "startState": "overflowing plate, food spilling past the rim",
+    "endState": "small clean plate plus a full serving bowl beside it",
+    "zone": "bottom-rail",
+    "heightPct": 14,
+    "palette": [
+      "inkGray",
+      "fondGreen"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "split-compare",
+      "accent": "signalRed",
+      "declaresLoss": true,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "Your kid ate three bites and left the rest.",
+        "items": [
+          "That plate cost you $4.",
+          "It happens 5 times a week."
+        ]
+      },
+      "threadState": {
+        "progress": 0.08,
+        "label": "Overflowing",
+        "tone": "loss"
+      }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "dark",
+      "layout": "statement-xl",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "You already know they won't finish it.",
+        "body": "You serve the full plate anyway. Here's why that's not a mistake - it's a reflex."
+      },
+      "threadState": {
+        "progress": 0.2,
+        "label": "Less full",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "light",
+      "layout": "hero-statement",
+      "accent": "signalRed",
+      "declaresLoss": true,
+      "copy": {
+        "headline": "Children under 12 waste food served to them.",
+        "body": "For a family with two kids, that's plate waste alone - separate from the fridge waste figure."
+      },
+      "threadState": {
+        "progress": 0.32,
+        "label": "Receding",
+        "tone": "loss"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "It's not their fault.",
+        "items": [
+          "Children's appetites are genuinely unpredictable - smaller humans with smaller stomachs who change their minds constantly.",
+          "The problem isn't the child. It's the portion."
+        ]
+      },
+      "threadState": {
+        "progress": 0.44,
+        "label": "Shrinking",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "timeline",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The guilt loop:",
+        "items": [
+          "serve a full plate",
+          "child eats 60%",
+          "scrape the rest into the trash",
+          "feel guilty",
+          "serve a full plate again next time"
+        ],
+        "body": "The loop never breaks because emotion overrides the math."
+      },
+      "threadState": {
+        "progress": 0.56,
+        "label": "Rim visible",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 6,
+      "archetype": "value",
+      "background": "light",
+      "layout": "split-compare",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The fix isn't portion-control lectures. It's \"start small, seconds free.\"",
+        "items": [
+          "Serve half. If they want more, they ask.",
+          "Restaurants call this coursing. Parents can call it not throwing $4 away."
+        ]
+      },
+      "threadState": {
+        "progress": 0.68,
+        "label": "Bowl appears",
+        "tone": "good"
+      }
+    },
+    {
+      "index": 7,
+      "archetype": "reframe",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The 3-step reset:",
+        "items": [
+          "1) Serve half a portion.",
+          "2) Let them ask for seconds - don't offer first.",
+          "3) Praise the ask, not the clean plate."
+        ]
+      },
+      "threadState": {
+        "progress": 0.8,
+        "label": "Settling",
+        "tone": "good"
+      }
+    },
+    {
+      "index": 8,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "You're not wasting food because you're a bad parent. You're wasting food because you were taught a full plate means love.",
+        "ctaLine": "fond helps you track what your household actually eats - so you serve what gets used."
+      },
+      "threadState": {
+        "progress": 1,
+        "label": "Complete",
+        "tone": "good"
+      }
+    }
+  ],
+  "refinement": {
+    "round": 0,
+    "changes": [
+      {
+        "slide": 2,
+        "field": "layout",
+        "from": "hero-statement",
+        "to": "statement-xl",
+        "why": "slides 1 and 2 were both headline-only hero-statement (X-distinct) and the short slide-2 headline filled <55% of its frame (G5.5); statement-xl is the token-defined large-scale headline-only layout"
+      },
+      {
+        "slide": 3,
+        "field": "heroNumber",
+        "from": "$800-1,100",
+        "to": "",
+        "why": "Adi-authorized Oct 7: derived $800-1,100 range and unsourced 30-40% removed; figure traces only to a derivation, so it renders qualitatively."
+      },
+      {
+        "slide": 3,
+        "field": "heroNumberUnit",
+        "from": "/year",
+        "to": "",
+        "why": "Adi-authorized Oct 7: derived $800-1,100 range and unsourced 30-40% removed; figure traces only to a derivation, so it renders qualitatively."
+      },
+      {
+        "slide": 3,
+        "field": "heroNumberCaption",
+        "from": "Children under 12 waste an estimated 30-40% of the food served to them. For a family with two kids, that's roughly $800-1,100 per year in plate waste alone - separate from the fridge waste figure.",
+        "to": "",
+        "why": "Adi-authorized Oct 7: derived $800-1,100 range and unsourced 30-40% removed; figure traces only to a derivation, so it renders qualitatively."
+      },
+      {
+        "slide": 3,
+        "field": "citation",
+        "from": "WRAP UK Children's Food Waste report / Journal of the Academy of Nutrition and Dietetics.",
+        "to": "",
+        "why": "Adi-authorized Oct 7: derived $800-1,100 range and unsourced 30-40% removed; figure traces only to a derivation, so it renders qualitatively."
+      },
+      {
+        "slide": 3,
+        "field": "headline",
+        "from": "",
+        "to": "Children under 12 waste food served to them.",
+        "why": "Adi-authorized Oct 7: qualitative restatement using the caption's own words."
+      },
+      {
+        "slide": 3,
+        "field": "body",
+        "from": "",
+        "to": "For a family with two kids, that's plate waste alone - separate from the fridge waste figure.",
+        "why": "Adi-authorized Oct 7: qualitative restatement using the caption's own words."
+      },
+      {
+        "slide": 3,
+        "field": "layout",
+        "from": "hero-number",
+        "to": "hero-statement",
+        "why": "Adi-authorized Oct 7: no hero figure remains."
+      }
+    ]
+  }
+}

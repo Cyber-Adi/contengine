@@ -1,0 +1,153 @@
+{
+  "postNumber": 58,
+  "title": "5 Things You Didn't Know You Could Freeze",
+  "pillar": "Waste Hacks",
+  "ctaTier": "Tier 1",
+  "briefSource": "fond_Carousel_Design_Brief_Posts_57-59.md",
+  "provenance": "brief",
+  "editorialNotes": [
+    "Tier 1: brief says no product name; the renderer paints the fond wordmark on every cta-card, so Adi should confirm that is acceptable for Tier 1.",
+    "Slide 5 carries the brief's items 4 and 5 together; item 5 label and text sit in the last list entry so the copy stays verbatim and in order.",
+    "No statistic; freezer guidance only."
+  ],
+  "thread": {
+    "element": "5-compartment ice-cube tray filling one cube per reveal",
+    "kind": "accumulator",
+    "startState": "empty 5-compartment tray",
+    "endState": "all five compartments filled, tray lifted to center",
+    "zone": "bottom-rail",
+    "heightPct": 12,
+    "palette": [
+      "inkGray",
+      "fondGreen",
+      "steelBlue"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "Your freezer is a pause button. You're using it for ice and not much else.",
+        "body": "Here are 5 things you didn't know you could freeze."
+      },
+      "threadState": {
+        "progress": 0.08,
+        "label": "0 of 5",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "1. WINE.",
+        "items": [
+          "Leftover wine -> freeze in an ice-cube tray.",
+          "Drop a cube straight into sauces, braises, and pan deglazes.",
+          "Never pour the last of the bottle out again."
+        ]
+      },
+      "threadState": {
+        "progress": 0.25,
+        "label": "1 of 5",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "2. FRESH GINGER.",
+        "body": "Freeze the whole knob. Grate it straight from frozen - no peeling, no stringy mess, and it lasts for months instead of shriveling in the drawer."
+      },
+      "threadState": {
+        "progress": 0.42,
+        "label": "2 of 5",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "light",
+      "layout": "timeline",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "3. EGGS.",
+        "items": [
+          "Not in the shell - crack them first.",
+          "Whisk, pour into a tray, freeze.",
+          "Perfect for baking and scrambles. Yolks and whites freeze separately too."
+        ]
+      },
+      "threadState": {
+        "progress": 0.58,
+        "label": "3 of 5",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "4. GREEK YOGURT.",
+        "items": [
+          "About to expire? Freeze dollops on a tray.",
+          "Drop them frozen into smoothies, or thaw for baking.",
+          "Texture shifts slightly - flavor doesn't.",
+          "5. FRESH HERBS. Chop, pack into a tray, top with olive oil, freeze. Sauté-ready flavor cubes that last for months."
+        ]
+      },
+      "threadState": {
+        "progress": 0.75,
+        "label": "5 of 5",
+        "tone": "good"
+      }
+    },
+    {
+      "index": 6,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The freezer doesn't stop time. But it buys you weeks you were throwing away.",
+        "ctaLine": "We built an app that tracks what's about to expire - so you can freeze it in time. Save it before your fridge does the forgetting. Follow for more, something's on the way."
+      },
+      "threadState": {
+        "progress": 1.0,
+        "label": "Full tray",
+        "tone": "good"
+      }
+    }
+  ],
+  "ctaSwap": [
+    {
+      "slide": 6,
+      "field": "ctaLine",
+      "from": "We built an app that tracks what's about to expire - so you can freeze it in time. Link in bio.",
+      "to": "We built an app that tracks what's about to expire - so you can freeze it in time. Save it before your fridge does the forgetting. Follow for more, something's on the way.",
+      "rule": "setup-cta"
+    }
+  ]
+}

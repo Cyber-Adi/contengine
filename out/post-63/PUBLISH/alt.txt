@@ -1,0 +1,8 @@
+Slide 1: On Thursday nights I push carts at a food pantry. On weekends I serve dinner at a retirement home.
+Slide 2: In one room, people need food. In the other, food gets thrown away. Both rooms are within fifteen minutes of my house.
+Slide 3: Nobody in either room is doing anything wrong. The pantry is run by people who show up in the rain. The kitchen follows food safety rules it has to follow. The waste is not a villain. It is a gap.
+Slide 4: $2,913. The average American household of four throws away $2,913 of food a year. That is the national version of the thing I was watching happen in one building on one night.
+Slide 5: Here is what I kept getting stuck on. Nobody decides to waste that. There is no moment where someone chooses it. It happens because the food stops being visible long before it stops being good.
+Slide 6: So I built something. I am seventeen, I did not have a formal coding background when I started, and I used AI to close the gap between what I could picture and what I could actually ship.
+Slide 7: It is called fond. It is not launched yet. There are no user numbers I can honestly quote you. I would rather tell you that than inflate it.
+Slide 8: I do not think the answer to wasted food is telling people to care more. I think it is making the thing visible while there is still time to act on it. Building an app that makes what is in your kitchen impossible to forget. Send this to whoever still has a fridge they are scared to open.

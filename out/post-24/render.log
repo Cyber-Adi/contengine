@@ -1,0 +1,19 @@
+valid: specs/post-24.json
+  gate 6 -> PASS  (0 fail, 0 warn)
+  downsampled 6 slides -> 1440x1800 (Lanczos)
+rendered 6 slides (ig) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-24/slides
+  contact sheet -> out/post-24/contact-sheet.png  (6 slides, 1450x904)
+  feed-scale thumbs -> out/post-24/thumbs.png  (rendered at 200px wide)
+
+  QA — post 24: The Ethylene Effect: Why Your Fruit Dies Next to Your Greens
+  verdict: PASS   fails=0  warns=5   ocr: skipped
+  typographic normalizer: 5 substitution(s) logged (apostrophe)
+    [WARN] G5.5-fill slide 3: content occupies 41% of its box — type or diagram could carry more of the frame
+    [WARN] G5.5-fill slide 5: content occupies 30% of its box — type or diagram could carry more of the frame
+    [WARN] G5.2-balance slide 5: ink centre of mass at 66% of height — bottom-heavy
+    [WARN] G5.4-orphan slide 6: headline ends on an orphan: 'it.'
+    [WARN] G5.7-rhythm-centroid slide 2: slides 1 and 2 centre at 51% and 39% of frame height, 12% apart (need 12%)
+  downsampled 6 slides -> 1440x2560 (Lanczos)
+rendered 6 slides (tiktok) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-24/slides-tiktok
+exported 6 slides + 6 tiktok -> out/post-24/PUBLISH
+caption, alt, tiktok, POST-ME.txt written. Honesty check clean.
