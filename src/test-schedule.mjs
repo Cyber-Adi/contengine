@@ -5,7 +5,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { ROOT } from './tokens.mjs';
-import { orderPosts, assignSlots, markScheduled, isNow, loadSchedule, saveSchedule, addDays, DUP_GAP_SLOTS } from './schedule.mjs';
+import { orderPosts, assignSlots, markScheduled, isNow, loadSchedule, saveSchedule, addDays, DUP_GAP_SLOTS, reRankLater } from './schedule.mjs';
 
 let pass = 0, fail = 0;
 const t = (name, fn) => {
@@ -149,6 +149,32 @@ t('--scheduled-all CLI on a temp copy touches only NOW, real state untouched', (
   const named = execFileSync(process.execPath, [path.join(ROOT, 'tools', 'log-post.mjs'), '--scheduled', '9,15', '--dry-run', '--schedule-file', file, '--today', '2026-10-07'], { encoding: 'utf8' });
   assert(/marking 2 post/.test(named), `named run: ${named}`);
   fs.rmSync(dir, { recursive: true, force: true });
+});
+
+t('reRankLater: neutral weights change nothing', () => {
+  const sch = assignSlots({ posts: {} }, cands, queue, '2026-10-07');
+  const out = reRankLater(sch, '2026-10-07', () => 1, queue);
+  assert(JSON.stringify(out) === JSON.stringify(sch), 'neutral re-rank moved posts');
+});
+t('reRankLater: a winner moves earlier within LATER only; NOW and its dates untouched', () => {
+  const sch = assignSlots({ posts: {} }, cands, queue, '2026-10-07');
+  const later = Object.entries(sch.posts).filter(([, e]) => !isNow(e.date, '2026-10-07')).sort((a, b) => a[1].date.localeCompare(b[1].date));
+  const last = Number(later[later.length - 1][0]);
+  const out = reRankLater(sch, '2026-10-07', (n) => (n === last ? 1.25 : 1), { ...queue, nearDuplicates: [] });
+  for (const [k, e] of Object.entries(sch.posts)) if (isNow(e.date, '2026-10-07')) assert(out.posts[k].date === e.date, `NOW post ${k} moved`);
+  assert(out.posts[last].date === later[0][1].date, 'winner did not take the first LATER slot');
+  const dates = (x) => Object.values(x.posts).map((e) => e.date).sort().join();
+  assert(dates(out) === dates(sch), 'set of dates changed');
+});
+t('reRankLater: scheduled posts never move; near-duplicate spacing is never broken', () => {
+  const sch = assignSlots({ posts: {} }, cands, queue, '2026-10-07');
+  const later = Object.entries(sch.posts).filter(([, e]) => !isNow(e.date, '2026-10-07')).sort((a, b) => a[1].date.localeCompare(b[1].date));
+  const [a, b] = [Number(later[0][0]), Number(later[later.length - 1][0])];
+  const pinned = { posts: { ...sch.posts, [a]: { ...sch.posts[a], status: 'scheduled' } } };
+  const out = reRankLater(pinned, '2026-10-07', (n) => (n === b ? 1.25 : 1), { ...queue, nearDuplicates: [[a, b]] });
+  assert(out.posts[a].date === pinned.posts[a].date, 'scheduled post moved');
+  const slotsApart = Object.values(out.posts).map((e) => e.date).sort().filter((d) => d > out.posts[a].date && d <= out.posts[b].date).length;
+  assert(slotsApart >= DUP_GAP_SLOTS, `near-duplicates only ${slotsApart} slots apart`);
 });
 
 console.log(`\n${pass} passed, ${fail} failed`);

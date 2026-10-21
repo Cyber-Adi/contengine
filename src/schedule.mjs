@@ -140,6 +140,33 @@ export function assignSlots(schedule, cands, queue, today) {
   return { posts };
 }
 
+/**
+ * Learning re-rank (src/learn.mjs rankAdjust). Only planned posts beyond the NOW window
+ * move: anything Adi may already have scheduled in Meta keeps its date. The LATER posts
+ * keep the same set of dates; a stable sort by multiplier hands earlier dates to segments
+ * that performed. Neutral weights (fewer than 3 scored posts) return the schedule unchanged.
+ * If the new order would bring a near-duplicate pair within DUP_GAP_SLOTS, it is rejected.
+ */
+export function reRankLater(schedule, today, adjustFor, queue = {}) {
+  const later = Object.entries(schedule.posts)
+    .filter(([, e]) => e.status === 'planned' && !isNow(e.date, today) && e.date >= today)
+    .sort((a, b) => a[1].date.localeCompare(b[1].date) || Number(a[0]) - Number(b[0]));
+  const ranked = later.map(([k], i) => ({ k, i, m: adjustFor(Number(k)) }))
+    .sort((a, b) => (b.m - a.m) || (a.i - b.i));
+  if (ranked.every((r, i) => r.i === i)) return schedule;
+  const posts = { ...schedule.posts };
+  ranked.forEach((r, i) => {
+    const [, slot] = later[i];
+    posts[r.k] = { ...schedule.posts[r.k], date: slot.date, time: slot.time };
+  });
+  const order = Object.entries(posts).sort((a, b) => a[1].date.localeCompare(b[1].date)).map(([k]) => Number(k));
+  for (const [a, b] of queue.nearDuplicates ?? []) {
+    const ia = order.indexOf(a), ib = order.indexOf(b);
+    if (ia >= 0 && ib >= 0 && Math.abs(ia - ib) < DUP_GAP_SLOTS) return schedule;
+  }
+  return { ...schedule, posts };
+}
+
 /** Mark planned posts as scheduled. `only` limits to given post numbers; otherwise NOW window only. */
 export function markScheduled(schedule, today, only) {
   const posts = { ...schedule.posts };

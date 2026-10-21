@@ -19,7 +19,9 @@ import { execFileSync } from 'node:child_process';
 import { ROOT } from './../src/tokens.mjs';
 import { reconcile, loadLedger, loadPerformance, atStage, isPublishable } from './../src/state.mjs';
 import { gtmCheck } from './../src/gtm-check.mjs';
-import { SLOT_TIME, assignSlots, loadSchedule, saveSchedule, isNow, weekday } from './../src/schedule.mjs';
+import { SLOT_TIME, assignSlots, loadSchedule, saveSchedule, isNow, weekday, reRankLater } from './../src/schedule.mjs';
+import { learnedWeights, rankAdjust } from './../src/learn.mjs';
+import { gtm } from './../src/gtm.mjs';
 
 const OUT = path.join(ROOT, 'READY-TO-POST');
 
@@ -73,7 +75,13 @@ cands.sort((a, b) => (a.heroWarn.length - b.heroWarn.length) || (a.post - b.post
 let queue = { exclude: [], priority: [], nearDuplicates: [] };
 try { queue = { ...queue, ...JSON.parse(fs.readFileSync(path.join(ROOT, 'state', 'queue.json'), 'utf8')) }; } catch { /* defaults */ }
 const scheduleFile = path.join(ROOT, 'state', 'schedule.json');
-const schedule = assignSlots(loadSchedule(scheduleFile), cands.map((c) => ({ post: c.post, pillar: c.spec.pillar, risky: c.heroWarn.length > 0 })), queue, today);
+const assigned = assignSlots(loadSchedule(scheduleFile), cands.map((c) => ({ post: c.post, pillar: c.spec.pillar, risky: c.heroWarn.length > 0 })), queue, today);
+// Learning loop: once 3+ posts are measured, segments that performed take earlier LATER
+// slots. Below that the weights are neutral and nothing moves.
+const specByPost = new Map(cands.map((c) => [String(c.post), c.spec]));
+const specFor = (n) => specByPost.get(String(n)) ?? null;
+const weights = learnedWeights(perf, specFor, gtm);
+const schedule = reRankLater(assigned, today, (n) => (specFor(n) ? rankAdjust(specFor(n), weights) : 1), queue);
 for (const [k, e] of Object.entries(schedule.posts)) {
   if (perf.posts?.[k]?.publishedAt && e.status === 'planned') schedule.posts[k] = { ...e, status: 'scheduled' };
 }
