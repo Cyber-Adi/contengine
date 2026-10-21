@@ -6,10 +6,11 @@ rendered 6 slides (ig) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees
   feed-scale thumbs -> out/post-38/thumbs.png  (rendered at 200px wide)
 
   QA — post 38: Vegetable Scrap Broth: The $0 Ingredient
-  verdict: PASS   fails=0  warns=5   ocr: skipped
+  verdict: PASS   fails=0  warns=6   ocr: skipped
   typographic normalizer: 4 substitution(s) logged (apostrophe)
     [WARN] G5.5-fill slide 3: content occupies 53% of its box — type or diagram could carry more of the frame
     [WARN] G5.5-fill slide 5: content occupies 50% of its box — type or diagram could carry more of the frame
+    [WARN] G5.7-rhythm-centroid slide 2: slides 1 and 2 centre at 38% and 32% of frame height, 6% apart (need 12%)
     [WARN] G5.7-rhythm-centroid slide 3: slides 2 and 3 centre at 32% and 39% of frame height, 7% apart (need 12%)
     [WARN] G5.7-rhythm-centroid slide 4: slides 3 and 4 centre at 39% and 39% of frame height, 1% apart (need 12%)
     [WARN] G5.7-rhythm-centroid slide 5: slides 4 and 5 centre at 39% and 49% of frame height, 10% apart (need 12%)

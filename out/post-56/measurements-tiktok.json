@@ -59,7 +59,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 648,
+          "y": 327,
           "w": 1184,
           "h": 1192
         },
@@ -86,7 +86,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1883,
+          "y": 1562,
           "w": 1184,
           "h": 86
         },
@@ -108,7 +108,7 @@
         "surface": null,
         "box": {
           "x": 253,
-          "y": 2050,
+          "y": 1728,
           "w": 97,
           "h": 52
         },
@@ -935,7 +935,7 @@
         "family": "\"Space Grotesk\", ui-monospace, monospace",
         "surface": null,
         "box": {
-          "x": 128,
+          "x": 1112,
           "y": 883,
           "w": 200,
           "h": 112
@@ -954,7 +954,7 @@
         "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
         "surface": null,
         "box": {
-          "x": 349,
+          "x": 128,
           "y": 868,
           "w": 963,
           "h": 141
@@ -976,7 +976,7 @@
         "family": "\"Space Grotesk\", ui-monospace, monospace",
         "surface": null,
         "box": {
-          "x": 128,
+          "x": 1112,
           "y": 1191,
           "w": 200,
           "h": 112
@@ -995,7 +995,7 @@
         "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
         "surface": null,
         "box": {
-          "x": 349,
+          "x": 128,
           "y": 1176,
           "w": 963,
           "h": 141
@@ -1017,7 +1017,7 @@
         "family": "\"Space Grotesk\", ui-monospace, monospace",
         "surface": null,
         "box": {
-          "x": 128,
+          "x": 1112,
           "y": 1498,
           "w": 200,
           "h": 112
@@ -1036,7 +1036,7 @@
         "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
         "surface": null,
         "box": {
-          "x": 349,
+          "x": 128,
           "y": 1484,
           "w": 963,
           "h": 141

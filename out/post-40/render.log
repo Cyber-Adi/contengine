@@ -6,10 +6,11 @@ rendered 6 slides (ig) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees
   feed-scale thumbs -> out/post-40/thumbs.png  (rendered at 200px wide)
 
   QA — post 40: The $56 Friday
-  verdict: PASS   fails=0  warns=3   ocr: skipped
+  verdict: PASS   fails=0  warns=4   ocr: skipped
   typographic normalizer: 9 substitution(s) logged (apostrophe, double-quote-close, double-quote-open)
     [WARN] G5.5-fill slide 1: content occupies 50% of its box — type or diagram could carry more of the frame
     [WARN] G5.5-fill slide 3: content occupies 40% of its box — type or diagram could carry more of the frame
+    [WARN] G5.7-rhythm-centroid slide 2: slides 1 and 2 centre at 35% and 34% of frame height, 1% apart (need 12%)
     [WARN] G5.7-rhythm-centroid slide 5: slides 4 and 5 centre at 33% and 42% of frame height, 9% apart (need 12%)
   downsampled 6 slides -> 1440x2560 (Lanczos)
 rendered 6 slides (tiktok) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-40/slides-tiktok

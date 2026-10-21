@@ -6,12 +6,13 @@ rendered 5 slides (ig) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees
   feed-scale thumbs -> out/post-25/thumbs.png  (rendered at 200px wide)
 
   QA — post 25: 3 Meals From 1 Rotisserie Chicken
-  verdict: PASS   fails=0  warns=4   ocr: skipped
+  verdict: PASS   fails=0  warns=5   ocr: skipped
   typographic normalizer: 2 substitution(s) logged (apostrophe)
     [WARN] G4.3-dominance slide 1: no dominant element at feed scale (largest ink band 9% of height)
     [WARN] G5.5-fill slide 3: content occupies 51% of its box — type or diagram could carry more of the frame
     [WARN] G5.5-fill slide 5: content occupies 51% of its box — type or diagram could carry more of the frame
     [WARN] G5.2-balance slide 5: ink centre of mass at 66% of height — bottom-heavy
+    [WARN] G5.7-rhythm-centroid slide 2: slides 1 and 2 centre at 39% and 35% of frame height, 4% apart (need 12%)
   downsampled 5 slides -> 1440x2560 (Lanczos)
 rendered 5 slides (tiktok) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-25/slides-tiktok
 exported 5 slides + 5 tiktok -> out/post-25/PUBLISH

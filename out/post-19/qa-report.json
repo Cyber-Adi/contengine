@@ -112,12 +112,6 @@
       "msg": "content occupies 54% of its box \u2014 type or diagram could carry more of the frame"
     },
     {
-      "gate": "G5.2-balance",
-      "level": "WARN",
-      "slide": 1,
-      "msg": "ink centre of mass at 62% of height \u2014 bottom-heavy"
-    },
-    {
       "gate": "G5.5-fill",
       "level": "WARN",
       "slide": 3,
@@ -134,6 +128,12 @@
       "level": "WARN",
       "slide": 6,
       "msg": "content occupies 43% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 2,
+      "msg": "slides 1 and 2 centre at 40% and 35% of frame height, 4% apart (need 12%)"
     },
     {
       "gate": "G5.7-rhythm-centroid",

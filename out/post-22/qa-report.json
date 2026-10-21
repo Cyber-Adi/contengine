@@ -4,7 +4,7 @@
   "provenance": "converted-from-notion-script",
   "verdict": "PASS",
   "fails": 0,
-  "warns": 7,
+  "warns": 8,
   "ocr": "skipped (opt-in: QA_OCR=1 or --ocr, run at batch end)",
   "normalizations": [
     {
@@ -104,6 +104,12 @@
       "level": "WARN",
       "slide": 7,
       "msg": "ink centre of mass at 63% of height \u2014 bottom-heavy"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 2,
+      "msg": "slides 1 and 2 centre at 35% and 36% of frame height, 1% apart (need 12%)"
     },
     {
       "gate": "G5.7-rhythm-centroid",

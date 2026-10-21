@@ -4,7 +4,7 @@
   "provenance": "converted-from-notion-script",
   "verdict": "PASS",
   "fails": 0,
-  "warns": 10,
+  "warns": 11,
   "ocr": "skipped (opt-in: QA_OCR=1 or --ocr, run at batch end)",
   "normalizations": [
     {
@@ -62,6 +62,12 @@
       "level": "WARN",
       "slide": 8,
       "msg": "headline ends on an orphan: 'kitchen.'"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 2,
+      "msg": "slides 1 and 2 centre at 35% and 33% of frame height, 2% apart (need 12%)"
     },
     {
       "gate": "G5.7-rhythm-centroid",

@@ -35,7 +35,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1482,
+          "y": 744,
           "w": 1184,
           "h": 511
         },
@@ -58,7 +58,7 @@
         "surface": null,
         "box": {
           "x": 253,
-          "y": 2050,
+          "y": 1311,
           "w": 97,
           "h": 52
         },
@@ -1039,7 +1039,7 @@
         "family": "\"Space Grotesk\", ui-monospace, monospace",
         "surface": null,
         "box": {
-          "x": 128,
+          "x": 1112,
           "y": 1021,
           "w": 200,
           "h": 112
@@ -1058,7 +1058,7 @@
         "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
         "surface": null,
         "box": {
-          "x": 349,
+          "x": 128,
           "y": 1006,
           "w": 963,
           "h": 141
@@ -1080,7 +1080,7 @@
         "family": "\"Space Grotesk\", ui-monospace, monospace",
         "surface": null,
         "box": {
-          "x": 128,
+          "x": 1112,
           "y": 1273,
           "w": 200,
           "h": 112
@@ -1099,7 +1099,7 @@
         "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
         "surface": null,
         "box": {
-          "x": 349,
+          "x": 128,
           "y": 1294,
           "w": 963,
           "h": 70

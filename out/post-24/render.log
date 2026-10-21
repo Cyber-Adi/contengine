@@ -12,7 +12,7 @@ rendered 6 slides (ig) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees
     [WARN] G5.5-fill slide 5: content occupies 30% of its box — type or diagram could carry more of the frame
     [WARN] G5.2-balance slide 5: ink centre of mass at 66% of height — bottom-heavy
     [WARN] G5.4-orphan slide 6: headline ends on an orphan: 'it.'
-    [WARN] G5.7-rhythm-centroid slide 2: slides 1 and 2 centre at 51% and 39% of frame height, 12% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 2: slides 1 and 2 centre at 34% and 39% of frame height, 5% apart (need 12%)
   downsampled 6 slides -> 1440x2560 (Lanczos)
 rendered 6 slides (tiktok) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-24/slides-tiktok
 exported 6 slides + 6 tiktok -> out/post-24/PUBLISH

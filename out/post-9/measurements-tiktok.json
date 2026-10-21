@@ -53,7 +53,7 @@
         "surface": null,
         "box": {
           "x": 128,
-          "y": 1288,
+          "y": 647,
           "w": 1184,
           "h": 681
         },
@@ -77,7 +77,7 @@
         "surface": null,
         "box": {
           "x": 253,
-          "y": 2050,
+          "y": 1408,
           "w": 97,
           "h": 52
         },
@@ -1299,7 +1299,7 @@
         "family": "\"Space Grotesk\", ui-monospace, monospace",
         "surface": null,
         "box": {
-          "x": 128,
+          "x": 1112,
           "y": 590,
           "w": 200,
           "h": 112
@@ -1318,7 +1318,7 @@
         "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
         "surface": null,
         "box": {
-          "x": 349,
+          "x": 128,
           "y": 611,
           "w": 963,
           "h": 70
@@ -1337,7 +1337,7 @@
         "family": "\"Space Grotesk\", ui-monospace, monospace",
         "surface": null,
         "box": {
-          "x": 128,
+          "x": 1112,
           "y": 927,
           "w": 200,
           "h": 112
@@ -1356,7 +1356,7 @@
         "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
         "surface": null,
         "box": {
-          "x": 349,
+          "x": 128,
           "y": 913,
           "w": 963,
           "h": 141
@@ -1378,7 +1378,7 @@
         "family": "\"Space Grotesk\", ui-monospace, monospace",
         "surface": null,
         "box": {
-          "x": 128,
+          "x": 1112,
           "y": 1265,
           "w": 200,
           "h": 112
@@ -1397,7 +1397,7 @@
         "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
         "surface": null,
         "box": {
-          "x": 349,
+          "x": 128,
           "y": 1286,
           "w": 963,
           "h": 70
@@ -1416,7 +1416,7 @@
         "family": "\"Space Grotesk\", ui-monospace, monospace",
         "surface": null,
         "box": {
-          "x": 128,
+          "x": 1112,
           "y": 1602,
           "w": 200,
           "h": 112
@@ -1435,7 +1435,7 @@
         "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
         "surface": null,
         "box": {
-          "x": 349,
+          "x": 128,
           "y": 1588,
           "w": 963,
           "h": 141

@@ -9,7 +9,7 @@ rendered 6 slides (ig) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees
   verdict: PASS   fails=0  warns=5   ocr: skipped
   typographic normalizer: 8 substitution(s) logged (apostrophe)
     [WARN] G5.5-fill slide 3: content occupies 50% of its box — type or diagram could carry more of the frame
-    [WARN] G5.7-rhythm-centroid slide 2: slides 1 and 2 centre at 41% and 41% of frame height, 0% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 2: slides 1 and 2 centre at 34% and 41% of frame height, 7% apart (need 12%)
     [WARN] G5.7-rhythm-centroid slide 3: slides 2 and 3 centre at 41% and 49% of frame height, 7% apart (need 12%)
     [WARN] G5.7-rhythm-centroid slide 5: slides 4 and 5 centre at 35% and 41% of frame height, 6% apart (need 12%)
     [WARN] G5.7-rhythm-centroid slide 6: slides 5 and 6 centre at 41% and 39% of frame height, 2% apart (need 12%)
