@@ -94,28 +94,48 @@ export function saveSchedule(file, schedule) {
 export function assignSlots(schedule, cands, queue, today) {
   const exclude = new Set(queue.exclude ?? []);
   const byPost = new Map(cands.map((c) => [c.post, c]));
-  const kept = {};
-  const reslotted = new Map();
+  const fixed = {};
+  const planned = [];
   for (const [k, e] of Object.entries(schedule.posts)) {
     const n = Number(k);
     if (e.status === 'planned') {
       if (exclude.has(n) || !byPost.has(n)) continue;
-      if (e.date < today) { reslotted.set(n, e.date); continue; }
-    }
-    kept[k] = e;
+      planned.push([n, e]);
+    } else fixed[k] = e;
   }
+  const missed = planned.some(([, e]) => e.date < today);
+  // Nothing missed: planned dates stay put. Missed: the whole planned tail keeps its
+  // priority order (old date, then post number) and re-flows onto the next free slots.
+  const kept = { ...fixed };
+  if (!missed) for (const [n, e] of planned) kept[n] = e;
+  const tail = missed
+    ? planned.slice().sort((a, b) => a[1].date.localeCompare(b[1].date) || a[0] - b[0])
+    : [];
   const keptPosts = Object.entries(kept).sort((a, b) => a[1].date.localeCompare(b[1].date) || Number(a[0]) - Number(b[0]));
-  const placed = keptPosts.map(([k]) => ({ post: Number(k), pillar: byPost.get(Number(k))?.pillar }));
-  const ordered = orderPosts(cands.filter((c) => !kept[c.post]), queue, placed);
-  const last = keptPosts.length ? keptPosts[keptPosts.length - 1][1].date : today;
-  const slots = nextSlots(last < today ? today : last, ordered.length);
+  const tailIds = new Set(tail.map(([n]) => n));
+  const placed = [...keptPosts.map(([k]) => Number(k)), ...tail.map(([n]) => n)]
+    .map((n) => ({ post: n, pillar: byPost.get(n)?.pillar }));
+  const fresh = orderPosts(cands.filter((c) => !kept[c.post] && !tailIds.has(c.post)), queue, placed);
+  const queueOrder = [...tail.map(([n]) => byPost.get(n)), ...fresh];
   const posts = { ...kept };
-  ordered.forEach((c, i) => {
+  if (missed) {
+    const taken = new Set(Object.values(fixed).map((e) => e.date));
+    const pool = nextSlots(today, queueOrder.length + taken.size + 1);
+    const free = pool.filter((d) => !taken.has(d)).slice(0, queueOrder.length);
+    const oldDate = new Map(tail);
+    queueOrder.forEach((c, i) => {
+      const date = free[i];
+      const prev = oldDate.get(c.post)?.date;
+      posts[c.post] = prev === date ? oldDate.get(c.post)
+        : { date, time: SLOT_TIME[weekday(date)], status: 'planned', ...(prev ? { note: `re-slotted from ${prev} (date passed unscheduled)` } : {}) };
+    });
+    return { posts };
+  }
+  const last = keptPosts.length ? keptPosts[keptPosts.length - 1][1].date : today;
+  const slots = nextSlots(last < today ? today : last, fresh.length);
+  fresh.forEach((c, i) => {
     const date = slots[i];
-    posts[c.post] = {
-      date, time: SLOT_TIME[weekday(date)], status: 'planned',
-      ...(reslotted.has(c.post) ? { note: `re-slotted from ${reslotted.get(c.post)} (date passed unscheduled)` } : {}),
-    };
+    posts[c.post] = { date, time: SLOT_TIME[weekday(date)], status: 'planned' };
   });
   return { posts };
 }

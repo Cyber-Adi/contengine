@@ -66,9 +66,9 @@ t('magnets appear roughly every third slot early on', () => {
 t('dates persist across runs with a changed today', () => {
   const s1 = assignSlots({ posts: {} }, cands, queue, '2026-10-07');
   const s2 = assignSlots(s1, cands, queue, '2026-10-14');
-  for (const [k, e] of Object.entries(s1.posts)) {
-    if (e.date >= '2026-10-14') assert(s2.posts[k].date === e.date, `post ${k} moved ${e.date} -> ${s2.posts[k].date}`);
-  }
+  const ord = (s) => Object.entries(s.posts).sort((a, b) => a[1].date.localeCompare(b[1].date)).map(([k]) => k).join();
+  assert(ord(s1) === ord(s2), 'queue order changed when today moved');
+  assert(Object.values(s2.posts).every((e) => e.date > '2026-10-14'), 'a planned post stayed in the past');
   const s3 = assignSlots(s1, cands, queue, '2026-10-07');
   assert(JSON.stringify(s3) === JSON.stringify(s1), 'same-day rerun changed the schedule');
 });
@@ -80,6 +80,44 @@ t('new posts append after the last date; past planned dates re-slot with a note'
   const first = Object.entries(s1.posts).sort((a, b) => a[1].date.localeCompare(b[1].date))[0];
   const s3 = assignSlots(s1, cands.slice(0, 10), queue, addDays(first[1].date, 1));
   assert(s3.posts[first[0]].date > first[1].date && /re-slotted/.test(s3.posts[first[0]].note), 'past planned date not re-slotted');
+});
+t('missed planned posts keep relative order and move to the next free slots', () => {
+  const s1 = assignSlots({ posts: {} }, cands.slice(0, 12), queue, '2026-10-07');
+  const order = (s) => Object.entries(s.posts).sort((a, b) => a[1].date.localeCompare(b[1].date)).map(([k]) => Number(k));
+  const before = order(s1);
+  const today = addDays(s1.posts[before[2]].date, 1); // first three slots missed
+  const s2 = assignSlots(s1, cands.slice(0, 12), queue, today);
+  assert(JSON.stringify(order(s2)) === JSON.stringify(before), `order changed ${order(s2)} vs ${before}`);
+  const dates = before.map((n) => s2.posts[n].date);
+  assert(dates[0] > today, `first slot ${dates[0]} not after ${today}`);
+  assert(dates.every((d, i) => !i || d > dates[i - 1]), 'dates not strictly increasing');
+  assert(new Set(dates).size === dates.length, 'duplicate slot');
+  assert(/re-slotted/.test(s2.posts[before[0]].note), 'missed post has no note');
+});
+t('scheduled/published dates never change when planned posts are re-slotted', () => {
+  const s1 = assignSlots({ posts: {} }, cands.slice(0, 12), queue, '2026-10-07');
+  const sorted = Object.entries(s1.posts).sort((a, b) => a[1].date.localeCompare(b[1].date)).map(([k]) => Number(k));
+  const fixedPost = sorted[4];
+  const pinned = { posts: { ...s1.posts, [fixedPost]: { ...s1.posts[fixedPost], status: 'scheduled' } } };
+  const s2 = assignSlots(pinned, cands.slice(0, 12), queue, addDays(s1.posts[sorted[2]].date, 1));
+  assert(JSON.stringify(s2.posts[fixedPost]) === JSON.stringify(pinned.posts[fixedPost]), 'scheduled entry changed');
+  const taken = Object.entries(s2.posts).filter(([k]) => Number(k) !== fixedPost).map(([, e]) => e.date);
+  assert(!taken.includes(pinned.posts[fixedPost].date), 'planned post took a scheduled slot');
+});
+t('nothing missed: re-run changes nothing (idempotent)', () => {
+  const s1 = assignSlots({ posts: {} }, cands.slice(0, 12), queue, '2026-10-07');
+  const s2 = assignSlots(s1, cands.slice(0, 12), queue, '2026-10-07');
+  assert(JSON.stringify(s2) === JSON.stringify(s1), 'schedule changed');
+  const miss = assignSlots(s1, cands.slice(0, 12), queue, '2026-11-01');
+  const again = assignSlots(miss, cands.slice(0, 12), queue, '2026-11-01');
+  assert(JSON.stringify(again) === JSON.stringify(miss), 'second run after re-slot changed schedule');
+});
+t('opener stays the top save-magnet after a missed week', () => {
+  const s1 = assignSlots({ posts: {} }, cands, queue, '2026-10-07');
+  const today = addDays(s1.posts[9].date, 8);
+  const s2 = assignSlots(s1, cands, queue, today);
+  const o = Object.entries(s2.posts).sort((a, b) => a[1].date.localeCompare(b[1].date)).map(([k]) => Number(k));
+  assert(o[0] === 9 && o[1] === 33, `queue opens ${o.slice(0, 2)}`);
 });
 t('scheduled entries are never touched', () => {
   const s1 = assignSlots({ posts: {} }, cands.slice(0, 6), queue, '2026-10-07');
