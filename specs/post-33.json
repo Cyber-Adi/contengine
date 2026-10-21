@@ -2,7 +2,7 @@
   "postNumber": 33,
   "title": "The FIFO Fridge",
   "pillar": "Store It Right",
-  "ctaTier": "Tier 2",
+  "ctaTier": "Tier 0",
   "sendTrigger": "Send this to whoever cleans out the fridge.",
   "briefSource": "fond_Carousel_Design_Brief_Posts_31-33.md",
   "provenance": "brief",
@@ -16,7 +16,10 @@
     "endState": "clean FIFO-rotated fridge with a green check",
     "zone": "side-rail",
     "heightPct": 12,
-    "palette": ["inkGray", "fondGreen"]
+    "palette": [
+      "inkGray",
+      "fondGreen"
+    ]
   },
   "slides": [
     {
@@ -31,7 +34,11 @@
         "headline": "Every restaurant in the world uses this system. Almost no home kitchen does.",
         "body": "A clean, organized walk-in cooler versus a typical home fridge - everything shoved in, things hidden behind other things."
       },
-      "threadState": { "progress": 0.15, "label": "Chaos", "tone": "neutral" }
+      "threadState": {
+        "progress": 0.15,
+        "label": "Chaos",
+        "tone": "neutral"
+      }
     },
     {
       "index": 2,
@@ -48,7 +55,11 @@
         ],
         "body": "You always use the oldest food first."
       },
-      "threadState": { "progress": 0.3, "label": "Aligning", "tone": "neutral" }
+      "threadState": {
+        "progress": 0.3,
+        "label": "Aligning",
+        "tone": "neutral"
+      }
     },
     {
       "index": 3,
@@ -66,21 +77,28 @@
         ],
         "body": "That's the entire system."
       },
-      "threadState": { "progress": 0.5, "label": "Facing forward", "tone": "neutral" }
+      "threadState": {
+        "progress": 0.5,
+        "label": "Facing forward",
+        "tone": "neutral"
+      }
     },
     {
       "index": 4,
       "archetype": "value",
       "background": "dark",
-      "layout": "hero-number",
+      "layout": "hero-statement",
       "accent": "steelBlue",
       "declaresLoss": false,
       "copy": {
-        "heroNumber": "$580-870/yr",
-        "heroNumberCaption": "Restaurants use FIFO to cut food waste by 20-30%. Applied to a home kitchen, that's the annual savings - from 30 seconds of effort per grocery trip.",
-        "citation": "Foodservice FIFO waste-reduction benchmarks, applied to average household spend"
+        "headline": "Restaurants use FIFO to cut food waste.",
+        "body": "Applied to a home kitchen, it saves money every year - from 30 seconds of effort per grocery trip."
       },
-      "threadState": { "progress": 0.7, "label": "Nearly done", "tone": "good" }
+      "threadState": {
+        "progress": 0.7,
+        "label": "Nearly done",
+        "tone": "good"
+      }
     },
     {
       "index": 5,
@@ -96,7 +114,11 @@
           "Old food is \"still fine.\" By the time \"still fine\" becomes \"not fine,\" you can't see it anymore."
         ]
       },
-      "threadState": { "progress": 0.85, "label": "Labeling left", "tone": "caution" }
+      "threadState": {
+        "progress": 0.85,
+        "label": "Labeling left",
+        "tone": "caution"
+      }
     },
     {
       "index": 6,
@@ -108,10 +130,67 @@
       "copy": {
         "headline": "The cheapest upgrade to your kitchen isn't an appliance. It's putting old food in front of new food.",
         "ctaLine": "fond tracks dates for you - but FIFO costs $0. Start today.",
-        "sendTrigger": "Send this to whoever cleans out the fridge.",
-        "citation": "Join the waitlist - link in bio"
+        "sendTrigger": "Send this to whoever cleans out the fridge."
       },
-      "threadState": { "progress": 1.0, "label": "Complete", "tone": "good" }
+      "threadState": {
+        "progress": 1,
+        "label": "Complete",
+        "tone": "good"
+      }
     }
-  ]
+  ],
+  "refinement": {
+    "round": 0,
+    "changes": [
+      {
+        "slide": 4,
+        "field": "layout",
+        "from": "hero-number",
+        "to": "hero-statement",
+        "why": "Adi-authorized Oct 7: unsourced hero figure rendered qualitatively (CLAUDE.md: no uncited hero numbers)"
+      },
+      {
+        "slide": 4,
+        "field": "heroNumber",
+        "from": "$580-870/yr",
+        "to": "",
+        "why": "Adi-authorized Oct 7: unsourced hero figure rendered qualitatively (CLAUDE.md: no uncited hero numbers)"
+      },
+      {
+        "slide": 4,
+        "field": "heroNumberCaption",
+        "from": "Restaurants use FIFO to cut food waste by 20-30%. Applied to a home kitchen, that's the annual savings - from 30 seconds of effort per grocery trip.",
+        "to": "",
+        "why": "Adi-authorized Oct 7: unsourced hero figure rendered qualitatively (CLAUDE.md: no uncited hero numbers)"
+      },
+      {
+        "slide": 4,
+        "field": "citation",
+        "from": "Foodservice FIFO waste-reduction benchmarks, applied to average household spend",
+        "to": "",
+        "why": "Adi-authorized Oct 7: unsourced hero figure rendered qualitatively (CLAUDE.md: no uncited hero numbers)"
+      },
+      {
+        "slide": 4,
+        "field": "headline",
+        "from": "",
+        "to": "Restaurants use FIFO to cut food waste.",
+        "why": "Adi-authorized Oct 7: unsourced hero figure rendered qualitatively (CLAUDE.md: no uncited hero numbers)"
+      },
+      {
+        "slide": 4,
+        "field": "body",
+        "from": "",
+        "to": "Applied to a home kitchen, it saves money every year - from 30 seconds of effort per grocery trip.",
+        "why": "Adi-authorized Oct 7: unsourced hero figure rendered qualitatively (CLAUDE.md: no uncited hero numbers)"
+      },
+      {
+        "slide": 6,
+        "field": "citation",
+        "from": "Worth saving. Follow along, we're building something for exactly this.",
+        "to": "",
+        "why": "Adi-authorized Oct 7: ctaTier moved to Tier 0 (majority of feed, gtm.json); field was entirely a setup CTA line, removed with its ctaSwap entry"
+      }
+    ]
+  }
 }

@@ -1,0 +1,7 @@
+Slide 1: I'm 17 and I think grocery stores are lying to you. Here's why I'm building an app about it.
+Slide 2: I work at a retirement home. Every week I watch perfectly good food get thrown away because no one could see what the kitchen had. Hundreds of dollars. Every single week.
+Slide 3: Then I started reading the research. The average family wastes $2,913/year on food they buy and never eat. Expiration dates are unregulated suggestions, not safety warnings. Grocery stores are designed to make you overbuy.
+Slide 4: This isn't a personal failure. It's a system designed to extract maximum spending from you while giving you no tools to track what you actually have.
+Slide 5: So I taught myself to code. I used Google's AI to build a scanner that reads your grocery receipt and instantly logs every item, with shelf life data, storage instructions, and meal suggestions. No typing. No manual entry.
+Slide 6: I'm 17. I have no budget, no investors, no team. I built this in my bedroom between homework and AP exams. And I think it can save the average family money.
+Slide 7: It's called fond. The Kitchen OS. Save it before your fridge does the forgetting. Follow for more, something's on the way.

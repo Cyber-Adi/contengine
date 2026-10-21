@@ -1,0 +1,14 @@
+{
+  "models": {
+    "copy": "claude-sonnet-5-5",
+    "critic": "claude-sonnet-5-5",
+    "caption": "claude-haiku-4-5-20251001",
+    "designFix": "claude-haiku-4-5-20251001"
+  },
+  "batchSize": 5,
+  "maxDesignRounds": 2,
+  "maxCopyRounds": 1,
+  "critic": { "images": 1, "maxPx": 1600 },
+  "stopAtUsagePct": 85,
+  "maxCallsPerPost": 6
+}

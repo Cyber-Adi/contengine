@@ -1,0 +1,135 @@
+{
+  "postNumber": 2,
+  "title": "The Back-of-Store Trap",
+  "pillar": "Supermarket Secrets",
+  "ctaTier": "Tier 0",
+  "briefSource": "Notion: Carousel Scripts - Posts 1-8",
+  "provenance": "converted-from-notion-script",
+  "editorialNotes": [
+    "The 3-5 unplanned items figure has no cited source in the script: kept as body copy, never hero type."
+  ],
+  "thread": {
+    "element": "dotted shopper path crossing the store floor plan",
+    "kind": "line",
+    "startState": "path at the entrance",
+    "endState": "path has crossed every aisle to the back wall",
+    "zone": "bottom-rail",
+    "heightPct": 12,
+    "palette": [
+      "harvestGold",
+      "inkGray"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "Milk, eggs, and bread are at the back of the store on purpose."
+      },
+      "threadState": {
+        "progress": 0.17,
+        "label": "At the door",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "You came in for three things.",
+        "items": [
+          "The store forces you to walk past every aisle to reach them.",
+          "Retailers call this \"forced traversal\" — the longer your path, the more you buy."
+        ]
+      },
+      "threadState": {
+        "progress": 0.33,
+        "label": "Past aisle 1",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The center aisles are the most profitable real estate in the building.",
+        "body": "That's where the impulse purchases live: snacks, sodas, chips, candy. You weren't planning to buy any of it."
+      },
+      "threadState": {
+        "progress": 0.5,
+        "label": "Center aisles",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "light",
+      "layout": "split-compare",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The average shopper who \"just needs milk\" leaves with 3–5 unplanned items.",
+        "items": [
+          "That's not weak willpower.",
+          "That's architecture."
+        ]
+      },
+      "threadState": {
+        "progress": 0.67,
+        "label": "Deep in",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "timeline",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Even the checkout lane isn't neutral.",
+        "items": [
+          "Candy, gum, and magazines are placed where you wait with nothing to do.",
+          "Hunger + boredom + proximity = purchase."
+        ]
+      },
+      "threadState": {
+        "progress": 0.83,
+        "label": "Checkout",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 6,
+      "archetype": "reframe",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The store layout is a funnel. You are the conversion."
+      },
+      "threadState": {
+        "progress": 1,
+        "label": "Funnel closed",
+        "tone": "good"
+      }
+    }
+  ]
+}

@@ -91,8 +91,8 @@ six weeks it had nine better things to do.
 
 ```bash
 npm run decide         # what should I do right now, and why
-npm run test:autonomy  # 18/18 - every new gate catches its own failure
-npm run gtm specs/post-5.json
+npm run test:autonomy  # 53/53 - every new gate catches its own failure
+npm run gtm specs/fixtures/post-9005.json
 ```
 
 ### The board, right now
@@ -300,6 +300,16 @@ stuff" folder and were never copied into `briefs/`. That would close 9 of the 10
 gaps and un-stale posts 44–52. Post 17 needs separate attention — no Notion page
 contains it under any name. **The engine must never write this copy**, which is why
 `REQUEST_BRIEFS` is marked blocked-on-you rather than actioned.
+
+## Refinery amendments (Oct 1 2026)
+
+| Repo invariant | Amendment |
+|---|---|
+| **"Copy is verbatim. The engine never writes or rewrites copy."** | **Kept for the renderer.** A new, separate **Refinery lane** may *propose* a copy variant **B** next to the verbatim **A**. B is stored with a per-slide diff and rationale, must pass a new **Gate 7 · Fidelity**, and **never ships without your pick**. Design changes (layout, diagram, background, emphasis markup, thread) are not copy and may be applied freely. |
+| **HOLD at ≥6 ready-unscheduled** | **Kept for `READY-TO-POST/`.** The Refinery writes to a new `VAULT/` that HOLD doesn't block, so the refined backlog builds up while the posting queue stays capped. |
+| **No new scheduled tasks** | **Kept.** The Refinery runs on demand (`npm run refine`), never on a schedule. |
+| **No new top-level docs** | **Kept.** This plan goes to `docs/`. |
+| **Never publishes** | **Kept.** It renders files. You schedule. |
 
 ---
 

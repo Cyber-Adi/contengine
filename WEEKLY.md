@@ -26,28 +26,31 @@ have to find this file.
 
 ### 2 · Schedule the week (10 minutes) — while it runs
 
-Double-click **`READY-TO-POST/index.html`**. Every post there passes all six gates,
-carries real brief copy, and is already slotted two a week with pillars alternated.
+Double-click **`READY-TO-POST/index.html`**. Every post there passes all seven gates,
+carries real brief copy, and is already slotted two a week: save-worthy posts first, pillars
+alternated, near-duplicates kept six weeks apart. The **NOW** section is the next 28 days.
 
-For each post:
-1. **business.facebook.com** → Create post → Instagram → drag in its slides **in order** →
-   paste the caption (Copy button) → set the date shown → Schedule.
-   *(Or the Instagram app: new post → Advanced settings → Schedule. Up to 75 days ahead.)*
+**Fastest:** paste `docs/META-SCHEDULING-AGENT.md` to a Claude agent with Claude in Chrome.
+It schedules the next 28 days of posts in Meta Business Suite (Instagram only, Tue 3:00 PM /
+Thu 12:30 PM ET) and reports back. Run it every 3-4 weeks.
 
-Schedule **everything on the page**, then mark the whole page scheduled in **one command**
-instead of one per post:
+By hand, for each post:
+1. **business.facebook.com** → Create post → Instagram only → drag in its slides **in order** →
+   paste the caption (Copy button) → Schedule for the date shown. Business Suite reaches ~29 days
+   ahead and no longer takes alt text on scheduled posts.
+   *(Or the Instagram app: new post → Advanced settings → alt text + Schedule. Up to 75 days ahead.)*
+2. **TikTok** goes out from your phone on the same day: the folder's `tiktok/` images plus
+   `tiktok.txt`, with a trending sound picked in-app (TikTok's web scheduler skips photo posts).
+
+Then mark what you scheduled in **one command**. It marks only the NOW posts (next 28 days),
+on their saved dates, never the later ones:
 
 ```bash
-node tools/log-post.mjs --scheduled-all
+node tools/log-post.mjs --scheduled-all          # or: --scheduled 9,58,1
 ```
 
-It reads the dates already printed on the page and marks each post scheduled on its own
-slot date — that's what removes them from the page and tells the engine they've gone out.
-(Skipped one on purpose? Use its individual "mark scheduled" command instead, still on
-the page under that post.)
-
-It holds at most a few weeks, so doing it all in one sitting is how posts keep going out
-on weeks you don't sit down at all. The page also shows how many days the oldest post has
+Scheduling four weeks in one sitting is how posts keep going out on weeks you don't sit
+down at all. The page also shows how many days the oldest post has
 been waiting — that number does not reset when the page regenerates, so a stalled queue
 stays visible instead of looking fresh every time you open it.
 
@@ -56,16 +59,17 @@ Open its `CHECK-FIRST.txt`. If you can't confirm the citation in a minute, skip 
 
 ### 3 · Log numbers that are due (3 minutes)
 
-The tap lists which posts are due — each one a week after it went live, never sooner.
-Open that post's Insights on Instagram and run what the tap shows:
+The tap lists which posts are due, each one a week after it went live, never sooner.
+**Fastest:** paste `docs/META-INSIGHTS-AGENT.md` to a Claude agent with Claude in Chrome. It
+only reads Insights and prints the exact commands. Or read them yourself and run:
 
 ```bash
-node tools/log-post.mjs 32 --reach 1240 --saves 41 --sends 18 --slide3 0.42
+node tools/log-post.mjs 32 --reach 1240 --saves 41 --sends 18
 ```
 
-`--slide3` = slide-3 reach ÷ slide-1 reach, from the per-slide graph. It's the primary
-metric — the closest proxy for "a stranger stopped." Likes aren't collected; they don't
-predict anything you care about.
+The score is saves plus weighted sends per reach. `--slide3` (slide-3 reach / slide-1 reach)
+is optional: Instagram's per-slide reach isn't reliably available. A missing number is left
+blank, never guessed. Likes aren't collected; they don't predict anything you care about.
 
 ### 4 · Read the tap's last lines (1 minute)
 

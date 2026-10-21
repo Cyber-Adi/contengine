@@ -1,0 +1,222 @@
+{
+  "postNumber": 38,
+  "title": "Vegetable Scrap Broth: The $0 Ingredient",
+  "pillar": "Waste Hacks",
+  "ctaTier": "Tier 1",
+  "briefSource": "Notion: Carousel Scripts — Posts 31–40 (Visual-First)",
+  "provenance": "converted-from-notion-script",
+  "gtmAngle": "money-leak",
+  "editorialNotes": [
+    "No PantryPal occurrence (Tier 1 CTA is anonymous); no swap.",
+    "$6-10 store-value figure is body copy, not hero type."
+  ],
+  "thread": {
+    "element": "freezer bag filling with scraps across weeks",
+    "kind": "accumulator",
+    "startState": "empty freezer bag outline",
+    "endState": "full bag beside a jar of broth",
+    "zone": "bottom-rail",
+    "heightPct": 12,
+    "palette": [
+      "inkGray",
+      "fondGreen"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "light",
+      "layout": "hero-statement",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "Every time you chop vegetables, you throw away free broth."
+      },
+      "threadState": {
+        "progress": 0.17,
+        "tone": "neutral"
+      },
+      "valign": "bottom"
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "light",
+      "layout": "timeline",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The system: keep a gallon-size freezer bag in your freezer.",
+        "items": [
+          "Every time you cook, toss vegetable scraps into the bag.",
+          "When the bag is full — usually 2–3 weeks — you make broth."
+        ]
+      },
+      "threadState": {
+        "progress": 0.33,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "split-compare",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Save these:",
+        "items": [
+          "Onion skins and ends. Carrot peels and tops. Celery leaves and ends. Mushroom stems.",
+          "Herb stems (parsley, thyme, cilantro). Garlic skins. Corn cobs. Leek tops."
+        ]
+      },
+      "threadState": {
+        "progress": 0.5,
+        "tone": "neutral"
+      },
+      "valign": "bottom"
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "light",
+      "layout": "timeline",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Skip these:",
+        "items": [
+          "Brassicas (broccoli, cabbage, cauliflower) make broth bitter.",
+          "Beet scraps turn everything red.",
+          "Potato peels make it starchy and cloudy.",
+          "Anything moldy or rotten — freezing doesn't fix that."
+        ]
+      },
+      "threadState": {
+        "progress": 0.67,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "light",
+      "layout": "hero-statement",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Full bag + water + salt + 45 minutes simmering.",
+        "body": "Strain. That's 8 cups of broth worth $6–10 at the store. Made from scraps you were going to throw away."
+      },
+      "threadState": {
+        "progress": 0.83,
+        "tone": "neutral"
+      },
+      "valign": "bottom"
+    },
+    {
+      "index": 6,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The best ingredient in your kitchen costs nothing. It's already in your trash can.",
+        "ctaLine": "We built an app that helps you use every part of what you buy. Save it before your fridge does the forgetting. Follow for more, something's on the way."
+      },
+      "threadState": {
+        "progress": 1,
+        "tone": "good"
+      },
+      "valign": "top"
+    }
+  ],
+  "refinement": {
+    "round": 0,
+    "changes": [
+      {
+        "slide": 1,
+        "field": "background",
+        "from": "dark",
+        "to": "light",
+        "why": "slides 1 and 2 centre at 0.39 and 0.38 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 1,
+        "field": "valign",
+        "from": "center",
+        "to": "bottom",
+        "why": "slides 1 and 2 centre at 0.39 and 0.38 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 2,
+        "field": "layout",
+        "from": "stack-list",
+        "to": "timeline",
+        "why": "slides 2-3-4 share one ground (light); slides 1 and 2 centre at 0.39 and 0.38 of frame height (need 0.12 apart); slides 2 and 3 centre at 0.38 and 0.38 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 3,
+        "field": "valign",
+        "from": "center",
+        "to": "bottom",
+        "why": "slides 2-3-4 share one ground (light); slides 2 and 3 centre at 0.38 and 0.38 of frame height (need 0.12 apart); slides 3 and 4 centre at 0.38 and 0.38 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 4,
+        "field": "layout",
+        "from": "stack-list",
+        "to": "timeline",
+        "why": "slides 2-3-4 share one ground (light); slides 3 and 4 centre at 0.38 and 0.38 of frame height (need 0.12 apart); slides 4 and 5 centre at 0.38 and 0.39 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 5,
+        "field": "background",
+        "from": "dark",
+        "to": "light",
+        "why": "slides 4 and 5 centre at 0.38 and 0.39 of frame height (need 0.12 apart); slides 5 and 6 centre at 0.39 and 0.46 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 5,
+        "field": "valign",
+        "from": "center",
+        "to": "bottom",
+        "why": "slides 4 and 5 centre at 0.38 and 0.39 of frame height (need 0.12 apart); slides 5 and 6 centre at 0.39 and 0.46 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 6,
+        "field": "valign",
+        "from": "center",
+        "to": "top",
+        "why": "slides 5 and 6 centre at 0.39 and 0.46 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 3,
+        "field": "accent",
+        "from": "fondGreen",
+        "to": "steelBlue",
+        "why": "fondGreen pins the ground to light on slides 1-5 (three light slides in a row); steelBlue is legal on dark, so slide 3 can break the run"
+      },
+      {
+        "slide": 3,
+        "field": "background",
+        "from": "light",
+        "to": "dark",
+        "why": "break the 3-light run created by the fondGreen ground restriction"
+      }
+    ]
+  },
+  "ctaSwap": [
+    {
+      "slide": 6,
+      "field": "ctaLine",
+      "from": "We built an app that helps you use every part of what you buy. Link in bio.",
+      "to": "We built an app that helps you use every part of what you buy. Save it before your fridge does the forgetting. Follow for more, something's on the way.",
+      "rule": "setup-cta"
+    }
+  ]
+}

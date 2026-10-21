@@ -28,7 +28,7 @@ If `npx playwright install chromium` can't reach its CDN (some networks block it
 a Chrome you already have instead:
 
 ```bash
-FOND_CHROMIUM="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" ./run.sh specs/post-5.json
+FOND_CHROMIUM="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" ./run.sh specs/fixtures/post-9005.json
 ```
 
 ## What works right now
@@ -47,7 +47,7 @@ FOND_CHROMIUM="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" ./r
 | Slice 5 · Notion writeback | ⛔ after Slice 1 |
 
 Two fixtures render clean at **0 fails, 1 warning**, byte-identical across runs:
-`post-49` (eggs, meter thread, no Signal Red anywhere) and `post-5` (exercises all five
+`post-49` (eggs, meter thread, no Signal Red anywhere) and `post-9005` (exercises all five
 diagrams and every chrome feature).
 
 **Read docs/INITIALIZATION.md first** — it lists exactly what has to be in the folder and the
@@ -105,8 +105,8 @@ layout (diagram kinds count as distinct layouts).
 ## Two platforms, one spec
 
 ```bash
-node src/render.mjs specs/post-5.json                  # 1080x1350  Instagram
-node src/render.mjs specs/post-5.json --canvas=tiktok  # 1080x1920  TikTok photo mode
+node src/render.mjs specs/fixtures/post-9005.json                  # 1080x1350  Instagram
+node src/render.mjs specs/fixtures/post-9005.json --canvas=tiktok  # 1080x1920  TikTok photo mode
 ```
 Layout is CSS and the spec is data, so the canvas is a parameter. No new brief, no new copy.
 See ECC-PLAN-V2 §4 for the TikTok API audit gate before you plan on publishing there.

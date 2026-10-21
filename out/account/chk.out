@@ -1,0 +1,385 @@
+
+== 8 diffs=6 changes=1 badwhy=0
+ UNLOGGED ctaTier
+   - Tier 1
+   + Tier 0
+   NEWNUM 0
+ L slides.6.copy.ctaLine
+   - Save this for your next grocery run. Follow for more, something's coming.
+   + undefined
+ UNLOGGED ctaSwap.0.field
+   - ctaLine
+   + undefined
+ UNLOGGED ctaSwap.0.from
+   - Link in bio.
+   + undefined
+ L ctaSwap.0.to
+   - Save this for your next grocery run. Follow for more, something's coming.
+   + undefined
+ UNLOGGED ctaSwap.0.rule
+   - setup-cta
+   + undefined
+
+== 9 diffs=6 changes=1 badwhy=0
+ UNLOGGED ctaTier
+   - Tier 2
+   + Tier 0
+   NEWNUM 0
+ L slides.7.copy.ctaLine
+   - Worth saving. Follow along, we're building something for exactly this.
+   + undefined
+ UNLOGGED ctaSwap.0.field
+   - ctaLine
+   + undefined
+ UNLOGGED ctaSwap.0.from
+   - Join the waitlist — link in bio.
+   + undefined
+ L ctaSwap.0.to
+   - Worth saving. Follow along, we're building something for exactly this.
+   + undefined
+ UNLOGGED ctaSwap.0.rule
+   - setup-cta
+   + undefined
+
+== 26 diffs=3 changes=1 badwhy=0
+ L slides.6.copy.ctaLine
+   - fond tracks your kitchen — not your behavior. No ads. No data selling. Save it before your fridge does the forgetting. Follow for more, something's on the way.
+   + fond tracks your kitchen — not your behavior. Save it before your fridge does the forgetting. Follow for more, something's on the way.
+ UNLOGGED ctaSwap.0.from
+   - fond tracks your kitchen — not your behavior. No ads. No data selling. Link in bio.
+   + fond tracks your kitchen — not your behavior. Link in bio.
+ L ctaSwap.0.to
+   - fond tracks your kitchen — not your behavior. No ads. No data selling. Save it before your fridge does the forgetting. Follow for more, something's on the way.
+   + fond tracks your kitchen — not your behavior. Save it before your fridge does the forgetting. Follow for more, something's on the way.
+
+== 30 diffs=1 changes=1 badwhy=0
+ L slides.5.copy.body
+   - I built this in my bedroom between homework and AP exams. And I think it can save the average family $1,500/year.
+   + I built this in my bedroom between homework and AP exams. And I think it can save the average family money.
+
+== 31 diffs=17 changes=12 badwhy=0
+ UNLOGGED ctaTier
+   - Tier 2
+   + Tier 0
+   NEWNUM 0
+ L slides.3.layout
+   - hero-number
+   + hero-statement
+ L slides.3.copy.heroNumber
+   - 8-12%
+   + undefined
+ L slides.3.copy.heroNumberCaption
+   - The effective price increase on a bag of chips isn't 0%. They just hid it in the packaging instead of the price tag.
+   + undefined
+ L slides.3.copy.citation
+   - Documented shrinkflation cases, 2023-2025 consumer reporting
+   + undefined
+ L slides.5.layout
+   - hero-number
+   + hero-statement
+ L slides.5.copy.heroNumber
+   - $0.43/oz
+   + undefined
+ L slides.5.copy.heroNumberCaption
+   - Cost per ounce is the number the store doesn't want you looking at. It's printed on the shelf tag, smaller than the price.
+   + undefined
+ L slides.5.copy.body
+   - Check that number, not the sticker price.
+   + It's printed on the shelf tag, smaller than the price. Check that number, not the sticker price.
+ L slides.6.copy.citation
+   - Keep this one. Follow for more, we're working on something for this.
+   + undefined
+ UNLOGGED ctaSwap.0.field
+   - citation
+   + undefined
+ UNLOGGED ctaSwap.0.from
+   - Join the waitlist - link in bio
+   + undefined
+ L ctaSwap.0.to
+   - Keep this one. Follow for more, we're working on something for this.
+   + undefined
+ UNLOGGED ctaSwap.0.rule
+   - setup-cta
+   + undefined
+ L slides.3.copy.headline
+   - undefined
+   + The effective price increase on a bag of chips isn't zero.
+ L slides.3.copy.body
+   - undefined
+   + They just hid it in the packaging instead of the price tag.
+ L slides.5.copy.headline
+   - undefined
+   + Cost per ounce is the number the store doesn't want you looking at.
+
+== 32 diffs=6 changes=1 badwhy=0
+ UNLOGGED ctaTier
+   - Tier 2
+   + Tier 0
+   NEWNUM 0
+ L slides.6.copy.citation
+   - Save this for your next grocery run. Follow for more, something's coming.
+   + undefined
+ UNLOGGED ctaSwap.0.field
+   - citation
+   + undefined
+ UNLOGGED ctaSwap.0.from
+   - Join the waitlist - link in bio
+   + undefined
+ L ctaSwap.0.to
+   - Save this for your next grocery run. Follow for more, something's coming.
+   + undefined
+ UNLOGGED ctaSwap.0.rule
+   - setup-cta
+   + undefined
+
+== 33 diffs=12 changes=7 badwhy=0
+ UNLOGGED ctaTier
+   - Tier 2
+   + Tier 0
+   NEWNUM 0
+ L slides.3.layout
+   - hero-number
+   + hero-statement
+ L slides.3.copy.heroNumber
+   - $580-870/yr
+   + undefined
+ L slides.3.copy.heroNumberCaption
+   - Restaurants use FIFO to cut food waste by 20-30%. Applied to a home kitchen, that's the annual savings - from 30 seconds of effort per grocery trip.
+   + undefined
+ L slides.3.copy.citation
+   - Foodservice FIFO waste-reduction benchmarks, applied to average household spend
+   + undefined
+ L slides.5.copy.citation
+   - Worth saving. Follow along, we're building something for exactly this.
+   + undefined
+ UNLOGGED ctaSwap.0.field
+   - citation
+   + undefined
+ UNLOGGED ctaSwap.0.from
+   - Join the waitlist - link in bio
+   + undefined
+ L ctaSwap.0.to
+   - Worth saving. Follow along, we're building something for exactly this.
+   + undefined
+ UNLOGGED ctaSwap.0.rule
+   - setup-cta
+   + undefined
+ L slides.3.copy.headline
+   - undefined
+   + Restaurants use FIFO to cut food waste.
+   NEWCAP FIFO
+ L slides.3.copy.body
+   - undefined
+   + Applied to a home kitchen, it saves money every year - from 30 seconds of effort per grocery trip.
+   NEWNUM 30
+
+== 34 diffs=11 changes=12 badwhy=6
+ UNLOGGED ctaTier
+   - Tier 2
+   + Tier 0
+   NEWNUM 0
+ L slides.4.layout
+   - hero-number
+   + hero-statement
+ L slides.4.copy.heroNumber
+   - 40%
+   + undefined
+ L slides.4.copy.heroNumberCaption
+   - less food waste - $1,165 saved per year, for 10 minutes on Sunday.
+   + undefined
+ L slides.4.copy.citation
+   - Weekly fridge-audit waste-reduction estimate; EPA household food-waste figure
+   + undefined
+ L slides.5.copy.citation
+   - Save it before your fridge does the forgetting. Follow for more, something's on the way.
+   + undefined
+ UNLOGGED ctaSwap.0.field
+   - citation
+   + undefined
+ UNLOGGED ctaSwap.0.from
+   - Join the waitlist - link in bio
+   + undefined
+ L ctaSwap.0.to
+   - Save it before your fridge does the forgetting. Follow for more, something's on the way.
+   + undefined
+ UNLOGGED ctaSwap.0.rule
+   - setup-cta
+   + undefined
+ L slides.4.copy.headline
+   - undefined
+   + Less food waste and money saved every year, for 10 minutes on Sunday.
+   NEWNUM 10
+   NEWCAP Sunday
+ LOGGED-BUT-NOT-PRESENT {"slide":5,"field":"valign","from":"center","to":"top","why":"slides 4 and 5 centre at 0.39 and 0.37 of frame height (need 0.12 apart); slides 5 and 6 centre at 0.37 and 0.46 of frame height (need 0.1
+
+== 36 diffs=7 changes=7 badwhy=0
+ L slides.3.layout
+   - hero-number
+   + hero-statement
+ L slides.3.copy.heroNumber
+   - $936-2,080
+   + undefined
+ L slides.3.copy.heroNumberUnit
+   - /yr
+   + undefined
+ L slides.3.copy.heroNumberCaption
+   - The average household throws away 6-8 leftover containers a week. At $3-5 per serving, that's $18-40 a week.
+   + undefined
+ L slides.3.copy.citation
+   - Household leftover-waste estimate; EPA annual food-waste figure
+   + undefined
+ L slides.3.copy.headline
+   - undefined
+   + The average household throws away leftover containers every week.
+ L slides.3.copy.body
+   - undefined
+   + At a few dollars per serving, that adds up every week.
+
+== 41 diffs=6 changes=2 badwhy=1
+ UNLOGGED ctaTier
+   - Tier 2
+   + Tier 0
+   NEWNUM 0
+ L slides.7.copy.citation
+   - Worth saving. Follow along, we're building something for exactly this.
+   + undefined
+ UNLOGGED ctaSwap.0.field
+   - citation
+   + undefined
+ UNLOGGED ctaSwap.0.from
+   - Join the waitlist - link in bio
+   + undefined
+ L ctaSwap.0.to
+   - Worth saving. Follow along, we're building something for exactly this.
+   + undefined
+ UNLOGGED ctaSwap.0.rule
+   - setup-cta
+   + undefined
+
+== 42 diffs=6 changes=1 badwhy=0
+ UNLOGGED ctaTier
+   - Tier 2
+   + Tier 0
+   NEWNUM 0
+ L slides.7.copy.citation
+   - Save it before your fridge does the forgetting. Follow for more, something's on the way.
+   + undefined
+ UNLOGGED ctaSwap.0.field
+   - citation
+   + undefined
+ UNLOGGED ctaSwap.0.from
+   - Join the waitlist - link in bio
+   + undefined
+ L ctaSwap.0.to
+   - Save it before your fridge does the forgetting. Follow for more, something's on the way.
+   + undefined
+ UNLOGGED ctaSwap.0.rule
+   - setup-cta
+   + undefined
+
+== 43 diffs=6 changes=2 badwhy=1
+ UNLOGGED ctaTier
+   - Tier 2
+   + Tier 0
+   NEWNUM 0
+ L slides.7.copy.citation
+   - Keep this one. Follow for more, we're working on something for this.
+   + undefined
+ UNLOGGED ctaSwap.0.field
+   - citation
+   + undefined
+ UNLOGGED ctaSwap.0.from
+   - Join the waitlist - link in bio
+   + undefined
+ L ctaSwap.0.to
+   - Keep this one. Follow for more, we're working on something for this.
+   + undefined
+ UNLOGGED ctaSwap.0.rule
+   - setup-cta
+   + undefined
+
+== 44 diffs=1 changes=8 badwhy=7
+ UNLOGGED ctaTier
+   - Tier 2
+   + Tier 0
+   NEWNUM 0
+
+== 45 diffs=1 changes=1 badwhy=1
+ UNLOGGED ctaTier
+   - Tier 2
+   + Tier 0
+   NEWNUM 0
+
+== 46 diffs=1 changes=1 badwhy=1
+ UNLOGGED ctaTier
+   - Tier 2
+   + Tier 0
+   NEWNUM 0
+
+== 54 diffs=6 changes=9 badwhy=8
+ UNLOGGED ctaTier
+   - Tier 2
+   + Tier 0
+   NEWNUM 0
+ L slides.5.copy.citation
+   - Save it before your fridge does the forgetting. Follow for more, something's on the way.
+   + undefined
+ UNLOGGED ctaSwap.0.field
+   - citation
+   + undefined
+ UNLOGGED ctaSwap.0.from
+   - Join the waitlist, link in bio.
+   + undefined
+ L ctaSwap.0.to
+   - Save it before your fridge does the forgetting. Follow for more, something's on the way.
+   + undefined
+ UNLOGGED ctaSwap.0.rule
+   - setup-cta
+   + undefined
+
+== 55 diffs=6 changes=2 badwhy=1
+ UNLOGGED ctaTier
+   - Tier 2
+   + Tier 0
+   NEWNUM 0
+ L slides.7.copy.citation
+   - Keep this one. Follow for more, we're working on something for this.
+   + undefined
+ UNLOGGED ctaSwap.0.field
+   - citation
+   + undefined
+ UNLOGGED ctaSwap.0.from
+   - Join the waitlist, link in bio.
+   + undefined
+ L ctaSwap.0.to
+   - Keep this one. Follow for more, we're working on something for this.
+   + undefined
+ UNLOGGED ctaSwap.0.rule
+   - setup-cta
+   + undefined
+
+== 60 diffs=2 changes=7 badwhy=6
+ UNLOGGED ctaTier
+   - Tier 2
+   + Tier 0
+   NEWNUM 0
+ L slides.0.copy.headline
+   - GLP-1 households cut grocery spending 6%. Their food waste percentage didn't move.
+   + GLP-1 households cut grocery spending 6%. Their food waste percentage may not have moved.
+
+== 61 diffs=1 changes=9 badwhy=9
+ UNLOGGED ctaTier
+   - Tier 2
+   + Tier 0
+   NEWNUM 0
+
+== 62 diffs=1 changes=1 badwhy=1
+ UNLOGGED ctaTier
+   - Tier 2
+   + Tier 0
+   NEWNUM 0
+
+== 63 diffs=1 changes=10 badwhy=9
+ L slides.6.copy.items.0
+   - There is a waitlist, a TestFlight beta coming this summer, and no user numbers I can honestly quote you.
+   + There is a waitlist and no user numbers I can honestly quote you.

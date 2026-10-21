@@ -4,49 +4,64 @@
   "provenance": "reconstructed-fixture",
   "verdict": "PASS",
   "fails": 0,
-  "warns": 7,
+  "warns": 8,
+  "ocr": "skipped (opt-in: QA_OCR=1 or --ocr, run at batch end)",
+  "normalizations": [
+    {
+      "slide": 8,
+      "field": "copy.citation",
+      "rule": "apostrophe",
+      "count": 1
+    }
+  ],
   "findings": [
-    {
-      "gate": "G4.5-ocr",
-      "level": "WARN",
-      "slide": 2,
-      "msg": "OCR read the right number of digits for '3' but not the same ones (saw '55'). Tesseract confuses same-skeleton digits at 200px far more readily than a reader does, so this is a limit of the instrument, not evidence the hook is illegible. Eyeball the thumbnail once to confirm."
-    },
-    {
-      "gate": "G5.5-fill",
-      "level": "WARN",
-      "slide": 1,
-      "msg": "content occupies 50% of its box \u2014 type or diagram could carry more of the frame"
-    },
-    {
-      "gate": "G5.5-fill",
-      "level": "WARN",
-      "slide": 2,
-      "msg": "content occupies 52% of its box \u2014 type or diagram could carry more of the frame"
-    },
-    {
-      "gate": "G5.5-fill",
-      "level": "WARN",
-      "slide": 3,
-      "msg": "content occupies 45% of its box \u2014 type or diagram could carry more of the frame"
-    },
-    {
-      "gate": "G5.5-fill",
-      "level": "WARN",
-      "slide": 4,
-      "msg": "content occupies 40% of its box \u2014 type or diagram could carry more of the frame"
-    },
-    {
-      "gate": "G5.5-fill",
-      "level": "WARN",
-      "slide": 5,
-      "msg": "content occupies 38% of its box \u2014 type or diagram could carry more of the frame"
-    },
     {
       "gate": "G5.5-fill",
       "level": "WARN",
       "slide": 8,
       "msg": "content occupies 50% of its box \u2014 type or diagram could carry more of the frame"
+    },
+    {
+      "gate": "G5.2-balance",
+      "level": "WARN",
+      "slide": 8,
+      "msg": "ink centre of mass at 64% of height \u2014 bottom-heavy"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 2,
+      "msg": "slides 1 and 2 centre at 36% and 45% of frame height, 9% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 3,
+      "msg": "slides 2 and 3 centre at 45% and 39% of frame height, 6% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 4,
+      "msg": "slides 3 and 4 centre at 39% and 41% of frame height, 2% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 5,
+      "msg": "slides 4 and 5 centre at 41% and 35% of frame height, 6% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 6,
+      "msg": "slides 5 and 6 centre at 35% and 46% of frame height, 11% apart (need 12%)"
+    },
+    {
+      "gate": "G5.7-rhythm-centroid",
+      "level": "WARN",
+      "slide": 7,
+      "msg": "slides 6 and 7 centre at 46% and 38% of frame height, 8% apart (need 12%)"
     }
   ]
 }

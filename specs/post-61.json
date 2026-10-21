@@ -1,0 +1,246 @@
+{
+  "postNumber": 61,
+  "title": "The Fridge Map Nobody Reads",
+  "pillar": "Store It Right",
+  "ctaTier": "Tier 0",
+  "sendTrigger": "Save this for your next fridge clean-out.",
+  "briefSource": "fond_Carousel_Design_Brief_Posts_60-62.md",
+  "provenance": "brief",
+  "editorialNotes": [
+    "Slide 2 repeats slide 1 layout (hero-statement): both are two-sentence hooks; same constraint as post 41.",
+    "The 7-10°F door-temperature gap is stated without a source in the brief; kept as a list item, never hero type.",
+    "Brief colors the door zone Signal Red as \"wrong\"; thread palette here is Steel Blue and Ink Gray because no slide declares a loss figure."
+  ],
+  "thread": {
+    "element": "line-art fridge cutaway filling in one zone per slide",
+    "kind": "builder",
+    "startState": "empty fridge outline",
+    "endState": "fully labeled five-zone map compressed to a corner badge",
+    "zone": "side-rail",
+    "heightPct": 18,
+    "palette": [
+      "steelBlue",
+      "inkGray"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "inkGray",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "Your fridge came with a place to put everything. Most of those places are wrong."
+      },
+      "threadState": {
+        "progress": 0.08,
+        "label": "Empty",
+        "tone": "neutral"
+      },
+      "valign": "top"
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "dark",
+      "layout": "statement-xl",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The egg holder is built into your door. That's the worst spot in the whole fridge for eggs."
+      },
+      "threadState": {
+        "progress": 0.2,
+        "label": "Door marked",
+        "tone": "neutral"
+      },
+      "valign": "bottom"
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "light",
+      "layout": "timeline",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The door opens dozens of times a day.",
+        "items": [
+          "Every open lets warm kitchen air in.",
+          "The door runs 7-10°F warmer than the back of the fridge - closer to room temperature than to \"cold storage.\""
+        ]
+      },
+      "threadState": {
+        "progress": 0.32,
+        "label": "Door zone",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "light",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Bottom shelf, back: the coldest zone in the fridge - this is where raw meat and fish belong.",
+        "body": "It also keeps any drips contained below everything else, instead of dripping onto food you won't cook first."
+      },
+      "threadState": {
+        "progress": 0.44,
+        "label": "Bottom shelf",
+        "tone": "neutral"
+      },
+      "valign": "bottom"
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "split-compare",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Middle shelf: dairy, eggs, leftovers.",
+        "items": [
+          "Consistent mid-range cold, easy to see, easy to rotate.",
+          "Top shelf: the least perishable stuff - drinks, ready-to-eat items, leftovers you'll finish today."
+        ]
+      },
+      "threadState": {
+        "progress": 0.56,
+        "label": "Shelves filled",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 6,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "timeline",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Crisper drawers aren't interchangeable.",
+        "items": [
+          "High-humidity setting = leafy greens and herbs (they wilt when they lose moisture).",
+          "Low-humidity setting = fruit (it rots faster in trapped moisture).",
+          "Same drawer shape, opposite jobs."
+        ]
+      },
+      "threadState": {
+        "progress": 0.68,
+        "label": "Map complete",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 7,
+      "archetype": "reframe",
+      "background": "light",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The fridge isn't one temperature. It's five zones.",
+        "body": "You've been using one."
+      },
+      "threadState": {
+        "progress": 0.8,
+        "label": "Full map",
+        "tone": "good"
+      },
+      "valign": "bottom"
+    },
+    {
+      "index": 8,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "fond tracks shelf life by what's actually in each zone of your fridge - not a generic countdown.",
+        "sendTrigger": "Save this for your next fridge clean-out."
+      },
+      "threadState": {
+        "progress": 1,
+        "label": "Badge",
+        "tone": "good"
+      },
+      "valign": "top"
+    }
+  ],
+  "refinement": {
+    "round": 0,
+    "changes": [
+      {
+        "slide": 1,
+        "field": "valign",
+        "from": "center",
+        "to": "top",
+        "why": "slides 1 and 2 centre at 0.39 and 0.39 of frame height (need 0.12 apart); slides 1 and 2 share layout hero-statement"
+      },
+      {
+        "slide": 2,
+        "field": "valign",
+        "from": "center",
+        "to": "bottom",
+        "why": "slides 1 and 2 centre at 0.39 and 0.39 of frame height (need 0.12 apart); slides 1 and 2 share layout hero-statement; slides 2 and 3 centre at 0.39 and 0.38 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 3,
+        "field": "layout",
+        "from": "stack-list",
+        "to": "timeline",
+        "why": "slides 3-4-5 share one ground (light); slides 2 and 3 centre at 0.39 and 0.38 of frame height (need 0.12 apart); slides 3 and 4 centre at 0.38 and 0.39 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 4,
+        "field": "valign",
+        "from": "center",
+        "to": "bottom",
+        "why": "slides 3-4-5 share one ground (light); slides 3 and 4 centre at 0.38 and 0.39 of frame height (need 0.12 apart); slides 4 and 5 centre at 0.39 and 0.38 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 5,
+        "field": "background",
+        "from": "light",
+        "to": "dark",
+        "why": "slides 3-4-5 share one ground (light); slides 4 and 5 centre at 0.39 and 0.38 of frame height (need 0.12 apart); slides 5 and 6 centre at 0.38 and 0.38 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 6,
+        "field": "layout",
+        "from": "stack-list",
+        "to": "timeline",
+        "why": "slides 5 and 6 centre at 0.38 and 0.38 of frame height (need 0.12 apart); slides 6 and 7 centre at 0.38 and 0.39 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 7,
+        "field": "valign",
+        "from": "center",
+        "to": "bottom",
+        "why": "slides 6 and 7 centre at 0.38 and 0.39 of frame height (need 0.12 apart); slides 7 and 8 centre at 0.39 and 0.46 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 8,
+        "field": "valign",
+        "from": "center",
+        "to": "top",
+        "why": "slides 7 and 8 centre at 0.39 and 0.46 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 2,
+        "field": "layout",
+        "from": "hero-statement",
+        "to": "statement-xl",
+        "why": "slides 1 and 2 were both headline-only hero-statement (X-distinct) and the short slide-2 headline filled <55% of its frame (G5.5); statement-xl is the token-defined large-scale headline-only layout"
+      }
+    ]
+  }
+}

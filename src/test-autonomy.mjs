@@ -4,10 +4,15 @@
 // fixture is worse than no gate, because it manufactures confidence.
 import fs from 'node:fs';
 import { gtmCheck } from './gtm-check.mjs';
+import { planSwaps, applySwapText, restoreText, swapText } from '../tools/setup-cta.mjs';
+import { gtm, launchCheck, ctaLine } from './gtm.mjs';
 import { validateSpec } from './validate.mjs';
 import { judge, hookShape } from './entropy.mjs';
-import { decide, performanceSignal } from './decide.mjs';
-import { saveFreshness, loadFreshness } from './state.mjs';
+import { decide, performanceSignal, formatOf } from './decide.mjs';
+import { saveFreshness, loadFreshness, isPublishable } from './state.mjs';
+import os from 'node:os';
+import path from 'node:path';
+import { saveRefinery, loadRefinery, setPostStage, STAGES as REFINERY_STAGES } from './refinery-state.mjs';
 import { validateCritique, parseNote } from './critic.mjs';
 
 let pass = 0, fail = 0;
@@ -122,7 +127,7 @@ t('kill criterion fires after 3 consecutive misses', () => {
     ['4', { post: 4, reach: 1000, saves: 4, sends: 1, format: 'tired', publishedAt: '2026-08-07' }],
     ['5', { post: 5, reach: 1000, saves: 3, sends: 0, format: 'tired', publishedAt: '2026-08-09' }]
   ]) };
-  const s = performanceSignal(perf);
+  const s = performanceSignal(perf, { specFor: () => null });
   assert(s.ready && s.retire.includes('tired'), `should retire "tired": ${JSON.stringify(s)}`);
 });
 t('refuses to claim a signal from under 3 posts', () => {
@@ -132,46 +137,104 @@ t('refuses to claim a signal from under 3 posts', () => {
 t('drain beats generate', () => {
   const ledger = { posts: Object.fromEntries(
     Array.from({ length: 20 }, (_, i) => [String(i), { post: i, stage: 'approved' }])) };
-  const d = decide({ ledger, perf: { posts: {} }, fresh: { items: [] } });
+  const d = decide({ schedule: {}, ledger, perf: { posts: {} }, fresh: { items: [] } });
   assert(d.action === 'PUBLISH', `20 approved posts must not produce GENERATE, got ${d.action}`);
 });
 t('a fixture-provenance post is not publishable', () => {
   const ledger = { posts: { 5: { post: 5, stage: 'approved', provenance: 'reconstructed-fixture' } } };
-  const d = decide({ ledger, perf: { posts: {} }, fresh: { items: [{ id: 'f', observedAt: new Date().toISOString() }] } });
+  const d = decide({ schedule: {}, ledger, perf: { posts: {} }, fresh: { items: [{ id: 'f', observedAt: new Date().toISOString() }] } });
   assert(d.action !== 'PUBLISH', `must not send you to publish reconstructed copy, got ${d.action}`);
   assert(d.action === 'REPLACE_FIXTURE', `should ask for the real brief copy, got ${d.action}`);
 });
 t('a real-brief post IS publishable', () => {
   const ledger = { posts: { 5: { post: 5, stage: 'approved', provenance: 'brief' } } };
-  const d = decide({ ledger, perf: { posts: {} }, fresh: { items: [] } });
+  const d = decide({ schedule: {}, ledger, perf: { posts: {} }, fresh: { items: [] } });
   assert(d.action === 'PUBLISH', `real copy that passed its gates must be published, got ${d.action}`);
 });
 t('machine-only never returns a human action', () => {
   const ledger = { posts: { 5: { post: 5, stage: 'approved', provenance: 'brief' }, 7: { post: 7, stage: 'scripted' } } };
-  const d = decide({ ledger, perf: { posts: {} }, fresh: { items: [] }, machineOnly: true });
+  const d = decide({ schedule: {}, ledger, perf: { posts: {} }, fresh: { items: [] }, machineOnly: true });
   assert(!['PUBLISH', 'MEASURE', 'REQUEST_BRIEFS'].includes(d.action), `machine-only returned human action ${d.action}`);
   assert(d.action === 'BUILD_SPECS', `with copy waiting, the machine should drain it, got ${d.action}`);
 });
-t('a full ready buffer holds the drain', () => {
+t('a full ready buffer holds copy generation', () => {
   const posts = Object.fromEntries(Array.from({ length: 6 }, (_, i) => [String(900 + i), { post: 900 + i, stage: 'approved', provenance: 'brief' }]));
   posts['7'] = { post: 7, stage: 'scripted' };
-  const d = decide({ ledger: { posts }, perf: { posts: {} }, fresh: { items: [] }, machineOnly: true });
-  assert(d.action === 'HOLD', `6 unscheduled ready posts must hold the drain, got ${d.action}`);
+  const fresh = { items: [{ id: 'f', observedAt: new Date().toISOString() }] };
+  const d = decide({ schedule: {}, ledger: { posts }, perf: { posts: {} }, fresh, machineOnly: true, schedule: {} });
+  assert(d.action === 'HOLD', `6 unscheduled ready posts must hold copy work, got ${d.action}`);
 });
+
+t('SCHEDULE fires for an unscheduled post planned inside 28 days, and machine mode does not block on it', () => {
+  const today = new Date('2026-10-07T12:00:00Z');
+  const ledger = { posts: { 5: { post: 5, stage: 'approved', provenance: 'brief' } } };
+  const schedule = { 5: { date: '2026-10-13', time: '15:00', status: 'planned' } };
+  const base = { ledger, perf: { posts: {} }, fresh: { items: [] }, today, schedule };
+  const human = decide(base);
+  assert(human.action === 'SCHEDULE', `expected SCHEDULE, got ${human.action}`);
+  assert(/META-SCHEDULING-AGENT/.test(human.what), 'SCHEDULE must point at the scheduling brief');
+  const machine = decide({ ...base, machineOnly: true });
+  assert(machine.action !== 'SCHEDULE' && !machine.blocked, `machine mode must not block on scheduling, got ${machine.action}`);
+  const later = decide({ ...base, schedule: { 5: { date: '2026-12-01', status: 'planned' } } });
+  assert(later.action === 'PUBLISH', `a post planned beyond 28 days is not SCHEDULE, got ${later.action}`);
+  const done = decide({ ...base, schedule: { 5: { date: '2026-10-13', status: 'scheduled' } } });
+  assert(done.action !== 'SCHEDULE', `a scheduled post needs no SCHEDULE, got ${done.action}`);
+});
+
+const tiredRows = () => ({
+  1: { post: 1, reach: 1000, saves: 90, sends: 40, format: 'good', publishedAt: '2026-08-01' },
+  2: { post: 2, reach: 1000, saves: 80, sends: 35, format: 'good', publishedAt: '2026-08-03' },
+  3: { post: 3, reach: 1000, saves: 5, sends: 1, format: 'tired', publishedAt: '2026-08-05' },
+  4: { post: 4, reach: 1000, saves: 4, sends: 1, format: 'tired', publishedAt: '2026-08-07' },
+  5: { post: 5, reach: 1000, saves: 3, sends: 0, format: 'tired', publishedAt: '2026-08-09' },
+});
+const noSpec = { specFor: () => null };
+
+t('HOLD no longer blocks RETIRE_FORMAT', () => {
+  const posts = Object.fromEntries(Array.from({ length: 6 }, (_, i) => [String(900 + i), { post: 900 + i, stage: 'approved', provenance: 'brief' }]));
+  const d = decide({ schedule: {}, ledger: { posts }, perf: { posts: tiredRows() }, fresh: { items: [] }, machineOnly: true, schedule: {}, ...noSpec });
+  assert(d.action === 'RETIRE_FORMAT', `a full buffer must not mask a decaying format, got ${d.action}`);
+});
+
+t('a post missing saves or reach is unscored, not a miss', () => {
+  const s = performanceSignal({ posts: { ...tiredRows(), 6: { post: 6, reach: 1000, format: 'tired', publishedAt: '2026-08-11' },
+    7: { post: 7, saves: 50, format: 'good', publishedAt: '2026-08-12' } } }, noSpec);
+  assert(s.ready && s.n === 5 && s.unscored === 2, `unscored accounting wrong: ${JSON.stringify(s)}`);
+  const few = performanceSignal({ posts: { 1: { post: 1, reach: 100, saves: 5 }, 2: { post: 2, reach: 100 }, 3: { post: 3, saves: 4 } } }, noSpec);
+  assert(!few.ready && few.n === 1 && few.unscored === 2, 'unscored posts must not count toward the 3-post minimum');
+  const gap = performanceSignal({ posts: { ...tiredRows(), 4: { post: 4, format: 'tired', publishedAt: '2026-08-07' }, 5: { post: 5, format: 'tired', publishedAt: '2026-08-09' } } }, noSpec);
+  assert(!gap.retire.includes('tired'), 'two unscored posts must not extend a run of misses to 3');
+});
+
+t('3 scored misses retire a format, 2 do not', () => {
+  assert(performanceSignal({ posts: tiredRows() }, noSpec).retire.includes('tired'), '3 scored misses should retire');
+  const rec = performanceSignal({ posts: { ...tiredRows(), 5: { post: 5, reach: 1000, saves: 95, sends: 45, format: 'tired', publishedAt: '2026-08-09' } } }, noSpec);
+  assert(!rec.retire.includes('tired'), 'a recovery on the third post must not retire');
+  const r = tiredRows();
+  const two = performanceSignal({ posts: { 1: r[1], 2: r[2], 3: r[3], 4: r[4], 6: { post: 6, reach: 1000, saves: 60, sends: 20, format: 'good', publishedAt: '2026-08-10' } } }, noSpec);
+  assert(!two.retire.includes('tired'), '2 misses must not retire');
+});
+
+t('format is the declared spec field, else the dominant non-cta layout', () => {
+  assert(formatOf({}, { format: 'decl', slides: [{ layout: 'a' }] }) === 'decl', 'declared wins');
+  const slides = ['a', 'b', 'b', 'cta-card', 'cta-card', 'cta-card'].map((layout) => ({ layout }));
+  assert(formatOf({}, { slides }) === 'b', 'cta-card excluded; majority beats slide 1');
+});
+
 t('a scheduled future post is not due for measurement', () => {
   const ledger = { posts: { 5: { post: 5, stage: 'published', provenance: 'brief' }, 7: { post: 7, stage: 'scripted' } } };
   const future = new Date(Date.now() + 5 * 864e5).toISOString().slice(0, 10);
-  const d = decide({ ledger, perf: { posts: { 5: { post: 5, publishedAt: future } } }, fresh: { items: [] } });
+  const d = decide({ schedule: {}, ledger, perf: { posts: { 5: { post: 5, publishedAt: future } } }, fresh: { items: [] } });
   assert(d.action !== 'MEASURE', `a post going live in 5 days has no numbers yet, got ${d.action}`);
 });
 t('a post live 8 days with no numbers IS due', () => {
   const ledger = { posts: { 5: { post: 5, stage: 'published', provenance: 'brief' } } };
   const past = new Date(Date.now() - 8 * 864e5).toISOString().slice(0, 10);
-  const d = decide({ ledger, perf: { posts: { 5: { post: 5, publishedAt: past } } }, fresh: { items: [] } });
+  const d = decide({ schedule: {}, ledger, perf: { posts: { 5: { post: 5, publishedAt: past } } }, fresh: { items: [] } });
   assert(d.action === 'MEASURE', `8 days live, unmeasured, should be MEASURE, got ${d.action}`);
 });
 t('generate only when the board is genuinely clear', () => {
-  const d = decide({ ledger: { posts: { 1: { post: 1, stage: 'measured' } } }, perf: { posts: {} },
+  const d = decide({ schedule: {}, ledger: { posts: { 1: { post: 1, stage: 'measured' } } }, perf: { posts: {} },
     fresh: { items: [{ id: 'f', observedAt: new Date().toISOString() }] } });
   assert(d.action === 'GENERATE', `clear board should generate, got ${d.action}`);
 });
@@ -200,6 +263,133 @@ t('note parsing keeps colons inside the element', () => {
   const n = parseNote('stop:1:hook: five lines');
   assert(n && n.slide === 1 && n.element === 'hook: five lines', 'element should keep its own colon');
   assert(parseNote('garbage') === null, 'unparseable note should be null');
+});
+
+console.log('\nREFINERY CONTRACT (S0)');
+const refined = (over = {}) => {
+  const b = base();
+  const first = b.slides[0].copy;
+  return { ...b, provenance: 'refined', variant: 'B', refinedFrom: b.postNumber, picked: false,
+    originalCopy: b.slides.map((sl) => sl.copy),
+    refinement: { round: 1, model: 'claude-sonnet-5-5', at: '2026-10-02T00:00:00.000Z',
+      changes: [{ slide: 1, field: 'headline', from: String(first.headline ?? ''), to: 'x', why: 'tighter' }] },
+    ...over };
+};
+t('variant B without originalCopy is REJECTED', () => {
+  const { originalCopy, ...noOrig } = refined();
+  assert(rejects(noOrig), 'variant B must require originalCopy');
+  try { validateSpec(noOrig); } catch (e) { assert(/originalCopy/.test(e.message), `rejected for the wrong reason: ${e.message}`); }
+});
+t('good variant B with originalCopy validates', () => { validateSpec(refined()); });
+t('refinement change with empty why is REJECTED', () => {
+  const b = refined();
+  assert(rejects({ ...b, refinement: { ...b.refinement, changes: [{ ...b.refinement.changes[0], why: '' }] } }), 'why must be non-empty');
+});
+t('variant A needs no originalCopy', () => { validateSpec({ ...base(), variant: 'A' }); });
+t('refined spec without picked:true is excluded by the ready filter', () => {
+  assert(!isPublishable({ provenance: 'refined' }), 'unpicked refined must not ship');
+  assert(!isPublishable({ provenance: 'refined', picked: false }), 'picked:false must not ship');
+  assert(isPublishable({ provenance: 'refined', picked: true }), 'picked refined may ship');
+  assert(isPublishable({ provenance: 'brief' }), 'brief ships');
+  assert(!isPublishable({ provenance: 'reconstructed-fixture' }), 'fixture never ships');
+});
+t('saveRefinery leaves valid JSON and no temp file', () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'refinery-'));
+  const file = path.join(dir, 'refinery.json');
+  saveRefinery({ posts: { 5: { stage: 'queued' } } }, file);
+  saveRefinery(setPostStage(loadRefinery(file), 5, 'designing'), file);
+  const back = JSON.parse(fs.readFileSync(file, 'utf8'));
+  assert(back.posts['5'].stage === 'designing' && back.updatedAt, 'state persisted');
+  assert(fs.readdirSync(dir).join() === 'refinery.json', `temp lingered: ${fs.readdirSync(dir)}`);
+  assert(REFINERY_STAGES.includes('vault'), 'stage enum');
+  let threw = false; try { setPostStage({ posts: {} }, 5, 'bogus'); } catch { threw = true; }
+  assert(threw, 'unknown stage rejected');
+});
+
+console.log('\nCTA honesty (setup phase)');
+const SETUP = { phase: 'setup', waitlistLive: false, foundingMemberLive: false };
+const LIVE = { phase: 'live', waitlistLive: true, foundingMemberLive: false };
+t('Tier-2 caption fails with waitlistLive:false and passes with true', () => {
+  const cap = `Save this.\n${gtm.ctas['Tier 2'].text}\n`;
+  assert(launchCheck(cap, 'caption', SETUP).length > 0, 'waitlist/link in bio must fail in setup');
+  assert(launchCheck(cap, 'caption', LIVE).length === 0, 'Tier 2 text passes once waitlist is live');
+  assert(launchCheck('Link in bio. Pre-order now.', 'caption', SETUP).length >= 2, 'link in bio and pre-order both caught');
+});
+t('Tier-3 text fails unless foundingMemberLive', () => {
+  assert(launchCheck(gtm.ctas['Tier 3'].text, 'c', { ...LIVE, foundingMemberLive: false }).some((f) => f.match === gtm.ctas['Tier 3'].text), 'tier 3 blocked');
+  assert(launchCheck(gtm.ctas['Tier 3'].text, 'c', { ...LIVE, foundingMemberLive: true }).length === 0, 'tier 3 allowed when live');
+});
+t('slide with Tier-2 text FAILs gate 6, and is WARN HOLD when held', () => {
+  const s = spec({}, { body: gtm.ctas['Tier 2'].text });
+  assert(hasCheck(gtmCheck(s, { launch: SETUP }), 'cta-not-live', 'FAIL'), 'unheld slide must fail');
+  const held = gtmCheck({ ...s, hold: 'HOLD-UNTIL-LAUNCH' }, { launch: SETUP });
+  assert(hasCheck(held, 'hold', 'WARN') && held.verdict === 'PASS', 'held reports WARN, no fail');
+  assert(gtmCheck(s, { launch: LIVE }).verdict === 'PASS', 'passes once live');
+});
+t('rotated setup CTA is deterministic per post number', () => {
+  for (let n = 0; n < 12; n++) {
+    assert(ctaLine({ postNumber: n, ctaTier: 'Tier 2' }, SETUP) === gtm.ctas.setup[n % 4], `post ${n} wrong line`);
+    assert(ctaLine({ postNumber: n, ctaTier: 'Tier 2' }, SETUP) === ctaLine({ postNumber: n, ctaTier: 'Tier 1' }, SETUP), 'same line any tier');
+  }
+  assert(ctaLine({ postNumber: 5, ctaTier: 'Tier 0' }, SETUP) === '', 'Tier 0 has no CTA line');
+  assert(ctaLine({ postNumber: 5, ctaTier: 'Tier 2' }, LIVE) === gtm.ctas['Tier 2'].text, 'tier text once live');
+  assert(!gtm.ctas.setup.some((l) => launchCheck(l, 'c', SETUP).length), 'setup lines are themselves honest');
+});
+t('held spec is not publishable', () => {
+  assert(!isPublishable({ provenance: 'brief', hold: 'HOLD-UNTIL-LAUNCH' }), 'held must not ship');
+  assert(isPublishable({ provenance: 'brief' }), 'unheld brief ships');
+  let threw = false; try { validateSpec({ ...spec(), hold: 'nope' }); } catch { threw = true; }
+  assert(threw, 'invalid hold value rejected by schema');
+});
+
+console.log('\nSETUP CTA SWAP');
+const swapRaw = (n, ctaLine, hold) => JSON.stringify({ postNumber: n, title: 'fixture', pillar: 'The $2913 Problem', ctaTier: 'Tier 2', provenance: 'brief', gtmAngle: 'money-leak', slides: [{ index: 1, archetype: 'cta', copy: { headline: 'A clean headline about food.', ctaLine } }], ...(hold ? { hold: 'HOLD-UNTIL-LAUNCH' } : {}) }, null, 2) + '\n';
+const swapped = (n, ctaLine, hold) => { const raw = swapRaw(n, ctaLine, hold); return applySwapText(raw, planSwaps(JSON.parse(raw))); };
+t('swap is deterministic per post number', () => {
+  for (let n = 1; n < 9; n++) {
+    const w = planSwaps(JSON.parse(swapRaw(n, 'Join the waitlist - link in bio.')));
+    assert(w.length === 1 && w[0].to === gtm.ctas.setup[n % 4] && w[0].rule === 'setup-cta', `post ${n} wrong swap`);
+  }
+});
+t('swapped spec passes Gate 6', () => {
+  const sp = JSON.parse(swapped(7, 'Join the waitlist - link in bio.', true));
+  assert(!('hold' in sp) && sp.ctaSwap.length === 1, 'hold removed, swap logged');
+  assert(gtmCheck(sp, { launch: SETUP }).verdict === 'PASS', 'swapped spec must pass');
+});
+t('restore round-trips byte-identical (held and unheld)', () => {
+  for (const hold of [true, false]) {
+    const raw = swapRaw(7, 'Join the waitlist - link in bio.', hold);
+    assert(restoreText(swapped(7, 'Join the waitlist - link in bio.', hold)) === raw, `restore differs (hold=${hold})`);
+  }
+  const once = swapped(7, 'Link in bio.', false);
+  assert(restoreText(restoreText(once)) === restoreText(once), 'restore idempotent');
+  assert(planSwaps(JSON.parse(once)).length === 0, 'swap idempotent');
+});
+t('mixed field keeps the non-CTA sentence verbatim', () => {
+  const to = swapText('fond tracks what you use. Link in bio.', gtm.ctas.setup[0]);
+  assert(to === `fond tracks what you use. ${gtm.ctas.setup[0]}`, `got ${to}`);
+  assert(swapText('A value sentence only.', gtm.ctas.setup[0]) === null, 'no CTA, no swap');
+});
+t('customer framing: third-party sentence passes, fond traction claim still fails', () => {
+  const third = spec({}, { body: 'Meal kit companies have an average customer retention of 3-4 months.' });
+  assert(gtmCheck(third, { launch: SETUP }).verdict === 'PASS', 'third-party customer sentence must pass');
+  for (const txt of ['fond has customers who love it.', 'Our customers save money.', 'We have 40 customers.']) {
+    assert(gtmCheck(spec({}, { body: txt }), { launch: SETUP }).verdict === 'FAIL', `must fail: ${txt}`);
+  }
+});
+t('ctaSwap.to outside ctas.setup FAILS Gate 6', () => {
+  const sp = JSON.parse(swapped(7, 'Join the waitlist - link in bio.'));
+  const bad = { ...sp, slides: [{ ...sp.slides[0], copy: { ...sp.slides[0].copy, ctaLine: 'Follow us for updates.' } }], ctaSwap: [{ ...sp.ctaSwap[0], to: 'Follow us for updates.' }] };
+  assert(hasCheck(gtmCheck(bad, { launch: SETUP }), 'cta-swap', 'FAIL'), 'off-list swap must fail');
+  const left = { ...sp, slides: [{ ...sp.slides[0], copy: { ...sp.slides[0].copy, body: 'Join the waitlist.' } }] };
+  assert(hasCheck(gtmCheck(left, { launch: SETUP }), 'cta-not-live', 'FAIL'), 'leftover waitlist still fails');
+});
+t('waitlist claim inside a list item FAILS Gate 6 (items arrays are slide copy too)', () => {
+  const sp = JSON.parse(swapped(7, 'Join the waitlist - link in bio.'));
+  const inItem = { ...sp, slides: [{ ...sp.slides[0], copy: { ...sp.slides[0].copy, items: ['There is a waitlist.', 'Second item.'] } }] };
+  assert(hasCheck(gtmCheck(inItem, { launch: SETUP }), 'cta-not-live', 'FAIL'), 'waitlist in items[] must fail');
+  const inObj = { ...sp, slides: [{ ...sp.slides[0], copy: { ...sp.slides[0].copy, items: [{ label: 'Our customers love it' }] } }] };
+  assert(hasCheck(gtmCheck(inObj, { launch: SETUP }), 'honesty', 'FAIL'), 'traction claim in an item object must fail');
 });
 
 console.log(`\n  ${pass} passed, ${fail} failed\n`);

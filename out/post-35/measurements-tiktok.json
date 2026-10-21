@@ -1,0 +1,1336 @@
+[
+  {
+    "index": 1,
+    "archetype": "hook",
+    "layout": "hero-statement",
+    "valign": "top",
+    "normalizations": [
+      {
+        "slide": 1,
+        "field": "copy.headline",
+        "rule": "apostrophe",
+        "count": 1
+      }
+    ],
+    "declaresLoss": false,
+    "background": "dark",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [
+      {
+        "cls": "thread-label",
+        "text": "70% haze",
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif"
+      }
+    ],
+    "accents": [
+      "rgb(245, 242, 236)",
+      "rgb(0, 0, 0)",
+      "rgb(217, 164, 65)",
+      "rgb(107, 114, 128)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "h-hook",
+        "svg": false,
+        "text": "That fresh bread smell when you walk in? It’s pumped through the vents.",
+        "words": 13,
+        "chars": 71,
+        "color": "rgb(245, 242, 236)",
+        "size": 165.333,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 224,
+          "w": 1184,
+          "h": 1022
+        },
+        "lines": [
+          "That fresh bread",
+          "smell when you",
+          "walk in? It’s",
+          "pumped through the",
+          "vents.",
+          ""
+        ]
+      },
+      {
+        "cls": "swipe-l",
+        "svg": false,
+        "text": "Swipe",
+        "words": 1,
+        "chars": 5,
+        "color": "rgb(245, 242, 236)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 253,
+          "y": 1326,
+          "w": 97,
+          "h": 52
+        },
+        "lines": null
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "70% haze",
+        "words": 2,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2282,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "1/6",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1251,
+          "y": 2441,
+          "w": 61,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "chromeCollisions": [],
+    "contentBox": {
+      "top": 0,
+      "bottom": 2134,
+      "height": 2134
+    },
+    "threadBox": {
+      "top": 2134,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-35/slides-tiktok/slide-01.png"
+  },
+  {
+    "index": 2,
+    "archetype": "backupHook",
+    "layout": "diagram",
+    "valign": "bottom",
+    "normalizations": [
+      {
+        "slide": 2,
+        "field": "copy.headline",
+        "rule": "double-quote-open",
+        "count": 1
+      },
+      {
+        "slide": 2,
+        "field": "copy.headline",
+        "rule": "double-quote-close",
+        "count": 1
+      },
+      {
+        "slide": 2,
+        "field": "copy.headline",
+        "rule": "apostrophe",
+        "count": 1
+      },
+      {
+        "slide": 2,
+        "field": "diagram.data.zones[1].note",
+        "rule": "apostrophe",
+        "count": 1
+      }
+    ],
+    "declaresLoss": false,
+    "background": "light",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [
+      {
+        "cls": "d-zone-l",
+        "text": "Scent zone, first ~20 feet",
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif"
+      },
+      {
+        "cls": "thread-label",
+        "text": "55% haze",
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif"
+      }
+    ],
+    "accents": [
+      "rgb(20, 22, 26)",
+      "rgb(0, 0, 0)",
+      "rgb(74, 123, 166)",
+      "rgb(107, 114, 128)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "h-mid",
+        "svg": false,
+        "text": "It’s called “scent marketing.”",
+        "words": 4,
+        "chars": 30,
+        "color": "rgb(20, 22, 26)",
+        "size": 85.33,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1136,
+          "w": 881,
+          "h": 181
+        },
+        "lines": [
+          "It’s called",
+          "“scent marketing.”"
+        ]
+      },
+      {
+        "cls": "d-zone-l",
+        "svg": false,
+        "text": "HVAC unit",
+        "words": 2,
+        "chars": 9,
+        "color": "rgb(20, 22, 26)",
+        "size": 44,
+        "weight": 700,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 200,
+          "y": 1405,
+          "w": 1059,
+          "h": 53
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-zone-n",
+        "svg": false,
+        "text": "Pipes bakery scent through the vents near the entrance.",
+        "words": 9,
+        "chars": 55,
+        "color": "rgb(20, 22, 26)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 200,
+          "y": 1466,
+          "w": 1059,
+          "h": 48
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-zone-l",
+        "svg": false,
+        "text": "Scent zone, first ~20 feet",
+        "words": 5,
+        "chars": 26,
+        "color": "rgb(20, 22, 26)",
+        "size": 44,
+        "weight": 700,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 200,
+          "y": 1578,
+          "w": 1059,
+          "h": 53
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-zone-n",
+        "svg": false,
+        "text": "The smell triggers hunger before you’ve picked up a basket.",
+        "words": 10,
+        "chars": 59,
+        "color": "rgb(20, 22, 26)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 200,
+          "y": 1639,
+          "w": 1059,
+          "h": 48
+        },
+        "lines": null
+      },
+      {
+        "cls": "body",
+        "svg": false,
+        "text": "Many grocery chains pipe bakery scent through HVAC systems near the entrance.",
+        "words": 12,
+        "chars": 77,
+        "color": "rgb(20, 22, 26)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1775,
+          "w": 803,
+          "h": 221
+        },
+        "lines": [
+          "Many grocery chains pipe",
+          "bakery scent through HVAC",
+          "systems near the entrance."
+        ]
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "55% haze",
+        "words": 2,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2282,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "2/6",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1240,
+          "y": 2441,
+          "w": 72,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "chromeCollisions": [],
+    "contentBox": {
+      "top": 0,
+      "bottom": 2134,
+      "height": 2134
+    },
+    "threadBox": {
+      "top": 2134,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-35/slides-tiktok/slide-02.png"
+  },
+  {
+    "index": 3,
+    "archetype": "value",
+    "layout": "quadrant-card",
+    "valign": "center",
+    "normalizations": [
+      {
+        "slide": 3,
+        "field": "copy.headline",
+        "rule": "apostrophe",
+        "count": 1
+      }
+    ],
+    "declaresLoss": true,
+    "background": "light",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [
+      {
+        "cls": "thread-label",
+        "text": "40% haze",
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif"
+      }
+    ],
+    "accents": [
+      "rgb(20, 22, 26)",
+      "rgb(0, 0, 0)",
+      "rgb(107, 114, 128)",
+      "rgb(74, 123, 166)",
+      "rgb(214, 69, 65)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "h-mid",
+        "svg": false,
+        "text": "The smell doesn’t make you hungry. It makes you slow down.",
+        "words": 11,
+        "chars": 58,
+        "color": "rgb(20, 22, 26)",
+        "size": 96,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 333,
+          "w": 991,
+          "h": 305
+        },
+        "lines": [
+          "The smell doesn’t make",
+          "you hungry. It makes",
+          "you slow down."
+        ]
+      },
+      {
+        "cls": "q-l",
+        "svg": false,
+        "text": "Time in-store",
+        "words": 2,
+        "chars": 13,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 700,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 176,
+          "y": 1060,
+          "w": 489,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "q-v",
+        "svg": false,
+        "text": "+16%",
+        "words": 1,
+        "chars": 4,
+        "color": "rgb(74, 123, 166)",
+        "size": 186.67,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 176,
+          "y": 1145,
+          "w": 489,
+          "h": 217
+        },
+        "lines": null
+      },
+      {
+        "cls": "q-l",
+        "svg": false,
+        "text": "Basket size",
+        "words": 2,
+        "chars": 11,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 700,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 783,
+          "y": 1060,
+          "w": 489,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "q-v",
+        "svg": false,
+        "text": "+12%",
+        "words": 1,
+        "chars": 4,
+        "color": "rgb(214, 69, 65)",
+        "size": 186.67,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 783,
+          "y": 1145,
+          "w": 489,
+          "h": 217
+        },
+        "lines": null
+      },
+      {
+        "cls": "cite",
+        "svg": false,
+        "text": "2023 retail scent-marketing study",
+        "words": 4,
+        "chars": 33,
+        "color": "rgb(107, 114, 128)",
+        "size": 32,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1783,
+          "w": 1184,
+          "h": 43
+        },
+        "lines": null
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "40% haze",
+        "words": 2,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2282,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "3/6",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1241,
+          "y": 2441,
+          "w": 71,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "chromeCollisions": [],
+    "contentBox": {
+      "top": 0,
+      "bottom": 2134,
+      "height": 2134
+    },
+    "threadBox": {
+      "top": 2134,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-35/slides-tiktok/slide-03.png"
+  },
+  {
+    "index": 4,
+    "archetype": "value",
+    "layout": "diagram",
+    "valign": "bottom",
+    "normalizations": [],
+    "declaresLoss": true,
+    "background": "dark",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [
+      {
+        "cls": "thread-label",
+        "text": "25% haze",
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif"
+      }
+    ],
+    "accents": [
+      "rgb(245, 242, 236)",
+      "rgb(0, 0, 0)",
+      "rgb(74, 123, 166)",
+      "rgb(214, 69, 65)",
+      "rgb(107, 114, 128)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "h-mid",
+        "svg": false,
+        "text": "The bait and the hook",
+        "words": 5,
+        "chars": 21,
+        "color": "rgb(245, 242, 236)",
+        "size": 85.33,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1219,
+          "w": 881,
+          "h": 90
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-ba-label",
+        "svg": false,
+        "text": "ROTISSERIE CHICKEN",
+        "words": 2,
+        "chars": 18,
+        "color": "rgb(245, 242, 236)",
+        "size": 34.67,
+        "weight": 700,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 175,
+          "y": 1397,
+          "w": 458,
+          "h": 43
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-ba-val",
+        "svg": false,
+        "text": "$5.99",
+        "words": 1,
+        "chars": 5,
+        "color": "rgb(74, 123, 166)",
+        "size": 98.67,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 175,
+          "y": 1459,
+          "w": 458,
+          "h": 107
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-ba-note",
+        "svg": false,
+        "text": "the store loses money on it",
+        "words": 6,
+        "chars": 27,
+        "color": "rgb(245, 242, 236)",
+        "size": 40,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 175,
+          "y": 1585,
+          "w": 458,
+          "h": 102
+        },
+        "lines": [
+          "the store loses",
+          "money on it"
+        ]
+      },
+      {
+        "cls": "d-ba-label",
+        "svg": false,
+        "text": "PREPARED FOODS",
+        "words": 2,
+        "chars": 14,
+        "color": "rgb(245, 242, 236)",
+        "size": 34.67,
+        "weight": 700,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 814,
+          "y": 1397,
+          "w": 458,
+          "h": 43
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-ba-val",
+        "svg": false,
+        "text": "60%+",
+        "words": 1,
+        "chars": 4,
+        "color": "rgb(214, 69, 65)",
+        "size": 98.67,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 814,
+          "y": 1459,
+          "w": 458,
+          "h": 107
+        },
+        "lines": null
+      },
+      {
+        "cls": "d-ba-note",
+        "svg": false,
+        "text": "margin on sides, salads, prepared meals",
+        "words": 6,
+        "chars": 39,
+        "color": "rgb(245, 242, 236)",
+        "size": 40,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 814,
+          "y": 1585,
+          "w": 458,
+          "h": 102
+        },
+        "lines": [
+          "margin on sides,",
+          "salads, prepared meals"
+        ]
+      },
+      {
+        "cls": "body",
+        "svg": false,
+        "text": "The smell pulls you into the hot-food section, where margins run 60%+.",
+        "words": 12,
+        "chars": 70,
+        "color": "rgb(245, 242, 236)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1775,
+          "w": 803,
+          "h": 221
+        },
+        "lines": [
+          "The smell pulls you",
+          "into the hot-food section,",
+          "where margins run 60%+."
+        ]
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "25% haze",
+        "words": 2,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2282,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "4/6",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1239,
+          "y": 2441,
+          "w": 73,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "chromeCollisions": [],
+    "contentBox": {
+      "top": 0,
+      "bottom": 2134,
+      "height": 2134
+    },
+    "threadBox": {
+      "top": 2134,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-35/slides-tiktok/slide-04.png"
+  },
+  {
+    "index": 5,
+    "archetype": "value",
+    "layout": "quadrant-card",
+    "valign": "center",
+    "normalizations": [],
+    "declaresLoss": false,
+    "background": "light",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [
+      {
+        "cls": "thread-label",
+        "text": "10% haze",
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif"
+      }
+    ],
+    "accents": [
+      "rgb(20, 22, 26)",
+      "rgb(0, 0, 0)",
+      "rgb(107, 114, 128)",
+      "rgb(74, 123, 166)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "h-mid",
+        "svg": false,
+        "text": "Nothing in the store is accidental.",
+        "words": 6,
+        "chars": 35,
+        "color": "rgb(20, 22, 26)",
+        "size": 96,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 333,
+          "w": 991,
+          "h": 204
+        },
+        "lines": [
+          "Nothing in the",
+          "store is accidental."
+        ]
+      },
+      {
+        "cls": "q-l",
+        "svg": false,
+        "text": "Flowers",
+        "words": 1,
+        "chars": 7,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 700,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 176,
+          "y": 708,
+          "w": 489,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "q-v",
+        "svg": false,
+        "text": "Calm",
+        "words": 1,
+        "chars": 4,
+        "color": "rgb(107, 114, 128)",
+        "size": 85.33,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 176,
+          "y": 792,
+          "w": 489,
+          "h": 99
+        },
+        "lines": null
+      },
+      {
+        "cls": "q-l",
+        "svg": false,
+        "text": "Produce lighting",
+        "words": 2,
+        "chars": 16,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 700,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 783,
+          "y": 708,
+          "w": 489,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "q-v",
+        "svg": false,
+        "text": "Fresh",
+        "words": 1,
+        "chars": 5,
+        "color": "rgb(107, 114, 128)",
+        "size": 85.33,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 783,
+          "y": 792,
+          "w": 489,
+          "h": 99
+        },
+        "lines": null
+      },
+      {
+        "cls": "q-l",
+        "svg": false,
+        "text": "Meat lighting",
+        "words": 2,
+        "chars": 13,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 700,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 176,
+          "y": 1178,
+          "w": 489,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "q-v",
+        "svg": false,
+        "text": "Red",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 85.33,
+        "weight": 700,
+        "family": "\"Space Grotesk\", ui-monospace, monospace",
+        "surface": null,
+        "box": {
+          "x": 176,
+          "y": 1262,
+          "w": 489,
+          "h": 99
+        },
+        "lines": null
+      },
+      {
+        "cls": "body",
+        "svg": false,
+        "text": "Fresh flowers at the entrance. Warm lighting in produce. Cool lighting on the me",
+        "words": 19,
+        "chars": 106,
+        "color": "rgb(20, 22, 26)",
+        "size": 53.33,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1532,
+          "w": 803,
+          "h": 294
+        },
+        "lines": [
+          "Fresh flowers at the entrance.",
+          "Warm lighting in produce. Cool",
+          "lighting on the meat to",
+          "make it look redder."
+        ]
+      },
+      {
+        "cls": "thread-label",
+        "svg": false,
+        "text": "10% haze",
+        "words": 2,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 38.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2282,
+          "w": 1184,
+          "h": 50
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "5/6",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(107, 114, 128)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1240,
+          "y": 2441,
+          "w": 72,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "chromeCollisions": [],
+    "contentBox": {
+      "top": 0,
+      "bottom": 2134,
+      "height": 2134
+    },
+    "threadBox": {
+      "top": 2134,
+      "bottom": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-35/slides-tiktok/slide-05.png"
+  },
+  {
+    "index": 6,
+    "archetype": "cta",
+    "layout": "cta-card",
+    "valign": "bottom",
+    "normalizations": [
+      {
+        "slide": 6,
+        "field": "copy.headline",
+        "rule": "apostrophe",
+        "count": 2
+      },
+      {
+        "slide": 6,
+        "field": "copy.citation",
+        "rule": "apostrophe",
+        "count": 1
+      }
+    ],
+    "declaresLoss": false,
+    "background": "dark",
+    "fontStatus": {
+      "playfair": true,
+      "dmsans": true,
+      "grotesk": true
+    },
+    "overflow": [],
+    "marginViolations": [],
+    "numeralFonts": [],
+    "accents": [
+      "rgb(0, 0, 0)",
+      "rgb(245, 242, 236)",
+      "rgba(245, 242, 236, 0.7)"
+    ],
+    "textBoxes": [
+      {
+        "cls": "wordmark",
+        "svg": false,
+        "text": "fond",
+        "words": 1,
+        "chars": 4,
+        "color": "rgb(245, 242, 236)",
+        "size": 58.67,
+        "weight": 500,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1639,
+          "w": 1184,
+          "h": 76
+        },
+        "lines": null
+      },
+      {
+        "cls": "h-cta",
+        "svg": false,
+        "text": "You’re not shopping. You’re being directed.",
+        "words": 6,
+        "chars": 43,
+        "color": "rgb(245, 242, 236)",
+        "size": 74.67,
+        "weight": 700,
+        "family": "\"Playfair Display\", Georgia, serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 1744,
+          "w": 722,
+          "h": 260
+        },
+        "lines": [
+          "You’re not",
+          "shopping. You’re",
+          "being directed."
+        ]
+      },
+      {
+        "cls": "cta-line",
+        "svg": false,
+        "text": "fond shows you what you actually need before you walk in.",
+        "words": 11,
+        "chars": 57,
+        "color": "rgb(245, 242, 236)",
+        "size": 53.33,
+        "weight": 500,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2033,
+          "w": 883,
+          "h": 143
+        },
+        "lines": [
+          "fond shows you what you actually",
+          "need before you walk in."
+        ]
+      },
+      {
+        "cls": "send",
+        "svg": false,
+        "text": "Send this to someone who thinks grocery shopping is neutral.",
+        "words": 10,
+        "chars": 60,
+        "color": "rgba(245, 242, 236, 0.7)",
+        "size": 40,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2205,
+          "w": 657,
+          "h": 107
+        },
+        "lines": [
+          "Send this to someone who",
+          "thinks grocery shopping is neutral."
+        ]
+      },
+      {
+        "cls": "arrow",
+        "svg": false,
+        "text": "↓",
+        "words": 1,
+        "chars": 1,
+        "color": "rgba(245, 242, 236, 0.7)",
+        "size": 58.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2342,
+          "w": 1184,
+          "h": 70
+        },
+        "lines": null
+      },
+      {
+        "cls": "handle",
+        "svg": false,
+        "text": "@getfond",
+        "words": 1,
+        "chars": 8,
+        "color": "rgb(245, 242, 236)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 128,
+          "y": 2441,
+          "w": 210,
+          "h": 55
+        },
+        "lines": null
+      },
+      {
+        "cls": "counter",
+        "svg": false,
+        "text": "6/6",
+        "words": 1,
+        "chars": 3,
+        "color": "rgb(245, 242, 236)",
+        "size": 42.67,
+        "weight": 400,
+        "family": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "surface": null,
+        "box": {
+          "x": 1239,
+          "y": 2441,
+          "w": 73,
+          "h": 55
+        },
+        "lines": null
+      }
+    ],
+    "chromeCollisions": [],
+    "contentBox": {
+      "top": 0,
+      "bottom": 2441,
+      "height": 2441
+    },
+    "file": "/Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-35/slides-tiktok/slide-06.png"
+  }
+]

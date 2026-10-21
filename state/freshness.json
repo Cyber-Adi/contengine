@@ -1,5 +1,70 @@
 {
-  "updatedAt": "2026-09-28T12:54:48.021Z",
-  "note": "Outer-world observations harvested from the GTM free research stack. Every item needs observedAt, source, and the verbatim thing observed. Items older than 14 days stop counting toward the entropy guard's citation requirement, which is what forces the harvest to actually re-run.",
-  "items": []
+ "updatedAt": "2026-10-21T20:09:11.546Z",
+ "note": "Outer-world observations harvested from the GTM free research stack. Every item needs observedAt, source, and the verbatim thing observed. Items older than 14 days stop counting toward the entropy guard's citation requirement, which is what forces the harvest to actually re-run.",
+ "items": [
+  {
+   "id": "reddit-blocked-note",
+   "source": "Search tool; reddit.com blocked",
+   "observedAt": "2026-10-21T00:00:00.000Z",
+   "date": "2026-10-21",
+   "text": "Reddit unreachable via search tool this run: audience phrasing from r/ZeroWaste and r/Frugal is UNVERIFIED; surveys and app reviews used instead",
+   "url": "https://www.reddit.com/search/"
+  },
+  {
+   "id": "frigidaire-leftovers-2026",
+   "source": "Frigidaire/Atomik survey, Jun 2026",
+   "observedAt": "2026-10-21T00:00:00.000Z",
+   "date": "2026-10-21",
+   "text": "74% throw out leftovers at least weekly; 90% picked takeout despite a good meal in the fridge; people forget them or second-guess freshness",
+   "url": "https://www.electroluxgroup.com/en/news/new-frigidaire-survey-reveals-good-intentions-arent-enough-americans-still-toss-their-leftovers/"
+  },
+  {
+   "id": "refed-yougov-2026",
+   "source": "ReFED/YouGov, Jan 2026",
+   "observedAt": "2026-10-21T00:00:00.000Z",
+   "date": "2026-10-21",
+   "text": "58% say grocery spend rose; households waste less when prices bite; checking what is at home before shopping helped",
+   "url": "https://www.biocycle.net/refed-report-affordability-household-food-waste/"
+  },
+  {
+   "id": "netcredit-wasted-items-2026",
+   "source": "NetCredit/Censuswide 2026",
+   "observedAt": "2026-10-21T00:00:00.000Z",
+   "date": "2026-10-21",
+   "text": "Bread 22.7% and lettuce 22.6% of purchases tossed; best-by labels read as strict deadlines",
+   "url": "https://www.cbsnews.com/minnesota/news/survey-finds-the-10-most-wasted-grocery-items-in-the-u-s/"
+  },
+  {
+   "id": "nowaste-reviews-2026",
+   "source": "App Store reviews, NoWaste",
+   "observedAt": "2026-10-21T00:00:00.000Z",
+   "date": "2026-10-21",
+   "text": "Reviewer: \"I can even understand that it wouldn't have the correct expiration for every item, but can't some items be correct!?\"; reminders are Pro only",
+   "url": "https://justuseapp.com/en/app/926211004/nowaste-food-inventory-list/reviews"
+  },
+  {
+   "id": "pantry-tracker-review-2026",
+   "source": "App Store reviews, My Pantry Tracker",
+   "observedAt": "2026-10-21T00:00:00.000Z",
+   "date": "2026-10-21",
+   "text": "Non-food items fill the expired list unless dates are hand-edited; users ask for a no-expiration option",
+   "url": "https://apps.apple.com/us/app/my-pantry-tracker/id1567647197?see-all=reviews&platform=iphone"
+  },
+  {
+   "id": "tgtg-trustpilot-2026",
+   "source": "Trustpilot, Too Good To Go",
+   "observedAt": "2026-10-21T00:00:00.000Z",
+   "date": "2026-10-21",
+   "text": "Mixed reviews: stale items, no allergen filter, reserved bag disappears during payment; a different job than home fridge tracking",
+   "url": "https://www.trustpilot.com/review/toogoodtogo.com"
+  },
+  {
+   "id": "pantry-app-friction-2026",
+   "source": "Competitor comparison blogs (biased)",
+   "observedAt": "2026-10-21T00:00:00.000Z",
+   "date": "2026-10-21",
+   "text": "Recurring claim: pantry apps are abandoned because manual entry is tedious; receipt scan and auto dates are the pitch",
+   "url": "https://fango.fi/en/blog/best-pantry-inventory-app/"
+  }
+ ]
 }

@@ -6,7 +6,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { chromium } from 'playwright';
-import { wrapSlideHtml, tokens, ROOT } from './slide-html.mjs';
+import { wrapSlideHtml, effectiveSlide, tokens, ROOT } from './slide-html.mjs';
+import { normalizeSlide } from './normalize.mjs';
 import { scaleForWidth } from './tokens.mjs';
 import { validateSpec } from './validate.mjs';
 
@@ -74,12 +75,15 @@ export async function renderCarousel(spec, { outDir, debug = false, canvas = 'ig
     // Fonts must be REAL. A silent fallback to a system serif is the #1 way this
     // output looks amateur and it fails quietly. Assert before we screenshot.
     await page.evaluate(async () => {
+      if (window.__fillDone) await window.__fillDone;   // S2b: the page's own fill pass
       await Promise.all([
         document.fonts.load("700 96px 'Playfair Display'"),
         document.fonts.load("400 32px 'DM Sans'"),
         document.fonts.load("700 140px 'Space Grotesk'"),
       ]);
       await document.fonts.ready;
+      // Determinism: let layout settle for two frames before anything is measured or captured.
+      await new Promise((res) => requestAnimationFrame(() => requestAnimationFrame(res)));
     });
     const fontStatus = await page.evaluate(() => ({
       playfair: document.fonts.check("700 96px 'Playfair Display'"),
@@ -146,6 +150,29 @@ export async function renderCarousel(spec, { outDir, debug = false, canvas = 'ig
         if (cs.color) out.accents.add(cs.color);
       }
       out.accents = [...out.accents];
+      // Chrome collision (Gate 1.6): ink-bearing content boxes must never intersect a chrome box.
+      // Range rects give the real glyph lines, so a wide block box with short text does not false-fire.
+      const chromeEls = [...document.querySelectorAll('.micro, .orn, .handle, .counter, .thread-label')];
+      const chromeBoxes = chromeEls.map((c) => { const r = c.getBoundingClientRect();
+        return { cls: String(c.className?.baseVal ?? c.className), l: r.left, r: r.right, t: r.top, b: r.bottom }; });
+      out.chromeCollisions = [];
+      for (const el of document.querySelectorAll('.content *')) {
+        const own = [...el.childNodes].some((n) => n.nodeType === 3 && n.textContent.trim());
+        if (!own) continue;
+        const rg = document.createRange(); rg.selectNodeContents(el);
+        const fsz = parseFloat(getComputedStyle(el).fontSize) || 0;
+        for (const rc of rg.getClientRects()) {
+          if (!rc.width || !rc.height) continue;
+          // A Range rect is the font's content area, taller than the ink. Trim to a glyph band
+          // (0.45em either side of the line centre) so only real ink contact counts.
+          const mid = (rc.top + rc.bottom) / 2, ink = { t: Math.max(rc.top, mid - 0.45 * fsz), b: Math.min(rc.bottom, mid + 0.45 * fsz) };
+          for (const cb of chromeBoxes) {
+            if (rc.left < cb.r && rc.right > cb.l && ink.t < cb.b && ink.b > cb.t) {
+              out.chromeCollisions.push({ cls: String(el.className?.baseVal ?? el.className), text: (el.textContent || '').trim().slice(0, 40), chrome: cb.cls });
+            }
+          }
+        }
+      }
       const cb = document.querySelector('.content')?.getBoundingClientRect();
       if (cb) out.contentBox = { top: Math.round(cb.top - rb.top), bottom: Math.round(cb.bottom - rb.top),
                                  height: Math.round(cb.height) };
@@ -160,7 +187,10 @@ export async function renderCarousel(spec, { outDir, debug = false, canvas = 'ig
     const final = path.join(slidesDir, `slide-${String(slide.index).padStart(2, '0')}.png`);
     await page.screenshot({ path: big, clip: { x: 0, y: 0, width: CV.w, height: CV.h } });
 
-    measurements.push({ index: slide.index, archetype: slide.archetype, layout: slide.layout,
+    // S2f / S2a: every mechanical substitution and every renderer-chosen anchor is recorded.
+    const normalizations = normalizeSlide(slide).log;
+    const valign = effectiveSlide(spec, slide).valign;
+    measurements.push({ index: slide.index, archetype: slide.archetype, layout: slide.layout, valign, normalizations,
       declaresLoss: !!slide.declaresLoss, background: slide.background, fontStatus, ...m, file: final });
   }
 

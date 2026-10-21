@@ -1,0 +1,195 @@
+{
+  "postNumber": 41,
+  "title": "The Music Is Slowing You Down",
+  "pillar": "Supermarket Secrets",
+  "ctaTier": "Tier 0",
+  "sendTrigger": "Send this to whoever does the groceries.",
+  "briefSource": "fond_Carousel_Design_Brief_Posts_41-43_v2.md",
+  "provenance": "brief",
+  "editorialNotes": [
+    "Slide 2 repeats slide 1 layout (hero-statement): both are two-line hooks with no second sentence-level split available; the renderer needs a headline-plus-body variant or Adi must pick a layout.",
+    "38% and 32% are cited in the brief to Milliman, Journal of Marketing 1982; rendered inside the headline and a list item, not as hero type."
+  ],
+  "thread": {
+    "element": "audio waveform slowing to a flatline",
+    "kind": "line",
+    "startState": "fast, tight waveform in Harvest Gold",
+    "endState": "single flat line resolving into the underline of the fond wordmark",
+    "zone": "bottom-rail",
+    "heightPct": 12,
+    "palette": [
+      "harvestGold",
+      "offWhite"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "The music in the grocery store is chosen by a psychologist."
+      },
+      "threadState": {
+        "progress": 0.08,
+        "label": "Fast",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "dark",
+      "layout": "statement-xl",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "You didn't decide to spend 40 minutes in there. The playlist decided for you."
+      },
+      "threadState": {
+        "progress": 0.2,
+        "label": "Slowing",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "A landmark study found slow-tempo store music increased time in-store by 38%.",
+        "items": [
+          "Shoppers browsed longer and spent 32% more per trip.",
+          "Fast music reversed the effect."
+        ],
+        "citation": "Milliman, Journal of Marketing, 1982 - replicated in later studies."
+      },
+      "threadState": {
+        "progress": 0.32,
+        "label": "Slower",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "light",
+      "layout": "split-compare",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The genre matters too.",
+        "items": [
+          "Classical music in the wine aisle made shoppers pick pricier bottles.",
+          "Country in a convenience store lengthened snack-aisle dwell time."
+        ],
+        "body": "The playlist is a targeting tool.",
+        "citation": "Areni & Kim, Journal of Business Research, 1993."
+      },
+      "threadState": {
+        "progress": 0.44,
+        "label": "Slower",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Scent. Sound. Lighting. Temperature. Cart size.",
+        "body": "Every sensory input in the store has been tested, measured, and optimized for one variable: basket size."
+      },
+      "threadState": {
+        "progress": 0.56,
+        "label": "Long and low",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 6,
+      "archetype": "value",
+      "background": "light",
+      "layout": "timeline",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "This isn't a conspiracy. It's a discipline called \"retail atmospherics.\"",
+        "items": [
+          "Taught in business schools, published in journals, practiced by every major chain.",
+          "The science is public.",
+          "The application is invisible."
+        ],
+        "citation": "Turley & Milliman, review of 47 studies, 2000."
+      },
+      "threadState": {
+        "progress": 0.68,
+        "label": "Nearly flat",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 7,
+      "archetype": "reframe",
+      "background": "light",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The store doesn't just sell you food. It sells you the mood to buy more of it."
+      },
+      "threadState": {
+        "progress": 0.8,
+        "label": "One ripple",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 8,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "A list is immune to a playlist.",
+        "ctaLine": "fond builds yours from what your kitchen actually needs.",
+        "sendTrigger": "Send this to whoever does the groceries."
+      },
+      "threadState": {
+        "progress": 1,
+        "label": "Flat line",
+        "tone": "good"
+      }
+    }
+  ],
+  "refinement": {
+    "round": 0,
+    "changes": [
+      {
+        "slide": 2,
+        "field": "layout",
+        "from": "hero-statement",
+        "to": "statement-xl",
+        "why": "slides 1 and 2 were both headline-only hero-statement (X-distinct) and the short slide-2 headline filled <55% of its frame (G5.5); statement-xl is the token-defined large-scale headline-only layout"
+      },
+      {
+        "slide": 8,
+        "field": "citation",
+        "from": "Worth saving. Follow along, we're building something for exactly this.",
+        "to": "",
+        "why": "Adi-authorized Oct 7: ctaTier moved to Tier 0 (majority of feed, gtm.json); field was entirely a setup CTA line, removed with its ctaSwap entry"
+      }
+    ]
+  }
+}

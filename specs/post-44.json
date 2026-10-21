@@ -1,0 +1,264 @@
+{
+  "postNumber": 44,
+  "title": "Quick Pickle Anything",
+  "pillar": "Waste Hacks",
+  "ctaTier": "Tier 0",
+  "valueEncapsulated": "Failure Is Data",
+  "sendTrigger": "Save this for your next fridge clean-out.",
+  "briefSource": "fond_Content_Brief_Posts_44-45-46_and_Kinetic_Reel_OpportunityCost.md",
+  "provenance": "brief",
+  "editorialNotes": [
+    "Slide 2 repeats slide 1 layout (hero-statement): both are short hooks with no sentence-level split that satisfies a multi-item layout.",
+    "The brief's \"10x shelf-life extension\" does not match its own 2 days to 2-4 weeks (roughly 7x to 14x). Copy kept verbatim; Adi should rule on it.",
+    "The signalRed on the before value (2 days) is a shelf-life loss framing, declared as loss; no hero figure."
+  ],
+  "thread": {
+    "element": "jar filling with brine and vegetable slices",
+    "kind": "builder",
+    "startState": "empty glass jar outline",
+    "endState": "full sealed jar with a green checkmark lid",
+    "zone": "bottom-rail",
+    "heightPct": 14,
+    "palette": [
+      "inkGray",
+      "harvestGold",
+      "fondGreen"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "That dying vegetable in your fridge is 15 minutes from being a condiment."
+      },
+      "threadState": {
+        "progress": 0.08,
+        "label": "Empty jar",
+        "tone": "neutral"
+      },
+      "valign": "top"
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "dark",
+      "layout": "statement-xl",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Most people watch a vegetable die between day 3 and day 5. There's a 15-minute window that resets the clock completely."
+      },
+      "threadState": {
+        "progress": 0.2,
+        "label": "Brine",
+        "tone": "neutral"
+      },
+      "valign": "bottom"
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "light",
+      "layout": "timeline",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The formula: 1 cup vinegar + 1 cup water + 1 tablespoon salt + 1 tablespoon sugar.",
+        "items": [
+          "Heat until dissolved.",
+          "Pour over sliced vegetables.",
+          "Wait 30 minutes minimum.",
+          "Done."
+        ]
+      },
+      "threadState": {
+        "progress": 0.32,
+        "label": "First slice",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The all-stars:",
+        "items": [
+          "Red onion - ready in 20 minutes, the fastest and most versatile.",
+          "Cucumber.",
+          "Carrots - best at 1 hour."
+        ]
+      },
+      "threadState": {
+        "progress": 0.44,
+        "label": "Half full",
+        "tone": "neutral"
+      },
+      "valign": "bottom"
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "timeline",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The deep bench:",
+        "items": [
+          "Radishes.",
+          "Jalapeños.",
+          "Cauliflower.",
+          "Green beans.",
+          "Beets.",
+          "Cabbage - becomes slaw."
+        ]
+      },
+      "threadState": {
+        "progress": 0.56,
+        "label": "Nearly full",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 6,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "diagram",
+      "accent": "steelBlue",
+      "declaresLoss": true,
+      "diagram": {
+        "kind": "before-after",
+        "data": {
+          "before": {
+            "label": "A vegetable that had",
+            "value": "2 days",
+            "tone": "loss"
+          },
+          "after": {
+            "label": "A condiment that has",
+            "value": "2-4 weeks",
+            "note": "5 min of work",
+            "tone": "good"
+          }
+        }
+      },
+      "copy": {
+        "headline": "Quick pickles last 2-4 weeks in the fridge.",
+        "body": "You just turned a vegetable that had 2 days into a condiment that has 2 weeks. That's a 10x shelf-life extension for 5 minutes of work."
+      },
+      "threadState": {
+        "progress": 0.68,
+        "label": "Sealed",
+        "tone": "neutral"
+      },
+      "valign": "bottom"
+    },
+    {
+      "index": 7,
+      "archetype": "reframe",
+      "background": "light",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Quick-pickled red onion goes on tacos, salads, sandwiches, grain bowls, burgers, eggs.",
+        "body": "One jar runs for 2 weeks and upgrades every meal it touches."
+      },
+      "threadState": {
+        "progress": 0.8,
+        "label": "Check stamp",
+        "tone": "good"
+      },
+      "valign": "top"
+    },
+    {
+      "index": 8,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The best rescue move in the kitchen takes 5 minutes and turns a dying vegetable into something you'll actually crave.",
+        "ctaLine": "fond alerts you when produce hits the pickle window - before it's too far gone.",
+        "sendTrigger": "Save this for your next fridge clean-out."
+      },
+      "threadState": {
+        "progress": 1,
+        "label": "Complete",
+        "tone": "good"
+      }
+    }
+  ],
+  "refinement": {
+    "round": 0,
+    "changes": [
+      {
+        "slide": 1,
+        "field": "valign",
+        "from": "center",
+        "to": "top",
+        "why": "slides 1 and 2 centre at 0.39 and 0.39 of frame height (need 0.12 apart); slides 1 and 2 share layout hero-statement"
+      },
+      {
+        "slide": 2,
+        "field": "valign",
+        "from": "center",
+        "to": "bottom",
+        "why": "slides 1 and 2 centre at 0.39 and 0.39 of frame height (need 0.12 apart); slides 1 and 2 share layout hero-statement; slides 2 and 3 centre at 0.39 and 0.35 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 4,
+        "field": "valign",
+        "from": "center",
+        "to": "bottom",
+        "why": "slides 3-4-5 share one ground (light); slides 3 and 4 centre at 0.35 and 0.38 of frame height (need 0.12 apart); slides 4 and 5 centre at 0.38 and 0.35 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 5,
+        "field": "background",
+        "from": "light",
+        "to": "dark",
+        "why": "slides 3-4-5 share one ground (light); slides 4 and 5 centre at 0.38 and 0.35 of frame height (need 0.12 apart); slides 5 and 6 centre at 0.35 and 0.39 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 6,
+        "field": "valign",
+        "from": "center",
+        "to": "bottom",
+        "why": "slides 5 and 6 centre at 0.35 and 0.39 of frame height (need 0.12 apart); slides 6 and 7 centre at 0.39 and 0.39 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 7,
+        "field": "valign",
+        "from": "center",
+        "to": "top",
+        "why": "slides 6 and 7 centre at 0.39 and 0.39 of frame height (need 0.12 apart); slides 7 and 8 centre at 0.39 and 0.46 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 2,
+        "field": "layout",
+        "from": "hero-statement",
+        "to": "statement-xl",
+        "why": "slides 1 and 2 were both headline-only hero-statement (X-distinct) and the short slide-2 headline filled <55% of its frame (G5.5); statement-xl is the token-defined large-scale headline-only layout"
+      },
+      {
+        "slide": 6,
+        "field": "body",
+        "from": "You just turned a vegetable that had 2 days into a condiment that has 2 weeks. That's a 10x shelf-life extension for 5 minutes of work.",
+        "to": "You just turned a vegetable that had 2 days into a condiment that has 2 weeks. That's a 10x shelf-life extension for 5 minutes of work.",
+        "why": "Adi-authorized Oct 7: \"10x\" contradicted the post's own 2 days to 2-4 weeks; replaced with qualitative form"
+      }
+    ]
+  }
+}

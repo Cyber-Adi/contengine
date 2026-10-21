@@ -1,0 +1,159 @@
+{
+  "postNumber": 22,
+  "title": "The Checkout Lane Is Designed to Break You",
+  "pillar": "Supermarket Secrets",
+  "ctaTier": "Tier 2",
+  "briefSource": "Notion: Carousel & Reel Scripts — Posts 18–30",
+  "provenance": "converted-from-notion-script",
+  "gtmAngle": "money-leak",
+  "editorialNotes": [
+    "PantryPal -> fond swap on slide 7.",
+    "The 40-100% register markup and retailer slow-checkout claims have no entry in the Notion source index; carried as body copy only, never hero type."
+  ],
+  "thread": {
+    "element": "checkout lane with a circled impulse zone moving toward the register",
+    "kind": "line",
+    "startState": "empty lane, no circles",
+    "endState": "every trick zone circled on one lane",
+    "zone": "bottom-rail",
+    "heightPct": 12,
+    "palette": [
+      "inkGray",
+      "steelBlue"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "The checkout lane is a trap. Here's how it works."
+      },
+      "threadState": {
+        "progress": 0.14,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The hunger window.",
+        "items": [
+          "Most people grocery shop after work or before dinner — when they're hungry.",
+          "Checkout candy, chips, and drinks are placed at eye level for adults and grab level for kids.",
+          "This isn't convenience. It's behavioral targeting."
+        ]
+      },
+      "threadState": {
+        "progress": 0.29,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The wait tax.",
+        "body": "Long lines aren't always understaffing. Some retailers intentionally slow checkout to increase dwell time near impulse products. Self-checkout is faster — but notice how the candy is still there."
+      },
+      "threadState": {
+        "progress": 0.43,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "light",
+      "layout": "split-compare",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Magazine and gum placement.",
+        "items": [
+          "Low-margin, high-impulse items are placed where you stand still.",
+          "You've already committed to the purchase mentally by being in line. Adding $3 feels like nothing against a $120 cart."
+        ]
+      },
+      "threadState": {
+        "progress": 0.57,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The \"cold case\" near checkout.",
+        "body": "Drinks at the register are marked up 40–100% compared to the beverage aisle. Same brand. Same size. Different price. You're paying for proximity and thirst."
+      },
+      "threadState": {
+        "progress": 0.71,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 6,
+      "archetype": "value",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The small cart illusion.",
+        "items": [
+          "Some stores introduced smaller carts to seem eco-friendly.",
+          "Others made carts larger over the last decade.",
+          "Bigger cart = your haul looks smaller = you buy more to \"fill\" it."
+        ]
+      },
+      "threadState": {
+        "progress": 0.86,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 7,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Every aisle is a funnel. The store profits when you overbuy and overwaste.",
+        "ctaLine": "fond helps you track what you actually have — so you only buy what you need. Save it before your fridge does the forgetting. Follow for more, something's on the way."
+      },
+      "threadState": {
+        "progress": 1,
+        "tone": "good"
+      }
+    }
+  ],
+  "ctaSwap": [
+    {
+      "slide": 7,
+      "field": "ctaLine",
+      "from": "fond helps you track what you actually have — so you only buy what you need. Link in bio.",
+      "to": "fond helps you track what you actually have — so you only buy what you need. Save it before your fridge does the forgetting. Follow for more, something's on the way.",
+      "rule": "setup-cta"
+    }
+  ]
+}

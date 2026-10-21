@@ -1,0 +1,183 @@
+{
+  "postNumber": 59,
+  "title": "Eye-Level Is Buy-Level",
+  "pillar": "Supermarket Secrets",
+  "ctaTier": "Tier 1",
+  "briefSource": "fond_Carousel_Design_Brief_Posts_57-59.md",
+  "provenance": "brief",
+  "editorialNotes": [
+    "Tier 1: brief says no product name; the renderer paints the fond wordmark on every cta-card, so Adi should confirm that is acceptable.",
+    "The \"20-40% less\" and \"roughly 30% more\" figures and the $100 to $115-$120 cart are the brief's own illustrative estimates with no citation; rendered inside body copy and a diagram, never as hero type. The cart example is hypothetical (10 items at 30%)."
+  ],
+  "thread": {
+    "element": "price tag climbing a five-tier shelf rack to eye level",
+    "kind": "meter",
+    "startState": "tag on the bottom shelf at a low price",
+    "endState": "tag at eye level, spotlit",
+    "zone": "side-rail",
+    "heightPct": 14,
+    "palette": [
+      "steelBlue",
+      "harvestGold"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "The shelf in front of you is a paid advertisement. The cheapest version of what you want is usually by your feet."
+      },
+      "threadState": {
+        "progress": 0.08,
+        "label": "Bottom shelf",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Eye level is the most expensive real estate in the store.",
+        "items": [
+          "Brands pay slotting fees to put their priciest products exactly where your gaze lands.",
+          "You're not choosing it. It was placed there."
+        ]
+      },
+      "threadState": {
+        "progress": 0.22,
+        "label": "Shelf 2",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "timeline",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Look down. Look up.",
+        "items": [
+          "The bottom and top shelves are where the cheaper brands and bigger-value sizes get exiled.",
+          "Same product. Often 20-40% less."
+        ]
+      },
+      "threadState": {
+        "progress": 0.36,
+        "label": "Shelf 3",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "light",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Now look at the kids' cereal.",
+        "body": "Sugary brands sit at a child's eye level - about 3 feet up. That's not an accident either. The whole store is mapped to a sightline."
+      },
+      "threadState": {
+        "progress": 0.5,
+        "label": "Shelf 4",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "diagram",
+      "accent": "signalRed",
+      "declaresLoss": true,
+      "diagram": {
+        "kind": "bar-compare",
+        "data": {
+          "rows": [
+            {
+              "label": "$100 cart",
+              "value": 100,
+              "display": "$100",
+              "tone": "neutral"
+            },
+            {
+              "label": "Placement premium",
+              "value": 118,
+              "display": "$115-$120",
+              "tone": "loss"
+            }
+          ]
+        }
+      },
+      "copy": {
+        "headline": "The math on one trip:",
+        "body": "If eye-level placement nudges you to the pricier pick on just 10 items, at roughly 30% more each, a $100 cart quietly becomes a $115-$120 cart. Every week."
+      },
+      "threadState": {
+        "progress": 0.64,
+        "label": "Eye level",
+        "tone": "loss"
+      }
+    },
+    {
+      "index": 6,
+      "archetype": "value",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The counter-move costs nothing:",
+        "items": [
+          "Scan the whole shelf - top to bottom - before you grab.",
+          "Check the unit price, not the shelf price.",
+          "The deal is almost never at eye level."
+        ]
+      },
+      "threadState": {
+        "progress": 0.78,
+        "label": "Eye level, counter-move",
+        "tone": "good"
+      }
+    },
+    {
+      "index": 7,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The store is designed around where you look. Spending less starts with looking somewhere else.",
+        "ctaLine": "We're building an app that helps you waste less of what you already bought. Keep this one. Follow for more, we're working on something for this."
+      },
+      "threadState": {
+        "progress": 1.0,
+        "label": "Spotlit",
+        "tone": "good"
+      }
+    }
+  ],
+  "ctaSwap": [
+    {
+      "slide": 7,
+      "field": "ctaLine",
+      "from": "We're building an app that helps you waste less of what you already bought. Link in bio.",
+      "to": "We're building an app that helps you waste less of what you already bought. Keep this one. Follow for more, we're working on something for this.",
+      "rule": "setup-cta"
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "postNumber": 40,
+  "title": "The $56 Friday",
+  "pillar": "The $2913 Problem",
+  "ctaTier": "Tier 2",
+  "briefSource": "Notion: Carousel Scripts — Posts 31–40 (Visual-First)",
+  "provenance": "converted-from-notion-script",
+  "gtmAngle": "money-leak",
+  "editorialNotes": [
+    "PantryPal -> fond swap on slide 6.",
+    "$56/week is attributed in the script to the EPA ($2,913 / 52); the $546 produce figure is the script's own arithmetic. Neither is hero type."
+  ],
+  "thread": {
+    "element": "row of bills fading out one per slide",
+    "kind": "accumulator",
+    "startState": "fanned bills at full opacity",
+    "endState": "bills fully faded, empty counter",
+    "zone": "bottom-rail",
+    "heightPct": 12,
+    "palette": [
+      "signalRed",
+      "inkGray"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "signalRed",
+      "declaresLoss": true,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "Every Friday, $56 leaves your kitchen.",
+        "body": "You never see it go."
+      },
+      "threadState": {
+        "progress": 0.17,
+        "tone": "loss"
+      }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "light",
+      "layout": "split-compare",
+      "accent": "signalRed",
+      "declaresLoss": true,
+      "copy": {
+        "headline": "$56 is the EPA's per-week waste figure for a family of 4.",
+        "items": [
+          "It doesn't come out as one big loss.",
+          "It bleeds out as micro-moments all week long."
+        ]
+      },
+      "threadState": {
+        "progress": 0.33,
+        "tone": "loss"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Nobody feels $3.50 in wilted lettuce.",
+        "body": "Nobody mourns a single yogurt. The waste works because each individual loss is too small to trigger a reaction."
+      },
+      "threadState": {
+        "progress": 0.5,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "light",
+      "layout": "timeline",
+      "accent": "signalRed",
+      "declaresLoss": true,
+      "copy": {
+        "headline": "But $3.50 × 3 items × 52 weeks = $546.",
+        "items": [
+          "Just on produce.",
+          "The \"it's only $3\" math is how $2,913 hides in plain sight."
+        ]
+      },
+      "threadState": {
+        "progress": 0.67,
+        "tone": "loss"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "signalRed",
+      "declaresLoss": true,
+      "copy": {
+        "headline": "$56/week is your gym membership.",
+        "items": [
+          "It's your streaming subscriptions.",
+          "It's your coffee habit.",
+          "Except those things give you something.",
+          "This gives you a full trash can."
+        ]
+      },
+      "threadState": {
+        "progress": 0.83,
+        "tone": "loss"
+      }
+    },
+    {
+      "index": 6,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "You'd cancel a subscription that charged you $56/week for nothing. Your fridge has been running that subscription for years.",
+        "ctaLine": "fond is how you cancel it. Save this for your next grocery run. Follow for more, something's coming."
+      },
+      "threadState": {
+        "progress": 1,
+        "tone": "good"
+      }
+    }
+  ],
+  "ctaSwap": [
+    {
+      "slide": 6,
+      "field": "ctaLine",
+      "from": "fond is how you cancel it. Link in bio.",
+      "to": "fond is how you cancel it. Save this for your next grocery run. Follow for more, something's coming.",
+      "rule": "setup-cta"
+    }
+  ]
+}

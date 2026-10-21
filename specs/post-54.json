@@ -1,0 +1,217 @@
+{
+  "postNumber": 54,
+  "title": "Liquid Gold",
+  "pillar": "Waste Hacks",
+  "ctaTier": "Tier 0",
+  "valueEncapsulated": "Failure Is Data",
+  "sendTrigger": "Send this to whoever cooks.",
+  "briefSource": "fond_Content_Brief_Posts_54-55-63_and_Kinetic_Reel_56Friday.md",
+  "provenance": "brief",
+  "editorialNotes": [
+    "No dollar figures are claimed on any slide by design; the brief notes the aquafaba ratio is the culinary standard."
+  ],
+  "thread": {
+    "element": "measuring jug filling with banded layers",
+    "kind": "builder",
+    "startState": "empty jug, hairline outline",
+    "endState": "full jug, three banded layers, labeled $0",
+    "zone": "bottom-rail",
+    "heightPct": 14,
+    "palette": [
+      "inkGray",
+      "harvestGold",
+      "fondGreen"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "Three of the best ingredients in your kitchen go down the drain every week."
+      },
+      "threadState": {
+        "progress": 0.08,
+        "label": "Empty jug",
+        "tone": "neutral"
+      },
+      "valign": "bottom"
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "light",
+      "layout": "timeline",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Pasta water. The liquid in a can of chickpeas. Bacon fat.",
+        "items": [
+          "All three are ingredients.",
+          "All three go in the sink."
+        ]
+      },
+      "threadState": {
+        "progress": 0.25,
+        "label": "First band",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Pasta water. The starch and salt suspended in it are what bind sauce to noodles.",
+        "items": [
+          "Reserve half a cup before you drain.",
+          "Add it to the pan a splash at a time."
+        ]
+      },
+      "threadState": {
+        "progress": 0.42,
+        "label": "First band",
+        "tone": "neutral"
+      },
+      "valign": "bottom"
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "timeline",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Chickpea liquid is called aquafaba.",
+        "items": [
+          "Three tablespoons replaces one egg white.",
+          "It whips to stiff peaks."
+        ],
+        "body": "Meringue, mousse, mayonnaise, all of it works."
+      },
+      "threadState": {
+        "progress": 0.58,
+        "label": "Two thirds",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "stack-list",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Bacon fat.",
+        "items": [
+          "Strain it through a coffee filter into a jar.",
+          "It keeps three months in the fridge.",
+          "It is cooking fat, and it is the reason restaurant potatoes taste like that."
+        ]
+      },
+      "threadState": {
+        "progress": 0.75,
+        "label": "Full jug",
+        "tone": "neutral"
+      },
+      "valign": "bottom"
+    },
+    {
+      "index": 6,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "You already paid for these. You have been throwing away the part that was free.",
+        "ctaLine": "Track what you have before it becomes something you pour out.",
+        "sendTrigger": "Send this to whoever cooks."
+      },
+      "threadState": {
+        "progress": 1,
+        "label": "$0",
+        "tone": "good"
+      },
+      "valign": "bottom"
+    }
+  ],
+  "refinement": {
+    "round": 0,
+    "changes": [
+      {
+        "slide": 1,
+        "field": "valign",
+        "from": "center",
+        "to": "bottom",
+        "why": "slides 1 and 2 centre at 0.39 and 0.38 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 2,
+        "field": "layout",
+        "from": "stack-list",
+        "to": "timeline",
+        "why": "slides 2-3-4 share one ground (light); slides 1 and 2 centre at 0.39 and 0.38 of frame height (need 0.12 apart); slides 2 and 3 centre at 0.38 and 0.35 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 3,
+        "field": "layout",
+        "from": "timeline",
+        "to": "stack-list",
+        "why": "slides 2-3-4 share one ground (light); slides 2 and 3 centre at 0.38 and 0.35 of frame height (need 0.12 apart); slides 3 and 4 centre at 0.35 and 0.38 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 3,
+        "field": "valign",
+        "from": "center",
+        "to": "bottom",
+        "why": "slides 2-3-4 share one ground (light); slides 2 and 3 centre at 0.38 and 0.35 of frame height (need 0.12 apart); slides 3 and 4 centre at 0.35 and 0.38 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 4,
+        "field": "layout",
+        "from": "split-compare",
+        "to": "timeline",
+        "why": "slides 2-3-4 share one ground (light); slides 3 and 4 centre at 0.35 and 0.38 of frame height (need 0.12 apart); slides 4 and 5 centre at 0.38 and 0.38 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 4,
+        "field": "background",
+        "from": "light",
+        "to": "dark",
+        "why": "slides 2-3-4 share one ground (light); slides 3 and 4 centre at 0.35 and 0.38 of frame height (need 0.12 apart); slides 4 and 5 centre at 0.38 and 0.38 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 5,
+        "field": "valign",
+        "from": "center",
+        "to": "bottom",
+        "why": "slides 4 and 5 centre at 0.38 and 0.38 of frame height (need 0.12 apart); slides 5 and 6 centre at 0.38 and 0.46 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 6,
+        "field": "valign",
+        "from": "center",
+        "to": "bottom",
+        "why": "slides 5 and 6 centre at 0.38 and 0.46 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 6,
+        "field": "citation",
+        "from": "Save it before your fridge does the forgetting. Follow for more, something's on the way.",
+        "to": "",
+        "why": "Adi-authorized Oct 7: ctaTier moved to Tier 0 (majority of feed, gtm.json); field was entirely a setup CTA line, removed with its ctaSwap entry"
+      }
+    ]
+  }
+}

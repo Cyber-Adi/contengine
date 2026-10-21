@@ -1,0 +1,140 @@
+{
+  "postNumber": 27,
+  "title": "You're Paying 19% More AND Wasting 30%",
+  "pillar": "The $2913 Problem",
+  "ctaTier": "Tier 2",
+  "briefSource": "Notion: Carousel & Reel Scripts — Posts 18–30",
+  "provenance": "converted-from-notion-script",
+  "gtmAngle": "money-leak",
+  "editorialNotes": [
+    "PantryPal -> fond swap on slide 6.",
+    "19.1% (BLS CPI, April 2026) and 30% waste are sourced per the Notion index; kept as headline text, not hero type. The $3,900 and $1,950 figures are derived by the script from $250/week and are body copy only.",
+    "Eggs +64% is sourced to 2024 BLS data (stale); beef +22% and vegetables +18% have no index entry."
+  ],
+  "thread": {
+    "element": "grocery receipt total ticking up with a trash can filling beside it",
+    "kind": "accumulator",
+    "startState": "blank receipt, empty trash can",
+    "endState": "long receipt, trash can 30% full",
+    "zone": "bottom-rail",
+    "heightPct": 12,
+    "palette": [
+      "signalRed",
+      "steelBlue"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "Grocery prices are up 19.1% since 2022. You're also wasting 30% of what you buy.",
+        "body": "Do that math."
+      },
+      "threadState": {
+        "progress": 0.17,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "signalRed",
+      "declaresLoss": true,
+      "copy": {
+        "headline": "If you spend $250/week on groceries (national average for a household of 4), that's $13,000/year.",
+        "items": [
+          "30% waste = $3,900 in the trash.",
+          "At today's prices — not 2020 prices."
+        ]
+      },
+      "threadState": {
+        "progress": 0.33,
+        "tone": "loss"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Inflation made the waste problem worse, not better.",
+        "body": "Every wasted item costs more than it did 4 years ago. You're not just losing food. You're losing inflated food."
+      },
+      "threadState": {
+        "progress": 0.5,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "light",
+      "layout": "split-compare",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The biggest inflation categories are also the most wasted:",
+        "items": [
+          "eggs (+64% since 2020), beef (+22%), fresh vegetables (+18%).",
+          "These are the exact items people overbuy and forget."
+        ]
+      },
+      "threadState": {
+        "progress": 0.67,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Cutting waste by 50% at today's prices saves the average household roughly $1,950/year.",
+        "body": "That's a vacation. That's 3 months of car payments. That's real money — not a coupon."
+      },
+      "threadState": {
+        "progress": 0.83,
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 6,
+      "archetype": "cta",
+      "background": "dark",
+      "layout": "cta-card",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "fond tracks everything in your kitchen so nothing gets lost, forgotten, or wasted. The easiest raise you'll ever give yourself.",
+        "ctaLine": "Keep this one. Follow for more, we're working on something for this."
+      },
+      "threadState": {
+        "progress": 1,
+        "tone": "good"
+      }
+    }
+  ],
+  "ctaSwap": [
+    {
+      "slide": 6,
+      "field": "ctaLine",
+      "from": "Join the waitlist — link in bio.",
+      "to": "Keep this one. Follow for more, we're working on something for this.",
+      "rule": "setup-cta"
+    }
+  ]
+}

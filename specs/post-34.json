@@ -2,7 +2,7 @@
   "postNumber": 34,
   "title": "The Sunday Fridge Audit",
   "pillar": "Waste Hacks",
-  "ctaTier": "Tier 2",
+  "ctaTier": "Tier 0",
   "sendTrigger": "Send this to whoever does the fridge clean-out.",
   "briefSource": "fond_Carousel_Design_Brief_Posts_34-36.md",
   "provenance": "brief",
@@ -16,7 +16,10 @@
     "endState": "clean fridge, three colour-coded zones, green check",
     "zone": "bottom-rail",
     "heightPct": 14,
-    "palette": ["inkGray", "fondGreen"]
+    "palette": [
+      "inkGray",
+      "fondGreen"
+    ]
   },
   "slides": [
     {
@@ -31,24 +34,45 @@
         "headline": "Every Sunday, open your fridge. Pull everything out.",
         "body": "You'll be surprised what you find."
       },
-      "threadState": { "progress": 0.1, "label": "Cluttered", "tone": "neutral" }
+      "threadState": {
+        "progress": 0.1,
+        "label": "Cluttered",
+        "tone": "neutral"
+      },
+      "valign": "bottom"
     },
     {
       "index": 2,
       "archetype": "backupHook",
-      "background": "light",
+      "background": "dark",
       "layout": "quadrant-card",
       "accent": "harvestGold",
       "declaresLoss": true,
       "copy": {
         "headline": "This takes 10 minutes. Group everything into three piles.",
         "quadrants": [
-          { "label": "Use Today", "value": "Expires within 48 hours", "tone": "loss" },
-          { "label": "Use This Week", "value": "Good but aging", "tone": "caution" },
-          { "label": "Freeze Now", "value": "Save what you won't reach in time", "tone": "good" }
+          {
+            "label": "Use Today",
+            "value": "Expires within 48 hours",
+            "tone": "loss"
+          },
+          {
+            "label": "Use This Week",
+            "value": "Good but aging",
+            "tone": "caution"
+          },
+          {
+            "label": "Freeze Now",
+            "value": "Save what you won't reach in time",
+            "tone": "good"
+          }
         ]
       },
-      "threadState": { "progress": 0.25, "label": "Empty", "tone": "neutral" }
+      "threadState": {
+        "progress": 0.25,
+        "label": "Empty",
+        "tone": "neutral"
+      }
     },
     {
       "index": 3,
@@ -60,9 +84,19 @@
       "copy": {
         "headline": "The \"Use Today\" pile becomes tonight's meal",
         "body": "Don't plan around a recipe - plan around what needs to be eaten.",
-        "items": ["Stir fry", "Sheet pan", "Soup", "Omelette", "Any technique works"]
+        "items": [
+          "Stir fry",
+          "Sheet pan",
+          "Soup",
+          "Omelette",
+          "Any technique works"
+        ]
       },
-      "threadState": { "progress": 0.45, "label": "Re-filling", "tone": "neutral" }
+      "threadState": {
+        "progress": 0.45,
+        "label": "Re-filling",
+        "tone": "neutral"
+      }
     },
     {
       "index": 4,
@@ -74,30 +108,48 @@
       "diagram": {
         "kind": "before-after",
         "data": {
-          "before": { "label": "Before", "value": "2 days", "note": "time left", "tone": "loss" },
-          "after": { "label": "After", "value": "6 months", "note": "added by freezing", "tone": "good" }
+          "before": {
+            "label": "Before",
+            "value": "2 days",
+            "note": "time left",
+            "tone": "loss"
+          },
+          "after": {
+            "label": "After",
+            "value": "6 months",
+            "note": "added by freezing",
+            "tone": "good"
+          }
         }
       },
       "copy": {
         "headline": "The \"Freeze Now\" pile takes 5 minutes.",
         "body": "Bag it, label it, lay it flat."
       },
-      "threadState": { "progress": 0.65, "label": "Nearly full", "tone": "neutral" }
+      "threadState": {
+        "progress": 0.65,
+        "label": "Nearly full",
+        "tone": "neutral"
+      },
+      "valign": "center"
     },
     {
       "index": 5,
       "archetype": "value",
       "background": "dark",
-      "layout": "hero-number",
+      "layout": "hero-statement",
       "accent": "steelBlue",
       "declaresLoss": false,
       "copy": {
         "eyebrow": "Weekly fridge audit",
-        "heroNumber": "40%",
-        "heroNumberCaption": "less food waste - $1,165 saved per year, for 10 minutes on Sunday.",
-        "citation": "Weekly fridge-audit waste-reduction estimate; EPA household food-waste figure"
+        "headline": "Less food waste and money saved every year, for 10 minutes on Sunday."
       },
-      "threadState": { "progress": 0.85, "label": "Sorted", "tone": "good" }
+      "threadState": {
+        "progress": 0.85,
+        "label": "Sorted",
+        "tone": "good"
+      },
+      "valign": "bottom"
     },
     {
       "index": 6,
@@ -109,10 +161,102 @@
       "copy": {
         "headline": "The best kitchen habit isn't a recipe. It's seeing what you have before you decide what to buy.",
         "ctaLine": "fond does the audit for you, every day.",
-        "sendTrigger": "Send this to whoever does the fridge clean-out.",
-        "citation": "Join the waitlist - link in bio"
+        "sendTrigger": "Send this to whoever does the fridge clean-out."
       },
-      "threadState": { "progress": 1.0, "label": "Complete", "tone": "good" }
+      "threadState": {
+        "progress": 1,
+        "label": "Complete",
+        "tone": "good"
+      }
     }
-  ]
+  ],
+  "refinement": {
+    "round": 0,
+    "changes": [
+      {
+        "slide": 1,
+        "field": "valign",
+        "from": "center",
+        "to": "bottom",
+        "why": "slides 1 and 2 centre at 0.39 and 0.35 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 2,
+        "field": "background",
+        "from": "light",
+        "to": "dark",
+        "why": "slides 2-3-4 share one ground (light); slides 1 and 2 centre at 0.39 and 0.35 of frame height (need 0.12 apart); slides 2 and 3 centre at 0.35 and 0.38 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 4,
+        "field": "valign",
+        "from": "center",
+        "to": "bottom",
+        "why": "slides 2-3-4 share one ground (light); slides 3 and 4 centre at 0.38 and 0.39 of frame height (need 0.12 apart); slides 4 and 5 centre at 0.39 and 0.37 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 5,
+        "field": "valign",
+        "from": "center",
+        "to": "top",
+        "why": "slides 4 and 5 centre at 0.39 and 0.37 of frame height (need 0.12 apart); slides 5 and 6 centre at 0.37 and 0.46 of frame height (need 0.12 apart)"
+      },
+      {
+        "slide": 5,
+        "field": "valign",
+        "from": "top",
+        "to": "bottom",
+        "why": "X-distinct: slides 4 and 5 hashed alike with slide 5 top-aligned; design-only move."
+      },
+      {
+        "slide": 4,
+        "field": "valign",
+        "from": "bottom",
+        "to": "center",
+        "why": "X-distinct: bottom-aligned diagram hashed alike with slide 5; centre keeps them distinct."
+      },
+      {
+        "slide": 5,
+        "field": "layout",
+        "from": "hero-number",
+        "to": "hero-statement",
+        "why": "Adi-authorized Oct 7: unsourced hero figure rendered qualitatively (CLAUDE.md: no uncited hero numbers)"
+      },
+      {
+        "slide": 5,
+        "field": "heroNumber",
+        "from": "40%",
+        "to": "",
+        "why": "Adi-authorized Oct 7: unsourced hero figure rendered qualitatively (CLAUDE.md: no uncited hero numbers)"
+      },
+      {
+        "slide": 5,
+        "field": "heroNumberCaption",
+        "from": "less food waste - $1,165 saved per year, for 10 minutes on Sunday.",
+        "to": "",
+        "why": "Adi-authorized Oct 7: unsourced hero figure rendered qualitatively (CLAUDE.md: no uncited hero numbers)"
+      },
+      {
+        "slide": 5,
+        "field": "citation",
+        "from": "Weekly fridge-audit waste-reduction estimate; EPA household food-waste figure",
+        "to": "",
+        "why": "Adi-authorized Oct 7: unsourced hero figure rendered qualitatively (CLAUDE.md: no uncited hero numbers)"
+      },
+      {
+        "slide": 5,
+        "field": "headline",
+        "from": "",
+        "to": "Less food waste and money saved every year, for 10 minutes on Sunday.",
+        "why": "Adi-authorized Oct 7: unsourced hero figure rendered qualitatively (CLAUDE.md: no uncited hero numbers)"
+      },
+      {
+        "slide": 6,
+        "field": "citation",
+        "from": "Save it before your fridge does the forgetting. Follow for more, something's on the way.",
+        "to": "",
+        "why": "Adi-authorized Oct 7: ctaTier moved to Tier 0 (majority of feed, gtm.json); field was entirely a setup CTA line, removed with its ctaSwap entry"
+      }
+    ]
+  }
 }

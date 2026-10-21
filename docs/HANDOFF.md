@@ -13,19 +13,19 @@ this file.** It is short on purpose: the repo already has too many documents, an
 |---|---|
 | `npm run tap` | The weekly entry point. Validates every spec, renders, exports, builds `READY-TO-POST/`, then prints YOUR PART (human) and MACHINE (you). |
 | `READY-TO-POST/index.html` | Where Adi schedules from. Regenerated every tap. Posts slotted Tue/Thu, pillars alternated. **Git-ignored.** |
-| `decide({ machineOnly: true })` | Never returns a human action. New rungs: `FIX_SPEC` (schema-invalid but gate-passing), `HOLD` (≥6 ready and unscheduled). `MEASURE` only fires a week after go-live. |
+| `decide({ machineOnly: true })` | Never returns a human action. New rungs: `FIX_SPEC` (schema-invalid but gate-passing), `HOLD` (≥6 ready and unscheduled; with 52 ready this is permanent, see out/audit/pipeline.md section 2 for the window-debt replacement). `MEASURE` only fires a week after go-live. |
 | Schema | Layout-conditional content: `split-compare`, `stack-list`, `timeline`, `quadrant-card` must carry their items. post-31/33 shipped empty panels past all six gates before this. |
 | `log-post.mjs --date` | Records a *scheduled* post with its real go-live date. |
 | Captions | A hero-number slide 1 now leads the caption with its number. |
-| Fixtures | `npm run test:autonomy` — **28/28**. |
+| Fixtures | `npm run test:autonomy` — **53/53** (2026-10-07; also test:fidelity 26, test:package 10, npm test 24 gates). |
 
 ## 2 · Acceptance checks — your build is not done until all pass
 
 ```bash
 npm test                 # image-gate fixtures, each catches its own failure
-npm run test:autonomy    # 28+ and none removed
+npm run test:autonomy    # 53+ and none removed (or: npm run test:all)
 npm run tap              # completes; READY-TO-POST/ builds; MACHINE line is a machine action
-./run.sh specs/post-5.json && ./run.sh specs/post-49.json   # both PASS
+./run.sh specs/fixtures/post-9005.json && ./run.sh specs/post-49.json   # both PASS
 git status               # clean, committed
 ```
 

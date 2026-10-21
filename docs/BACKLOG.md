@@ -136,12 +136,12 @@ you will know whether that is a real legibility problem or a mis-calibrated prox
 
 ## P2 — Completing the pipeline (the unbuilt ECC slices)
 
-### P2.1 · Slice 1 — brief parser + coverage report
+### P2.1 [DONE: 52 specs] · Slice 1 — brief parser + coverage report
 **The most decision-relevant thing left.** Tells you whether this is a 20-post engine or a
 75-post one, and everything downstream is sized by that number.
 **Blocked on:** the brief folder. **Effort:** a session.
 
-### P2.2 · Slice 4 — vision critic
+### P2.2 [PARTIAL: tools/critic.mjs, report-only] · Slice 4 — vision critic
 Contact sheet + thumbs scored against the 5-dimension rubric, calibrated so the 8 BOSS
 carousels average ≥4. **Blocked on:** the BOSS PNGs in `baseline/`.
 Also add the perceptual-regression baseline the plan called for: once a slide is approved,
@@ -251,19 +251,19 @@ P4.2 is what makes it measured.
 
 ## P5 — The autonomous loop (added 2026-09-12)
 
-Built this pass, tested at 18/18 (`npm run test:autonomy`): the unified ledger
+Built this pass, tested (now 53/53) (`npm run test:autonomy`): the unified ledger
 (`src/state.mjs`), the decision ladder (`src/decide.mjs`), the entropy guard
 (`src/entropy.mjs`), the GTM contract (`gtm.json` + `src/gtm.mjs`) and **Gate 6 · GTM
 conformance** (`src/gtm-check.mjs`, wired into `run.sh` ahead of the renderer).
 Full rationale in **AUTONOMOUS-ARCHITECTURE.md**. What remains:
 
-### P5.1 · post-49 fails its gates right now — `npm run decide` says so
+### P5.1 [DONE: decide ladder in place] · post-49 fails its gates right now — `npm run decide` says so
 The loop's first output on a real board is `FIX_QA`. `out/post-49/qa-report.json` has
 a non-PASS verdict. Read it and say **whether the gate got stricter or the output got
 worse** before changing either.
 **Effort:** unknown until read. **Why first:** the ladder puts it first.
 
-### P5.2 · Convert the 57 scripted posts into specs
+### P5.2 [DONE: 52 specs] · Convert the 57 scripted posts into specs
 `specs/COVERAGE.md` says 59 of 69 are renderable and only 2 have specs. This is the
 drain. Batch it; `provenance: "converted-from-notion-script"` is now a legal schema
 value for the 40 Notion-sourced posts. PantryPal→fond is a mechanical substitution

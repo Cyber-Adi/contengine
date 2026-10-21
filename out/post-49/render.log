@@ -1,0 +1,25 @@
+valid: specs/post-49.json
+  WARN no-angle         No gtmAngle set. Angles: money-leak, date-label-lie, takeout-guilt. Without one this post cannot feed the Ad Bank, whose rule is 90% adaptation and 10% origination.
+  WARN provenance       Copy is reconstructed, not verbatim from a brief. Must be replaced before publishing.
+  gate 6 -> PASS  (0 fail, 2 warn)
+  downsampled 8 slides -> 1440x1800 (Lanczos)
+rendered 8 slides (ig) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-49/slides
+  contact sheet -> out/post-49/contact-sheet.png  (8 slides, 1450x904)
+  feed-scale thumbs -> out/post-49/thumbs.png  (rendered at 200px wide)
+
+  QA — post 49: Your Eggs Have 5 Weeks. Not 5 Days.
+  verdict: PASS   fails=0  warns=8   ocr: skipped
+  typographic normalizer: 1 substitution(s) logged (apostrophe)
+    [WARN] G5.5-fill slide 8: content occupies 50% of its box — type or diagram could carry more of the frame
+    [WARN] G5.2-balance slide 8: ink centre of mass at 64% of height — bottom-heavy
+    [WARN] G5.7-rhythm-centroid slide 2: slides 1 and 2 centre at 36% and 45% of frame height, 9% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 3: slides 2 and 3 centre at 45% and 39% of frame height, 6% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 4: slides 3 and 4 centre at 39% and 41% of frame height, 2% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 5: slides 4 and 5 centre at 41% and 35% of frame height, 6% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 6: slides 5 and 6 centre at 35% and 46% of frame height, 11% apart (need 12%)
+    [WARN] G5.7-rhythm-centroid slide 7: slides 6 and 7 centre at 46% and 38% of frame height, 8% apart (need 12%)
+  downsampled 8 slides -> 1440x2560 (Lanczos)
+rendered 8 slides (tiktok) -> /Users/adhijjoshi/Desktop/contengine/.claude/worktrees/refinery-plan/out/post-49/slides-tiktok
+refusing: post-49 provenance is "reconstructed-fixture" — the copy is not the real brief.
+Replace it from the brief before publishing. Shipping a fixture is worse than shipping nothing.
+EXPORT-REFUSED

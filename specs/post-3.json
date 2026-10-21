@@ -1,0 +1,155 @@
+{
+  "postNumber": 3,
+  "title": "The Bulk-Buy Lie",
+  "pillar": "Supermarket Secrets",
+  "ctaTier": "Tier 0",
+  "gtmAngle": "money-leak",
+  "briefSource": "Notion: Carousel Scripts - Posts 1-8",
+  "provenance": "converted-from-notion-script",
+  "editorialNotes": [
+    "$2,913/yr is the EPA April 2025 household figure, the only number allowed hero treatment."
+  ],
+  "thread": {
+    "element": "bulk bag shrinking to a right-sized bag",
+    "kind": "meter",
+    "startState": "oversized bag",
+    "endState": "small bag, fully used",
+    "zone": "bottom-rail",
+    "heightPct": 12,
+    "palette": [
+      "fondGreen",
+      "inkGray"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "Buying in bulk only saves you money if you actually eat all of it."
+      },
+      "threadState": {
+        "progress": 0.14,
+        "label": "Big bag",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The unit price drops when you buy the bigger bag.",
+        "items": [
+          "That's real.",
+          "But the math only works if zero waste enters the equation."
+        ]
+      },
+      "threadState": {
+        "progress": 0.29,
+        "label": "Math check",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "signalRed",
+      "declaresLoss": true,
+      "copy": {
+        "headline": "A $4 bag of spinach is a $4 loss if you eat two handfuls and bin the rest.",
+        "body": "A $2 bunch costs less and gets used."
+      },
+      "threadState": {
+        "progress": 0.43,
+        "label": "Bin",
+        "tone": "loss"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "light",
+      "layout": "hero-number",
+      "accent": "signalRed",
+      "declaresLoss": true,
+      "copy": {
+        "heroNumber": "$2,913",
+        "heroNumberCaption": "The EPA found that the average family of 4 wastes $2,913 a year in food. A chunk of that is \"deals\" that expired before anyone touched them.",
+        "citation": "EPA, April 2025"
+      },
+      "threadState": {
+        "progress": 0.57,
+        "label": "EPA",
+        "tone": "loss"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Stores promote bulk because it increases basket size today.",
+        "items": [
+          "They don't track what rots in your fridge next week.",
+          "That's your problem."
+        ]
+      },
+      "threadState": {
+        "progress": 0.71,
+        "label": "Basket size",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 6,
+      "archetype": "value",
+      "background": "light",
+      "layout": "hero-statement",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The real unit price includes the trash can.",
+        "body": "Nobody calculates that at checkout."
+      },
+      "threadState": {
+        "progress": 0.86,
+        "label": "Real price",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 7,
+      "archetype": "reframe",
+      "background": "dark",
+      "layout": "stack-list",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Smaller quantities.",
+        "items": [
+          "Higher usage rate.",
+          "Lower actual cost."
+        ]
+      },
+      "threadState": {
+        "progress": 1,
+        "label": "Right-sized",
+        "tone": "good"
+      }
+    }
+  ]
+}

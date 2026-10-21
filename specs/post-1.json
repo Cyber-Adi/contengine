@@ -1,0 +1,156 @@
+{
+  "postNumber": 1,
+  "title": "The Shelf Is Rigged",
+  "pillar": "Supermarket Secrets",
+  "ctaTier": "Tier 0",
+  "briefSource": "fond_Carousel_Design_Brief_Posts_1-5-9.md",
+  "provenance": "brief",
+  "editorialNotes": [
+    "Slotting-fee, eye-level and freezer-slot figures trace to Nielsen via Pantry.ai, PlanOHero and a trade publication, not to a primary source: kept as body copy, never hero type."
+  ],
+  "thread": {
+    "element": "row of six shelf price tags, one stamped PAID per slide",
+    "kind": "accumulator",
+    "startState": "six blank tags",
+    "endState": "all six stamped PAID, one eye-level tag marked",
+    "zone": "bottom-rail",
+    "heightPct": 12,
+    "palette": [
+      "harvestGold",
+      "inkGray"
+    ]
+  },
+  "slides": [
+    {
+      "index": 1,
+      "archetype": "hook",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "swipeLabel": "Swipe",
+      "copy": {
+        "headline": "The brands at your eye level paid to be there."
+      },
+      "threadState": {
+        "progress": 0.14,
+        "label": "Blank tags",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 2,
+      "archetype": "backupHook",
+      "background": "dark",
+      "layout": "stack-list",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Grocery stores sell shelf space like real estate.",
+        "items": [
+          "Premium brands pay slotting fees —",
+          "often $250 to $1,000+ per item per store —",
+          "just to sit at eye level."
+        ],
+        "citation": "Nielsen via Pantry.ai"
+      },
+      "threadState": {
+        "progress": 0.29,
+        "label": "1 paid",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 3,
+      "archetype": "value",
+      "background": "light",
+      "layout": "hero-statement",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Products at eye level sell 30–35% more than products on the bottom shelf.",
+        "body": "Not because they're better. Because your neck doesn't have to move.",
+        "citation": "PlanOHero retail study, 2025"
+      },
+      "threadState": {
+        "progress": 0.43,
+        "label": "2 paid",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 4,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "split-compare",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "The store-brand version of the same product?",
+        "items": [
+          "Bottom shelf. Always.",
+          "You have to bend down to save money. That's by design."
+        ]
+      },
+      "threadState": {
+        "progress": 0.57,
+        "label": "3 paid",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 5,
+      "archetype": "value",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "harvestGold",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "In the freezer aisle, a single shelf slot can cost manufacturers up to $9,000 in smaller chains.",
+        "body": "In major chains, it's six figures.",
+        "citation": "Frozen & Refrigerated Foods trade publication"
+      },
+      "threadState": {
+        "progress": 0.71,
+        "label": "4 paid",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 6,
+      "archetype": "value",
+      "background": "light",
+      "layout": "stack-list",
+      "accent": "steelBlue",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Every aisle is a bidding war between brands.",
+        "items": [
+          "You're walking through it thinking you're choosing.",
+          "You're being guided."
+        ]
+      },
+      "threadState": {
+        "progress": 0.86,
+        "label": "5 paid",
+        "tone": "neutral"
+      }
+    },
+    {
+      "index": 7,
+      "archetype": "reframe",
+      "background": "dark",
+      "layout": "hero-statement",
+      "accent": "fondGreen",
+      "declaresLoss": false,
+      "copy": {
+        "headline": "Next time you reach for something at eye level — look down."
+      },
+      "threadState": {
+        "progress": 1,
+        "label": "All paid",
+        "tone": "good"
+      }
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+// schedule.mjs -- pure, deterministic ordering and slot assignment for publishable posts.
+//
+// Inputs are plain data (candidates, queue.json, the persisted schedule), so the same
+// input always yields the same order. Dates are YYYY-MM-DD strings handled in UTC, never
+// the machine clock, so tests can pass any "today".
+import fs from 'node:fs';
+import path from 'node:path';
+
+export const SLOT_TIME = { 2: '3:00 PM ET', 4: '12:30 PM ET' }; // Tue, Thu
+export const NOW_WINDOW_DAYS = 28;
+export const DUP_GAP_SLOTS = 12;                                // about 6 weeks at two a week
+const DAY_MS = 864e5;
+
+const toMs = (iso) => Date.parse(`${iso}T00:00:00Z`);
+const fromMs = (ms) => new Date(ms).toISOString().slice(0, 10);
+export const addDays = (iso, n) => fromMs(toMs(iso) + n * DAY_MS);
+export const weekday = (iso) => new Date(toMs(iso)).getUTCDay();
+
+/** The next `count` Tue/Thu dates strictly after `afterIso`. */
+export function nextSlots(afterIso, count) {
+  const out = [];
+  let d = afterIso;
+  while (out.length < count) {
+    d = addDays(d, 1);
+    if (SLOT_TIME[weekday(d)]) out.push(d);
+  }
+  return out;
+}
+
+export const isNow = (date, today) => date >= today && date <= addDays(today, NOW_WINDOW_DAYS);
+
+const isMagnetSlot = (absIndex) => absIndex < 2 || (absIndex - 1) % 3 === 0;
+
+const pairKey = (a, b) => (a < b ? `${a}-${b}` : `${b}-${a}`);
+
+/**
+ * Order candidates for consecutive slots.
+ * @param cands   [{ post, pillar, risky? }] in tie-break order (callers sort clean first, then by number)
+ * @param queue   { exclude, priority, nearDuplicates }
+ * @param placed  [{ post, pillar }] already-assigned posts that precede these slots, in slot order
+ */
+export function orderPosts(cands, queue = {}, placed = []) {
+  const exclude = new Set(queue.exclude ?? []);
+  const dups = new Set((queue.nearDuplicates ?? []).map(([a, b]) => pairKey(a, b)));
+  const rank = new Map((queue.priority ?? []).map((p, i) => [p, i]));
+  const placedSet = new Set(placed.map((p) => p.post));
+  const pool = cands.filter((c) => !exclude.has(c.post) && !placedSet.has(c.post));
+  const seq = [...placed];
+  const added = [];
+
+  const ok = (c) => !seq.slice(-(DUP_GAP_SLOTS - 1)).some((s) => dups.has(pairKey(s.post, c.post)));
+  const pillarOk = (c) => !seq.length || seq[seq.length - 1].pillar !== c.pillar;
+
+  while (pool.length) {
+    const magnets = pool.filter((c) => rank.has(c.post))
+      .sort((a, b) => (Number(!!a.risky) - Number(!!b.risky)) || (rank.get(a.post) - rank.get(b.post)));
+    const rest = pool.filter((c) => !rank.has(c.post));
+    const tiers = isMagnetSlot(seq.length)
+      ? [magnets, rest]
+      : [rest, magnets.filter((c) => !c.risky), magnets];
+    let pick;
+    for (const tier of tiers) pick = pick || tier.find((c) => ok(c) && pillarOk(c));
+    for (const tier of tiers) pick = pick || tier.find(ok);
+    pick = pick || pool[0]; // only duplicates remain: unavoidable, placed last
+    pool.splice(pool.indexOf(pick), 1);
+    seq.push(pick);
+    added.push(pick);
+  }
+  return added;
+}
+
+// ---- persistence -------------------------------------------------------------
+export function loadSchedule(file) {
+  try {
+    const j = JSON.parse(fs.readFileSync(file, 'utf8'));
+    return { posts: j.posts ?? {} };
+  } catch { return { posts: {} }; }
+}
+
+export function saveSchedule(file, schedule) {
+  fs.mkdirSync(path.dirname(file), { recursive: true });
+  const body = {
+    $comment: 'Slot dates are assigned once and never recomputed. planned = ready to schedule, scheduled = in Meta Planner, published = went out. A planned date in the past is re-slotted forward with a note. Written by tools/ready.mjs and tools/log-post.mjs.',
+    posts: schedule.posts,
+  };
+  fs.writeFileSync(file, JSON.stringify(body, null, 2) + '\n');
+}
+
+/**
+ * Merge candidates into the persisted schedule. Pure: returns a new schedule.
+ * Assigned dates are kept; planned dates before `today` are re-slotted; planned entries
+ * for posts that left the queue are dropped; only unassigned posts receive new slots.
+ */
+export function assignSlots(schedule, cands, queue, today) {
+  const exclude = new Set(queue.exclude ?? []);
+  const byPost = new Map(cands.map((c) => [c.post, c]));
+  const fixed = {};
+  const planned = [];
+  for (const [k, e] of Object.entries(schedule.posts)) {
+    const n = Number(k);
+    // A post planned for today keeps its slot: it may already be queued in Meta for today.
+    if (e.status === 'planned' && e.date !== today) {
+      if (exclude.has(n) || !byPost.has(n)) continue;
+      planned.push([n, e]);
+    } else if (e.status !== 'planned' || !exclude.has(n)) fixed[k] = e;
+  }
+  const missed = planned.some(([, e]) => e.date < today);
+  // Nothing missed: planned dates stay put. Missed: the whole planned tail keeps its
+  // priority order (old date, then post number) and re-flows onto the next free slots.
+  // Deliberate: strict priority. A missed save-magnet opener takes the next slot ahead of
+  // later planned posts rather than going to the back. Posts marked scheduled/published,
+  // and a post planned for today, never move.
+  const kept = { ...fixed };
+  if (!missed) for (const [n, e] of planned) kept[n] = e;
+  const tail = missed
+    ? planned.slice().sort((a, b) => a[1].date.localeCompare(b[1].date) || a[0] - b[0])
+    : [];
+  const keptPosts = Object.entries(kept).sort((a, b) => a[1].date.localeCompare(b[1].date) || Number(a[0]) - Number(b[0]));
+  const tailIds = new Set(tail.map(([n]) => n));
+  const placed = [...keptPosts.map(([k]) => Number(k)), ...tail.map(([n]) => n)]
+    .map((n) => ({ post: n, pillar: byPost.get(n)?.pillar }));
+  const fresh = orderPosts(cands.filter((c) => !kept[c.post] && !tailIds.has(c.post)), queue, placed);
+  const queueOrder = [...tail.map(([n]) => byPost.get(n)), ...fresh];
+  const posts = { ...kept };
+  if (missed) {
+    const taken = new Set(Object.values(fixed).map((e) => e.date));
+    const pool = nextSlots(today, queueOrder.length + taken.size + 1);
+    const free = pool.filter((d) => !taken.has(d)).slice(0, queueOrder.length);
+    const oldDate = new Map(tail);
+    queueOrder.forEach((c, i) => {
+      const date = free[i];
+      const prev = oldDate.get(c.post)?.date;
+      posts[c.post] = prev === date ? oldDate.get(c.post)
+        : { date, time: SLOT_TIME[weekday(date)], status: 'planned', ...(prev ? { note: `re-slotted from ${prev} (date passed unscheduled)` } : {}) };
+    });
+    return { posts };
+  }
+  const last = keptPosts.length ? keptPosts[keptPosts.length - 1][1].date : today;
+  const slots = nextSlots(last < today ? today : last, fresh.length);
+  fresh.forEach((c, i) => {
+    const date = slots[i];
+    posts[c.post] = { date, time: SLOT_TIME[weekday(date)], status: 'planned' };
+  });
+  return { posts };
+}
+
+/**
+ * Learning re-rank (src/learn.mjs rankAdjust). Only planned posts beyond the NOW window
+ * move: anything Adi may already have scheduled in Meta keeps its date. The LATER posts
+ * keep the same set of dates; a stable sort by multiplier hands earlier dates to segments
+ * that performed. Neutral weights (fewer than 3 scored posts) return the schedule unchanged.
+ * If the new order would bring a near-duplicate pair within DUP_GAP_SLOTS, it is rejected.
+ */
+export function reRankLater(schedule, today, adjustFor, queue = {}) {
+  const later = Object.entries(schedule.posts)
+    .filter(([, e]) => e.status === 'planned' && !isNow(e.date, today) && e.date >= today)
+    .sort((a, b) => a[1].date.localeCompare(b[1].date) || Number(a[0]) - Number(b[0]));
+  const ranked = later.map(([k], i) => ({ k, i, m: adjustFor(Number(k)) }))
+    .sort((a, b) => (b.m - a.m) || (a.i - b.i));
+  if (ranked.every((r, i) => r.i === i)) return schedule;
+  const posts = { ...schedule.posts };
+  ranked.forEach((r, i) => {
+    const [, slot] = later[i];
+    posts[r.k] = { ...schedule.posts[r.k], date: slot.date, time: slot.time };
+  });
+  // Reject only a near-duplicate pair the re-rank newly brings too close; a pair that was
+  // already close (e.g. one side is scheduled) must not disable learning forever.
+  const orderOf = (ps) => Object.entries(ps).sort((a, b) => a[1].date.localeCompare(b[1].date)).map(([k]) => Number(k));
+  const before = orderOf(schedule.posts), after = orderOf(posts);
+  const close = (ord, a, b) => { const ia = ord.indexOf(a), ib = ord.indexOf(b); return ia >= 0 && ib >= 0 && Math.abs(ia - ib) < DUP_GAP_SLOTS; };
+  for (const [a, b] of queue.nearDuplicates ?? []) {
+    if (close(after, a, b) && !close(before, a, b)) return schedule;
+  }
+  return { ...schedule, posts };
+}
+
+/** Mark planned posts as scheduled. `only` limits to given post numbers; otherwise NOW window only. */
+export function markScheduled(schedule, today, only) {
+  const posts = { ...schedule.posts };
+  const marked = [];
+  for (const [k, e] of Object.entries(posts)) {
+    if (e.status !== 'planned') continue;
+    const want = only ? only.includes(Number(k)) : isNow(e.date, today);
+    if (!want) continue;
+    posts[k] = { ...e, status: 'scheduled' };
+    marked.push({ post: Number(k), date: e.date });
+  }
+  marked.sort((a, b) => a.date.localeCompare(b.date) || a.post - b.post);
+  return { schedule: { posts }, marked };
+}
