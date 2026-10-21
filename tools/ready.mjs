@@ -78,8 +78,8 @@ const scheduleFile = path.join(ROOT, 'state', 'schedule.json');
 const assigned = assignSlots(loadSchedule(scheduleFile), cands.map((c) => ({ post: c.post, pillar: c.spec.pillar, risky: c.heroWarn.length > 0 })), queue, today);
 // Learning loop: once 3+ posts are measured, segments that performed take earlier LATER
 // slots. Below that the weights are neutral and nothing moves.
-const specByPost = new Map(cands.map((c) => [String(c.post), c.spec]));
-const specFor = (n) => specByPost.get(String(n)) ?? null;
+// Measured posts are already published, so they are not candidates: read any spec from disk.
+const specFor = (n) => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'specs', `post-${n}.json`), 'utf8')); } catch { return null; } };
 const weights = learnedWeights(perf, specFor, gtm);
 const schedule = reRankLater(assigned, today, (n) => (specFor(n) ? rankAdjust(specFor(n), weights) : 1), queue);
 for (const [k, e] of Object.entries(schedule.posts)) {

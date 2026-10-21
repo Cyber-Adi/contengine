@@ -98,14 +98,18 @@ export function assignSlots(schedule, cands, queue, today) {
   const planned = [];
   for (const [k, e] of Object.entries(schedule.posts)) {
     const n = Number(k);
-    if (e.status === 'planned') {
+    // A post planned for today keeps its slot: it may already be queued in Meta for today.
+    if (e.status === 'planned' && e.date !== today) {
       if (exclude.has(n) || !byPost.has(n)) continue;
       planned.push([n, e]);
-    } else fixed[k] = e;
+    } else if (e.status !== 'planned' || !exclude.has(n)) fixed[k] = e;
   }
   const missed = planned.some(([, e]) => e.date < today);
   // Nothing missed: planned dates stay put. Missed: the whole planned tail keeps its
   // priority order (old date, then post number) and re-flows onto the next free slots.
+  // Deliberate: strict priority. A missed save-magnet opener takes the next slot ahead of
+  // later planned posts rather than going to the back. Posts marked scheduled/published,
+  // and a post planned for today, never move.
   const kept = { ...fixed };
   if (!missed) for (const [n, e] of planned) kept[n] = e;
   const tail = missed
@@ -159,10 +163,13 @@ export function reRankLater(schedule, today, adjustFor, queue = {}) {
     const [, slot] = later[i];
     posts[r.k] = { ...schedule.posts[r.k], date: slot.date, time: slot.time };
   });
-  const order = Object.entries(posts).sort((a, b) => a[1].date.localeCompare(b[1].date)).map(([k]) => Number(k));
+  // Reject only a near-duplicate pair the re-rank newly brings too close; a pair that was
+  // already close (e.g. one side is scheduled) must not disable learning forever.
+  const orderOf = (ps) => Object.entries(ps).sort((a, b) => a[1].date.localeCompare(b[1].date)).map(([k]) => Number(k));
+  const before = orderOf(schedule.posts), after = orderOf(posts);
+  const close = (ord, a, b) => { const ia = ord.indexOf(a), ib = ord.indexOf(b); return ia >= 0 && ib >= 0 && Math.abs(ia - ib) < DUP_GAP_SLOTS; };
   for (const [a, b] of queue.nearDuplicates ?? []) {
-    const ia = order.indexOf(a), ib = order.indexOf(b);
-    if (ia >= 0 && ib >= 0 && Math.abs(ia - ib) < DUP_GAP_SLOTS) return schedule;
+    if (close(after, a, b) && !close(before, a, b)) return schedule;
   }
   return { ...schedule, posts };
 }

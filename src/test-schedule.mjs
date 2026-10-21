@@ -177,5 +177,21 @@ t('reRankLater: scheduled posts never move; near-duplicate spacing is never brok
   assert(slotsApart >= DUP_GAP_SLOTS, `near-duplicates only ${slotsApart} slots apart`);
 });
 
+t('a post planned for today keeps its slot even when another post was missed', () => {
+  const sch = assignSlots({ posts: {} }, cands, queue, '2026-10-07');
+  const ds = Object.entries(sch.posts).sort((a, b) => a[1].date.localeCompare(b[1].date));
+  const [firstK, firstE] = ds[0], [secondK, secondE] = ds[1];
+  const out = assignSlots(sch, cands, queue, secondE.date);
+  assert(out.posts[secondK].date === secondE.date, `today's post moved to ${out.posts[secondK].date}`);
+  assert(out.posts[firstK].date > secondE.date, 'missed post was not re-slotted forward');
+});
+t('reRankLater: a near-duplicate pair already close does not block learning', () => {
+  const sch = assignSlots({ posts: {} }, cands, queue, '2026-10-07');
+  const later = Object.entries(sch.posts).filter(([, e]) => !isNow(e.date, '2026-10-07')).sort((a, b) => a[1].date.localeCompare(b[1].date));
+  const [p0, p1, last] = [Number(later[0][0]), Number(later[1][0]), Number(later[later.length - 1][0])];
+  const out = reRankLater(sch, '2026-10-07', (n) => (n === last ? 1.25 : 1), { ...queue, nearDuplicates: [[p0, p1]] });
+  assert(out.posts[last].date === later[0][1].date, 'pre-existing close pair blocked the re-rank');
+});
+
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);
