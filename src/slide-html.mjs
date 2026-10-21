@@ -210,7 +210,7 @@ function layoutHtml(spec, slide, S = 1) {
         <li><span class="li-n" style="color:${accent}">${String(i + 1).padStart(2, '0')}</span>
         <span class="li-t" style="color:${fg}">${esc(it)}</span></li>`).join('');
       return `${eyebrow}<h1 class="h-mid" style="color:${fg}">${rich(c.headline, accent)}</h1>
-        <ul class="stack fill">${items}</ul>${body}${cite}`;
+        <ul class="stack fill ${listVariant(spec, slide)}">${items}</ul>${body}${cite}`;
     }
     case 'quadrant-card': {
       // S2b: scale the value type to the width the column really has, up to the
@@ -267,6 +267,21 @@ function layoutHtml(spec, slide, S = 1) {
   }
 }
 
+// Cover anchor (Oct 21 design pass). A slide-1 hero-statement the rhythm solver drops to the
+// foot of the frame leaves the upper 40-50% bare. Slide 1 instead sits at the optical centre:
+// centred in the content box with extra room below, so the hook rides above the geometric middle
+// (poster practice) and the swipe pill still closes the group. Other slides keep their valign.
+export function coverAnchor(slide) {
+  const v = slide.valign || 'center';
+  return slide.index === 1 && (slide.layout || 'hero-statement') === 'hero-statement' && v === 'bottom' ? 'optical' : v;
+}
+
+// List variant (Oct 21): consecutive list slides must not read as the same slide. A stack-list on
+// an odd slide index hangs its numerals on the right edge (mirrored ledger); even ones keep the
+// numerals on the left. Layout field is untouched, only the paint differs.
+export const listVariant = (spec, slide) => (
+  spec.slides.filter((s) => s.layout === 'stack-list' && s.index < slide.index).length % 2 === 1 ? 'ledger' : 'index');
+
 export function slideInner(spec, slide, canvasW = tokens.grid.canvas.w) {
   const dark = slide.background === 'dark';
   const isCta = (slide.layout === 'cta-card');
@@ -277,7 +292,7 @@ export function slideInner(spec, slide, canvasW = tokens.grid.canvas.w) {
      data-valign="${slide.valign || 'center'}" style="background:${bg}">
     ${microLabelHtml(spec, slide, isCta ? C.offWhite + 'B3' : C.inkGray)}
     ${ornamentHtml(slide, isCta ? C.harvestGold : C[legalAccent(slide.accent, slide.background)])}
-    <div class="content v-${slide.valign || 'center'} lay-${slide.layout || 'hero-statement'}">${layoutHtml(spec, slide, scaleForWidth(canvasW))}${swipeHtml(spec, slide, isCta ? C.offWhite : C[legalAccent(slide.accent, slide.background)], isCta ? C.offWhite : (dark ? C.offWhite : C.slateBlack))}</div>
+    <div class="content v-${coverAnchor(slide)} lay-${slide.layout || 'hero-statement'}">${layoutHtml(spec, slide, scaleForWidth(canvasW))}${swipeHtml(spec, slide, isCta ? C.offWhite : C[legalAccent(slide.accent, slide.background)], isCta ? C.offWhite : (dark ? C.offWhite : C.slateBlack))}</div>
     ${isCta ? '' : threadHtml(spec, slide, canvasW)}
     <div class="chrome">
       <div class="handle" style="color:${chrome}">${esc(tokens.grid.handle.text)}</div>
@@ -497,6 +512,7 @@ export function wrapSlideHtml(spec, rawSlide, { debug = false, canvas = 'ig' } =
 /* top anchor: clear the micro-label (pinned at the margin, ~30px tall) with a real gap */
 .content.v-top{justify-content:flex-start;padding-top:${Math.round(g.margin*1.75)}px}
 .content.v-bottom{justify-content:flex-end}
+.content.v-optical{justify-content:center;padding-bottom:13%}
 .content{padding:${Math.round(g.margin*1.28)}px ${g.margin}px 0 ${g.margin}px;flex:1;display:flex;
   flex-direction:column;justify-content:center;gap:32px;min-height:0;padding-bottom:2%}
 
@@ -547,6 +563,10 @@ export function wrapSlideHtml(spec, rawSlide, { debug = false, canvas = 'ig' } =
   border-top:3px solid ${C.inkGray}55}
 .stack.fill .li-n{font-size:84px;line-height:1}
 .stack.fill .li-t{font-size:${T.body.sizes.body.max}px}
+/* ledger variant: numerals hang on the right edge so a list never repeats its neighbour */
+.stack.fill.ledger li{grid-template-columns:1fr 150px}
+.stack.fill.ledger .li-n{order:2;text-align:right}
+.stack.fill.ledger .li-t{order:1}
 
 .quads{display:grid;grid-template-columns:1fr 1fr;gap:22px}
 .quad{border-left:6px solid;padding:26px 28px;display:flex;flex-direction:column;gap:12px}
